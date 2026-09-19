@@ -1,4 +1,4 @@
-import { booleanIntersects, booleanPointInPolygon, lineString, lineSplit, polygonToLine, feature } from '@turf/turf';
+import { booleanIntersects, booleanPointInPolygon, lineString, lineSplit, feature } from '@turf/turf';
 import geodesic from 'geographiclib-geodesic';
 
 export function lengthMm(coordinates) {
@@ -33,18 +33,18 @@ export function uniqueIntervals(parts) {
  }
  return [...unique.values()].sort((a,b)=>JSON.stringify(a.coordinates).localeCompare(JSON.stringify(b.coordinates)));
 }
-export function prepareInventory(rows, ward) {
- const boundary=polygonToLine(ward); const parts=[];
+export function prepareInventory(rows, ward = null) {
+ const parts=[];
  for(const source of rows) {
-  if(!booleanIntersects(feature(source.the_geom),ward)) continue;
+  if(ward && !booleanIntersects(feature(source.the_geom),ward)) continue;
   for(const coords of source.the_geom.coordinates) {
-   const line=lineString(coords); const split=lineSplit(line,ward);
+   const line=lineString(coords); const split=ward?lineSplit(line,ward):{features:[]};
    for(const candidate of split.features.length ? split.features : [line]) {
     const c=candidate.geometry.coordinates;
     // Membership per short interval prevents a border-crossing line from counting outside mileage.
     for(let i=1;i<c.length;i++) {
      const midpoint=[(c[i-1][0]+c[i][0])/2,(c[i-1][1]+c[i][1])/2];
-     if(booleanPointInPolygon(midpoint,ward)) parts.push({coordinates:[c[i-1],c[i]],source});
+     if(!ward || booleanPointInPolygon(midpoint,ward)) parts.push({coordinates:[c[i-1],c[i]],source});
     }
    }
   }

@@ -1,0 +1,605 @@
+[
+  {
+    "id": 9454355,
+    "tags": {
+      "restriction": "no_right_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 681310579,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 257172600,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 678895681,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 11745377,
+    "tags": {
+      "restriction:conditional": "no_left_turn @ (Mo-Fr 07:00-09:00,16:00-18:00)",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 729068451,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 257148737,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 858015029,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 13550237,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1510727458,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 5891282467,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 1324848367,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 14284079,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 428633808,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 1446948441,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 1072570865,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 14677445,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 684469307,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 5891282467,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 1510727459,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 14894236,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1034781353,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 1446948447,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 1072570867,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 16755027,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 642794088,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 261288995,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 406711347,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 17150935,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1177834152,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 5891282467,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 684469307,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 17845204,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 684469307,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 5891282467,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 1012114419,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 18754230,
+    "tags": {
+      "restriction:conditional": "no_left_turn @ (Mo-Fr 07:00-09:00)",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 109973452,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 257171912,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 24203471,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 18772599,
+    "tags": {
+      "except": "motorcycle",
+      "restriction": "no_right_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "node",
+        "ref": 258964870,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 24098564,
+        "role": "to"
+      },
+      {
+        "type": "way",
+        "ref": 1422976791,
+        "role": "from"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 18923101,
+    "tags": {
+      "restriction": "no_right_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1373721894,
+        "role": "from"
+      },
+      {
+        "type": "way",
+        "ref": 1373721893,
+        "role": "to"
+      },
+      {
+        "type": "node",
+        "ref": 12237167294,
+        "role": "via"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 18923102,
+    "tags": {
+      "restriction": "no_u_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1322446355,
+        "role": "from"
+      },
+      {
+        "type": "way",
+        "ref": 1373721896,
+        "role": "to"
+      },
+      {
+        "type": "node",
+        "ref": 12237167294,
+        "role": "via"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 18923103,
+    "tags": {
+      "restriction": "no_right_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1373721895,
+        "role": "to"
+      },
+      {
+        "type": "node",
+        "ref": 9779535787,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 1373721893,
+        "role": "from"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 18923104,
+    "tags": {
+      "restriction": "no_u_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1373721896,
+        "role": "from"
+      },
+      {
+        "type": "way",
+        "ref": 1322446355,
+        "role": "to"
+      },
+      {
+        "type": "node",
+        "ref": 12237167299,
+        "role": "via"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 19911948,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 435342393,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 287214169,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 1319361696,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 19944083,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 940535637,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 264166620,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 1323731225,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 20163014,
+    "tags": {
+      "implicit": "yes",
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1464448283,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 157729865,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 435365686,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 20163015,
+    "tags": {
+      "implicit": "yes",
+      "restriction": "no_straight_on",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1464448283,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 157729865,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 625511923,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 20163016,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 625511923,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 157729865,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 313318971,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 20163017,
+    "tags": {
+      "restriction": "no_u_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 625511923,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 157729865,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 625511923,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 20383100,
+    "tags": {
+      "restriction": "no_right_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 196351781,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 20383101,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1300118386,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 196351781,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 20383102,
+    "tags": {
+      "restriction": "no_left_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 1300118386,
+        "role": "via"
+      }
+    ],
+    "decision": "unreviewed"
+  },
+  {
+    "id": 20391315,
+    "tags": {
+      "restriction": "no_right_turn",
+      "type": "restriction"
+    },
+    "members": [
+      {
+        "type": "way",
+        "ref": 487715539,
+        "role": "from"
+      },
+      {
+        "type": "node",
+        "ref": 261139226,
+        "role": "via"
+      },
+      {
+        "type": "way",
+        "ref": 1494292633,
+        "role": "to"
+      }
+    ],
+    "decision": "unreviewed"
+  }
+]

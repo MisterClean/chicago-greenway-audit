@@ -44,6 +44,16 @@ Codex in-app Chromium browser, desktop 1440×1000 and mobile 390×844, plus norm
 - Automated OSM movement normalization and audited geometry matching.
 - Pilot endpoint review and validation of resolved real-world full-run witnesses.
 - Conditional/via-way rules, grade-separated crossings, junction connectors, bends and contraflow integration fixtures.
-- Newer designation/project reconciliation and citywide expansion.
+- Newer designation/project reconciliation and citywide driving analysis.
 - Browser response p95 on a recorded browser version and physical device, and repeated-sweep total browser/worker/graphics memory plateau.
 - Complete stage-by-stage preprocessing peak measurements for a scored Chicago build.
+
+## Citywide inventory extension — September 18, 2026 (Chicago)
+
+- All 258 saved official greenway source records are represented by 1,452 unique intervals: 137,174,916 designated millimetres (85.2365411 miles). Scope changes never turn unknown driving scores into accepted results.
+- Eight JavaScript/TypeScript tests pass, including optional ward clipping, citywide north/south coverage and scope argument validation. Production TypeScript/Vite build passes.
+- Asset verification checks all hashes and 13,957 decoded tile fragments against all 1,452 unique offline scores. Citywide summary is 48 bytes; PMTiles is 381,846 bytes.
+- Browser map renders citywide geometry. Ward 35 navigation preserves the 85.24-mile total; selecting Avenue J opens source details for E 100th–E 98th streets. Browser error log is empty. Mobile controls, disclosure and navigation fit at 390×844.
+- Candidate generation covers 1,400 intervals with 715 distinct nearby ways and 25 directly attached restriction relations. No candidate has been promoted to an accepted motor movement.
+
+The earlier pilot measurements above are historical; they are not citywide performance measurements. Every citywide driving score remains unverified pending normalization and review.

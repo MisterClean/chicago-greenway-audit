@@ -22,7 +22,9 @@ Outputs: `scores.ndjson`, `witnesses.ndjson`, `summary.bin`. A state entering a 
 
 ## Reviewed publication bundle
 
-Pass its directory as the argument to `scripts/build-data.mjs`:
+Pass its directory as the argument to `scripts/build-data.mjs`. The default scope is `city`; use `--scope ward35` for a ward-clipped bundle. Scope-specific normalized inputs and solver outputs go under `data/normalized/<scope>/`, and candidate reports under `data/review/<scope>/`. Segment IDs are local to a build, not stable across scopes.
+
+The bundle contains:
 
 - `review.json`: `reviewer`, `evidence_date` (YYYY-MM-DD), `reason`, `source_snapshot_sha256` (the retained official greenways snapshot), and `override_version`.
 - `inventory.json`: array of `{sid, gw_mm, coordinates, sources}`. `sources` contains the original source records, including `:id`, `street`, `f_street`, `t_street`. Split these intervals at every change in score. Keep designated lengths separate from state lengths.
@@ -54,4 +56,4 @@ One internal integer: `round(miles * 1609344)`. Numeric entry accepts 0.01–20 
 
 ## Build assets
 
-`public/current.json` points to an immutable `public/builds/<build_id>/` with manifest, summary, PMTiles, catalog, ward geometry and on-demand details/runs. Features carry `sid, lb_mm, exact, gw_mm, detail_id`; all tile fragments retain the same values. Summaries never sum rendered fragments. The manifest hashes all build assets. It records source checksums, effective/retrieval dates, licenses, policy, algorithm, review state and cache settings.
+`public/current.json` points to an immutable `public/builds/<build_id>/` with manifest, summary, PMTiles, catalog, optional ward geometry and on-demand details/runs. Features carry `sid, lb_mm, exact, gw_mm, detail_id`; all tile fragments retain the same values. Summaries never sum rendered fragments. The manifest hashes all build assets. It records geographic scope, display label, geometry bounds, normalized output directory, source checksums, effective/retrieval dates, licenses, policy, algorithm, review state and cache settings.

@@ -2,8 +2,11 @@ import { DatabaseSync } from 'node:sqlite';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { lineString, nearestPointOnLine } from '@turf/turf';
 import { prepareInventory } from './inventory.mjs';
+import { parseScope } from './scope.mjs';
+const { scope } = parseScope();
+const directory = `data/review/${scope}`;
 const json=async p=>JSON.parse(await readFile(p,'utf8'));
-const inventory=prepareInventory(await json('data/sources/greenways.json'),(await json('data/sources/ward35.geojson')).features[0]);
+const inventory=prepareInventory(await json('data/sources/greenways.json'),scope==='ward35'?(await json('data/sources/ward35.geojson')).features[0]:null);
 const db=new DatabaseSync('data/staging/network.sqlite',{readOnly:true});
 const query=db.prepare('SELECT w.* FROM way_bounds b JOIN ways w ON w.id=b.id WHERE b.min_lon<=? AND b.max_lon>=? AND b.min_lat<=? AND b.max_lat>=?');
 const node=db.prepare('SELECT lon,lat,tags FROM nodes WHERE id=?');
@@ -23,8 +26,8 @@ for(const row of inventory){const xs=row.coordinates.map(p=>p[0]),ys=row.coordin
 }
 const restrictions=[];
 for(const relation of db.prepare("SELECT * FROM relations WHERE json_extract(tags,'$.type')='restriction'").iterate()) {const members=JSON.parse(relation.members);if(members.some(m=>m.type==='way'&&relevantWays.has(m.ref)))restrictions.push({id:relation.id,tags:JSON.parse(relation.tags),members,decision:'unreviewed'});}
-await mkdir('data/review',{recursive:true});
-await writeFile('data/review/matches.json',JSON.stringify(review,null,2));
-await writeFile('data/review/restrictions.json',JSON.stringify(restrictions,null,2));
-await writeFile('data/review/status.json',JSON.stringify({intervals:review.length,intervals_with_candidates:review.filter(r=>r.candidates.length).length,candidate_ways:relevantWays.size,restriction_relations:restrictions.length,approved_matches:0,approved_endpoints:0},null,2));
-db.close();console.log(await readFile('data/review/status.json','utf8'));
+await mkdir(directory,{recursive:true});
+await writeFile(`${directory}/matches.json`,JSON.stringify(review,null,2));
+await writeFile(`${directory}/restrictions.json`,JSON.stringify(restrictions,null,2));
+await writeFile(`${directory}/status.json`,JSON.stringify({scope,intervals:review.length,intervals_with_candidates:review.filter(r=>r.candidates.length).length,candidate_ways:relevantWays.size,restriction_relations:restrictions.length,approved_matches:0,approved_endpoints:0},null,2));
+db.close();console.log(await readFile(`${directory}/status.json`,'utf8'));

@@ -1,0 +1,9 @@
+{
+  "scope": "city",
+  "intervals": 1452,
+  "intervals_with_candidates": 1400,
+  "candidate_ways": 715,
+  "restriction_relations": 25,
+  "approved_matches": 0,
+  "approved_endpoints": 0
+}
