@@ -15,7 +15,7 @@ npm run verify
 npm run dev
 ```
 
-The map fetches CARTO's Positron vector basemap. Its own inventory, PMTiles, binary summary and details are static assets. No routing or graph data reaches the browser. Use `npm run build` for `dist/`; serve it on a static host with HTTP byte-range support and HTTPS. MapLibre's worker is bundled explicitly for production.
+The map fetches CARTO's Positron vector basemap. Its own inventory, PMTiles, binary summary and details are static assets. No routing or graph data reaches the browser. Use `npm run build` for `dist/`; serve it on a static host with HTTPS. The build also emits 64 KiB tile chunks so the deployed map works on hosts that ignore HTTP Range requests; at most four verified chunks are retained in the transport cache. MapLibre's worker is bundled explicitly for production.
 
 ## What works
 

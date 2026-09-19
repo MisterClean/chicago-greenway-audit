@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
+    "build": "node scripts/static-tiles.mjs && tsc --noEmit && vite build",
     "test": "tsx --test web/src/*.test.ts scripts/*.test.mjs",
     "data:snapshot": "node scripts/snapshot.mjs",
     "data:build": "node scripts/build-data.mjs",

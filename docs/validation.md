@@ -57,3 +57,9 @@ Codex in-app Chromium browser, desktop 1440×1000 and mobile 390×844, plus norm
 - Candidate generation covers 1,400 intervals with 715 distinct nearby ways and 25 directly attached restriction relations. No candidate has been promoted to an accepted motor movement.
 
 The earlier pilot measurements above are historical; they are not citywide performance measurements. Every citywide driving score remains unverified pending normalization and review.
+
+## Published tile loading repair
+
+The published host returned full responses to PMTiles range requests, causing the overlay to disappear even though basemap, summary and details loaded. Local Vite testing did not expose this hosting difference. The browser now retrieves PMTiles byte ranges from ordinary 64 KiB static chunk files, checks chunk size and SHA-256, shares concurrent reads, and retains at most four chunks. The immutable original PMTiles archive is unchanged. `npm run build` emits the current build's chunk index and files.
+
+Eleven JS/TS tests pass, including cross-chunk reads, shared requests, final partial chunks, checksum rejection, and decoding the actual George Street zoom-15 tile with simulated HTTP 200 responses lacking range headers. TypeScript and production build pass. This changes delivery only; scores and citywide mileage are unchanged.

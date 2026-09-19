@@ -3,6 +3,7 @@ import { PMTiles, Protocol, SharedPromiseCache } from 'pmtiles';
 import type { LineString } from 'geojson';
 import { Summary, MM_PER_MILE, classify, readThreshold, thresholdLabel, toMm } from './threshold';
 import './style.css';
+import { StaticTileSource, type ChunkIndex } from './static-tile-source';
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 
 type Manifest={geographic_scope?:'city'|'ward35';scope_label?:string;bounds?:[[number,number],[number,number]];build_id:string;as_of:string;total_designated_mm:number;segment_count:number;reviewed_segments:number;checksums:Record<string,string>};
@@ -62,14 +63,16 @@ async function start(){try{
  const select=$<HTMLSelectElement>('segments');const groups=new globalThis.Map<string,HTMLOptGroupElement>();catalog.sort((a,b)=>a.name.localeCompare(b.name)||a.sid-b.sid);for(const item of catalog){let group=groups.get(item.name);if(!group){group=document.createElement('optgroup');group.label=item.name.toLowerCase();groups.set(item.name,group);select.append(group);}const option=document.createElement('option');option.value=String(item.sid);option.textContent=`${item.name.toLowerCase()} · segment ${item.sid}`;group.append(option);}
  for(const id of ['threshold','slider','only-passing','segments'])$(id).removeAttribute('disabled');
  updateThreshold(xMm);
- setWorkerUrl(workerUrl);setWorkerCount(2);const protocol=new Protocol();addProtocol('pmtiles',protocol.tile);const archive=new PMTiles(new URL(`${base}/greenways.pmtiles`,location.origin).href,new SharedPromiseCache(16));protocol.add(archive);
+ setWorkerUrl(workerUrl);setWorkerCount(2);const protocol=new Protocol();addProtocol('pmtiles',protocol.tile);const tileUrl=new URL(`/tile-chunks/${manifest.build_id}`,location.origin).href;
+ const tileIndex=await fetch(`${tileUrl}/index.json`).then(r=>{if(!r.ok)throw new Error('Greenway tiles unavailable');return r.json() as Promise<ChunkIndex>;});
+ const archive=new PMTiles(new StaticTileSource(tileUrl,tileIndex),new SharedPromiseCache(16));protocol.add(archive);
  const position=new URLSearchParams(location.search).get('map')?.split(',').map(Number);const valid=position?.length===3&&position.every(Number.isFinite)&&position[0]>=8&&position[0]<=19&&Math.abs(position[1])<=85&&Math.abs(position[2])<=180;
  map=new LibreMap({container:'map',style:'https://basemaps.cartocdn.com/gl/positron-gl-style/style.json',center:valid?[position![2],position![1]]:[-87.67,41.84],zoom:valid?position![0]:9.5,bounds:valid?undefined:manifest.bounds,fitBoundsOptions:{padding:45},minZoom:8,maxZoom:19,maxTileCacheSize:64,maxTileCacheZoomLevels:3,renderWorldCopies:false,attributionControl:{compact:true},canvasContextAttributes:{antialias:true}});
  map.addControl(new NavigationControl({showCompass:false}),'top-right');map.addControl(new ScaleControl({unit:'imperial'}),'bottom-left');
  map.on('error',e=>{console.error(e.error);notice('Some map tiles could not load. The mileage summary and street selector remain available.');});
  map.on('load',()=>{
  if(manifest.geographic_scope!=='city'){map.addSource('ward',{type:'geojson',data:`${base}/ward35.geojson`});map.addLayer({id:'ward-fill',type:'fill',source:'ward',paint:{'fill-color':'#3c7c61','fill-opacity':.045}});map.addLayer({id:'ward-boundary',type:'line',source:'ward',paint:{'line-color':'#638b76','line-opacity':.45,'line-width':1.5,'line-dasharray':[4,4]}});}
- map.addSource('greenways',{type:'vector',url:`pmtiles://${new URL(`${base}/greenways.pmtiles`,location.origin).href}`,attribution:'Bike routes: City of Chicago'});
+ map.addSource('greenways',{type:'vector',url:`pmtiles://${tileUrl}`,attribution:'Bike routes: City of Chicago'});
  map.addSource('run',{type:'geojson',data:{type:'FeatureCollection',features:[]}});map.addLayer({id:'run-path',source:'run',type:'line',paint:{'line-color':'#225ea8','line-width':4,'line-opacity':.65}});
  const line={source:'greenways','source-layer':'greenways',type:'line' as const,layout:{'line-cap':'round' as const,'line-join':'round' as const}};
  map.addLayer({...line,id:'baseline',paint:{'line-color':'#99aaa0','line-width':9,'line-opacity':.3}});
