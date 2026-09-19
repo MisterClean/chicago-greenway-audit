@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "build_id": "ward35-2026-09-19-ac2ef71ca8",
+  "created_at": "2026-09-19T02:37:23.725Z",
+  "as_of": "Current as of December 2025",
+  "scope": "Ward 35 designated mileage only; driving runs must continue beyond the ward",
+  "status": "inventory-awaiting-street-review",
+  "algorithm": "successor-dp-v1",
+  "policy": {
+    "straight_degrees": 30,
+    "other_candidate_min_degrees": 60,
+    "heading_metres": 20,
+    "access_profile": "normal passenger car",
+    "length_method": "GeographicLib WGS84 geodesic, unsimplified geometry, rounded integer millimetres"
+  },
+  "override_version": "unreviewed-1",
+  "sources": [
+    {
+      "file": "greenways.json",
+      "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+      "retrieved_at": "2026-09-19T02:15:11.241Z",
+      "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+      "license": "City of Chicago data portal terms",
+      "license_url": "https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html"
+    },
+    {
+      "file": "ward35.geojson",
+      "url": "https://data.cityofchicago.org/resource/p293-wvbd.geojson?%24where=ward%3D%2735%27",
+      "retrieved_at": "2026-09-19T02:15:13.606Z",
+      "sha256": "592e2b06f50583b0eba9330a93f2dc9b71c9ece438e40b5189a32480c2dfbf7f",
+      "license": "City of Chicago data portal terms",
+      "license_url": "https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html"
+    },
+    {
+      "file": "bike-routes-metadata.json",
+      "url": "https://data.cityofchicago.org/api/views/hvv9-38ut.json",
+      "retrieved_at": "2026-09-19T02:15:13.727Z",
+      "sha256": "90db5e36e993e88d12da34ff65dcf8c2fb1fec3ae74edc1fbca68919ebaaa9de",
+      "license": "City of Chicago data portal terms",
+      "license_url": "https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html"
+    }
+  ],
+  "network_source": {
+    "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+    "retrieved_at": "2026-09-19T02:27:15.039Z",
+    "effective_date": "2026-09-11T23:00:00Z",
+    "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+    "license": "ODbL 1.0",
+    "license_url": "https://www.openstreetmap.org/copyright",
+    "regional_bbox": [
+      -88.006,
+      41.643,
+      -87.398,
+      42.093
+    ],
+    "extract_strategy": "Full BBBike extract streamed into SQLite; all nodes, ways and relations retained; R-tree indexes highways only",
+    "boundary_policy": "All extract boundaries remain unresolved; extend the extract before resolving endpoints",
+    "counts": {
+      "nodes": 11223484,
+      "ways": 2075061,
+      "relations": 17598
+    }
+  },
+  "review": null,
+  "comparison_sources": [
+    {
+      "url": "https://apps.cnt.org/bikechi/",
+      "label": "August 2026 shown on map; inventory reconciliation pending"
+    },
+    {
+      "url": "https://chiwho.bike/map/ward/35",
+      "label": "Comparison only; not a driving score source"
+    }
+  ],
+  "segment_count": 40,
+  "source_record_count": 8,
+  "total_designated_mm": 4174493,
+  "reviewed_segments": 0,
+  "checksums": {
+    "catalog.json": "d54229f0f0a2f63fc116cd5bac2e4ece5ccc6cb6d9d2d14a67c8daea03c2b78f",
+    "details/1.json": "d11ca16f6805167746e2b8a420c93ce39e7787c19b81a92ccfa448f5bd4d802e",
+    "details/10.json": "2c2c0cd3a502b0d68f4571e5e2adecbecabab3b025bbd198d2d4e0929e340254",
+    "details/11.json": "3b667ad6e5cb8afeed12c042cd6d5856889e248343e240325ec28380287698c9",
+    "details/12.json": "966f6d359c6be4d75edaa2c67d3a6ff6d5c38b6b0e53d4a92c219579b48e23ad",
+    "details/13.json": "8443a1b7b558547919ba7a00fa3c8da3eb3d514e6f01a02dd5326a26a59055ba",
+    "details/14.json": "1bf3402233a67e25e18ef8966c7452b101e610997becf9f14e55714eef9737df",
+    "details/15.json": "1b3172da2eb9fc61be8a4731a7629abce31b119cf938270a5f0667b5d88224e4",
+    "details/16.json": "3e4c7c0d6afb572804b9b066706607f8b2522be6dd19099407c34337aa9c156e",
+    "details/17.json": "565f5e1cfc8e0b4a49df60d9fe1499815b38399611806ba0c249e2f883a9295f",
+    "details/18.json": "4b72a432532f65fd23adc908083081c463f055fad17e90e1d84d97fd8c294c5d",
+    "details/19.json": "ab3d806871153dcdd08a383c7a2085e65b72749c48aaa9e7ccac26515778dfa2",
+    "details/2.json": "76702424379f7fd3e55570c8fb74ebec8dff5f6035ef14e72f726b907a805314",
+    "details/20.json": "a3df2edcc485c014b840f92811e5cf583453954f9749bde004802fa78b761b02",
+    "details/21.json": "f016b3ad8bab4baf7f14f504cf0610218ece4e035c607c308a0f59b4c401631a",
+    "details/22.json": "5e3d319a583a6ed436fceccb9fe229f6f5b4548640bcc61cb2f82736c743439c",
+    "details/23.json": "0c96638b3497d2d8c1cbc5e685f0a206ac9b3500f89f10df081b62e26267aea5",
+    "details/24.json": "a971e105927d8298758ea3e847e3285651a38c292c7caf4c97a1e642f3caee57",
+    "details/25.json": "816e8dd5d6bcf96b910371f1983da0b62502421df113f2eecf6670ecc21beac2",
+    "details/26.json": "41b1cf585a5b0e746ab59887df409e354d3b20464c3e0e95e5ed346ae5eb0570",
+    "details/27.json": "9da2fb72ba67472d51cb7fc076c631fc272c39f3ae0fd89c1a4048e1c577c124",
+    "details/28.json": "cce0d80906a7ddf9e86b6fb77e8c943632129c98bef8b582e612683954d839d5",
+    "details/29.json": "f0e0bd6efb2c0fe4ddf6594dce9919000c3baf3131e7bdc6d1efc014b7a1c103",
+    "details/3.json": "6e2da142d8cd7b156c5df730f0211c19d5a77f63b9fc8e5b2c8045789af64626",
+    "details/30.json": "eae95759abcf6e40f38d6043ee6fe4af5e608263169791506a8a52554267102f",
+    "details/31.json": "12661ccd9597722f64c0263af8da9130fccecee2e712a306c991eb9588bfb125",
+    "details/32.json": "d9cfff23d3b77d9a914b0c33bbcd351094181cb9e9f2671c6229a61348b221ec",
+    "details/33.json": "8510d6e7e34ee88a813214ba3374a6af57be756e5fb5581a7605165a7b1e885f",
+    "details/34.json": "51d19ba7fbde5fbbcb9de5c737f218d6be7f8b1d0b9f3f9ecdd592af9edb72ad",
+    "details/35.json": "a87c1dc391cde53d0ef6df1977bfc158d2d9960b7e7d5a7b4463771414a72921",
+    "details/36.json": "ae43d09845b7b8c891b6fb7b04bb84990daaa5ceb165e25a430490350936d393",
+    "details/37.json": "3ec6168da8ffb73e187fb7ad785bf027f3378d42d4619d783a1857531ecb9487",
+    "details/38.json": "76472f33c589f710bb50ee6f570a616286970a7f3b5be7159cf6234671957f41",
+    "details/39.json": "d6bbfdd6ade5215fa450246b03559ca306e15713af9c9d80e0cdb15d6c562328",
+    "details/4.json": "572457b94d1f789cc48120b95f4523834773b528e37e908e67c9834d12ae1e24",
+    "details/40.json": "f26acda0d57fbf97ef9ad21ed0808ce43a130695c1e0c207edb8158b98920166",
+    "details/5.json": "069e34dcd48060e171d5a596ede5d49df379e1f871ea7e2d3e4acbd1163af41f",
+    "details/6.json": "d5c1f7615baf9662fbe490d9781cda0cd447ca0892696d9d1098142c56179f91",
+    "details/7.json": "c0eccb424b86014dd84266aeaf90b733349b368526dc404a6a45496195495fe9",
+    "details/8.json": "4b47c6d5775aa0ca725a0372e1cee125e3cd80749db0dd06de2fc7d76ecda2d4",
+    "details/9.json": "72a3435ec0bbc8a5481ccdc48958fa938c34ae92a67997652e5e825591c47d41",
+    "greenways.pmtiles": "c7f68bfb8906a3c96fb3e87650ce127fd8e02677d244178180b55cdde173c193",
+    "summary.bin": "0b35d07f66861540a05491dde1e6e8d4cf8b0e9fe7a06584ec57e68f030494c8",
+    "ward35.geojson": "592e2b06f50583b0eba9330a93f2dc9b71c9ece438e40b5189a32480c2dfbf7f"
+  },
+  "summary": {
+    "encoding": "little-endian",
+    "version": 1,
+    "header_bytes": 32,
+    "alignment": 8
+  },
+  "attribution": "Bike routes and ward boundary: City of Chicago. Basemap © OpenStreetMap contributors © CARTO.",
+  "limitations": [
+    "All driving distances are unverified pending street matching and movement review.",
+    "December 2025 designation inventory; newer completed projects have not been reconciled.",
+    "Source designation cross streets are not driving-run endpoints."
+  ],
+  "renderer": {
+    "workers": 2,
+    "maxTileCacheSize": 64,
+    "pmtiles_directory_cache_entries": 16,
+    "detail_cache_entries": 12
+  }
+}

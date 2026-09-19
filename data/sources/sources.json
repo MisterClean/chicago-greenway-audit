@@ -1,0 +1,26 @@
+[
+  {
+    "file": "greenways.json",
+    "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+    "retrieved_at": "2026-09-19T02:15:11.241Z",
+    "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+    "license": "City of Chicago data portal terms",
+    "license_url": "https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html"
+  },
+  {
+    "file": "ward35.geojson",
+    "url": "https://data.cityofchicago.org/resource/p293-wvbd.geojson?%24where=ward%3D%2735%27",
+    "retrieved_at": "2026-09-19T02:15:13.606Z",
+    "sha256": "592e2b06f50583b0eba9330a93f2dc9b71c9ece438e40b5189a32480c2dfbf7f",
+    "license": "City of Chicago data portal terms",
+    "license_url": "https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html"
+  },
+  {
+    "file": "bike-routes-metadata.json",
+    "url": "https://data.cityofchicago.org/api/views/hvv9-38ut.json",
+    "retrieved_at": "2026-09-19T02:15:13.727Z",
+    "sha256": "90db5e36e993e88d12da34ff65dcf8c2fb1fec3ae74edc1fbca68919ebaaa9de",
+    "license": "City of Chicago data portal terms",
+    "license_url": "https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html"
+  }
+]

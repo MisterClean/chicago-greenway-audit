@@ -1,0 +1,32 @@
+{
+  "name": "chicago-greenway-audit",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "test": "tsx --test web/src/*.test.ts scripts/*.test.mjs",
+    "data:snapshot": "node scripts/snapshot.mjs",
+    "data:build": "node scripts/build-data.mjs",
+    "verify": "npm test && cargo test --manifest-path solver/Cargo.toml && npm run build",
+    "network:stage": "node scripts/stage-network.mjs",
+    "network:review": "node scripts/review-candidates.mjs",
+    "fixtures": "cargo run --release --locked --manifest-path solver/Cargo.toml -- data/fixtures/states.ndjson data/fixtures/segments.ndjson data/fixtures/output",
+    "data:verify": "node scripts/verify-assets.mjs"
+  },
+  "dependencies": {
+    "maplibre-gl": "6.10.0",
+    "pmtiles": "4.5.0"
+  },
+  "devDependencies": {
+    "@turf/turf": "7.3.4",
+    "@types/geojson": "7946.0.16",
+    "@types/node": "24.10.1",
+    "geographiclib-geodesic": "2.2.0",
+    "saxes": "6.0.0",
+    "tsx": "4.21.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.6"
+  }
+}

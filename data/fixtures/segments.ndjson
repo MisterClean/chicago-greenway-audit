@@ -1,0 +1,6 @@
+{"sid":1,"gw_mm":100000,"states":[0],"directions_resolved":true,"inaccessible":false}
+{"sid":2,"gw_mm":200000,"states":[1],"directions_resolved":true,"inaccessible":false}
+{"sid":3,"gw_mm":300000,"states":[2],"directions_resolved":true,"inaccessible":false}
+{"sid":4,"gw_mm":400000,"states":[3],"directions_resolved":true,"inaccessible":false}
+{"sid":5,"gw_mm":500000,"states":[4],"directions_resolved":true,"inaccessible":false}
+{"sid":6,"gw_mm":600000,"states":[],"directions_resolved":true,"inaccessible":true}

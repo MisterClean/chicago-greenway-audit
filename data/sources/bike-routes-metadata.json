@@ -1,0 +1,668 @@
+{
+  "id" : "hvv9-38ut",
+  "name" : "Bike Routes",
+  "assetType" : "dataset",
+  "attribution" : "City of Chicago",
+  "attributionLink" : "https://www.chicago.gov",
+  "averageRating" : 0,
+  "category" : "Transportation",
+  "createdAt" : 1419004198,
+  "description" : "Bike routes in Chicago.\n\nThis dataset is in a format for spatial datasets that is inherently tabular but allows for a map as a derived view. Please click the indicated link below for such a map. \n\nTo export the data in either tabular or geographic format, please use the Export button on this dataset.",
+  "diciBackend" : false,
+  "displayType" : "table",
+  "downloadCount" : 3572,
+  "hideFromCatalog" : false,
+  "hideFromDataJson" : false,
+  "licenseId" : "SEE_TERMS_OF_USE",
+  "locked" : false,
+  "newBackend" : true,
+  "numberOfComments" : 0,
+  "oid" : 39228575,
+  "provenance" : "official",
+  "publicationAppendEnabled" : false,
+  "publicationDate" : 1674081324,
+  "publicationGroup" : 5828412,
+  "publicationStage" : "published",
+  "rowsUpdatedAt" : 1765925627,
+  "rowsUpdatedBy" : "vewm-vupz",
+  "tableId" : 19021116,
+  "totalTimesRated" : 0,
+  "viewCount" : 3487,
+  "viewLastModified" : 1765925626,
+  "viewType" : "tabular",
+  "approvals" : [ {
+    "reviewedAt" : 1707332459,
+    "reviewedAutomatically" : false,
+    "state" : "approved",
+    "submissionId" : 6531472,
+    "submissionObject" : "public_audience_request",
+    "submissionOutcome" : "change_audience",
+    "submittedAt" : 1707332414,
+    "targetAudience" : "public",
+    "workflowId" : 2226,
+    "reviewer" : {
+      "id" : "axdq-ndzv",
+      "displayName" : "(Tyler Support)"
+    },
+    "submissionDetails" : {
+      "permissionType" : "READ"
+    },
+    "submissionOutcomeApplication" : {
+      "endedAt" : 1707332459,
+      "failureCount" : 0,
+      "startedAt" : 1707332459,
+      "status" : "success"
+    },
+    "submitter" : {
+      "id" : "axdq-ndzv",
+      "displayName" : "(Tyler Support)"
+    }
+  } ],
+  "clientContext" : {
+    "clientContextVariables" : [ ],
+    "inheritedVariables" : { }
+  },
+  "columns" : [ {
+    "id" : 570722723,
+    "name" : "the_geom",
+    "dataTypeName" : "multiline",
+    "description" : "",
+    "fieldName" : "the_geom",
+    "position" : 1,
+    "renderTypeName" : "multiline",
+    "tableColumnId" : 135784044,
+    "format" : { }
+  }, {
+    "id" : 570722725,
+    "name" : "STREET",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "street",
+    "position" : 2,
+    "renderTypeName" : "text",
+    "tableColumnId" : 135784045,
+    "cachedContents" : {
+      "non_null" : "1008",
+      "largest" : "WRIGHTWOOD AVE",
+      "null" : "0",
+      "top" : [ {
+        "item" : "HALSTED ST",
+        "count" : "33"
+      }, {
+        "item" : "MILWAUKEE AVE",
+        "count" : "29"
+      }, {
+        "item" : "DAMEN AVE",
+        "count" : "27"
+      }, {
+        "item" : "KEDZIE AVE",
+        "count" : "24"
+      }, {
+        "item" : "MARQUETTE RD",
+        "count" : "23"
+      }, {
+        "item" : "CALIFORNIA AVE",
+        "count" : "18"
+      }, {
+        "item" : "83RD ST",
+        "count" : "18"
+      }, {
+        "item" : "STATE ST",
+        "count" : "13"
+      }, {
+        "item" : "HOMAN AVE",
+        "count" : "12"
+      }, {
+        "item" : "JACKSON BLVD",
+        "count" : "12"
+      }, {
+        "item" : "LEAVITT ST",
+        "count" : "12"
+      }, {
+        "item" : "RANDOLPH ST",
+        "count" : "10"
+      }, {
+        "item" : "CLARK ST",
+        "count" : "10"
+      }, {
+        "item" : "ROSCOE ST",
+        "count" : "10"
+      }, {
+        "item" : "GRAND AVE",
+        "count" : "10"
+      }, {
+        "item" : "LINCOLN AVE",
+        "count" : "10"
+      }, {
+        "item" : "CENTRAL PARK AVE",
+        "count" : "10"
+      }, {
+        "item" : "ELSTON AVE",
+        "count" : "10"
+      }, {
+        "item" : "MARTIN LUTHER KING JR DR",
+        "count" : "10"
+      }, {
+        "item" : "GRANVILLE AVE",
+        "count" : "10"
+      } ],
+      "smallest" : "100TH ST",
+      "count" : "1008",
+      "cardinality" : "1008"
+    },
+    "format" : { }
+  }, {
+    "id" : 570722731,
+    "name" : "ST_NAME",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "st_name",
+    "position" : 3,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145345089,
+    "cachedContents" : {
+      "non_null" : "1008",
+      "largest" : "WRIGHTWOOD",
+      "null" : "0",
+      "top" : [ {
+        "item" : "HALSTED",
+        "count" : "33"
+      }, {
+        "item" : "MILWAUKEE",
+        "count" : "29"
+      }, {
+        "item" : "DAMEN",
+        "count" : "27"
+      }, {
+        "item" : "KEDZIE",
+        "count" : "24"
+      }, {
+        "item" : "MARQUETTE",
+        "count" : "23"
+      }, {
+        "item" : "CALIFORNIA",
+        "count" : "19"
+      }, {
+        "item" : "83RD",
+        "count" : "18"
+      }, {
+        "item" : "ELSTON",
+        "count" : "13"
+      }, {
+        "item" : "STATE",
+        "count" : "13"
+      }, {
+        "item" : "CENTRAL PARK",
+        "count" : "13"
+      }, {
+        "item" : "LOOMIS",
+        "count" : "12"
+      }, {
+        "item" : "HOMAN",
+        "count" : "12"
+      }, {
+        "item" : "LEAVITT",
+        "count" : "12"
+      }, {
+        "item" : "JACKSON",
+        "count" : "12"
+      }, {
+        "item" : "HAMLIN",
+        "count" : "11"
+      }, {
+        "item" : "MARTIN LUTHER KING JR",
+        "count" : "10"
+      }, {
+        "item" : "WASHINGTON",
+        "count" : "10"
+      }, {
+        "item" : "CLARK",
+        "count" : "10"
+      }, {
+        "item" : "GRAND",
+        "count" : "10"
+      }, {
+        "item" : "LAWRENCE",
+        "count" : "10"
+      } ],
+      "smallest" : "100TH",
+      "count" : "1008",
+      "cardinality" : "1008"
+    },
+    "format" : { }
+  }, {
+    "id" : 570722732,
+    "name" : "ONEWAY_DIR",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "oneway_dir",
+    "position" : 4,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145345090,
+    "cachedContents" : {
+      "non_null" : "1008",
+      "largest" : "W",
+      "null" : "0",
+      "top" : [ {
+        "item" : "-",
+        "count" : "798"
+      }, {
+        "item" : "E",
+        "count" : "64"
+      }, {
+        "item" : "W",
+        "count" : "52"
+      }, {
+        "item" : "S",
+        "count" : "50"
+      }, {
+        "item" : "N",
+        "count" : "43"
+      }, {
+        "item" : "NW",
+        "count" : "1"
+      } ],
+      "smallest" : "-",
+      "count" : "1008",
+      "cardinality" : "1008"
+    },
+    "format" : { }
+  }, {
+    "id" : 570722727,
+    "name" : "F_STREET",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "f_street",
+    "position" : 5,
+    "renderTypeName" : "text",
+    "tableColumnId" : 135784052,
+    "cachedContents" : {
+      "non_null" : "1008",
+      "largest" : "W WRIGHTWOOD AVE",
+      "null" : "0",
+      "top" : [ {
+        "item" : "N WESTERN AVE",
+        "count" : "16"
+      }, {
+        "item" : "N DAMEN AVE",
+        "count" : "15"
+      }, {
+        "item" : "S STATE ST",
+        "count" : "14"
+      }, {
+        "item" : "W ROOSEVELT RD",
+        "count" : "13"
+      }, {
+        "item" : "N KEDZIE AVE",
+        "count" : "12"
+      }, {
+        "item" : "S HALSTED ST",
+        "count" : "11"
+      }, {
+        "item" : "W HARRISON ST",
+        "count" : "11"
+      }, {
+        "item" : "N ASHLAND AVE",
+        "count" : "11"
+      }, {
+        "item" : "N CLARK ST",
+        "count" : "10"
+      }, {
+        "item" : "N MILWAUKEE AVE",
+        "count" : "10"
+      }, {
+        "item" : "W MADISON ST",
+        "count" : "10"
+      }, {
+        "item" : "W CERMAK RD",
+        "count" : "9"
+      }, {
+        "item" : "S ASHLAND AVE",
+        "count" : "8"
+      }, {
+        "item" : "W BELMONT AVE",
+        "count" : "8"
+      }, {
+        "item" : "S WESTERN AVE",
+        "count" : "8"
+      }, {
+        "item" : "N RAVENSWOOD AVE",
+        "count" : "8"
+      }, {
+        "item" : "W LAKE ST",
+        "count" : "8"
+      }, {
+        "item" : "W NORTH AVE",
+        "count" : "8"
+      }, {
+        "item" : "N BROADWAY",
+        "count" : "8"
+      }, {
+        "item" : "W ARMITAGE AVE",
+        "count" : "7"
+      } ],
+      "smallest" : "70TH ST",
+      "count" : "1008",
+      "cardinality" : "1008"
+    },
+    "format" : { }
+  }, {
+    "id" : 570722728,
+    "name" : "T_STREET",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "t_street",
+    "position" : 6,
+    "renderTypeName" : "text",
+    "tableColumnId" : 135784055,
+    "cachedContents" : {
+      "non_null" : "1008",
+      "largest" : "W WRIGHTWOOD AVE",
+      "null" : "0",
+      "top" : [ {
+        "item" : "S STATE ST",
+        "count" : "16"
+      }, {
+        "item" : "N WESTERN AVE",
+        "count" : "13"
+      }, {
+        "item" : "N DAMEN AVE",
+        "count" : "12"
+      }, {
+        "item" : "N CLARK ST",
+        "count" : "11"
+      }, {
+        "item" : "W ADDISON ST",
+        "count" : "11"
+      }, {
+        "item" : "N SHERIDAN RD",
+        "count" : "10"
+      }, {
+        "item" : "W HARRISON ST",
+        "count" : "9"
+      }, {
+        "item" : "N ASHLAND AVE",
+        "count" : "9"
+      }, {
+        "item" : "W MADISON ST",
+        "count" : "9"
+      }, {
+        "item" : "S ASHLAND AVE",
+        "count" : "9"
+      }, {
+        "item" : "W LAKE ST",
+        "count" : "9"
+      }, {
+        "item" : "W LAWRENCE AVE",
+        "count" : "8"
+      }, {
+        "item" : "N LINCOLN AVE",
+        "count" : "8"
+      }, {
+        "item" : "N MILWAUKEE AVE",
+        "count" : "8"
+      }, {
+        "item" : "W NORTH AVE",
+        "count" : "8"
+      }, {
+        "item" : "W BELMONT AVE",
+        "count" : "8"
+      }, {
+        "item" : "W IRVING PARK RD",
+        "count" : "7"
+      }, {
+        "item" : "W VAN BUREN ST",
+        "count" : "7"
+      }, {
+        "item" : "S WESTERN AVE",
+        "count" : "7"
+      }, {
+        "item" : "S HALSTED ST",
+        "count" : "7"
+      } ],
+      "smallest" : "69TH ST",
+      "count" : "1008",
+      "cardinality" : "1008"
+    },
+    "format" : { }
+  }, {
+    "id" : 570722729,
+    "name" : "DISPLAYROU",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "displayrou",
+    "position" : 7,
+    "renderTypeName" : "text",
+    "tableColumnId" : 135784056,
+    "cachedContents" : {
+      "non_null" : "1008",
+      "largest" : "Protected Bike Lane",
+      "null" : "0",
+      "top" : [ {
+        "item" : "Bike Lane",
+        "count" : "285"
+      }, {
+        "item" : "Neighborhood Greenway",
+        "count" : "258"
+      }, {
+        "item" : "Buffered Bike Lane",
+        "count" : "184"
+      }, {
+        "item" : "Protected Bike Lane",
+        "count" : "174"
+      }, {
+        "item" : "Marked Shared Lane",
+        "count" : "107"
+      } ],
+      "smallest" : "Bike Lane",
+      "count" : "1008",
+      "cardinality" : "1008"
+    },
+    "format" : { }
+  }, {
+    "id" : 570722730,
+    "name" : "MI_CTRLINE",
+    "dataTypeName" : "number",
+    "description" : "",
+    "fieldName" : "mi_ctrline",
+    "position" : 8,
+    "renderTypeName" : "number",
+    "tableColumnId" : 135784057,
+    "cachedContents" : {
+      "non_null" : "1008",
+      "largest" : "3.67002196682",
+      "null" : "0",
+      "top" : [ {
+        "item" : "0.0632356313963",
+        "count" : "2"
+      }, {
+        "item" : "0.20254609822",
+        "count" : "1"
+      }, {
+        "item" : "0.265190300727",
+        "count" : "1"
+      }, {
+        "item" : "0.527454509871",
+        "count" : "1"
+      }, {
+        "item" : "0.999732560181",
+        "count" : "1"
+      }, {
+        "item" : "0.695889798579",
+        "count" : "1"
+      }, {
+        "item" : "0.0671967267386",
+        "count" : "1"
+      }, {
+        "item" : "0.10755436864",
+        "count" : "1"
+      }, {
+        "item" : "0.219071441493",
+        "count" : "1"
+      }, {
+        "item" : "0.794693622222",
+        "count" : "1"
+      }, {
+        "item" : "0.301689551916",
+        "count" : "1"
+      }, {
+        "item" : "0.249211846396",
+        "count" : "1"
+      }, {
+        "item" : "0.232999778063",
+        "count" : "1"
+      }, {
+        "item" : "0.184178917231",
+        "count" : "1"
+      }, {
+        "item" : "0.244802786858",
+        "count" : "1"
+      }, {
+        "item" : "0.497486129187",
+        "count" : "1"
+      }, {
+        "item" : "0.875310732548",
+        "count" : "1"
+      }, {
+        "item" : "0.50533165392",
+        "count" : "1"
+      }, {
+        "item" : "0.163104597521",
+        "count" : "1"
+      }, {
+        "item" : "0.0816414123783",
+        "count" : "1"
+      } ],
+      "smallest" : "0.0104936028993",
+      "count" : "1008",
+      "cardinality" : "1008"
+    },
+    "format" : { }
+  }, {
+    "id" : 570722733,
+    "name" : "BR_ONEWAY",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "br_oneway",
+    "position" : 9,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145345091,
+    "cachedContents" : {
+      "non_null" : "1008",
+      "largest" : "2W",
+      "null" : "0",
+      "top" : [ {
+        "item" : "2W",
+        "count" : "877"
+      }, {
+        "item" : "1W",
+        "count" : "131"
+      } ],
+      "smallest" : "1W",
+      "count" : "1008",
+      "cardinality" : "1008"
+    },
+    "format" : { }
+  }, {
+    "id" : 570722734,
+    "name" : "BR_OW_DIR",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "br_ow_dir",
+    "position" : 10,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145345092,
+    "cachedContents" : {
+      "non_null" : "1006",
+      "largest" : "W",
+      "null" : "2",
+      "top" : [ {
+        "item" : "-",
+        "count" : "876"
+      }, {
+        "item" : "E",
+        "count" : "42"
+      }, {
+        "item" : "W",
+        "count" : "32"
+      }, {
+        "item" : "N",
+        "count" : "30"
+      }, {
+        "item" : "S",
+        "count" : "25"
+      }, {
+        "item" : "NW",
+        "count" : "1"
+      } ],
+      "smallest" : "-",
+      "count" : "1008",
+      "cardinality" : "1008"
+    },
+    "format" : { }
+  }, {
+    "id" : 570722735,
+    "name" : "CONTRAFLOW",
+    "dataTypeName" : "text",
+    "description" : "",
+    "fieldName" : "contraflow",
+    "position" : 11,
+    "renderTypeName" : "text",
+    "tableColumnId" : 145345093,
+    "cachedContents" : {
+      "non_null" : "77",
+      "largest" : "Y",
+      "null" : "931",
+      "top" : [ {
+        "item" : "Y",
+        "count" : "77"
+      } ],
+      "smallest" : "Y",
+      "count" : "1008",
+      "cardinality" : "1008"
+    },
+    "format" : { }
+  } ],
+  "grants" : [ {
+    "inherited" : false,
+    "type" : "viewer",
+    "flags" : [ "public" ]
+  } ],
+  "license" : {
+    "name" : "See Terms of Use"
+  },
+  "metadata" : {
+    "custom_fields" : {
+      "Metadata" : {
+        "Time Period" : "Current as of December 2025",
+        "Frequency" : "Data are updated as needed",
+        "Data Owner" : "Department of Transportation"
+      }
+    },
+    "availableDisplayTypes" : [ "table", "fatrow", "page" ]
+  },
+  "owner" : {
+    "id" : "scy9-9wg4",
+    "displayName" : "cocadmin",
+    "profileImageUrlLarge" : "/api/users/scy9-9wg4/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/scy9-9wg4/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/scy9-9wg4/profile_images/TINY",
+    "screenName" : "cocadmin",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "query" : { },
+  "rights" : [ "read" ],
+  "tableAuthor" : {
+    "id" : "scy9-9wg4",
+    "displayName" : "cocadmin",
+    "profileImageUrlLarge" : "/api/users/scy9-9wg4/profile_images/LARGE",
+    "profileImageUrlMedium" : "/api/users/scy9-9wg4/profile_images/THUMB",
+    "profileImageUrlSmall" : "/api/users/scy9-9wg4/profile_images/TINY",
+    "screenName" : "cocadmin",
+    "type" : "interactive",
+    "flags" : [ "acceptedEula", "mayBeStoriesCoOwner" ]
+  },
+  "tags" : [ "bicycling", "gis", "shapefiles", "sustainability", "geo_layer" ],
+  "flags" : [ "default", "ownerMayBeContacted", "restorable", "restorePossibleForType" ]
+}

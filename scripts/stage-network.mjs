@@ -1,0 +1,35 @@
+import { DatabaseSync } from 'node:sqlite';
+import { spawn, spawnSync } from 'node:child_process';
+import { SaxesParser } from 'saxes';
+import { mkdir, writeFile, readFile } from 'node:fs/promises';
+import { createReadStream } from 'node:fs';
+import { createHash } from 'node:crypto';
+await mkdir('data/staging',{recursive:true});
+const db=new DatabaseSync('data/staging/network.sqlite');
+db.exec('PRAGMA journal_mode=WAL; PRAGMA cache_size=-16000; CREATE TABLE IF NOT EXISTS nodes(id INTEGER PRIMARY KEY, lon REAL, lat REAL, tags TEXT); CREATE TABLE IF NOT EXISTS ways(id INTEGER PRIMARY KEY, nodes TEXT, tags TEXT); CREATE TABLE IF NOT EXISTS relations(id INTEGER PRIMARY KEY, members TEXT, tags TEXT); CREATE VIRTUAL TABLE IF NOT EXISTS way_bounds USING rtree(id,min_lon,max_lon,min_lat,max_lat); DELETE FROM nodes; DELETE FROM ways; DELETE FROM relations; DELETE FROM way_bounds;');
+const insertNode=db.prepare('INSERT INTO nodes VALUES(?,?,?,?)');const insertWay=db.prepare('INSERT INTO ways VALUES(?,?,?)');const insertRel=db.prepare('INSERT INTO relations VALUES(?,?,?)');
+let current=null,count=0;
+const parser=new SaxesParser();
+parser.on('opentag',node=>{
+ const a=node.attributes;
+ if(['node','way','relation'].includes(node.name)) current={type:node.name,id:Number(a.id),lon:Number(a.lon),lat:Number(a.lat),tags:{},nodes:[],members:[]};
+ else if(current&&node.name==='tag')current.tags[a.k]=a.v;
+ else if(current&&node.name==='nd')current.nodes.push(Number(a.ref));
+ else if(current&&node.name==='member')current.members.push({type:a.type,ref:Number(a.ref),role:a.role});
+});
+parser.on('closetag',node=>{if(current&&node.name===current.type){const c=current;const tags=JSON.stringify(c.tags);if(c.type==='node')insertNode.run(c.id,c.lon,c.lat,tags);else if(c.type==='way')insertWay.run(c.id,JSON.stringify(c.nodes),tags);else insertRel.run(c.id,JSON.stringify(c.members),tags);current=null;count++;if(count%10000===0)db.exec('COMMIT; BEGIN;');}});
+db.exec('BEGIN');
+const process=spawn('osmium',['cat','data/sources/Chicago.osm.pbf','-f','osm'],{stdio:['ignore','pipe','inherit'],env:{...globalThis.process.env,OSMIUM_POOL_THREADS:'1'}});
+const finished=new Promise((resolve,reject)=>{process.on('error',reject);process.on('exit',code=>code===0?resolve():reject(new Error(`osmium exited ${code}`)));});
+process.stdout.setEncoding('utf8');for await(const chunk of process.stdout)parser.write(chunk);parser.close();await finished;db.exec('COMMIT');
+const node=db.prepare('SELECT lon,lat FROM nodes WHERE id=?');const index=db.prepare('INSERT INTO way_bounds VALUES(?,?,?,?,?)');
+db.exec('BEGIN');
+for(const way of db.prepare("SELECT id,nodes FROM ways WHERE json_extract(tags, '$.highway') IS NOT NULL").iterate()) {let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;for(const id of JSON.parse(way.nodes)){const n=node.get(id);if(!n)throw new Error(`Missing node ${id} in way ${way.id}`);minX=Math.min(minX,n.lon);maxX=Math.max(maxX,n.lon);minY=Math.min(minY,n.lat);maxY=Math.max(maxY,n.lat);}if(Number.isFinite(minX))index.run(way.id,minX,maxX,minY,maxY);}
+db.exec('COMMIT');
+const counts=Object.fromEntries(['nodes','ways','relations'].map(table=>[table,db.prepare(`SELECT count(*) AS count FROM ${table}`).get().count]));
+db.close();
+const hash=createHash('sha256');for await(const chunk of createReadStream('data/sources/Chicago.osm.pbf'))hash.update(chunk);
+const header=JSON.parse(spawnSync('osmium',['fileinfo','-j','data/sources/Chicago.osm.pbf'],{encoding:'utf8'}).stdout);
+const source={url:'https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf',retrieved_at:new Date().toISOString(),effective_date:header.header.option.timestamp,sha256:hash.digest('hex'),license:'ODbL 1.0',license_url:'https://www.openstreetmap.org/copyright',regional_bbox:header.header.boxes[0],extract_strategy:'Full BBBike extract streamed into SQLite; all nodes, ways and relations retained; R-tree indexes highways only',boundary_policy:'All extract boundaries remain unresolved; extend the extract before resolving endpoints',counts};
+await writeFile('data/sources/osm-source.json',JSON.stringify(source,null,2));
+console.log(JSON.stringify(counts));

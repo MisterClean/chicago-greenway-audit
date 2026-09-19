@@ -1,0 +1,5 @@
+{"exact":true,"flags":0,"lb_mm":3218688,"next":1,"predecessor":null,"state":0}
+{"exact":true,"flags":0,"lb_mm":3218688,"next":null,"predecessor":0,"state":1}
+{"exact":true,"flags":0,"lb_mm":402336,"next":null,"predecessor":null,"state":2}
+{"exact":false,"flags":2,"lb_mm":3218688,"next":null,"predecessor":null,"state":3}
+{"exact":false,"flags":4,"lb_mm":0,"next":4,"predecessor":null,"state":4}

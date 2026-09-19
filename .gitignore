@@ -1,0 +1,9 @@
+node_modules/
+solver/target/
+dist/
+.sites-runtime/
+playwright-report/
+test-results/
+data/staging/
+.DS_Store
+data/sources/*.pbf

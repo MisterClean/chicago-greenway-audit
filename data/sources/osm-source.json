@@ -1,0 +1,21 @@
+{
+  "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+  "retrieved_at": "2026-09-19T02:27:15.039Z",
+  "effective_date": "2026-09-11T23:00:00Z",
+  "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+  "license": "ODbL 1.0",
+  "license_url": "https://www.openstreetmap.org/copyright",
+  "regional_bbox": [
+    -88.006,
+    41.643,
+    -87.398,
+    42.093
+  ],
+  "extract_strategy": "Full BBBike extract streamed into SQLite; all nodes, ways and relations retained; R-tree indexes highways only",
+  "boundary_policy": "All extract boundaries remain unresolved; extend the extract before resolving endpoints",
+  "counts": {
+    "nodes": 11223484,
+    "ways": 2075061,
+    "relations": 17598
+  }
+}

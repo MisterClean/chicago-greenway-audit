@@ -1,0 +1,8147 @@
+[
+  {
+    "sid": 1,
+    "street": "GEORGE ST",
+    "designated_geometry": [
+      [
+        -87.70379571838453,
+        41.93387155457675
+      ],
+      [
+        -87.70256636442718,
+        41.93387879873833
+      ]
+    ],
+    "gw_mm": 101961,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24092379,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          1.5,
+          1.8
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West George Street",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          365053821,
+          365053818,
+          10181381013,
+          261159079,
+          10181381014,
+          2400906009,
+          10181381053,
+          261227595,
+          10181381062,
+          10186925412,
+          261154548,
+          10186925414,
+          10155173434,
+          261227593
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7073375,
+              41.9338556
+            ],
+            [
+              -87.7068625,
+              41.9338595
+            ],
+            [
+              -87.7063636,
+              41.9338637
+            ],
+            [
+              -87.7062462,
+              41.9338646
+            ],
+            [
+              -87.7061553,
+              41.9338654
+            ],
+            [
+              -87.7056395,
+              41.9338697
+            ],
+            [
+              -87.7051381,
+              41.9338738
+            ],
+            [
+              -87.7050169,
+              41.9338748
+            ],
+            [
+              -87.7049278,
+              41.9338755
+            ],
+            [
+              -87.7039099,
+              41.933884
+            ],
+            [
+              -87.7038019,
+              41.9338849
+            ],
+            [
+              -87.7036981,
+              41.9338857
+            ],
+            [
+              -87.7026852,
+              41.9338941
+            ],
+            [
+              -87.7025663,
+              41.9338951
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24092379"
+      },
+      {
+        "way_id": 519017335,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          101.7,
+          1.8
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "name": "West George Street",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          261210810,
+          10186925438,
+          261227589,
+          10186925434,
+          2400900114,
+          10155325259,
+          261227591,
+          10155325250,
+          2400900122,
+          9234297367,
+          261227593
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.6997057,
+              41.9339105
+            ],
+            [
+              -87.6998241,
+              41.9339099
+            ],
+            [
+              -87.7001207,
+              41.9339083
+            ],
+            [
+              -87.7002311,
+              41.9339077
+            ],
+            [
+              -87.7007323,
+              41.933905
+            ],
+            [
+              -87.7012477,
+              41.9339022
+            ],
+            [
+              -87.7013434,
+              41.9339017
+            ],
+            [
+              -87.7014587,
+              41.9339011
+            ],
+            [
+              -87.7019668,
+              41.9338983
+            ],
+            [
+              -87.7024713,
+              41.933895
+            ],
+            [
+              -87.7025663,
+              41.9338951
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/519017335"
+      }
+    ]
+  },
+  {
+    "sid": 2,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.70384620026657,
+        41.935697346385005
+      ],
+      [
+        -87.70260744515058,
+        41.9357041675574
+      ]
+    ],
+    "gw_mm": 102738,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24076328,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          2,
+          51.3
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          2400905963,
+          10181381074,
+          261145207,
+          10181381041,
+          2400905984,
+          10181380999,
+          261145209,
+          10181381023,
+          2400905988,
+          10181381008,
+          261145210,
+          10181380990,
+          365053826,
+          365053829
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7032268,
+              41.9357194
+            ],
+            [
+              -87.7037516,
+              41.9357161
+            ],
+            [
+              -87.7038496,
+              41.9357155
+            ],
+            [
+              -87.70396,
+              41.9357148
+            ],
+            [
+              -87.7044606,
+              41.9357116
+            ],
+            [
+              -87.7049711,
+              41.9357084
+            ],
+            [
+              -87.7050621,
+              41.9357079
+            ],
+            [
+              -87.7051872,
+              41.9357071
+            ],
+            [
+              -87.7056824,
+              41.935704
+            ],
+            [
+              -87.7062018,
+              41.9357007
+            ],
+            [
+              -87.7063012,
+              41.9357001
+            ],
+            [
+              -87.7064102,
+              41.9356994
+            ],
+            [
+              -87.7069095,
+              41.9356963
+            ],
+            [
+              -87.7074163,
+              41.9356931
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24076328"
+      },
+      {
+        "way_id": 1378645959,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          51.3,
+          12.5
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:left": "separate",
+          "sidewalk:right": "no"
+        },
+        "node_ids": [
+          9234297383,
+          2400905963
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7027565,
+              41.9357223
+            ],
+            [
+              -87.7032268,
+              41.9357194
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1378645959"
+      },
+      {
+        "way_id": 1227482097,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          90.2,
+          3
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          261098881,
+          9234297383
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7026157,
+              41.9356773
+            ],
+            [
+              -87.7027565,
+              41.9357223
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1227482097"
+      }
+    ]
+  },
+  {
+    "sid": 3,
+    "street": "GEORGE ST",
+    "designated_geometry": [
+      [
+        -87.70502193675942,
+        41.93386483739877
+      ],
+      [
+        -87.70379571838453,
+        41.93387155457675
+      ]
+    ],
+    "gw_mm": 101701,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24092379,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          1.1,
+          1.5
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West George Street",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          365053821,
+          365053818,
+          10181381013,
+          261159079,
+          10181381014,
+          2400906009,
+          10181381053,
+          261227595,
+          10181381062,
+          10186925412,
+          261154548,
+          10186925414,
+          10155173434,
+          261227593
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7073375,
+              41.9338556
+            ],
+            [
+              -87.7068625,
+              41.9338595
+            ],
+            [
+              -87.7063636,
+              41.9338637
+            ],
+            [
+              -87.7062462,
+              41.9338646
+            ],
+            [
+              -87.7061553,
+              41.9338654
+            ],
+            [
+              -87.7056395,
+              41.9338697
+            ],
+            [
+              -87.7051381,
+              41.9338738
+            ],
+            [
+              -87.7050169,
+              41.9338748
+            ],
+            [
+              -87.7049278,
+              41.9338755
+            ],
+            [
+              -87.7039099,
+              41.933884
+            ],
+            [
+              -87.7038019,
+              41.9338849
+            ],
+            [
+              -87.7036981,
+              41.9338857
+            ],
+            [
+              -87.7026852,
+              41.9338941
+            ],
+            [
+              -87.7025663,
+              41.9338951
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24092379"
+      }
+    ]
+  },
+  {
+    "sid": 4,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.70506996382245,
+        41.93568975096432
+      ],
+      [
+        -87.70384620026657,
+        41.935697346385005
+      ]
+    ],
+    "gw_mm": 101495,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24076328,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          2,
+          2
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          2400905963,
+          10181381074,
+          261145207,
+          10181381041,
+          2400905984,
+          10181380999,
+          261145209,
+          10181381023,
+          2400905988,
+          10181381008,
+          261145210,
+          10181380990,
+          365053826,
+          365053829
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7032268,
+              41.9357194
+            ],
+            [
+              -87.7037516,
+              41.9357161
+            ],
+            [
+              -87.7038496,
+              41.9357155
+            ],
+            [
+              -87.70396,
+              41.9357148
+            ],
+            [
+              -87.7044606,
+              41.9357116
+            ],
+            [
+              -87.7049711,
+              41.9357084
+            ],
+            [
+              -87.7050621,
+              41.9357079
+            ],
+            [
+              -87.7051872,
+              41.9357071
+            ],
+            [
+              -87.7056824,
+              41.935704
+            ],
+            [
+              -87.7062018,
+              41.9357007
+            ],
+            [
+              -87.7063012,
+              41.9357001
+            ],
+            [
+              -87.7064102,
+              41.9356994
+            ],
+            [
+              -87.7069095,
+              41.9356963
+            ],
+            [
+              -87.7074163,
+              41.9356931
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24076328"
+      }
+    ]
+  },
+  {
+    "sid": 5,
+    "street": "GEORGE ST",
+    "designated_geometry": [
+      [
+        -87.70511366492573,
+        41.93386474870102
+      ],
+      [
+        -87.70502193675942,
+        41.93386483739877
+      ]
+    ],
+    "gw_mm": 7608,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24092379,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          1,
+          1.1
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West George Street",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          365053821,
+          365053818,
+          10181381013,
+          261159079,
+          10181381014,
+          2400906009,
+          10181381053,
+          261227595,
+          10181381062,
+          10186925412,
+          261154548,
+          10186925414,
+          10155173434,
+          261227593
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7073375,
+              41.9338556
+            ],
+            [
+              -87.7068625,
+              41.9338595
+            ],
+            [
+              -87.7063636,
+              41.9338637
+            ],
+            [
+              -87.7062462,
+              41.9338646
+            ],
+            [
+              -87.7061553,
+              41.9338654
+            ],
+            [
+              -87.7056395,
+              41.9338697
+            ],
+            [
+              -87.7051381,
+              41.9338738
+            ],
+            [
+              -87.7050169,
+              41.9338748
+            ],
+            [
+              -87.7049278,
+              41.9338755
+            ],
+            [
+              -87.7039099,
+              41.933884
+            ],
+            [
+              -87.7038019,
+              41.9338849
+            ],
+            [
+              -87.7036981,
+              41.9338857
+            ],
+            [
+              -87.7026852,
+              41.9338941
+            ],
+            [
+              -87.7025663,
+              41.9338951
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24092379"
+      }
+    ]
+  },
+  {
+    "sid": 6,
+    "street": "GEORGE ST",
+    "designated_geometry": [
+      [
+        -87.70624407082327,
+        41.933857152071326
+      ],
+      [
+        -87.70511366492573,
+        41.93386474870102
+      ]
+    ],
+    "gw_mm": 93756,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24092379,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          0.8,
+          1
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West George Street",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          365053821,
+          365053818,
+          10181381013,
+          261159079,
+          10181381014,
+          2400906009,
+          10181381053,
+          261227595,
+          10181381062,
+          10186925412,
+          261154548,
+          10186925414,
+          10155173434,
+          261227593
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7073375,
+              41.9338556
+            ],
+            [
+              -87.7068625,
+              41.9338595
+            ],
+            [
+              -87.7063636,
+              41.9338637
+            ],
+            [
+              -87.7062462,
+              41.9338646
+            ],
+            [
+              -87.7061553,
+              41.9338654
+            ],
+            [
+              -87.7056395,
+              41.9338697
+            ],
+            [
+              -87.7051381,
+              41.9338738
+            ],
+            [
+              -87.7050169,
+              41.9338748
+            ],
+            [
+              -87.7049278,
+              41.9338755
+            ],
+            [
+              -87.7039099,
+              41.933884
+            ],
+            [
+              -87.7038019,
+              41.9338849
+            ],
+            [
+              -87.7036981,
+              41.9338857
+            ],
+            [
+              -87.7026852,
+              41.9338941
+            ],
+            [
+              -87.7025663,
+              41.9338951
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24092379"
+      }
+    ]
+  },
+  {
+    "sid": 7,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.7062937067989,
+        41.93568275281229
+      ],
+      [
+        -87.70506996382245,
+        41.93568975096432
+      ]
+    ],
+    "gw_mm": 101493,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24076328,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.9,
+          2
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          2400905963,
+          10181381074,
+          261145207,
+          10181381041,
+          2400905984,
+          10181380999,
+          261145209,
+          10181381023,
+          2400905988,
+          10181381008,
+          261145210,
+          10181380990,
+          365053826,
+          365053829
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7032268,
+              41.9357194
+            ],
+            [
+              -87.7037516,
+              41.9357161
+            ],
+            [
+              -87.7038496,
+              41.9357155
+            ],
+            [
+              -87.70396,
+              41.9357148
+            ],
+            [
+              -87.7044606,
+              41.9357116
+            ],
+            [
+              -87.7049711,
+              41.9357084
+            ],
+            [
+              -87.7050621,
+              41.9357079
+            ],
+            [
+              -87.7051872,
+              41.9357071
+            ],
+            [
+              -87.7056824,
+              41.935704
+            ],
+            [
+              -87.7062018,
+              41.9357007
+            ],
+            [
+              -87.7063012,
+              41.9357001
+            ],
+            [
+              -87.7064102,
+              41.9356994
+            ],
+            [
+              -87.7069095,
+              41.9356963
+            ],
+            [
+              -87.7074163,
+              41.9356931
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24076328"
+      }
+    ]
+  },
+  {
+    "sid": 8,
+    "street": "GEORGE ST",
+    "designated_geometry": [
+      [
+        -87.70734982673893,
+        41.93384909390612
+      ],
+      [
+        -87.70624407082327,
+        41.933857152071326
+      ]
+    ],
+    "gw_mm": 91712,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24092379,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          1.3,
+          0.8
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West George Street",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          365053821,
+          365053818,
+          10181381013,
+          261159079,
+          10181381014,
+          2400906009,
+          10181381053,
+          261227595,
+          10181381062,
+          10186925412,
+          261154548,
+          10186925414,
+          10155173434,
+          261227593
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7073375,
+              41.9338556
+            ],
+            [
+              -87.7068625,
+              41.9338595
+            ],
+            [
+              -87.7063636,
+              41.9338637
+            ],
+            [
+              -87.7062462,
+              41.9338646
+            ],
+            [
+              -87.7061553,
+              41.9338654
+            ],
+            [
+              -87.7056395,
+              41.9338697
+            ],
+            [
+              -87.7051381,
+              41.9338738
+            ],
+            [
+              -87.7050169,
+              41.9338748
+            ],
+            [
+              -87.7049278,
+              41.9338755
+            ],
+            [
+              -87.7039099,
+              41.933884
+            ],
+            [
+              -87.7038019,
+              41.9338849
+            ],
+            [
+              -87.7036981,
+              41.9338857
+            ],
+            [
+              -87.7026852,
+              41.9338941
+            ],
+            [
+              -87.7025663,
+              41.9338951
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24092379"
+      },
+      {
+        "way_id": 1033068052,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          0.9,
+          90.4
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West George Street",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          4081947076,
+          11880091187,
+          10181380948,
+          365053821
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7074902,
+              41.9338704
+            ],
+            [
+              -87.7074028,
+              41.933862
+            ],
+            [
+              -87.7073711,
+              41.9338589
+            ],
+            [
+              -87.7073375,
+              41.9338556
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1033068052"
+      },
+      {
+        "way_id": 1033068051,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          11.9,
+          103.1
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "name": "West George Street",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947076,
+          11880091210,
+          365053823
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7074902,
+              41.9338704
+            ],
+            [
+              -87.7075645,
+              41.9338813
+            ],
+            [
+              -87.7075977,
+              41.9338861
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1033068051"
+      },
+      {
+        "way_id": 519017330,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          20.9,
+          112
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "name": "West George Street",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          365053823,
+          11880091243,
+          365054320,
+          10181521337,
+          261163491,
+          10181521371,
+          365053870,
+          10181521323,
+          9931676387
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7075977,
+              41.9338861
+            ],
+            [
+              -87.7076397,
+              41.9338859
+            ],
+            [
+              -87.7080894,
+              41.9338843
+            ],
+            [
+              -87.7085923,
+              41.9338798
+            ],
+            [
+              -87.7087105,
+              41.9338787
+            ],
+            [
+              -87.7088016,
+              41.9338779
+            ],
+            [
+              -87.7093051,
+              41.9338733
+            ],
+            [
+              -87.7098099,
+              41.9338695
+            ],
+            [
+              -87.7098512,
+              41.9338692
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/519017330"
+      }
+    ]
+  },
+  {
+    "sid": 9,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.70742356741135,
+        41.93568178519546
+      ],
+      [
+        -87.7062937067989,
+        41.93568275281229
+      ]
+    ],
+    "gw_mm": 93704,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24076328,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.4,
+          1.9
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          2400905963,
+          10181381074,
+          261145207,
+          10181381041,
+          2400905984,
+          10181380999,
+          261145209,
+          10181381023,
+          2400905988,
+          10181381008,
+          261145210,
+          10181380990,
+          365053826,
+          365053829
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7032268,
+              41.9357194
+            ],
+            [
+              -87.7037516,
+              41.9357161
+            ],
+            [
+              -87.7038496,
+              41.9357155
+            ],
+            [
+              -87.70396,
+              41.9357148
+            ],
+            [
+              -87.7044606,
+              41.9357116
+            ],
+            [
+              -87.7049711,
+              41.9357084
+            ],
+            [
+              -87.7050621,
+              41.9357079
+            ],
+            [
+              -87.7051872,
+              41.9357071
+            ],
+            [
+              -87.7056824,
+              41.935704
+            ],
+            [
+              -87.7062018,
+              41.9357007
+            ],
+            [
+              -87.7063012,
+              41.9357001
+            ],
+            [
+              -87.7064102,
+              41.9356994
+            ],
+            [
+              -87.7069095,
+              41.9356963
+            ],
+            [
+              -87.7074163,
+              41.9356931
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24076328"
+      },
+      {
+        "way_id": 994080796,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.3,
+          92.9
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          365053829,
+          11880091190,
+          4081947083
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7074163,
+              41.9356931
+            ],
+            [
+              -87.7074517,
+              41.9356963
+            ],
+            [
+              -87.7075516,
+              41.9357054
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/994080796"
+      },
+      {
+        "way_id": 994080797,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          10.9,
+          104.1
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947083,
+          11880091214,
+          10181380963,
+          4173985503
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7075516,
+              41.9357054
+            ],
+            [
+              -87.7076169,
+              41.9357137
+            ],
+            [
+              -87.7076456,
+              41.9357174
+            ],
+            [
+              -87.707657,
+              41.9357177
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/994080797"
+      },
+      {
+        "way_id": 216246563,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          19.7,
+          112.8
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:left": "lane",
+          "cycleway:left:oneway": "-1",
+          "cycleway:right": "shared_lane",
+          "cycleway:right:lane": "pictogram",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4173985503,
+          365053854,
+          10181411209,
+          261145213,
+          10181521376,
+          365053867,
+          10184601579,
+          261145214,
+          10181521408,
+          365053734,
+          261145216,
+          10184601577,
+          261145217,
+          365053762,
+          365053489,
+          261145218,
+          1445194505,
+          10181283929,
+          11067356578,
+          261145220
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.707657,
+              41.9357177
+            ],
+            [
+              -87.7081353,
+              41.9357113
+            ],
+            [
+              -87.7086372,
+              41.9357044
+            ],
+            [
+              -87.7087615,
+              41.9357027
+            ],
+            [
+              -87.708854,
+              41.9357013
+            ],
+            [
+              -87.7093544,
+              41.9356947
+            ],
+            [
+              -87.7098546,
+              41.9356879
+            ],
+            [
+              -87.7099653,
+              41.9356864
+            ],
+            [
+              -87.7100685,
+              41.935685
+            ],
+            [
+              -87.7105633,
+              41.9356784
+            ],
+            [
+              -87.7106507,
+              41.9356772
+            ],
+            [
+              -87.7110716,
+              41.9356715
+            ],
+            [
+              -87.7111807,
+              41.93567
+            ],
+            [
+              -87.711354,
+              41.9356677
+            ],
+            [
+              -87.7117759,
+              41.935662
+            ],
+            [
+              -87.7120677,
+              41.935658
+            ],
+            [
+              -87.712254,
+              41.9356555
+            ],
+            [
+              -87.7122743,
+              41.9356552
+            ],
+            [
+              -87.7123407,
+              41.9356544
+            ],
+            [
+              -87.7124398,
+              41.9356544
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/216246563"
+      }
+    ]
+  },
+  {
+    "sid": 10,
+    "street": "GEORGE ST",
+    "designated_geometry": [
+      [
+        -87.70747006398246,
+        41.933868119777436
+      ],
+      [
+        -87.70734982673893,
+        41.93384909390612
+      ]
+    ],
+    "gw_mm": 10194,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1033068052,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          0,
+          0.9
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West George Street",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          4081947076,
+          11880091187,
+          10181380948,
+          365053821
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7074902,
+              41.9338704
+            ],
+            [
+              -87.7074028,
+              41.933862
+            ],
+            [
+              -87.7073711,
+              41.9338589
+            ],
+            [
+              -87.7073375,
+              41.9338556
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1033068052"
+      },
+      {
+        "way_id": 24092379,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          11.1,
+          1.3
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West George Street",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          365053821,
+          365053818,
+          10181381013,
+          261159079,
+          10181381014,
+          2400906009,
+          10181381053,
+          261227595,
+          10181381062,
+          10186925412,
+          261154548,
+          10186925414,
+          10155173434,
+          261227593
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7073375,
+              41.9338556
+            ],
+            [
+              -87.7068625,
+              41.9338595
+            ],
+            [
+              -87.7063636,
+              41.9338637
+            ],
+            [
+              -87.7062462,
+              41.9338646
+            ],
+            [
+              -87.7061553,
+              41.9338654
+            ],
+            [
+              -87.7056395,
+              41.9338697
+            ],
+            [
+              -87.7051381,
+              41.9338738
+            ],
+            [
+              -87.7050169,
+              41.9338748
+            ],
+            [
+              -87.7049278,
+              41.9338755
+            ],
+            [
+              -87.7039099,
+              41.933884
+            ],
+            [
+              -87.7038019,
+              41.9338849
+            ],
+            [
+              -87.7036981,
+              41.9338857
+            ],
+            [
+              -87.7026852,
+              41.9338941
+            ],
+            [
+              -87.7025663,
+              41.9338951
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24092379"
+      },
+      {
+        "way_id": 1033068051,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          1.7,
+          11.9
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "highway": "residential",
+          "name": "West George Street",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947076,
+          11880091210,
+          365053823
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7074902,
+              41.9338704
+            ],
+            [
+              -87.7075645,
+              41.9338813
+            ],
+            [
+              -87.7075977,
+              41.9338861
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1033068051"
+      },
+      {
+        "way_id": 519017330,
+        "name": "West George Street",
+        "endpoint_distances_m": [
+          10.7,
+          20.9
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "name": "West George Street",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          365053823,
+          11880091243,
+          365054320,
+          10181521337,
+          261163491,
+          10181521371,
+          365053870,
+          10181521323,
+          9931676387
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7075977,
+              41.9338861
+            ],
+            [
+              -87.7076397,
+              41.9338859
+            ],
+            [
+              -87.7080894,
+              41.9338843
+            ],
+            [
+              -87.7085923,
+              41.9338798
+            ],
+            [
+              -87.7087105,
+              41.9338787
+            ],
+            [
+              -87.7088016,
+              41.9338779
+            ],
+            [
+              -87.7093051,
+              41.9338733
+            ],
+            [
+              -87.7098099,
+              41.9338695
+            ],
+            [
+              -87.7098512,
+              41.9338692
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/519017330"
+      }
+    ]
+  },
+  {
+    "sid": 11,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.70752300428913,
+        41.93569059227711
+      ],
+      [
+        -87.70742356741135,
+        41.93568178519546
+      ]
+    ],
+    "gw_mm": 8305,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 994080796,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.3,
+          1.3
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          365053829,
+          11880091190,
+          4081947083
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7074163,
+              41.9356931
+            ],
+            [
+              -87.7074517,
+              41.9356963
+            ],
+            [
+              -87.7075516,
+              41.9357054
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/994080796"
+      },
+      {
+        "way_id": 24076328,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          8.8,
+          1.4
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          2400905963,
+          10181381074,
+          261145207,
+          10181381041,
+          2400905984,
+          10181380999,
+          261145209,
+          10181381023,
+          2400905988,
+          10181381008,
+          261145210,
+          10181380990,
+          365053826,
+          365053829
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7032268,
+              41.9357194
+            ],
+            [
+              -87.7037516,
+              41.9357161
+            ],
+            [
+              -87.7038496,
+              41.9357155
+            ],
+            [
+              -87.70396,
+              41.9357148
+            ],
+            [
+              -87.7044606,
+              41.9357116
+            ],
+            [
+              -87.7049711,
+              41.9357084
+            ],
+            [
+              -87.7050621,
+              41.9357079
+            ],
+            [
+              -87.7051872,
+              41.9357071
+            ],
+            [
+              -87.7056824,
+              41.935704
+            ],
+            [
+              -87.7062018,
+              41.9357007
+            ],
+            [
+              -87.7063012,
+              41.9357001
+            ],
+            [
+              -87.7064102,
+              41.9356994
+            ],
+            [
+              -87.7069095,
+              41.9356963
+            ],
+            [
+              -87.7074163,
+              41.9356931
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24076328"
+      },
+      {
+        "way_id": 994080797,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          2.9,
+          10.9
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947083,
+          11880091214,
+          10181380963,
+          4173985503
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7075516,
+              41.9357054
+            ],
+            [
+              -87.7076169,
+              41.9357137
+            ],
+            [
+              -87.7076456,
+              41.9357174
+            ],
+            [
+              -87.707657,
+              41.9357177
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/994080797"
+      },
+      {
+        "way_id": 216246563,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          11.5,
+          19.7
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:left": "lane",
+          "cycleway:left:oneway": "-1",
+          "cycleway:right": "shared_lane",
+          "cycleway:right:lane": "pictogram",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4173985503,
+          365053854,
+          10181411209,
+          261145213,
+          10181521376,
+          365053867,
+          10184601579,
+          261145214,
+          10181521408,
+          365053734,
+          261145216,
+          10184601577,
+          261145217,
+          365053762,
+          365053489,
+          261145218,
+          1445194505,
+          10181283929,
+          11067356578,
+          261145220
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.707657,
+              41.9357177
+            ],
+            [
+              -87.7081353,
+              41.9357113
+            ],
+            [
+              -87.7086372,
+              41.9357044
+            ],
+            [
+              -87.7087615,
+              41.9357027
+            ],
+            [
+              -87.708854,
+              41.9357013
+            ],
+            [
+              -87.7093544,
+              41.9356947
+            ],
+            [
+              -87.7098546,
+              41.9356879
+            ],
+            [
+              -87.7099653,
+              41.9356864
+            ],
+            [
+              -87.7100685,
+              41.935685
+            ],
+            [
+              -87.7105633,
+              41.9356784
+            ],
+            [
+              -87.7106507,
+              41.9356772
+            ],
+            [
+              -87.7110716,
+              41.9356715
+            ],
+            [
+              -87.7111807,
+              41.93567
+            ],
+            [
+              -87.711354,
+              41.9356677
+            ],
+            [
+              -87.7117759,
+              41.935662
+            ],
+            [
+              -87.7120677,
+              41.935658
+            ],
+            [
+              -87.712254,
+              41.9356555
+            ],
+            [
+              -87.7122743,
+              41.9356552
+            ],
+            [
+              -87.7123407,
+              41.9356544
+            ],
+            [
+              -87.7124398,
+              41.9356544
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/216246563"
+      }
+    ]
+  },
+  {
+    "sid": 12,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.7076910062659,
+        41.93570547111507
+      ],
+      [
+        -87.70752300428913,
+        41.93569059227711
+      ]
+    ],
+    "gw_mm": 14031,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 994080797,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          3.1,
+          2.9
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947083,
+          11880091214,
+          10181380963,
+          4173985503
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7075516,
+              41.9357054
+            ],
+            [
+              -87.7076169,
+              41.9357137
+            ],
+            [
+              -87.7076456,
+              41.9357174
+            ],
+            [
+              -87.707657,
+              41.9357177
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/994080797"
+      },
+      {
+        "way_id": 216246563,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.3,
+          11.5
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:left": "lane",
+          "cycleway:left:oneway": "-1",
+          "cycleway:right": "shared_lane",
+          "cycleway:right:lane": "pictogram",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4173985503,
+          365053854,
+          10181411209,
+          261145213,
+          10181521376,
+          365053867,
+          10184601579,
+          261145214,
+          10181521408,
+          365053734,
+          261145216,
+          10184601577,
+          261145217,
+          365053762,
+          365053489,
+          261145218,
+          1445194505,
+          10181283929,
+          11067356578,
+          261145220
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.707657,
+              41.9357177
+            ],
+            [
+              -87.7081353,
+              41.9357113
+            ],
+            [
+              -87.7086372,
+              41.9357044
+            ],
+            [
+              -87.7087615,
+              41.9357027
+            ],
+            [
+              -87.708854,
+              41.9357013
+            ],
+            [
+              -87.7093544,
+              41.9356947
+            ],
+            [
+              -87.7098546,
+              41.9356879
+            ],
+            [
+              -87.7099653,
+              41.9356864
+            ],
+            [
+              -87.7100685,
+              41.935685
+            ],
+            [
+              -87.7105633,
+              41.9356784
+            ],
+            [
+              -87.7106507,
+              41.9356772
+            ],
+            [
+              -87.7110716,
+              41.9356715
+            ],
+            [
+              -87.7111807,
+              41.93567
+            ],
+            [
+              -87.711354,
+              41.9356677
+            ],
+            [
+              -87.7117759,
+              41.935662
+            ],
+            [
+              -87.7120677,
+              41.935658
+            ],
+            [
+              -87.712254,
+              41.9356555
+            ],
+            [
+              -87.7122743,
+              41.9356552
+            ],
+            [
+              -87.7123407,
+              41.9356544
+            ],
+            [
+              -87.7124398,
+              41.9356544
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/216246563"
+      },
+      {
+        "way_id": 994080796,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          11.5,
+          1.3
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          365053829,
+          11880091190,
+          4081947083
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7074163,
+              41.9356931
+            ],
+            [
+              -87.7074517,
+              41.9356963
+            ],
+            [
+              -87.7075516,
+              41.9357054
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/994080796"
+      },
+      {
+        "way_id": 24076328,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          22.8,
+          8.8
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          2400905963,
+          10181381074,
+          261145207,
+          10181381041,
+          2400905984,
+          10181380999,
+          261145209,
+          10181381023,
+          2400905988,
+          10181381008,
+          261145210,
+          10181380990,
+          365053826,
+          365053829
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7032268,
+              41.9357194
+            ],
+            [
+              -87.7037516,
+              41.9357161
+            ],
+            [
+              -87.7038496,
+              41.9357155
+            ],
+            [
+              -87.70396,
+              41.9357148
+            ],
+            [
+              -87.7044606,
+              41.9357116
+            ],
+            [
+              -87.7049711,
+              41.9357084
+            ],
+            [
+              -87.7050621,
+              41.9357079
+            ],
+            [
+              -87.7051872,
+              41.9357071
+            ],
+            [
+              -87.7056824,
+              41.935704
+            ],
+            [
+              -87.7062018,
+              41.9357007
+            ],
+            [
+              -87.7063012,
+              41.9357001
+            ],
+            [
+              -87.7064102,
+              41.9356994
+            ],
+            [
+              -87.7069095,
+              41.9356963
+            ],
+            [
+              -87.7074163,
+              41.9356931
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24076328"
+      }
+    ]
+  },
+  {
+    "sid": 13,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.70787816040547,
+        41.93570155334127
+      ],
+      [
+        -87.7076910062659,
+        41.93570547111507
+      ]
+    ],
+    "gw_mm": 15528,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 216246563,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.5,
+          1.3
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:left": "lane",
+          "cycleway:left:oneway": "-1",
+          "cycleway:right": "shared_lane",
+          "cycleway:right:lane": "pictogram",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4173985503,
+          365053854,
+          10181411209,
+          261145213,
+          10181521376,
+          365053867,
+          10184601579,
+          261145214,
+          10181521408,
+          365053734,
+          261145216,
+          10184601577,
+          261145217,
+          365053762,
+          365053489,
+          261145218,
+          1445194505,
+          10181283929,
+          11067356578,
+          261145220
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.707657,
+              41.9357177
+            ],
+            [
+              -87.7081353,
+              41.9357113
+            ],
+            [
+              -87.7086372,
+              41.9357044
+            ],
+            [
+              -87.7087615,
+              41.9357027
+            ],
+            [
+              -87.708854,
+              41.9357013
+            ],
+            [
+              -87.7093544,
+              41.9356947
+            ],
+            [
+              -87.7098546,
+              41.9356879
+            ],
+            [
+              -87.7099653,
+              41.9356864
+            ],
+            [
+              -87.7100685,
+              41.935685
+            ],
+            [
+              -87.7105633,
+              41.9356784
+            ],
+            [
+              -87.7106507,
+              41.9356772
+            ],
+            [
+              -87.7110716,
+              41.9356715
+            ],
+            [
+              -87.7111807,
+              41.93567
+            ],
+            [
+              -87.711354,
+              41.9356677
+            ],
+            [
+              -87.7117759,
+              41.935662
+            ],
+            [
+              -87.7120677,
+              41.935658
+            ],
+            [
+              -87.712254,
+              41.9356555
+            ],
+            [
+              -87.7122743,
+              41.9356552
+            ],
+            [
+              -87.7123407,
+              41.9356544
+            ],
+            [
+              -87.7124398,
+              41.9356544
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/216246563"
+      },
+      {
+        "way_id": 994080797,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          18.4,
+          3.1
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947083,
+          11880091214,
+          10181380963,
+          4173985503
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7075516,
+              41.9357054
+            ],
+            [
+              -87.7076169,
+              41.9357137
+            ],
+            [
+              -87.7076456,
+              41.9357174
+            ],
+            [
+              -87.707657,
+              41.9357177
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/994080797"
+      },
+      {
+        "way_id": 994080796,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          27,
+          11.5
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          365053829,
+          11880091190,
+          4081947083
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7074163,
+              41.9356931
+            ],
+            [
+              -87.7074517,
+              41.9356963
+            ],
+            [
+              -87.7075516,
+              41.9357054
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/994080796"
+      },
+      {
+        "way_id": 24076328,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          38.2,
+          22.8
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "shared_lane",
+          "highway": "residential",
+          "lane_markings": "no",
+          "lanes": "1",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          2400905963,
+          10181381074,
+          261145207,
+          10181381041,
+          2400905984,
+          10181380999,
+          261145209,
+          10181381023,
+          2400905988,
+          10181381008,
+          261145210,
+          10181380990,
+          365053826,
+          365053829
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7032268,
+              41.9357194
+            ],
+            [
+              -87.7037516,
+              41.9357161
+            ],
+            [
+              -87.7038496,
+              41.9357155
+            ],
+            [
+              -87.70396,
+              41.9357148
+            ],
+            [
+              -87.7044606,
+              41.9357116
+            ],
+            [
+              -87.7049711,
+              41.9357084
+            ],
+            [
+              -87.7050621,
+              41.9357079
+            ],
+            [
+              -87.7051872,
+              41.9357071
+            ],
+            [
+              -87.7056824,
+              41.935704
+            ],
+            [
+              -87.7062018,
+              41.9357007
+            ],
+            [
+              -87.7063012,
+              41.9357001
+            ],
+            [
+              -87.7064102,
+              41.9356994
+            ],
+            [
+              -87.7069095,
+              41.9356963
+            ],
+            [
+              -87.7074163,
+              41.9356931
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24076328"
+      }
+    ]
+  },
+  {
+    "sid": 14,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.70873230370705,
+        41.935689310961315
+      ],
+      [
+        -87.70787816040547,
+        41.93570155334127
+      ]
+    ],
+    "gw_mm": 70851,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 216246563,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.5,
+          1.5
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:left": "lane",
+          "cycleway:left:oneway": "-1",
+          "cycleway:right": "shared_lane",
+          "cycleway:right:lane": "pictogram",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4173985503,
+          365053854,
+          10181411209,
+          261145213,
+          10181521376,
+          365053867,
+          10184601579,
+          261145214,
+          10181521408,
+          365053734,
+          261145216,
+          10184601577,
+          261145217,
+          365053762,
+          365053489,
+          261145218,
+          1445194505,
+          10181283929,
+          11067356578,
+          261145220
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.707657,
+              41.9357177
+            ],
+            [
+              -87.7081353,
+              41.9357113
+            ],
+            [
+              -87.7086372,
+              41.9357044
+            ],
+            [
+              -87.7087615,
+              41.9357027
+            ],
+            [
+              -87.708854,
+              41.9357013
+            ],
+            [
+              -87.7093544,
+              41.9356947
+            ],
+            [
+              -87.7098546,
+              41.9356879
+            ],
+            [
+              -87.7099653,
+              41.9356864
+            ],
+            [
+              -87.7100685,
+              41.935685
+            ],
+            [
+              -87.7105633,
+              41.9356784
+            ],
+            [
+              -87.7106507,
+              41.9356772
+            ],
+            [
+              -87.7110716,
+              41.9356715
+            ],
+            [
+              -87.7111807,
+              41.93567
+            ],
+            [
+              -87.711354,
+              41.9356677
+            ],
+            [
+              -87.7117759,
+              41.935662
+            ],
+            [
+              -87.7120677,
+              41.935658
+            ],
+            [
+              -87.712254,
+              41.9356555
+            ],
+            [
+              -87.7122743,
+              41.9356552
+            ],
+            [
+              -87.7123407,
+              41.9356544
+            ],
+            [
+              -87.7124398,
+              41.9356544
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/216246563"
+      },
+      {
+        "way_id": 994080797,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          89,
+          18.4
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947083,
+          11880091214,
+          10181380963,
+          4173985503
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7075516,
+              41.9357054
+            ],
+            [
+              -87.7076169,
+              41.9357137
+            ],
+            [
+              -87.7076456,
+              41.9357174
+            ],
+            [
+              -87.707657,
+              41.9357177
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/994080797"
+      }
+    ]
+  },
+  {
+    "sid": 15,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.70994801717563,
+        41.93567362298975
+      ],
+      [
+        -87.70873230370705,
+        41.935689310961315
+      ]
+    ],
+    "gw_mm": 100839,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 216246563,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.4,
+          1.5
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:left": "lane",
+          "cycleway:left:oneway": "-1",
+          "cycleway:right": "shared_lane",
+          "cycleway:right:lane": "pictogram",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4173985503,
+          365053854,
+          10181411209,
+          261145213,
+          10181521376,
+          365053867,
+          10184601579,
+          261145214,
+          10181521408,
+          365053734,
+          261145216,
+          10184601577,
+          261145217,
+          365053762,
+          365053489,
+          261145218,
+          1445194505,
+          10181283929,
+          11067356578,
+          261145220
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.707657,
+              41.9357177
+            ],
+            [
+              -87.7081353,
+              41.9357113
+            ],
+            [
+              -87.7086372,
+              41.9357044
+            ],
+            [
+              -87.7087615,
+              41.9357027
+            ],
+            [
+              -87.708854,
+              41.9357013
+            ],
+            [
+              -87.7093544,
+              41.9356947
+            ],
+            [
+              -87.7098546,
+              41.9356879
+            ],
+            [
+              -87.7099653,
+              41.9356864
+            ],
+            [
+              -87.7100685,
+              41.935685
+            ],
+            [
+              -87.7105633,
+              41.9356784
+            ],
+            [
+              -87.7106507,
+              41.9356772
+            ],
+            [
+              -87.7110716,
+              41.9356715
+            ],
+            [
+              -87.7111807,
+              41.93567
+            ],
+            [
+              -87.711354,
+              41.9356677
+            ],
+            [
+              -87.7117759,
+              41.935662
+            ],
+            [
+              -87.7120677,
+              41.935658
+            ],
+            [
+              -87.712254,
+              41.9356555
+            ],
+            [
+              -87.7122743,
+              41.9356552
+            ],
+            [
+              -87.7123407,
+              41.9356544
+            ],
+            [
+              -87.7124398,
+              41.9356544
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/216246563"
+      }
+    ]
+  },
+  {
+    "sid": 16,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.71116199760355,
+        41.93565815674328
+      ],
+      [
+        -87.70994801717563,
+        41.93567362298975
+      ]
+    ],
+    "gw_mm": 100695,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 216246563,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.3,
+          1.4
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:left": "lane",
+          "cycleway:left:oneway": "-1",
+          "cycleway:right": "shared_lane",
+          "cycleway:right:lane": "pictogram",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4173985503,
+          365053854,
+          10181411209,
+          261145213,
+          10181521376,
+          365053867,
+          10184601579,
+          261145214,
+          10181521408,
+          365053734,
+          261145216,
+          10184601577,
+          261145217,
+          365053762,
+          365053489,
+          261145218,
+          1445194505,
+          10181283929,
+          11067356578,
+          261145220
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.707657,
+              41.9357177
+            ],
+            [
+              -87.7081353,
+              41.9357113
+            ],
+            [
+              -87.7086372,
+              41.9357044
+            ],
+            [
+              -87.7087615,
+              41.9357027
+            ],
+            [
+              -87.708854,
+              41.9357013
+            ],
+            [
+              -87.7093544,
+              41.9356947
+            ],
+            [
+              -87.7098546,
+              41.9356879
+            ],
+            [
+              -87.7099653,
+              41.9356864
+            ],
+            [
+              -87.7100685,
+              41.935685
+            ],
+            [
+              -87.7105633,
+              41.9356784
+            ],
+            [
+              -87.7106507,
+              41.9356772
+            ],
+            [
+              -87.7110716,
+              41.9356715
+            ],
+            [
+              -87.7111807,
+              41.93567
+            ],
+            [
+              -87.711354,
+              41.9356677
+            ],
+            [
+              -87.7117759,
+              41.935662
+            ],
+            [
+              -87.7120677,
+              41.935658
+            ],
+            [
+              -87.712254,
+              41.9356555
+            ],
+            [
+              -87.7122743,
+              41.9356552
+            ],
+            [
+              -87.7123407,
+              41.9356544
+            ],
+            [
+              -87.7124398,
+              41.9356544
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/216246563"
+      }
+    ]
+  },
+  {
+    "sid": 17,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.71204739514594,
+        41.93564716646376
+      ],
+      [
+        -87.71116199760355,
+        41.93565815674328
+      ]
+    ],
+    "gw_mm": 73440,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 216246563,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.2,
+          1.3
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:left": "lane",
+          "cycleway:left:oneway": "-1",
+          "cycleway:right": "shared_lane",
+          "cycleway:right:lane": "pictogram",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4173985503,
+          365053854,
+          10181411209,
+          261145213,
+          10181521376,
+          365053867,
+          10184601579,
+          261145214,
+          10181521408,
+          365053734,
+          261145216,
+          10184601577,
+          261145217,
+          365053762,
+          365053489,
+          261145218,
+          1445194505,
+          10181283929,
+          11067356578,
+          261145220
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.707657,
+              41.9357177
+            ],
+            [
+              -87.7081353,
+              41.9357113
+            ],
+            [
+              -87.7086372,
+              41.9357044
+            ],
+            [
+              -87.7087615,
+              41.9357027
+            ],
+            [
+              -87.708854,
+              41.9357013
+            ],
+            [
+              -87.7093544,
+              41.9356947
+            ],
+            [
+              -87.7098546,
+              41.9356879
+            ],
+            [
+              -87.7099653,
+              41.9356864
+            ],
+            [
+              -87.7100685,
+              41.935685
+            ],
+            [
+              -87.7105633,
+              41.9356784
+            ],
+            [
+              -87.7106507,
+              41.9356772
+            ],
+            [
+              -87.7110716,
+              41.9356715
+            ],
+            [
+              -87.7111807,
+              41.93567
+            ],
+            [
+              -87.711354,
+              41.9356677
+            ],
+            [
+              -87.7117759,
+              41.935662
+            ],
+            [
+              -87.7120677,
+              41.935658
+            ],
+            [
+              -87.712254,
+              41.9356555
+            ],
+            [
+              -87.7122743,
+              41.9356552
+            ],
+            [
+              -87.7123407,
+              41.9356544
+            ],
+            [
+              -87.7124398,
+              41.9356544
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/216246563"
+      }
+    ]
+  },
+  {
+    "sid": 18,
+    "street": "WELLINGTON AVE",
+    "designated_geometry": [
+      [
+        -87.71237234109508,
+        41.935644523480676
+      ],
+      [
+        -87.71204739514594,
+        41.93564716646376
+      ]
+    ],
+    "gw_mm": 26951,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 216246563,
+        "name": "West Wellington Avenue",
+        "endpoint_distances_m": [
+          1.1,
+          1.2
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:left": "lane",
+          "cycleway:left:oneway": "-1",
+          "cycleway:right": "shared_lane",
+          "cycleway:right:lane": "pictogram",
+          "highway": "residential",
+          "name": "West Wellington Avenue",
+          "oneway": "yes",
+          "oneway:bicycle": "no",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4173985503,
+          365053854,
+          10181411209,
+          261145213,
+          10181521376,
+          365053867,
+          10184601579,
+          261145214,
+          10181521408,
+          365053734,
+          261145216,
+          10184601577,
+          261145217,
+          365053762,
+          365053489,
+          261145218,
+          1445194505,
+          10181283929,
+          11067356578,
+          261145220
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.707657,
+              41.9357177
+            ],
+            [
+              -87.7081353,
+              41.9357113
+            ],
+            [
+              -87.7086372,
+              41.9357044
+            ],
+            [
+              -87.7087615,
+              41.9357027
+            ],
+            [
+              -87.708854,
+              41.9357013
+            ],
+            [
+              -87.7093544,
+              41.9356947
+            ],
+            [
+              -87.7098546,
+              41.9356879
+            ],
+            [
+              -87.7099653,
+              41.9356864
+            ],
+            [
+              -87.7100685,
+              41.935685
+            ],
+            [
+              -87.7105633,
+              41.9356784
+            ],
+            [
+              -87.7106507,
+              41.9356772
+            ],
+            [
+              -87.7110716,
+              41.9356715
+            ],
+            [
+              -87.7111807,
+              41.93567
+            ],
+            [
+              -87.711354,
+              41.9356677
+            ],
+            [
+              -87.7117759,
+              41.935662
+            ],
+            [
+              -87.7120677,
+              41.935658
+            ],
+            [
+              -87.712254,
+              41.9356555
+            ],
+            [
+              -87.7122743,
+              41.9356552
+            ],
+            [
+              -87.7123407,
+              41.9356544
+            ],
+            [
+              -87.7124398,
+              41.9356544
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/216246563"
+      }
+    ]
+  },
+  {
+    "sid": 19,
+    "street": "CENTRAL PARK AVE",
+    "designated_geometry": [
+      [
+        -87.71777754205434,
+        41.952748782990824
+      ],
+      [
+        -87.71780754702101,
+        41.95377854859952
+      ]
+    ],
+    "gw_mm": 114406,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1314504012,
+        "name": "North Central Park Avenue",
+        "endpoint_distances_m": [
+          2.2,
+          4.9
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "highway": "residential",
+          "maxspeed": "20 mph",
+          "name": "North Central Park Avenue",
+          "name:etymology:wikidata": "Q3098339",
+          "name:etymology:wikipedia": "en:Garfield Park (Chicago)",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "paved"
+        },
+        "node_ids": [
+          4081947322,
+          10197947762,
+          4081947320,
+          10197947770,
+          261185522
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7178072,
+              41.9537344
+            ],
+            [
+              -87.7178059,
+              41.9536718
+            ],
+            [
+              -87.7177982,
+              41.9532987
+            ],
+            [
+              -87.7177895,
+              41.9528721
+            ],
+            [
+              -87.7177873,
+              41.9527676
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1314504012"
+      },
+      {
+        "way_id": 1314504014,
+        "name": "North Central Park Avenue",
+        "endpoint_distances_m": [
+          109.6,
+          0
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "maxspeed": "20 mph",
+          "name": "North Central Park Avenue",
+          "name:etymology:wikidata": "Q3098339",
+          "name:etymology:wikipedia": "en:Garfield Park (Chicago)",
+          "oneway": "yes",
+          "surface": "paved"
+        },
+        "node_ids": [
+          1475142960,
+          4081947322
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7178094,
+              41.9538465
+            ],
+            [
+              -87.7178072,
+              41.9537344
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1314504014"
+      },
+      {
+        "way_id": 188210752,
+        "name": "North Central Park Avenue",
+        "endpoint_distances_m": [
+          0.8,
+          112.4
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "name": "North Central Park Avenue",
+          "name:etymology:wikidata": "Q3098339",
+          "name:etymology:wikipedia": "en:Garfield Park (Chicago)",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "paved"
+        },
+        "node_ids": [
+          261185522,
+          10184365824,
+          4081947319,
+          4081947317,
+          11627044308,
+          11627037347,
+          4081947315,
+          10763056014,
+          4081947314,
+          11627044401,
+          4081947316,
+          10763055367,
+          261181603
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7177873,
+              41.9527676
+            ],
+            [
+              -87.7177834,
+              41.9526411
+            ],
+            [
+              -87.7177788,
+              41.9524928
+            ],
+            [
+              -87.7177628,
+              41.9519717
+            ],
+            [
+              -87.7177623,
+              41.9519566
+            ],
+            [
+              -87.7177605,
+              41.9518981
+            ],
+            [
+              -87.7177098,
+              41.9502514
+            ],
+            [
+              -87.7177093,
+              41.9502327
+            ],
+            [
+              -87.7177067,
+              41.9501496
+            ],
+            [
+              -87.7177044,
+              41.9500736
+            ],
+            [
+              -87.7176541,
+              41.9484403
+            ],
+            [
+              -87.7176532,
+              41.9484121
+            ],
+            [
+              -87.7176505,
+              41.9483242
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/188210752"
+      },
+      {
+        "way_id": 1247721756,
+        "name": "North Central Park Avenue",
+        "endpoint_distances_m": [
+          122.1,
+          7.6
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "maxspeed": "20 mph",
+          "name": "North Central Park Avenue",
+          "name:etymology:wikidata": "Q3098339",
+          "name:etymology:wikipedia": "en:Garfield Park (Chicago)",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "paved"
+        },
+        "node_ids": [
+          4081695995,
+          11823096804,
+          4081947321,
+          10184365866,
+          1475142960
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7178677,
+              41.9556085
+            ],
+            [
+              -87.7178653,
+              41.955536
+            ],
+            [
+              -87.717824,
+              41.9542873
+            ],
+            [
+              -87.7178119,
+              41.9539215
+            ],
+            [
+              -87.7178094,
+              41.9538465
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1247721756"
+      }
+    ]
+  },
+  {
+    "sid": 20,
+    "street": "CENTRAL PARK AVE",
+    "designated_geometry": [
+      [
+        -87.71780754702101,
+        41.95377854859952
+      ],
+      [
+        -87.71780778291028,
+        41.95378657880914
+      ]
+    ],
+    "gw_mm": 892,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1314504014,
+        "name": "North Central Park Avenue",
+        "endpoint_distances_m": [
+          0,
+          0
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "highway": "residential",
+          "maxspeed": "20 mph",
+          "name": "North Central Park Avenue",
+          "name:etymology:wikidata": "Q3098339",
+          "name:etymology:wikipedia": "en:Garfield Park (Chicago)",
+          "oneway": "yes",
+          "surface": "paved"
+        },
+        "node_ids": [
+          1475142960,
+          4081947322
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7178094,
+              41.9538465
+            ],
+            [
+              -87.7178072,
+              41.9537344
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1314504014"
+      },
+      {
+        "way_id": 1314504012,
+        "name": "North Central Park Avenue",
+        "endpoint_distances_m": [
+          4.9,
+          5.8
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "highway": "residential",
+          "maxspeed": "20 mph",
+          "name": "North Central Park Avenue",
+          "name:etymology:wikidata": "Q3098339",
+          "name:etymology:wikipedia": "en:Garfield Park (Chicago)",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "paved"
+        },
+        "node_ids": [
+          4081947322,
+          10197947762,
+          4081947320,
+          10197947770,
+          261185522
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7178072,
+              41.9537344
+            ],
+            [
+              -87.7178059,
+              41.9536718
+            ],
+            [
+              -87.7177982,
+              41.9532987
+            ],
+            [
+              -87.7177895,
+              41.9528721
+            ],
+            [
+              -87.7177873,
+              41.9527676
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1314504012"
+      },
+      {
+        "way_id": 1247721756,
+        "name": "North Central Park Avenue",
+        "endpoint_distances_m": [
+          7.6,
+          6.7
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "highway": "residential",
+          "maxspeed": "20 mph",
+          "name": "North Central Park Avenue",
+          "name:etymology:wikidata": "Q3098339",
+          "name:etymology:wikipedia": "en:Garfield Park (Chicago)",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "paved"
+        },
+        "node_ids": [
+          4081695995,
+          11823096804,
+          4081947321,
+          10184365866,
+          1475142960
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7178677,
+              41.9556085
+            ],
+            [
+              -87.7178653,
+              41.955536
+            ],
+            [
+              -87.717824,
+              41.9542873
+            ],
+            [
+              -87.7178119,
+              41.9539215
+            ],
+            [
+              -87.7178094,
+              41.9538465
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1247721756"
+      }
+    ]
+  },
+  {
+    "sid": 21,
+    "street": "HAMLIN AVE",
+    "designated_geometry": [
+      [
+        -87.72171534644683,
+        41.919052350284225
+      ],
+      [
+        -87.72174423115418,
+        41.91996152387927
+      ]
+    ],
+    "gw_mm": 101012,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1125851199,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          0.3,
+          0.4
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947285,
+          10181075850,
+          5340079250,
+          406157110,
+          406157272,
+          10186925394,
+          261142605,
+          10186925395,
+          406156937,
+          406156940,
+          10167443149,
+          261215687,
+          10167443180,
+          406157457,
+          10167443140,
+          261203069,
+          10179036929,
+          4081947212,
+          10186925251,
+          4081947210,
+          10186925254,
+          4081947211,
+          10186925391,
+          261262138,
+          10186925403,
+          406156988,
+          261149707,
+          406156958,
+          10137256374,
+          261262137
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7218761,
+              41.9245534
+            ],
+            [
+              -87.7218686,
+              41.9244257
+            ],
+            [
+              -87.7218586,
+              41.9240801
+            ],
+            [
+              -87.7218576,
+              41.9240464
+            ],
+            [
+              -87.7218322,
+              41.9231703
+            ],
+            [
+              -87.7218216,
+              41.9228052
+            ],
+            [
+              -87.7218192,
+              41.9227206
+            ],
+            [
+              -87.7218169,
+              41.922642
+            ],
+            [
+              -87.7218059,
+              41.9222608
+            ],
+            [
+              -87.7217989,
+              41.9220204
+            ],
+            [
+              -87.7217951,
+              41.9218897
+            ],
+            [
+              -87.7217925,
+              41.9217986
+            ],
+            [
+              -87.7217904,
+              41.9217259
+            ],
+            [
+              -87.7217792,
+              41.9213416
+            ],
+            [
+              -87.7217686,
+              41.9209726
+            ],
+            [
+              -87.7217725,
+              41.9208928
+            ],
+            [
+              -87.7217639,
+              41.9208105
+            ],
+            [
+              -87.7217547,
+              41.9204951
+            ],
+            [
+              -87.721742,
+              41.9200546
+            ],
+            [
+              -87.7217397,
+              41.9199783
+            ],
+            [
+              -87.7217373,
+              41.9198951
+            ],
+            [
+              -87.7217263,
+              41.9195147
+            ],
+            [
+              -87.7217155,
+              41.9191426
+            ],
+            [
+              -87.7217195,
+              41.9190622
+            ],
+            [
+              -87.721711,
+              41.9189823
+            ],
+            [
+              -87.7216999,
+              41.9186016
+            ],
+            [
+              -87.7216866,
+              41.9181447
+            ],
+            [
+              -87.7216742,
+              41.9176841
+            ],
+            [
+              -87.7216625,
+              41.9173122
+            ],
+            [
+              -87.7216601,
+              41.917229
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851199"
+      }
+    ]
+  },
+  {
+    "sid": 22,
+    "street": "HAMLIN AVE",
+    "designated_geometry": [
+      [
+        -87.72174423115418,
+        41.91996152387927
+      ],
+      [
+        -87.72177138716508,
+        41.9208761127137
+      ]
+    ],
+    "gw_mm": 101610,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1125851199,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          0.4,
+          0.1
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947285,
+          10181075850,
+          5340079250,
+          406157110,
+          406157272,
+          10186925394,
+          261142605,
+          10186925395,
+          406156937,
+          406156940,
+          10167443149,
+          261215687,
+          10167443180,
+          406157457,
+          10167443140,
+          261203069,
+          10179036929,
+          4081947212,
+          10186925251,
+          4081947210,
+          10186925254,
+          4081947211,
+          10186925391,
+          261262138,
+          10186925403,
+          406156988,
+          261149707,
+          406156958,
+          10137256374,
+          261262137
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7218761,
+              41.9245534
+            ],
+            [
+              -87.7218686,
+              41.9244257
+            ],
+            [
+              -87.7218586,
+              41.9240801
+            ],
+            [
+              -87.7218576,
+              41.9240464
+            ],
+            [
+              -87.7218322,
+              41.9231703
+            ],
+            [
+              -87.7218216,
+              41.9228052
+            ],
+            [
+              -87.7218192,
+              41.9227206
+            ],
+            [
+              -87.7218169,
+              41.922642
+            ],
+            [
+              -87.7218059,
+              41.9222608
+            ],
+            [
+              -87.7217989,
+              41.9220204
+            ],
+            [
+              -87.7217951,
+              41.9218897
+            ],
+            [
+              -87.7217925,
+              41.9217986
+            ],
+            [
+              -87.7217904,
+              41.9217259
+            ],
+            [
+              -87.7217792,
+              41.9213416
+            ],
+            [
+              -87.7217686,
+              41.9209726
+            ],
+            [
+              -87.7217725,
+              41.9208928
+            ],
+            [
+              -87.7217639,
+              41.9208105
+            ],
+            [
+              -87.7217547,
+              41.9204951
+            ],
+            [
+              -87.721742,
+              41.9200546
+            ],
+            [
+              -87.7217397,
+              41.9199783
+            ],
+            [
+              -87.7217373,
+              41.9198951
+            ],
+            [
+              -87.7217263,
+              41.9195147
+            ],
+            [
+              -87.7217155,
+              41.9191426
+            ],
+            [
+              -87.7217195,
+              41.9190622
+            ],
+            [
+              -87.721711,
+              41.9189823
+            ],
+            [
+              -87.7216999,
+              41.9186016
+            ],
+            [
+              -87.7216866,
+              41.9181447
+            ],
+            [
+              -87.7216742,
+              41.9176841
+            ],
+            [
+              -87.7216625,
+              41.9173122
+            ],
+            [
+              -87.7216601,
+              41.917229
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851199"
+      }
+    ]
+  },
+  {
+    "sid": 23,
+    "street": "HAMLIN AVE",
+    "designated_geometry": [
+      [
+        -87.72177138716508,
+        41.9208761127137
+      ],
+      [
+        -87.72179731706514,
+        41.92179039595663
+      ]
+    ],
+    "gw_mm": 101574,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1125851199,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          0.1,
+          0.4
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947285,
+          10181075850,
+          5340079250,
+          406157110,
+          406157272,
+          10186925394,
+          261142605,
+          10186925395,
+          406156937,
+          406156940,
+          10167443149,
+          261215687,
+          10167443180,
+          406157457,
+          10167443140,
+          261203069,
+          10179036929,
+          4081947212,
+          10186925251,
+          4081947210,
+          10186925254,
+          4081947211,
+          10186925391,
+          261262138,
+          10186925403,
+          406156988,
+          261149707,
+          406156958,
+          10137256374,
+          261262137
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7218761,
+              41.9245534
+            ],
+            [
+              -87.7218686,
+              41.9244257
+            ],
+            [
+              -87.7218586,
+              41.9240801
+            ],
+            [
+              -87.7218576,
+              41.9240464
+            ],
+            [
+              -87.7218322,
+              41.9231703
+            ],
+            [
+              -87.7218216,
+              41.9228052
+            ],
+            [
+              -87.7218192,
+              41.9227206
+            ],
+            [
+              -87.7218169,
+              41.922642
+            ],
+            [
+              -87.7218059,
+              41.9222608
+            ],
+            [
+              -87.7217989,
+              41.9220204
+            ],
+            [
+              -87.7217951,
+              41.9218897
+            ],
+            [
+              -87.7217925,
+              41.9217986
+            ],
+            [
+              -87.7217904,
+              41.9217259
+            ],
+            [
+              -87.7217792,
+              41.9213416
+            ],
+            [
+              -87.7217686,
+              41.9209726
+            ],
+            [
+              -87.7217725,
+              41.9208928
+            ],
+            [
+              -87.7217639,
+              41.9208105
+            ],
+            [
+              -87.7217547,
+              41.9204951
+            ],
+            [
+              -87.721742,
+              41.9200546
+            ],
+            [
+              -87.7217397,
+              41.9199783
+            ],
+            [
+              -87.7217373,
+              41.9198951
+            ],
+            [
+              -87.7217263,
+              41.9195147
+            ],
+            [
+              -87.7217155,
+              41.9191426
+            ],
+            [
+              -87.7217195,
+              41.9190622
+            ],
+            [
+              -87.721711,
+              41.9189823
+            ],
+            [
+              -87.7216999,
+              41.9186016
+            ],
+            [
+              -87.7216866,
+              41.9181447
+            ],
+            [
+              -87.7216742,
+              41.9176841
+            ],
+            [
+              -87.7216625,
+              41.9173122
+            ],
+            [
+              -87.7216601,
+              41.917229
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851199"
+      }
+    ]
+  },
+  {
+    "sid": 24,
+    "street": "HAMLIN AVE",
+    "designated_geometry": [
+      [
+        -87.72179731706514,
+        41.92179039595663
+      ],
+      [
+        -87.72182229269752,
+        41.922705820995624
+      ]
+    ],
+    "gw_mm": 101699,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1125851199,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          0.4,
+          0.3
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947285,
+          10181075850,
+          5340079250,
+          406157110,
+          406157272,
+          10186925394,
+          261142605,
+          10186925395,
+          406156937,
+          406156940,
+          10167443149,
+          261215687,
+          10167443180,
+          406157457,
+          10167443140,
+          261203069,
+          10179036929,
+          4081947212,
+          10186925251,
+          4081947210,
+          10186925254,
+          4081947211,
+          10186925391,
+          261262138,
+          10186925403,
+          406156988,
+          261149707,
+          406156958,
+          10137256374,
+          261262137
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7218761,
+              41.9245534
+            ],
+            [
+              -87.7218686,
+              41.9244257
+            ],
+            [
+              -87.7218586,
+              41.9240801
+            ],
+            [
+              -87.7218576,
+              41.9240464
+            ],
+            [
+              -87.7218322,
+              41.9231703
+            ],
+            [
+              -87.7218216,
+              41.9228052
+            ],
+            [
+              -87.7218192,
+              41.9227206
+            ],
+            [
+              -87.7218169,
+              41.922642
+            ],
+            [
+              -87.7218059,
+              41.9222608
+            ],
+            [
+              -87.7217989,
+              41.9220204
+            ],
+            [
+              -87.7217951,
+              41.9218897
+            ],
+            [
+              -87.7217925,
+              41.9217986
+            ],
+            [
+              -87.7217904,
+              41.9217259
+            ],
+            [
+              -87.7217792,
+              41.9213416
+            ],
+            [
+              -87.7217686,
+              41.9209726
+            ],
+            [
+              -87.7217725,
+              41.9208928
+            ],
+            [
+              -87.7217639,
+              41.9208105
+            ],
+            [
+              -87.7217547,
+              41.9204951
+            ],
+            [
+              -87.721742,
+              41.9200546
+            ],
+            [
+              -87.7217397,
+              41.9199783
+            ],
+            [
+              -87.7217373,
+              41.9198951
+            ],
+            [
+              -87.7217263,
+              41.9195147
+            ],
+            [
+              -87.7217155,
+              41.9191426
+            ],
+            [
+              -87.7217195,
+              41.9190622
+            ],
+            [
+              -87.721711,
+              41.9189823
+            ],
+            [
+              -87.7216999,
+              41.9186016
+            ],
+            [
+              -87.7216866,
+              41.9181447
+            ],
+            [
+              -87.7216742,
+              41.9176841
+            ],
+            [
+              -87.7216625,
+              41.9173122
+            ],
+            [
+              -87.7216601,
+              41.917229
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851199"
+      }
+    ]
+  },
+  {
+    "sid": 25,
+    "street": "HAMLIN AVE",
+    "designated_geometry": [
+      [
+        -87.72182229269752,
+        41.922705820995624
+      ],
+      [
+        -87.72187268670051,
+        41.924382525675426
+      ]
+    ],
+    "gw_mm": 186282,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1125851199,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          0.3,
+          0.4
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947285,
+          10181075850,
+          5340079250,
+          406157110,
+          406157272,
+          10186925394,
+          261142605,
+          10186925395,
+          406156937,
+          406156940,
+          10167443149,
+          261215687,
+          10167443180,
+          406157457,
+          10167443140,
+          261203069,
+          10179036929,
+          4081947212,
+          10186925251,
+          4081947210,
+          10186925254,
+          4081947211,
+          10186925391,
+          261262138,
+          10186925403,
+          406156988,
+          261149707,
+          406156958,
+          10137256374,
+          261262137
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7218761,
+              41.9245534
+            ],
+            [
+              -87.7218686,
+              41.9244257
+            ],
+            [
+              -87.7218586,
+              41.9240801
+            ],
+            [
+              -87.7218576,
+              41.9240464
+            ],
+            [
+              -87.7218322,
+              41.9231703
+            ],
+            [
+              -87.7218216,
+              41.9228052
+            ],
+            [
+              -87.7218192,
+              41.9227206
+            ],
+            [
+              -87.7218169,
+              41.922642
+            ],
+            [
+              -87.7218059,
+              41.9222608
+            ],
+            [
+              -87.7217989,
+              41.9220204
+            ],
+            [
+              -87.7217951,
+              41.9218897
+            ],
+            [
+              -87.7217925,
+              41.9217986
+            ],
+            [
+              -87.7217904,
+              41.9217259
+            ],
+            [
+              -87.7217792,
+              41.9213416
+            ],
+            [
+              -87.7217686,
+              41.9209726
+            ],
+            [
+              -87.7217725,
+              41.9208928
+            ],
+            [
+              -87.7217639,
+              41.9208105
+            ],
+            [
+              -87.7217547,
+              41.9204951
+            ],
+            [
+              -87.721742,
+              41.9200546
+            ],
+            [
+              -87.7217397,
+              41.9199783
+            ],
+            [
+              -87.7217373,
+              41.9198951
+            ],
+            [
+              -87.7217263,
+              41.9195147
+            ],
+            [
+              -87.7217155,
+              41.9191426
+            ],
+            [
+              -87.7217195,
+              41.9190622
+            ],
+            [
+              -87.721711,
+              41.9189823
+            ],
+            [
+              -87.7216999,
+              41.9186016
+            ],
+            [
+              -87.7216866,
+              41.9181447
+            ],
+            [
+              -87.7216742,
+              41.9176841
+            ],
+            [
+              -87.7216625,
+              41.9173122
+            ],
+            [
+              -87.7216601,
+              41.917229
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851199"
+      },
+      {
+        "way_id": 171244103,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          205.5,
+          19
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          8178714819,
+          10243416491,
+          365054382,
+          10295206076,
+          261191253,
+          10215409125,
+          367756564,
+          367756553,
+          367756575,
+          2266563832,
+          10167410208,
+          261236487,
+          10167443176,
+          1823071159,
+          10181115951,
+          261147081,
+          10181075997,
+          367756276,
+          10181075867,
+          4081947285
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7220821,
+              41.9318595
+            ],
+            [
+              -87.7220799,
+              41.9317812
+            ],
+            [
+              -87.7220691,
+              41.9313977
+            ],
+            [
+              -87.7220334,
+              41.9301326
+            ],
+            [
+              -87.7220311,
+              41.9300502
+            ],
+            [
+              -87.7220291,
+              41.929978
+            ],
+            [
+              -87.7220039,
+              41.9290838
+            ],
+            [
+              -87.7219938,
+              41.9287255
+            ],
+            [
+              -87.7219917,
+              41.9286519
+            ],
+            [
+              -87.7219825,
+              41.9283272
+            ],
+            [
+              -87.7219814,
+              41.9282869
+            ],
+            [
+              -87.7219791,
+              41.928206
+            ],
+            [
+              -87.7219765,
+              41.9281145
+            ],
+            [
+              -87.7219659,
+              41.9277378
+            ],
+            [
+              -87.7219302,
+              41.9264721
+            ],
+            [
+              -87.7219275,
+              41.9263751
+            ],
+            [
+              -87.7219254,
+              41.9263035
+            ],
+            [
+              -87.7218901,
+              41.9250495
+            ],
+            [
+              -87.7218795,
+              41.9246743
+            ],
+            [
+              -87.7218761,
+              41.9245534
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/171244103"
+      }
+    ]
+  },
+  {
+    "sid": 26,
+    "street": "HAMLIN AVE",
+    "designated_geometry": [
+      [
+        -87.72187268670051,
+        41.924382525675426
+      ],
+      [
+        -87.72187579223747,
+        41.92453442337731
+      ]
+    ],
+    "gw_mm": 16874,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1125851199,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          0.4,
+          0.1
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947285,
+          10181075850,
+          5340079250,
+          406157110,
+          406157272,
+          10186925394,
+          261142605,
+          10186925395,
+          406156937,
+          406156940,
+          10167443149,
+          261215687,
+          10167443180,
+          406157457,
+          10167443140,
+          261203069,
+          10179036929,
+          4081947212,
+          10186925251,
+          4081947210,
+          10186925254,
+          4081947211,
+          10186925391,
+          261262138,
+          10186925403,
+          406156988,
+          261149707,
+          406156958,
+          10137256374,
+          261262137
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7218761,
+              41.9245534
+            ],
+            [
+              -87.7218686,
+              41.9244257
+            ],
+            [
+              -87.7218586,
+              41.9240801
+            ],
+            [
+              -87.7218576,
+              41.9240464
+            ],
+            [
+              -87.7218322,
+              41.9231703
+            ],
+            [
+              -87.7218216,
+              41.9228052
+            ],
+            [
+              -87.7218192,
+              41.9227206
+            ],
+            [
+              -87.7218169,
+              41.922642
+            ],
+            [
+              -87.7218059,
+              41.9222608
+            ],
+            [
+              -87.7217989,
+              41.9220204
+            ],
+            [
+              -87.7217951,
+              41.9218897
+            ],
+            [
+              -87.7217925,
+              41.9217986
+            ],
+            [
+              -87.7217904,
+              41.9217259
+            ],
+            [
+              -87.7217792,
+              41.9213416
+            ],
+            [
+              -87.7217686,
+              41.9209726
+            ],
+            [
+              -87.7217725,
+              41.9208928
+            ],
+            [
+              -87.7217639,
+              41.9208105
+            ],
+            [
+              -87.7217547,
+              41.9204951
+            ],
+            [
+              -87.721742,
+              41.9200546
+            ],
+            [
+              -87.7217397,
+              41.9199783
+            ],
+            [
+              -87.7217373,
+              41.9198951
+            ],
+            [
+              -87.7217263,
+              41.9195147
+            ],
+            [
+              -87.7217155,
+              41.9191426
+            ],
+            [
+              -87.7217195,
+              41.9190622
+            ],
+            [
+              -87.721711,
+              41.9189823
+            ],
+            [
+              -87.7216999,
+              41.9186016
+            ],
+            [
+              -87.7216866,
+              41.9181447
+            ],
+            [
+              -87.7216742,
+              41.9176841
+            ],
+            [
+              -87.7216625,
+              41.9173122
+            ],
+            [
+              -87.7216601,
+              41.917229
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851199"
+      },
+      {
+        "way_id": 171244103,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          19,
+          2.1
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          8178714819,
+          10243416491,
+          365054382,
+          10295206076,
+          261191253,
+          10215409125,
+          367756564,
+          367756553,
+          367756575,
+          2266563832,
+          10167410208,
+          261236487,
+          10167443176,
+          1823071159,
+          10181115951,
+          261147081,
+          10181075997,
+          367756276,
+          10181075867,
+          4081947285
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7220821,
+              41.9318595
+            ],
+            [
+              -87.7220799,
+              41.9317812
+            ],
+            [
+              -87.7220691,
+              41.9313977
+            ],
+            [
+              -87.7220334,
+              41.9301326
+            ],
+            [
+              -87.7220311,
+              41.9300502
+            ],
+            [
+              -87.7220291,
+              41.929978
+            ],
+            [
+              -87.7220039,
+              41.9290838
+            ],
+            [
+              -87.7219938,
+              41.9287255
+            ],
+            [
+              -87.7219917,
+              41.9286519
+            ],
+            [
+              -87.7219825,
+              41.9283272
+            ],
+            [
+              -87.7219814,
+              41.9282869
+            ],
+            [
+              -87.7219791,
+              41.928206
+            ],
+            [
+              -87.7219765,
+              41.9281145
+            ],
+            [
+              -87.7219659,
+              41.9277378
+            ],
+            [
+              -87.7219302,
+              41.9264721
+            ],
+            [
+              -87.7219275,
+              41.9263751
+            ],
+            [
+              -87.7219254,
+              41.9263035
+            ],
+            [
+              -87.7218901,
+              41.9250495
+            ],
+            [
+              -87.7218795,
+              41.9246743
+            ],
+            [
+              -87.7218761,
+              41.9245534
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/171244103"
+      }
+    ]
+  },
+  {
+    "sid": 27,
+    "street": "HAMLIN AVE",
+    "designated_geometry": [
+      [
+        -87.72187579223747,
+        41.92453442337731
+      ],
+      [
+        -87.72192802075112,
+        41.9263609125087
+      ]
+    ],
+    "gw_mm": 202918,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 171244103,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          2.1,
+          0.1
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          8178714819,
+          10243416491,
+          365054382,
+          10295206076,
+          261191253,
+          10215409125,
+          367756564,
+          367756553,
+          367756575,
+          2266563832,
+          10167410208,
+          261236487,
+          10167443176,
+          1823071159,
+          10181115951,
+          261147081,
+          10181075997,
+          367756276,
+          10181075867,
+          4081947285
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7220821,
+              41.9318595
+            ],
+            [
+              -87.7220799,
+              41.9317812
+            ],
+            [
+              -87.7220691,
+              41.9313977
+            ],
+            [
+              -87.7220334,
+              41.9301326
+            ],
+            [
+              -87.7220311,
+              41.9300502
+            ],
+            [
+              -87.7220291,
+              41.929978
+            ],
+            [
+              -87.7220039,
+              41.9290838
+            ],
+            [
+              -87.7219938,
+              41.9287255
+            ],
+            [
+              -87.7219917,
+              41.9286519
+            ],
+            [
+              -87.7219825,
+              41.9283272
+            ],
+            [
+              -87.7219814,
+              41.9282869
+            ],
+            [
+              -87.7219791,
+              41.928206
+            ],
+            [
+              -87.7219765,
+              41.9281145
+            ],
+            [
+              -87.7219659,
+              41.9277378
+            ],
+            [
+              -87.7219302,
+              41.9264721
+            ],
+            [
+              -87.7219275,
+              41.9263751
+            ],
+            [
+              -87.7219254,
+              41.9263035
+            ],
+            [
+              -87.7218901,
+              41.9250495
+            ],
+            [
+              -87.7218795,
+              41.9246743
+            ],
+            [
+              -87.7218761,
+              41.9245534
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/171244103"
+      },
+      {
+        "way_id": 1125851199,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          0.1,
+          201
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          4081947285,
+          10181075850,
+          5340079250,
+          406157110,
+          406157272,
+          10186925394,
+          261142605,
+          10186925395,
+          406156937,
+          406156940,
+          10167443149,
+          261215687,
+          10167443180,
+          406157457,
+          10167443140,
+          261203069,
+          10179036929,
+          4081947212,
+          10186925251,
+          4081947210,
+          10186925254,
+          4081947211,
+          10186925391,
+          261262138,
+          10186925403,
+          406156988,
+          261149707,
+          406156958,
+          10137256374,
+          261262137
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7218761,
+              41.9245534
+            ],
+            [
+              -87.7218686,
+              41.9244257
+            ],
+            [
+              -87.7218586,
+              41.9240801
+            ],
+            [
+              -87.7218576,
+              41.9240464
+            ],
+            [
+              -87.7218322,
+              41.9231703
+            ],
+            [
+              -87.7218216,
+              41.9228052
+            ],
+            [
+              -87.7218192,
+              41.9227206
+            ],
+            [
+              -87.7218169,
+              41.922642
+            ],
+            [
+              -87.7218059,
+              41.9222608
+            ],
+            [
+              -87.7217989,
+              41.9220204
+            ],
+            [
+              -87.7217951,
+              41.9218897
+            ],
+            [
+              -87.7217925,
+              41.9217986
+            ],
+            [
+              -87.7217904,
+              41.9217259
+            ],
+            [
+              -87.7217792,
+              41.9213416
+            ],
+            [
+              -87.7217686,
+              41.9209726
+            ],
+            [
+              -87.7217725,
+              41.9208928
+            ],
+            [
+              -87.7217639,
+              41.9208105
+            ],
+            [
+              -87.7217547,
+              41.9204951
+            ],
+            [
+              -87.721742,
+              41.9200546
+            ],
+            [
+              -87.7217397,
+              41.9199783
+            ],
+            [
+              -87.7217373,
+              41.9198951
+            ],
+            [
+              -87.7217263,
+              41.9195147
+            ],
+            [
+              -87.7217155,
+              41.9191426
+            ],
+            [
+              -87.7217195,
+              41.9190622
+            ],
+            [
+              -87.721711,
+              41.9189823
+            ],
+            [
+              -87.7216999,
+              41.9186016
+            ],
+            [
+              -87.7216866,
+              41.9181447
+            ],
+            [
+              -87.7216742,
+              41.9176841
+            ],
+            [
+              -87.7216625,
+              41.9173122
+            ],
+            [
+              -87.7216601,
+              41.917229
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851199"
+      }
+    ]
+  },
+  {
+    "sid": 28,
+    "street": "HAMLIN AVE",
+    "designated_geometry": [
+      [
+        -87.72192802075112,
+        41.9263609125087
+      ],
+      [
+        -87.7219824801546,
+        41.92818899300935
+      ]
+    ],
+    "gw_mm": 203099,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 171244103,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          0.1,
+          0.3
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          8178714819,
+          10243416491,
+          365054382,
+          10295206076,
+          261191253,
+          10215409125,
+          367756564,
+          367756553,
+          367756575,
+          2266563832,
+          10167410208,
+          261236487,
+          10167443176,
+          1823071159,
+          10181115951,
+          261147081,
+          10181075997,
+          367756276,
+          10181075867,
+          4081947285
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7220821,
+              41.9318595
+            ],
+            [
+              -87.7220799,
+              41.9317812
+            ],
+            [
+              -87.7220691,
+              41.9313977
+            ],
+            [
+              -87.7220334,
+              41.9301326
+            ],
+            [
+              -87.7220311,
+              41.9300502
+            ],
+            [
+              -87.7220291,
+              41.929978
+            ],
+            [
+              -87.7220039,
+              41.9290838
+            ],
+            [
+              -87.7219938,
+              41.9287255
+            ],
+            [
+              -87.7219917,
+              41.9286519
+            ],
+            [
+              -87.7219825,
+              41.9283272
+            ],
+            [
+              -87.7219814,
+              41.9282869
+            ],
+            [
+              -87.7219791,
+              41.928206
+            ],
+            [
+              -87.7219765,
+              41.9281145
+            ],
+            [
+              -87.7219659,
+              41.9277378
+            ],
+            [
+              -87.7219302,
+              41.9264721
+            ],
+            [
+              -87.7219275,
+              41.9263751
+            ],
+            [
+              -87.7219254,
+              41.9263035
+            ],
+            [
+              -87.7218901,
+              41.9250495
+            ],
+            [
+              -87.7218795,
+              41.9246743
+            ],
+            [
+              -87.7218761,
+              41.9245534
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/171244103"
+      }
+    ]
+  },
+  {
+    "sid": 29,
+    "street": "HAMLIN AVE",
+    "designated_geometry": [
+      [
+        -87.7219824801546,
+        41.92818899300935
+      ],
+      [
+        -87.72203390565075,
+        41.93004098854818
+      ]
+    ],
+    "gw_mm": 205749,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 171244103,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          0.3,
+          0.3
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          8178714819,
+          10243416491,
+          365054382,
+          10295206076,
+          261191253,
+          10215409125,
+          367756564,
+          367756553,
+          367756575,
+          2266563832,
+          10167410208,
+          261236487,
+          10167443176,
+          1823071159,
+          10181115951,
+          261147081,
+          10181075997,
+          367756276,
+          10181075867,
+          4081947285
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7220821,
+              41.9318595
+            ],
+            [
+              -87.7220799,
+              41.9317812
+            ],
+            [
+              -87.7220691,
+              41.9313977
+            ],
+            [
+              -87.7220334,
+              41.9301326
+            ],
+            [
+              -87.7220311,
+              41.9300502
+            ],
+            [
+              -87.7220291,
+              41.929978
+            ],
+            [
+              -87.7220039,
+              41.9290838
+            ],
+            [
+              -87.7219938,
+              41.9287255
+            ],
+            [
+              -87.7219917,
+              41.9286519
+            ],
+            [
+              -87.7219825,
+              41.9283272
+            ],
+            [
+              -87.7219814,
+              41.9282869
+            ],
+            [
+              -87.7219791,
+              41.928206
+            ],
+            [
+              -87.7219765,
+              41.9281145
+            ],
+            [
+              -87.7219659,
+              41.9277378
+            ],
+            [
+              -87.7219302,
+              41.9264721
+            ],
+            [
+              -87.7219275,
+              41.9263751
+            ],
+            [
+              -87.7219254,
+              41.9263035
+            ],
+            [
+              -87.7218901,
+              41.9250495
+            ],
+            [
+              -87.7218795,
+              41.9246743
+            ],
+            [
+              -87.7218761,
+              41.9245534
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/171244103"
+      }
+    ]
+  },
+  {
+    "sid": 30,
+    "street": "HAMLIN AVE",
+    "designated_geometry": [
+      [
+        -87.72203390565075,
+        41.93004098854818
+      ],
+      [
+        -87.72208189386546,
+        41.93184331985075
+      ]
+    ],
+    "gw_mm": 200228,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 171244103,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          0.3,
+          0
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate"
+        },
+        "node_ids": [
+          8178714819,
+          10243416491,
+          365054382,
+          10295206076,
+          261191253,
+          10215409125,
+          367756564,
+          367756553,
+          367756575,
+          2266563832,
+          10167410208,
+          261236487,
+          10167443176,
+          1823071159,
+          10181115951,
+          261147081,
+          10181075997,
+          367756276,
+          10181075867,
+          4081947285
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7220821,
+              41.9318595
+            ],
+            [
+              -87.7220799,
+              41.9317812
+            ],
+            [
+              -87.7220691,
+              41.9313977
+            ],
+            [
+              -87.7220334,
+              41.9301326
+            ],
+            [
+              -87.7220311,
+              41.9300502
+            ],
+            [
+              -87.7220291,
+              41.929978
+            ],
+            [
+              -87.7220039,
+              41.9290838
+            ],
+            [
+              -87.7219938,
+              41.9287255
+            ],
+            [
+              -87.7219917,
+              41.9286519
+            ],
+            [
+              -87.7219825,
+              41.9283272
+            ],
+            [
+              -87.7219814,
+              41.9282869
+            ],
+            [
+              -87.7219791,
+              41.928206
+            ],
+            [
+              -87.7219765,
+              41.9281145
+            ],
+            [
+              -87.7219659,
+              41.9277378
+            ],
+            [
+              -87.7219302,
+              41.9264721
+            ],
+            [
+              -87.7219275,
+              41.9263751
+            ],
+            [
+              -87.7219254,
+              41.9263035
+            ],
+            [
+              -87.7218901,
+              41.9250495
+            ],
+            [
+              -87.7218795,
+              41.9246743
+            ],
+            [
+              -87.7218761,
+              41.9245534
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/171244103"
+      },
+      {
+        "way_id": 1221637899,
+        "name": "North Hamlin Avenue",
+        "endpoint_distances_m": [
+          202.2,
+          1.8
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "name": "North Hamlin Avenue",
+          "oneway": "yes",
+          "tiger:cfcc": "A41",
+          "tiger:county": "Cook, IL",
+          "tiger:name_base": "Hamlin",
+          "tiger:name_direction_prefix": "N",
+          "tiger:name_type": "Ave",
+          "tiger:reviewed": "no",
+          "tiger:zip_left": "60618",
+          "tiger:zip_right": "60618"
+        },
+        "node_ids": [
+          261145118,
+          10243416454,
+          11382672965,
+          261262140,
+          365054011,
+          10242926701,
+          261227487,
+          10242768029,
+          365054155,
+          10243416481,
+          8178714819
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7221691,
+              41.935489
+            ],
+            [
+              -87.7221678,
+              41.9354362
+            ],
+            [
+              -87.722143,
+              41.9344002
+            ],
+            [
+              -87.7221391,
+              41.9342557
+            ],
+            [
+              -87.7221367,
+              41.9341349
+            ],
+            [
+              -87.7221278,
+              41.9337651
+            ],
+            [
+              -87.7221256,
+              41.9336756
+            ],
+            [
+              -87.722124,
+              41.9336081
+            ],
+            [
+              -87.7220929,
+              41.932309
+            ],
+            [
+              -87.7220841,
+              41.9319422
+            ],
+            [
+              -87.7220821,
+              41.9318595
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1221637899"
+      }
+    ]
+  },
+  {
+    "sid": 31,
+    "street": "AVERS AVE",
+    "designated_geometry": [
+      [
+        -87.72293801876592,
+        41.919039063841325
+      ],
+      [
+        -87.72296032337512,
+        41.91983372130595
+      ]
+    ],
+    "gw_mm": 88283,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24094946,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0.6,
+          0.6
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          261241140,
+          10137256182,
+          13107869440,
+          406156955,
+          10186925407,
+          261241142,
+          10295207585,
+          10295207601,
+          4081947215,
+          10295207599,
+          406156943,
+          10295207615,
+          261142606,
+          10295207613,
+          406157102,
+          5340079238,
+          10295207442,
+          4081947281
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7228952,
+              41.9172184
+            ],
+            [
+              -87.7228971,
+              41.9172974
+            ],
+            [
+              -87.722905,
+              41.9175757
+            ],
+            [
+              -87.7229076,
+              41.9176694
+            ],
+            [
+              -87.7229434,
+              41.9189687
+            ],
+            [
+              -87.7229455,
+              41.9190428
+            ],
+            [
+              -87.7229479,
+              41.9191292
+            ],
+            [
+              -87.7229939,
+              41.9207962
+            ],
+            [
+              -87.722996,
+              41.9208724
+            ],
+            [
+              -87.7229983,
+              41.9209567
+            ],
+            [
+              -87.7230272,
+              41.922004
+            ],
+            [
+              -87.7230444,
+              41.922627
+            ],
+            [
+              -87.7230466,
+              41.9227062
+            ],
+            [
+              -87.7230487,
+              41.9227842
+            ],
+            [
+              -87.7230824,
+              41.9240404
+            ],
+            [
+              -87.7230846,
+              41.9240821
+            ],
+            [
+              -87.7230956,
+              41.9244091
+            ],
+            [
+              -87.7230999,
+              41.9245375
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24094946"
+      }
+    ]
+  },
+  {
+    "sid": 32,
+    "street": "AVERS AVE",
+    "designated_geometry": [
+      [
+        -87.72296032337512,
+        41.91983372130595
+      ],
+      [
+        -87.72299270195381,
+        41.92086167553967
+      ]
+    ],
+    "gw_mm": 114208,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24094946,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0.6,
+          0.2
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          261241140,
+          10137256182,
+          13107869440,
+          406156955,
+          10186925407,
+          261241142,
+          10295207585,
+          10295207601,
+          4081947215,
+          10295207599,
+          406156943,
+          10295207615,
+          261142606,
+          10295207613,
+          406157102,
+          5340079238,
+          10295207442,
+          4081947281
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7228952,
+              41.9172184
+            ],
+            [
+              -87.7228971,
+              41.9172974
+            ],
+            [
+              -87.722905,
+              41.9175757
+            ],
+            [
+              -87.7229076,
+              41.9176694
+            ],
+            [
+              -87.7229434,
+              41.9189687
+            ],
+            [
+              -87.7229455,
+              41.9190428
+            ],
+            [
+              -87.7229479,
+              41.9191292
+            ],
+            [
+              -87.7229939,
+              41.9207962
+            ],
+            [
+              -87.722996,
+              41.9208724
+            ],
+            [
+              -87.7229983,
+              41.9209567
+            ],
+            [
+              -87.7230272,
+              41.922004
+            ],
+            [
+              -87.7230444,
+              41.922627
+            ],
+            [
+              -87.7230466,
+              41.9227062
+            ],
+            [
+              -87.7230487,
+              41.9227842
+            ],
+            [
+              -87.7230824,
+              41.9240404
+            ],
+            [
+              -87.7230846,
+              41.9240821
+            ],
+            [
+              -87.7230956,
+              41.9244091
+            ],
+            [
+              -87.7230999,
+              41.9245375
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24094946"
+      }
+    ]
+  },
+  {
+    "sid": 33,
+    "street": "AVERS AVE",
+    "designated_geometry": [
+      [
+        -87.72299270195381,
+        41.92086167553967
+      ],
+      [
+        -87.72304697524176,
+        41.922690929453964
+      ]
+    ],
+    "gw_mm": 203228,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24094946,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0.2,
+          0.1
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          261241140,
+          10137256182,
+          13107869440,
+          406156955,
+          10186925407,
+          261241142,
+          10295207585,
+          10295207601,
+          4081947215,
+          10295207599,
+          406156943,
+          10295207615,
+          261142606,
+          10295207613,
+          406157102,
+          5340079238,
+          10295207442,
+          4081947281
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7228952,
+              41.9172184
+            ],
+            [
+              -87.7228971,
+              41.9172974
+            ],
+            [
+              -87.722905,
+              41.9175757
+            ],
+            [
+              -87.7229076,
+              41.9176694
+            ],
+            [
+              -87.7229434,
+              41.9189687
+            ],
+            [
+              -87.7229455,
+              41.9190428
+            ],
+            [
+              -87.7229479,
+              41.9191292
+            ],
+            [
+              -87.7229939,
+              41.9207962
+            ],
+            [
+              -87.722996,
+              41.9208724
+            ],
+            [
+              -87.7229983,
+              41.9209567
+            ],
+            [
+              -87.7230272,
+              41.922004
+            ],
+            [
+              -87.7230444,
+              41.922627
+            ],
+            [
+              -87.7230466,
+              41.9227062
+            ],
+            [
+              -87.7230487,
+              41.9227842
+            ],
+            [
+              -87.7230824,
+              41.9240404
+            ],
+            [
+              -87.7230846,
+              41.9240821
+            ],
+            [
+              -87.7230956,
+              41.9244091
+            ],
+            [
+              -87.7230999,
+              41.9245375
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24094946"
+      }
+    ]
+  },
+  {
+    "sid": 34,
+    "street": "AVERS AVE",
+    "designated_geometry": [
+      [
+        -87.72304697524176,
+        41.922690929453964
+      ],
+      [
+        -87.72308370930726,
+        41.92406592078638
+      ]
+    ],
+    "gw_mm": 152753,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24094946,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0.1,
+          0
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          261241140,
+          10137256182,
+          13107869440,
+          406156955,
+          10186925407,
+          261241142,
+          10295207585,
+          10295207601,
+          4081947215,
+          10295207599,
+          406156943,
+          10295207615,
+          261142606,
+          10295207613,
+          406157102,
+          5340079238,
+          10295207442,
+          4081947281
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7228952,
+              41.9172184
+            ],
+            [
+              -87.7228971,
+              41.9172974
+            ],
+            [
+              -87.722905,
+              41.9175757
+            ],
+            [
+              -87.7229076,
+              41.9176694
+            ],
+            [
+              -87.7229434,
+              41.9189687
+            ],
+            [
+              -87.7229455,
+              41.9190428
+            ],
+            [
+              -87.7229479,
+              41.9191292
+            ],
+            [
+              -87.7229939,
+              41.9207962
+            ],
+            [
+              -87.722996,
+              41.9208724
+            ],
+            [
+              -87.7229983,
+              41.9209567
+            ],
+            [
+              -87.7230272,
+              41.922004
+            ],
+            [
+              -87.7230444,
+              41.922627
+            ],
+            [
+              -87.7230466,
+              41.9227062
+            ],
+            [
+              -87.7230487,
+              41.9227842
+            ],
+            [
+              -87.7230824,
+              41.9240404
+            ],
+            [
+              -87.7230846,
+              41.9240821
+            ],
+            [
+              -87.7230956,
+              41.9244091
+            ],
+            [
+              -87.7230999,
+              41.9245375
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24094946"
+      }
+    ]
+  },
+  {
+    "sid": 35,
+    "street": "AVERS AVE",
+    "designated_geometry": [
+      [
+        -87.72308370930726,
+        41.92406592078638
+      ],
+      [
+        -87.72309807008777,
+        41.92452062324661
+      ]
+    ],
+    "gw_mm": 50519,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 24094946,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0,
+          0.1
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          261241140,
+          10137256182,
+          13107869440,
+          406156955,
+          10186925407,
+          261241142,
+          10295207585,
+          10295207601,
+          4081947215,
+          10295207599,
+          406156943,
+          10295207615,
+          261142606,
+          10295207613,
+          406157102,
+          5340079238,
+          10295207442,
+          4081947281
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7228952,
+              41.9172184
+            ],
+            [
+              -87.7228971,
+              41.9172974
+            ],
+            [
+              -87.722905,
+              41.9175757
+            ],
+            [
+              -87.7229076,
+              41.9176694
+            ],
+            [
+              -87.7229434,
+              41.9189687
+            ],
+            [
+              -87.7229455,
+              41.9190428
+            ],
+            [
+              -87.7229479,
+              41.9191292
+            ],
+            [
+              -87.7229939,
+              41.9207962
+            ],
+            [
+              -87.722996,
+              41.9208724
+            ],
+            [
+              -87.7229983,
+              41.9209567
+            ],
+            [
+              -87.7230272,
+              41.922004
+            ],
+            [
+              -87.7230444,
+              41.922627
+            ],
+            [
+              -87.7230466,
+              41.9227062
+            ],
+            [
+              -87.7230487,
+              41.9227842
+            ],
+            [
+              -87.7230824,
+              41.9240404
+            ],
+            [
+              -87.7230846,
+              41.9240821
+            ],
+            [
+              -87.7230956,
+              41.9244091
+            ],
+            [
+              -87.7230999,
+              41.9245375
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24094946"
+      },
+      {
+        "way_id": 1125851079,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          52.5,
+          1.9
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          4081947281,
+          10295207448,
+          2339978021,
+          367756273,
+          10181076002,
+          261147082,
+          10181115946,
+          1823071158,
+          2266563827,
+          10295207399,
+          261236489,
+          10295206107,
+          367756550,
+          10295206101,
+          261191254
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7230999,
+              41.9245375
+            ],
+            [
+              -87.7231033,
+              41.9246592
+            ],
+            [
+              -87.7231126,
+              41.9249806
+            ],
+            [
+              -87.7231142,
+              41.9250357
+            ],
+            [
+              -87.7231505,
+              41.9262959
+            ],
+            [
+              -87.7231591,
+              41.9263775
+            ],
+            [
+              -87.7231551,
+              41.926455
+            ],
+            [
+              -87.7231915,
+              41.9277216
+            ],
+            [
+              -87.7232013,
+              41.9280608
+            ],
+            [
+              -87.723202,
+              41.9280868
+            ],
+            [
+              -87.723205,
+              41.9281921
+            ],
+            [
+              -87.7232093,
+              41.9283395
+            ],
+            [
+              -87.72322,
+              41.9287138
+            ],
+            [
+              -87.7232563,
+              41.9299741
+            ],
+            [
+              -87.7232583,
+              41.9300456
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851079"
+      }
+    ]
+  },
+  {
+    "sid": 36,
+    "street": "AVERS AVE",
+    "designated_geometry": [
+      [
+        -87.72309807008777,
+        41.92452062324661
+      ],
+      [
+        -87.72315302545937,
+        41.926358895542215
+      ]
+    ],
+    "gw_mm": 204231,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1125851079,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          1.9,
+          0.3
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          4081947281,
+          10295207448,
+          2339978021,
+          367756273,
+          10181076002,
+          261147082,
+          10181115946,
+          1823071158,
+          2266563827,
+          10295207399,
+          261236489,
+          10295206107,
+          367756550,
+          10295206101,
+          261191254
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7230999,
+              41.9245375
+            ],
+            [
+              -87.7231033,
+              41.9246592
+            ],
+            [
+              -87.7231126,
+              41.9249806
+            ],
+            [
+              -87.7231142,
+              41.9250357
+            ],
+            [
+              -87.7231505,
+              41.9262959
+            ],
+            [
+              -87.7231591,
+              41.9263775
+            ],
+            [
+              -87.7231551,
+              41.926455
+            ],
+            [
+              -87.7231915,
+              41.9277216
+            ],
+            [
+              -87.7232013,
+              41.9280608
+            ],
+            [
+              -87.723202,
+              41.9280868
+            ],
+            [
+              -87.723205,
+              41.9281921
+            ],
+            [
+              -87.7232093,
+              41.9283395
+            ],
+            [
+              -87.72322,
+              41.9287138
+            ],
+            [
+              -87.7232563,
+              41.9299741
+            ],
+            [
+              -87.7232583,
+              41.9300456
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851079"
+      },
+      {
+        "way_id": 24094946,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0.1,
+          202.6
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          261241140,
+          10137256182,
+          13107869440,
+          406156955,
+          10186925407,
+          261241142,
+          10295207585,
+          10295207601,
+          4081947215,
+          10295207599,
+          406156943,
+          10295207615,
+          261142606,
+          10295207613,
+          406157102,
+          5340079238,
+          10295207442,
+          4081947281
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7228952,
+              41.9172184
+            ],
+            [
+              -87.7228971,
+              41.9172974
+            ],
+            [
+              -87.722905,
+              41.9175757
+            ],
+            [
+              -87.7229076,
+              41.9176694
+            ],
+            [
+              -87.7229434,
+              41.9189687
+            ],
+            [
+              -87.7229455,
+              41.9190428
+            ],
+            [
+              -87.7229479,
+              41.9191292
+            ],
+            [
+              -87.7229939,
+              41.9207962
+            ],
+            [
+              -87.722996,
+              41.9208724
+            ],
+            [
+              -87.7229983,
+              41.9209567
+            ],
+            [
+              -87.7230272,
+              41.922004
+            ],
+            [
+              -87.7230444,
+              41.922627
+            ],
+            [
+              -87.7230466,
+              41.9227062
+            ],
+            [
+              -87.7230487,
+              41.9227842
+            ],
+            [
+              -87.7230824,
+              41.9240404
+            ],
+            [
+              -87.7230846,
+              41.9240821
+            ],
+            [
+              -87.7230956,
+              41.9244091
+            ],
+            [
+              -87.7230999,
+              41.9245375
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/24094946"
+      }
+    ]
+  },
+  {
+    "sid": 37,
+    "street": "AVERS AVE",
+    "designated_geometry": [
+      [
+        -87.72315302545937,
+        41.926358895542215
+      ],
+      [
+        -87.72320423777514,
+        41.92818257542417
+      ]
+    ],
+    "gw_mm": 202604,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1125851079,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0.3,
+          0
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          4081947281,
+          10295207448,
+          2339978021,
+          367756273,
+          10181076002,
+          261147082,
+          10181115946,
+          1823071158,
+          2266563827,
+          10295207399,
+          261236489,
+          10295206107,
+          367756550,
+          10295206101,
+          261191254
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7230999,
+              41.9245375
+            ],
+            [
+              -87.7231033,
+              41.9246592
+            ],
+            [
+              -87.7231126,
+              41.9249806
+            ],
+            [
+              -87.7231142,
+              41.9250357
+            ],
+            [
+              -87.7231505,
+              41.9262959
+            ],
+            [
+              -87.7231591,
+              41.9263775
+            ],
+            [
+              -87.7231551,
+              41.926455
+            ],
+            [
+              -87.7231915,
+              41.9277216
+            ],
+            [
+              -87.7232013,
+              41.9280608
+            ],
+            [
+              -87.723202,
+              41.9280868
+            ],
+            [
+              -87.723205,
+              41.9281921
+            ],
+            [
+              -87.7232093,
+              41.9283395
+            ],
+            [
+              -87.72322,
+              41.9287138
+            ],
+            [
+              -87.7232563,
+              41.9299741
+            ],
+            [
+              -87.7232583,
+              41.9300456
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851079"
+      }
+    ]
+  },
+  {
+    "sid": 38,
+    "street": "AVERS AVE",
+    "designated_geometry": [
+      [
+        -87.72320423777514,
+        41.92818257542417
+      ],
+      [
+        -87.72325661549165,
+        41.93003767627502
+      ]
+    ],
+    "gw_mm": 206095,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1125851079,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0,
+          0.1
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          4081947281,
+          10295207448,
+          2339978021,
+          367756273,
+          10181076002,
+          261147082,
+          10181115946,
+          1823071158,
+          2266563827,
+          10295207399,
+          261236489,
+          10295206107,
+          367756550,
+          10295206101,
+          261191254
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7230999,
+              41.9245375
+            ],
+            [
+              -87.7231033,
+              41.9246592
+            ],
+            [
+              -87.7231126,
+              41.9249806
+            ],
+            [
+              -87.7231142,
+              41.9250357
+            ],
+            [
+              -87.7231505,
+              41.9262959
+            ],
+            [
+              -87.7231591,
+              41.9263775
+            ],
+            [
+              -87.7231551,
+              41.926455
+            ],
+            [
+              -87.7231915,
+              41.9277216
+            ],
+            [
+              -87.7232013,
+              41.9280608
+            ],
+            [
+              -87.723202,
+              41.9280868
+            ],
+            [
+              -87.723205,
+              41.9281921
+            ],
+            [
+              -87.7232093,
+              41.9283395
+            ],
+            [
+              -87.72322,
+              41.9287138
+            ],
+            [
+              -87.7232563,
+              41.9299741
+            ],
+            [
+              -87.7232583,
+              41.9300456
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851079"
+      },
+      {
+        "way_id": 171244106,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          207.2,
+          0.9
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:both": "shared_lane",
+          "cycleway:both:lane": "pictogram",
+          "highway": "residential",
+          "lane_markings": "no",
+          "name": "North Avers Avenue",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          261191254,
+          10295206097,
+          1831544536,
+          1831544537,
+          365054394,
+          11330145612
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7232583,
+              41.9300456
+            ],
+            [
+              -87.7232607,
+              41.9301333
+            ],
+            [
+              -87.7232724,
+              41.9305525
+            ],
+            [
+              -87.7232928,
+              41.9312827
+            ],
+            [
+              -87.7232955,
+              41.9313822
+            ],
+            [
+              -87.7233056,
+              41.931744
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/171244106"
+      }
+    ]
+  },
+  {
+    "sid": 39,
+    "street": "AVERS AVE",
+    "designated_geometry": [
+      [
+        -87.72325661549165,
+        41.93003767627502
+      ],
+      [
+        -87.72330566704893,
+        41.93175138476433
+      ]
+    ],
+    "gw_mm": 190388,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 171244106,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0.9,
+          0.8
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:both": "shared_lane",
+          "cycleway:both:lane": "pictogram",
+          "highway": "residential",
+          "lane_markings": "no",
+          "name": "North Avers Avenue",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          261191254,
+          10295206097,
+          1831544536,
+          1831544537,
+          365054394,
+          11330145612
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7232583,
+              41.9300456
+            ],
+            [
+              -87.7232607,
+              41.9301333
+            ],
+            [
+              -87.7232724,
+              41.9305525
+            ],
+            [
+              -87.7232928,
+              41.9312827
+            ],
+            [
+              -87.7232955,
+              41.9313822
+            ],
+            [
+              -87.7233056,
+              41.931744
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/171244106"
+      },
+      {
+        "way_id": 1125851079,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0.1,
+          189.7
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "bicycle_road": "yes",
+          "cyclestreet": "yes",
+          "cycleway:right": "lane",
+          "cycleway:right:buffer": "no",
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+          "oneway": "yes",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          4081947281,
+          10295207448,
+          2339978021,
+          367756273,
+          10181076002,
+          261147082,
+          10181115946,
+          1823071158,
+          2266563827,
+          10295207399,
+          261236489,
+          10295206107,
+          367756550,
+          10295206101,
+          261191254
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7230999,
+              41.9245375
+            ],
+            [
+              -87.7231033,
+              41.9246592
+            ],
+            [
+              -87.7231126,
+              41.9249806
+            ],
+            [
+              -87.7231142,
+              41.9250357
+            ],
+            [
+              -87.7231505,
+              41.9262959
+            ],
+            [
+              -87.7231591,
+              41.9263775
+            ],
+            [
+              -87.7231551,
+              41.926455
+            ],
+            [
+              -87.7231915,
+              41.9277216
+            ],
+            [
+              -87.7232013,
+              41.9280608
+            ],
+            [
+              -87.723202,
+              41.9280868
+            ],
+            [
+              -87.723205,
+              41.9281921
+            ],
+            [
+              -87.7232093,
+              41.9283395
+            ],
+            [
+              -87.72322,
+              41.9287138
+            ],
+            [
+              -87.7232563,
+              41.9299741
+            ],
+            [
+              -87.7232583,
+              41.9300456
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1125851079"
+      },
+      {
+        "way_id": 1221637897,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          189.8,
+          0
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "cycleway:both": "shared_lane",
+          "cycleway:both:lane": "pictogram",
+          "highway": "residential",
+          "name": "North Avers Avenue"
+        },
+        "node_ids": [
+          11330145612,
+          10242968357,
+          261223362
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7233056,
+              41.931744
+            ],
+            [
+              -87.7233045,
+              41.9317691
+            ],
+            [
+              -87.7232964,
+              41.9318439
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1221637897"
+      },
+      {
+        "way_id": 1221637898,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          200.9,
+          10.3
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "oneway": "yes",
+          "tiger:cfcc": "A41",
+          "tiger:county": "Cook, IL",
+          "tiger:name_base": "Avers",
+          "tiger:name_direction_prefix": "N",
+          "tiger:name_type": "Ave",
+          "tiger:zip_left": "60647",
+          "tiger:zip_right": "60647"
+        },
+        "node_ids": [
+          261223362,
+          10242968355,
+          11330145613
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7232964,
+              41.9318439
+            ],
+            [
+              -87.7232939,
+              41.9319223
+            ],
+            [
+              -87.7232934,
+              41.9319365
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1221637898"
+      },
+      {
+        "way_id": 1119648441,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          211.2,
+          20.6
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "oneway": "yes",
+          "tiger:cfcc": "A41",
+          "tiger:county": "Cook, IL",
+          "tiger:name_base": "Avers",
+          "tiger:name_direction_prefix": "N",
+          "tiger:name_type": "Ave",
+          "tiger:zip_left": "60647",
+          "tiger:zip_right": "60647"
+        },
+        "node_ids": [
+          11330145613,
+          365054151,
+          1823071150
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7232934,
+              41.9319365
+            ],
+            [
+              -87.7233046,
+              41.932293
+            ],
+            [
+              -87.7233323,
+              41.9335922
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1119648441"
+      }
+    ]
+  },
+  {
+    "sid": 40,
+    "street": "AVERS AVE",
+    "designated_geometry": [
+      [
+        -87.72330566704893,
+        41.93175138476433
+      ],
+      [
+        -87.72329426900114,
+        41.93183050499742
+      ]
+    ],
+    "gw_mm": 8839,
+    "decision": "unreviewed",
+    "reason": "Candidates require overlap/heading, grade, motor direction, barrier, restriction and endpoint review; proximity and name are not approval.",
+    "candidates": [
+      {
+        "way_id": 1221637897,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0,
+          0.3
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cycleway:both": "shared_lane",
+          "cycleway:both:lane": "pictogram",
+          "highway": "residential",
+          "name": "North Avers Avenue"
+        },
+        "node_ids": [
+          11330145612,
+          10242968357,
+          261223362
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7233056,
+              41.931744
+            ],
+            [
+              -87.7233045,
+              41.9317691
+            ],
+            [
+              -87.7232964,
+              41.9318439
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1221637897"
+      },
+      {
+        "way_id": 171244106,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          0.8,
+          9.7
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "cyclestreet": "yes",
+          "cycleway:both": "shared_lane",
+          "cycleway:both:lane": "pictogram",
+          "highway": "residential",
+          "lane_markings": "no",
+          "name": "North Avers Avenue",
+          "sidewalk:both": "separate",
+          "surface": "asphalt"
+        },
+        "node_ids": [
+          261191254,
+          10295206097,
+          1831544536,
+          1831544537,
+          365054394,
+          11330145612
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7232583,
+              41.9300456
+            ],
+            [
+              -87.7232607,
+              41.9301333
+            ],
+            [
+              -87.7232724,
+              41.9305525
+            ],
+            [
+              -87.7232928,
+              41.9312827
+            ],
+            [
+              -87.7232955,
+              41.9313822
+            ],
+            [
+              -87.7233056,
+              41.931744
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/171244106"
+      },
+      {
+        "way_id": 1221637898,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          10.3,
+          1.5
+        ],
+        "covers_both_designation_endpoints": true,
+        "tags": {
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "oneway": "yes",
+          "tiger:cfcc": "A41",
+          "tiger:county": "Cook, IL",
+          "tiger:name_base": "Avers",
+          "tiger:name_direction_prefix": "N",
+          "tiger:name_type": "Ave",
+          "tiger:zip_left": "60647",
+          "tiger:zip_right": "60647"
+        },
+        "node_ids": [
+          261223362,
+          10242968355,
+          11330145613
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7232964,
+              41.9318439
+            ],
+            [
+              -87.7232939,
+              41.9319223
+            ],
+            [
+              -87.7232934,
+              41.9319365
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1221637898"
+      },
+      {
+        "way_id": 1119648441,
+        "name": "North Avers Avenue",
+        "endpoint_distances_m": [
+          20.6,
+          11.8
+        ],
+        "covers_both_designation_endpoints": false,
+        "tags": {
+          "highway": "residential",
+          "name": "North Avers Avenue",
+          "oneway": "yes",
+          "tiger:cfcc": "A41",
+          "tiger:county": "Cook, IL",
+          "tiger:name_base": "Avers",
+          "tiger:name_direction_prefix": "N",
+          "tiger:name_type": "Ave",
+          "tiger:zip_left": "60647",
+          "tiger:zip_right": "60647"
+        },
+        "node_ids": [
+          11330145613,
+          365054151,
+          1823071150
+        ],
+        "geometry": {
+          "type": "LineString",
+          "coordinates": [
+            [
+              -87.7232934,
+              41.9319365
+            ],
+            [
+              -87.7233046,
+              41.932293
+            ],
+            [
+              -87.7233323,
+              41.9335922
+            ]
+          ]
+        },
+        "evidence": "https://www.openstreetmap.org/way/1119648441"
+      }
+    ]
+  }
+]

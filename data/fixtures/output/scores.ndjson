@@ -1,0 +1,6 @@
+{"sid":1,"gw_mm":100000,"lb_mm":3218688,"exact":1,"controlling_state":0}
+{"sid":2,"gw_mm":200000,"lb_mm":3218688,"exact":1,"controlling_state":1}
+{"sid":3,"gw_mm":300000,"lb_mm":402336,"exact":1,"controlling_state":2}
+{"sid":4,"gw_mm":400000,"lb_mm":3218688,"exact":0,"controlling_state":3}
+{"sid":5,"gw_mm":500000,"lb_mm":0,"exact":0,"controlling_state":4}
+{"sid":6,"gw_mm":600000,"lb_mm":0,"exact":1,"controlling_state":null}
