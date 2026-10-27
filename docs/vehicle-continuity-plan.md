@@ -2,7 +2,7 @@
 
 Research and implementation proposal · October 27, 2026
 
-**Implementation update:** The route-based pilot is implemented on `codex/greenway-route-continuity`. See [current validation and plan review](route-rockwell-lyndale-wrightwood-validation.md) for 48 sections on 30 street families, tests and unresolved field review, and the [evidence catalog](evidence-catalog.md) for structured source provenance. The research observations below describe the pre-implementation investigation. Git checkpoints have been pushed; the public site has not been redeployed.
+**Implementation update:** The route-based pilot is implemented on `codex/greenway-route-continuity`. See [current validation and plan review](route-bloomingdale-hamlin-validation.md) for 52 sections on 32 street families, tests and unresolved field review, and the [evidence catalog](evidence-catalog.md) for structured source provenance. The research observations below describe the pre-implementation investigation. Git checkpoints have been pushed; the public site has not been redeployed.
 
 ## Decision
 

@@ -1,4 +1,5 @@
 // City-row representation is a coverage inventory, not field verification.
+export const GREENWAY_CATEGORY = 'Neighborhood Greenway';
 const compare = (a, b) => a < b ? -1 : a > b ? 1 : 0;
 const milesSum = rows => Number(rows.reduce((sum, row) => sum + row.miles, 0).toFixed(12));
 const requiredString = (value, label) => {
@@ -11,6 +12,7 @@ export function compileCoverageInventory({ cityRecords, routes, sourceMetadata =
   const city = new Map();
   for (const record of cityRecords) {
     const id = requiredString(record[':id'], 'city ID');
+    if (record.displayrou !== GREENWAY_CATEGORY) throw new Error(`City ID ${id} is outside the required ${GREENWAY_CATEGORY} category`);
     if (city.has(id)) throw new Error(`duplicate city ID: ${id}`);
     const rawMiles = record.mi_ctrline;
     if ((typeof rawMiles !== 'string' && typeof rawMiles !== 'number') || String(rawMiles).trim() === '' || !Number.isFinite(Number(rawMiles)) || Number(rawMiles) < 0) {
@@ -43,7 +45,8 @@ export function compileCoverageInventory({ cityRecords, routes, sourceMetadata =
   }
   return {
     schema_version: 1,
-    description: 'City source-row representation in the route export; not a count of distinct greenway projects or field-verified routes. Mileage sums city mi_ctrline attributes, not route geometry or driving distance.',
+    description: 'CDOT Neighborhood Greenway source-row representation in the route export; not all bikeways, a count of distinct projects, or field verification. Mileage sums city mi_ctrline attributes, not route geometry or driving distance.',
+    eligibility: { field: 'displayrou', equals: GREENWAY_CATEGORY, validated_city_rows: all.length },
     source: { city: sourceMetadata, route_sha256: routeSha256 },
     summary: {
       total_city_rows: all.length,

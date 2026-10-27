@@ -21,6 +21,7 @@ const samples = [], skips = [];
 const sourceUrl = 'https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut';
 const cityRecords = JSON.parse(await readFile('data/sources/greenways.json', 'utf8'));
 const cityRecord = id => cityRecords.find(r => r[':id'] === id);
+const evidenceRecords = JSON.parse(await readFile('data/routes/review-evidence.json','utf8')).records;
 function relevantNode(tags) { return Object.keys(tags).some(k => /^(barrier|access|vehicle|motor_vehicle|motorcar|hgv|bicycle|oneway|restriction)(:|$)/.test(k) || k.includes('conditional')); }
 for (const route of data.routes) {
   const edges = new Map(route.edges.map(e => [e.id, e]));
@@ -45,7 +46,9 @@ for (const route of data.routes) {
     if (options.length) selected.push(options[0]);
   }
   if (selected.length < 2) {
-    const explicitUnmatched=route.id==='wrightwood-2' && route.matching_review?.evidence_id==='wrightwood-divided-offsets' && route.edges.length===1 && route.edges[0].role==='gap' && candidates.length===0;
+    const binding=route.matching_review, record=evidenceRecords.find(r=>r.id===binding?.evidence_id), gap=route.edges[0];
+    const sameIds=Array.isArray(binding?.source_ids) && Array.isArray(route.source_ids) && route.source_ids.length>0 && binding.source_ids.length===route.source_ids.length && new Set(binding.source_ids).size===binding.source_ids.length && route.source_ids.every(id=>binding.source_ids.includes(id));
+    const explicitUnmatched=!!record && sameIds && route.source_ids.every(id=>record.source_record_ids?.includes(id)) && typeof binding.reason==='string' && binding.reason.trim().length>0 && record.matching_review===binding.reason && route.edges.length===1 && gap?.role==='gap' && gap.evidence_ids?.includes(record.id) && ['forward','reverse'].every(d=>gap.access?.[d]?.status==='unknown' && gap.access[d].reason?.includes(binding.reason)) && route.runs.length===0 && candidates.length===0;
     if (explicitUnmatched) skips.push({route_id:route.id, result:'review', reason:'Evidence-bound city component is wholly unmatched; no road movement exists to sample.', evidence_id:route.matching_review.evidence_id, eligible_count:0, selected_count:0});
     else if (!selected.length) samples.push({id:`${route.id}-missing-sample`,route_id:route.id,subject:'sampling coverage',result:'fail',basis:'No eligible same-way movements and no recognized fully unmatched evidence-bound component.'});
     else skips.push({route_id:route.id, reason:'Fewer than two independently eligible distinct same-way junctions.', eligible_count:candidates.length, selected_count:selected.length});
@@ -308,6 +311,8 @@ for (const [routeId,cityId,wayId] of [['argyle-1','row-wkph~qm3w~5yab',144371535
 // City-designated cross-street offsets: check the saved city geometry, the
 // staged carriageway nodes and its exported movements independently of config.
 for (const [routeId, cityId, wayId, sourceNodes, adjacent] of [
+  ['bloomingdale-1','row-8z5i.69jx.wshp',145803701,[261160059,261160058],[1211946209,24088585]],
+  ['bloomingdale-1','row-rubi_y2ch_uh4b',145803707,[261209703,261209725],[24088585,673592698]],
   ['aldine-1','row-gv5q_svcf_t3vj',619457502,[262171169,10040045490,10040045492,262170052],[619457499,24117482]],
   ['roscoe-2','row-ftcb_6xmu~qa9x',619457505,[262169734,10040045476,3456306392],[24075148,24075135]],
   ['berwyn-2','row-cg56_7q8e~jzk6',1313897204,[257146995,12163643801,10544230315,13182271017,257121401],[1314176518,23741249]],
@@ -326,7 +331,7 @@ for (const [routeId, cityId, wayId, sourceNodes, adjacent] of [
   const sources=[sourceUrl,`https://www.openstreetmap.org/way/${wayId}`];
   check(`${routeId}-city-connector-geometry`,true,!!route && route.source_ids.includes(cityId) && city?.oneway_dir==='-' && tags?.highway && !['cycleway','path','footway'].includes(tags.highway) && !!matchesNodes && !!near && !!paths && before?.way_id===adjacent[0] && after?.way_id===adjacent[1],'The city row and independently inspected carriageway nodes support this designated offset; adjacent motor street nodes are shared. This does not verify present signs.',sources);
   const restrictionsAtPath=restrictions.some(r=>r.members.some(m=>m.type==='node' && sourceNodes.includes(m.ref) && m.role==='via') || r.members.some(m=>m.type==='way' && m.ref===wayId && m.role==='via'));
-  check(`${routeId}-connector-snapshot-movements`,true,!!route && !!paths && !tags?.oneway && !restrictionsAtPath && edges.every(e=>['forward','reverse'].every(d=>e.access[d].status==='allowed')) && turns.length===edges.length+1 && turns.every(m=>['forward','reverse'].every(d=>m[d].status==='allowed')),'The staged street has no one-way tag or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.',sources);
+  check(`${routeId}-connector-snapshot-movements`,true,!!route && !!paths && (!tags?.oneway || tags.oneway==='no') && !restrictionsAtPath && edges.every(e=>['forward','reverse'].every(d=>e.access[d].status==='allowed')) && turns.length===edges.length+1 && turns.every(m=>['forward','reverse'].every(d=>m[d].status==='allowed')),'The staged street has no motor one-way restriction or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.',sources);
 }
 {
  const routes=data.routes.filter(r=>r.name==='Rockwell');
@@ -355,6 +360,28 @@ for (const [routeId, cityId, wayId, sourceNodes, adjacent] of [
  const city=cityRecord('row-nat7~w2yg_e9fb'), blank=cityRecord('row-sehs~8th9.rbe3'), road=getWay.get(1153273869), t=road && JSON.parse(road.tags), ns=road && JSON.parse(road.nodes), a=ns && nodeCoords.get(ns[0]),b=ns && nodeCoords.get(ns.at(-1));
  const route=routes.find(r=>r.id==='wrightwood-1'), edges=route?.edges.filter(e=>e.way_id===1153273869) ?? [];
  check('wrightwood-west-eastbound-and-blank-city-direction',true,city?.oneway_dir==='E' && blank?.oneway_dir==='-' && t?.oneway==='yes' && !!a && !!b && b.lon>a.lon && edges.length>0 && edges.every(e=>e.access.forward.status==='allowed' && e.access.reverse.status==='blocked') && route.source_ids.includes(blank[':id']),'West of Cicero a staged eastbound motor way agrees with the city; the Austin–Central row has no city motor-direction assertion and must not be called a conflict merely for that blank.',[sourceUrl,'https://www.openstreetmap.org/way/1153273869']);
+}
+{
+ const route=data.routes.find(r=>r.id==='bloomingdale-1');
+ const ids=['row-mhva~sefa-56y8','row-8z5i.69jx.wshp','row-9fhc-fg9z~eqbn','row-rubi_y2ch_uh4b','row-q7br.k2n4.y3hx'];
+ const alias=cityRecord(ids[4]), eastern=getWay.get(673592698), et=eastern && JSON.parse(eastern.tags);
+ check('bloomingdale-five-city-rows-and-alias',true,!!route && route.source_ids.length===ids.length && ids.every(id=>route.source_ids.includes(id) && cityRecord(id)?.displayrou==='Neighborhood Greenway') && alias?.st_name==='BLOOMINDALE' && alias.street==='BLOOMINDALE AVE' && et?.name==='West Bloomingdale Avenue' && ids.every(id=>cityRecord(id).oneway_dir==='-'),'All five designated rows include the Monitor and Central offsets; the spelling alias is supported by the staged street name and city geometry, and blank city motor direction makes no cardinal assertion.',[sourceUrl,'https://www.openstreetmap.org/way/673592698']);
+ const outside=getWay.get(278728590), ot=outside && JSON.parse(outside.tags), on=outside && JSON.parse(outside.nodes), end=getWay.get(145803719), en=end && JSON.parse(end.nodes);
+ check('bloomingdale-laramie-outside-oneway-excluded',true,!!route && ot?.oneway==='yes' && on?.includes(261209719) && en?.includes(261209719) && route.edges.every(e=>e.way_id!==278728590),'The neighboring one-way beyond Laramie shares an endpoint but is outside the designated city extent.',[sourceUrl,'https://www.openstreetmap.org/way/278728590']);
+}
+{
+ const routes=data.routes.filter(r=>r.name==='Hamlin'), south=['row-qfyh_4rhq-fwc5','row-gt5a_ktbp-zxxk','row-a382_9uag.kagm','row-j75m~d2v9-97uu','row-rsyh_vh9b.jyts','row-z6fn.ywid~e4w9'], north=['row-igtt.auca-9a94','row-mmum_qanc~3xrf'];
+ check('hamlin-distinct-city-components',true,routes.length===3 && [...south,...north].every(id=>cityRecord(id)?.displayrou==='Neighborhood Greenway' && routes.filter(r=>r.source_ids.includes(id)).length===1) && routes.every(r=>!r.source_ids.some(id=>south.includes(id)) || !r.source_ids.some(id=>north.includes(id))),'The southern and northern Hamlin project extents are distinct; the southern Douglas jog is a separate unresolved component.',[sourceUrl]);
+ for(const [routeId,cityId,ways] of [['hamlin-1','row-gt5a_ktbp-zxxk',[461514039,1231223238,1214205072,1214205071]],['hamlin-3','row-mmum_qanc~3xrf',[1125851199,171244103]]]) for(const id of ways) {
+  const route=routes.find(r=>r.id===routeId), w=getWay.get(id), t=w && JSON.parse(w.tags), ns=w && JSON.parse(w.nodes), a=ns && nodeCoords.get(ns[0]), b=ns && nodeCoords.get(ns.at(-1)), es=route?.edges.filter(e=>e.way_id===id) ?? [];
+  check(`${routeId}-${id}-southbound`,true,cityRecord(cityId)?.oneway_dir==='S' && t?.oneway==='yes' && !!a && !!b && b.lat<a.lat && es.length>0 && es.every(e=>e.access.forward.status==='blocked' && e.access.reverse.status==='allowed'),'City southbound direction and staged southbound way order block northbound car travel; bicycle exceptions do not apply to cars.',[sourceUrl,`https://www.openstreetmap.org/way/${id}`]);
+ }
+ for(const [routeId,cityId,id] of [['hamlin-1','row-qfyh_4rhq-fwc5',196411610],['hamlin-3','row-igtt.auca-9a94',24098174]]) {
+  const route=routes.find(r=>r.id===routeId), w=getWay.get(id), t=w && JSON.parse(w.tags), edges=route?.edges.filter(e=>e.way_id===id) ?? [];
+  check(`${routeId}-${id}-two-way-part`,true,cityRecord(cityId)?.oneway_dir==='-' && (!t?.oneway || t.oneway==='no') && edges.some(e=>e.access.forward.status==='allowed' && e.access.reverse.status==='allowed'),'The blank city motor field and staged way have no motor one-way assertion; at least one scoped segment is modeled in both directions. Transitions and current signs still need verification.',[sourceUrl,`https://www.openstreetmap.org/way/${id}`]);
+ }
+ const r=routes.find(r=>r.id==='hamlin-2'), ev=evidenceRecords.find(x=>x.id==='hamlin-douglas-jog'), gap=r?.edges[0];
+ check('hamlin-douglas-unmatched-evidence',true,!!r && JSON.stringify(r.source_ids)===JSON.stringify(['row-z6fn.ywid~e4w9']) && r.matching_review?.evidence_id===ev?.id && ev?.source_record_ids?.includes('row-z6fn.ywid~e4w9') && r.matching_review?.reason===ev?.matching_review && r.edges.length===1 && gap?.role==='gap' && gap.evidence_ids?.includes(ev.id) && ['forward','reverse'].every(d=>gap.access[d].status==='unknown') && r.runs.length===0,'The entire Douglas city row remains an evidence-bound unknown gap with no car run.',[sourceUrl,...(ev?.sources ?? []).map(s=>s.url)]);
 }
 const dbHash = createHash('sha256');
 for await (const chunk of createReadStream(database)) dbHash.update(chunk);

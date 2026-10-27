@@ -1,5 +1,7 @@
 # Rockwell, Lyndale, Wrightwood and named connectors
 
+Historical checkpoint `6c21e14`, committed and pushed October 27, 2026. See the [current expansion and CDOT scope verification](route-bloomingdale-hamlin-validation.md).
+
 Reviewed October 27, 2026, after committing and pushing checkpoint `21dbe2d`. This expansion adds Rockwell, Lyndale and Wrightwood, plus seven explicitly designated connector records. The export now represents **30 street families, 48 sections, 2,587 movements and 111 directional runs**, over **49.90111 miles of city designation geometry**. No movement is field approved. Representation includes unknown geometry and is not a completed audit or a cycling-stress assessment.
 
 ## Remaining inventory

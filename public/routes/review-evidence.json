@@ -6408,6 +6408,1171 @@
       "search_gaps": [
         "No project-level inventory and field-confirmed entire alignment established."
       ]
+    },
+    {
+      "id": "cdot-inventory-scope",
+      "location": "Chicago citywide",
+      "source_inference": "Exact Neighborhood Greenway displayrou category is a reproducible catalog scope. CDOT strategy treats neighborhood greenways as one subset of low-stress bikeways, alongside protected lanes and trails; no evidence supports restricting the dataset to named projects. Category is not a segment-level stress measurement.",
+      "review_status": "source-inferred",
+      "confidence": "high for selected dataset category; limited for present physical conditions",
+      "effective_period": "CDOT strategy Spring 2023; dataset current as of December 2025",
+      "sources": [
+        {
+          "url": "https://chicagocompletestreets.org/wp-content/uploads/2013/06/YearEndReview_2014_Draft_Jan27th_WEB.pdf",
+          "source_date": "2014",
+          "date_kind": "CDOT year-end review",
+          "scope": "Page 11 describes typically low-volume residential streets, bicycle and pedestrian priority, reduced speeds and cut-through traffic, and Wood as a low-stress connection",
+          "status": "directly accessible CDOT publication",
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "title": "2014 Year-End Review",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "agency report",
+          "review_method": "Reviewed searchable text of CDOT report via web; printed page 11."
+        },
+        {
+          "url": "https://www.chicagocompletestreets.org/wp-content/uploads/2016/02/Streets%20for%20Cycling%20Plan%202020.pdf",
+          "source_date": "2012",
+          "date_kind": "city cycling plan",
+          "scope": "Facilities guide page xi describes residential greenways as low-stress routes using traffic calming or diversion",
+          "status": "directly accessible city plan",
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "title": "Chicago Streets for Cycling Plan 2020",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city plan",
+          "review_method": "Reviewed searchable text of city plan via web; facilities guide printed page xi."
+        },
+        {
+          "url": "https://www.chicago.gov/content/dam/city/depts/cdot/bike/2023/2023_Chicago%20Cycling%20Update.pdf",
+          "source_date": "2023",
+          "date_kind": "publication",
+          "scope": "CDOT Chicago Cycling Strategy; city host returned HTTP 403 during review",
+          "status": "primary document; inaccessible directly",
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "title": "Chicago Cycling Strategy",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "agency strategy",
+          "review_method": "Attempted direct retrieval; city host returned HTTP 403. Content reviewed through reproduction separately listed."
+        },
+        {
+          "url": "https://www.scribd.com/document/635776930/Chicago-Cycling-Strategy",
+          "source_date": "2023",
+          "date_kind": "publication",
+          "scope": "Reproduction of CDOT-authored strategy; pages 14, 28–29, 46–47",
+          "status": "reproduced primary document",
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "title": "Chicago Cycling Strategy",
+          "publisher": "Chicago Department of Transportation; reproduced by Scribd",
+          "source_type": "reproduced agency strategy",
+          "review_method": "Reviewed searchable reproduced text; printed pages 14, 28–29, and 46–47."
+        },
+        {
+          "url": "https://data.cityofchicago.org/api/views/hvv9-38ut.json",
+          "source_date": "2025-12",
+          "date_kind": "dataset time period",
+          "scope": "Owner, description, update frequency, field list and data currency",
+          "status": "city metadata",
+          "retrieved_at": "2026-10-27",
+          "sha256": "92b04a946e1bc3c9051b56d74971d92a57d772284be2cb303b118f1a112eae14",
+          "title": "Bike Routes dataset metadata",
+          "publisher": "City of Chicago, Department of Transportation",
+          "source_type": "dataset metadata",
+          "review_method": "Retrieved current metadata JSON and compared fields against saved metadata."
+        }
+      ],
+      "review_needed": "CDOT confirmation of status semantics and more recent installed-only inventory.",
+      "inventory_scope": {
+        "dataset_id": "hvv9-38ut",
+        "field": "displayrou",
+        "equals": "Neighborhood Greenway"
+      }
+    },
+    {
+      "id": "cdot-inventory-live-comparison",
+      "location": "Chicago citywide",
+      "source_inference": "2026-10-27 live ordered query returned 258 rows byte-identical to 2026-09-19 snapshot; SHA-256 b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2. Sum mi_ctrline 85.2337581292567. Live metadata differs from saved only in view and download counts. Portal unchanged does not establish present ground conditions. Other displayrou counts/miles: Protected Bike Lane 174/68.7418295472084; Buffered Bike Lane 184/106.4570393541259; Bike Lane 285/138.4914068721320; Marked Shared Lane 107/46.9814853430303. All 11 non-system field descriptions are blank; no installed/planned status or installation-date field is published.",
+      "review_status": "verified-against-live-source",
+      "confidence": "high for portal snapshot",
+      "effective_period": "retrieved 2026-10-27; data current as of December 2025",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_date": "2026-10-27",
+          "date_kind": "retrieval",
+          "scope": "Full 258-row ordered greenway selection; byte hash matched",
+          "status": "live source",
+          "retrieved_at": "2026-10-27",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "title": "Bike Routes: Neighborhood Greenway rows",
+          "publisher": "City of Chicago, Department of Transportation",
+          "source_type": "dataset query",
+          "review_method": "Retrieved ordered live Socrata response and compared byte SHA-256 and parsed rows to saved snapshot."
+        },
+        {
+          "url": "https://data.cityofchicago.org/api/views/hvv9-38ut.json",
+          "source_date": "2025-12-16",
+          "date_kind": "rowsUpdatedAt",
+          "scope": "1765925627 = 2025-12-16T22:53:47Z; time period December 2025",
+          "status": "live metadata",
+          "retrieved_at": "2026-10-27",
+          "sha256": "92b04a946e1bc3c9051b56d74971d92a57d772284be2cb303b118f1a112eae14",
+          "title": "Bike Routes dataset metadata",
+          "publisher": "City of Chicago, Department of Transportation",
+          "source_type": "dataset metadata",
+          "review_method": "Retrieved current metadata JSON and compared fields against saved metadata."
+        },
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=displayrou%2Ccount%28%2A%29%20as%20n%2Csum%28mi_ctrline%29%20as%20miles&%24group=displayrou",
+          "source_date": "2026-10-27",
+          "date_kind": "retrieval",
+          "scope": "Live displayrou counts and sums for all five route categories",
+          "status": "live aggregate",
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "title": "Bike Routes: route-type counts and centerline mileage",
+          "publisher": "City of Chicago, Department of Transportation",
+          "source_type": "dataset aggregate query",
+          "review_method": "Retrieved and inspected live Socrata grouped aggregation."
+        }
+      ],
+      "review_needed": "Recheck for later portal updates and validate current conditions locally.",
+      "inventory_scope": {
+        "dataset_id": "hvv9-38ut",
+        "field": "displayrou",
+        "equals": "Neighborhood Greenway"
+      }
+    },
+    {
+      "id": "cdot-inventory-queue-labels",
+      "location": "Avenue J and alley between Sacramento and Richmond",
+      "source_inference": "Remaining queue includes Avenue J with st_name AVENUE and an ALLEY row; these are source labels, not evidence of separate named projects or access. Include catalogued rows pending geometry and status review.",
+      "review_status": "source-inferred",
+      "confidence": "high for source fields; unknown for actual connector role",
+      "effective_period": "December 2025 source snapshot",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_date": "2026-10-27",
+          "date_kind": "retrieval",
+          "scope": "row-3ta3-sx9b.3hwx AVENUE J E 100TH–E 98TH, 0.253279082157; row-v8nm_gcrv.3qmh ALLEY N SACRAMENTO–N RICHMOND, 0.0630578305293",
+          "status": "city source records",
+          "retrieved_at": "2026-10-27",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "title": "Bike Routes: Neighborhood Greenway rows",
+          "publisher": "City of Chicago, Department of Transportation",
+          "source_type": "dataset query",
+          "review_method": "Retrieved ordered live Socrata response and compared byte SHA-256 and parsed rows to saved snapshot."
+        }
+      ],
+      "review_needed": "Inspect geometry, relevant project records, regulatory signs, and present movement.",
+      "inventory_scope": {
+        "dataset_id": "hvv9-38ut",
+        "field": "displayrou",
+        "equals": "Neighborhood Greenway"
+      },
+      "source_record_ids": [
+        "row-3ta3-sx9b.3hwx",
+        "row-v8nm_gcrv.3qmh"
+      ]
+    },
+    {
+      "id": "cdot-inventory-alternative",
+      "location": "Chicago citywide",
+      "source_inference": "Bike_Routes_EB layer defaults Source to Chicago Data Portal and has dataLastEditDate 2024-03-20; its item modified November 2024. It does not establish a newer independent inventory. No authoritative newer installed-only catalog or project mapping identified in searches.",
+      "review_status": "research-gap",
+      "confidence": "moderate for search gap; high for layer metadata",
+      "effective_period": "layer metadata checked 2026-10-27",
+      "sources": [
+        {
+          "url": "https://services7.arcgis.com/A03QrhyHnDaUmK0W/ArcGIS/rest/services/Bike_Routes_EB/FeatureServer/0?f=pjson",
+          "source_date": "2024-03-20",
+          "date_kind": "last data edit",
+          "scope": "Fields and editingInfo; Source defaults to Chicago Data Portal",
+          "status": "public city ArcGIS layer",
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "title": "Bike_Routes_EB feature layer metadata",
+          "publisher": null,
+          "source_type": "ArcGIS feature layer metadata",
+          "review_method": "Retrieved and inspected JSON fields, Source default and editingInfo; layer item owner recorded separately."
+        },
+        {
+          "url": "https://www.arcgis.com/sharing/rest/content/items/c68368fa7786458c86f7e7006ff82ee3?f=pjson",
+          "source_date": "2024-11",
+          "date_kind": "item modification",
+          "scope": "Item owner lindsey.frey_cdot and modification timestamp",
+          "status": "public ArcGIS item",
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "title": "1 Bike Routes",
+          "publisher": null,
+          "source_type": "ArcGIS item metadata",
+          "review_method": "Retrieved and inspected JSON item owner and timestamps."
+        }
+      ],
+      "review_needed": "Request an up-to-date installed-only city inventory and definitions from CDOT if needed.",
+      "inventory_scope": {
+        "dataset_id": "hvv9-38ut",
+        "field": "displayrou",
+        "equals": "Neighborhood Greenway"
+      }
+    },
+    {
+      "id": "bloomingdale-narragansett-monitor",
+      "source_record_ids": [
+        "row-mhva~sefa-56y8"
+      ],
+      "way_ids": [
+        1211946207,
+        1211946209
+      ],
+      "location": "Bloomingdale, Narragansett to Monitor",
+      "movement": "ordinary passenger car along designated line in either direction",
+      "source_inference": "City row has oneway_dir -: no cardinal motor-direction assertion. Both staged residential ways lack oneway and connect across node 261209750; node order is eastbound on 1211946207 and westbound on 1211946209. No one-way restriction is mapped on these ways. Bicycle designation is not motor permission.",
+      "review_status": "source-inferred; field review needed",
+      "confidence": "moderate for staged geometry and tags; current signs and turn legality unverified",
+      "effective_period": "city extract December 2025; OSM snapshot September 2026",
+      "candidate_node_slices": [
+        {
+          "way_id": 1211946207,
+          "from_node": 739079116,
+          "to_node": 261209750
+        },
+        {
+          "way_id": 1211946209,
+          "from_node": 261209750,
+          "to_node": 261160059
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1211946207",
+          "title": "OpenStreetMap way 1211946207",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM snapshot way",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Node order and motor access tags in local staged snapshot; object link may change",
+          "status": "snapshot",
+          "review_method": "Queried SQLite way nodes, tags and staged turn restriction relations",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "sha256_scope": "regional PBF extract, not live object page"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1211946209",
+          "title": "OpenStreetMap way 1211946209",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM snapshot way",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Node order and motor access tags in local staged snapshot; object link may change",
+          "status": "snapshot",
+          "review_method": "Queried SQLite way nodes, tags and staged turn restriction relations",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "sha256_scope": "regional PBF extract, not live object page"
+        }
+      ],
+      "review_needed": "Verify present signs, physical treatments, motor access and applicable turns on the designated alignment; do not infer legal turns solely from connected geometry."
+    },
+    {
+      "id": "bloomingdale-monitor-offset",
+      "source_record_ids": [
+        "row-8z5i.69jx.wshp"
+      ],
+      "way_ids": [
+        145803701
+      ],
+      "location": "Monitor offset between Bloomingdale arms",
+      "movement": "ordinary passenger car along designated line in either direction",
+      "source_inference": "City greenway centerline specifies the offset southbound from western arm to eastern arm. OSM way 145803701 joins both arms and has oneway=no, ordered south to north. No staged restriction relation references the candidate way or junction nodes. This does not prove present legal turns.",
+      "review_status": "source-inferred; field review needed",
+      "confidence": "moderate for staged geometry and tags; current signs and turn legality unverified",
+      "effective_period": "city extract December 2025; OSM snapshot September 2026",
+      "candidate_node_slices": [
+        {
+          "way_id": 145803701,
+          "from_node": 261160059,
+          "to_node": 261160058
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/145803701",
+          "title": "OpenStreetMap way 145803701",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM snapshot way",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Node order and motor access tags in local staged snapshot; object link may change",
+          "status": "snapshot",
+          "review_method": "Queried SQLite way nodes, tags and staged turn restriction relations",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "sha256_scope": "regional PBF extract, not live object page"
+        }
+      ],
+      "review_needed": "Verify present signs, physical treatments, motor access and applicable turns on the designated alignment; do not infer legal turns solely from connected geometry."
+    },
+    {
+      "id": "bloomingdale-monitor-central",
+      "source_record_ids": [
+        "row-9fhc-fg9z~eqbn"
+      ],
+      "way_ids": [
+        24088585
+      ],
+      "location": "Bloomingdale, Monitor to Central",
+      "movement": "ordinary passenger car along designated line in either direction",
+      "source_inference": "City row has oneway_dir -, no cardinal motor assertion. Residential way 24088585 runs east to west in node order, with no oneway tag; connects both offset ways. No one-way restriction is mapped on this way.",
+      "review_status": "source-inferred; field review needed",
+      "confidence": "moderate for staged geometry and tags; current signs and turn legality unverified",
+      "effective_period": "city extract December 2025; OSM snapshot September 2026",
+      "candidate_node_slices": [
+        {
+          "way_id": 24088585,
+          "from_node": 261160058,
+          "to_node": 261209703
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24088585",
+          "title": "OpenStreetMap way 24088585",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM snapshot way",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Node order and motor access tags in local staged snapshot; object link may change",
+          "status": "snapshot",
+          "review_method": "Queried SQLite way nodes, tags and staged turn restriction relations",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "sha256_scope": "regional PBF extract, not live object page"
+        }
+      ],
+      "review_needed": "Verify present signs, physical treatments, motor access and applicable turns on the designated alignment; do not infer legal turns solely from connected geometry."
+    },
+    {
+      "id": "bloomingdale-central-offset",
+      "source_record_ids": [
+        "row-rubi_y2ch_uh4b"
+      ],
+      "way_ids": [
+        145803707
+      ],
+      "location": "Central offset between Bloomingdale arms",
+      "movement": "ordinary passenger car along designated line in either direction",
+      "source_inference": "City greenway centerline specifies the offset northbound from western arm to eastern arm. Tertiary way 145803707 joins the two arms in south-to-north node order and lacks oneway tag. No staged restriction relation references this way or junction nodes; neither that absence nor the bicycle designation establishes current turn legality.",
+      "review_status": "source-inferred; field review needed",
+      "confidence": "moderate for staged geometry and tags; current signs and turn legality unverified",
+      "effective_period": "city extract December 2025; OSM snapshot September 2026",
+      "candidate_node_slices": [
+        {
+          "way_id": 145803707,
+          "from_node": 261209703,
+          "to_node": 261209725
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/145803707",
+          "title": "OpenStreetMap way 145803707",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM snapshot way",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Node order and motor access tags in local staged snapshot; object link may change",
+          "status": "snapshot",
+          "review_method": "Queried SQLite way nodes, tags and staged turn restriction relations",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "sha256_scope": "regional PBF extract, not live object page"
+        }
+      ],
+      "review_needed": "Verify present signs, physical treatments, motor access and applicable turns on the designated alignment; do not infer legal turns solely from connected geometry."
+    },
+    {
+      "id": "bloomindale-central-laramie",
+      "source_record_ids": [
+        "row-q7br.k2n4.y3hx"
+      ],
+      "way_ids": [
+        673592698,
+        145803719
+      ],
+      "location": "Bloomingdale, Central to Laramie",
+      "movement": "ordinary passenger car along designated line in either direction",
+      "source_inference": "City BLOOMINDALE spelling is a plausible Bloomingdale alias: endpoints, geometry and OSM street name align. Preserve original spelling and ID. City oneway_dir - makes no motor direction assertion; both mapped residential ways lack oneway and are ordered east to west. No mapped one-way restriction on the scoped ways. Adjacent east-of-Laramie way 278728590 is outside the city row and excluded.",
+      "review_status": "source-inferred; field review needed",
+      "confidence": "moderate for staged geometry and tags; current signs and turn legality unverified",
+      "effective_period": "city extract December 2025; OSM snapshot September 2026",
+      "candidate_node_slices": [
+        {
+          "way_id": 673592698,
+          "from_node": 261209725,
+          "to_node": 261209721
+        },
+        {
+          "way_id": 145803719,
+          "from_node": 261209721,
+          "to_node": 261209719
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/673592698",
+          "title": "OpenStreetMap way 673592698",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM snapshot way",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Node order and motor access tags in local staged snapshot; object link may change",
+          "status": "snapshot",
+          "review_method": "Queried SQLite way nodes, tags and staged turn restriction relations",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "sha256_scope": "regional PBF extract, not live object page"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/145803719",
+          "title": "OpenStreetMap way 145803719",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM snapshot way",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Node order and motor access tags in local staged snapshot; object link may change",
+          "status": "snapshot",
+          "review_method": "Queried SQLite way nodes, tags and staged turn restriction relations",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "sha256_scope": "regional PBF extract, not live object page"
+        }
+      ],
+      "review_needed": "Verify present signs, physical treatments, motor access and applicable turns on the designated alignment; do not infer legal turns solely from connected geometry."
+    },
+    {
+      "id": "hamlin-33rd-31st",
+      "source_record_ids": [
+        "row-qfyh_4rhq-fwc5"
+      ],
+      "way_ids": [
+        196411610
+      ],
+      "location": "South Hamlin, 33rd–31st",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City motor direction is - and way 196411610 lacks oneway. These sources do not independently verify current permission in either direction.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 196411610",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
+    },
+    {
+      "id": "hamlin-31st-cermak",
+      "source_record_ids": [
+        "row-gt5a_ktbp-zxxk"
+      ],
+      "way_ids": [
+        461514039,
+        1214205071,
+        1214205072,
+        1231223238
+      ],
+      "location": "South Hamlin, 31st–Cermak",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City S and OSM node order on these ways indicate southbound motor one-way; oneway:bicycle=no is a bicycle exception, not car permission.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 461514039, 1214205071, 1214205072, 1231223238",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
+    },
+    {
+      "id": "hamlin-cermak-ogden",
+      "source_record_ids": [
+        "row-a382_9uag.kagm"
+      ],
+      "way_ids": [
+        1072570869,
+        585046175
+      ],
+      "location": "South Hamlin, Cermak–Ogden",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City direction - and these ways have no oneway tag. These sources do not independently verify current permission in either direction.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 1072570869, 585046175",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
+    },
+    {
+      "id": "hamlin-ogden-19th",
+      "source_record_ids": [
+        "row-j75m~d2v9-97uu"
+      ],
+      "way_ids": [
+        554591249,
+        1072570865,
+        1072570867,
+        1061159299
+      ],
+      "location": "South Hamlin, Ogden–19th",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City direction S; snapshot way 1061159299 runs south with oneway=yes and bicycle exception; three short Ogden approach ways lack oneway. Resolve transition from signs.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 554591249, 1072570865, 1072570867, 1061159299",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
+    },
+    {
+      "id": "hamlin-19th-douglas",
+      "source_record_ids": [
+        "row-rsyh_vh9b.jyts"
+      ],
+      "way_ids": [
+        24107653,
+        930816382,
+        930816383
+      ],
+      "location": "South Hamlin, 19th–Douglas/14th",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City S and all three ways run south with oneway=yes. This establishes snapshot segment direction, not turn permission at the boulevard jog.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 24107653, 930816382, 930816383",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
+    },
+    {
+      "id": "hamlin-douglas-jog",
+      "source_record_ids": [
+        "row-z6fn.ywid~e4w9"
+      ],
+      "way_ids": [
+        34853067,
+        24079172
+      ],
+      "location": "South Hamlin / Douglas / Independence jog",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City line begins near Independence and Douglas, runs west along Douglas then curves south to Hamlin/14th. OSM names these westbound Douglas 34853067 and southbound Independence 24079172; their shared node 261160861 supports geometric attachment. This is a route bend, not a straight Hamlin crossing. No current car turn approval is established. These road candidates cover the curve but extend beyond the city endpoints; endpoint attachment and exact path assignment require independent review. The road matcher left this city row unmatched.",
+      "confidence": "candidate geometry and mapped road direction; exact assignment and current permitted turns unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 34853067, 24079172",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission.",
+      "candidate_tight_node_slices": [
+        {
+          "way_id": 34853067,
+          "nodes": [
+            261160863,
+            13854136625,
+            9851402745,
+            13854136631,
+            13854113600,
+            261160861
+          ]
+        },
+        {
+          "way_id": 24079172,
+          "nodes": [
+            261160861,
+            261160874,
+            358541387,
+            358541386,
+            261145327,
+            12766723373,
+            358541384,
+            261160875,
+            261145378
+          ]
+        }
+      ],
+      "matching_review": "The city Hamlin designation bends along roads named Douglas and Independence in OSM. Exact endpoint matching and the route through the boulevard remain unresolved; no car path is inferred here."
+    },
+    {
+      "id": "hamlin-cortland-armitage",
+      "source_record_ids": [
+        "row-igtt.auca-9a94"
+      ],
+      "way_ids": [
+        24098174
+      ],
+      "location": "North Hamlin, Cortland–Armitage",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City direction - and way 24098174 lacks oneway. These sources do not independently verify current permission in either direction.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 24098174",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
+    },
+    {
+      "id": "hamlin-armitage-diversey",
+      "source_record_ids": [
+        "row-mmum_qanc~3xrf"
+      ],
+      "way_ids": [
+        1125851199,
+        171244103
+      ],
+      "location": "North Hamlin, Armitage–Diversey",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City S and both OSM ways run south with oneway=yes. Check current signs and each junction.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 1125851199, 171244103",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
+    },
+    {
+      "id": "hamlin-cortland-connector",
+      "source_record_ids": [
+        "row-kb56.czy3-uyw7"
+      ],
+      "way_ids": [
+        1425934580
+      ],
+      "location": "Cortland, Hamlin–Ridgeway",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City designated connector and OSM way 1425934580 connect the north route to Ridgeway. City direction - and missing oneway do not independently verify current permission.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 1425934580",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
+    },
+    {
+      "id": "hamlin-19th-connector",
+      "source_record_ids": [
+        "row-c5x4_w9sf~sv5y"
+      ],
+      "way_ids": [
+        1061159303
+      ],
+      "location": "19th, Hamlin–Ridgeway",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City E and OSM way 1061159303 runs east with oneway=yes. The turn into or out of it is not independently established.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 1061159303",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
+    },
+    {
+      "id": "hamlin-ridgeway-loop",
+      "source_record_ids": [
+        "row-r4yb-73vz_r9hg",
+        "row-p79a-nzw3.kric"
+      ],
+      "way_ids": [
+        24084889,
+        930816387,
+        930816386,
+        1061159301,
+        24068883
+      ],
+      "location": "Ridgeway, 19th–Douglas",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City labels northbound. OSM ways 24084889, 930816387, 930816386 and 1061159301 run north with oneway=yes; 24068883 beyond their north end lacks oneway. Check the precise north endpoint and turns.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 24084889, 930816387, 930816386, 1061159301, 24068883",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
+    },
+    {
+      "id": "hamlin-14th-connector",
+      "source_record_ids": [
+        "row-ud98-pggg_z4tm"
+      ],
+      "way_ids": [
+        24076371
+      ],
+      "location": "City Douglas connector, Hamlin–Ridgeway",
+      "movement": "motor travel along the designated route",
+      "source_inference": "City geometry and eastbound attribute match OSM eastbound West 14th Street 24076371, between nodes 261145378 and 261145377. Name discrepancy requires confirmation; do not substitute a parallel Douglas carriageway. Check both turning movements.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 24076371",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission.",
+      "candidate_tight_node_slices": [
+        {
+          "way_id": 24076371,
+          "nodes": [
+            261145378,
+            5493389442,
+            5493389440,
+            9851402728,
+            261145377
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hamlin-west-14th",
+      "source_record_ids": [
+        "row-3hq2~mvyq~hukh"
+      ],
+      "way_ids": [
+        24076360
+      ],
+      "location": "14th, Kostner–Hamlin",
+      "movement": "motor travel along the designated route",
+      "source_inference": "The city row ends at the Hamlin jog west-side approach. City W and OSM 24076360 run west with oneway=yes; bicycle contraflow does not extend to cars. The connecting bend requires signs and turn review.",
+      "confidence": "moderate for saved attributes and node order; current signs, turns and conditions unverified",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official inventory",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rowsUpdatedAt from saved metadata",
+          "scope": "Neighborhood Greenway centerline and motor direction attributes",
+          "status": "saved snapshot, not field verification",
+          "review_method": "local greenways.json row attributes and coordinate order",
+          "pages": null,
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "scope": "Staged way nodes and tags for 24076360",
+          "status": "snapshot, signs and turns unverified",
+          "review_method": "read-only SQLite ways, node coordinates, and restriction relations",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "retrieved_at": "2026-09-19T02:27:15.039Z"
+        }
+      ],
+      "review_needed": "Verify current signs, physical barriers, and complete approach-to-departure movements; absence of tags does not independently verify current permission."
     }
   ],
   "research_batches": [
@@ -6706,6 +7871,95 @@
         "bloomindale-bloomingdale-alias-inventory"
       ],
       "notes": "docs/connector-inventory-source-review.md"
+    },
+    {
+      "id": "cdot-scope-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Independent scope and provenance review of CDOT neighborhood greenway inventory; not a route approval.",
+        "method": "Compare live public source query and metadata against the saved byte snapshot; review CDOT strategy and alternative GIS metadata. Distinguish source category, named projects, planned facilities, and verified ground conditions."
+      },
+      "record_ids": [
+        "cdot-inventory-scope",
+        "cdot-inventory-live-comparison",
+        "cdot-inventory-queue-labels",
+        "cdot-inventory-alternative"
+      ],
+      "notes": "docs/cdot-inventory-scope-review.md"
+    },
+    {
+      "id": "bloomingdale-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Scoped Bloomingdale alias, street and offset source research; candidate geometry and tags are not field approvals.",
+        "default_profile": "ordinary passenger car following designated route",
+        "search_gaps": [
+          "No detailed corridor-specific CDOT engineering plans or actual scoped alderman project updates located in targeted searches on 2026-10-27; absence is not proof none exists.",
+          "2021 Chicago bike map search result https://chicagocompletestreets.org/wp-content/uploads/2022/05/2021-Chicago-Bike-Map-website.pdf returned HTTP 404 on direct network retrieval; no graphics inspected.",
+          "The CDOT-credited 2020 proposed network map in https://sharedusemobilitycenter.org/wp-content/uploads/2025/12/BikesForBelmontCragin_v5.pdf PDF page 9 (printed 7), visually inspected, stops around Armitage and does not depict the Bloomingdale corridor. It cannot establish these offsets or present permissions. Report August 2023; SHA-256 6626acabdc69aaf2f998913a7d69e18e4ab6557e0d5e8f8b64b3395722e91e4c.",
+          "Public download first failed due to sandbox DNS; retried with network permission successfully. Web PDF screenshot failed cache miss; local rendered page was inspected.",
+          "Focused 2026-10-27 searches: \"Bloomingdale\" \"greenway\" \"Mitts\" Chicago bike; \"Bloomingdale\" \"bike\" \"Emma Mitts\" Central Austin; \"Bloomingdale\" \"bike\" \"37th ward\" Chicago greenway; \"Bloomingdale\" \"bicycle\" \"Narragansett\" \"Laramie\" Chicago; \"Bloomingdale\" \"bike\" \"Mitts\" 2015 Chicago; \"Bloomingdale Avenue\" \"greenway\" \"Austin\" \"Central\" Chicago; \"Bloomingdale\" \"bike route\" \"Laramie\" \"Narragansett\" Chicago; \"Bloomingdale\" \"bicycle\" \"37th ward\" 2014 Chicago; \"Bloomingdale\" \"bicycle\" \"36th ward\" Chicago Central. No corridor-specific ward update or detailed design found. Ward assignments for the corridor and historical project dates remain unverified.",
+          "Historical citywide bike map search-result URLs https://chicagocompletestreets.org/wp-content/uploads/2014/06/Chicago-Bike-Map-2014.pdf and https://chicagocompletestreets.org/wp-content/uploads/2016/01/2016-Chicago-Bike-Map.pdf returned HTTP 404 on permitted direct retrieval; neither graphic inspected. Search-index text alone does not establish mapped alignment or designation."
+        ]
+      },
+      "record_ids": [
+        "bloomingdale-narragansett-monitor",
+        "bloomingdale-monitor-offset",
+        "bloomingdale-monitor-central",
+        "bloomingdale-central-offset",
+        "bloomindale-central-laramie"
+      ],
+      "notes": "docs/bloomingdale-source-review.md"
+    },
+    {
+      "id": "hamlin-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Hamlin inventory research; source-inferred observations, not field approval",
+        "search_gaps": [
+          {
+            "scope": "CDOT intersection drawings, as-builts, and direct ward project updates for Hamlin, Ridgeway, Cortland and boulevard jog",
+            "result": "Targeted searches did not locate usable project-specific detailed drawings or direct ward project updates; not evidence that none exist."
+          },
+          {
+            "scope": "31st Street Corridor Study April 2023",
+            "url": "https://rtams.org/sites/default/files/documents/2023-11/31st%20Street%20Corridor%20Study_Final%20Report_April%202023-compressed.pdf",
+            "result": "Search snippet mentions Hamlin, but web viewer redirect failed and direct download of redirected public URL returned HTTP 403. Document and drawings not inspected; no claim based on snippet."
+          },
+          {
+            "scope": "Focused ward and report mirror search, 2026-10-27",
+            "queries": [
+              "\"Hamlin\" \"greenway\" \"35th ward\" bike",
+              "\"Hamlin\" \"greenway\" \"26th ward\" Chicago",
+              "\"Hamlin\" \"greenway\" \"24th ward\" Chicago",
+              "\"Hamlin\" \"greenway\" \"22nd ward\" Chicago",
+              "\"Hamlin\" \"bike\" site:ward26.com OR site:26thward.org",
+              "\"Hamlin\" \"bike\" site:24thward.org OR site:22ndward.org",
+              "\"31st Street Corridor Study\" \"South Lawndale\" Chicago 2023 pdf"
+            ],
+            "result": "No direct ward greenway project communication or accessible official mirror of the 2023 report was located by these searches. Historical and present ward boundaries are not established by the query labels."
+          }
+        ]
+      },
+      "record_ids": [
+        "hamlin-33rd-31st",
+        "hamlin-31st-cermak",
+        "hamlin-cermak-ogden",
+        "hamlin-ogden-19th",
+        "hamlin-19th-douglas",
+        "hamlin-douglas-jog",
+        "hamlin-cortland-armitage",
+        "hamlin-armitage-diversey",
+        "hamlin-cortland-connector",
+        "hamlin-19th-connector",
+        "hamlin-ridgeway-loop",
+        "hamlin-14th-connector",
+        "hamlin-west-14th"
+      ],
+      "notes": "docs/hamlin-source-review.md"
     }
   ]
 }

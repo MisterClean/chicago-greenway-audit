@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-27T20:40:21.952Z",
+  "audited_at": "2026-10-27T20:51:48.159Z",
   "input": "public/routes/pilot.json",
-  "input_sha256": "5b2f1a3a8bffbae4584ae130cbf07adcf664aa1d4fa0aefb486369a49de4c1e6",
+  "input_sha256": "5e7dcc5dfeac5660bfb8f94464a9d1cc9f11c0cbca58391ddcd73352a986d535",
   "staged_database": "data/staging/network.sqlite",
   "staged_database_sha256": "feb3da5161b58ad7aaf4c644c7ec090f894f6ced6cb9b6a8680f03970d4b5706",
   "osm_source_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
@@ -11,8 +11,8 @@
   "purpose": "Source consistency checks and narrow movement samples; no field review, legal certification, or whole-corridor approval.",
   "scope_caveat": "Samples test junction movement rules only; adjoining edges and current signs may differ.",
   "sampling_method": "Two distinct eligible same-way nodes nearest route-index quartiles per route, both directions; selection independent of observed result. Unknown, restricted and junction-traversal nodes are excluded.",
-  "sample_count": 188,
-  "targeted_check_count": 97,
+  "sample_count": 200,
+  "targeted_check_count": 113,
   "field_approvals": 0,
   "samples": [
     {
@@ -3774,6 +3774,246 @@
         "https://www.openstreetmap.org/node/261180889"
       ],
       "field_reviewed": false
+    },
+    {
+      "id": "bloomingdale-1-movement-22-forward",
+      "route_id": "bloomingdale-1",
+      "subject": "movement",
+      "movement_id": "bloomingdale-1-movement-22",
+      "direction": "forward",
+      "from_edge": "bloomingdale-1-way-1211946207-22",
+      "to_edge": "bloomingdale-1-way-1211946207-23",
+      "via_node_id": 11237131849,
+      "source_way_id": 1211946207,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1211946207",
+        "https://www.openstreetmap.org/node/11237131849"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "bloomingdale-1-movement-22-reverse",
+      "route_id": "bloomingdale-1",
+      "subject": "movement",
+      "movement_id": "bloomingdale-1-movement-22",
+      "direction": "reverse",
+      "from_edge": "bloomingdale-1-way-1211946207-23",
+      "to_edge": "bloomingdale-1-way-1211946207-22",
+      "via_node_id": 11237131849,
+      "source_way_id": 1211946207,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1211946207",
+        "https://www.openstreetmap.org/node/11237131849"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "bloomingdale-1-movement-64-forward",
+      "route_id": "bloomingdale-1",
+      "subject": "movement",
+      "movement_id": "bloomingdale-1-movement-64",
+      "direction": "forward",
+      "from_edge": "bloomingdale-1-way-673592698-64",
+      "to_edge": "bloomingdale-1-way-673592698-65",
+      "via_node_id": 2469366654,
+      "source_way_id": 673592698,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/673592698",
+        "https://www.openstreetmap.org/node/2469366654"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "bloomingdale-1-movement-64-reverse",
+      "route_id": "bloomingdale-1",
+      "subject": "movement",
+      "movement_id": "bloomingdale-1-movement-64",
+      "direction": "reverse",
+      "from_edge": "bloomingdale-1-way-673592698-65",
+      "to_edge": "bloomingdale-1-way-673592698-64",
+      "via_node_id": 2469366654,
+      "source_way_id": 673592698,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/673592698",
+        "https://www.openstreetmap.org/node/2469366654"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-1-movement-17-forward",
+      "route_id": "hamlin-1",
+      "subject": "movement",
+      "movement_id": "hamlin-1-movement-17",
+      "direction": "forward",
+      "from_edge": "hamlin-1-way-461514039-17",
+      "to_edge": "hamlin-1-way-461514039-18",
+      "via_node_id": 11267204861,
+      "source_way_id": 461514039,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/461514039",
+        "https://www.openstreetmap.org/node/11267204861"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-1-movement-17-reverse",
+      "route_id": "hamlin-1",
+      "subject": "movement",
+      "movement_id": "hamlin-1-movement-17",
+      "direction": "reverse",
+      "from_edge": "hamlin-1-way-461514039-18",
+      "to_edge": "hamlin-1-way-461514039-17",
+      "via_node_id": 11267204861,
+      "source_way_id": 461514039,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/461514039",
+        "https://www.openstreetmap.org/node/11267204861"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-1-movement-50-forward",
+      "route_id": "hamlin-1",
+      "subject": "movement",
+      "movement_id": "hamlin-1-movement-50",
+      "direction": "forward",
+      "from_edge": "hamlin-1-way-1061159299-50",
+      "to_edge": "hamlin-1-way-1061159299-51",
+      "via_node_id": 2393970274,
+      "source_way_id": 1061159299,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1061159299",
+        "https://www.openstreetmap.org/node/2393970274"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-1-movement-50-reverse",
+      "route_id": "hamlin-1",
+      "subject": "movement",
+      "movement_id": "hamlin-1-movement-50",
+      "direction": "reverse",
+      "from_edge": "hamlin-1-way-1061159299-51",
+      "to_edge": "hamlin-1-way-1061159299-50",
+      "via_node_id": 2393970274,
+      "source_way_id": 1061159299,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1061159299",
+        "https://www.openstreetmap.org/node/2393970274"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-3-movement-14-forward",
+      "route_id": "hamlin-3",
+      "subject": "movement",
+      "movement_id": "hamlin-3-movement-14",
+      "direction": "forward",
+      "from_edge": "hamlin-3-way-1125851199-14",
+      "to_edge": "hamlin-3-way-1125851199-15",
+      "via_node_id": 10186925391,
+      "source_way_id": 1125851199,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1125851199",
+        "https://www.openstreetmap.org/node/10186925391"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-3-movement-14-reverse",
+      "route_id": "hamlin-3",
+      "subject": "movement",
+      "movement_id": "hamlin-3-movement-14",
+      "direction": "reverse",
+      "from_edge": "hamlin-3-way-1125851199-15",
+      "to_edge": "hamlin-3-way-1125851199-14",
+      "via_node_id": 10186925391,
+      "source_way_id": 1125851199,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1125851199",
+        "https://www.openstreetmap.org/node/10186925391"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-3-movement-41-forward",
+      "route_id": "hamlin-3",
+      "subject": "movement",
+      "movement_id": "hamlin-3-movement-41",
+      "direction": "forward",
+      "from_edge": "hamlin-3-way-171244103-41",
+      "to_edge": "hamlin-3-way-171244103-42",
+      "via_node_id": 10181115951,
+      "source_way_id": 171244103,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/171244103",
+        "https://www.openstreetmap.org/node/10181115951"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-3-movement-41-reverse",
+      "route_id": "hamlin-3",
+      "subject": "movement",
+      "movement_id": "hamlin-3-movement-41",
+      "direction": "reverse",
+      "from_edge": "hamlin-3-way-171244103-42",
+      "to_edge": "hamlin-3-way-171244103-41",
+      "via_node_id": 10181115951,
+      "source_way_id": 171244103,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/171244103",
+        "https://www.openstreetmap.org/node/10181115951"
+      ],
+      "field_reviewed": false
     }
   ],
   "targeted_checks": [
@@ -4873,6 +5113,54 @@
       "field_reviewed": false
     },
     {
+      "id": "bloomingdale-1-city-connector-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The city row and independently inspected carriageway nodes support this designated offset; adjacent motor street nodes are shared. This does not verify present signs.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/145803701"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "bloomingdale-1-connector-snapshot-movements",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The staged street has no motor one-way restriction or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/145803701"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "bloomingdale-1-city-connector-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The city row and independently inspected carriageway nodes support this designated offset; adjacent motor street nodes are shared. This does not verify present signs.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/145803707"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "bloomingdale-1-connector-snapshot-movements",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The staged street has no motor one-way restriction or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/145803707"
+      ],
+      "field_reviewed": false
+    },
+    {
       "id": "aldine-1-city-connector-geometry",
       "expected": true,
       "observed": true,
@@ -4889,7 +5177,7 @@
       "expected": true,
       "observed": true,
       "result": "pass",
-      "basis": "The staged street has no one-way tag or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
+      "basis": "The staged street has no motor one-way restriction or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
       "sources": [
         "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
         "https://www.openstreetmap.org/way/619457502"
@@ -4913,7 +5201,7 @@
       "expected": true,
       "observed": true,
       "result": "pass",
-      "basis": "The staged street has no one-way tag or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
+      "basis": "The staged street has no motor one-way restriction or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
       "sources": [
         "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
         "https://www.openstreetmap.org/way/619457505"
@@ -4937,7 +5225,7 @@
       "expected": true,
       "observed": true,
       "result": "pass",
-      "basis": "The staged street has no one-way tag or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
+      "basis": "The staged street has no motor one-way restriction or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
       "sources": [
         "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
         "https://www.openstreetmap.org/way/1313897204"
@@ -4961,7 +5249,7 @@
       "expected": true,
       "observed": true,
       "result": "pass",
-      "basis": "The staged street has no one-way tag or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
+      "basis": "The staged street has no motor one-way restriction or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
       "sources": [
         "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
         "https://www.openstreetmap.org/way/1160244173"
@@ -4985,7 +5273,7 @@
       "expected": true,
       "observed": true,
       "result": "pass",
-      "basis": "The staged street has no one-way tag or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
+      "basis": "The staged street has no motor one-way restriction or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.",
       "sources": [
         "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
         "https://www.openstreetmap.org/way/1266271144"
@@ -5062,6 +5350,150 @@
         "https://www.openstreetmap.org/way/1153273869"
       ],
       "field_reviewed": false
+    },
+    {
+      "id": "bloomingdale-five-city-rows-and-alias",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "All five designated rows include the Monitor and Central offsets; the spelling alias is supported by the staged street name and city geometry, and blank city motor direction makes no cardinal assertion.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/673592698"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "bloomingdale-laramie-outside-oneway-excluded",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The neighboring one-way beyond Laramie shares an endpoint but is outside the designated city extent.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/278728590"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-distinct-city-components",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The southern and northern Hamlin project extents are distinct; the southern Douglas jog is a separate unresolved component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-1-461514039-southbound",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City southbound direction and staged southbound way order block northbound car travel; bicycle exceptions do not apply to cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/461514039"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-1-1231223238-southbound",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City southbound direction and staged southbound way order block northbound car travel; bicycle exceptions do not apply to cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1231223238"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-1-1214205072-southbound",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City southbound direction and staged southbound way order block northbound car travel; bicycle exceptions do not apply to cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1214205072"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-1-1214205071-southbound",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City southbound direction and staged southbound way order block northbound car travel; bicycle exceptions do not apply to cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1214205071"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-3-1125851199-southbound",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City southbound direction and staged southbound way order block northbound car travel; bicycle exceptions do not apply to cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1125851199"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-3-171244103-southbound",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City southbound direction and staged southbound way order block northbound car travel; bicycle exceptions do not apply to cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/171244103"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-1-196411610-two-way-part",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The blank city motor field and staged way have no motor one-way assertion; at least one scoped segment is modeled in both directions. Transitions and current signs still need verification.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/196411610"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-3-24098174-two-way-part",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The blank city motor field and staged way have no motor one-way assertion; at least one scoped segment is modeled in both directions. Transitions and current signs still need verification.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/24098174"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "hamlin-douglas-unmatched-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The entire Douglas city row remains an evidence-bound unknown gap with no car run.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+      ],
+      "field_reviewed": false
     }
   ],
   "skips": [
@@ -5070,6 +5502,14 @@
       "result": "review",
       "reason": "Evidence-bound city component is wholly unmatched; no road movement exists to sample.",
       "evidence_id": "wrightwood-divided-offsets",
+      "eligible_count": 0,
+      "selected_count": 0
+    },
+    {
+      "route_id": "hamlin-2",
+      "result": "review",
+      "reason": "Evidence-bound city component is wholly unmatched; no road movement exists to sample.",
+      "evidence_id": "hamlin-douglas-jog",
       "eligible_count": 0,
       "selected_count": 0
     }

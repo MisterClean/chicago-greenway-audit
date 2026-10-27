@@ -298,6 +298,55 @@
           "evidence_id": "wrightwood-divided-offsets"
         }
       ]
+    },
+    {
+      "name": "Bloomingdale",
+      "source": "BLOOMINGDALE",
+      "source_aliases": [
+        "BLOOMINDALE"
+      ],
+      "axis": "east",
+      "additional_source_ids": [
+        "row-8z5i.69jx.wshp",
+        "row-rubi_y2ch_uh4b"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "bloomingdale-1",
+          "way_id": 145803701,
+          "nodes": [
+            261160058,
+            261160059
+          ],
+          "city_source_ids": [
+            "row-8z5i.69jx.wshp"
+          ]
+        },
+        {
+          "route_id": "bloomingdale-1",
+          "way_id": 145803707,
+          "nodes": [
+            261209703,
+            261209725
+          ],
+          "city_source_ids": [
+            "row-rubi_y2ch_uh4b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hamlin",
+      "source": "HAMLIN",
+      "axis": "north",
+      "unresolved_components": [
+        {
+          "source_ids": [
+            "row-z6fn.ywid~e4w9"
+          ],
+          "evidence_id": "hamlin-douglas-jog"
+        }
+      ]
     }
   ],
   "max_source_distance_m": 18,

@@ -15,13 +15,14 @@ const sample = () => ({
     { ':id': 'c', st_name: 'BLOOMINDALE', street: 'BLOOMINDALE AVE', mi_ctrline: '0.5' },
     { ':id': 'd', st_name: 'BLOOMINGDALE', street: 'BLOOMINGDALE AVE', mi_ctrline: '0.25' },
     { ':id': 'e', st_name: 'AVENUE', street: 'AVENUE J', mi_ctrline: '0.1' }
-  ],
+  ].map(record=>({...record,displayrou:'Neighborhood Greenway'})),
   routes: [{ id: 'aldine-1', name: 'Aldine', source_ids: ['a', 'b'] }, { id: 'aldine-2', name: 'Aldine', source_ids: ['a'] }]
 });
 
 test('counts source IDs uniquely across routes, including a differently named connector', () => {
   const result = compileCoverageInventory(sample());
   assert.deepEqual(result.summary, { total_city_rows: 5, included_city_rows: 2, remaining_city_rows: 3, total_city_source_miles: 2.08, included_city_source_miles: 1.23, remaining_city_source_miles: 0.85, route_family_count: 1, route_section_count: 2, remaining_raw_street_names: 3 });
+  assert.deepEqual(result.eligibility, {field:'displayrou',equals:'Neighborhood Greenway',validated_city_rows:5});
   assert.deepEqual(result.covered_rows, [{ id: 'a', route_ids: ['aldine-1', 'aldine-2'] }, { id: 'b', route_ids: ['aldine-1'] }]);
   assert.deepEqual(result.remaining_street_groups.map(g => g.st_name), ['AVENUE', 'BLOOMINDALE', 'BLOOMINGDALE']);
   assert.equal(result.remaining_rows.find(r => r.id === 'e').street, 'AVENUE J');
@@ -58,4 +59,11 @@ test('CLI check detects stale outputs without writing', () => {
     assert.match(checked.stderr, /stale/);
     assert.equal(readFileSync(path, 'utf8'), 'stale\n');
   } finally { rmSync(root, { recursive: true, force: true }); }
+});
+
+test('rejects other bike facilities and missing category before counting coverage', () => {
+  for (const category of ['Bike Lane', 'Protected Bike Lane', 'Marked Shared Lane', 'Off Street Trail', 'Proposed Neighborhood Greenway', 'neighborhood greenway', '', null, undefined]) {
+    const input=sample();input.cityRecords[4].displayrou=category;
+    assert.throws(()=>compileCoverageInventory(input), /outside the required Neighborhood Greenway category/);
+  }
 });

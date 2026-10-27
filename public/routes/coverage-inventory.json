@@ -1,6 +1,11 @@
 {
   "schema_version": 1,
-  "description": "City source-row representation in the route export; not a count of distinct greenway projects or field-verified routes. Mileage sums city mi_ctrline attributes, not route geometry or driving distance.",
+  "description": "CDOT Neighborhood Greenway source-row representation in the route export; not all bikeways, a count of distinct projects, or field verification. Mileage sums city mi_ctrline attributes, not route geometry or driving distance.",
+  "eligibility": {
+    "field": "displayrou",
+    "equals": "Neighborhood Greenway",
+    "validated_city_rows": 258
+  },
   "source": {
     "city": {
       "file": "greenways.json",
@@ -10,18 +15,18 @@
       "license": "City of Chicago data portal terms",
       "license_url": "https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html"
     },
-    "route_sha256": "5b2f1a3a8bffbae4584ae130cbf07adcf664aa1d4fa0aefb486369a49de4c1e6"
+    "route_sha256": "5e7dcc5dfeac5660bfb8f94464a9d1cc9f11c0cbca58391ddcd73352a986d535"
   },
   "summary": {
     "total_city_rows": 258,
-    "included_city_rows": 140,
-    "remaining_city_rows": 118,
+    "included_city_rows": 153,
+    "remaining_city_rows": 105,
     "total_city_source_miles": 85.233758129257,
-    "included_city_source_miles": 49.900127651436,
-    "remaining_city_source_miles": 35.333630477821,
-    "route_family_count": 30,
-    "route_section_count": 48,
-    "remaining_raw_street_names": 61
+    "included_city_source_miles": 54.69092116845,
+    "remaining_city_source_miles": 30.542836960807,
+    "route_family_count": 32,
+    "route_section_count": 52,
+    "remaining_raw_street_names": 56
   },
   "covered_rows": [
     {
@@ -163,6 +168,12 @@
       ]
     },
     {
+      "id": "row-8z5i.69jx.wshp",
+      "route_ids": [
+        "bloomingdale-1"
+      ]
+    },
+    {
       "id": "row-94iw~6jr2-x489",
       "route_ids": [
         "roscoe-1"
@@ -175,6 +186,12 @@
       ]
     },
     {
+      "id": "row-9fhc-fg9z~eqbn",
+      "route_ids": [
+        "bloomingdale-1"
+      ]
+    },
+    {
       "id": "row-9qbg.drnv.cmv4",
       "route_ids": [
         "wrightwood-2"
@@ -184,6 +201,12 @@
       "id": "row-9yc7~rqhe~83yw",
       "route_ids": [
         "granville-1"
+      ]
+    },
+    {
+      "id": "row-a382_9uag.kagm",
+      "route_ids": [
+        "hamlin-1"
       ]
     },
     {
@@ -355,6 +378,12 @@
       ]
     },
     {
+      "id": "row-gt5a_ktbp-zxxk",
+      "route_ids": [
+        "hamlin-1"
+      ]
+    },
+    {
       "id": "row-gv5q_svcf_t3vj",
       "route_ids": [
         "aldine-1"
@@ -427,6 +456,12 @@
       ]
     },
     {
+      "id": "row-igtt.auca-9a94",
+      "route_ids": [
+        "hamlin-3"
+      ]
+    },
+    {
       "id": "row-iqsz.auer~nqrr",
       "route_ids": [
         "wrightwood-3"
@@ -448,6 +483,12 @@
       "id": "row-j3s4-bife.48c7",
       "route_ids": [
         "28th-1"
+      ]
+    },
+    {
+      "id": "row-j75m~d2v9-97uu",
+      "route_ids": [
+        "hamlin-1"
       ]
     },
     {
@@ -565,9 +606,21 @@
       ]
     },
     {
+      "id": "row-mhva~sefa-56y8",
+      "route_ids": [
+        "bloomingdale-1"
+      ]
+    },
+    {
       "id": "row-mjuf_n4wu_wzex",
       "route_ids": [
         "granville-1"
+      ]
+    },
+    {
+      "id": "row-mmum_qanc~3xrf",
+      "route_ids": [
+        "hamlin-3"
       ]
     },
     {
@@ -655,6 +708,18 @@
       ]
     },
     {
+      "id": "row-q7br.k2n4.y3hx",
+      "route_ids": [
+        "bloomingdale-1"
+      ]
+    },
+    {
+      "id": "row-qfyh_4rhq-fwc5",
+      "route_ids": [
+        "hamlin-1"
+      ]
+    },
+    {
       "id": "row-qj78.kpa2-ryuk",
       "route_ids": [
         "winnemac-2"
@@ -697,9 +762,21 @@
       ]
     },
     {
+      "id": "row-rsyh_vh9b.jyts",
+      "route_ids": [
+        "hamlin-1"
+      ]
+    },
+    {
       "id": "row-rtc4_mfqg~45k3",
       "route_ids": [
         "ainslie-1"
+      ]
+    },
+    {
+      "id": "row-rubi_y2ch_uh4b",
+      "route_ids": [
+        "bloomingdale-1"
       ]
     },
     {
@@ -838,6 +915,12 @@
       "id": "row-z2zq.9rfs-98dq",
       "route_ids": [
         "berwyn-1"
+      ]
+    },
+    {
+      "id": "row-z6fn.ywid~e4w9",
+      "route_ids": [
+        "hamlin-2"
       ]
     },
     {
@@ -1004,36 +1087,11 @@
       ]
     },
     {
-      "st_name": "BLOOMINDALE",
-      "row_count": 1,
-      "city_source_miles": 0.507153196167,
-      "source_ids": [
-        "row-q7br.k2n4.y3hx"
-      ]
-    },
-    {
-      "st_name": "BLOOMINGDALE",
-      "row_count": 2,
-      "city_source_miles": 1.004108029895,
-      "source_ids": [
-        "row-9fhc-fg9z~eqbn",
-        "row-mhva~sefa-56y8"
-      ]
-    },
-    {
       "st_name": "CAMPBELL",
       "row_count": 1,
       "city_source_miles": 0.017912720377,
       "source_ids": [
         "row-e2ij~bhix_rq9s"
-      ]
-    },
-    {
-      "st_name": "CENTRAL",
-      "row_count": 1,
-      "city_source_miles": 0.02487398796,
-      "source_ids": [
-        "row-rubi_y2ch_uh4b"
       ]
     },
     {
@@ -1128,21 +1186,6 @@
       "city_source_miles": 0.999732560181,
       "source_ids": [
         "row-2d5z_n6jd.a66w"
-      ]
-    },
-    {
-      "st_name": "HAMLIN",
-      "row_count": 8,
-      "city_source_miles": 3.229941107817,
-      "source_ids": [
-        "row-a382_9uag.kagm",
-        "row-gt5a_ktbp-zxxk",
-        "row-igtt.auca-9a94",
-        "row-j75m~d2v9-97uu",
-        "row-mmum_qanc~3xrf",
-        "row-qfyh_4rhq-fwc5",
-        "row-rsyh_vh9b.jyts",
-        "row-z6fn.ywid~e4w9"
       ]
     },
     {
@@ -1277,14 +1320,6 @@
       "source_ids": [
         "row-nr6u_qxaq_g748",
         "row-ntha~efmu.qgse"
-      ]
-    },
-    {
-      "st_name": "MONITOR",
-      "row_count": 1,
-      "city_source_miles": 0.024717195175,
-      "source_ids": [
-        "row-8z5i.69jx.wshp"
       ]
     },
     {
@@ -1606,14 +1641,6 @@
       "miles": 0.1438277444
     },
     {
-      "id": "row-8z5i.69jx.wshp",
-      "st_name": "MONITOR",
-      "street": "MONITOR AVE",
-      "from": "W BLOOMINGDALE AVE",
-      "to": "W BLOOMINGDALE AVE",
-      "miles": 0.0247171951753
-    },
-    {
       "id": "row-972k~6n95-qjxf",
       "st_name": "BIRCHWOOD",
       "street": "BIRCHWOOD AVE",
@@ -1628,14 +1655,6 @@
       "from": "N ELSTON AVE",
       "to": "W CULLOM AVE",
       "miles": 0.02663466168
-    },
-    {
-      "id": "row-9fhc-fg9z~eqbn",
-      "st_name": "BLOOMINGDALE",
-      "street": "BLOOMINGDALE AVE",
-      "from": "N MONITOR AVE",
-      "to": "N CENTRAL AVE",
-      "miles": 0.30632078914
     },
     {
       "id": "row-9ita~rsfz.t6s7",
@@ -1660,14 +1679,6 @@
       "from": "W ARMITAGE AVE",
       "to": "W SCHUBERT AVE",
       "miles": 0.886255555029
-    },
-    {
-      "id": "row-a382_9uag.kagm",
-      "st_name": "HAMLIN",
-      "street": "HAMLIN AVE",
-      "from": "W CERMAK RD",
-      "to": "W OGDEN AVE",
-      "miles": 0.0703261633742
     },
     {
       "id": "row-a6tq~5a4j~ykvi",
@@ -1806,14 +1817,6 @@
       "miles": 0.500058173226
     },
     {
-      "id": "row-gt5a_ktbp-zxxk",
-      "st_name": "HAMLIN",
-      "street": "HAMLIN AVE",
-      "from": "W 31ST ST",
-      "to": "W CERMAK RD",
-      "miles": 1.01054478207
-    },
-    {
       "id": "row-gv83~kyug~tfd8",
       "st_name": "DEARBORN",
       "street": "DEARBORN ST",
@@ -1878,14 +1881,6 @@
       "miles": 0.187724507011
     },
     {
-      "id": "row-igtt.auca-9a94",
-      "st_name": "HAMLIN",
-      "street": "HAMLIN AVE",
-      "from": "W CORTLAND ST",
-      "to": "W ARMITAGE AVE",
-      "miles": 0.125739603749
-    },
-    {
       "id": "row-ih3q-vktm_ivy8",
       "st_name": "RAVENSWOOD",
       "street": "RAVENSWOOD AVE",
@@ -1926,14 +1921,6 @@
       "miles": 0.126124183068
     },
     {
-      "id": "row-j75m~d2v9-97uu",
-      "st_name": "HAMLIN",
-      "street": "HAMLIN AVE",
-      "from": "W OGDEN AVE",
-      "to": "W 19TH ST",
-      "miles": 0.166613746658
-    },
-    {
       "id": "row-jkmg_tcrm.hc9u",
       "st_name": "LAVERGNE",
       "street": "LAVERGNE AVE",
@@ -1964,22 +1951,6 @@
       "from": "W WINNEMAC AVE",
       "to": "W ROSEHILL DR",
       "miles": 0.921681369201
-    },
-    {
-      "id": "row-mhva~sefa-56y8",
-      "st_name": "BLOOMINGDALE",
-      "street": "BLOOMINGDALE AVE",
-      "from": "N NARRAGANSETT AVE",
-      "to": "N MONITOR AVE",
-      "miles": 0.697787240755
-    },
-    {
-      "id": "row-mmum_qanc~3xrf",
-      "st_name": "HAMLIN",
-      "street": "HAMLIN AVE",
-      "from": "W ARMITAGE AVE",
-      "to": "W DIVERSEY AVE",
-      "miles": 1.00949718945
     },
     {
       "id": "row-mwnn~eyc4~ei26",
@@ -2062,14 +2033,6 @@
       "miles": 0.120508714688
     },
     {
-      "id": "row-q7br.k2n4.y3hx",
-      "st_name": "BLOOMINDALE",
-      "street": "BLOOMINDALE AVE",
-      "from": "N CENTRAL AVE",
-      "to": "N LARAMIE AVE",
-      "miles": 0.507153196167
-    },
-    {
       "id": "row-q89g_kydj.7hkd",
       "st_name": "EASTWOOD",
       "street": "EASTWOOD AVE",
@@ -2100,14 +2063,6 @@
       "from": "W FULTON ST",
       "to": "W KINZIE ST",
       "miles": 0.149823439597
-    },
-    {
-      "id": "row-qfyh_4rhq-fwc5",
-      "st_name": "HAMLIN",
-      "street": "HAMLIN AVE",
-      "from": "W 33RD ST",
-      "to": "W 31ST ST",
-      "miles": 0.249176638566
     },
     {
       "id": "row-qmjv_nhs8.tmi8",
@@ -2156,22 +2111,6 @@
       "from": "N ALBANY AVE",
       "to": "N SACRAMENTO AVE",
       "miles": 0.126905659759
-    },
-    {
-      "id": "row-rsyh_vh9b.jyts",
-      "st_name": "HAMLIN",
-      "street": "HAMLIN AVE",
-      "from": "W 19TH ST",
-      "to": "W DOUGLAS BLVD",
-      "miles": 0.488466336186
-    },
-    {
-      "id": "row-rubi_y2ch_uh4b",
-      "st_name": "CENTRAL",
-      "street": "CENTRAL AVE",
-      "from": "W BLOOMINGDALE AVE",
-      "to": "W BLOOMINGDALE AVE",
-      "miles": 0.02487398796
     },
     {
       "id": "row-rwxu_bq5t-ipmv",
@@ -2332,14 +2271,6 @@
       "from": "WRIGHTWOOD AVE",
       "to": "W BELMONT AVE",
       "miles": 0.734832927765
-    },
-    {
-      "id": "row-z6fn.ywid~e4w9",
-      "st_name": "HAMLIN",
-      "street": "HAMLIN AVE",
-      "from": "W DOUGLAS BLVD",
-      "to": "W DOUGLAS BLVD",
-      "miles": 0.109576647764
     },
     {
       "id": "row-ze8s_fkku-pz9v",
