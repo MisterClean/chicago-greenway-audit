@@ -2,7 +2,7 @@
 
 Research and implementation proposal · October 27, 2026
 
-**Implementation update:** The route-based pilot is implemented on `codex/greenway-route-continuity`. See [current validation and plan review](route-plan-review-validation.md) for 22 sections on 14 streets, tests and unresolved field review. The research observations below describe the pre-implementation investigation. Git checkpoints have been pushed; the public site has not been redeployed.
+**Implementation update:** The route-based pilot is implemented on `codex/greenway-route-continuity`. See [current validation and plan review](route-north-validation.md) for 30 sections on 18 streets, tests and unresolved field review, and the [evidence catalog](evidence-catalog.md) for structured source provenance. The research observations below describe the pre-implementation investigation. Git checkpoints have been pushed; the public site has not been redeployed.
 
 ## Decision
 

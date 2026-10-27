@@ -5,8 +5,11 @@ import { edgeAccess, movementAccess } from "./motor-rules.mjs";
 import { traceRoute } from "./route-continuity.mjs";
 import { traceJunction } from "./junction-traversal.mjs";
 import { gapReviewContext } from "./route-evidence.mjs";
+import { addScopedRouteWay } from "./scoped-route-ways.mjs";
+import { compileEvidenceCatalog } from "./evidence-catalog.mjs";
 const json = async (p) => JSON.parse(await readFile(p, "utf8"));
 const [source, config, osm, reviewEvidence] = await Promise.all(["data/sources/greenways.json", "data/routes/pilots.json", "data/sources/osm-source.json", "data/routes/review-evidence.json"].map(json));
+const catalogText = `${JSON.stringify(compileEvidenceCatalog(reviewEvidence), null, 2)}\n`;
 const db = new DatabaseSync("data/staging/network.sqlite", { readOnly: true });
 const query = db.prepare("SELECT w.* FROM way_bounds b JOIN ways w ON w.id=b.id WHERE b.min_lon<=? AND b.max_lon>=? AND b.min_lat<=? AND b.max_lat>=?");
 const getNode = db.prepare("SELECT lon,lat,tags FROM nodes WHERE id=?");
@@ -68,6 +71,15 @@ for (const spec of config.streets) {
       ways.push({ id: w.id, tags, nodes, coordinates: data.map((n) => [n.lon, n.lat]), nodeTags: data.map((n) => JSON.parse(n.tags || "{}")) });
     }
     const graph = alignedGraph(line, ways, config.max_source_distance_m), visited = /* @__PURE__ */ new Set(), candidates = [];
+    for (const binding of spec.scoped_ways ?? []) {
+      if (binding.route_id !== id) continue;
+      const raw = nearby.find(w => w.id === binding.way_id);
+      if (!raw) throw new Error(`Scoped way ${binding.way_id} not found near ${id}`);
+      const nodes = JSON.parse(raw.nodes), data = nodes.map(n => getNode.get(n));
+      if (data.some(n => !n)) throw new Error(`Scoped way ${binding.way_id} has missing nodes`);
+      const way = { id:raw.id, tags:JSON.parse(raw.tags), nodes, coordinates:data.map(n => [n.lon,n.lat]), nodeTags:data.map(n => JSON.parse(n.tags || '{}')) };
+      ways.push(addScopedRouteWay({ graph, way, binding, cityRecords:records, componentIds:part.ids }));
+    }
     const junctionGroups = new Map();
     const ungrouped = new Set(ways.filter(way => ["circular", "roundabout"].includes(way.tags.junction)));
     while (ungrouped.size) {
@@ -169,7 +181,7 @@ for (const spec of config.streets) {
         }
         const cityAt = (p) => records.filter((r) => part.ids.includes(r[":id"])).map((r) => ({ r, d: locate(p, r.the_geom.coordinates[0]).distance })).sort((a, b) => a.d - b.d)[0];
         const mid = pointAt(coords, locate(coords.at(-1), coords).position / 2), city = cityAt(mid);
-        if (!chunk.junctionWays && city?.d < 25) {
+        if (!chunk.junctionWays && !chunk.way.scoped_match && city?.d < 25) {
           const beforeCity = structuredClone(access);
           access = compareCityOneWay(beforeCity, city.r.oneway_dir, spec.axis);
           // A matched edge can straddle city records with different assertions.
@@ -198,7 +210,7 @@ for (const spec of config.streets) {
         }
         const wayIds = (chunk.junctionWays ?? [chunk.way]).map(way => way.id).sort((a,b) => a-b);
         const evidenceUrls = [...new Set([...wayIds.map(wayId => `https://www.openstreetmap.org/way/${wayId}`), ...Object.values(access).flatMap(decision => (decision.source_ids ?? []).map(sourceId => `https://www.openstreetmap.org/${sourceId}`)), ...evidenceRecords.flatMap(record => record.sources.map(source => source.url))])];
-        edges.push({ id: `${id}-${chunk.junctionWays ? "junction" : "way"}-${wayIds.join("-")}-${edges.length + 1}`, way_id: wayIds.length === 1 ? wayIds[0] : null, ...(chunk.junctionWays ? {way_ids:wayIds} : {}), from_node: chunk.from, to_node: chunk.to, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access, ...(traversals ? {traversals} : {}), ...overlapsJoin ? { source_access: sourceAccess } : {}, evidence_urls: evidenceUrls, role: overlapsJoin ? "connector" : chunk.junctionWays ? "junction" : chunk.way.tags.name ? "designated" : "connector" });
+        edges.push({ id: `${id}-${chunk.junctionWays ? "junction" : "way"}-${wayIds.join("-")}-${edges.length + 1}`, way_id: wayIds.length === 1 ? wayIds[0] : null, ...(chunk.junctionWays ? {way_ids:wayIds} : {}), from_node: chunk.from, to_node: chunk.to, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access, ...(traversals ? {traversals} : {}), ...overlapsJoin ? { source_access: sourceAccess } : {}, evidence_urls: evidenceUrls, ...(chunk.way.scoped_match ? { matching: chunk.way.scoped_match } : {}), role: overlapsJoin ? "connector" : chunk.junctionWays ? "junction" : chunk.way.tags.name ? "designated" : "connector" });
       }
       cursor = Math.max(cursor, c.last.position);
     }
@@ -271,5 +283,7 @@ db.close();
 const result = { schema_version: 1, generated_at: new Date(process.env.SOURCE_DATE_EPOCH ? Number(process.env.SOURCE_DATE_EPOCH) * 1e3 : Date.now()).toISOString(), source: { osm_date: "2026-09-11", designation_date: "2025-12", osm_sha256: osm.sha256, osm_attribution: "\xA9 OpenStreetMap contributors", designation_attribution: "City of Chicago Bike Routes", designation_url: "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut" }, routes: all, summary: { route_components: all.length, reviewed_movements: 0, total_movements: all.reduce((n, r) => n + r.movements.length, 0), evidence_status: "source-inferred" } };
 await mkdir("public/routes", { recursive: true });
 await writeFile("public/routes/review-evidence.json", await readFile("data/routes/review-evidence.json"));
+await writeFile("data/routes/evidence-catalog.json", catalogText);
+await writeFile("public/routes/evidence-catalog.json", catalogText);
 await writeFile("public/routes/pilot.json", JSON.stringify(result));
 console.log(JSON.stringify(all.map((r) => ({ id: r.id, edges: r.edges.length, movements: r.movements.length, coverage: r.coverage })), null, 2));

@@ -4,7 +4,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createReadStream } from 'node:fs';
-import { metres } from './route-network.mjs';
+import { metres, locate } from './route-network.mjs';
 
 const [input = 'public/routes/pilot.json', output = 'data/routes/pilot-validation.json', database = 'data/staging/network.sqlite'] = process.argv.slice(2);
 const bytes = await readFile(input);
@@ -173,10 +173,68 @@ if (school) {
     check(`school-${id}-westbound-conflict`,true,!!t && t.highway==='residential' && t.oneway==null && edges.length>0 && edges.every(e=>e.access.reverse.status==='unknown' && e.access.reverse.evidence_status==='conflicting'),'The snapshot lacks a motor one-way tag while the city asserts eastbound; westbound requires review.',[sourceUrl,`https://www.openstreetmap.org/way/${id}`]);
   }
 }
+// The named Glenwood jogs are checked against city geometry and staged OSM,
+// not merely against the configured export. No neighboring Glenwood slice is admitted.
+const nodeCoords = db.prepare('SELECT lon,lat,tags FROM nodes WHERE id=?');
+for (const [routeId,wayId,cityId,expectedNodes] of [
+  ['winnemac-2',992031721,'row-muht_4bn5-v2q2',[257156331,11153435102,257154871]],
+  ['carmen-2',23744939,'row-567r_3xw8.pymc',[257156232,11352634295,257155045]],
+]) {
+  const route=data.routes.find(r=>r.id===routeId), way=getWay.get(wayId), city=cityRecord(cityId);
+  const nodes=way ? JSON.parse(way.nodes) : [], tags=way ? JSON.parse(way.tags) : {}, i=nodes.indexOf(expectedNodes[0]);
+  const coords=expectedNodes.map(n=>nodeCoords.get(n));
+  const cityLines=city?.the_geom?.coordinates ?? [];
+  let within=coords.every(Boolean) && cityLines.length>0;
+  if (within) for (let j=1;j<coords.length;j++) {
+    const a=coords[j-1], b=coords[j], steps=Math.ceil(metres([a.lon,a.lat],[b.lon,b.lat]));
+    for (let k=0;k<=steps;k++) {
+      const p=[a.lon+(b.lon-a.lon)*k/steps,a.lat+(b.lat-a.lat)*k/steps];
+      if (Math.min(...cityLines.map(line=>locate(p,line).distance))>5) within=false;
+    }
+  }
+  const edges=route?.edges.filter(e=>e.way_id===wayId) ?? [];
+  const path=edges.length===expectedNodes.length-1 && edges.every((e,j)=>e.from_node===expectedNodes[j] && e.to_node===expectedNodes[j+1]);
+  const edgeGeometry=edges.every((e,j)=>e.geometry.coordinates.length===2 && coords[j] && coords[j+1] && metres(e.geometry.coordinates[0],[coords[j].lon,coords[j].lat])<0.1 && metres(e.geometry.coordinates[1],[coords[j+1].lon,coords[j+1].lat])<0.1);
+  const provenance=edges.every(e=>e.matching?.method==='explicit-city-geometry-way-slice' && e.matching.evidence_status==='source-inferred' && JSON.stringify(e.matching.city_source_ids)==JSON.stringify([cityId]));
+  check(`${routeId}-glenwood-source-and-slice`,true,!!route && route.source_ids.includes(cityId) && city?.oneway_dir==='-' && i>=0 && expectedNodes.every((n,j)=>nodes[i+j]===n) && within && path && edgeGeometry && provenance,'Contiguous staged way slice, all its segments within five metres of the bound city record, with both ends attached and no extra part of the cross street exported.',[sourceUrl,`https://www.openstreetmap.org/way/${wayId}`]);
+  const hasOtherRestrictions=expectedNodes.some(n=>viaNodes.has(n) || relevantNode(JSON.parse(nodeCoords.get(n)?.tags ?? '{}'))) || wayRestrictions.has(wayId) || Object.keys(tags).some(k=>k.includes('conditional'));
+  const movementList=route?.movements.filter(m=>edges.some(e=>m.from_edge===e.id || m.to_edge===e.id)) ?? [];
+  check(`${routeId}-glenwood-access-and-turns`,true,tags.highway==='residential' && !tags.oneway && !hasOtherRestrictions && edges.length===2 && edges.every(e=>['forward','reverse'].every(d=>e.access[d].status==='allowed' && e.access[d].evidence_status==='source-inferred')) && movementList.length===3 && movementList.every(m=>['forward','reverse'].every(d=>m[d].status==='allowed' && m[d].evidence_status==='source-inferred')),'Snapshot residential tags and absence of relevant restriction or node tags support these specific edge and turn inferences; present conditions remain unverified.',[`https://www.openstreetmap.org/way/${wayId}`]);
+}
+// Geographically separate city components must not become a through route.
+for (const [label,ids] of [
+ ['winnemac-park',['row-j7ru~242h_rfdy','row-xj27~69f9_ksrb']],
+ ['ainslie-western-lincoln',['row-rtc4_mfqg~45k3','row-aguw~42z7~mmxa']],
+]) {
+  const records=ids.map(cityRecord), routes=ids.map(id=>data.routes.find(r=>r.source_ids.includes(id)));
+  const endpoints=records.map(r=>{const line=r?.the_geom?.coordinates?.[0];return line ? [line[0],line.at(-1)] : [];});
+  const distance=endpoints[0].length && endpoints[1].length ? Math.min(...endpoints[0].flatMap(a=>endpoints[1].map(b=>metres(a,b)))) : 0;
+  check(`${label}-separate-designations`,true,records.every(Boolean) && distance>20 && routes.every(Boolean) && routes[0].id!==routes[1].id && routes.every(r=>!ids.every(id=>r.source_ids.includes(id))),'Independent city geometries have a gap; separate exported route components do not establish a joining motor movement.',[sourceUrl]);
+}
+for (const [routeId,cityId,wayId] of [['argyle-1','row-wkph~qm3w~5yab',1443715350],['argyle-2','row-nn2f.26nq.pskp',24078652]]) {
+  const city=cityRecord(cityId), way=getWay.get(wayId), tags=way && JSON.parse(way.tags), nodes=way && JSON.parse(way.nodes), route=data.routes.find(r=>r.id===routeId), edges=route?.edges.filter(e=>e.way_id===wayId) ?? [];
+  const first=nodes && nodeCoords.get(nodes[0]), last=nodes && nodeCoords.get(nodes.at(-1));
+  check(`${routeId}-westbound-car-contraflow`,true,city?.oneway_dir==='W' && city?.contraflow==='Y' && tags?.oneway==='yes' && tags?.['oneway:bicycle']==='no' && !!first && !!last && last.lon<first.lon && edges.length>0 && edges.every(e=>e.access.forward.status==='blocked' && e.access.reverse.status==='allowed'),'City westbound direction and staged westbound OSM one-way agree; bicycle contraflow does not establish eastbound motor access.',[sourceUrl,`https://www.openstreetmap.org/way/${wayId}`]);
+}
+{
+ const city=cityRecord('row-rfjh_buwp~qfix'), w=getWay.get(1257543990), tags=w && JSON.parse(w.tags), route=data.routes.find(r=>r.id==='carmen-1'), edges=route?.edges.filter(e=>e.way_id===1257543990) ?? [];
+ check('carmen-kedzie-albany-conflict',true,city?.oneway_dir==='E' && city?.br_oneway==='1W' && tags?.highway==='residential' && !tags.oneway && edges.length>0 && edges.every(e=>e.access.reverse.status==='unknown' && e.access.reverse.evidence_status==='conflicting'),'City says eastbound one-way while the staged OSM way lacks a motor one-way tag; preserve the westbound conflict.',[sourceUrl,'https://www.openstreetmap.org/way/1257543990']);
+}
+{
+ const evidenceFile=JSON.parse(await readFile('data/routes/review-evidence.json','utf8'));
+ const evidence=evidenceFile.records.find(r=>r.id==='ainslie-western-left-turn');
+ const city=cityRecord('row-aguw~42z7~mmxa'), route=data.routes.find(r=>r.id==='ainslie-2'), edge=route?.edges[0], node=nodeCoords.get(293816189);
+ const terminal=route?.runs.flatMap(run=>[run.start,run.end]).filter(end=>end.coordinate && node && metres(end.coordinate,[node.lon,node.lat])<2) ?? [];
+ const sourceRestriction=restrictions.filter(r=>r.members.some(m=>m.role==='via' && m.type==='node' && m.ref===293816189));
+ const urls=evidence?.sources?.map(s=>s.url) ?? [];
+ check('ainslie-western-left-turn-not-through-block',true,!!evidence && /left turn/i.test(evidence.movement) && evidence.source_record_ids?.includes(city?.[':id']) && urls.length>=2 && !!node && city?.the_geom.coordinates[0].some(p=>metres(p,[node.lon,node.lat])<2) && edge?.from_node===293816189 && edge.access.reverse.status==='allowed' && terminal.length===2 && terminal.every(end=>end.kind==='unknown') && !sourceRestriction.some(r=>/straight/i.test(r.tags.restriction ?? '')),'The cited left-turn proposal and reported signs concern a turn; the separately scoped through crossing is unknown, not a blanket straight-through block. Staged node restrictions and the city endpoint are checked independently.',[sourceUrl,`https://www.openstreetmap.org/node/293816189`,...urls]);
+}
 const dbHash = createHash('sha256');
 for await (const chunk of createReadStream(database)) dbHash.update(chunk);
 const stagedDatabaseSha256 = dbHash.digest('hex');
 const report = {schema_version:1,audited_at:new Date().toISOString(),input,input_sha256:createHash('sha256').update(bytes).digest('hex'),staged_database:database,staged_database_sha256:stagedDatabaseSha256,osm_source_sha256:data.source?.osm_sha256,osm_snapshot_date:data.source?.osm_date,designation_snapshot_date:data.source?.designation_date,purpose:'Source consistency checks and narrow movement samples; no field review, legal certification, or whole-corridor approval.',scope_caveat:'Samples test junction movement rules only; adjoining edges and current signs may differ.',sampling_method:'Two distinct eligible same-way nodes nearest route-index quartiles per route, both directions; selection independent of observed result. Unknown, restricted and junction-traversal nodes are excluded.',sample_count:samples.length,targeted_check_count:checks.length,field_approvals:0,samples,targeted_checks:checks,skips};
 await writeFile(output, JSON.stringify(report,null,2)+'\n');
 db.close();
-console.log(JSON.stringify({input,output,sha256:report.input_sha256,routes:data.routes.length,samples:samples.length,failures:[...samples,...checks].filter(x=>x.result==='fail').length,skips:skips.length}));
+const failures = [...samples,...checks].filter(x=>x.result==='fail').length;
+console.log(JSON.stringify({input,output,sha256:report.input_sha256,routes:data.routes.length,samples:samples.length,failures,skips:skips.length}));
+if (failures) process.exitCode = 1;

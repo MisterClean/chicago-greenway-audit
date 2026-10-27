@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "node scripts/static-tiles.mjs && tsc --noEmit && vite build",
+    "build": "npm run verify:evidence && node scripts/static-tiles.mjs && tsc --noEmit && vite build",
     "test": "node --import tsx --test web/src/*.test.ts scripts/*.test.mjs",
     "data:snapshot": "node scripts/snapshot.mjs",
     "data:build": "node scripts/build-data.mjs",
@@ -15,6 +15,8 @@
     "fixtures": "cargo run --release --locked --manifest-path solver/Cargo.toml -- data/fixtures/states.ndjson data/fixtures/segments.ndjson data/fixtures/output",
     "data:verify": "node scripts/verify-assets.mjs",
     "data:routes": "node scripts/build-route-data.mjs",
+    "data:evidence": "node scripts/build-evidence-catalog.mjs",
+    "verify:evidence": "node scripts/build-evidence-catalog.mjs --check",
     "verify:routes": "node scripts/verify-route-data.mjs",
     "audit:routes": "node scripts/audit-route-samples.mjs"
   },

@@ -874,6 +874,1173 @@
         }
       ],
       "review_needed": "Find the Roscoe-specific CDOT intersection/striping drawings and original ward project notices. Searches of 30th/31st/36th ward web sources did not locate a scoped project notice in this review; council introductions are not a substitute. Verify adoption/installation and current Keeler-circle arrows, turns and barriers before approving movement."
+    },
+    {
+      "id": "winnemac-rockwell-leavitt-direction",
+      "source_record_ids": [
+        "row-j7ru~242h_rfdy"
+      ],
+      "location": "Winnemac Avenue, Rockwell to Leavitt",
+      "movement": "eastbound and westbound along the designated row",
+      "source_inference": "The city bike-route snapshot lists oneway_dir=E, bicycle two-way and contraflow=Y: an eastbound motor direction with a bicycle exception. It does not establish present signs or legal intersection movements.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot; current condition unknown",
+      "effective_period": "city snapshot retrieved 2026-09-19",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json",
+          "title": "Chicago bicycle routes, saved greenway selection",
+          "publisher": "City of Chicago",
+          "source_type": "municipal dataset snapshot",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date",
+          "retrieved_at": "2026-10-27",
+          "status": "saved snapshot; attributes are not field verification",
+          "scope": "Winnemac Rockwell–Leavitt; oneway_dir E and contraflow Y"
+        },
+        {
+          "url": "https://40thward.org/2024/06/2024-development-and-infrastructure-improvements-coming-to-the-40th-ward/",
+          "title": "Development and Infrastructure Improvements Coming to the 40th Ward in 2024",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project update",
+          "source_date": "2024-06-06",
+          "date_kind": "publication; page also lists July 11 update",
+          "retrieved_at": "2026-10-27",
+          "status": "planned neighborhood bikeways; no movement approval",
+          "scope": "Announces Winnemac and Ainslie neighborhood bikeways; lists Ainslie Wolcott–Western resurfacing, but does not specify motor turns or full greenway boundaries."
+        }
+      ],
+      "review_needed": "Check current signs, block ends, Lincoln and Western crossing movements and route transitions.",
+      "search_gaps": [
+        {
+          "reviewed_at": "2026-10-27",
+          "search_scope": [
+            "CDOT/Complete Streets project documents",
+            "40th Ward project pages and newsletters",
+            "47th Ward participatory-budget material"
+          ],
+          "missing_artifact": "Detailed Winnemac greenway engineering plan, including Glenwood-jog motor turns, and current as-built",
+          "result": "Project flyers and Lincoln streetscape boards found; complete greenway plan and signed as-built not located in this review."
+        }
+      ]
+    },
+    {
+      "id": "winnemac-clark-broadway-direction",
+      "source_record_ids": [
+        "row-ztk4.nb5w.n8wq",
+        "row-muht_4bn5-v2q2",
+        "row-79bd_zkhp.bn4h"
+      ],
+      "location": "Winnemac Avenue, Clark to Broadway, including Glenwood jog",
+      "movement": "eastbound and westbound through the corridor and its bends",
+      "source_inference": "CDOT flyer p. 1 depicts eastbound one-way except bicycles from Clark to Broadway, with conversion proposed. City snapshot labels the two principal east-west rows E, two-way bikes and contraflow; the very short connector has no motor direction. This supports eastbound and rules out westbound car travel on the named one-way blocks in the snapshot, but does not prove connectivity through the jog or current signs.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for direction in snapshot and 2025 proposal; current conditions unverified",
+      "effective_period": "2025 design; city snapshot retrieved 2026-09-19",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json",
+          "title": "Chicago bicycle routes, saved greenway selection",
+          "publisher": "City of Chicago",
+          "source_type": "municipal dataset snapshot",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date",
+          "retrieved_at": "2026-10-27",
+          "status": "saved snapshot; attributes are not field verification",
+          "scope": "Clark–Glenwood and Glenwood–Broadway E; short connector unspecified"
+        },
+        {
+          "url": "https://api.chicago.gov/filenet5/servlets/getDocumentContent?applicationId=CompleteStreets&documentId=%7B3002F197-0000-C61B-818B-608D8AAF30D2%7D",
+          "title": "Winnemac Neighborhood Greenway: Damen to Broadway",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "project flyer PDF",
+          "source_date": "2025-05-27",
+          "date_kind": "PDF creation metadata, not publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Damen to Broadway, particularly Clark to Broadway",
+          "status": "proposed; construction anticipated summer 2025",
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "sha256": "49896d442c886900b282e6918ebca17b1b7f61feea3e9c6c5b96ffd32cdab911",
+          "review_method": "Visually rendered and inspected both pages; text extracted; p. 1 map arrows point east from Clark to Broadway. P. 2 is generic advisory/contraflow illustration, not a junction design."
+        }
+      ],
+      "review_needed": "Inspect signs and turn movements at Clark, Glenwood jog and Broadway; obtain as-built details.",
+      "search_gaps": [
+        {
+          "reviewed_at": "2026-10-27",
+          "search_scope": [
+            "CDOT/Complete Streets project documents",
+            "40th Ward project pages and newsletters",
+            "47th Ward participatory-budget material"
+          ],
+          "missing_artifact": "Detailed Winnemac greenway engineering plan, including Glenwood-jog motor turns, and current as-built",
+          "result": "Project flyers and Lincoln streetscape boards found; complete greenway plan and signed as-built not located in this review."
+        }
+      ]
+    },
+    {
+      "id": "winnemac-damen-clark-context",
+      "source_record_ids": [
+        "row-xj27~69f9_ksrb",
+        "row-qj78.kpa2-ryuk",
+        "row-qps7~hqnm.bsbm"
+      ],
+      "location": "Winnemac Avenue, Damen to Clark",
+      "movement": "both directions along each city segment",
+      "source_inference": "The city rows have no cardinal motor one-way direction; CDOT flyer proposes advisory bike lanes in part of this corridor and describes them as on low-volume two-way streets. Neither source proves every crossing or through movement, or present-day permissions. Humps and signals themselves do not interrupt a through trip.",
+      "review_status": "context-only",
+      "confidence": "low for specific movements",
+      "effective_period": "2025 proposal and 2026-09-19 snapshot",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json",
+          "title": "Chicago bicycle routes, saved greenway selection",
+          "publisher": "City of Chicago",
+          "source_type": "municipal dataset snapshot",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date",
+          "retrieved_at": "2026-10-27",
+          "status": "saved snapshot; attributes are not field verification",
+          "scope": "Damen–Ravenswood–Ashland–Clark rows, no cardinal one-way direction"
+        },
+        {
+          "url": "https://api.chicago.gov/filenet5/servlets/getDocumentContent?applicationId=CompleteStreets&documentId=%7B3002F197-0000-C61B-818B-608D8AAF30D2%7D",
+          "title": "Winnemac Neighborhood Greenway: Damen to Broadway",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "project flyer PDF",
+          "source_date": "2025-05-27",
+          "date_kind": "PDF creation metadata, not publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Damen to Broadway, particularly Clark to Broadway",
+          "status": "proposed; construction anticipated summer 2025",
+          "pdf_pages": [
+            1,
+            2
+          ],
+          "sha256": "49896d442c886900b282e6918ebca17b1b7f61feea3e9c6c5b96ffd32cdab911",
+          "review_method": "Visually rendered and inspected both pages; text extracted; p. 1 map arrows point east from Clark to Broadway. P. 2 is generic advisory/contraflow illustration, not a junction design."
+        }
+      ],
+      "review_needed": "Inspect crossings and signs at Damen, Ravenswood, Ashland and Clark; acquire detailed plans and as-builts.",
+      "search_gaps": [
+        {
+          "reviewed_at": "2026-10-27",
+          "search_scope": [
+            "CDOT/Complete Streets project documents",
+            "40th Ward project pages and newsletters",
+            "47th Ward participatory-budget material"
+          ],
+          "missing_artifact": "Detailed Winnemac greenway engineering plan, including Glenwood-jog motor turns, and current as-built",
+          "result": "Project flyers and Lincoln streetscape boards found; complete greenway plan and signed as-built not located in this review."
+        }
+      ]
+    },
+    {
+      "id": "winnemac-lincoln-turns",
+      "source_record_ids": [
+        "row-j7ru~242h_rfdy"
+      ],
+      "location": "Winnemac and Lincoln intersection",
+      "movement": "Lincoln left turns at Winnemac; straight Winnemac movements",
+      "source_inference": "CDOT presentation page 3 depicts removal of the dedicated Lincoln left-turn lane while left turns remain permitted; 2026 ward update says dedicated northbound lane was removed in 2025. This is not a diverter and does not by itself establish all Winnemac approach-to-departure movements.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for reported lane removal; movements unverified",
+      "effective_period": "2023 design and 2026 report",
+      "sources": [
+        {
+          "url": "https://40thward.org/wp-content/uploads/2024/03/Lincoln_Public-Meeting-4-Boards_red.pdf",
+          "title": "Lincoln Avenue Streetscape and Plaza: Public Meeting Boards",
+          "publisher": "Chicago Department of Transportation, hosted by 40th Ward",
+          "source_type": "project presentation PDF",
+          "source_date": "2023-07-06",
+          "date_kind": "PDF modification metadata, not publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Ainslie/Western and Winnemac/Lincoln",
+          "status": "design presentation; not as-built",
+          "pdf_pages": [
+            3
+          ],
+          "sha256": "ffd78c7f2bf7a330c34c201587dbd8e0e194ad43d064c0a65d3fb9865570aa02",
+          "review_method": "Rendered and visually inspected complete PDF page 3 and its four intersection insets; extracted text. Graphic indicates prohibition of WB Ainslie to SB Western and removal of dedicated Lincoln left-turn lanes, with left turns continuing at Winnemac."
+        },
+        {
+          "url": "https://40thward.org/2026/02/lincoln-avenue-north-streetscape-update/",
+          "title": "Lincoln Avenue North Streetscape Update",
+          "publisher": "40th Ward",
+          "source_type": "ward project update",
+          "source_date": "2026-02-19",
+          "date_kind": "publication date; page also lists March 4 update",
+          "retrieved_at": "2026-10-27",
+          "scope": "Ainslie/Western; Lincoln at Argyle, Winnemac and Carmen",
+          "status": "announced future restrictions and reports removal of dedicated lanes"
+        }
+      ],
+      "review_needed": "Check all current regulatory signs, geometry and any turn restrictions.",
+      "search_gaps": [
+        {
+          "reviewed_at": "2026-10-27",
+          "search_scope": [
+            "CDOT/Complete Streets project documents",
+            "40th Ward project pages and newsletters",
+            "47th Ward participatory-budget material"
+          ],
+          "missing_artifact": "Detailed Winnemac greenway engineering plan, including Glenwood-jog motor turns, and current as-built",
+          "result": "Project flyers and Lincoln streetscape boards found; complete greenway plan and signed as-built not located in this review."
+        }
+      ]
+    },
+    {
+      "id": "ainslie-rockwell-lincoln-direction",
+      "source_record_ids": [
+        "row-rtc4_mfqg~45k3"
+      ],
+      "location": "Ainslie Street, Rockwell to Lincoln",
+      "movement": "eastbound and westbound along this city row",
+      "source_inference": "The city bike-route snapshot specifies E motor direction, two-way bikes and contraflow Y. It supports eastbound and excludes westbound car travel for this row at snapshot time; present signs and turns unverified.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot",
+      "effective_period": "city snapshot retrieved 2026-09-19",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json",
+          "title": "Chicago bicycle routes, saved greenway selection",
+          "publisher": "City of Chicago",
+          "source_type": "municipal dataset snapshot",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date",
+          "retrieved_at": "2026-10-27",
+          "status": "saved snapshot; attributes are not field verification",
+          "scope": "Ainslie Rockwell–Lincoln; E and contraflow Y"
+        },
+        {
+          "url": "https://40thward.org/2024/06/2024-development-and-infrastructure-improvements-coming-to-the-40th-ward/",
+          "title": "Development and Infrastructure Improvements Coming to the 40th Ward in 2024",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project update",
+          "source_date": "2024-06-06",
+          "date_kind": "publication; page also lists July 11 update",
+          "retrieved_at": "2026-10-27",
+          "status": "planned neighborhood bikeways; no movement approval",
+          "scope": "Announces Winnemac and Ainslie neighborhood bikeways; lists Ainslie Wolcott–Western resurfacing, but does not specify motor turns or full greenway boundaries."
+        }
+      ],
+      "review_needed": "Inspect regulatory signs and transitions at Rockwell and Lincoln.",
+      "search_gaps": [
+        {
+          "reviewed_at": "2026-10-27",
+          "search_scope": [
+            "CDOT/Complete Streets project documents",
+            "40th Ward project pages and newsletters",
+            "47th Ward participatory-budget material"
+          ],
+          "missing_artifact": "Intersection-by-intersection Ainslie greenway engineering plan and current as-built",
+          "result": "Project flyers and Lincoln streetscape boards found; complete greenway plan and signed as-built not located in this review."
+        }
+      ]
+    },
+    {
+      "id": "ainslie-western-damen-context",
+      "source_record_ids": [
+        "row-aguw~42z7~mmxa"
+      ],
+      "location": "Ainslie Street, Western to Damen",
+      "movement": "both directions along row and Western crossing",
+      "source_inference": "City snapshot has no cardinal one-way value; absence is not proof of permission. The 47th Ward participatory-budget preview proposed traffic calming including possible curb extensions; it is neither a built diverter nor proof a particular treatment was selected.",
+      "review_status": "context-only",
+      "confidence": "low for specific movements",
+      "effective_period": "2023 proposal and city snapshot retrieved 2026-09-19",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json",
+          "title": "Chicago bicycle routes, saved greenway selection",
+          "publisher": "City of Chicago",
+          "source_type": "municipal dataset snapshot",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date",
+          "retrieved_at": "2026-10-27",
+          "status": "saved snapshot; attributes are not field verification",
+          "scope": "Ainslie Western–Damen, no cardinal motor direction"
+        },
+        {
+          "url": "https://pbstanford.org/chicago47_2023_young/approval",
+          "title": "Chicago 47th Ward 2023 participatory budget preview",
+          "publisher": "47th Ward participatory budgeting, hosted by Stanford",
+          "source_type": "ballot preview",
+          "source_date": "2023",
+          "date_kind": "ballot year from URL",
+          "retrieved_at": "2026-10-27",
+          "scope": "Ainslie Western–Damen traffic calming",
+          "status": "proposed ballot item; preview expressly not a recorded vote"
+        },
+        {
+          "url": "https://40thward.org/2024/06/2024-development-and-infrastructure-improvements-coming-to-the-40th-ward/",
+          "title": "Development and Infrastructure Improvements Coming to the 40th Ward in 2024",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project update",
+          "source_date": "2024-06-06",
+          "date_kind": "publication; page also lists July 11 update",
+          "retrieved_at": "2026-10-27",
+          "status": "planned neighborhood bikeways; no movement approval",
+          "scope": "Announces Winnemac and Ainslie neighborhood bikeways; lists Ainslie Wolcott–Western resurfacing, but does not specify motor turns or full greenway boundaries."
+        }
+      ],
+      "review_needed": "Obtain project drawings, final funding decision and as-built; verify Western, Leavitt and Damen intersection movements.",
+      "search_gaps": [
+        {
+          "reviewed_at": "2026-10-27",
+          "search_scope": [
+            "CDOT/Complete Streets project documents",
+            "40th Ward project pages and newsletters",
+            "47th Ward participatory-budget material"
+          ],
+          "missing_artifact": "Intersection-by-intersection Ainslie greenway engineering plan and current as-built",
+          "result": "Project flyers and Lincoln streetscape boards found; complete greenway plan and signed as-built not located in this review."
+        }
+      ]
+    },
+    {
+      "id": "ainslie-western-left-turn",
+      "source_record_ids": [
+        "row-aguw~42z7~mmxa"
+      ],
+      "location": "Ainslie and Western intersection, westbound Ainslie approach",
+      "movement": "westbound Ainslie to southbound Western left turn",
+      "source_inference": "CDOT page 3 proposes prohibiting this left turn. The February 2026 ward page announced implementation, while a March ward newsletter said it was delayed; a June newsletter reports lights functional and no-left-turn signs added. This prohibits a turn off Ainslie, not necessarily the westbound through movement across Western.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for June 2026 reported signs; current condition unverified",
+      "effective_period": "2023 design; June 2026 newsletter report",
+      "sources": [
+        {
+          "url": "https://40thward.org/wp-content/uploads/2024/03/Lincoln_Public-Meeting-4-Boards_red.pdf",
+          "title": "Lincoln Avenue Streetscape and Plaza: Public Meeting Boards",
+          "publisher": "Chicago Department of Transportation, hosted by 40th Ward",
+          "source_type": "project presentation PDF",
+          "source_date": "2023-07-06",
+          "date_kind": "PDF modification metadata, not publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Ainslie/Western and Winnemac/Lincoln",
+          "status": "design presentation; not as-built",
+          "pdf_pages": [
+            3
+          ],
+          "sha256": "ffd78c7f2bf7a330c34c201587dbd8e0e194ad43d064c0a65d3fb9865570aa02",
+          "review_method": "Rendered and visually inspected complete PDF page 3 and its four intersection insets; extracted text. Graphic indicates prohibition of WB Ainslie to SB Western and removal of dedicated Lincoln left-turn lanes, with left turns continuing at Winnemac."
+        },
+        {
+          "url": "https://40thward.org/2026/02/lincoln-avenue-north-streetscape-update/",
+          "title": "Lincoln Avenue North Streetscape Update",
+          "publisher": "40th Ward",
+          "source_type": "ward project update",
+          "source_date": "2026-02-19",
+          "date_kind": "publication date; page also lists March 4 update",
+          "retrieved_at": "2026-10-27",
+          "scope": "Ainslie/Western; Lincoln at Argyle, Winnemac and Carmen",
+          "status": "announced future restrictions and reports removal of dedicated lanes"
+        },
+        {
+          "url": "https://chicago-newsletter-aggregator.open-advocacy.com/newsletter/871554d2-5be3-4d4a-922d-548da0428ca8",
+          "title": "40th Forward #332, March 20th 2026",
+          "publisher": "40th Ward newsletter, reproduced by Chicago Alderman Newsletter Tracker",
+          "source_type": "ward newsletter reproduction",
+          "source_date": "2026-03-20",
+          "date_kind": "newsletter date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Ainslie/Western signal work and turn restriction",
+          "status": "installation underway; restriction delayed pending signal inspection and programming"
+        },
+        {
+          "url": "https://chicago-newsletter-aggregator.open-advocacy.com/newsletter/a54e65bd-9be1-4207-9143-888c70afe0d4",
+          "title": "40th Forward #346, June 26th 2026",
+          "publisher": "40th Ward newsletter, reproduced by Chicago Alderman Newsletter Tracker",
+          "source_type": "ward newsletter reproduction",
+          "source_date": "2026-06-26",
+          "date_kind": "newsletter date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Lincoln streetscape traffic signals and no-left-turn signs",
+          "status": "reports lights functional and no-left-turn signs added; current condition unverified"
+        }
+      ],
+      "review_needed": "Verify current no-left sign and signal operation; inspect separate straight and turning movements.",
+      "search_gaps": [
+        {
+          "reviewed_at": "2026-10-27",
+          "search_scope": [
+            "CDOT/Complete Streets project documents",
+            "40th Ward project pages and newsletters",
+            "47th Ward participatory-budget material"
+          ],
+          "missing_artifact": "Intersection-by-intersection Ainslie greenway engineering plan and current as-built",
+          "result": "Project flyers and Lincoln streetscape boards found; complete greenway plan and signed as-built not located in this review."
+        }
+      ]
+    },
+    {
+      "id": "winnemac-glenwood-designated-jog",
+      "source_record_ids": [
+        "row-muht_4bn5-v2q2"
+      ],
+      "way_segments": [
+        {
+          "way_id": 992031721,
+          "nodes": [
+            257156331,
+            11153435102,
+            257154871
+          ]
+        }
+      ],
+      "location": "Winnemac at Glenwood: short northward designated jog",
+      "movement": "Follow the designated offset through the short Glenwood portion and both approach turns",
+      "source_inference": "The city geometry explicitly contains this jog. The exact contiguous OSM node slice joins the two same-street approaches and stays within five metres of the bound city geometry. This resolves route correspondence only. Motor permissions and each turn remain separate snapshot decisions; this is not a field approval.",
+      "review_status": "source-inferred",
+      "confidence": "high for saved geometry correspondence; present signs and turn conditions unverified",
+      "effective_period": "City December 2025 inventory and September 11, 2026 OSM snapshot",
+      "matching": {
+        "method": "explicit-city-geometry-way-slice",
+        "route_id": "winnemac-2",
+        "maximum_source_distance_m": 5,
+        "maximum_check_spacing_m": 1
+      },
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: saved neighborhood greenway selection",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "designation snapshot effective month",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Exact source geometry for row-muht_4bn5-v2q2; includes the Glenwood offset.",
+          "status": "snapshot geometry",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/992031721",
+          "title": "OSM Glenwood road way 992031721",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "map database snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Only ordered nodes 257156331 → 11153435102 → 257154871; not the whole Glenwood way.",
+          "status": "snapshot topology and motor tags",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ],
+      "review_needed": "Inspect both turns and the short connecting road for current regulatory signs, barriers or conditional access. Do not extend this match to any other portion of Glenwood."
+    },
+    {
+      "id": "carmen-glenwood-designated-jog",
+      "source_record_ids": [
+        "row-567r_3xw8.pymc"
+      ],
+      "way_segments": [
+        {
+          "way_id": 23744939,
+          "nodes": [
+            257156232,
+            11352634295,
+            257155045
+          ]
+        }
+      ],
+      "location": "Carmen at Glenwood: short northward designated jog",
+      "movement": "Follow the designated offset through the short Glenwood portion and both approach turns",
+      "source_inference": "The city geometry explicitly contains this jog. The exact contiguous OSM node slice joins the two same-street approaches and stays within five metres of the bound city geometry. This resolves route correspondence only. Motor permissions and each turn remain separate snapshot decisions; this is not a field approval.",
+      "review_status": "source-inferred",
+      "confidence": "high for saved geometry correspondence; present signs and turn conditions unverified",
+      "effective_period": "City December 2025 inventory and September 11, 2026 OSM snapshot",
+      "matching": {
+        "method": "explicit-city-geometry-way-slice",
+        "route_id": "carmen-2",
+        "maximum_source_distance_m": 5,
+        "maximum_check_spacing_m": 1
+      },
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: saved neighborhood greenway selection",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "designation snapshot effective month",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Exact source geometry for row-567r_3xw8.pymc; includes the Glenwood offset.",
+          "status": "snapshot geometry",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/23744939",
+          "title": "OSM Glenwood road way 23744939",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "map database snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Only ordered nodes 257156232 → 11352634295 → 257155045; not the whole Glenwood way.",
+          "status": "snapshot topology and motor tags",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ],
+      "review_needed": "Inspect both turns and the short connecting road for current regulatory signs, barriers or conditional access. Do not extend this match to any other portion of Glenwood."
+    },
+    {
+      "id": "carmen-clark-glenwood-direction",
+      "source_record_ids": [
+        "row-567r_3xw8.pymc"
+      ],
+      "way_ids": [
+        23745006
+      ],
+      "location": "Carmen between Clark and Glenwood",
+      "movement": "eastbound and westbound along designated segment",
+      "source_inference": "City row gives no motor direction. OSM way 23745006 has no oneway tag in the snapshot; neither absence establishes two-way car permission. Current signs and intersection movements remain unknown.",
+      "review_status": "needs-review",
+      "confidence": "unknown",
+      "effective_period": "OSM snapshot 2026-09-11",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/23745006",
+          "title": "Chicago OSM road snapshot",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "map database snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Way 23745006 tags and ordered nodes in saved BBBike Chicago extract; live page may differ",
+          "status": "snapshot",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://myemail.constantcontact.com/47th-Ward-Newsletter---July-2--2021.html?aid=XdZUkjmDc8g&soid=1132690428543",
+          "title": "47th Ward Newsletter - July 2, 2021",
+          "publisher": "47th Ward",
+          "source_type": "ward newsletter",
+          "source_date": "2021-07-02",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "1400 block Carmen restoration after sewer work; Carmen/Glenwood previous closure",
+          "status": "historical temporary construction; current condition unknown"
+        }
+      ],
+      "review_needed": "Verify both block ends, one-way signs and turns; obtain CDOT original and as-built drawings.",
+      "search_gaps": [
+        {
+          "query": "Carmen Carmen between Clark and Glenwood CDOT engineering design plans alderman ward update",
+          "attempted_url": "https://www.chicago.gov/city/en/sites/complete-streets-chicago/home/featured-projects-and-innovations/projects0/MidNortheastNeighborhoodBikeNetwork.html",
+          "accessed_at": "2026-10-27",
+          "result": "HTTP 403 to web research tool; targeted web search did not locate a street-specific engineering sheet or current as-built",
+          "missing_artifact": "CDOT intersection-scale final plan, implementation/completion records, and current signed as-built for this location"
+        },
+        {
+          "query": "Carmen 39th 40th 47th 48th ward project updates drawings",
+          "attempted_url": "https://40thward.org/city-services/neighborhood-development/major-projects/",
+          "accessed_at": "2026-10-27",
+          "result": "Ward index reviewed; no location-specific design or completion notice for this row located",
+          "missing_artifact": "ward project communication and design sheet specific to this city row"
+        }
+      ]
+    },
+    {
+      "id": "carmen-kedzie-albany-direction",
+      "source_record_ids": [
+        "row-rfjh_buwp~qfix"
+      ],
+      "way_ids": [
+        1257543990,
+        583422340
+      ],
+      "location": "Carmen Kedzie to Albany",
+      "movement": "eastbound and westbound along designated segment",
+      "source_inference": "City attributes oneway_dir=E and br_ow_dir=E for the full row. OSM way 583422340 is eastbound oneway=yes on the Albany-side portion, while 1257543990 on the Kedzie-side portion has no oneway tag. This is a localized dataset discrepancy; no current signs or junction turns were verified.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for recorded attributes; conflict unresolved",
+      "effective_period": "city and OSM snapshots",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1257543990",
+          "title": "Chicago OSM road snapshot",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "map database snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Way 1257543990 tags and ordered nodes in saved BBBike Chicago extract; live page may differ",
+          "status": "snapshot",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/583422340",
+          "title": "Chicago OSM road snapshot",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "map database snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Way 583422340 tags and ordered nodes in saved BBBike Chicago extract; live page may differ",
+          "status": "snapshot",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ],
+      "review_needed": "Check both ends, regulatory signs and current turns.",
+      "search_gaps": [
+        {
+          "query": "Carmen Carmen Kedzie to Albany CDOT engineering design plans alderman ward update",
+          "attempted_url": "https://www.chicago.gov/city/en/sites/complete-streets-chicago/home/featured-projects-and-innovations/projects0/MidNortheastNeighborhoodBikeNetwork.html",
+          "accessed_at": "2026-10-27",
+          "result": "HTTP 403 to web research tool; targeted web search did not locate a street-specific engineering sheet or current as-built",
+          "missing_artifact": "CDOT intersection-scale final plan, implementation/completion records, and current signed as-built for this location"
+        },
+        {
+          "query": "Carmen 39th 40th 47th 48th ward project updates drawings",
+          "attempted_url": "https://40thward.org/city-services/neighborhood-development/major-projects/",
+          "accessed_at": "2026-10-27",
+          "result": "Ward index reviewed; no location-specific design or completion notice for this row located",
+          "missing_artifact": "ward project communication and design sheet specific to this city row"
+        }
+      ]
+    },
+    {
+      "id": "carmen-glenwood-broadway-context",
+      "source_record_ids": [
+        "row-ttku-y8f5_da8e"
+      ],
+      "location": "Carmen Glenwood to Broadway",
+      "movement": "both directions along each designated segment",
+      "source_inference": "City motor direction is blank. A 2017 report describes planned shared markings and a Broadway refuge island; a 2021 ward newsletter describes temporary sewer restoration near Glenwood. None establishes current motor turns, an endpoint barrier, or two-way travel.",
+      "review_status": "needs-review",
+      "confidence": "unknown",
+      "effective_period": "city rows last updated 2025-12-16; retrieved 2026-09-19; current unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "url": "https://myemail.constantcontact.com/47th-Ward-Newsletter---July-2--2021.html?aid=XdZUkjmDc8g&soid=1132690428543",
+          "title": "47th Ward Newsletter - July 2, 2021",
+          "publisher": "47th Ward",
+          "source_type": "ward newsletter",
+          "source_date": "2021-07-02",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "1400 block Carmen restoration after sewer work; Carmen/Glenwood previous closure",
+          "status": "historical temporary construction; current condition unknown"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2017/05/03/it-wont-be-long-until-the-glenwood-greenway-is-ready-to-ride",
+          "title": "It Won’t Be Long Until the Glenwood Greenway Is Ready to Ride",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "secondary report",
+          "source_date": "2017-05-03",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Carmen Glenwood to Broadway: reported shared markings and planned Broadway refuge island",
+          "status": "historical plan; not as-built"
+        }
+      ],
+      "review_needed": "Inspect current signs and Broadway and Glenwood junctions and obtain detailed as-built plans.",
+      "search_gaps": [
+        {
+          "query": "Carmen Glenwood Broadway greenway CDOT engineering design 48th ward",
+          "attempted_url": "https://www.chicago.gov/city/en/sites/complete-streets-chicago/home/featured-projects-and-innovations/projects0/MidNortheastNeighborhoodBikeNetwork.html",
+          "accessed_at": "2026-10-27",
+          "result": "HTTP 403; search did not locate detailed location-specific CDOT engineering plan or original ward design notice",
+          "missing_artifact": "Carmen Glenwood to Broadway final drawing and current as-built"
+        }
+      ]
+    },
+    {
+      "id": "carmen-spaulding-kedzie-context",
+      "source_record_ids": [
+        "row-nfrj.vcdz_ctwq"
+      ],
+      "location": "Carmen Spaulding to Kedzie and immediate western approach",
+      "movement": "both directions along each designated segment",
+      "source_inference": "City motor direction is blank. The signed 2025 aldermanic memorandum specifies westbound except bicycles from 5051 N Spaulding to the alley approximately at 3241 W Carmen. OSM shows the short westbound Carmen way 1081688366 from Spaulding to a shared alley junction at -87.7104738, 41.9739068; the city row starts roughly 4 m east at -87.7104319, 41.9738908, and extends east toward Kedzie. This geometry suggests the named one-way spur lies west of the designated line and meets it at the western endpoint, but address boundaries and a small offset are not survey-resolved; exact overlap and endpoint movements remain unknown. OSM way 24076762 continues east with no one-way tag; that absence is not confirmation of legal two-way travel.",
+      "review_status": "needs-review",
+      "confidence": "unknown",
+      "effective_period": "city rows last updated 2025-12-16; retrieved 2026-09-19; current unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2026/10/21/sbc-bike-lane-fest-2025-26-far-northwest-side-including-albany-park-forest-glen-and-north-park",
+          "title": "SBC Bike Lane Fest 2025-26: Far Northwest Side",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "secondary field report",
+          "source_date": "2026-10-21",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Carmen at Spaulding leads toward river trail; western Argyle westbound and bike contraflow observed",
+          "status": "dated observations; not motor movement audit"
+        },
+        {
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/218e4fd6-b343-4672-b6c1-c5e1abacb1e1.pdf",
+          "title": "Committee on Pedestrian & Traffic Safety summary",
+          "publisher": "Chicago City Council",
+          "source_type": "official committee summary",
+          "source_date": "2025-09-22",
+          "date_kind": "meeting date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Printed and PDF p. 7: Argyle Kedvale–Pulaski westbound except bicycles; 20 mph Kedvale–Ridgeway; separately Carmen from 5051 N Spaulding to alley near 3241 W Carmen westbound except bikes",
+          "status": "committee passed direct introduction; implementation not verified",
+          "sha256": "e0b48bd4dc5f14f44b8ab16c0faf29c4d8363e9bb3315c2b61bdcadab0fd77b2",
+          "reviewed_pages": [
+            1,
+            7
+          ],
+          "review_method": "PDF page 7 rendered and visually inspected; page 1 text checked; not an engineering drawing"
+        },
+        {
+          "url": "https://chicago.councilmatic.org/legislation/o2025-0019367/",
+          "title": "Ordinance O2025-0019367",
+          "publisher": "Chicago Councilmatic / DataMade",
+          "source_type": "legislative tracker",
+          "source_date": "2025-09-25",
+          "date_kind": "council action date",
+          "retrieved_at": "2026-10-27",
+          "scope": "39th Ward sponsor Nugent; reports council passed substitute input for Argyle Kedvale–Pulaski and Carmen 5051 N Spaulding to alley at 3241 W Carmen",
+          "status": "passed council per tracker; current signage unknown"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1081688366",
+          "title": "OSM Carmen way 1081688366 and alley 204193953",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "map database snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Carmen westbound way 1081688366 joins alley 204193953 and eastward Carmen way 24076762 at OSM node 2142142005; city designated start is approximately 4 m east",
+          "status": "snapshot",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/204193953",
+          "title": "OSM Carmen way 1081688366 and alley 204193953",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "map database snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Carmen westbound way 1081688366 joins alley 204193953 and eastward Carmen way 24076762 at OSM node 2142142005; city designated start is approximately 4 m east",
+          "status": "snapshot",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24076762",
+          "title": "OSM Carmen way 1081688366 and alley 204193953",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "map database snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Carmen westbound way 1081688366 joins alley 204193953 and eastward Carmen way 24076762 at OSM node 2142142005; city designated start is approximately 4 m east",
+          "status": "snapshot",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c"
+        },
+        {
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/3f2a3e0a-9296-48b5-b87c-af643be10ab3.pdf",
+          "title": "Memorandum for Traffic Regulations, O2025-0019367",
+          "publisher": "Alderperson Samantha Nugent, 39th Ward",
+          "source_type": "signed aldermanic legislative memorandum",
+          "source_date": "2025-09-11",
+          "date_kind": "document date",
+          "retrieved_at": "2026-10-27",
+          "scope": "PDF p. 1: Carmen from 5051 N Spaulding to alley at approximately 3241 W Carmen, westbound except bicycles; also Argyle Kedvale to Pulaski",
+          "status": "direct introduction; council passage reported separately; current sign installation unverified",
+          "sha256": "1294286db1e1331f24248e39bcf66971291359bf8747726ae575ebe864a6be70",
+          "reviewed_pages": [
+            1
+          ],
+          "review_method": "Scanned PDF page 1 rendered and visually inspected"
+        }
+      ],
+      "review_needed": "Obtain authoritative sign plan and survey the alley, endpoint, signs and eastward turns; resolve the slight dataset offset and ordinance endpoints.",
+      "search_gaps": [
+        {
+          "query": "Carmen 5051 Spaulding 3241 Carmen alley CDOT signed plans",
+          "attempted_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/3f2a3e0a-9296-48b5-b87c-af643be10ab3.pdf",
+          "accessed_at": "2026-10-27",
+          "result": "Signed one-page legislative memorandum obtained, but no surveyed endpoints or intersection engineering plan",
+          "missing_artifact": "authoritative sign placement plan, as-built, and exact location of named alley/endpoint"
+        }
+      ],
+      "way_ids": [
+        1081688366,
+        204193953,
+        24076762
+      ]
+    },
+    {
+      "id": "argyle-kedvale-pulaski-direction",
+      "source_record_ids": [
+        "row-wkph~qm3w~5yab"
+      ],
+      "way_ids": [
+        1443715350
+      ],
+      "location": "Argyle Kedvale to Pulaski",
+      "movement": "eastbound and westbound along designated segment",
+      "source_inference": "City oneway_dir=W; local OSM way 1443715350 has westbound oneway=yes node order and a bicycle exception. Contraflow cycling does not authorize eastbound cars. Junction and current condition not verified. A 2025 City Council committee summary lists this exact stretch as westbound except bicycles; the council tracker reports passage. Neither proves present signs or intersection turns.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshots; current signs unknown",
+      "effective_period": "city and OSM snapshots",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1443715350",
+          "title": "Chicago OSM road snapshot",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "map database snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Way 1443715350 tags and ordered nodes in saved BBBike Chicago extract; live page may differ",
+          "status": "snapshot",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2026/10/21/sbc-bike-lane-fest-2025-26-far-northwest-side-including-albany-park-forest-glen-and-north-park",
+          "title": "SBC Bike Lane Fest 2025-26: Far Northwest Side",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "secondary field report",
+          "source_date": "2026-10-21",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Carmen at Spaulding leads toward river trail; western Argyle westbound and bike contraflow observed",
+          "status": "dated observations; not motor movement audit"
+        },
+        {
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/218e4fd6-b343-4672-b6c1-c5e1abacb1e1.pdf",
+          "title": "Committee on Pedestrian & Traffic Safety summary",
+          "publisher": "Chicago City Council",
+          "source_type": "official committee summary",
+          "source_date": "2025-09-22",
+          "date_kind": "meeting date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Printed and PDF p. 7: Argyle Kedvale–Pulaski westbound except bicycles; 20 mph Kedvale–Ridgeway; separately Carmen from 5051 N Spaulding to alley near 3241 W Carmen westbound except bikes",
+          "status": "committee passed direct introduction; implementation not verified",
+          "sha256": "e0b48bd4dc5f14f44b8ab16c0faf29c4d8363e9bb3315c2b61bdcadab0fd77b2",
+          "reviewed_pages": [
+            1,
+            7
+          ],
+          "review_method": "PDF page 7 rendered and visually inspected; page 1 text checked; not an engineering drawing"
+        },
+        {
+          "url": "https://chicago.councilmatic.org/legislation/o2025-0019367/",
+          "title": "Ordinance O2025-0019367",
+          "publisher": "Chicago Councilmatic / DataMade",
+          "source_type": "legislative tracker",
+          "source_date": "2025-09-25",
+          "date_kind": "council action date",
+          "retrieved_at": "2026-10-27",
+          "scope": "39th Ward sponsor Nugent; reports council passed substitute input for Argyle Kedvale–Pulaski and Carmen 5051 N Spaulding to alley at 3241 W Carmen",
+          "status": "passed council per tracker; current signage unknown"
+        },
+        {
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/matterattachmentspublic/3f2a3e0a-9296-48b5-b87c-af643be10ab3.pdf",
+          "title": "Memorandum for Traffic Regulations, O2025-0019367",
+          "publisher": "Alderperson Samantha Nugent, 39th Ward",
+          "source_type": "signed aldermanic legislative memorandum",
+          "source_date": "2025-09-11",
+          "date_kind": "document date",
+          "retrieved_at": "2026-10-27",
+          "scope": "PDF p. 1: Carmen from 5051 N Spaulding to alley at approximately 3241 W Carmen, westbound except bicycles; also Argyle Kedvale to Pulaski",
+          "status": "direct introduction; council passage reported separately; current sign installation unverified",
+          "sha256": "1294286db1e1331f24248e39bcf66971291359bf8747726ae575ebe864a6be70",
+          "reviewed_pages": [
+            1
+          ],
+          "review_method": "Scanned PDF page 1 rendered and visually inspected"
+        }
+      ],
+      "review_needed": "Check signs, crossings and both ends in the field.",
+      "search_gaps": [
+        {
+          "query": "Argyle Argyle Kedvale to Pulaski CDOT engineering design plans alderman ward update",
+          "attempted_url": "https://www.chicago.gov/city/en/sites/complete-streets-chicago/home/featured-projects-and-innovations/projects0/MidNortheastNeighborhoodBikeNetwork.html",
+          "accessed_at": "2026-10-27",
+          "result": "HTTP 403 to web research tool; targeted web search did not locate a street-specific engineering sheet or current as-built",
+          "missing_artifact": "CDOT intersection-scale final plan, implementation/completion records, and current signed as-built for this location"
+        },
+        {
+          "query": "Argyle 39th 40th 47th 48th ward project updates drawings",
+          "attempted_url": "https://40thward.org/city-services/neighborhood-development/major-projects/",
+          "accessed_at": "2026-10-27",
+          "result": "Ward index reviewed; no location-specific design or completion notice for this row located",
+          "missing_artifact": "ward project communication and design sheet specific to this city row"
+        }
+      ]
+    },
+    {
+      "id": "argyle-river-proposal",
+      "source_record_ids": [
+        "row-mfd8-e3sw-kr45",
+        "row-nn2f.26nq.pskp"
+      ],
+      "way_ids": [
+        24078652
+      ],
+      "location": "Argyle Chicago River to Francisco and Francisco to Rockwell",
+      "movement": "eastbound and westbound across bridge and eastward along Argyle",
+      "source_inference": "City row east of Francisco specifies W and OSM way 24078652 runs west with oneway=yes and bicycle exception. City bridge-to-Francisco row has no direction; a 2024 report describes a proposal to extend westbound one-way across the bridge, not an implemented decision. The 2026 ward beacons ballot does not settle motor direction. The ward-branded proposal map visually compares a two-way bridge with a proposed westbound arrow; it is not an as-built plan.",
+      "review_status": "needs-review",
+      "confidence": "moderate for east segment snapshot; unknown for bridge current status",
+      "effective_period": "2024 proposal; 2026 snapshots and ballot",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24078652",
+          "title": "Chicago OSM road snapshot",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "map database snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Way 24078652 tags and ordered nodes in saved BBBike Chicago extract; live page may differ",
+          "status": "snapshot",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/08/16/cdot-alders-rodriguez-and-vasquez-plan-to-make-argyle-at-north-shore-channel-trail-one-way-wb",
+          "title": "CDOT, alders Rodriguez and Vasquez propose making Argyle at North Shore Channel Trail one-way WB",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "secondary report of CDOT and ward proposal",
+          "source_date": "2024-08-16",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Argyle at river; proposed conversion and contemporaneous conditions",
+          "status": "proposal; implementation unknown"
+        },
+        {
+          "url": "https://40thward.org/2026/10/announcing-the-2027-peoples-budget/",
+          "title": "Announcing the 2027 People’s Budget!",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward update",
+          "source_date": "2026-10-15",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Ballot proposal for rapid flashing pedestrian beacons on Argyle California to Chicago River",
+          "status": "proposed ballot item, not funded or installed"
+        },
+        {
+          "url": "https://chi.streetsblog.org/wp-content/uploads/sites/15/2024/08/GUTdHoOW4AAUuT2.jpeg",
+          "title": "Extend Argyle One-Way Westbound to Whipple",
+          "publisher": "40th Ward and 33rd Ward; image credited to CDOT by Streetsblog",
+          "source_type": "ward-branded proposal map",
+          "source_date": "2024-08-16",
+          "date_kind": "published no later than report date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Side-by-side existing and proposed traffic flow at Argyle bridge; proposed blue westbound arrow to Whipple, existing two-way yellow arrow",
+          "status": "proposal; final design and implementation unknown",
+          "sha256": "3ec4b038efe767416dc3435a13c0d76dfe633d42657f63fe2448a4c051ff8722",
+          "review_method": "Full reproduced image visually inspected; conceptual map, not detailed engineering plan"
+        }
+      ],
+      "review_needed": "Obtain final CDOT bridge and intersection plans, conversion decision and current signs; survey all approaches.",
+      "search_gaps": [
+        {
+          "query": "Argyle Argyle Chicago River to Francisco and Francisco to Rockwell CDOT engineering design plans alderman ward update",
+          "attempted_url": "https://www.chicago.gov/city/en/sites/complete-streets-chicago/home/featured-projects-and-innovations/projects0/MidNortheastNeighborhoodBikeNetwork.html",
+          "accessed_at": "2026-10-27",
+          "result": "HTTP 403 to web research tool; targeted web search did not locate a street-specific engineering sheet or current as-built",
+          "missing_artifact": "CDOT intersection-scale final plan, implementation/completion records, and current signed as-built for this location"
+        },
+        {
+          "query": "Argyle 39th 40th 47th 48th ward project updates drawings",
+          "attempted_url": "https://40thward.org/city-services/neighborhood-development/major-projects/",
+          "accessed_at": "2026-10-27",
+          "result": "Ward index reviewed; no location-specific design or completion notice for this row located",
+          "missing_artifact": "ward project communication and design sheet specific to this city row"
+        },
+        {
+          "query": "Argyle Francisco Whipple 33rd ward 40th ward one way 2024 bridge community meeting",
+          "attempted_url": "https://www.flickr.com/photos/24858199@N00/53926245373/in/dateposted-public/",
+          "accessed_at": "2026-10-27",
+          "result": "linked larger image could not be fetched by web tool; reproduced proposal image inspected instead; direct 33rd ward update not located",
+          "missing_artifact": "meeting record, final decision and detailed bridge design"
+        }
+      ]
+    },
+    {
+      "id": "argyle-pulaski-ridgeway",
+      "source_record_ids": [
+        "row-izhx-npfm~7itr"
+      ],
+      "location": "Argyle Pulaski to Ridgeway",
+      "movement": "both directions along designated segment",
+      "source_inference": "City direction field is blank and does not establish motor access or crossing permissions. A 2025 committee summary lists a 20 mph limit across Kedvale–Ridgeway. Speed limits alone do not break through-car continuity.",
+      "review_status": "needs-review",
+      "confidence": "unknown",
+      "effective_period": "city snapshot; current ground unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/218e4fd6-b343-4672-b6c1-c5e1abacb1e1.pdf",
+          "title": "Committee on Pedestrian & Traffic Safety summary",
+          "publisher": "Chicago City Council",
+          "source_type": "official committee summary",
+          "source_date": "2025-09-22",
+          "date_kind": "meeting date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Printed and PDF p. 7: Argyle Kedvale–Pulaski westbound except bicycles; 20 mph Kedvale–Ridgeway; separately Carmen from 5051 N Spaulding to alley near 3241 W Carmen westbound except bikes",
+          "status": "committee passed direct introduction; implementation not verified",
+          "sha256": "e0b48bd4dc5f14f44b8ab16c0faf29c4d8363e9bb3315c2b61bdcadab0fd77b2",
+          "reviewed_pages": [
+            1,
+            7
+          ],
+          "review_method": "PDF page 7 rendered and visually inspected; page 1 text checked; not an engineering drawing"
+        }
+      ],
+      "review_needed": "Inspect Pulaski and Ridgeway approaches, signs, and any barriers; obtain detailed CDOT drawings.",
+      "search_gaps": [
+        {
+          "query": "Argyle Argyle Pulaski to Ridgeway CDOT engineering design plans alderman ward update",
+          "attempted_url": "https://www.chicago.gov/city/en/sites/complete-streets-chicago/home/featured-projects-and-innovations/projects0/MidNortheastNeighborhoodBikeNetwork.html",
+          "accessed_at": "2026-10-27",
+          "result": "HTTP 403 to web research tool; targeted web search did not locate a street-specific engineering sheet or current as-built",
+          "missing_artifact": "CDOT intersection-scale final plan, implementation/completion records, and current signed as-built for this location"
+        },
+        {
+          "query": "Argyle 39th 40th 47th 48th ward project updates drawings",
+          "attempted_url": "https://40thward.org/city-services/neighborhood-development/major-projects/",
+          "accessed_at": "2026-10-27",
+          "result": "Ward index reviewed; no location-specific design or completion notice for this row located",
+          "missing_artifact": "ward project communication and design sheet specific to this city row"
+        }
+      ]
+    }
+  ],
+  "research_batches": [
+    {
+      "id": "winnemac-ainslie-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Scoped Winnemac and Ainslie source research, not field approvals",
+        "default_profile": "ordinary passenger car on a through trip"
+      },
+      "record_ids": [
+        "winnemac-rockwell-leavitt-direction",
+        "winnemac-clark-broadway-direction",
+        "winnemac-damen-clark-context",
+        "winnemac-lincoln-turns",
+        "ainslie-rockwell-lincoln-direction",
+        "ainslie-western-damen-context",
+        "ainslie-western-left-turn"
+      ],
+      "notes": "docs/winnemac-ainslie-source-review.md"
+    },
+    {
+      "id": "carmen-argyle-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Scoped Carmen and Argyle evidence for through-car continuity; no whole-route approval.",
+        "default_profile": "ordinary passenger car on a through trip",
+        "method": "City rows and OSM named-way ordered nodes checked; ward, committee summary, ward-branded proposal map and reporting reviewed. PDF summary page 7 rendered and inspected; no intersection engineering drawing located. Proposal is not current evidence."
+      },
+      "record_ids": [
+        "carmen-clark-glenwood-direction",
+        "carmen-kedzie-albany-direction",
+        "carmen-glenwood-broadway-context",
+        "carmen-spaulding-kedzie-context",
+        "argyle-kedvale-pulaski-direction",
+        "argyle-river-proposal",
+        "argyle-pulaski-ridgeway"
+      ],
+      "notes": "docs/carmen-argyle-source-review.md"
     }
   ]
 }

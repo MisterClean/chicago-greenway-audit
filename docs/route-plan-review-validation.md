@@ -1,5 +1,7 @@
 # Directional continuity: School, Roscoe, Winthrop and Ardmore
 
+Historical checkpoint, committed as `a3d4a22`. The [next expansion and evidence catalog](route-north-validation.md) supersedes the counts and export hash below. `data/routes/pilot-validation.json` now records that newer export.
+
 Reviewed October 27, 2026. This batch adds four streets and six designation sections to the ten-street checkpoint `b1866c8`. The current export contains **22 sections, 1,206 movements and 47 directional runs**, covering 23.88479 designated miles. All movement evidence remains source-inferred or conflicting; there are no field approvals. These are potential through-car paths, not cycling-stress scores or verified driving instructions.
 
 ## CDOT plans and alderman communications

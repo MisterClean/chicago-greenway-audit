@@ -69,6 +69,54 @@
       "name": "Ardmore",
       "axis": "east",
       "source": "ARDMORE"
+    },
+    {
+      "name": "Winnemac",
+      "axis": "east",
+      "source": "WINNEMAC",
+      "scoped_ways": [
+        {
+          "route_id": "winnemac-2",
+          "way_id": 992031721,
+          "nodes": [
+            257156331,
+            11153435102,
+            257154871
+          ],
+          "city_source_ids": [
+            "row-muht_4bn5-v2q2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ainslie",
+      "axis": "east",
+      "source": "AINSLIE"
+    },
+    {
+      "name": "Carmen",
+      "axis": "east",
+      "source": "CARMEN",
+      "scoped_ways": [
+        {
+          "route_id": "carmen-2",
+          "way_id": 23744939,
+          "nodes": [
+            257156232,
+            11352634295,
+            257155045
+          ],
+          "city_source_ids": [
+            "row-567r_3xw8.pymc"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Argyle",
+      "axis": "east",
+      "source": "ARGYLE"
     }
   ],
   "max_source_distance_m": 18,

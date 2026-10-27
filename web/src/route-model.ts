@@ -86,7 +86,7 @@ export interface EvidenceRecord {
   location: string;
   source_inference: string;
   review_needed: string;
-  sources: {url: string; source_date: string | null; scope: string; status: string}[];
+  sources: {url: string; title?: string; publisher?: string; source_date: string | null; date_kind?: string; scope: string; status: string}[];
 }
 
 // A project on one part of a street cannot substantiate a distant namesake.
