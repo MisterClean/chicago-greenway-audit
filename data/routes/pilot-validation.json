@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-27T20:14:01.693Z",
+  "audited_at": "2026-10-27T20:27:33.413Z",
   "input": "public/routes/pilot.json",
-  "input_sha256": "7823a004949e1e2e84073fd370912f5f1e91e4f3e41182a9a26e82f3eacb6ba8",
+  "input_sha256": "a604c41abaac977c7548c7315fee0a521f1f00b07741b3fcb17e12251a460fbe",
   "staged_database": "data/staging/network.sqlite",
   "staged_database_sha256": "feb3da5161b58ad7aaf4c644c7ec090f894f6ced6cb9b6a8680f03970d4b5706",
   "osm_source_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
@@ -11,8 +11,8 @@
   "purpose": "Source consistency checks and narrow movement samples; no field review, legal certification, or whole-corridor approval.",
   "scope_caveat": "Samples test junction movement rules only; adjoining edges and current signs may differ.",
   "sampling_method": "Two distinct eligible same-way nodes nearest route-index quartiles per route, both directions; selection independent of observed result. Unknown, restricted and junction-traversal nodes are excluded.",
-  "sample_count": 148,
-  "targeted_check_count": 65,
+  "sample_count": 172,
+  "targeted_check_count": 84,
   "field_approvals": 0,
   "samples": [
     {
@@ -2974,6 +2974,486 @@
         "https://www.openstreetmap.org/node/2188965789"
       ],
       "field_reviewed": false
+    },
+    {
+      "id": "leavitt-1-movement-11-forward",
+      "route_id": "leavitt-1",
+      "subject": "movement",
+      "movement_id": "leavitt-1-movement-11",
+      "direction": "forward",
+      "from_edge": "leavitt-1-way-145096552-11",
+      "to_edge": "leavitt-1-way-145096552-12",
+      "via_node_id": 261235168,
+      "source_way_id": 145096552,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/145096552",
+        "https://www.openstreetmap.org/node/261235168"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-1-movement-11-reverse",
+      "route_id": "leavitt-1",
+      "subject": "movement",
+      "movement_id": "leavitt-1-movement-11",
+      "direction": "reverse",
+      "from_edge": "leavitt-1-way-145096552-12",
+      "to_edge": "leavitt-1-way-145096552-11",
+      "via_node_id": 261235168,
+      "source_way_id": 145096552,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/145096552",
+        "https://www.openstreetmap.org/node/261235168"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-1-movement-30-forward",
+      "route_id": "leavitt-1",
+      "subject": "movement",
+      "movement_id": "leavitt-1-movement-30",
+      "direction": "forward",
+      "from_edge": "leavitt-1-way-145096550-30",
+      "to_edge": "leavitt-1-way-145096550-31",
+      "via_node_id": 10078549926,
+      "source_way_id": 145096550,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/145096550",
+        "https://www.openstreetmap.org/node/10078549926"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-1-movement-30-reverse",
+      "route_id": "leavitt-1",
+      "subject": "movement",
+      "movement_id": "leavitt-1-movement-30",
+      "direction": "reverse",
+      "from_edge": "leavitt-1-way-145096550-31",
+      "to_edge": "leavitt-1-way-145096550-30",
+      "via_node_id": 10078549926,
+      "source_way_id": 145096550,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/145096550",
+        "https://www.openstreetmap.org/node/10078549926"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-2-movement-44-forward",
+      "route_id": "leavitt-2",
+      "subject": "movement",
+      "movement_id": "leavitt-2-movement-44",
+      "direction": "forward",
+      "from_edge": "leavitt-2-way-1229184444-44",
+      "to_edge": "leavitt-2-way-1229184444-45",
+      "via_node_id": 10177240437,
+      "source_way_id": 1229184444,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1229184444",
+        "https://www.openstreetmap.org/node/10177240437"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-2-movement-44-reverse",
+      "route_id": "leavitt-2",
+      "subject": "movement",
+      "movement_id": "leavitt-2-movement-44",
+      "direction": "reverse",
+      "from_edge": "leavitt-2-way-1229184444-45",
+      "to_edge": "leavitt-2-way-1229184444-44",
+      "via_node_id": 10177240437,
+      "source_way_id": 1229184444,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1229184444",
+        "https://www.openstreetmap.org/node/10177240437"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-2-movement-131-forward",
+      "route_id": "leavitt-2",
+      "subject": "movement",
+      "movement_id": "leavitt-2-movement-131",
+      "direction": "forward",
+      "from_edge": "leavitt-2-way-1229725020-131",
+      "to_edge": "leavitt-2-way-1229725020-132",
+      "via_node_id": 11263561282,
+      "source_way_id": 1229725020,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1229725020",
+        "https://www.openstreetmap.org/node/11263561282"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-2-movement-131-reverse",
+      "route_id": "leavitt-2",
+      "subject": "movement",
+      "movement_id": "leavitt-2-movement-131",
+      "direction": "reverse",
+      "from_edge": "leavitt-2-way-1229725020-132",
+      "to_edge": "leavitt-2-way-1229725020-131",
+      "via_node_id": 11263561282,
+      "source_way_id": 1229725020,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1229725020",
+        "https://www.openstreetmap.org/node/11263561282"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "granville-1-movement-45-forward",
+      "route_id": "granville-1",
+      "subject": "movement",
+      "movement_id": "granville-1-movement-45",
+      "direction": "forward",
+      "from_edge": "granville-1-way-805929015-45",
+      "to_edge": "granville-1-way-805929015-46",
+      "via_node_id": 12673651528,
+      "source_way_id": 805929015,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/805929015",
+        "https://www.openstreetmap.org/node/12673651528"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "granville-1-movement-45-reverse",
+      "route_id": "granville-1",
+      "subject": "movement",
+      "movement_id": "granville-1-movement-45",
+      "direction": "reverse",
+      "from_edge": "granville-1-way-805929015-46",
+      "to_edge": "granville-1-way-805929015-45",
+      "via_node_id": 12673651528,
+      "source_way_id": 805929015,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/805929015",
+        "https://www.openstreetmap.org/node/12673651528"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "granville-1-movement-134-forward",
+      "route_id": "granville-1",
+      "subject": "movement",
+      "movement_id": "granville-1-movement-134",
+      "direction": "forward",
+      "from_edge": "granville-1-way-1430929464-134",
+      "to_edge": "granville-1-way-1430929464-135",
+      "via_node_id": 2196336922,
+      "source_way_id": 1430929464,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1430929464",
+        "https://www.openstreetmap.org/node/2196336922"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "granville-1-movement-134-reverse",
+      "route_id": "granville-1",
+      "subject": "movement",
+      "movement_id": "granville-1-movement-134",
+      "direction": "reverse",
+      "from_edge": "granville-1-way-1430929464-135",
+      "to_edge": "granville-1-way-1430929464-134",
+      "via_node_id": 2196336922,
+      "source_way_id": 1430929464,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1430929464",
+        "https://www.openstreetmap.org/node/2196336922"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "24th-1-movement-23-forward",
+      "route_id": "24th-1",
+      "subject": "movement",
+      "movement_id": "24th-1-movement-23",
+      "direction": "forward",
+      "from_edge": "24th-1-way-24108751-23",
+      "to_edge": "24th-1-way-24108751-24",
+      "via_node_id": 2428368921,
+      "source_way_id": 24108751,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/24108751",
+        "https://www.openstreetmap.org/node/2428368921"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "24th-1-movement-23-reverse",
+      "route_id": "24th-1",
+      "subject": "movement",
+      "movement_id": "24th-1-movement-23",
+      "direction": "reverse",
+      "from_edge": "24th-1-way-24108751-24",
+      "to_edge": "24th-1-way-24108751-23",
+      "via_node_id": 2428368921,
+      "source_way_id": 24108751,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/24108751",
+        "https://www.openstreetmap.org/node/2428368921"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "24th-1-movement-66-forward",
+      "route_id": "24th-1",
+      "subject": "movement",
+      "movement_id": "24th-1-movement-66",
+      "direction": "forward",
+      "from_edge": "24th-1-way-581938780-66",
+      "to_edge": "24th-1-way-581938780-67",
+      "via_node_id": 8089957041,
+      "source_way_id": 581938780,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/581938780",
+        "https://www.openstreetmap.org/node/8089957041"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "24th-1-movement-66-reverse",
+      "route_id": "24th-1",
+      "subject": "movement",
+      "movement_id": "24th-1-movement-66",
+      "direction": "reverse",
+      "from_edge": "24th-1-way-581938780-67",
+      "to_edge": "24th-1-way-581938780-66",
+      "via_node_id": 8089957041,
+      "source_way_id": 581938780,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/581938780",
+        "https://www.openstreetmap.org/node/8089957041"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "28th-1-movement-28-forward",
+      "route_id": "28th-1",
+      "subject": "movement",
+      "movement_id": "28th-1-movement-28",
+      "direction": "forward",
+      "from_edge": "28th-1-way-217429280-28",
+      "to_edge": "28th-1-way-217429280-29",
+      "via_node_id": 11227953426,
+      "source_way_id": 217429280,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/217429280",
+        "https://www.openstreetmap.org/node/11227953426"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "28th-1-movement-28-reverse",
+      "route_id": "28th-1",
+      "subject": "movement",
+      "movement_id": "28th-1-movement-28",
+      "direction": "reverse",
+      "from_edge": "28th-1-way-217429280-29",
+      "to_edge": "28th-1-way-217429280-28",
+      "via_node_id": 11227953426,
+      "source_way_id": 217429280,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/217429280",
+        "https://www.openstreetmap.org/node/11227953426"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "28th-1-movement-83-forward",
+      "route_id": "28th-1",
+      "subject": "movement",
+      "movement_id": "28th-1-movement-83",
+      "direction": "forward",
+      "from_edge": "28th-1-way-41323442-83",
+      "to_edge": "28th-1-way-41323442-84",
+      "via_node_id": 11653954269,
+      "source_way_id": 41323442,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/41323442",
+        "https://www.openstreetmap.org/node/11653954269"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "28th-1-movement-83-reverse",
+      "route_id": "28th-1",
+      "subject": "movement",
+      "movement_id": "28th-1-movement-83",
+      "direction": "reverse",
+      "from_edge": "28th-1-way-41323442-84",
+      "to_edge": "28th-1-way-41323442-83",
+      "via_node_id": 11653954269,
+      "source_way_id": 41323442,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/41323442",
+        "https://www.openstreetmap.org/node/11653954269"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "30th-1-movement-27-forward",
+      "route_id": "30th-1",
+      "subject": "movement",
+      "movement_id": "30th-1-movement-27",
+      "direction": "forward",
+      "from_edge": "30th-1-way-41323439-27",
+      "to_edge": "30th-1-way-41323439-28",
+      "via_node_id": 11227953399,
+      "source_way_id": 41323439,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/41323439",
+        "https://www.openstreetmap.org/node/11227953399"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "30th-1-movement-27-reverse",
+      "route_id": "30th-1",
+      "subject": "movement",
+      "movement_id": "30th-1-movement-27",
+      "direction": "reverse",
+      "from_edge": "30th-1-way-41323439-28",
+      "to_edge": "30th-1-way-41323439-27",
+      "via_node_id": 11227953399,
+      "source_way_id": 41323439,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/41323439",
+        "https://www.openstreetmap.org/node/11227953399"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "30th-1-movement-78-forward",
+      "route_id": "30th-1",
+      "subject": "movement",
+      "movement_id": "30th-1-movement-78",
+      "direction": "forward",
+      "from_edge": "30th-1-way-41323437-78",
+      "to_edge": "30th-1-way-41323437-79",
+      "via_node_id": 505205087,
+      "source_way_id": 41323437,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/41323437",
+        "https://www.openstreetmap.org/node/505205087"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "30th-1-movement-78-reverse",
+      "route_id": "30th-1",
+      "subject": "movement",
+      "movement_id": "30th-1-movement-78",
+      "direction": "reverse",
+      "from_edge": "30th-1-way-41323437-79",
+      "to_edge": "30th-1-way-41323437-78",
+      "via_node_id": 505205087,
+      "source_way_id": 41323437,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/41323437",
+        "https://www.openstreetmap.org/node/505205087"
+      ],
+      "field_reviewed": false
     }
   ],
   "targeted_checks": [
@@ -3856,6 +4336,239 @@
       "sources": [
         "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
         "https://www.openstreetmap.org/way/1284871397"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-distinct-project-scopes",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Separate Milwaukee–Lyndale and Diversey–Berwyn city components do not form one Leavitt route.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-1-1050933260-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1050933260"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-2-1229184444-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1229184444"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-2-31108749-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/31108749"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-2-1229725020-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1229725020"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "granville-1-1430929462-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1430929462"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "granville-1-1211697096-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1211697096"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "granville-1-1319363803-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1319363803"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "granville-1-815606180-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/815606180"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "granville-1-1430929469-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1430929469"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "24th-1-24108751-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/24108751"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "28th-1-217429280-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/217429280"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "28th-1-41323442-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/41323442"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "30th-1-1263966111-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1263966111"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "granville-broadway-ward-prose-conflict-retained",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source review retains the ward prose conflict with the city and CDOT schematic; matching the snapshot does not resolve current signs.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://40thward.org/project/granville-traffic-safety/"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "30th-unnamed-precise-slice",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Only the exact connecting node slice is included; no OSM one-way tag conflicts with the city eastbound assertion, leaving westbound unknown.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/722259223"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-montrose-cycleway-source",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The scoped unmatched motor-network gap meets a mapped cycleway at the north cul-de-sac; the source does not establish a car connection.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1385145081"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-montrose-gap-blocked",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Ward completion and historical photograph support a source-inferred block along the bicycle connection in both directions, not field approval.",
+      "sources": [
+        "https://myemail.constantcontact.com/Voting-open-for-participatory-budgeting--New-recycling-app-.html?aid=iTGYYvADQgs&soid=1132690428543",
+        "https://chi.streetsblog.org/2024/12/18/get-a-pizza-the-action-take-virtual-ride-on-new-raised-bike-lane-across-from-lou-malnatis-on-the-leavitt-street-greenway",
+        "https://files.constantcontact.com/f725c99b701/5b6d4104-51dd-42e3-b103-e40fbfa672c5.png?rdr=true",
+        "https://chi.streetsblog.org/wp-content/uploads/sites/15/2024/12/Screen-Shot-2024-12-18-at-5.26.09-PM.png?w=1024",
+        "https://www.openstreetmap.org/way/1385145081",
+        "https://www.openstreetmap.org/way/1320281908",
+        "https://www.openstreetmap.org/way/1385117962",
+        "https://www.openstreetmap.org/way/1385117960"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "leavitt-montrose-no-run-crosses",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "No ordinary-car run may span the identified gap in either direction.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1385145081"
       ],
       "field_reviewed": false
     }

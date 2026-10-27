@@ -268,6 +268,48 @@ for (const [routeId,cityId,wayId] of [['argyle-1','row-wkph~qm3w~5yab',144371535
  const conflict=routes.flatMap(r=>r.edges.filter(e=>e.way_id===1284871397));
  check('polk-independence-boundary-conflict',true,conflict.length>0 && conflict.every(e=>e.access.forward.status==='unknown' && e.access.forward.evidence_status==='conflicting'),'Preserve the conflict where an edge straddles city rows with differing direction assertions.',[sourceUrl,'https://www.openstreetmap.org/way/1284871397']);
 }
+// Additional scoped checks bind direction assertions to the city and the staged
+// OSM node order. These do not approve present-day signs or intersection turns.
+{
+ const routeById=id=>data.routes.find(r=>r.id===id);
+ const leavittSouth=routeById('leavitt-1'), leavittNorth=routeById('leavitt-2');
+ const southIds=['row-p7em.hzp8-z6uy','row-5pr3-cxvv~erar'];
+ const northIds=['row-jfzd~s99v.dr5f','row-cnii.tuwg~j35c','row-2bn4.nve4-hd5w','row-4h83_cedq-6da7','row-j88u_zm6q_fbgt','row-mzhe_8x6z_xpsf','row-xm5h~gw9i_vqch','row-zpn6-2wxn_j4wq','row-jbxc-stau~yz32','row-2nne~xey9~hyrp'];
+ check('leavitt-distinct-project-scopes',true,!!leavittSouth && !!leavittNorth && southIds.every(id=>cityRecord(id) && leavittSouth.source_ids.includes(id) && !leavittNorth.source_ids.includes(id)) && northIds.every(id=>cityRecord(id) && leavittNorth.source_ids.includes(id) && !leavittSouth.source_ids.includes(id)) && leavittSouth.source_ids.length===2 && leavittNorth.source_ids.length===10,'Separate Milwaukee–Lyndale and Diversey–Berwyn city components do not form one Leavitt route.',[sourceUrl]);
+ function directionCase(routeId,wayId,axis,sign,expected,cityId,cityDir) {
+  const route=routeById(routeId), way=getWay.get(wayId), tags=way && JSON.parse(way.tags), nodes=way && JSON.parse(way.nodes);
+  const first=nodes && nodeCoords.get(nodes[0]), last=nodes && nodeCoords.get(nodes.at(-1));
+  const delta=first && last ? (axis==='lon' ? last.lon-first.lon : last.lat-first.lat) : 0;
+  const edges=route?.edges.filter(e=>e.way_id===wayId) ?? [];
+  check(`${routeId}-${wayId}-direction`,true,cityRecord(cityId)?.oneway_dir===cityDir && tags?.oneway==='yes' && Math.sign(delta)===sign && edges.length>0 && edges.every(e=>e.access.forward.status===expected[0] && e.access.reverse.status===expected[1]),'City direction and snapshot one-way node order support the scoped motor direction; bicycle exceptions do not authorize cars. Current signs remain unverified.',[sourceUrl,`https://www.openstreetmap.org/way/${wayId}`]);
+ }
+ for (const row of [
+  ['leavitt-1',1050933260,'lat',-1,['blocked','allowed'],'row-p7em.hzp8-z6uy','S'],
+  ['leavitt-2',1229184444,'lat',1,['allowed','blocked'],'row-jfzd~s99v.dr5f','N'],
+  ['leavitt-2',31108749,'lat',1,['allowed','blocked'],'row-4h83_cedq-6da7','N'],
+  ['leavitt-2',1229725020,'lat',1,['allowed','blocked'],'row-xm5h~gw9i_vqch','N'],
+  ...[1430929462,1211697096,1319363803].map(id=>['granville-1',id,'lon',-1,['blocked','allowed'],'row-hmsb_2f3m-ak9q','W']),
+  ...[815606180,1430929469].map(id=>['granville-1',id,'lon',1,['allowed','blocked'],'row-cc5q-a6r7~eqj7','E']),
+  ['24th-1',24108751,'lon',1,['allowed','blocked'],'row-ew4z.5rsw_pzv9','E'],
+  ...[217429280,41323442].map(id=>['28th-1',id,'lon',-1,['blocked','allowed'],'row-j3s4-bife.48c7','W']),
+  ['30th-1',1263966111,'lon',1,['allowed','blocked'],'row-jjg5_pe2y_7ben','E'],
+ ]) directionCase(...row);
+ const review=JSON.parse(await readFile('data/routes/review-evidence.json','utf8')).records;
+ const granville=review.find(r=>r.id==='granville-cc5q-a6r7~eqj7-review');
+ check('granville-broadway-ward-prose-conflict-retained',true,!!granville && /conflict/i.test(JSON.stringify(granville)) && /westbound/i.test(JSON.stringify(granville)) && /eastbound/i.test(JSON.stringify(granville)) && JSON.stringify(granville).includes('40thward.org'),'The source review retains the ward prose conflict with the city and CDOT schematic; matching the snapshot does not resolve current signs.',[sourceUrl,'https://40thward.org/project/granville-traffic-safety/']);
+ const thirty=routeById('30th-1'), unnamed=getWay.get(722259223), ut=unnamed && JSON.parse(unnamed.tags), un=unnamed && JSON.parse(unnamed.nodes);
+ const segments=thirty?.edges.filter(e=>e.way_id===722259223) ?? [];
+ const pairs=un?.slice(0,-1).map((n,i)=>[n,un[i+1]]) ?? [];
+ check('30th-unnamed-precise-slice',true,cityRecord('row-jjg5_pe2y_7ben')?.oneway_dir==='E' && ut?.highway==='residential' && !ut.name && !ut.oneway && JSON.stringify(un)===JSON.stringify([261132026,11653954542,6774930747,11653991255,261163031]) && segments.length===pairs.length && segments.every((e,i)=>e.from_node===pairs[i][0] && e.to_node===pairs[i][1] && e.role==='connector' && e.access.forward.status==='allowed' && e.access.reverse.status==='unknown' && e.access.reverse.evidence_status==='conflicting'),'Only the exact connecting node slice is included; no OSM one-way tag conflicts with the city eastbound assertion, leaving westbound unknown.',[sourceUrl,'https://www.openstreetmap.org/way/722259223']);
+ const gap=leavittNorth?.edges.find(e=>e.role==='gap' && e.length_m>50 && e.length_m<60), gi=gap ? leavittNorth.edges.indexOf(gap) : -1;
+ const cycle=getWay.get(1385145081), ct=cycle && JSON.parse(cycle.tags), cn=cycle && JSON.parse(cycle.nodes);
+ const ev=review.find(r=>r.id==='leavitt-montrose-lincoln-cul-de-sac');
+ const within=gap && ev?.gap_scope?.route_id==='leavitt-2' && gap.geometry.coordinates.every(([lon,lat])=>lon>=ev.gap_scope.bounds[0][0] && lon<=ev.gap_scope.bounds[1][0] && lat>=ev.gap_scope.bounds[0][1] && lat<=ev.gap_scope.bounds[1][1]);
+ const before=leavittNorth?.edges[gi-1],after=leavittNorth?.edges[gi+1];
+ check('leavitt-montrose-cycleway-source',true,!!within && ct?.highway==='cycleway' && JSON.stringify(cn)===JSON.stringify([12823799962,12823799964,1258927214]) && before?.to_node===11265202826 && after?.from_node===1258927214,'The scoped unmatched motor-network gap meets a mapped cycleway at the north cul-de-sac; the source does not establish a car connection.',[sourceUrl,'https://www.openstreetmap.org/way/1385145081']);
+ check('leavitt-montrose-gap-blocked',true,!!gap && ['forward','reverse'].every(d=>gap.access[d].status==='blocked' && gap.access[d].evidence_status==='source-inferred') && gap.evidence_ids?.includes(ev?.id),'Ward completion and historical photograph support a source-inferred block along the bicycle connection in both directions, not field approval.',[...new Set(ev?.sources?.map(s=>s.url) ?? [])]);
+ check('leavitt-montrose-no-run-crosses',true,!!gap && !!before && !!after && leavittNorth.runs.every(run=>!run.edge_ids.includes(gap.id) && !(run.edge_ids.includes(before.id) && run.edge_ids.includes(after.id))),'No ordinary-car run may span the identified gap in either direction.',[sourceUrl,'https://www.openstreetmap.org/way/1385145081']);
+}
 const dbHash = createHash('sha256');
 for await (const chunk of createReadStream(database)) dbHash.update(chunk);
 const stagedDatabaseSha256 = dbHash.digest('hex');

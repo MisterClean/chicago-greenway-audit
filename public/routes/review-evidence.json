@@ -3195,6 +3195,1809 @@
         "row-hq5n~g4nt_de2u",
         "row-4832.xuwa~f7zh"
       ]
+    },
+    {
+      "id": "leavitt-city-row-1",
+      "source_record_ids": [
+        "row-p7em.hzp8-z6uy"
+      ],
+      "location": "Leavitt Street, N MILWAUKEE AVE to W ARMITAGE AVE",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot labels motor traffic southbound; northbound contraflow is bicycle access, not permission for cars. This coarse row alone does not verify every block or intersection.",
+      "review_status": "source-inferred",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-p7em.hzp8-z6uy: N MILWAUKEE AVE to W ARMITAGE AVE; oneway_dir=S, br_oneway=2W, br_ow_dir=-, contraflow=Y",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://chicityclerk.s3.us-west-2.amazonaws.com/s3fs-public-1/reports/2023_10_16%20Journal.pdf",
+          "title": "Journal of the Proceedings, October 16, 2023",
+          "publisher": "Chicago City Council",
+          "source_type": "council journal committee report",
+          "source_date": "2023-10-16",
+          "date_kind": "journal date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Committee report includes proposed amendments for Leavitt Milwaukee–Armitage southbound except bicycles and Ainslie–Foster northbound except bicycles",
+          "status": "committee report, not independent verification of present signs",
+          "pages": [
+            "4149"
+          ],
+          "review_method": "web text extraction; document not rendered"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-2",
+      "source_record_ids": [
+        "row-5pr3-cxvv~erar"
+      ],
+      "location": "Leavitt Street, W ARMITAGE AVE to W LYNDALE AVE",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot has no motor direction value; it does not establish two-way car access, unobstructed continuity, or a permitted turn. The 2W field refers to bicycles.",
+      "review_status": "needs-review",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-5pr3-cxvv~erar: W ARMITAGE AVE to W LYNDALE AVE; oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=not supplied",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-3",
+      "source_record_ids": [
+        "row-jfzd~s99v.dr5f"
+      ],
+      "location": "Leavitt Street, W ROSCOE ST to W BYRON ST",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot labels motor traffic northbound; southbound contraflow is bicycle access, not permission for cars. This coarse row alone does not verify every block or intersection.",
+      "review_status": "source-inferred",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-jfzd~s99v.dr5f: W ROSCOE ST to W BYRON ST; oneway_dir=N, br_oneway=2W, br_ow_dir=-, contraflow=Y",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://40thward.org/project/leavitt-greenway-2/",
+          "title": "Leavitt Greenway",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project page",
+          "source_date": null,
+          "date_kind": "undated page; reports fall 2023 completion",
+          "retrieved_at": "2026-10-27",
+          "scope": "Diversey to Berwyn project, contraflow bicycle lanes and completion; no individual motor movement audit",
+          "status": "historical project completion report"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-4",
+      "source_record_ids": [
+        "row-cnii.tuwg~j35c"
+      ],
+      "location": "Leavitt Street, W BRYON ST to W BELLE PLAINE AVE",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot has no motor direction value; it does not establish two-way car access, unobstructed continuity, or a permitted turn. The 2W field refers to bicycles.",
+      "review_status": "needs-review",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-cnii.tuwg~j35c: W BRYON ST to W BELLE PLAINE AVE; oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=not supplied",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://40thward.org/project/leavitt-greenway-2/",
+          "title": "Leavitt Greenway",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project page",
+          "source_date": null,
+          "date_kind": "undated page; reports fall 2023 completion",
+          "retrieved_at": "2026-10-27",
+          "scope": "Diversey to Berwyn project, contraflow bicycle lanes and completion; no individual motor movement audit",
+          "status": "historical project completion report"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-5",
+      "source_record_ids": [
+        "row-2bn4.nve4-hd5w"
+      ],
+      "location": "Leavitt Street, W BELLE PLAINE to W BERTEAU AVE",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot has no motor direction value; it does not establish two-way car access, unobstructed continuity, or a permitted turn. The 2W field refers to bicycles.",
+      "review_status": "needs-review",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-2bn4.nve4-hd5w: W BELLE PLAINE to W BERTEAU AVE; oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=not supplied",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://40thward.org/project/leavitt-greenway-2/",
+          "title": "Leavitt Greenway",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project page",
+          "source_date": null,
+          "date_kind": "undated page; reports fall 2023 completion",
+          "retrieved_at": "2026-10-27",
+          "scope": "Diversey to Berwyn project, contraflow bicycle lanes and completion; no individual motor movement audit",
+          "status": "historical project completion report"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-6",
+      "source_record_ids": [
+        "row-4h83_cedq-6da7"
+      ],
+      "location": "Leavitt Street, W BERTEAU to W MONTROSE AVE",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot labels motor traffic northbound; southbound contraflow is bicycle access, not permission for cars. This coarse row alone does not verify every block or intersection.",
+      "review_status": "source-inferred",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-4h83_cedq-6da7: W BERTEAU to W MONTROSE AVE; oneway_dir=N, br_oneway=2W, br_ow_dir=-, contraflow=Y",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://40thward.org/project/leavitt-greenway-2/",
+          "title": "Leavitt Greenway",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project page",
+          "source_date": null,
+          "date_kind": "undated page; reports fall 2023 completion",
+          "retrieved_at": "2026-10-27",
+          "scope": "Diversey to Berwyn project, contraflow bicycle lanes and completion; no individual motor movement audit",
+          "status": "historical project completion report"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-7",
+      "source_record_ids": [
+        "row-j88u_zm6q_fbgt"
+      ],
+      "location": "Leavitt Street, W MONTROSE AVE to W SUNNYSIDE AVE",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot has no motor direction value; it does not establish two-way car access, unobstructed continuity, or a permitted turn. The 2W field refers to bicycles.",
+      "review_status": "needs-review",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-j88u_zm6q_fbgt: W MONTROSE AVE to W SUNNYSIDE AVE; oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=not supplied",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://40thward.org/project/leavitt-greenway-2/",
+          "title": "Leavitt Greenway",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project page",
+          "source_date": null,
+          "date_kind": "undated page; reports fall 2023 completion",
+          "retrieved_at": "2026-10-27",
+          "scope": "Diversey to Berwyn project, contraflow bicycle lanes and completion; no individual motor movement audit",
+          "status": "historical project completion report"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-8",
+      "source_record_ids": [
+        "row-mzhe_8x6z_xpsf"
+      ],
+      "location": "Leavitt Street, W SUNNYSIDE AVE to W WILSON AVE",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot has no motor direction value; it does not establish two-way car access, unobstructed continuity, or a permitted turn. The 2W field refers to bicycles.",
+      "review_status": "needs-review",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-mzhe_8x6z_xpsf: W SUNNYSIDE AVE to W WILSON AVE; oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=not supplied",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://40thward.org/project/leavitt-greenway-2/",
+          "title": "Leavitt Greenway",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project page",
+          "source_date": null,
+          "date_kind": "undated page; reports fall 2023 completion",
+          "retrieved_at": "2026-10-27",
+          "scope": "Diversey to Berwyn project, contraflow bicycle lanes and completion; no individual motor movement audit",
+          "status": "historical project completion report"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-9",
+      "source_record_ids": [
+        "row-xm5h~gw9i_vqch"
+      ],
+      "location": "Leavitt Street, W WILSON AVE to W FOSTER AVE",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot labels motor traffic northbound; southbound contraflow is bicycle access, not permission for cars. This coarse row alone does not verify every block or intersection.",
+      "review_status": "source-inferred",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-xm5h~gw9i_vqch: W WILSON AVE to W FOSTER AVE; oneway_dir=N, br_oneway=2W, br_ow_dir=-, contraflow=Y",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://40thward.org/project/leavitt-greenway-2/",
+          "title": "Leavitt Greenway",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project page",
+          "source_date": null,
+          "date_kind": "undated page; reports fall 2023 completion",
+          "retrieved_at": "2026-10-27",
+          "scope": "Diversey to Berwyn project, contraflow bicycle lanes and completion; no individual motor movement audit",
+          "status": "historical project completion report"
+        },
+        {
+          "url": "https://chicityclerk.s3.us-west-2.amazonaws.com/s3fs-public-1/reports/2023_10_16%20Journal.pdf",
+          "title": "Journal of the Proceedings, October 16, 2023",
+          "publisher": "Chicago City Council",
+          "source_type": "council journal committee report",
+          "source_date": "2023-10-16",
+          "date_kind": "journal date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Committee report includes proposed amendments for Leavitt Milwaukee–Armitage southbound except bicycles and Ainslie–Foster northbound except bicycles",
+          "status": "committee report, not independent verification of present signs",
+          "pages": [
+            "4149"
+          ],
+          "review_method": "web text extraction; document not rendered"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-10",
+      "source_record_ids": [
+        "row-zpn6-2wxn_j4wq"
+      ],
+      "location": "Leavitt Street, W FOSTER AVE to W BERWYN AVE",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot has no motor direction value; it does not establish two-way car access, unobstructed continuity, or a permitted turn. The 2W field refers to bicycles.",
+      "review_status": "needs-review",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-zpn6-2wxn_j4wq: W FOSTER AVE to W BERWYN AVE; oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=not supplied",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://40thward.org/project/leavitt-greenway-2/",
+          "title": "Leavitt Greenway",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project page",
+          "source_date": null,
+          "date_kind": "undated page; reports fall 2023 completion",
+          "retrieved_at": "2026-10-27",
+          "scope": "Diversey to Berwyn project, contraflow bicycle lanes and completion; no individual motor movement audit",
+          "status": "historical project completion report"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-11",
+      "source_record_ids": [
+        "row-jbxc-stau~yz32"
+      ],
+      "location": "Leavitt Street, W DIVERSEY PKWY to W MELROSE ST",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot has no motor direction value; it does not establish two-way car access, unobstructed continuity, or a permitted turn. The 2W field refers to bicycles.",
+      "review_status": "needs-review",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-jbxc-stau~yz32: W DIVERSEY PKWY to W MELROSE ST; oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=not supplied",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://40thward.org/project/leavitt-greenway-2/",
+          "title": "Leavitt Greenway",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project page",
+          "source_date": null,
+          "date_kind": "undated page; reports fall 2023 completion",
+          "retrieved_at": "2026-10-27",
+          "scope": "Diversey to Berwyn project, contraflow bicycle lanes and completion; no individual motor movement audit",
+          "status": "historical project completion report"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-city-row-12",
+      "source_record_ids": [
+        "row-2nne~xey9~hyrp"
+      ],
+      "location": "Leavitt Street, W MELROSE ST to W ROSCOE ST",
+      "movement": "northbound and southbound motor travel along the greenway",
+      "source_inference": "City snapshot has no motor direction value; it does not establish two-way car access, unobstructed continuity, or a permitted turn. The 2W field refers to bicycles.",
+      "review_status": "needs-review",
+      "confidence": "city attributes only; current signs and movement unverified",
+      "effective_period": "dataset snapshot 2025-12; current condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "official dataset snapshot",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows updated date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "row-2nne~xey9~hyrp: W MELROSE ST to W ROSCOE ST; oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=not supplied",
+          "status": "snapshot, not current signs",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "inspected saved row attributes and geometry"
+        },
+        {
+          "url": "https://40thward.org/project/leavitt-greenway-2/",
+          "title": "Leavitt Greenway",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project page",
+          "source_date": null,
+          "date_kind": "undated page; reports fall 2023 completion",
+          "retrieved_at": "2026-10-27",
+          "scope": "Diversey to Berwyn project, contraflow bicycle lanes and completion; no individual motor movement audit",
+          "status": "historical project completion report"
+        }
+      ],
+      "review_needed": "Check current signs, barriers, and approach-to-departure movements, including turns following the greenway. Speed humps, ordinary stop signs, and signals are not themselves interruptions."
+    },
+    {
+      "id": "leavitt-montrose-lincoln-cul-de-sac",
+      "source_record_ids": [
+        "row-4h83_cedq-6da7",
+        "row-j88u_zm6q_fbgt"
+      ],
+      "location": "Leavitt at Montrose and Lincoln, south of Sulzer Library",
+      "movement": "northbound and southbound following the greenway across Montrose between the two Leavitt legs",
+      "source_inference": "The northern Leavitt leg ends in a cul-de-sac and the greenway connects across it via a raised bikeway and curb cuts. This indicates an interruption to a passenger car following that bicycle connection in either direction; the bike connection does not confer motor access. The exact route and turn restrictions at each approach remain to be checked on current signs and drawings.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for historical physical separation; current configuration unverified",
+      "effective_period": "December 2024 to January 2025 historical reports; current condition unverified",
+      "sources": [
+        {
+          "url": "https://myemail.constantcontact.com/Voting-open-for-participatory-budgeting--New-recycling-app-.html?aid=iTGYYvADQgs&soid=1132690428543",
+          "title": "Voting open for participatory budgeting; New recycling app",
+          "publisher": "47th Ward",
+          "source_type": "ward newsletter",
+          "source_date": "2025-01",
+          "date_kind": "newsletter date inferred from event dates",
+          "retrieved_at": "2026-10-27",
+          "scope": "CDOT largely completed Leavitt cul-de-sac north of Montrose, curb cuts and partially raised bike lane",
+          "status": "historical construction update"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/12/18/get-a-pizza-the-action-take-virtual-ride-on-new-raised-bike-lane-across-from-lou-malnatis-on-the-leavitt-street-greenway",
+          "title": "Get a pizza the action: Take a virtual ride on the new raised bike lane across from Lou Malnati’s on the Leavitt Street Greenway",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "on-site reporting",
+          "source_date": "2024-12-18",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "cul-de-sac north of Montrose and raised bicycle transition between Leavitt legs",
+          "status": "historical observation"
+        },
+        {
+          "url": "https://files.constantcontact.com/f725c99b701/5b6d4104-51dd-42e3-b103-e40fbfa672c5.png?rdr=true",
+          "title": "Lincoln/Leavitt/Montrose raised bikeway project graphic",
+          "publisher": "47th Ward of Chicago",
+          "source_type": "ward newsletter design graphic",
+          "source_date": "2025-01",
+          "date_kind": "newsletter date inferred from event dates",
+          "retrieved_at": "2026-10-27",
+          "scope": "Illustrated raised two-way bike lane, bike ramps to street level and cul-de-sac north of Montrose",
+          "status": "illustrative design, not an as-built survey",
+          "sha256": "579e17df36e1009e9f2d9168aeae3cbc3eab54fa6130bd16b95a965a6025c03d",
+          "review_method": "Downloaded and visually inspected full image"
+        },
+        {
+          "url": "https://chi.streetsblog.org/wp-content/uploads/sites/15/2024/12/Screen-Shot-2024-12-18-at-5.26.09-PM.png?w=1024",
+          "title": "Raised bikeway looking south toward Montrose",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "on-site photograph",
+          "source_date": "2024-12-18",
+          "date_kind": "article publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "View from raised concrete connection looking south; curb and ramps at Montrose, construction barrels present",
+          "status": "historical photograph, unfinished markings",
+          "sha256": "2f1b82124b103bb467d32eb731166f8b0a362834329c2cadd288432470c5e47e",
+          "review_method": "Downloaded and visually inspected photograph"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1385145081",
+          "title": "OpenStreetMap way 1385145081",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Leavitt Street Bikeway, highway=cycleway, nodes 12823799962, 12823799964, 1258927214. The south roadway endpoint node 11265202826 is separated in the exported motor network.",
+          "status": "snapshot; mapped cycleway is not a field verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "read-only inspection of saved SQLite way tags and node sequence"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1320281908",
+          "title": "OpenStreetMap way 1320281908",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Exact mapped Leavitt connecting path slice, nodes 11265202826, 2758167240; checked for contiguous connection across the unmatched motor-route interval.",
+          "status": "snapshot; mapped cycleway is not a field verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "read-only inspection of saved SQLite way tags and node sequence"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1385117962",
+          "title": "OpenStreetMap way 1385117962",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Exact mapped Leavitt connecting path slice, nodes 2758167240, 12823799963; checked for contiguous connection across the unmatched motor-route interval.",
+          "status": "snapshot; mapped cycleway is not a field verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "read-only inspection of saved SQLite way tags and node sequence"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1385117960",
+          "title": "OpenStreetMap way 1385117960",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Exact mapped Leavitt connecting path slice, nodes 12823799963, 12823799962; checked for contiguous connection across the unmatched motor-route interval.",
+          "status": "snapshot; mapped cycleway is not a field verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "read-only inspection of saved SQLite way tags and node sequence"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1065738125",
+          "title": "OpenStreetMap way 1065738125",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Northern Leavitt residential road terminates at node 1258927214; incident highways were inspected for any other allowed or unresolved motor continuation.",
+          "status": "snapshot; mapped cycleway is not a field verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "read-only inspection of saved SQLite way tags and node sequence"
+        },
+        {
+          "url": "https://www.openstreetmap.org/node/1258927214",
+          "title": "OpenStreetMap node 1258927214",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM node in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Mapped turning-circle node at the Leavitt cul-de-sac and shared end of the cycleway; exact source position checked against gap boundary.",
+          "status": "snapshot; mapped cycleway is not a field verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "read-only inspection of saved SQLite way tags and node sequence"
+        }
+      ],
+      "review_needed": "Inspect present barrier and signs from both Leavitt legs; explicitly evaluate any greenway-following turns and whether motor vehicles can use the bicycle connection.",
+      "gap_scope": {
+        "route_id": "leavitt-2",
+        "bounds": [
+          [
+            -87.6841,
+            41.9612
+          ],
+          [
+            -87.6836,
+            41.9619
+          ]
+        ]
+      },
+      "gap_note": "At Montrose/Lincoln the northern Leavitt leg ends in a cul-de-sac and a raised bicycle connection links the legs. The ward graphic shows bike ramps and a raised two-way bike lane; a December 2024 photograph shows concrete curb and raised path. The OSM snapshot maps the northern connection as a cycleway; this supports a historical car interruption along the bicycle connection in both directions, not current verification or permission for unrelated turns. The 53 m graph gap endpoints are not exact barrier locations.",
+      "gap_filter": {
+        "basis": "reported-installed-filter",
+        "boundary_node": 1258927214,
+        "road_way_id": 1065738125,
+        "cycleway_id": 1385145081,
+        "reason": "The northern Leavitt leg ends in a documented cul-de-sac with a raised bicycle connection. Through cars cannot follow this connection, based on the ward construction report, historical photographs and mapped cycleway. Current conditions remain unverified; the gap line is not a surveyed barrier footprint.",
+        "supporting_source_urls": [
+          "https://myemail.constantcontact.com/Voting-open-for-participatory-budgeting--New-recycling-app-.html?aid=iTGYYvADQgs&soid=1132690428543",
+          "https://chi.streetsblog.org/2024/12/18/get-a-pizza-the-action-take-virtual-ride-on-new-raised-bike-lane-across-from-lou-malnatis-on-the-leavitt-street-greenway"
+        ],
+        "connection_path": [
+          {
+            "way_id": 1320281908,
+            "nodes": [
+              11265202826,
+              2758167240
+            ]
+          },
+          {
+            "way_id": 1385117962,
+            "nodes": [
+              2758167240,
+              12823799963
+            ]
+          },
+          {
+            "way_id": 1385117960,
+            "nodes": [
+              12823799963,
+              12823799962
+            ]
+          },
+          {
+            "way_id": 1385145081,
+            "nodes": [
+              12823799962,
+              12823799964,
+              1258927214
+            ]
+          }
+        ]
+      },
+      "way_segments": [
+        {
+          "way_id": 1320281908,
+          "nodes": [
+            11265202826,
+            2758167240
+          ]
+        },
+        {
+          "way_id": 1385117962,
+          "nodes": [
+            2758167240,
+            12823799963
+          ]
+        },
+        {
+          "way_id": 1385117960,
+          "nodes": [
+            12823799963,
+            12823799962
+          ]
+        },
+        {
+          "way_id": 1385145081,
+          "nodes": [
+            12823799962,
+            12823799964,
+            1258927214
+          ]
+        }
+      ]
+    },
+    {
+      "id": "granville-fh96~8xpt-wzrz-review",
+      "source_record_ids": [
+        "row-fh96~8xpt-wzrz"
+      ],
+      "way_ids": [],
+      "location": "Granville Avenue: N KEDZIE AVE to N WESTERN AVE",
+      "movement": "eastbound and westbound along designated segment and at adjoining intersections",
+      "source_inference": "City motor direction field is blank/dash. Bicycle two-way designation does not establish motor permission or intersection movements.",
+      "review_status": "needs-review",
+      "confidence": "low for motor continuity",
+      "effective_period": "City snapshot current as of December 2025; OSM effective September 2026 where cited; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "type": "official dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "snapshot; not field verified",
+          "scope": "row-fh96~8xpt-wzrz: oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=absent"
+        }
+      ],
+      "review_needed": "Match the full row to road geometry; inspect current signs, crossings, turning restrictions and both segment ends. Do not infer a barrier from humps, signals or bicycle lanes."
+    },
+    {
+      "id": "granville-hmsb_2f3m-ak9q-review",
+      "source_record_ids": [
+        "row-hmsb_2f3m-ak9q"
+      ],
+      "way_ids": [
+        1430929462,
+        1211697096,
+        1319363803
+      ],
+      "location": "Granville Avenue: N RAVENSWOOD AVE to N RAVENSWOOD AVE",
+      "movement": "eastbound and westbound along designated segment and at adjoining intersections",
+      "source_inference": "City motor direction field indicates westbound motor travel; opposite direction is not ordinary through-car travel, subject to matching and current signs. Bicycle fields describe bicycle travel. CDOT page 35 shows westbound underpass motor arrow and separate opposing bicycle lane; Ridge and Ravenswood approach turns and the exact connector remain to verify.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot direction; current signage and turning movements unverified",
+      "effective_period": "City snapshot current as of December 2025; OSM effective September 2026 where cited; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "type": "official dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "snapshot; not field verified",
+          "scope": "row-hmsb_2f3m-ak9q: oneway_dir=W, br_oneway=1W, br_ow_dir=-, contraflow=absent"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/1430929462",
+          "title": "OpenStreetMap way 1430929462",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/1211697096",
+          "title": "OpenStreetMap way 1211697096",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/1319363803",
+          "title": "OpenStreetMap way 1319363803",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "url": "https://40thward.org/project/granville-traffic-safety/",
+          "title": "Granville Traffic Safety",
+          "publisher": "40th Ward of Chicago",
+          "type": "ward project page",
+          "source_date": null,
+          "date_kind": "publication date not established; update reports August 2025 completion of 40th Ward section",
+          "retrieved_at": "2026-10-27",
+          "status": "design and ward-scoped completion statement",
+          "scope": "Proposed one-way conversions including N RAVENSWOOD AVE to N RAVENSWOOD AVE; see separate documented Lakewood–Broadway direction conflict."
+        },
+        {
+          "url": "https://40thward.org/wp-content/uploads/2025/02/Granville-2.13.2025-Presentation.pdf",
+          "title": "Granville Avenue Traffic Safety Project Update Meeting",
+          "publisher": "Chicago Department of Transportation, hosted by 40th Ward",
+          "type": "project presentation PDF",
+          "source_date": "2025-02-13",
+          "date_kind": "meeting date",
+          "retrieved_at": "2026-10-27",
+          "status": "proposed design, not as-built",
+          "review_method": "Google Drive viewer, visually inspected pages 24–26, 34–35; web text extraction",
+          "pages": [
+            35
+          ],
+          "scope": "page 35 Ridge/Ravenswood underpass shows west-pointing motor arrow and opposing bicycle lane"
+        }
+      ],
+      "review_needed": "Match the full row to road geometry; inspect current signs, crossings, turning restrictions and both segment ends. Do not infer a barrier from humps, signals or bicycle lanes."
+    },
+    {
+      "id": "granville-9yc7~rqhe~83yw-review",
+      "source_record_ids": [
+        "row-9yc7~rqhe~83yw"
+      ],
+      "way_ids": [],
+      "location": "Granville Avenue: N RAVENSWOOD AVE to N PAULINA ST",
+      "movement": "eastbound and westbound along designated segment and at adjoining intersections",
+      "source_inference": "City motor direction field is blank/dash. Bicycle two-way designation does not establish motor permission or intersection movements.",
+      "review_status": "needs-review",
+      "confidence": "low for motor continuity",
+      "effective_period": "City snapshot current as of December 2025; OSM effective September 2026 where cited; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "type": "official dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "snapshot; not field verified",
+          "scope": "row-9yc7~rqhe~83yw: oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=absent"
+        }
+      ],
+      "review_needed": "Match the full row to road geometry; inspect current signs, crossings, turning restrictions and both segment ends. Do not infer a barrier from humps, signals or bicycle lanes."
+    },
+    {
+      "id": "granville-te2f_cgxc_dp6h-review",
+      "source_record_ids": [
+        "row-te2f_cgxc_dp6h"
+      ],
+      "way_ids": [
+        1430929464,
+        1430929466
+      ],
+      "location": "Granville Avenue: N PAULINA ST to N CLARK ST",
+      "movement": "eastbound and westbound along designated segment and at adjoining intersections",
+      "source_inference": "City motor direction field indicates eastbound motor travel; opposite direction is not ordinary through-car travel, subject to matching and current signs. Bicycle fields describe bicycle travel.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot direction; current signage and turning movements unverified",
+      "effective_period": "City snapshot current as of December 2025; OSM effective September 2026 where cited; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "type": "official dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "snapshot; not field verified",
+          "scope": "row-te2f_cgxc_dp6h: oneway_dir=E, br_oneway=2W, br_ow_dir=-, contraflow=Y"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/1430929464",
+          "title": "OpenStreetMap way 1430929464",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/1430929466",
+          "title": "OpenStreetMap way 1430929466",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "url": "https://40thward.org/project/granville-traffic-safety/",
+          "title": "Granville Traffic Safety",
+          "publisher": "40th Ward of Chicago",
+          "type": "ward project page",
+          "source_date": null,
+          "date_kind": "publication date not established; update reports August 2025 completion of 40th Ward section",
+          "retrieved_at": "2026-10-27",
+          "status": "design and ward-scoped completion statement",
+          "scope": "Proposed one-way conversions including N PAULINA ST to N CLARK ST; see separate documented Lakewood–Broadway direction conflict."
+        }
+      ],
+      "review_needed": "Match the full row to road geometry; inspect current signs, crossings, turning restrictions and both segment ends. Do not infer a barrier from humps, signals or bicycle lanes."
+    },
+    {
+      "id": "granville-je4c.57qc~ws8a-review",
+      "source_record_ids": [
+        "row-je4c.57qc~ws8a"
+      ],
+      "way_ids": [
+        1155439814
+      ],
+      "location": "Granville Avenue: N CLARK ST to N GREENVIEW AVE",
+      "movement": "eastbound and westbound along designated segment and at adjoining intersections",
+      "source_inference": "City motor direction field indicates westbound motor travel; opposite direction is not ordinary through-car travel, subject to matching and current signs. Bicycle fields describe bicycle travel.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot direction; current signage and turning movements unverified",
+      "effective_period": "City snapshot current as of December 2025; OSM effective September 2026 where cited; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "type": "official dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "snapshot; not field verified",
+          "scope": "row-je4c.57qc~ws8a: oneway_dir=W, br_oneway=2W, br_ow_dir=-, contraflow=Y"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/1155439814",
+          "title": "OpenStreetMap way 1155439814",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "url": "https://40thward.org/project/granville-traffic-safety/",
+          "title": "Granville Traffic Safety",
+          "publisher": "40th Ward of Chicago",
+          "type": "ward project page",
+          "source_date": null,
+          "date_kind": "publication date not established; update reports August 2025 completion of 40th Ward section",
+          "retrieved_at": "2026-10-27",
+          "status": "design and ward-scoped completion statement",
+          "scope": "Proposed one-way conversions including N CLARK ST to N GREENVIEW AVE; see separate documented Lakewood–Broadway direction conflict."
+        }
+      ],
+      "review_needed": "Match the full row to road geometry; inspect current signs, crossings, turning restrictions and both segment ends. Do not infer a barrier from humps, signals or bicycle lanes."
+    },
+    {
+      "id": "granville-mjuf_n4wu_wzex-review",
+      "source_record_ids": [
+        "row-mjuf_n4wu_wzex"
+      ],
+      "way_ids": [],
+      "location": "Granville Avenue: N GREENVIEW AVE to N LAKEWOOD AVE",
+      "movement": "eastbound and westbound along designated segment and at adjoining intersections",
+      "source_inference": "City motor direction field is blank/dash. Bicycle two-way designation does not establish motor permission or intersection movements.",
+      "review_status": "needs-review",
+      "confidence": "low for motor continuity",
+      "effective_period": "City snapshot current as of December 2025; OSM effective September 2026 where cited; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "type": "official dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "snapshot; not field verified",
+          "scope": "row-mjuf_n4wu_wzex: oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=absent"
+        }
+      ],
+      "review_needed": "Match the full row to road geometry; inspect current signs, crossings, turning restrictions and both segment ends. Do not infer a barrier from humps, signals or bicycle lanes."
+    },
+    {
+      "id": "granville-cc5q-a6r7~eqj7-review",
+      "source_record_ids": [
+        "row-cc5q-a6r7~eqj7"
+      ],
+      "way_ids": [
+        815606180,
+        1430929469
+      ],
+      "location": "Granville Avenue: N LAKEWOOD AVE to N BROADWAY",
+      "movement": "eastbound and westbound along designated segment and at adjoining intersections",
+      "source_inference": "City motor direction field indicates eastbound motor travel; opposite direction is not ordinary through-car travel, subject to matching and current signs. Bicycle fields describe bicycle travel. CDOT presentation page 25 and traffic impact schematic show eastbound at Broadway; ward project page and June 16 construction post instead describe Broadway–Lakewood westbound. Retain this explicit source conflict and verify signs; do not silently treat ward prose as resolved.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot direction; current signage and turning movements unverified",
+      "effective_period": "City snapshot current as of December 2025; OSM effective September 2026 where cited; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "type": "official dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "snapshot; not field verified",
+          "scope": "row-cc5q-a6r7~eqj7: oneway_dir=E, br_oneway=2W, br_ow_dir=-, contraflow=Y"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/815606180",
+          "title": "OpenStreetMap way 815606180",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/1430929469",
+          "title": "OpenStreetMap way 1430929469",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "url": "https://40thward.org/project/granville-traffic-safety/",
+          "title": "Granville Traffic Safety",
+          "publisher": "40th Ward of Chicago",
+          "type": "ward project page",
+          "source_date": null,
+          "date_kind": "publication date not established; update reports August 2025 completion of 40th Ward section",
+          "retrieved_at": "2026-10-27",
+          "status": "design and ward-scoped completion statement",
+          "scope": "Proposed one-way conversions including N LAKEWOOD AVE to N BROADWAY; see separate documented Lakewood–Broadway direction conflict."
+        },
+        {
+          "url": "https://40thward.org/wp-content/uploads/2025/02/Granville-2.13.2025-Presentation.pdf",
+          "title": "Granville Avenue Traffic Safety Project Update Meeting",
+          "publisher": "Chicago Department of Transportation, hosted by 40th Ward",
+          "type": "project presentation PDF",
+          "source_date": "2025-02-13",
+          "date_kind": "meeting date",
+          "retrieved_at": "2026-10-27",
+          "status": "proposed design, not as-built",
+          "review_method": "Google Drive viewer, visually inspected pages 24–26, 34–35; web text extraction",
+          "pages": [
+            25,
+            26
+          ],
+          "scope": "page 25 shows eastbound motor arrow on Granville west of Broadway; page 26 Lakewood"
+        },
+        {
+          "url": "https://40thward.org/wp-content/uploads/2025/02/Granville-Traffic-Impact-1024x333.png",
+          "title": "Granville traffic impact map",
+          "publisher": "40th Ward of Chicago / CDOT",
+          "type": "project schematic",
+          "source_date": "2025-06-16",
+          "date_kind": "dated ward post displaying graphic",
+          "retrieved_at": "2026-10-27",
+          "scope": "graphic shows eastbound traffic filtered to Western, Ridge and Clark; westbound traffic filtered to Broadway and Clark; eastward arrow just west of Broadway",
+          "status": "proposed traffic pattern, not as-built",
+          "review_method": "visually inspected image in browser"
+        },
+        {
+          "url": "https://40thward.org/2025/06/granville-construction-begins-this-week/",
+          "title": "Granville Construction Begins this Week!",
+          "publisher": "40th Ward of Chicago",
+          "type": "ward construction update",
+          "source_date": "2025-06-16",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "proposes Broadway–Lakewood westbound, conflicting with CDOT graphic and city snapshot",
+          "status": "future-tense construction announcement"
+        }
+      ],
+      "review_needed": "Match the full row to road geometry; inspect current signs, crossings, turning restrictions and both segment ends. Do not infer a barrier from humps, signals or bicycle lanes.",
+      "direction_notes": {
+        "reverse": "City and OSM snapshots and CDOT design page 25 indicate eastbound cars, so westbound is blocked in this source inference. The 40th Ward web prose instead says westbound: that contradiction remains catalogued and current signs require review."
+      }
+    },
+    {
+      "id": "granville-mqjq.3jur-99ed-review",
+      "source_record_ids": [
+        "row-mqjq.3jur-99ed"
+      ],
+      "way_ids": [],
+      "location": "Granville Avenue: N BROADWAY to N KENMORE AVE",
+      "movement": "eastbound and westbound along designated segment and at adjoining intersections",
+      "source_inference": "City motor direction field is blank/dash. Bicycle two-way designation does not establish motor permission or intersection movements.",
+      "review_status": "needs-review",
+      "confidence": "low for motor continuity",
+      "effective_period": "City snapshot current as of December 2025; OSM effective September 2026 where cited; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "type": "official dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "snapshot; not field verified",
+          "scope": "row-mqjq.3jur-99ed: oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=absent"
+        }
+      ],
+      "review_needed": "Match the full row to road geometry; inspect current signs, crossings, turning restrictions and both segment ends. Do not infer a barrier from humps, signals or bicycle lanes."
+    },
+    {
+      "id": "granville-kuus_sxpv~xq7q-review",
+      "source_record_ids": [
+        "row-kuus_sxpv~xq7q"
+      ],
+      "way_ids": [],
+      "location": "Granville Avenue: N CLAREMONT AVE to N RAVENSWOOD AVE",
+      "movement": "eastbound and westbound along designated segment and at adjoining intersections",
+      "source_inference": "City motor direction field is blank/dash. Bicycle two-way designation does not establish motor permission or intersection movements.",
+      "review_status": "needs-review",
+      "confidence": "low for motor continuity",
+      "effective_period": "City snapshot current as of December 2025; OSM effective September 2026 where cited; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "type": "official dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "snapshot; not field verified",
+          "scope": "row-kuus_sxpv~xq7q: oneway_dir=-, br_oneway=2W, br_ow_dir=-, contraflow=absent"
+        }
+      ],
+      "review_needed": "Match the full row to road geometry; inspect current signs, crossings, turning restrictions and both segment ends. Do not infer a barrier from humps, signals or bicycle lanes."
+    },
+    {
+      "id": "granville-k2wa_gn38~37p7-review",
+      "source_record_ids": [
+        "row-k2wa_gn38~37p7"
+      ],
+      "way_ids": [
+        1430929459,
+        1430929460,
+        1430929461
+      ],
+      "location": "Granville Avenue: N WESTERN AVE to N CLAREMONT AVE",
+      "movement": "eastbound and westbound along designated segment and at adjoining intersections",
+      "source_inference": "City motor direction field indicates westbound motor travel; opposite direction is not ordinary through-car travel, subject to matching and current signs. Bicycle fields describe bicycle travel.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot direction; current signage and turning movements unverified",
+      "effective_period": "City snapshot current as of December 2025; OSM effective September 2026 where cited; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "type": "official dataset snapshot",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "snapshot; not field verified",
+          "scope": "row-k2wa_gn38~37p7: oneway_dir=W, br_oneway=2W, br_ow_dir=-, contraflow=Y"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/1430929459",
+          "title": "OpenStreetMap way 1430929459",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/1430929460",
+          "title": "OpenStreetMap way 1430929460",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "snapshot_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "type": "OSM extract",
+          "status": "snapshot; live way link may have changed",
+          "url": "https://www.openstreetmap.org/way/1430929461",
+          "title": "OpenStreetMap way 1430929461",
+          "scope": "oneway=yes in saved node order; oneway:bicycle=no; verify segment match and signs"
+        },
+        {
+          "url": "https://40thward.org/project/granville-traffic-safety/",
+          "title": "Granville Traffic Safety",
+          "publisher": "40th Ward of Chicago",
+          "type": "ward project page",
+          "source_date": null,
+          "date_kind": "publication date not established; update reports August 2025 completion of 40th Ward section",
+          "retrieved_at": "2026-10-27",
+          "status": "design and ward-scoped completion statement",
+          "scope": "Proposed one-way conversions including N WESTERN AVE to N CLAREMONT AVE; see separate documented Lakewood–Broadway direction conflict."
+        }
+      ],
+      "review_needed": "Match the full row to road geometry; inspect current signs, crossings, turning restrictions and both segment ends. Do not infer a barrier from humps, signals or bicycle lanes."
+    },
+    {
+      "id": "little-village-24th-harding-sacramento",
+      "source_record_ids": [
+        "row-ew4z.5rsw_pzv9"
+      ],
+      "way_ids": [
+        24108751,
+        657493978
+      ],
+      "location": "West 24th Street, Harding Avenue to Sacramento Avenue",
+      "movement": "eastbound and westbound through travel",
+      "source_inference": "City motor field is E; OSM ordered ways run east with oneway=yes and oneway:bicycle=no. Westbound contraflow is for bicycles, not ordinary cars. Eastbound direction alone does not establish all junction movements. City br_oneway=2W refers to bicycle route and must not override motor field.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot direction; current regulatory and junction conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; OSM effective 2026-09-11; current signs and conditions unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes - Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset last updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Harding–Sacramento: oneway_dir E, br_oneway 2W, contraflow Y",
+          "status": "saved inventory snapshot",
+          "pages": null,
+          "review_method": "Inspected saved row attributes and ordered geometry."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24108751",
+          "title": "OpenStreetMap way 24108751",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "Harding eastward component: oneway=yes in eastbound node order, oneway:bicycle=no",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/657493978",
+          "title": "OpenStreetMap way 657493978",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "Sacramento-side component: oneway=yes eastward and oneway:bicycle=no",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/08/26/so-far-the-complete-streets-upgrades-on-24th-in-little-village-are-going-swimmingly-in-a-bad-way",
+          "title": "So far, the Complete Streets upgrades on 24th in Little Village are going swimmingly, in a bad way",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "reported article",
+          "source_date": "2024-08-26",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Reports CDOT description of eastbound 24th and westbound contraflow bicycles, plus installed separation around Marshall; broadly calls Pulaski–Marshall eastbound.",
+          "status": "historical reporting; present conditions unverified",
+          "pages": null,
+          "review_method": "Read article text and captions."
+        }
+      ],
+      "review_needed": "Check current signs at both ends and intermediate intersections, approach-specific turns, barriers and route connections; obtain traffic orders and as-built drawings."
+    },
+    {
+      "id": "little-village-24th-pulaski-harding",
+      "source_record_ids": [
+        "row-5ccf-hdpx_h9qr"
+      ],
+      "way_ids": [
+        234601172
+      ],
+      "location": "West 24th Street, Pulaski Road to Harding Avenue",
+      "movement": "eastbound and westbound through travel",
+      "source_inference": "City motor direction is dash, OSM component has no oneway tag. A broad 2024 report calls Pulaski–Marshall eastbound; it does not resolve this specific endpoint discrepancy. Neither absence of a tag nor the report proves both movements.",
+      "review_status": "source-inferred",
+      "confidence": "low; city and OSM differ in specificity from historical report",
+      "effective_period": "City extract retrieved 2026-09-19; OSM effective 2026-09-11; current signs and conditions unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes - Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset last updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Pulaski–Harding: oneway_dir dash, br_oneway 2W",
+          "status": "saved inventory snapshot",
+          "pages": null,
+          "review_method": "Inspected saved row attributes and ordered geometry."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/234601172",
+          "title": "OpenStreetMap way 234601172",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "Pulaski–Harding component lacks oneway tag",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/08/26/so-far-the-complete-streets-upgrades-on-24th-in-little-village-are-going-swimmingly-in-a-bad-way",
+          "title": "So far, the Complete Streets upgrades on 24th in Little Village are going swimmingly, in a bad way",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "reported article",
+          "source_date": "2024-08-26",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Reports CDOT description of eastbound 24th and westbound contraflow bicycles, plus installed separation around Marshall; broadly calls Pulaski–Marshall eastbound.",
+          "status": "historical reporting; present conditions unverified",
+          "pages": null,
+          "review_method": "Read article text and captions."
+        }
+      ],
+      "review_needed": "Check current signs at both ends and intermediate intersections, approach-specific turns, barriers and route connections; obtain traffic orders and as-built drawings."
+    },
+    {
+      "id": "little-village-24th-sacramento-marshall",
+      "source_record_ids": [
+        "row-323s.uae7-nsxq"
+      ],
+      "way_ids": [
+        581938781
+      ],
+      "location": "West 24th Street, Sacramento Avenue to Marshall Boulevard",
+      "movement": "eastbound and westbound through travel and continuation at Marshall curve",
+      "source_inference": "City motor direction is dash; OSM component has no oneway tag. Reporting describes project and protected lanes at Marshall curve, but the broad eastbound characterization does not resolve this endpoint or legal turn and bend movements. No barrier conclusion follows from curb separation alone.",
+      "review_status": "source-inferred",
+      "confidence": "low; endpoint and turn controls unverified",
+      "effective_period": "City extract retrieved 2026-09-19; OSM effective 2026-09-11; current signs and conditions unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes - Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset last updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Sacramento–Marshall: oneway_dir dash, br_oneway 2W",
+          "status": "saved inventory snapshot",
+          "pages": null,
+          "review_method": "Inspected saved row attributes and ordered geometry."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/581938781",
+          "title": "OpenStreetMap way 581938781",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "Sacramento–Marshall component lacks oneway tag",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/08/26/so-far-the-complete-streets-upgrades-on-24th-in-little-village-are-going-swimmingly-in-a-bad-way",
+          "title": "So far, the Complete Streets upgrades on 24th in Little Village are going swimmingly, in a bad way",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "reported article",
+          "source_date": "2024-08-26",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Reports CDOT description of eastbound 24th and westbound contraflow bicycles, plus installed separation around Marshall; broadly calls Pulaski–Marshall eastbound.",
+          "status": "historical reporting; present conditions unverified",
+          "pages": null,
+          "review_method": "Read article text and captions."
+        }
+      ],
+      "review_needed": "Check current signs at both ends and intermediate intersections, approach-specific turns, barriers and route connections; obtain traffic orders and as-built drawings. Follow the designated bend and check the actual approach/departure movements."
+    },
+    {
+      "id": "little-village-28th-kostner-albany",
+      "source_record_ids": [
+        "row-j3s4-bife.48c7"
+      ],
+      "way_ids": [
+        217429280,
+        41323442,
+        41323443
+      ],
+      "location": "West 28th Street, Kostner Avenue to Albany Avenue",
+      "movement": "eastbound and westbound through travel",
+      "source_inference": "City motor field is W across its row. OSM ways 217429280 and 41323442 are westbound one-way; eastern way 41323443 lacks oneway. Thus city and OSM differ in granularity near Albany. Westbound one-way evidence does not establish every turn or a continuous route; eastbound through movement is blocked on the mapped one-way components.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for mapped westbound-only components; eastern discrepancy and junctions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; OSM effective 2026-09-11; current signs and conditions unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes - Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset last updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Kostner–Albany: oneway_dir W",
+          "status": "saved inventory snapshot",
+          "pages": null,
+          "review_method": "Inspected saved row attributes and ordered geometry."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/217429280",
+          "title": "OpenStreetMap way 217429280",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "western component oneway=yes westward",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/41323442",
+          "title": "OpenStreetMap way 41323442",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "central component oneway=yes westward",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/41323443",
+          "title": "OpenStreetMap way 41323443",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "eastern component lacks oneway tag; no permission inferred",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://chi.streetsblog.org/2023/12/06/visiting-new-bikeways-on-the-near-southwest-and-near-south-sides-on-day-three-of-bike-lane-week",
+          "title": "Visiting new bikeways on the Near Southwest and Near South sides on Day Three of Bike Lane Week",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "reported article",
+          "source_date": "2023-12-06",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Reports 28th westbound and 30th eastbound as cycling routes to La Villita Park; does not independently establish all motor turns or eastern endpoint rules.",
+          "status": "historical reporting; present conditions unverified",
+          "pages": null,
+          "review_method": "Read article text and captions."
+        },
+        {
+          "url": "https://chi.streetsblog.org/2014/04/02/22nd-ward-residents-may-opt-for-an-east-west-greenway-in-pb-election",
+          "title": "22nd Ward Residents May Opt for an East-West Greenway in PB Election",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "reported article describing participatory-budget proposal",
+          "source_date": "2014-04-02",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Historical 22nd Ward Kedzie–Keeler proposal; circles and bumpouts were funding-dependent ideas, not evidence of installation or current ward boundaries.",
+          "status": "historical proposal reported by press",
+          "pages": null,
+          "review_method": "Read article text."
+        },
+        {
+          "url": "https://nacto.org/wp-content/uploads/NACTO_Denver2023_Chicago_v2.pdf",
+          "title": "Chicago, IL: A dynamic approach to expanding our cycling network",
+          "publisher": "Chicago Department of Transportation, hosted by NACTO",
+          "source_type": "CDOT cycling strategy overview poster",
+          "source_date": "2023",
+          "date_kind": "poster event year inferred from filename; exact publication date unverified",
+          "retrieved_at": "2026-10-27",
+          "scope": "Poster describes continued South Lawndale Neighborhood Bike Network implementation and a citywide planned map; does not specify intersections or motor movements.",
+          "status": "planning overview; construction status of specific controls not established",
+          "pages": [
+            1
+          ],
+          "review_method": "Read extracted PDF text in web viewer; screenshot requested but image was not returned in tool output. No map-detail claim made."
+        }
+      ],
+      "review_needed": "Check current signs at both ends and intermediate intersections, approach-specific turns, barriers and route connections; obtain traffic orders and as-built drawings."
+    },
+    {
+      "id": "little-village-30th-kostner-albany",
+      "source_record_ids": [
+        "row-jjg5_pe2y_7ben"
+      ],
+      "way_ids": [
+        1263966111,
+        41323439,
+        41323437,
+        1300910007
+      ],
+      "location": "West 30th Street, Kostner Avenue to Albany Avenue",
+      "movement": "eastbound and westbound through travel",
+      "source_inference": "City motor field is E across its row. OSM western and central components have eastbound oneway=yes; eastern way 1300910007 lacks oneway, and the unnamed Kedzie–Troy connector is addressed separately. Westbound through movement is blocked on the mapped one-way components; eastbound direction does not establish all turns or uninterrupted passage.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for mapped eastbound-only components; eastern discrepancy and junctions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; OSM effective 2026-09-11; current signs and conditions unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes - Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset last updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Kostner–Albany: oneway_dir E",
+          "status": "saved inventory snapshot",
+          "pages": null,
+          "review_method": "Inspected saved row attributes and ordered geometry."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1263966111",
+          "title": "OpenStreetMap way 1263966111",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "Kostner-side component oneway=yes eastward",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/41323439",
+          "title": "OpenStreetMap way 41323439",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "western component oneway=yes eastward",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/41323437",
+          "title": "OpenStreetMap way 41323437",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "central component oneway=yes eastward",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1300910007",
+          "title": "OpenStreetMap way 1300910007",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "eastern component lacks oneway tag; no permission inferred",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        },
+        {
+          "url": "https://chi.streetsblog.org/2023/12/06/visiting-new-bikeways-on-the-near-southwest-and-near-south-sides-on-day-three-of-bike-lane-week",
+          "title": "Visiting new bikeways on the Near Southwest and Near South sides on Day Three of Bike Lane Week",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "reported article",
+          "source_date": "2023-12-06",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Reports 28th westbound and 30th eastbound as cycling routes to La Villita Park; does not independently establish all motor turns or eastern endpoint rules.",
+          "status": "historical reporting; present conditions unverified",
+          "pages": null,
+          "review_method": "Read article text and captions."
+        },
+        {
+          "url": "https://chi.streetsblog.org/2014/04/02/22nd-ward-residents-may-opt-for-an-east-west-greenway-in-pb-election",
+          "title": "22nd Ward Residents May Opt for an East-West Greenway in PB Election",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "reported article describing participatory-budget proposal",
+          "source_date": "2014-04-02",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Historical 22nd Ward Kedzie–Keeler proposal; circles and bumpouts were funding-dependent ideas, not evidence of installation or current ward boundaries.",
+          "status": "historical proposal reported by press",
+          "pages": null,
+          "review_method": "Read article text."
+        },
+        {
+          "url": "https://nacto.org/wp-content/uploads/NACTO_Denver2023_Chicago_v2.pdf",
+          "title": "Chicago, IL: A dynamic approach to expanding our cycling network",
+          "publisher": "Chicago Department of Transportation, hosted by NACTO",
+          "source_type": "CDOT cycling strategy overview poster",
+          "source_date": "2023",
+          "date_kind": "poster event year inferred from filename; exact publication date unverified",
+          "retrieved_at": "2026-10-27",
+          "scope": "Poster describes continued South Lawndale Neighborhood Bike Network implementation and a citywide planned map; does not specify intersections or motor movements.",
+          "status": "planning overview; construction status of specific controls not established",
+          "pages": [
+            1
+          ],
+          "review_method": "Read extracted PDF text in web viewer; screenshot requested but image was not returned in tool output. No map-detail claim made."
+        }
+      ],
+      "review_needed": "Check current signs at both ends and intermediate intersections, approach-specific turns, barriers and route connections; obtain traffic orders and as-built drawings."
+    },
+    {
+      "id": "little-village-30th-kedzie-troy-unnamed",
+      "source_record_ids": [
+        "row-jjg5_pe2y_7ben"
+      ],
+      "way_ids": [
+        722259223
+      ],
+      "location": "West 30th Street, Kedzie Avenue to Troy Street",
+      "movement": "eastbound and westbound through travel along the unnamed mapped component",
+      "source_inference": "The unnamed residential OSM way geometrically aligns within approximately 5 m of the city 30th route and connects the named 30th components. Its oneway tag is absent while the city row motor direction is E. The way should be considered a candidate route component, but neither absence of an OSM tag nor geometric alignment resolves westbound legality, current signs, or intersection turns.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for geometric identification; low for current motor regulation",
+      "effective_period": "City extract retrieved 2026-09-19; OSM effective 2026-09-11; present condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes - Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset last updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "30th Kostner–Albany row geometry includes the Kedzie–Troy interval; oneway_dir E.",
+          "status": "saved inventory snapshot",
+          "pages": null,
+          "review_method": "Inspected saved row attributes and ordered geometry."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/722259223",
+          "title": "OpenStreetMap way 722259223",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "Unnamed residential cyclestreet, ordered nodes 261132026, 11653954542, 6774930747, 11653991255, 261163031; no oneway tag. Connects named 30th ways 1300910007 and 24079583.",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Read tags and ordered nodes/coordinates from saved SQLite. Compared against city row geometry; alignment within approximately 5 m and approximately 102 m long."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24079583",
+          "title": "OpenStreetMap way 24079583",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "Named 30th Street component connecting the eastern endpoint of unnamed way 722259223; no oneway tag.",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Read tags and endpoint node coordinates from saved SQLite."
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1300910007",
+          "title": "OpenStreetMap way 1300910007",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "scope": "Named 30th Street component connecting the western endpoint of unnamed way 722259223; no oneway tag.",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "review_method": "Queried local SQLite read-only; inspected tags and ordered endpoint coordinates."
+        }
+      ],
+      "review_needed": "Verify current directional signs and permitted movements at Kedzie and Troy; inspect geometry and obtain traffic orders and as-built sheets."
     }
   ],
   "research_batches": [
@@ -3299,6 +5102,119 @@
         "polk-ward-coverage"
       ],
       "notes": "docs/polk-source-review.md"
+    },
+    {
+      "id": "leavitt-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Scoped Leavitt city-row and movement evidence, not blanket field approval.",
+        "default_profile": "ordinary passenger car on a through trip",
+        "search_gaps": [
+          {
+            "location": "Leavitt Diversey to Berwyn",
+            "attempted_urls": [
+              "https://40f4ba.a2cdn1.secureserver.net/wp-content/uploads/2023/07/Leavitt_Diversey-to-Berwyn_Presentation_2023-07-10.pdf",
+              "https://chicagocompletestreets.org/portfolio/leavitt-neighborhood-greenway/",
+              "https://40thward.org/wp-content/uploads/2023/07/Leavitt_Diversey-to-Berwyn_Presentation_2023-07-10.pdf"
+            ],
+            "attempted_queries": [
+              "Leavitt Diversey Berwyn presentation CDOT pdf 2023",
+              "Leavitt greenway Montrose Lincoln plans CDOT intersection"
+            ],
+            "result": "40th Ward links July 10 2023 CDOT presentation; web fetch cache miss and direct curl DNS failure including escalated retry. Complete Streets page 404. Drawings were not rendered or visually inspected; no drawing hash or absence-of-diverter conclusion. Canonical 40thward.org copy returned HTTP 404 to direct curl; the response was HTML, not a PDF."
+          },
+          {
+            "location": "Leavitt Milwaukee to Lyndale",
+            "attempted_queries": [
+              "Leavitt greenway Milwaukee Lyndale CDOT plan diverter",
+              "Leavitt Lyndale greenway Milwaukee Armitage 32nd ward plans contraflow southbound"
+            ],
+            "result": "Found 2023 news report on proposed contraflow and humps, and city committee/council records; no detailed as-built drawings or current movement-specific verification located."
+          }
+        ]
+      },
+      "record_ids": [
+        "leavitt-city-row-1",
+        "leavitt-city-row-2",
+        "leavitt-city-row-3",
+        "leavitt-city-row-4",
+        "leavitt-city-row-5",
+        "leavitt-city-row-6",
+        "leavitt-city-row-7",
+        "leavitt-city-row-8",
+        "leavitt-city-row-9",
+        "leavitt-city-row-10",
+        "leavitt-city-row-11",
+        "leavitt-city-row-12",
+        "leavitt-montrose-lincoln-cul-de-sac"
+      ],
+      "notes": "docs/leavitt-source-review.md"
+    },
+    {
+      "id": "granville-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Granville designated greenway through-car source review; scoped inferences, not field approvals.",
+        "default_profile": "ordinary passenger car on a through trip",
+        "search_gaps": [
+          {
+            "scope": "Granville Kedzie–Kenmore, all intersections and Ravenswood offset",
+            "attempts": [
+              "40th Ward project page and final exhibit link (Google Drive Feb 13 presentation); 50th Ward Granville meeting; 48th Ward and ordinance searches; Chicago Complete Streets project URL returned HTTP 403 in web tool; canonical PDF curl failed DNS; Google Drive presentation visually inspected instead.",
+              "Final exhibit link leads to presentation, not a signed engineering/as-built sheet."
+            ],
+            "missing": "Current signed as-built and location-specific movement approvals; inspect present signs and legal turn connections. PDF hash unavailable because direct download failed. Ward 40 completion pertains only its own section, not entire Kedzie–Kenmore route."
+          }
+        ]
+      },
+      "record_ids": [
+        "granville-fh96~8xpt-wzrz-review",
+        "granville-hmsb_2f3m-ak9q-review",
+        "granville-9yc7~rqhe~83yw-review",
+        "granville-te2f_cgxc_dp6h-review",
+        "granville-je4c.57qc~ws8a-review",
+        "granville-mjuf_n4wu_wzex-review",
+        "granville-cc5q-a6r7~eqj7-review",
+        "granville-mqjq.3jur-99ed-review",
+        "granville-kuus_sxpv~xq7q-review",
+        "granville-k2wa_gn38~37p7-review"
+      ],
+      "notes": "docs/granville-source-review.md"
+    },
+    {
+      "id": "little-village-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Little Village scoped source observations for ordinary through-car continuity; no field approvals",
+        "default_profile": "ordinary passenger car on a through trip",
+        "search_gaps": [
+          {
+            "scope": "24th Pulaski–Marshall; 28th and 30th Kostner–Albany",
+            "search_attempt": "Searched CDOT South Lawndale Neighborhood Bike Network, specific corridors and 22nd/24th Ward notices, diagrams, diverters, and traffic orders. Search found 2014 22nd Ward proposal and 2023 corridor report but no intersection-scale CDOT design set or direct ward completion notice. Web viewer failed to open the 31st Street Corridor Study PDF after redirect; direct curl failed DNS, so its graphics were not inspected. Additional 22nd Ward/Michael Rodriguez and 24th Ward searches produced no pertinent ward project update. The official Chicago Cycling Strategy PDF and city release returned 403 or inaccessible in web viewer; alternate canonical path inaccessible. A CDOT poster hosted by NACTO was available as text, not intersection design.",
+            "outcome": "No plan-sheet-derived intersection conclusions. Historic proposal, 2023 network description, and broad completion reporting do not establish current controls. 2014 ward jurisdiction cannot establish 2023 boundaries.",
+            "next_step": "Obtain detailed CDOT design and as-built sheets, traffic orders and ward correspondence, confirm 2023 ward boundaries by precise overlay, and inspect signs and barriers on all approach/departure movements.",
+            "attempted_urls": [
+              "https://rtams.org/sites/default/files/documents/2023-11/31st%20Street%20Corridor%20Study_Final%20Report_April%202023-compressed.pdf",
+              "https://datahub.nita.illinois.gov/sites/default/files/documents/2023-11/31st%20Street%20Corridor%20Study_Final%20Report_April%202023-compressed.pdf",
+              "https://www.chicago.gov/content/dam/city/depts/cdot/bike/2023/2023_Chicago%20Cycling%20Update.pdf",
+              "https://www.chicago.gov/dam/city/depts/cdot/bike/2023/2023_Chicago%20Cycling%20Update.pdf",
+              "https://www.chicago.gov/city/en/depts/cdot/provdrs/bike/news/2023/march/cdot-releases-updated-cycling-strategy-to-expand-bike-network-an.html"
+            ]
+          }
+        ]
+      },
+      "record_ids": [
+        "little-village-24th-harding-sacramento",
+        "little-village-24th-pulaski-harding",
+        "little-village-24th-sacramento-marshall",
+        "little-village-28th-kostner-albany",
+        "little-village-30th-kostner-albany",
+        "little-village-30th-kedzie-troy-unnamed"
+      ],
+      "notes": "docs/little-village-source-review.md"
     }
   ]
 }

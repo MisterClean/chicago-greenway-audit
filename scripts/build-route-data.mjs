@@ -4,7 +4,7 @@ import { assemble, alignedGraph, locate, metres, lineLength, shortestPath, compa
 import { edgeAccess, movementAccess } from "./motor-rules.mjs";
 import { traceRoute } from "./route-continuity.mjs";
 import { traceJunction } from "./junction-traversal.mjs";
-import { gapReviewContext } from "./route-evidence.mjs";
+import { gapReviewContext, inferGapFilter } from "./route-evidence.mjs";
 import { addScopedRouteWay } from "./scoped-route-ways.mjs";
 import { compileEvidenceCatalog } from "./evidence-catalog.mjs";
 const json = async (p) => JSON.parse(await readFile(p, "utf8"));
@@ -13,6 +13,7 @@ const catalogText = `${JSON.stringify(compileEvidenceCatalog(reviewEvidence), nu
 const db = new DatabaseSync("data/staging/network.sqlite", { readOnly: true });
 const query = db.prepare("SELECT w.* FROM way_bounds b JOIN ways w ON w.id=b.id WHERE b.min_lon<=? AND b.max_lon>=? AND b.min_lat<=? AND b.max_lat>=?");
 const getNode = db.prepare("SELECT lon,lat,tags FROM nodes WHERE id=?");
+const getWay = db.prepare("SELECT id,nodes,tags FROM ways WHERE id=?");
 const relations = [...db.prepare("SELECT * FROM relations WHERE json_extract(tags,'$.type')='restriction'").iterate()].map((r) => ({ id: r.id, members: JSON.parse(r.members), tags: JSON.parse(r.tags) }));
 const unknown = (reason) => ({ status: "unknown", reason, kind: "unknown", evidence_status: "source-inferred" });
 const pointAt = (line, position) => {
@@ -79,7 +80,7 @@ for (const spec of config.streets) {
       const nodes = JSON.parse(raw.nodes), data = nodes.map(n => getNode.get(n));
       if (data.some(n => !n)) throw new Error(`Scoped way ${binding.way_id} has missing nodes`);
       const way = { id:raw.id, tags:JSON.parse(raw.tags), nodes, coordinates:data.map(n => [n.lon,n.lat]), nodeTags:data.map(n => JSON.parse(n.tags || '{}')) };
-      ways.push(addScopedRouteWay({ graph, way, binding, cityRecords:records, componentIds:part.ids }));
+      ways.push(addScopedRouteWay({ graph, way, binding, cityRecords:records, componentIds:part.ids, routeAxis:spec.axis }));
     }
     const junctionGroups = new Map();
     const ungrouped = new Set(ways.filter(way => ["circular", "roundabout"].includes(way.tags.junction)));
@@ -182,7 +183,7 @@ for (const spec of config.streets) {
         }
         const cityAt = (p) => records.filter((r) => part.ids.includes(r[":id"])).map((r) => ({ r, d: locate(p, r.the_geom.coordinates[0]).distance })).sort((a, b) => a.d - b.d)[0];
         const mid = pointAt(coords, locate(coords.at(-1), coords).position / 2), city = cityAt(mid);
-        if (!chunk.junctionWays && !chunk.way.scoped_match && city?.d < 25) {
+        if (!chunk.junctionWays && (!chunk.way.scoped_match || chunk.way.scoped_match.city_direction_axis) && city?.d < 25) {
           const beforeCity = structuredClone(access);
           access = compareCityOneWay(beforeCity, city.r.oneway_dir, spec.axis);
           // A matched edge can straddle city records with different assertions.
@@ -217,6 +218,18 @@ for (const spec of config.streets) {
     }
     gap(cursor, total);
     if (!edges.length) gap(0, total);
+    for (const [index,edge] of edges.entries()) {
+      if (edge.role !== 'gap') continue;
+      for (const record of gapReviewContext(reviewEvidence.records,id,part.ids,edge.geometry.coordinates)) {
+        const filter = record.gap_filter;
+        if (!filter) continue;
+        const readWay = wayId => { const row=getWay.get(wayId); if(!row) return null; const nodes=JSON.parse(row.nodes);return {id:row.id,nodes,tags:JSON.parse(row.tags),coordinates:nodes.map(id=>{const n=getNode.get(id);return n ? [n.lon,n.lat] : null;})}; };
+        const node=getNode.get(filter.boundary_node);
+        const incidentWays=nearby.filter(way=>JSON.parse(way.nodes).includes(filter.boundary_node)).map(way=>({id:way.id,nodes:JSON.parse(way.nodes),tags:JSON.parse(way.tags)}));
+        edge.access=inferGapFilter({record,routeId:id,sourceIds:part.ids,gap:edge,before:edges[index-1],after:edges[index+1],cycleway:readWay(filter.cycleway_id),road:readWay(filter.road_way_id),boundaryNode:node ? {id:filter.boundary_node,coordinate:[node.lon,node.lat],tags:JSON.parse(node.tags)} : null,connectionWays:filter.connection_path?.map(segment=>readWay(segment.way_id)),incidentWays});
+        edge.evidence_urls=[...new Set([...edge.evidence_urls,...Object.values(edge.access).flatMap(access=>access.source_ids.map(source=>`https://www.openstreetmap.org/${source}`))])];
+      }
+    }
     const movements = [];
     for (let i = 1; i < edges.length; i++) {
       const a = edges[i - 1], b = edges[i], connected = a.to_node != null && a.to_node === b.from_node;

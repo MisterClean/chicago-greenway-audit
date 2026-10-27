@@ -138,12 +138,56 @@
       "name": "Berwyn",
       "axis": "east",
       "source": "BERWYN",
-      "source_aliases": ["BERWN"]
+      "source_aliases": [
+        "BERWN"
+      ]
     },
     {
       "name": "Polk",
       "axis": "east",
       "source": "POLK"
+    },
+    {
+      "name": "Leavitt",
+      "axis": "north",
+      "source": "LEAVITT"
+    },
+    {
+      "name": "Granville",
+      "axis": "east",
+      "source": "GRANVILLE"
+    },
+    {
+      "name": "24th",
+      "axis": "east",
+      "source": "24TH"
+    },
+    {
+      "name": "28th",
+      "axis": "east",
+      "source": "28TH"
+    },
+    {
+      "name": "30th",
+      "axis": "east",
+      "source": "30TH",
+      "scoped_ways": [
+        {
+          "route_id": "30th-1",
+          "way_id": 722259223,
+          "nodes": [
+            261132026,
+            11653954542,
+            6774930747,
+            11653991255,
+            261163031
+          ],
+          "city_source_ids": [
+            "row-jjg5_pe2y_7ben"
+          ],
+          "city_direction_axis": "east"
+        }
+      ]
     }
   ],
   "max_source_distance_m": 18,

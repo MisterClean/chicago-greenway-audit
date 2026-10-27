@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { addScopedRouteWay } from './scoped-route-ways.mjs';
-import { shortestPath } from './route-network.mjs';
+import { shortestPath, compareCityOneWay } from './route-network.mjs';
 import { edgeAccess, movementAccess } from './motor-rules.mjs';
 const setup = () => ({
  graph:new Map([[1,[]],[3,[]]]),
@@ -26,4 +26,18 @@ test('rejects noncontiguous slices, detached endpoints, other source components 
 test('rejects a mid-slice departure even when the endpoints are on city geometry', () => {
  const a=setup(); a.way.coordinates[2]=[.0002,.00005];
  assert.throws(()=>addScopedRouteWay(a),/departs/); assert.equal(a.graph.has(2),false);
+});
+test('an explicitly aligned slice retains cardinal city conflicts instead of allowing bicycle contraflow', () => {
+ const a=setup();a.binding.city_direction_axis='north';a.routeAxis='north';a.cityRecords[0].oneway_dir='N';delete a.way.tags.oneway;
+ const scoped=addScopedRouteWay(a);
+ assert.equal(scoped.scoped_match.city_direction_axis,'north');
+ const access=compareCityOneWay(edgeAccess(scoped.tags,{reversed:false,nodeTags:[]}),'N',scoped.scoped_match.city_direction_axis);
+ assert.equal(access.forward.status,'allowed');assert.equal(access.reverse.status,'unknown');assert.equal(access.reverse.evidence_status,'conflicting');
+});
+test('cardinal comparisons reject perpendicular, mixed-axis and reversing scoped slices', () => {
+ let a=setup();a.binding.city_direction_axis='east';a.routeAxis='east';a.cityRecords[0].oneway_dir='E';
+ assert.throws(()=>addScopedRouteWay(a),/consistently aligned/);
+ a=setup();a.binding.city_direction_axis='north';a.routeAxis='east';assert.throws(()=>addScopedRouteWay(a),/match the route/);
+ a=setup();a.binding.city_direction_axis='north';a.routeAxis='north';a.way.coordinates[2]=[0,.00015];
+ assert.throws(()=>addScopedRouteWay(a),/consistently aligned|departs/);
 });
