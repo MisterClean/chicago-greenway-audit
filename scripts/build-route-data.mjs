@@ -9,6 +9,7 @@ import { addScopedRouteWay } from "./scoped-route-ways.mjs";
 import { compileEvidenceCatalog } from "./evidence-catalog.mjs";
 import { compileCoverageInventory } from "./coverage-inventory.mjs";
 import { resolveMatchingReview } from "./matching-review.mjs";
+import { addSplitCarriageway } from "./split-carriageways.mjs";
 import { createHash } from "node:crypto";
 const json = async (p) => JSON.parse(await readFile(p, "utf8"));
 const [source, config, osm, reviewEvidence] = await Promise.all(["data/sources/greenways.json", "data/routes/pilots.json", "data/sources/osm-source.json", "data/routes/review-evidence.json"].map(json));
@@ -48,6 +49,7 @@ const subline = (line, a, b) => {
 const norm = (s) => (s ?? "").toUpperCase().replace(/^(N|S|E|W|NORTH|SOUTH|EAST|WEST) /, "").replace(/ (AVENUE|AVE|STREET|ST|ROAD|RD|DRIVE|DR|BOULEVARD|BLVD|PLACE|PL|COURT|CT|PARKWAY|PKWY|TERRACE|TER|LANE|LN)$/, "");
 const all = [];
 for (const spec of config.streets) {
+  const routePrefix = spec.name.toLowerCase().replace(/\s+/g, '-');
   const records = designationRecords(source, spec);
   let components = assemble(records, spec.axis);
   if (spec.review_connection) components = joinForReview(components, spec.review_connection, reviewEvidence.records);
@@ -55,15 +57,18 @@ for (const spec of config.streets) {
     const [a, b] = components;
     components = [{ coords: [...a.coords, ...b.coords], ids: [...a.ids, ...b.ids], designationLines: [a.coords, b.coords], connector: [a.coords.at(-1), b.coords[0]] }];
   }
-  const componentIds = new Set(components.map((_, ix) => `${spec.name.toLowerCase()}-${ix + 1}`));
+  const componentIds = new Set(components.map((_, ix) => `${routePrefix}-${ix + 1}`));
   for (const binding of spec.scoped_ways ?? []) {
     if (!componentIds.has(binding.route_id)) throw new Error(`Scoped way ${binding.way_id} refers to missing route ${binding.route_id}`);
+  }
+  for (const binding of spec.split_carriageways ?? []) {
+    if (!componentIds.has(binding.route_id)) throw new Error(`Split carriageway refers to missing route ${binding.route_id}`);
   }
   for (const binding of spec.unresolved_components ?? []) {
     if (!Array.isArray(binding.source_ids) || binding.source_ids.some(sourceId=>!records.some(record=>record[':id']===sourceId))) throw new Error(`Unresolved component refers to an unselected city record on ${spec.name}`);
   }
   for (let ix = 0; ix < components.length; ix++) {
-    const part = components[ix], line = part.coords, id = `${spec.name.toLowerCase()}-${ix + 1}`;
+    const part = components[ix], line = part.coords, id = `${routePrefix}-${ix + 1}`;
     const matchingReview = resolveMatchingReview({bindings:spec.unresolved_components ?? [],componentIds:part.ids,evidenceRecords:reviewEvidence.records});
     const xs = line.map((p) => p[0]), ys = line.map((p) => p[1]);
     const ways = [], nodeCounts = /* @__PURE__ */ new Map(), crossingNames = /* @__PURE__ */ new Map();
@@ -100,6 +105,13 @@ for (const spec of config.streets) {
       ways.push(addScopedRouteWay({ graph, way, binding, cityRecords:records, componentIds:part.ids, routeAxis:spec.axis }));
     }
     const junctionGroups = new Map();
+    for (const binding of spec.split_carriageways ?? []) {
+      if (binding.route_id !== id) continue;
+      if (matchingReview) throw new Error(`Cannot add a split carriageway to unresolved component ${id}`);
+      const group = addSplitCarriageway({graph,ways,binding,cityRecords:records,componentIds:part.ids,evidenceRecords:reviewEvidence.records,
+        incidentWays:nearby.map(w=>({id:w.id,nodes:JSON.parse(w.nodes),tags:JSON.parse(w.tags)}))});
+      for (const way of group) junctionGroups.set(way.id, group);
+    }
     const ungrouped = new Set(ways.filter(way => ["circular", "roundabout"].includes(way.tags.junction)));
     while (ungrouped.size) {
       const queue = [ungrouped.values().next().value], group = [];
@@ -201,7 +213,8 @@ for (const spec of config.streets) {
         }
         const cityAt = (p) => records.filter((r) => part.ids.includes(r[":id"])).map((r) => ({ r, d: locate(p, r.the_geom.coordinates[0]).distance })).sort((a, b) => a.d - b.d)[0];
         const mid = pointAt(coords, locate(coords.at(-1), coords).position / 2), city = cityAt(mid);
-        if (!chunk.junctionWays && (!chunk.way.scoped_match || chunk.way.scoped_match.city_direction_axis) && city?.d < 25) {
+        const splitMatch = chunk.junctionWays?.[0]?.split_match;
+        if ((!chunk.junctionWays || splitMatch) && (!chunk.way.scoped_match || chunk.way.scoped_match.city_direction_axis) && city?.d < 25) {
           const beforeCity = structuredClone(access);
           access = compareCityOneWay(beforeCity, city.r.oneway_dir, spec.axis);
           // A matched edge can straddle city records with different assertions.
@@ -221,7 +234,7 @@ for (const spec of config.streets) {
         }
         // Explicit evidence bindings enrich the source explanation, never override
         // motor rules or extend a project assertion onto a neighboring block.
-        const evidenceRecords = reviewEvidence.records.filter(record => record.way_ids?.includes(chunk.way.id));
+        const evidenceRecords = reviewEvidence.records.filter(record => (chunk.junctionWays ?? [chunk.way]).some(way => record.way_ids?.includes(way.id)));
         for (const direction of ["forward", "reverse"]) {
           const notes = evidenceRecords.filter(record => record.direction_notes?.[direction]);
           if (notes.length && access[direction].status === "blocked" && access[direction].kind === "direction") {
@@ -230,7 +243,10 @@ for (const spec of config.streets) {
         }
         const wayIds = (chunk.junctionWays ?? [chunk.way]).map(way => way.id).sort((a,b) => a-b);
         const evidenceUrls = [...new Set([...wayIds.map(wayId => `https://www.openstreetmap.org/way/${wayId}`), ...Object.values(access).flatMap(decision => (decision.source_ids ?? []).map(sourceId => `https://www.openstreetmap.org/${sourceId}`)), ...evidenceRecords.flatMap(record => record.sources.map(source => source.url))])];
-        edges.push({ id: `${id}-${chunk.junctionWays ? "junction" : "way"}-${wayIds.join("-")}-${edges.length + 1}`, way_id: wayIds.length === 1 ? wayIds[0] : null, ...(chunk.junctionWays ? {way_ids:wayIds} : {}), from_node: chunk.from, to_node: chunk.to, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access, ...(traversals ? {traversals} : {}), ...overlapsJoin ? { source_access: sourceAccess } : {}, evidence_urls: evidenceUrls, ...(chunk.way.scoped_match ? { matching: chunk.way.scoped_match } : {}), role: overlapsJoin ? "connector" : chunk.junctionWays ? "junction" : chunk.way.tags.name ? "designated" : "connector" });
+        // Traversal geometry retains its direction-specific arc, while exported
+        // permissions also include any conflicting CDOT cardinal assertion.
+        if (traversals) for (const direction of ['forward','reverse']) traversals[direction].access = access[direction];
+        edges.push({ id: `${id}-${chunk.junctionWays ? "junction" : "way"}-${wayIds.join("-")}-${edges.length + 1}`, way_id: wayIds.length === 1 ? wayIds[0] : null, ...(chunk.junctionWays ? {way_ids:wayIds} : {}), from_node: chunk.from, to_node: chunk.to, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access, ...(traversals ? {traversals} : {}), ...overlapsJoin ? { source_access: sourceAccess } : {}, evidence_urls: evidenceUrls, ...(splitMatch ? {matching:splitMatch} : chunk.way.scoped_match ? { matching: chunk.way.scoped_match } : {}), role: overlapsJoin ? "connector" : chunk.junctionWays ? "junction" : chunk.way.tags.name ? "designated" : "connector" });
       }
       cursor = Math.max(cursor, c.last.position);
     }

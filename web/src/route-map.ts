@@ -3,7 +3,7 @@ import { PMTiles, Protocol, SharedPromiseCache } from 'pmtiles';
 import type { Feature, FeatureCollection, Geometry as GeoGeometry } from 'geojson';
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import { StaticTileSource, type ChunkIndex } from './static-tile-source';
-import { boundaryTitle, coordinateAtFraction, distanceLabel, evidenceAppliesToRoute, longestRun, remainingDistance, type Coordinate, type Direction, type DirectionView, type EvidenceRecord, type Event as RouteEvent, type Geometry, type Route, type RouteData, type Run } from './route-model';
+import { boundaryTitle, coordinateAtFraction, distanceLabel, evidenceAppliesToRoute, evidenceForDisplay, longestRun, remainingDistance, type Coordinate, type Direction, type DirectionView, type EvidenceRecord, type Event as RouteEvent, type Geometry, type Route, type RouteData, type Run } from './route-model';
 import './route-map.css';
 
 const $ = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T;
@@ -191,7 +191,7 @@ function render() {
   $('event-count').textContent = String(events.length);
   $('event-list').innerHTML = events.length ? events.map(event => `<button class="event-row" data-event="${escape(event.id)}"><strong>${escape(eventTitle(event))}</strong><span>${escape(route.direction_labels[event.direction])} · ${escape(event.reason)}</span></button>`).join('') : '<p class="small">No interruption is encoded for this route. Field review is still needed.</p>';
   document.querySelectorAll<HTMLButtonElement>('[data-event]').forEach(button => button.onclick = () => chooseEvent(button.dataset.event!,true));
-  $('evidence-records').innerHTML = evidence.filter(record => evidenceAppliesToRoute(record,route)).map(record => `<details><summary>${escape(record.location)}</summary><p>${escape(record.source_inference)}</p><p><strong>Review needed:</strong> ${escape(record.review_needed)}</p>${record.sources.map(source => `<p>${source.title ? `<strong>${escape(source.title)}</strong><br>` : ''}${links([source.url])}<br>${escape(source.source_date ?? 'Date unverified')}${source.date_kind ? ` (${escape(source.date_kind)})` : ''} · ${escape(source.status)}<br><span class="small">${escape(source.scope)}</span></p>`).join('')}</details>`).join('');
+  $('evidence-records').innerHTML = evidence.filter(record => evidenceAppliesToRoute(record,route)).map(evidenceForDisplay).map(record => `<details><summary>${escape(record.location)}</summary><p>${escape(record.source_inference)}</p><p><strong>Review needed:</strong> ${escape(record.review_needed)}</p>${record.sources.map(source => `<p>${source.title ? `<strong>${escape(source.title)}</strong><br>` : ''}${links([source.url])}<br>${escape(source.source_date ?? 'Date unverified')}${source.date_kind ? ` (${escape(source.date_kind)})` : ''} · ${escape(source.status)}<br><span class="small">${escape(source.scope)}</span></p>`).join('')}</details>`).join('');
   renderDetail(); updateMap(); writeUrl();
 }
 function motionDuration() { return matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 450; }

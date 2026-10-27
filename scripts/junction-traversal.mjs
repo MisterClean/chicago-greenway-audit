@@ -5,10 +5,16 @@ import { lineLength } from './route-network.mjs';
 // blocked geometries are display fallbacks, not approved traversals.
 export function traceJunction({ way, ways = way ? [way] : [], fromNode, toNode, fromWayId, toWayId, relations = [] }) {
   if (!ways.length || fromNode == null || toNode == null || fromNode === toNode || fromWayId == null || toWayId == null) return null;
+  // Explicitly bound short divided roads use the same cycle topology, with
+  // their original motor tags intact. The preparer checks city correspondence.
+  const split = ways.length === 2 && ways.every(w => Array.isArray(w.nodes) && w.nodes.length >= 2 && w.split_match?.method === 'explicit-city-split-carriageway')
+    && ways.every(w => w.split_match.evidence_id === ways[0].split_match.evidence_id)
+    && ways.every(w => w.tags?.oneway === 'yes' && w.tags.name === ways[0].tags.name)
+    && ways[0].nodes[0] === ways[1].nodes.at(-1) && ways[0].nodes.at(-1) === ways[1].nodes[0];
   const graph = new Map(), positions = new Map(), seenEdges = new Set();
   const add = (id, edge) => { if (!graph.has(id)) graph.set(id, []); graph.get(id).push(edge); };
   for (const w of ways) {
-    if (w.id == null || !['roundabout', 'circular'].includes(w.tags?.junction) || !Array.isArray(w.nodes) || !Array.isArray(w.coordinates) || w.nodes.length < 2 || w.nodes.length !== w.coordinates.length) return null;
+    if (w.id == null || (!split && !['roundabout', 'circular'].includes(w.tags?.junction)) || !Array.isArray(w.nodes) || !Array.isArray(w.coordinates) || w.nodes.length < 2 || w.nodes.length !== w.coordinates.length) return null;
     for (let i = 0; i < w.nodes.length; i++) {
       const p = w.coordinates[i];
       if (!Array.isArray(p) || p.length < 2 || !p.slice(0, 2).every(Number.isFinite)) return null;

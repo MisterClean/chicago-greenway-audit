@@ -347,6 +347,82 @@
           "evidence_id": "hamlin-douglas-jog"
         }
       ]
+    },
+    {
+      "name": "Keeler",
+      "source": "KEELER",
+      "axis": "north"
+    },
+    {
+      "name": "Lavergne",
+      "source": "LAVERGNE",
+      "axis": "north",
+      "split_carriageways": [
+        {
+          "route_id": "lavergne-2",
+          "way_ids": [
+            1213420157,
+            1213420158
+          ],
+          "city_source_ids": [
+            "row-qay7~qqhc_6mse"
+          ],
+          "evidence_id": "lavergne-kinzie-parallel-arms"
+        }
+      ]
+    },
+    {
+      "name": "Long",
+      "source": "LONG",
+      "axis": "north"
+    },
+    {
+      "name": "Menard",
+      "source": "MENARD",
+      "axis": "north",
+      "split_carriageways": [
+        {
+          "route_id": "menard-1",
+          "way_ids": [
+            582888784,
+            582888785
+          ],
+          "city_source_ids": [
+            "row-nr6u_qxaq_g748"
+          ],
+          "evidence_id": "menard-lake-parallel-arms"
+        }
+      ]
+    },
+    {
+      "name": "Kilbourn",
+      "source": "KILBOURN",
+      "axis": "north"
+    },
+    {
+      "name": "Avers",
+      "source": "AVERS",
+      "axis": "north"
+    },
+    {
+      "name": "Central Park",
+      "source": "CENTRAL PARK",
+      "axis": "north"
+    },
+    {
+      "name": "Hirsch",
+      "source": "HIRSCH",
+      "axis": "east"
+    },
+    {
+      "name": "Le Moyne",
+      "source": "LE MOYNE",
+      "axis": "east"
+    },
+    {
+      "name": "Cullom",
+      "source": "CULLOM",
+      "axis": "east"
     }
   ],
   "max_source_distance_m": 18,

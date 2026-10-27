@@ -1,6 +1,6 @@
 # CDOT scope verification and Bloomingdale / Hamlin expansion
 
-Reviewed October 27, 2026, after committing and pushing checkpoint `6c21e14`. The current export contains **32 street families, 52 route sections, 2,793 movements and 118 directional runs**. Its designation geometry measures **54.69248 miles**. All access remains source-inferred or conflicting; none is field approved.
+Reviewed October 27, 2026, after committing and pushing checkpoint `6c21e14`. This checkpoint was committed and pushed as `9310634`. See the [ten-greenway expansion](route-ten-greenways-validation.md) for the current export. This checkpoint contains **32 street families, 52 route sections, 2,793 movements and 118 directional runs**. Its designation geometry measures **54.69248 miles**. All access remains source-inferred or conflicting; none is field approved.
 
 ## The correct CDOT population
 

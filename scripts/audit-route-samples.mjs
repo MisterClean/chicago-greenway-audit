@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createReadStream } from 'node:fs';
 import { metres, locate } from './route-network.mjs';
+import { auditTenGreenways } from './audit-ten-greenways.mjs';
 
 const [input = 'public/routes/pilot.json', output = 'data/routes/pilot-validation.json', database = 'data/staging/network.sqlite'] = process.argv.slice(2);
 const bytes = await readFile(input);
@@ -383,6 +384,7 @@ for (const [routeId, cityId, wayId, sourceNodes, adjacent] of [
  const r=routes.find(r=>r.id==='hamlin-2'), ev=evidenceRecords.find(x=>x.id==='hamlin-douglas-jog'), gap=r?.edges[0];
  check('hamlin-douglas-unmatched-evidence',true,!!r && JSON.stringify(r.source_ids)===JSON.stringify(['row-z6fn.ywid~e4w9']) && r.matching_review?.evidence_id===ev?.id && ev?.source_record_ids?.includes('row-z6fn.ywid~e4w9') && r.matching_review?.reason===ev?.matching_review && r.edges.length===1 && gap?.role==='gap' && gap.evidence_ids?.includes(ev.id) && ['forward','reverse'].every(d=>gap.access[d].status==='unknown') && r.runs.length===0,'The entire Douglas city row remains an evidence-bound unknown gap with no car run.',[sourceUrl,...(ev?.sources ?? []).map(s=>s.url)]);
 }
+auditTenGreenways({data,db,cityRecords,evidenceRecords,check,sourceUrl});
 const dbHash = createHash('sha256');
 for await (const chunk of createReadStream(database)) dbHash.update(chunk);
 const stagedDatabaseSha256 = dbHash.digest('hex');

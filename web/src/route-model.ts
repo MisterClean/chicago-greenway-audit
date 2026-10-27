@@ -83,10 +83,25 @@ export interface RouteData {
 export interface EvidenceRecord {
   id: string;
   source_record_ids?: string[];
-  location: string;
-  source_inference: string;
-  review_needed: string;
-  sources: {url: string; title?: string; publisher?: string; source_date: string | null; date_kind?: string; scope: string; status: string}[];
+  location?: string | null;
+  source_inference?: string | null;
+  review_needed?: string | null;
+  sources: {url: string; title?: string; publisher?: string; source_date?: string | null; date_kind?: string; scope?: string | null; status?: string | null}[];
+}
+
+// The catalog permits absent metadata. Preserve that uncertainty in the view
+// without preventing route selection or leaving a previous route's details.
+export function evidenceForDisplay(record: EvidenceRecord) {
+  const supplied = (value: string | null | undefined, fallback: string) => value?.trim() ? value : fallback;
+  return {...record,
+    location: supplied(record.location, 'Location unrecorded'),
+    source_inference: supplied(record.source_inference, 'No observation recorded.'),
+    review_needed: supplied(record.review_needed, 'Review requirements not recorded.'),
+    sources: record.sources.map(source => ({...source,
+      status: supplied(source.status, 'Status unrecorded'),
+      scope: supplied(source.scope, 'Scope unrecorded'),
+    })),
+  };
 }
 
 // A project on one part of a street cannot substantiate a distant namesake.

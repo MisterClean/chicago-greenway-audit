@@ -94,3 +94,24 @@ test('coherent circle with prohibited entry remains blocked', () => {
  const input = base(); input.relations = [restriction(10,1,5)];
  assert.equal(traceJunction(input).forward.access.status,'blocked');
 });
+
+test('explicit divided-road pair follows each original one-way arm and its restrictions', () => {
+ const input=base(), w=input.way; delete input.way; input.toNode=3;
+ const metadata={method:'explicit-city-split-carriageway',evidence_id:'bound-pair'};
+ const tags={highway:'residential',name:'Example Avenue',oneway:'yes'};
+ input.ways=[
+  {...w,id:51,nodes:[1,2,3],coordinates:w.coordinates.slice(0,3),nodeTags:[{},{},{}],tags,split_match:metadata},
+  {...w,id:52,nodes:[3,4,1],coordinates:w.coordinates.slice(2),nodeTags:[{},{},{}],tags,split_match:metadata},
+ ];
+ const before=structuredClone(input.ways);
+ let result=traceJunction(input);
+ assert.deepEqual(result.forward.geometry.coordinates,input.ways[0].coordinates);
+ assert.deepEqual(result.reverse.geometry.coordinates,input.ways[1].coordinates);
+ assert.equal(result.forward.access.status,'allowed'); assert.equal(result.reverse.access.status,'allowed');
+ input.relations=[restriction(20,3,52)]; result=traceJunction(input);
+ assert.equal(result.forward.access.status,'allowed'); assert.equal(result.reverse.access.status,'blocked');
+ assert.ok(result.reverse.access.source_ids.includes('relation/99'));
+ assert.deepEqual(input.ways,before);
+ delete input.ways[1].split_match;
+ assert.equal(traceJunction(input),null);
+});
