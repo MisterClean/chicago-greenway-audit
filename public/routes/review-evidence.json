@@ -3,7 +3,7 @@
   "reviewed_at": "2026-10-27",
   "purpose": "Pilot movement evidence and field-review queue. These are scoped observations, not whole-route approvals or a replacement for the source snapshot.",
   "default_profile": "ordinary passenger car on a through trip",
-  "method": "Review official project descriptions and the local OSM snapshot; manual Street View links are navigation aids only. A plan, project-level completion label, or older image does not establish the present movement.",
+  "method": "Review scoped CDOT drawings, alderman updates and the local OSM snapshot. Record document dates, inspected pages and hashes where available. Plans, anticipated dates, broad completion labels and expired construction notices do not establish current movement. Source-record and geographic bindings keep context local; manual Street View links are navigation aids.",
   "records": [
     {
       "id": "wood-augusta-cortez-direction",
@@ -391,6 +391,489 @@
         }
       ],
       "review_needed": "Match the city segment to individual roads and verify signs and both directions, especially changes at 87th, 95th and intermediate cross streets. Do not assume a physical filter."
+    },
+    {
+      "id": "school-lakeview-eastbound",
+      "source_record_ids": [
+        "row-h7za.495h_8e9t",
+        "row-ensn~hrye.ce4y"
+      ],
+      "location": "School Street, Ravenswood Avenue to Clark Street",
+      "movement": "eastbound versus westbound motor travel",
+      "source_inference": "City snapshot labels both School rows one-way eastbound. The 2017 design covers Lincoln–Clark and shows an eastbound-paired greenway; it does not establish current signs or restrictions on the separate Ravenswood–Lincoln segment.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for city attributes; present signs unverified",
+      "effective_period": "City snapshot 2025-12; project design 2017",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "scope": "Scoped row attributes, not a current sign survey",
+          "status": "official dataset snapshot"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/44th_Ward_Grnway_Public_Mtg_PPT.pdf",
+          "source_date": "2017-11-14",
+          "date_kind": "CDOT community presentation",
+          "scope": "Typical one-way bike and motor cross-section and applicability",
+          "status": "design proposal",
+          "pages": [
+            "10"
+          ],
+          "sha256": "164b00520861cd9e85b7e6d5841982d44a716a0bbb5a835e21d1544045cdd478"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Lincoln_to_C.pdf",
+          "source_date": null,
+          "date_kind": "drawing creation metadata 2017-11-13; design date not independently stated",
+          "scope": "Lincoln–Clark long plot, School and Roscoe parallel corridors; School curb extensions and raised crosswalk at Clifton",
+          "status": "design drawing, not as-built",
+          "pages": [
+            "1"
+          ],
+          "sha256": "ecd9cd3976dc918b64fe6a85a4bba15c5be8aa8a15a706f3203f399ead3b32ce"
+        },
+        {
+          "url": "https://www.44thward.org/infrastructure/bike-pedestrian-infrastructure/school-aldine-roscoe-greenway/",
+          "source_date": "2018-08-20",
+          "date_kind": "ward construction update",
+          "scope": "All curb extensions and speed humps and most striping reported installed; School/Clifton raised crosswalk under construction",
+          "status": "historical work update"
+        }
+      ],
+      "review_needed": "Match OSM segments and check signs and motor movements at all boundaries, especially Lincoln; do not infer a physical diverter from humps or curb extensions."
+    },
+    {
+      "id": "school-clifton-raised-crosswalk",
+      "source_record_ids": [
+        "row-ensn~hrye.ce4y"
+      ],
+      "location": "School Street at Clifton Avenue",
+      "movement": "eastbound School continuation across Clifton",
+      "source_inference": "The design calls for a raised crosswalk; the 2018-08-20 ward update said work was underway and anticipated completion August 31. A 2018-10-09 firsthand report describes it built. A raised crossing is traffic calming, not a demonstrated through-car filter.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for historical installation; current status unverified",
+      "effective_period": "2017 plan; August–October 2018 construction and observation",
+      "sources": [
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/44th_Ward_Grnway_Public_Mtg_PPT.pdf",
+          "source_date": "2017-11-14",
+          "date_kind": "CDOT community presentation",
+          "scope": "Raised crosswalk at Clifton",
+          "status": "design proposal",
+          "pages": [
+            "14"
+          ],
+          "sha256": "164b00520861cd9e85b7e6d5841982d44a716a0bbb5a835e21d1544045cdd478"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Lincoln_to_C.pdf",
+          "source_date": null,
+          "date_kind": "drawing creation metadata 2017-11-13; design date not independently stated",
+          "scope": "Lincoln–Clark long plot, School and Roscoe parallel corridors; School curb extensions and raised crosswalk at Clifton",
+          "status": "design drawing, not as-built",
+          "pages": [
+            "1"
+          ],
+          "sha256": "ecd9cd3976dc918b64fe6a85a4bba15c5be8aa8a15a706f3203f399ead3b32ce"
+        },
+        {
+          "url": "https://www.44thward.org/infrastructure/bike-pedestrian-infrastructure/school-aldine-roscoe-greenway/",
+          "source_date": "2018-08-20",
+          "date_kind": "ward construction update",
+          "scope": "All curb extensions and speed humps and most striping reported installed; School/Clifton raised crosswalk under construction",
+          "status": "historical work update"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2018/10/09/eyes-on-the-street-the-roscoe-and-schoolaldine-greenways-are-ready-to-ride",
+          "source_date": "2018-10-09",
+          "date_kind": "firsthand news report",
+          "scope": "Reports raised crossing built",
+          "status": "historical secondary observation"
+        }
+      ],
+      "review_needed": "Verify current signs and physical layout, and eastbound approach-to-departure access; do not classify the raised crosswalk itself as a barrier."
+    },
+    {
+      "id": "roscoe-lakeview-westbound",
+      "source_record_ids": [
+        "row-qrw8~ek97_8ffg",
+        "row-sbv9-nemh.v8g9",
+        "row-smjt~ezi2_sb5e"
+      ],
+      "location": "Roscoe Street, Ravenswood Avenue to Lake Shore Drive, Lakeview",
+      "movement": "westbound versus eastbound motor travel",
+      "source_inference": "City snapshot marks three consecutive Lakeview rows westbound one-way. The ward describes a westbound corridor for Roscoe resurfacing from Racine to Southport and Broadway to Halsted. Project long plots begin at Lincoln; they do not establish the Ravenswood–Lincoln section or continuous automobile passage across Broadway.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for city snapshot; present signs and intersection turns unverified",
+      "effective_period": "Ward resurfacing plan 2017; city snapshot 2025-12",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "scope": "Scoped row attributes, not a current sign survey",
+          "status": "official dataset snapshot"
+        },
+        {
+          "url": "https://www.44thward.org/infrastructure/bike-pedestrian-infrastructure/school-aldine-roscoe-greenway/",
+          "source_date": "2017-06-01",
+          "date_kind": "ward project update",
+          "scope": "Westbound corridor and planned resurfacing on two specified Roscoe intervals",
+          "status": "planned resurfacing"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/44th_Ward_Grnway_Public_Mtg_PPT.pdf",
+          "source_date": "2017-11-14",
+          "date_kind": "CDOT community presentation",
+          "scope": "Typical one-way bike and motor cross-section and applicability",
+          "status": "design proposal",
+          "pages": [
+            "10"
+          ],
+          "sha256": "164b00520861cd9e85b7e6d5841982d44a716a0bbb5a835e21d1544045cdd478"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Lincoln_to_C.pdf",
+          "source_date": null,
+          "date_kind": "drawing creation metadata 2017-11-13; design date not independently stated",
+          "scope": "Lincoln–Clark long plot, School and Roscoe parallel corridors; School curb extensions and raised crosswalk at Clifton",
+          "status": "design drawing, not as-built",
+          "pages": [
+            "1"
+          ],
+          "sha256": "ecd9cd3976dc918b64fe6a85a4bba15c5be8aa8a15a706f3203f399ead3b32ce"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Clark_to_LSD.pdf",
+          "source_date": null,
+          "date_kind": "drawing creation metadata 2017-11-13; design date not independently stated",
+          "scope": "Clark–Lake Shore Drive long plot; offset Roscoe/Broadway and raised contraflow bicycle connector; not a general motor connector",
+          "status": "design drawing, not as-built",
+          "pages": [
+            "1"
+          ],
+          "sha256": "b0a38b6474c52c699a88f840907338c7aff6a03700a5a9c38905260df53a3e6e"
+        }
+      ],
+      "review_needed": "Check signs, OSM direction and junctions per block; do not apply this evidence to separate northwest-side Roscoe rows or presume a through-car link at Broadway."
+    },
+    {
+      "id": "roscoe-broadway-jog",
+      "source_record_ids": [
+        "row-sbv9-nemh.v8g9",
+        "row-smjt~ezi2_sb5e"
+      ],
+      "location": "Lakeview Roscoe Street at Broadway",
+      "movement": "westbound from Roscoe east of Broadway to Roscoe west of Broadway",
+      "source_inference": "The 2017 CDOT drawing shows an offset crossing and raised contraflow bike connector on Broadway. A 2018-10-09 firsthand report describes the bike connector installed. Bicycle continuity does not establish a legal or physically possible same-path motor movement; separate turns and any present restrictions need review.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for design and historical bicycle treatment; car continuation unresolved",
+      "effective_period": "2017 design and 2018 firsthand observation; present status unknown",
+      "sources": [
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Clark_to_LSD.pdf",
+          "source_date": null,
+          "date_kind": "drawing creation metadata 2017-11-13; design date not independently stated",
+          "scope": "Clark–Lake Shore Drive long plot; offset Roscoe/Broadway and raised contraflow bicycle connector; not a general motor connector",
+          "status": "design drawing, not as-built",
+          "pages": [
+            "1"
+          ],
+          "sha256": "b0a38b6474c52c699a88f840907338c7aff6a03700a5a9c38905260df53a3e6e"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/44th_Ward_Grnway_Public_Mtg_PPT.pdf",
+          "source_date": "2017-11-14",
+          "date_kind": "CDOT community presentation",
+          "scope": "Bike box at Roscoe/Broadway and raised contraflow bike lane",
+          "status": "design proposal",
+          "pages": [
+            "22"
+          ],
+          "sha256": "164b00520861cd9e85b7e6d5841982d44a716a0bbb5a835e21d1544045cdd478"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2018/10/09/eyes-on-the-street-the-roscoe-and-schoolaldine-greenways-are-ready-to-ride",
+          "source_date": "2018-10-09",
+          "date_kind": "firsthand news report",
+          "scope": "Describes installed raised bike connector for jog at Broadway",
+          "status": "historical secondary observation"
+        }
+      ],
+      "review_needed": "Trace actual east-side approach, motor turns onto Broadway, the west-side departure, and current signs separately from bicycle-only connector. Confirm if route matching includes undesignated Broadway and do not infer blockage merely from the bike design."
+    },
+    {
+      "id": "roscoe-lakefront-end",
+      "source_record_ids": [
+        "row-smjt~ezi2_sb5e"
+      ],
+      "location": "Roscoe Street at Inner Lake Shore Drive and lakefront underpass",
+      "movement": "westbound approach from lakefront and eastbound continuation toward underpass",
+      "source_inference": "2017 plan depicts a full-block curb extension, bike crossing and new traffic signal. A bicycle connection via the underpass is not evidence of through-car access between the trail and Roscoe; plan does not prove current signs or completed motor movements.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for historic design, motor movements unresolved",
+      "effective_period": "2017 proposal; current status unknown",
+      "sources": [
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Clark_to_LSD.pdf",
+          "source_date": null,
+          "date_kind": "drawing creation metadata 2017-11-13; design date not independently stated",
+          "scope": "Clark–Lake Shore Drive long plot; offset Roscoe/Broadway and raised contraflow bicycle connector; not a general motor connector",
+          "status": "design drawing, not as-built",
+          "pages": [
+            "1"
+          ],
+          "sha256": "b0a38b6474c52c699a88f840907338c7aff6a03700a5a9c38905260df53a3e6e"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/44th_Ward_Grnway_Public_Mtg_PPT.pdf",
+          "source_date": "2017-11-14",
+          "date_kind": "CDOT community presentation",
+          "scope": "Roscoe/Aldine at Inner Lake Shore Drive: bike crossing, curb extension and new signal",
+          "status": "design proposal",
+          "pages": [
+            "29"
+          ],
+          "sha256": "164b00520861cd9e85b7e6d5841982d44a716a0bbb5a835e21d1544045cdd478"
+        }
+      ],
+      "review_needed": "Determine exact route boundary, motor-accessible approach and both departure paths; inspect current signals, openings and signs. Mapped scope endpoint is not automatically a physical filter."
+    },
+    {
+      "id": "winthrop-designation-direction",
+      "location": "Winthrop Avenue, Leland Avenue to Sheridan Road",
+      "movement": "northbound and southbound along corridor",
+      "source_inference": "All three city records list southbound motor and bicycle direction. This is a designation assertion, not a verified continuous motor trip. 2014 CDOT lists restriping Ardmore–Sheridan; 2024 ward notice reports wayfinding work in progress.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for designation; field and junction status unverified",
+      "effective_period": "city snapshot retrieved 2026-09-19; historical updates 2014 and 2024",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json",
+          "source_date": "2026-09-19",
+          "date_kind": "local snapshot retrieval",
+          "scope": "City bicycle-route designation records, not observed traffic movements",
+          "status": "snapshot"
+        },
+        {
+          "url": "https://chicagocompletestreets.org/wp-content/uploads/2013/06/YearEndReview_2014_Draft_Jan27th_WEB.pdf",
+          "source_date": "2014",
+          "date_kind": "report year",
+          "scope": "Printed pages 15 and 18 (PDF pages 18 and 21): Winthrop/Ardmore markings and restriping list; no intersection design",
+          "status": "historical CDOT report",
+          "sha256": "7515bf959b73b956ceb967351c7e299cbb3668a53d35f9c770eb72e00d93ced6"
+        },
+        {
+          "url": "https://the-48th-ward.squarespace.com/blog/infrastructure-town-hall-august-14-2024",
+          "source_date": "2024-08-14",
+          "date_kind": "ward announcement",
+          "scope": "Winthrop/Kenmore wayfinding signs and pavement markings announced for later in 2024",
+          "status": "planned"
+        },
+        {
+          "url": "https://the48thward.org/blog/construction-updates-september-11-2024",
+          "source_date": "2024-09-11",
+          "date_kind": "ward construction update",
+          "scope": "Winthrop/Kenmore signage and markings work underway; Ardmore Broadway–Winthrop temporary RPM closure through September 21",
+          "status": "in progress; closure historical"
+        },
+        {
+          "url": "https://the48thward.org/blog/sheridan-pedestrian-safety",
+          "source_date": "2026-10-02",
+          "date_kind": "ward project summary",
+          "scope": "Reports pre-existing Kenmore/Winthrop and Ardmore routes, 2025 Sheridan/Ardmore decorative crosswalk",
+          "status": "ward report; not turn-level validation"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6440662e14e59b3037e72c3c/94431fa7-293b-4d9e-ad6a-45abd4b5e9fc/Newsletter%2BPhoto%2BEditor%2B%282%29.jpg",
+          "source_date": "2024-08-14",
+          "date_kind": "ward embedded graphic",
+          "scope": "Visually reviewed: cropped intersection plan with crosswalks, green bicycle markings, a one-way except bikes symbol, and example Lakefront Trail wayfinding sign; crop has no legible street names",
+          "status": "illustrative plan excerpt; placement and installation unconfirmed",
+          "sha256": "c41cf40107276dc08f05a8705b69904fead140eea9f685df97e07c510f8b83c9"
+        }
+      ],
+      "review_needed": "Obtain original CDOT plan and current signs; review each OSM movement, barriers, intersections, and gaps.",
+      "source_record_ids": [
+        "row-vq2i~b34i.udd7",
+        "row-knn2~9bd9.v8ws",
+        "row-arhw.ybf9.f7xu"
+      ]
+    },
+    {
+      "id": "ardmore-winthrop-sheridan-direction",
+      "location": "Ardmore Avenue, Winthrop Avenue to Sheridan Road",
+      "movement": "eastbound and westbound through block",
+      "source_inference": "City record lists oneway_dir=E and bicycle two-way with contraflow. Bicycle access in the opposite direction does not imply car access. The 2014 CDOT restriping list identifies Ardmore Winthrop–Lakefront as marked shared lanes, not motor rules.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for city direction assertion; current regulatory signs unverified",
+      "effective_period": "city snapshot retrieved 2026-09-19; 2014 historical report",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json",
+          "source_date": "2026-09-19",
+          "date_kind": "local snapshot retrieval",
+          "scope": "City bicycle-route designation records, not observed traffic movements",
+          "status": "snapshot"
+        },
+        {
+          "url": "https://chicagocompletestreets.org/wp-content/uploads/2013/06/YearEndReview_2014_Draft_Jan27th_WEB.pdf",
+          "source_date": "2014",
+          "date_kind": "report year",
+          "scope": "Printed pages 15 and 18 (PDF pages 18 and 21): Winthrop/Ardmore markings and restriping list; no intersection design",
+          "status": "historical CDOT report",
+          "sha256": "7515bf959b73b956ceb967351c7e299cbb3668a53d35f9c770eb72e00d93ced6"
+        },
+        {
+          "url": "https://the48thward.org/blog/sheridan-pedestrian-safety",
+          "source_date": "2026-10-02",
+          "date_kind": "ward project summary",
+          "scope": "Reports pre-existing Kenmore/Winthrop and Ardmore routes, 2025 Sheridan/Ardmore decorative crosswalk",
+          "status": "ward report; not turn-level validation"
+        }
+      ],
+      "review_needed": "Obtain signed plan and inspect east/west traffic signs and Sheridan approach-specific turns. Do not infer a motor crossing to the trail.",
+      "source_record_ids": [
+        "row-39t4_437d.zgtb"
+      ]
+    },
+    {
+      "id": "ardmore-broadway-winthrop-and-trail",
+      "location": "Ardmore, Broadway to Winthrop and Sheridan to Lakefront Trail",
+      "movement": "segment and junction connectivity",
+      "source_inference": "City rows list no cardinal one-way direction for either outer segment; this is not affirmative two-way authorization. Eastern designation ends at Lakefront Trail, not proof of car continuity. Ward described a temporary CTA work closure on Broadway–Winthrop in September 2024, not a permanent motor diverter.",
+      "review_status": "source-inferred",
+      "confidence": "designation extent only; motor connections unverified",
+      "effective_period": "city snapshot retrieved 2026-09-19; temporary works September 2024",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json",
+          "source_date": "2026-09-19",
+          "date_kind": "local snapshot retrieval",
+          "scope": "City bicycle-route designation records, not observed traffic movements",
+          "status": "snapshot"
+        },
+        {
+          "url": "https://chicagocompletestreets.org/wp-content/uploads/2013/06/YearEndReview_2014_Draft_Jan27th_WEB.pdf",
+          "source_date": "2014",
+          "date_kind": "report year",
+          "scope": "Printed pages 15 and 18 (PDF pages 18 and 21): Winthrop/Ardmore markings and restriping list; no intersection design",
+          "status": "historical CDOT report",
+          "sha256": "7515bf959b73b956ceb967351c7e299cbb3668a53d35f9c770eb72e00d93ced6"
+        },
+        {
+          "url": "https://the48thward.org/blog/construction-updates-september-11-2024",
+          "source_date": "2024-09-11",
+          "date_kind": "ward construction update",
+          "scope": "Winthrop/Kenmore signage and markings work underway; Ardmore Broadway–Winthrop temporary RPM closure through September 21",
+          "status": "in progress; closure historical"
+        },
+        {
+          "url": "https://the48thward.org/blog/sheridan-pedestrian-safety",
+          "source_date": "2026-10-02",
+          "date_kind": "ward project summary",
+          "scope": "Reports pre-existing Kenmore/Winthrop and Ardmore routes, 2025 Sheridan/Ardmore decorative crosswalk",
+          "status": "ward report; not turn-level validation"
+        }
+      ],
+      "review_needed": "Inspect actual road and trail access, crossing geometry and regulatory restrictions; obtain project drawings and verify post-construction condition.",
+      "source_record_ids": [
+        "row-xj45~5tv9-2mbr",
+        "row-bnei~wvhc.jrsx"
+      ]
+    },
+    {
+      "id": "winthrop-goudy-gate-gap",
+      "source_record_ids": [
+        "row-knn2~9bd9.v8ws"
+      ],
+      "location": "Winthrop Avenue between Winona Street and Foster Avenue near Goudy Elementary",
+      "movement": "through movement when school gates are closed",
+      "source_inference": "The ward reported in May and June 2026 that school gates recently installed on the east side of Goudy cut off through traffic on Winthrop between Winona and Foster when closed. This plausibly relates to the approximately 83 m unmatched segment at 41.975246–41.975996; exact geometry and present operation are unverified. This is neither evidence of a continuously closed gate nor permission when open.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for ward-reported gate and conditional effect; current hours and exact geometry unverified",
+      "effective_period": "2026-05-19 and 2026-06-17 ward recaps; present gate state unknown",
+      "sources": [
+        {
+          "url": "https://the48thward.org/blog/ward-night-may-19-2026",
+          "source_date": "2026-05-19",
+          "date_kind": "ward meeting recap",
+          "scope": "Reports recently installed school gates and cutoff when closed; suggests alternative routes to cyclists and pedestrians",
+          "status": "ward-reported installation and conditional operation"
+        },
+        {
+          "url": "https://the48thward.org/blog/ward-night-june-16-2026",
+          "source_date": "2026-06-17",
+          "date_kind": "ward meeting recap",
+          "scope": "Repeats gate closure claim and notes review of alternatives",
+          "status": "ward-reported installation and conditional operation"
+        }
+      ],
+      "review_needed": "Inspect gate locations, operation schedule, signage and passenger-car permissions; verify present conditions. Do not use 83 m gap endpoints as exact gate coordinates.",
+      "gap_scope": {
+        "route_id": "winthrop-1",
+        "bounds": [
+          [
+            -87.6579,
+            41.9752
+          ],
+          [
+            -87.6577,
+            41.97605
+          ]
+        ]
+      },
+      "gap_note": "The 48th Ward reported school gates near Goudy Elementary that cut off Winthrop between Winona and Foster when closed. The gate schedule, exact layout and current car passage are unverified."
+    },
+    {
+      "id": "roscoe-northwest-project-review",
+      "source_record_ids": [
+        "row-94iw~6jr2-x489",
+        "row-mszc_k87d.96yb",
+        "row-dmab-bde6~88ip",
+        "row-grrn_mdsu~v9ge"
+      ],
+      "location": "Northwest Roscoe: Narragansett Avenue–Kedvale Avenue",
+      "movement": "eastbound and westbound, including the two-way Cicero–Kilbourn portion",
+      "source_inference": "This is a separate project from the Lakeview School/Roscoe greenway. CDOT’s 2020 network map depicts Roscoe as a planned bike route; it does not show intersection geometry or motor directions. The July 2021 council referral report lists alderman-sponsored eastbound one-way amendments on specified blocks. Referral does not establish adoption or installation. The city snapshot distinguishes eastbound motor segments with bicycle contraflow from the portion without a cardinal motor direction. The app keeps OSM/city conflicts and the Keeler circle’s inconsistent reverse circulation unresolved.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference; detailed intersection drawings and current signage unverified",
+      "effective_period": "2020 network concept; 2021 proposals; city December 2025 and OSM September 2026 snapshots",
+      "sources": [
+        {
+          "url": "https://sharedusemobilitycenter.org/wp-content/uploads/2025/12/BikesForBelmontCragin_v5.pdf#page=9",
+          "source_date": "2023-08",
+          "date_kind": "report publication; diagram labeled 2020",
+          "scope": "CDOT-authored network map reproduced in Figure 1.3, printed p.7/PDF p.9; visually inspected. Corridor overview only, no motor arrows or intersection drawings.",
+          "status": "CDOT network concept reviewed; not a detailed engineering plan",
+          "sha256": "6626acabdc69aaf2f998913a7d69e18e4ab6557e0d5e8f8b64b3395722e91e4c"
+        },
+        {
+          "url": "https://chicityclerk.s3.amazonaws.com/s3fs-public/document_uploads/council-reports/2021/Referred%20Legislation%20%28Redacted%29%2C%202021.07.21%20-%20Section%203a%20-%20Aldermanic%20Introductions%20Traffic%20Regulations.pdf#page=5",
+          "source_date": "2021-07-21",
+          "date_kind": "council referral date",
+          "scope": "Printed/PDF pp.5–6: O2021-3041 (Reboyras), O2021-3004 (Cardona), O2021-3140 (Villegas); eastbound amendment titles for Linder–Lockwood, Kilbourn–Kenneth, Lockwood–Cicero and Narragansett–Linder. Page 6 visually inspected.",
+          "status": "alderman-sponsored proposals referred to committee; passage unverified",
+          "sha256": "3e74f7f29a3040d08ac8895ca45a8325faf3801c8fa9711963ce8bf916aace03"
+        },
+        {
+          "url": "https://myemail.constantcontact.com/Chicago-Department-of-Transportation-Newsletter-August-2021.html?aid=ara2MktjJgU&soid=1133951929146",
+          "source_date": "2021-08",
+          "date_kind": "CDOT newsletter",
+          "scope": "Documents CDOT/30th/31st/36th Ward collaboration on Belmont Cragin and Hermosa biking infrastructure and Divvy siting; no Roscoe movement details.",
+          "status": "official project context; no movement approval"
+        },
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "source_date": "2025-12",
+          "date_kind": "saved dataset current-as-of date",
+          "scope": "row-94iw~6jr2-x489, row-mszc_k87d.96yb, row-dmab-bde6~88ip, row-grrn_mdsu~v9ge",
+          "status": "official designation snapshot"
+        }
+      ],
+      "review_needed": "Find the Roscoe-specific CDOT intersection/striping drawings and original ward project notices. Searches of 30th/31st/36th ward web sources did not locate a scoped project notice in this review; council introductions are not a substitute. Verify adoption/installation and current Keeler-circle arrows, turns and barriers before approving movement."
     }
   ]
 }

@@ -2,7 +2,7 @@
 
 A route-based map of how far an ordinary car can follow a Chicago bicycle greenway in each direction. It follows the designated route through turns, shows continuous driving stretches, and explains the restrictions or unknown connections at their ends.
 
-**The current interface is a source-inferred pilot, not a completed driving or cycling-stress audit.** It covers 16 route sections on Wood, Berteau, Leland, Dickens, Manor, Kenmore, Glenwood, George, Loomis and 124th Street. None of its 867 movement boundaries is field reviewed. The citywide designation inventory remains a muted background layer.
+**The current interface is a source-inferred pilot, not a completed driving or cycling-stress audit.** It covers 22 route sections on Wood, Berteau, Leland, Dickens, Manor, Kenmore, Glenwood, George, Loomis, 124th Street, School, Roscoe, Winthrop and Ardmore. None of its 1,206 movement boundaries is field reviewed. The citywide designation inventory remains a muted background layer.
 
 ## Run
 
@@ -30,10 +30,11 @@ The car profile is a general through trip, without resident, delivery or emergen
 - Explicit route joins, unmatched geometry, conditional rules, unsupported restrictions and conflicting sources remain unknown until resolved.
 - Runs include only allowed edges connected by allowed movements. Distances follow WGS84 geometry and are clipped to route scope. An unknown boundary is not a verified maximum; a designation endpoint is not a physical road closure.
 - Each decision retains its reason and source links. Selected official records and manual-viewing notes form a review queue, not field approvals.
+- New project evidence is scoped to its city designation records. Detailed CDOT drawings, ward construction updates and current observations have different meanings; missing plans and uncertain installation dates remain explicit. Reports of time-dependent gates annotate the affected gap without inventing a permanent closure.
 
 Vehicle continuity measures potential through access. Traffic volume, speed and crossing conditions are also needed to assess cycling stress.
 
-Read the [tested implementation plan](docs/vehicle-continuity-plan.md) and [expanded validation and remaining review](docs/route-expansion-validation.md). The latter documents source limitations, 64 independently sampled directional junction decisions, and targeted regression cases. The [original pilot validation](docs/route-pilot-validation.md) preserves the earlier four-street checkpoint.
+Read the [tested implementation plan](docs/vehicle-continuity-plan.md) and [current plan review and validation](docs/route-plan-review-validation.md). The latter documents project-specific evidence, source limitations, 88 independently sampled directional junction decisions, and targeted regression cases. The [first expansion](docs/route-expansion-validation.md) and [original pilot](docs/route-pilot-validation.md) preserve the earlier checkpoints.
 
 ## Reproduce the pilot
 

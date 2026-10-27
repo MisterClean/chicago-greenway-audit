@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { boundaryTitle, coordinateAtFraction, distanceLabel, longestRun, remainingDistance, type Run, type Route } from './route-model';
+import { boundaryTitle, coordinateAtFraction, distanceLabel, evidenceAppliesToRoute, longestRun, remainingDistance, type Run, type Route } from './route-model';
 
 const makeRun = (geometry: Run['geometry'], direction: Run['direction'] = 'forward', length_m = 100): Run => ({
   id: direction, direction, geometry, length_m, edge_ids: [],
@@ -9,6 +9,15 @@ const makeRun = (geometry: Run['geometry'], direction: Run['direction'] = 'forwa
   complete_within_route: false, scope_limited: true, evidence_status: 'source-inferred',
 });
 const near = (actual: number, expected: number, tolerance = 0.1) => assert.ok(Math.abs(actual - expected) < tolerance, `${actual} ≈ ${expected}`);
+
+test('project evidence follows designation scope rather than a shared street name', () => {
+  const record = {id:'roscoe-lakeview-plan', source_record_ids:['lakeview']};
+  assert.equal(evidenceAppliesToRoute(record,{name:'Roscoe',source_ids:['northwest']}),false);
+  assert.equal(evidenceAppliesToRoute(record,{name:'Roscoe',source_ids:['lakeview']}),true);
+  assert.equal(evidenceAppliesToRoute({id:'wood-augusta'},{name:'Wood',source_ids:[]}),true);
+  assert.equal(evidenceAppliesToRoute({id:'woodstock-project'},{name:'Wood',source_ids:[]}),false);
+  assert.equal(evidenceAppliesToRoute({...record,source_record_ids:[]},{name:'Roscoe',source_ids:['lakeview']}),false);
+});
 
 test('distance labels do not round positive short distances to zero', () => {
   assert.equal(distanceLabel(1), '<0.01 mi');

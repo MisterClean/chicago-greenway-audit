@@ -1,5 +1,7 @@
 # Directional continuity: expanded source validation
 
+Historical checkpoint, committed as `b1866c8`. The [next expansion and plan review](route-plan-review-validation.md) supersedes the counts and export hash below. `data/routes/pilot-validation.json` now records that newer export.
+
 The candidate export covers 16 sections on Wood, Berteau, Leland, Dickens, Manor, Kenmore, Glenwood, George, Loomis and 124th Street. It contains 867 movements and 35 runs. **No movement has been field approved.** This audit checks consistency with the local snapshots, not current signs, driving legality, traffic volumes or cycling safety. A permitted junction decision does not prove access to its adjoining edges.
 
 On October 27, 2026 the candidate `public/routes/pilot.json` had SHA-256 `08de358a1a527244cde2649902865511dc16dc72996493fcbc9d2595848a6379`. The audit records that hash and the staged SQLite hash in `data/routes/pilot-validation.json`. Recheck both after any rebuild. The OSM extract is dated September 11, 2026; the Chicago Bike Routes snapshot is current as of December 2025. Live source links can differ from the snapshots.

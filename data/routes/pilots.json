@@ -49,6 +49,26 @@
       "name": "124th",
       "axis": "east",
       "source": "124TH"
+    },
+    {
+      "name": "School",
+      "axis": "east",
+      "source": "SCHOOL"
+    },
+    {
+      "name": "Roscoe",
+      "axis": "east",
+      "source": "ROSCOE"
+    },
+    {
+      "name": "Winthrop",
+      "axis": "north",
+      "source": "WINTHROP"
+    },
+    {
+      "name": "Ardmore",
+      "axis": "east",
+      "source": "ARDMORE"
     }
   ],
   "max_source_distance_m": 18,

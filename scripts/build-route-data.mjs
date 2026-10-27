@@ -1,9 +1,10 @@
 import { DatabaseSync } from "node:sqlite";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { assemble, alignedGraph, locate, metres, lineLength, shortestPath, compareCityOneWay, clipTerminal } from "./route-network.mjs";
+import { assemble, alignedGraph, locate, metres, lineLength, shortestPath, compareCityOneWay, clipTerminal, acceptsUnnamedWay } from "./route-network.mjs";
 import { edgeAccess, movementAccess } from "./motor-rules.mjs";
 import { traceRoute } from "./route-continuity.mjs";
 import { traceJunction } from "./junction-traversal.mjs";
+import { gapReviewContext } from "./route-evidence.mjs";
 const json = async (p) => JSON.parse(await readFile(p, "utf8"));
 const [source, config, osm, reviewEvidence] = await Promise.all(["data/sources/greenways.json", "data/routes/pilots.json", "data/sources/osm-source.json", "data/routes/review-evidence.json"].map(json));
 const db = new DatabaseSync("data/staging/network.sqlite", { readOnly: true });
@@ -59,7 +60,7 @@ for (const spec of config.streets) {
     for (const w of nearby) {
       const tags = JSON.parse(w.tags);
       const parkPath = spec.source === "DICKENS" && part.connector && ["cycleway", "path"].includes(tags.highway);
-      if (tags.name ? norm(tags.name) !== spec.source && !parkPath : !["residential", "living_street", "unclassified"].includes(tags.highway) && !parkPath) continue;
+      if (tags.name ? norm(tags.name) !== spec.source && !parkPath : !acceptsUnnamedWay(tags, parkPath)) continue;
       const nodes = JSON.parse(w.nodes), data = nodes.map((n) => getNode.get(n));
       if (data.some((n) => !n)) continue;
       if (parkPath && !data.some((n) => locate([n.lon, n.lat], part.connector).distance < 18)) continue;
@@ -108,8 +109,11 @@ for (const spec of config.streets) {
     let startResolved = true, endResolved = true;
     const gap = (a, b) => {
       if (b - a < 0.5) return;
-      const coords = subline(line, a, b), reason = "Designation could not be confidently matched to a connected OSM route.";
-      edges.push({ id: `${id}-gap-${edges.length + 1}`, way_id: null, from_node: null, to_node: null, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access: { forward: unknown(reason), reverse: unknown(reason) }, evidence_urls: [], role: "gap", source_range: [a, b] });
+      const coords = subline(line, a, b);
+      const context = gapReviewContext(reviewEvidence.records, id, part.ids, coords);
+      const note = context.map(record => record.gap_note).join(" ");
+      const reason = `Designation could not be confidently matched to a connected OSM route.${note ? ` ${note}` : ''}`;
+      edges.push({ id: `${id}-gap-${edges.length + 1}`, way_id: null, from_node: null, to_node: null, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access: { forward: unknown(reason), reverse: unknown(reason) }, evidence_urls: [...new Set(context.flatMap(record => record.sources.map(source => source.url)))], ...(note ? {review_note:note,evidence_ids:context.map(record => record.id)} : {}), role: "gap", source_range: [a, b] });
     };
     for (const c of candidates) {
       if (c.first.position < cursor - 3) continue;
@@ -205,7 +209,12 @@ for (const spec of config.streets) {
       const a = edges[i - 1], b = edges[i], connected = a.to_node != null && a.to_node === b.from_node;
       const forward = connected ? movementAccess({ fromWayId: a.traversals?.forward.exit_way_id ?? a.way_id, toWayId: b.traversals?.forward.entry_way_id ?? b.way_id, viaNodeId: a.to_node, relations, isUTurn: false, viaNodeTags: { id: a.to_node, tags: JSON.parse(getNode.get(a.to_node).tags || "{}") } }) : unknown("A source alignment gap leaves this movement unresolved.");
       const reverse = connected ? movementAccess({ fromWayId: b.traversals?.reverse.exit_way_id ?? b.way_id, toWayId: a.traversals?.reverse.entry_way_id ?? a.way_id, viaNodeId: a.to_node, relations, isUTurn: false, viaNodeTags: { id: a.to_node, tags: JSON.parse(getNode.get(a.to_node).tags || "{}") } }) : unknown("A source alignment gap leaves this movement unresolved.");
-      const urls = [...new Set([...forward.source_ids ?? [], ...reverse.source_ids ?? []].map((x) => `https://www.openstreetmap.org/${String(x)}`))];
+      const gapEdges = [a,b].filter(edge => edge.role === 'gap' && edge.review_note);
+      if (!connected && gapEdges.length) {
+        const note = [...new Set(gapEdges.map(edge => edge.review_note))].join(' ');
+        forward.reason += ` ${note}`; reverse.reason += ` ${note}`;
+      }
+      const urls = [...new Set([...([...forward.source_ids ?? [], ...reverse.source_ids ?? []].map((x) => `https://www.openstreetmap.org/${String(x)}`)), ...gapEdges.flatMap(edge => edge.evidence_urls)])];
       movements.push({ id: `${id}-movement-${i}`, coordinate: a.geometry.coordinates.at(-1), from_edge: a.id, to_edge: b.id, forward, reverse, evidence_urls: urls, cross_street: connected ? [...crossingNames.get(a.to_node) ?? []].sort().join(" / ") || null : null });
     }
     const nearbyOther = (p) => components.some((c) => c !== part && Math.min(metres(p, c.coords[0]), metres(p, c.coords.at(-1))) < 300);

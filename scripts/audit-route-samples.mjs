@@ -4,6 +4,7 @@ import { DatabaseSync } from 'node:sqlite';
 import { createHash } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
 import { createReadStream } from 'node:fs';
+import { metres } from './route-network.mjs';
 
 const [input = 'public/routes/pilot.json', output = 'data/routes/pilot-validation.json', database = 'data/staging/network.sqlite'] = process.argv.slice(2);
 const bytes = await readFile(input);
@@ -18,6 +19,8 @@ for (const r of restrictions) for (const m of r.members) if (m.role === 'via') (
 const wayRestrictions = new Set(restrictions.filter(r => r.members.some(m => m.role === 'via' && m.type === 'way')).flatMap(r => r.members.filter(m => m.type === 'way').map(m => m.ref)));
 const samples = [], skips = [];
 const sourceUrl = 'https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut';
+const cityRecords = JSON.parse(await readFile('data/sources/greenways.json', 'utf8'));
+const cityRecord = id => cityRecords.find(r => r[':id'] === id);
 function relevantNode(tags) { return Object.keys(tags).some(k => /^(barrier|access|vehicle|motor_vehicle|motorcar|hgv|bicycle|oneway|restriction)(:|$)/.test(k) || k.includes('conditional')); }
 for (const route of data.routes) {
   const edges = new Map(route.edges.map(e => [e.id, e]));
@@ -125,6 +128,50 @@ if (loom) {
 const south = data.routes.find(r=>r.name==='124th');
 if (south) {
   check('124th-scope-end-both-directions',true,south.runs.length===2 && south.runs.every(r=>r.start.kind==='scope_end' && r.end.kind==='scope_end' && r.scope_limited),'Endpoints mark mapped designation limits, not physical barriers.',[sourceUrl]);
+}
+// New-corridor checks tie each assertion to city records or staged OSM tags and
+// topology. These establish snapshot consistency, not present-day road rules.
+const roscoe = data.routes.filter(r=>r.name==='Roscoe');
+if (roscoe.length) {
+  const west = cityRecord('row-sbv9-nemh.v8g9'), east = cityRecord('row-smjt~ezi2_sb5e');
+  const wp=west?.the_geom.coordinates[0][0], ep=east?.the_geom.coordinates[0].at(-1);
+  const westRoute=roscoe.find(r=>r.source_ids.includes(west?.[':id'])), eastRoute=roscoe.find(r=>r.source_ids.includes(east?.[':id']));
+  const unknownNear=(r,p)=>r.runs.some(run=>[run.start,run.end].some(end=>end.kind==='unknown' && end.coordinate && metres(end.coordinate,p)<15));
+  check('roscoe-broadway-city-separation',true,!!wp && !!ep && metres(wp,ep)>20 && !!westRoute && !!eastRoute && westRoute.id!==eastRoute.id && unknownNear(westRoute,wp) && unknownNear(eastRoute,ep), 'City records do not meet at Broadway; keep the intervening movement unresolved.',[sourceUrl]);
+  check('roscoe-source-components',3,roscoe.length,'Three distinct city designation components remain separate in the export.',[sourceUrl]);
+  const ids=[1535693373,1535693538], ws=ids.map(id=>getWay.get(id)), ring=roscoe.flatMap(r=>r.edges).find(e=>e.role==='junction' && ids.every(id=>e.way_ids?.includes(id)));
+  const sourceRing=ws.every(Boolean) && ws.every(w=>{const t=JSON.parse(w.tags);return t.highway==='tertiary' && t.junction==='circular' && t.oneway==='yes';}) && (()=>{const a=JSON.parse(ws[0].nodes),b=JSON.parse(ws[1].nodes);return a[0]===b[0] && a.at(-1)===b.at(-1);})();
+  check('roscoe-keeler-source-ring',true,sourceRing,'Staged unnamed tertiary ways share endpoints but both one-way sequences run the same way between them.',ids.map(id=>`https://www.openstreetmap.org/way/${id}`));
+  check('roscoe-keeler-directional', ['allowed','unknown','conflicting'],ring ? [ring.access.forward.status,ring.access.reverse.status,ring.access.reverse.evidence_status] : [],'Eastbound ring path is inferred; inconsistent reverse circulation remains unresolved.',ids.map(id=>`https://www.openstreetmap.org/way/${id}`));
+}
+const winthrop=data.routes.find(r=>r.name==='Winthrop');
+if (winthrop) {
+  const before=getWay.get(1286431917), after=getWay.get(174711016);
+  const gap=winthrop.edges.find(e=>e.role==='gap' && e.length_m>75 && e.length_m<90);
+  const i=gap ? winthrop.edges.indexOf(gap) : -1;
+  const bounds=gap && before && after && JSON.parse(before.nodes).includes(winthrop.edges[i-1]?.to_node) && JSON.parse(after.nodes).includes(winthrop.edges[i+1]?.from_node);
+  check('winthrop-interior-gap',true,!!bounds && gap.access.forward.status==='unknown' && gap.access.reverse.status==='unknown' && winthrop.movements[i-1]?.forward.status==='unknown' && winthrop.movements[i]?.reverse.status==='unknown','The staged Winthrop ways end on opposite sides of the unmatched city segment; neither movement is inferred connected.',[sourceUrl,'https://www.openstreetmap.org/way/1286431917','https://www.openstreetmap.org/way/174711016']);
+  const evidence=JSON.parse(await readFile('data/routes/review-evidence.json','utf8')).records.find(r=>r.id==='winthrop-goudy-gate-gap');
+  const urls=evidence?.sources?.map(s=>s.url) ?? [], endpointGaps=winthrop.edges.filter(e=>e.role==='gap' && e!==gap);
+  const within=!!gap && evidence?.gap_scope?.route_id===winthrop.id && evidence.source_record_ids?.some(id=>winthrop.source_ids.includes(id)) && gap.geometry.coordinates.every(([lon,lat])=>lon>=evidence.gap_scope.bounds[0][0] && lon<=evidence.gap_scope.bounds[1][0] && lat>=evidence.gap_scope.bounds[0][1] && lat<=evidence.gap_scope.bounds[1][1]);
+  check('winthrop-goudy-gap-context',true,!!within && urls.length===2 && urls.every(url=>gap.evidence_urls.includes(url)) && gap.evidence_ids?.includes(evidence.id) && gap.review_note===evidence.gap_note && ['forward','reverse'].every(dir=>gap.access[dir].status==='unknown' && gap.access[dir].reason.includes(evidence.gap_note)) && endpointGaps.length>0 && endpointGaps.every(e=>!e.evidence_ids?.includes(evidence.id) && !urls.some(url=>e.evidence_urls.includes(url))), 'Ward gate context applies to the scoped unmatched segment only; it does not establish car permission or a current closure.',urls);
+}
+const ardmore=data.routes.find(r=>r.name==='Ardmore');
+if (ardmore) {
+  const city=cityRecord('row-39t4_437d.zgtb'), east=cityRecord('row-bnei~wvhc.jrsx'), trail=getWay.get(26237577), road=getWay.get(30679340);
+  const tt=trail && JSON.parse(trail.tags), rt=road && JSON.parse(road.tags), roadEdges=ardmore.edges.filter(e=>e.way_id===30679340), gap=ardmore.edges.at(-1);
+  check('ardmore-lakefront-source',true,!!east && tt?.highway==='cycleway' && tt?.name==='Lakefront Trail' && !!gap && gap.role==='gap' && gap.length_m>50 && gap.access.forward.status==='unknown' && gap.access.reverse.status==='unknown' && metres(gap.geometry.coordinates.at(-1),east.the_geom.coordinates[0][0])<1,'The city designation reaches the lakefront; the staged cycleway is not evidence of a general car connection.',[sourceUrl,'https://www.openstreetmap.org/way/26237577']);
+  check('ardmore-contraflow-source',true,city?.br_oneway==='2W' && city?.contraflow==='Y' && city?.oneway_dir==='E' && rt?.oneway==='yes' && rt?.['oneway:bicycle']==='no','City and OSM record bicycle contraflow alongside eastbound motor direction.',[sourceUrl,'https://www.openstreetmap.org/way/30679340']);
+  check('ardmore-contraflow-motor',true,roadEdges.length>0 && roadEdges.every(e=>e.access.forward.status==='allowed' && e.access.reverse.status==='blocked'),'The bicycle exception does not authorize westbound motor travel.', ['https://www.openstreetmap.org/way/30679340']);
+}
+const school=data.routes.find(r=>r.name==='School');
+if (school) {
+  const ids=['row-ensn~hrye.ce4y','row-h7za.495h_8e9t'];
+  check('school-city-direction',true,ids.every(id=>cityRecord(id)?.oneway_dir==='E') && ids.every(id=>school.source_ids.includes(id)),'Both city designation records state eastbound motor direction.',[sourceUrl]);
+  for (const id of [619457514,619457512,1265277206,185352303]) {
+    const w=getWay.get(id), t=w && JSON.parse(w.tags), edges=school.edges.filter(e=>e.way_id===id);
+    check(`school-${id}-westbound-conflict`,true,!!t && t.highway==='residential' && t.oneway==null && edges.length>0 && edges.every(e=>e.access.reverse.status==='unknown' && e.access.reverse.evidence_status==='conflicting'),'The snapshot lacks a motor one-way tag while the city asserts eastbound; westbound requires review.',[sourceUrl,`https://www.openstreetmap.org/way/${id}`]);
+  }
 }
 const dbHash = createHash('sha256');
 for await (const chunk of createReadStream(database)) dbHash.update(chunk);

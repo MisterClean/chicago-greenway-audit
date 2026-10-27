@@ -2,6 +2,9 @@ import geodesic from 'geographiclib-geodesic';
 
 export const metres = (a,b) => geodesic.Geodesic.WGS84.Inverse(a[1],a[0],b[1],b[0]).s12;
 export const lineLength = points => points.slice(1).reduce((n,p,i)=>n+metres(points[i],p),0);
+// Circular junctions must reach the graph for its separate footprint and
+// topology checks, even when their road classification is above residential.
+export const acceptsUnnamedWay = (tags, parkPath = false) => parkPath || ['residential','living_street','unclassified'].includes(tags.highway) || (Boolean(tags.highway) && ['circular','roundabout'].includes(tags.junction));
 const xy = p => [p[0]*83100,p[1]*111100];
 export function locate(point,line) {
   const p=xy(point); let best={distance:Infinity,position:0,heading:[0,0]}, offset=0;

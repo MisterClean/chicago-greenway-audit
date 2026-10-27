@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { assemble, alignedGraph, shortestPath, compareCityOneWay, clipTerminal } from './route-network.mjs';
+import { assemble, alignedGraph, shortestPath, compareCityOneWay, clipTerminal, acceptsUnnamedWay } from './route-network.mjs';
 const record=(id,coords)=>({':id':id,the_geom:{coordinates:[coords]}});
 test('assembles connected records with consistent route orientation and retains gaps',()=>{
  const parts=assemble([record('a',[[0,0],[0,0.001]]),record('b',[[0,0.002],[0,0.001]]),record('c',[[0,0.004],[0,0.005]])],'north');
@@ -28,6 +28,13 @@ test('matches both sides of a small split circular junction using shared nodes',
  const ways=[{id:1,nodes:[1,2],coordinates:[[0,0],[0,0.0001]]},{id:2,nodes:[2,3,4],coordinates:[[0,0.0001],[-0.00005,0.00015],[0,0.0002]],tags:circle},{id:3,nodes:[4,5,2],coordinates:[[0,0.0002],[0.00005,0.00015],[0,0.0001]],tags:circle},{id:4,nodes:[4,6],coordinates:[[0,0.0002],[0,0.0003]]}];
  const graph=alignedGraph(line,ways);assert.ok(shortestPath(graph,1,6));assert.ok(graph.get(2).some(e=>e.to===5));assert.ok(graph.get(4).some(e=>e.to===3));
  const tooLarge=alignedGraph(line,ways,2);assert.equal(shortestPath(tooLarge,1,6),null);
+});
+
+test('unnamed tertiary junctions reach bounded graph matching, unlike ordinary tertiary roads',()=>{
+ assert.equal(acceptsUnnamedWay({highway:'tertiary',junction:'circular'}),true);
+ assert.equal(acceptsUnnamedWay({highway:'tertiary',junction:'roundabout'}),true);
+ assert.equal(acceptsUnnamedWay({highway:'tertiary'}),false);
+ assert.equal(acceptsUnnamedWay({junction:'circular'}),false);
 });
 
 test('pilot export preserves source components, known restrictions and unreviewed evidence',async()=>{

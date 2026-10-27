@@ -80,6 +80,21 @@ export interface RouteData {
   routes: Route[];
 }
 
+export interface EvidenceRecord {
+  id: string;
+  source_record_ids?: string[];
+  location: string;
+  source_inference: string;
+  review_needed: string;
+  sources: {url: string; source_date: string | null; scope: string; status: string}[];
+}
+
+// A project on one part of a street cannot substantiate a distant namesake.
+export function evidenceAppliesToRoute(record: Pick<EvidenceRecord, 'id' | 'source_record_ids'>, route: Pick<Route, 'name' | 'source_ids'>): boolean {
+  if (record.source_record_ids) return record.source_record_ids.some(id => route.source_ids.includes(id));
+  return record.id.startsWith(`${route.name.toLowerCase()}-`);
+}
+
 export function distanceLabel(meters: number): string {
   if (meters > 0 && meters / 1609.344 < 0.01) return '<0.01 mi';
   return `${(meters / 1609.344).toFixed(2)} mi`;
