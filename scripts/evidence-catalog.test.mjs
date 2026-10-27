@@ -66,6 +66,16 @@ test('validation rejects dropped observations and tampering across the derived c
     assert.throws(() => validateEvidenceCatalog(v), /raw_evidence/);
   }
 });
+test('batch-wide search gaps remain discoverable with their original scope and record bindings', () => {
+  const input = sample();
+  input.research_batches = [{id:'batch',record_ids:['a','b'],metadata:{search_gaps:[{scope:'two wards',outcome:'No detailed plan located'}]}}];
+  const catalog = compileEvidenceCatalog(input);
+  assert.deepEqual(catalog.search_gaps.find(g => g.research_batch_id === 'batch'), {
+    evidence_id:null,research_batch_id:'batch',record_ids:['a','b'],field:'search_gaps',value:input.research_batches[0].metadata.search_gaps,
+  });
+  catalog.search_gaps = catalog.search_gaps.filter(g => g.research_batch_id !== 'batch');
+  assert.throws(() => validateEvidenceCatalog(catalog), /search gaps differ/);
+});
 test('CLI check catches a stale output without changing it', () => {
   const root = mkdtempSync(join(tmpdir(), 'catalog-test-'));
   try {

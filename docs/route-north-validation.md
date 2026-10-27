@@ -1,5 +1,7 @@
 # Winnemac, Ainslie, Carmen and Argyle expansion
 
+Historical checkpoint `975fb1f`, pushed October 27, 2026. For the current export see [Aldine/Cortland/Berwyn/Polk validation](route-aldine-berwyn-polk-validation.md).
+
 Reviewed October 27, 2026. This batch follows the pushed `a3d4a22` checkpoint and adds eight sections on four streets. The export now covers **18 streets, 30 sections, 1,391 movements and 62 directional runs**, over 27.76398 designated miles. All decisions remain source-inferred or conflicting, with zero field approvals. Continuous car access alone does not establish cycling stress.
 
 Three Terra 6.1 High agents worked in parallel on Winnemac/Ainslie sources, Carmen/Argyle sources and the evidence catalog. Follow-up implementation and review covered explicit route turns, source-catalog integrity and independent source checks. The sources are preserved in `data/routes/review-evidence.json`, with project-specific city row bindings, dates, limitations and research-batch metadata.

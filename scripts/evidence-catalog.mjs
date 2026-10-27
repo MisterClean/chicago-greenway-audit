@@ -111,7 +111,8 @@ function buildCatalog(evidence) {
     source.metadata_gaps = Object.keys(source.metadata_variants).filter(k => source.metadata_variants[k].length === 0);
   }
   const searchFields = object => Object.entries(object).filter(([k]) => /search_(?:gap|attempt)/i.test(k));
-  const catalog = { schema_version: 1, generated_from: { schema_version: evidence.schema_version ?? null, reviewed_at: evidence.reviewed_at ?? null, method: evidence.method ?? null }, sources: [...sourceMap.values()].sort((a,b) => a.id.localeCompare(b.id)), observations, search_gaps: [...searchFields(evidence).map(([field,value]) => ({ evidence_id:null, field, value:clone(value) })), ...evidence.records.flatMap(r => searchFields(r).map(([field,value]) => ({ evidence_id:r.id, field, value:clone(value) })))], raw_evidence: clone(evidence) };
+  const batchSearches = (evidence.research_batches ?? []).flatMap(batch => searchFields(batch.metadata ?? {}).map(([field,value]) => ({evidence_id:null,research_batch_id:batch.id,record_ids:clone(batch.record_ids ?? []),field,value:clone(value)})));
+  const catalog = { schema_version: 1, generated_from: { schema_version: evidence.schema_version ?? null, reviewed_at: evidence.reviewed_at ?? null, method: evidence.method ?? null }, sources: [...sourceMap.values()].sort((a,b) => a.id.localeCompare(b.id)), observations, search_gaps: [...searchFields(evidence).map(([field,value]) => ({ evidence_id:null, field, value:clone(value) })), ...batchSearches, ...evidence.records.flatMap(r => searchFields(r).map(([field,value]) => ({ evidence_id:r.id, field, value:clone(value) })))], raw_evidence: clone(evidence) };
   return catalog;
 }
 export function compileEvidenceCatalog(evidence) {

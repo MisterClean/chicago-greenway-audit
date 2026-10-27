@@ -117,6 +117,33 @@
       "name": "Argyle",
       "axis": "east",
       "source": "ARGYLE"
+    },
+    {
+      "name": "Aldine",
+      "axis": "east",
+      "source": "ALDINE",
+      "review_connection": {
+        "from_source_id": "row-y2dq.3s9k_38gf",
+        "to_source_id": "row-vhym~pu4g.guju",
+        "evidence_id": "aldine-broadway-offset",
+        "max_distance_m": 45
+      }
+    },
+    {
+      "name": "Cortland",
+      "axis": "east",
+      "source": "CORTLAND"
+    },
+    {
+      "name": "Berwyn",
+      "axis": "east",
+      "source": "BERWYN",
+      "source_aliases": ["BERWN"]
+    },
+    {
+      "name": "Polk",
+      "axis": "east",
+      "source": "POLK"
     }
   ],
   "max_source_distance_m": 18,

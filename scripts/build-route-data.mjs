@@ -1,6 +1,6 @@
 import { DatabaseSync } from "node:sqlite";
 import { readFile, writeFile, mkdir } from "node:fs/promises";
-import { assemble, alignedGraph, locate, metres, lineLength, shortestPath, compareCityOneWay, clipTerminal, acceptsUnnamedWay } from "./route-network.mjs";
+import { assemble, alignedGraph, locate, metres, lineLength, shortestPath, compareCityOneWay, clipTerminal, acceptsUnnamedWay, designationRecords, joinForReview } from "./route-network.mjs";
 import { edgeAccess, movementAccess } from "./motor-rules.mjs";
 import { traceRoute } from "./route-continuity.mjs";
 import { traceJunction } from "./junction-traversal.mjs";
@@ -39,8 +39,9 @@ const subline = (line, a, b) => {
 const norm = (s) => (s ?? "").toUpperCase().replace(/^(N|S|E|W|NORTH|SOUTH|EAST|WEST) /, "").replace(/ (AVENUE|AVE|STREET|ST|ROAD|RD|DRIVE|DR|BOULEVARD|BLVD|PLACE|PL|COURT|CT|PARKWAY|PKWY|TERRACE|TER|LANE|LN)$/, "");
 const all = [];
 for (const spec of config.streets) {
-  const records = source.filter((r) => r.st_name === spec.source);
+  const records = designationRecords(source, spec);
   let components = assemble(records, spec.axis);
+  if (spec.review_connection) components = joinForReview(components, spec.review_connection, reviewEvidence.records);
   if (["LELAND", "DICKENS"].includes(spec.source) && components.length === 2) {
     const [a, b] = components;
     components = [{ coords: [...a.coords, ...b.coords], ids: [...a.ids, ...b.ids], designationLines: [a.coords, b.coords], connector: [a.coords.at(-1), b.coords[0]] }];

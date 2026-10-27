@@ -1,7 +1,30 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { assemble, alignedGraph, shortestPath, compareCityOneWay, clipTerminal, acceptsUnnamedWay } from './route-network.mjs';
+import { assemble, alignedGraph, shortestPath, compareCityOneWay, clipTerminal, acceptsUnnamedWay, designationRecords, joinForReview } from './route-network.mjs';
 const record=(id,coords)=>({':id':id,the_geom:{coordinates:[coords]}});
+test('documented review connection preserves designated mileage and rejects unrelated or unbound joins', () => {
+ const west=[[-87.646,41.94],[-87.644,41.94]],east=[[-87.644,41.9403],[-87.64,41.9403]];
+ const parts=[{coords:west,ids:['west']},{coords:east,ids:['east']}];
+ const binding={from_source_id:'west',to_source_id:'east',evidence_id:'jog',max_distance_m:40};
+ const evidence=[{id:'jog',source_record_ids:['west','east']}];
+ const [joined]=joinForReview(parts,binding,evidence);
+ assert.deepEqual(joined.designationLines,[west,east]);
+ assert.deepEqual(joined.connector,[west.at(-1),east[0]]);
+ assert.equal(joined.connection_evidence_id,'jog');
+ assert.equal(parts.length,2);
+ assert.throws(()=>joinForReview(parts,binding,[]),/evidence bound/);
+ assert.throws(()=>joinForReview(parts,{...binding,max_distance_m:10},evidence),/distance bound/);
+ assert.throws(()=>joinForReview(parts,{...binding,to_source_id:'west'},evidence),/distinct/);
+ assert.throws(()=>joinForReview([parts[0],{coords:west,ids:['other']},parts[1]],binding,evidence),/adjacent/);
+});
+test('explicit designation alias includes the typo without rewriting or fuzzy matching source records', () => {
+ const source=[{':id':'west',st_name:'BERWN'},{':id':'east',st_name:'BERWYN'},{':id':'other',st_name:'BERWYNNE'}];
+ const selected=designationRecords(source,{source:'BERWYN',source_aliases:['BERWN']});
+ assert.deepEqual(selected.map(r=>r[':id']),['west','east']);
+ assert.equal(selected[0],source[0]); assert.equal(selected[0].st_name,'BERWN');
+ assert.deepEqual(designationRecords(source,{source:'BERWYN'}).map(r=>r[':id']),['east']);
+ assert.throws(()=>designationRecords(source,{source:'MISSING'}),/No designation/);
+});
 test('assembles connected records with consistent route orientation and retains gaps',()=>{
  const parts=assemble([record('a',[[0,0],[0,0.001]]),record('b',[[0,0.002],[0,0.001]]),record('c',[[0,0.004],[0,0.005]])],'north');
  assert.equal(parts.length,2);assert.deepEqual(parts[0].coords,[[0,0],[0,0.001],[0,0.002]]);assert.deepEqual(new Set(parts[0].ids),new Set(['a','b']));

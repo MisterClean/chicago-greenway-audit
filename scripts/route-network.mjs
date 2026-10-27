@@ -5,6 +5,15 @@ export const lineLength = points => points.slice(1).reduce((n,p,i)=>n+metres(poi
 // Circular junctions must reach the graph for its separate footprint and
 // topology checks, even when their road classification is above residential.
 export const acceptsUnnamedWay = (tags, parkPath = false) => parkPath || ['residential','living_street','unclassified'].includes(tags.highway) || (Boolean(tags.highway) && ['circular','roundabout'].includes(tags.junction));
+// Correct only catalogued source-name variants; never rewrite the source rows.
+export function designationRecords(source, spec) {
+  const aliases = spec.source_aliases ?? [];
+  if (!Array.isArray(aliases) || [spec.source, ...aliases].some(name => typeof name !== 'string' || !name.trim())) throw new Error('Designation names must be explicit nonempty strings');
+  const names = new Set([spec.source, ...aliases]);
+  const records = source.filter(record => names.has(record.st_name));
+  if (!records.length) throw new Error(`No designation records for ${spec.source}`);
+  return records;
+}
 const xy = p => [p[0]*83100,p[1]*111100];
 export function locate(point,line) {
   const p=xy(point); let best={distance:Infinity,position:0,heading:[0,0]}, offset=0;
@@ -23,6 +32,20 @@ export function assemble(records,axis) {
   } if(!joined)break; }
   for(const p of parts) {let k=axis==='north'?1:0;if(p.coords[0][k]>p.coords.at(-1)[k])p.coords.reverse();}
   return parts.sort((a,b)=>a.coords[0][axis==='north'?1:0]-b.coords[0][axis==='north'?1:0]);
+}
+// A documented bicycle connection may group sections for review, but its
+// schematic chord is neither designated mileage nor an approved motor path.
+export function joinForReview(components, binding, evidence) {
+  const from = components.find(part => part.ids.includes(binding.from_source_id));
+  const to = components.find(part => part.ids.includes(binding.to_source_id));
+  const record = evidence.find(item => item.id === binding.evidence_id);
+  if (!from || !to || from === to || from.connector || to.connector) throw new Error('Review connection requires two distinct unjoined designation components');
+  if (components.indexOf(to) !== components.indexOf(from) + 1) throw new Error('Review connection must follow adjacent oriented components');
+  if (!record || ![binding.from_source_id, binding.to_source_id].every(id => record.source_record_ids?.includes(id))) throw new Error('Review connection needs evidence bound to both city records');
+  const connector = [from.coords.at(-1), to.coords[0]];
+  if (!Number.isFinite(binding.max_distance_m) || binding.max_distance_m <= 0 || metres(...connector) > binding.max_distance_m) throw new Error('Review connection exceeds its explicit distance bound');
+  const joined = {coords:[...from.coords,...to.coords],ids:[...from.ids,...to.ids],designationLines:[from.coords,to.coords],connector,connection_evidence_id:record.id};
+  return components.flatMap(part => part === from ? [joined] : part === to ? [] : [part]);
 }
 // Segment candidates must remain near the full designation and follow its heading.
 // Traversal uses real node identity, so crossings at different grades cannot connect.

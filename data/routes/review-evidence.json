@@ -2000,6 +2000,1201 @@
           "missing_artifact": "ward project communication and design sheet specific to this city row"
         }
       ]
+    },
+    {
+      "id": "aldine-clark-broadway-direction",
+      "source_record_ids": [
+        "row-y2dq.3s9k_38gf"
+      ],
+      "location": "Aldine Avenue from Clark Street to Broadway",
+      "movement": "eastbound and westbound along Aldine",
+      "source_inference": "The city row labels this segment eastbound. The plan shows humps and curb extensions, which do not themselves prohibit through travel. The city motor-direction attribute and bicycle-direction fields both indicate eastbound; neither independently verifies current motor-vehicle signs.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for historical design; motor signs unverified",
+      "effective_period": "2017 design; city extract retrieved 2026-09-19; current conditions unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Clark_to_LSD.pdf",
+          "title": "School-Aldine / Roscoe: Clark to Lake Shore Drive long plot",
+          "publisher": "Chicago Department of Transportation, hosted by 44th Ward",
+          "source_type": "engineering design drawing",
+          "source_date": "2017-11-13",
+          "date_kind": "PDF creation metadata",
+          "retrieved_at": "2026-10-27",
+          "scope": "Aldine Clark to Inner Lake Shore Drive, including Broadway offset",
+          "status": "design, not as-built",
+          "pages": [
+            1
+          ],
+          "sha256": "b0a38b6474c52c699a88f840907338c7aff6a03700a5a9c38905260df53a3e6e",
+          "review_method": "Visually inspected complete one-page drawing and enlarged inset"
+        },
+        {
+          "url": "https://www.44thward.org/infrastructure/bike-pedestrian-infrastructure/school-aldine-roscoe-greenway/",
+          "title": "School/Aldine & Roscoe Greenway",
+          "publisher": "44th Ward",
+          "source_type": "alderman project update",
+          "source_date": "2018-08-20",
+          "date_kind": "project update",
+          "retrieved_at": "2026-10-27",
+          "scope": "Project-wide construction and installation update",
+          "status": "historical construction update",
+          "review_method": "Read project update section"
+        }
+      ],
+      "review_needed": "Check present one-way signs at every block and turn restrictions at Clark and Broadway.",
+      "search_gaps": [
+        "No current dated motor sign inventory located."
+      ]
+    },
+    {
+      "id": "aldine-broadway-offset",
+      "source_record_ids": [
+        "row-y2dq.3s9k_38gf",
+        "row-vhym~pu4g.guju"
+      ],
+      "location": "Aldine Avenue at Broadway",
+      "movement": "eastbound approach, north along Broadway, eastbound departure on Aldine",
+      "source_inference": "The drawing places the eastern Aldine leg north of the western leg and shows curb extensions and a stop control. The route uses a northward jog; a car connection requires permitted turns and a drivable Broadway segment. The drawing and bicycle treatment do not independently establish those permissions.",
+      "review_status": "needs-review",
+      "confidence": "high for 2017 drawing geometry; low for current motor turns",
+      "effective_period": "2017 design; construction observed 2018; current conditions unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Clark_to_LSD.pdf",
+          "title": "School-Aldine / Roscoe: Clark to Lake Shore Drive long plot",
+          "publisher": "Chicago Department of Transportation, hosted by 44th Ward",
+          "source_type": "engineering design drawing",
+          "source_date": "2017-11-13",
+          "date_kind": "PDF creation metadata",
+          "retrieved_at": "2026-10-27",
+          "scope": "Aldine Clark to Inner Lake Shore Drive, including Broadway offset",
+          "status": "design, not as-built",
+          "pages": [
+            1
+          ],
+          "sha256": "b0a38b6474c52c699a88f840907338c7aff6a03700a5a9c38905260df53a3e6e",
+          "review_method": "Visually inspected complete one-page drawing and enlarged inset"
+        },
+        {
+          "url": "https://www.44thward.org/infrastructure/bike-pedestrian-infrastructure/school-aldine-roscoe-greenway/",
+          "title": "School/Aldine & Roscoe Greenway",
+          "publisher": "44th Ward",
+          "source_type": "alderman project update",
+          "source_date": "2018-08-20",
+          "date_kind": "project update",
+          "retrieved_at": "2026-10-27",
+          "scope": "Project-wide construction and installation update",
+          "status": "historical construction update",
+          "review_method": "Read project update section"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2018/08/08/eyes-on-the-street-roscoe-and-schoolaldine-greenway-begins-to-take-shape",
+          "title": "Eyes on the Street: Roscoe and School/Aldine Greenway Begins to Take Shape",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "firsthand reporting",
+          "source_date": "2018-08-08",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Aldine/Broadway curb extensions under construction and proposed bike jog",
+          "status": "historical report",
+          "review_method": "Read article and photo caption"
+        }
+      ],
+      "review_needed": "Check both Aldine approaches, Broadway carriageway, each turn sign and present markings; do not join via a bicycle-only facility.",
+      "search_gaps": [
+        "No current dated turn-control or as-built plan found."
+      ],
+      "gap_scope": {
+        "route_id": "aldine-1",
+        "bounds": [
+          [
+            -87.6447,
+            41.9416
+          ],
+          [
+            -87.6441,
+            41.9425
+          ]
+        ]
+      },
+      "gap_note": "The 2017 plan depicts the Broadway offset and the contemporaneous report describes a northbound bicycle jog. The schematic gap is not verified road geometry or evidence of current motor permissions; inspect the connector and each turn."
+    },
+    {
+      "id": "aldine-broadway-lakeshore-direction",
+      "source_record_ids": [
+        "row-vhym~pu4g.guju"
+      ],
+      "location": "Aldine Avenue from Broadway to Inner Lake Shore Drive",
+      "movement": "eastbound and westbound along Aldine; lakefront connection",
+      "source_inference": "The city row labels the segment eastbound. The 2017 design shows speed humps and a bicycle crossing at Inner Lake Shore Drive with a full-block curb extension; these are not proof of a vehicle route to or through the underpass.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for design, current motor movements unverified",
+      "effective_period": "2017 design; city extract retrieved 2026-09-19; current conditions unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Clark_to_LSD.pdf",
+          "title": "School-Aldine / Roscoe: Clark to Lake Shore Drive long plot",
+          "publisher": "Chicago Department of Transportation, hosted by 44th Ward",
+          "source_type": "engineering design drawing",
+          "source_date": "2017-11-13",
+          "date_kind": "PDF creation metadata",
+          "retrieved_at": "2026-10-27",
+          "scope": "Aldine Clark to Inner Lake Shore Drive, including Broadway offset",
+          "status": "design, not as-built",
+          "pages": [
+            1
+          ],
+          "sha256": "b0a38b6474c52c699a88f840907338c7aff6a03700a5a9c38905260df53a3e6e",
+          "review_method": "Visually inspected complete one-page drawing and enlarged inset"
+        },
+        {
+          "url": "https://www.44thward.org/infrastructure/bike-pedestrian-infrastructure/school-aldine-roscoe-greenway/",
+          "title": "School/Aldine & Roscoe Greenway",
+          "publisher": "44th Ward",
+          "source_type": "alderman project update",
+          "source_date": "2018-08-20",
+          "date_kind": "project update",
+          "retrieved_at": "2026-10-27",
+          "scope": "Project-wide construction and installation update",
+          "status": "historical construction update",
+          "review_method": "Read project update section"
+        }
+      ],
+      "review_needed": "Inspect current direction signs, Lake Shore Drive turns and actual vehicle access at the eastern endpoint.",
+      "search_gaps": [
+        "No current dated intersection or underpass access documentation located."
+      ]
+    },
+    {
+      "id": "cortland-damen-ashland-scope",
+      "source_record_ids": [
+        "row-hkyx_48ex_8z98"
+      ],
+      "location": "Cortland Street between Damen Avenue and Ashland Avenue",
+      "movement": "both directions along Cortland; turns at Damen, Marshfield and Ashland",
+      "source_inference": "The city row records a two-way bicycle route and no motor one-way direction, not proof of continuous motor access. The 2019 CDOT meeting report describes greenways and bicycle turn pockets at Damen and Marshfield; neither pocket establishes motor turning permission or a car barrier.",
+      "review_status": "needs-review",
+      "confidence": "moderate for 2019 reported project; low for present movement",
+      "effective_period": "2016 proposal; 2019 reported work; city extract retrieved 2026-09-19",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://activetransportation.org/blog/cdot-aldermen-share-plans-for-new-greenways/",
+          "title": "CDOT, aldermen share plans for new greenways",
+          "publisher": "Active Transportation Alliance",
+          "source_type": "advocacy report",
+          "source_date": "2016-05-31",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "2016 Wood and Cortland Bucktown public meeting with CDOT and 2nd and 32nd ward aldermen",
+          "status": "proposal reporting",
+          "review_method": "Read article text"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2019/12/05/a-cdot-show-and-tell-on-this-years-new-bikeways-and-whats-on-deck-for-2020",
+          "title": "A CDOT show-and-tell on this year's new bikeways, and what's on deck for 2020",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "report of CDOT meeting",
+          "source_date": "2019-12-05",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Bucktown Cortland and Wood greenways and bicycle turn pockets at Damen and Marshfield",
+          "status": "historical reported completion",
+          "review_method": "Read meeting report"
+        },
+        {
+          "url": "https://www.ward32.org/zoning-infrastructure",
+          "title": "Zoning & Infrastructure",
+          "publisher": "32nd Ward",
+          "source_type": "alderman infrastructure page",
+          "source_date": null,
+          "date_kind": "publication date not verified",
+          "retrieved_at": "2026-10-27",
+          "scope": "Current infrastructure list; Cortland Street Bridge project is east of Damen–Ashland study section",
+          "status": "context; no segment-specific movement finding",
+          "review_method": "Read infrastructure listing"
+        }
+      ],
+      "review_needed": "Obtain CDOT detailed design and 2nd/32nd Ward project updates; inspect current signs, each intersection and designated route continuity.",
+      "search_gaps": [
+        "Searches for CDOT Wood/Cortland detailed plan and ward project page did not yield an inspectable original design; the advocacy article’s CDOT project link failed to load.",
+        "No current motor direction, turn or barrier evidence found.",
+        "Focused October 27 search for 2016 Wood/Cortland CDOT plan and Marshfield/Damen design produced contemporaneous reports, but no inspectable original detailed plan graphic."
+      ]
+    },
+    {
+      "id": "cortland-hamlin-ridgeway-scope",
+      "source_record_ids": [
+        "row-kb56.czy3-uyw7"
+      ],
+      "location": "Cortland Street between Hamlin and Ridgeway avenues",
+      "movement": "both directions along Cortland",
+      "source_inference": "The city row records a two-way bicycle route and no motor one-way direction. A separate 2020 temporary Slow Street proposal covered Ridgeway eastward, but its statements do not establish the restrictions on the Hamlin–Ridgeway block or current conditions.",
+      "review_status": "needs-review",
+      "confidence": "low for current motor movement",
+      "effective_period": "city extract retrieved 2026-09-19; current conditions unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2020/06/11/installation-of-slow-street-alternative-to-606-starts-tomorrow-with-wabansia-opening",
+          "title": "Installation of Slow Street alternative to 606 starts tomorrow with Wabansia opening",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "report of ward statements",
+          "source_date": "2020-06-11",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "2020 temporary Alt-Bloomingdale plans including Cortland Ridgeway to Rockwell",
+          "status": "temporary proposal and anticipated installation; not current restriction",
+          "review_method": "Read article and statements"
+        },
+        {
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/36065987-5e2c-48c4-93e3-237b39db438b.pdf",
+          "title": "Committee on Pedestrian and Traffic Safety: direct introductions",
+          "publisher": "Chicago City Council",
+          "source_type": "committee agenda",
+          "source_date": null,
+          "date_kind": "meeting date not verified",
+          "retrieved_at": "2026-10-27",
+          "scope": "Ward 26 item O2025-0019329 proposes 20 mph for Cortland Hamlin to Lawndale",
+          "status": "direct introduction; passage and installation unverified",
+          "pages": [
+            5
+          ],
+          "review_method": "Read PDF page text in web viewer"
+        }
+      ],
+      "review_needed": "Obtain block-specific CDOT design and 26th/35th Ward updates, verify ward boundaries and assess present signs and barriers at both ends.",
+      "search_gaps": [
+        "No block-specific original greenway design, ward project update or as-built confirmation located in searches for Hamlin/Ridgeway.",
+        "2020 temporary project cannot be projected across Ridgeway or into the present."
+      ]
+    },
+    {
+      "id": "berwyn-channel-damen",
+      "source_record_ids": [
+        "row-z2zq.9rfs-98dq"
+      ],
+      "location": "Berwyn Avenue: North Shore Channel Trail to Damen Avenue",
+      "movement": "eastbound and westbound along the designated western greenway",
+      "source_inference": "City row spells BERWN and reports motor oneway_dir=W, while br_oneway=2W and contraflow=Y describe two-way bicycle travel; these fields are not inherently contradictory. Applying the coarse motor direction across the full 1.27-mile row conflicts with local OSM snapshot tags: ways 498393740, 1099960922 and 1171325531 explicitly say oneway=no, while 155342620 and 24117276 have no oneway tag. A missing tag alone does not establish two-way permission. The row includes a trail endpoint, and precise alignment, permissions and current signs require review. The 48th Ward reported NSCT–Damen installed in 2024; a 2025 40th Ward update reports Washtenaw–Lincoln repaved.",
+      "review_status": "needs-review",
+      "confidence": "low for current motor movements; city and ward historical records only",
+      "effective_period": "City extract retrieved 2026-09-19; current ground conditions unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and directional attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected saved row attributes"
+        },
+        {
+          "url": "https://the-48th-ward.squarespace.com/blog/infrastructure-town-hall-august-14-2024",
+          "title": "Infrastructure Town Hall",
+          "publisher": "48th Ward",
+          "source_type": "ward project update",
+          "source_date": "2024-08-14",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "NSCT to Damen listed installed; later sections scheduled in 2024–2025; Ashland signal planned",
+          "status": "historical update and schedule",
+          "review_method": "Read project timeline"
+        },
+        {
+          "url": "https://40thward.org/2025/05/2025-development-and-infrastructure-town-hall/",
+          "title": "2025 Development and Infrastructure Town Hall",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward project update",
+          "source_date": "2025-05-21",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Reports Berwyn Washtenaw to Lincoln repaved and lists Berwyn Bikeway completion among planned network projects",
+          "status": "historical resurfacing report and general project plan; does not establish legal movements",
+          "review_method": "Read ward project and traffic-safety sections"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/498393740",
+          "title": "OpenStreetMap way 498393740",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "West Berwyn Avenue; oneway=no",
+          "status": "snapshot; no present sign verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "Read way tags from saved regional SQLite extract"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1099960922",
+          "title": "OpenStreetMap way 1099960922",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "West Berwyn Avenue; oneway=no",
+          "status": "snapshot; no present sign verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "Read way tags from saved regional SQLite extract"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1171325531",
+          "title": "OpenStreetMap way 1171325531",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "West Berwyn Avenue; oneway=no",
+          "status": "snapshot; no present sign verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "Read way tags from saved regional SQLite extract"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/155342620",
+          "title": "OpenStreetMap way 155342620",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "West Berwyn Avenue; no oneway tag",
+          "status": "snapshot; no present sign verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "Read way tags from saved regional SQLite extract"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24117276",
+          "title": "OpenStreetMap way 24117276",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "West Berwyn Avenue; no oneway tag",
+          "status": "snapshot; no present sign verification",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "Read way tags from saved regional SQLite extract"
+        }
+      ],
+      "review_needed": "Match the designated alignment to road ways and inspect both approaches, current regulatory signs, junction turns and barriers; do not infer access from bicycle facilities.",
+      "search_gaps": [
+        {
+          "query": "Berwyn greenway CDOT engineering design plans Damen Ravenswood Clark Broadway Sheridan 40th 48th ward",
+          "attempted_url": "https://the48thward.org/blog/berwyn-greenway-announcement",
+          "accessed_at": "2026-10-27",
+          "result": "Initial web tool image fetch failed (cache miss); direct download succeeded and CDOT-branded concept visually reviewed. No intersection-scale signed engineering drawing or as-built located.",
+          "missing_artifact": "Final intersection plans, installation records, current regulatory signs and as-built"
+        },
+        {
+          "query": "Berwyn Ashland traffic light construction completed 2026",
+          "attempted_url": "https://40thward.org/project/ashland-avenue-arterial-resurfacing/",
+          "accessed_at": "2026-10-27",
+          "result": "Ward project lists signal in scope and in-progress status, without verified signal-specific installation date.",
+          "missing_artifact": "Dated signal commissioning and crossing/turn configuration"
+        },
+        {
+          "query": "site:47thward.org Berwyn greenway Damen; site:40thward.org Berwyn California Washtenaw greenway",
+          "attempted_url": "https://40thward.org/2025/05/2025-development-and-infrastructure-town-hall/",
+          "accessed_at": "2026-10-27",
+          "result": "40th Ward reports Washtenaw–Lincoln resurfaced and planned Berwyn bikeway completion. No 47th Ward western segment design or current direction update located in targeted search.",
+          "missing_artifact": "Western segment engineering sheets, direction-specific implementation records and current signs"
+        }
+      ],
+      "way_ids": [
+        498393740,
+        1099960922,
+        1171325531,
+        155342620,
+        24117276
+      ]
+    },
+    {
+      "id": "berwyn-berwn-alias-geometry",
+      "source_record_ids": [
+        "row-z2zq.9rfs-98dq"
+      ],
+      "way_ids": [
+        155342641
+      ],
+      "location": "Berwyn Avenue from near Western Avenue to Damen Avenue",
+      "movement": "city designation and road-name correspondence",
+      "source_inference": "City row BERWN AVE has coordinates from (-87.704055, 41.977601) through (-87.689216, 41.977700) to (-87.679453, 41.977842). OSM way 155342641 is named West Berwyn Avenue, with endpoints (-87.688432, 41.977735) and (-87.679452, 41.977862), closely following the east part of that geometry. This supports a scoped alias for this row; it does not prove every movement or endpoint.",
+      "review_status": "source-inferred",
+      "confidence": "high for specific row name correspondence; route access remains unverified",
+      "effective_period": "city extract 2026-09-19; OSM snapshot 2026-09-11",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and directional attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected saved row attributes"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/155342641",
+          "title": "OpenStreetMap way 155342641",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "OSM way in regional extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Way named West Berwyn Avenue from near Damen to west of Western; endpoint coordinates closely follow the eastern portion of the city row",
+          "status": "snapshot",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "Queried local SQLite extract for name and endpoint coordinates and compared with city geometry"
+        }
+      ],
+      "review_needed": "Verify the entire western alignment and connectors, and current motor directions."
+    },
+    {
+      "id": "berwyn-damen-wolcott",
+      "source_record_ids": [
+        "row-98r2~7mff~uhez"
+      ],
+      "location": "Berwyn Avenue: Damen Avenue to Wolcott Avenue",
+      "movement": "eastbound and westbound along the designated segment",
+      "source_inference": "City row reports oneway_dir=W while bicycle route is two-way with contraflow; this suggests westbound motor direction, pending road matching and current signs. The ward says vehicle street direction does not change under its greenway project.",
+      "review_status": "needs-review",
+      "confidence": "low for current motor movements; city and ward historical records only",
+      "effective_period": "City extract retrieved 2026-09-19; current ground conditions unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and directional attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected saved row attributes"
+        },
+        {
+          "url": "https://the48thward.org/blog/berwyn-greenway-announcement",
+          "title": "Coming Soon: Berwyn Neighborhood Greenway",
+          "publisher": "48th Ward",
+          "source_type": "ward project announcement",
+          "source_date": "2024-08-15",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Damen to lakefront contraflow bike lane; street direction does not change for drivers",
+          "status": "project announcement",
+          "review_method": "Read ward text; linked Sheridan graphic subsequently downloaded and visually inspected separately"
+        },
+        {
+          "url": "https://the-48th-ward.squarespace.com/blog/infrastructure-town-hall-august-14-2024",
+          "title": "Infrastructure Town Hall",
+          "publisher": "48th Ward",
+          "source_type": "ward project update",
+          "source_date": "2024-08-14",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "NSCT to Damen listed installed; later sections scheduled in 2024–2025; Ashland signal planned",
+          "status": "historical update and schedule",
+          "review_method": "Read project timeline"
+        }
+      ],
+      "review_needed": "Match the designated alignment to road ways and inspect both approaches, current regulatory signs, junction turns and barriers; do not infer access from bicycle facilities.",
+      "search_gaps": []
+    },
+    {
+      "id": "berwyn-wolcott-ravenswood",
+      "source_record_ids": [
+        "row-sr4p.w5e8.ucbq"
+      ],
+      "location": "Berwyn Avenue: Wolcott Avenue to Ravenswood Avenue",
+      "movement": "both directions on the designated segment",
+      "source_inference": "City row has no motor direction value; no through-car permission, restriction or barrier follows from a blank. Examine the railroad and connection geometry.",
+      "review_status": "needs-review",
+      "confidence": "low for current motor movements; city and ward historical records only",
+      "effective_period": "City extract retrieved 2026-09-19; current ground conditions unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and directional attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected saved row attributes"
+        },
+        {
+          "url": "https://the48thward.org/blog/berwyn-greenway-announcement",
+          "title": "Coming Soon: Berwyn Neighborhood Greenway",
+          "publisher": "48th Ward",
+          "source_type": "ward project announcement",
+          "source_date": "2024-08-15",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Damen to lakefront contraflow bike lane; street direction does not change for drivers",
+          "status": "project announcement",
+          "review_method": "Read ward text; linked Sheridan graphic subsequently downloaded and visually inspected separately"
+        },
+        {
+          "url": "https://the-48th-ward.squarespace.com/blog/infrastructure-town-hall-august-14-2024",
+          "title": "Infrastructure Town Hall",
+          "publisher": "48th Ward",
+          "source_type": "ward project update",
+          "source_date": "2024-08-14",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "NSCT to Damen listed installed; later sections scheduled in 2024–2025; Ashland signal planned",
+          "status": "historical update and schedule",
+          "review_method": "Read project timeline"
+        }
+      ],
+      "review_needed": "Match the designated alignment to road ways and inspect both approaches, current regulatory signs, junction turns and barriers; do not infer access from bicycle facilities.",
+      "search_gaps": []
+    },
+    {
+      "id": "berwyn-clark-broadway",
+      "source_record_ids": [
+        "row-rg87.cynd-7yib"
+      ],
+      "location": "Berwyn Avenue: Clark Street to Broadway",
+      "movement": "eastbound and westbound along designated segment",
+      "source_inference": "City row reports oneway_dir=W and bicycle contraflow; suggests westbound-only motor direction, subject to road matching and current signs. Bike contraflow does not authorize eastbound driving.",
+      "review_status": "needs-review",
+      "confidence": "low for current motor movements; city and ward historical records only",
+      "effective_period": "City extract retrieved 2026-09-19; current ground conditions unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and directional attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected saved row attributes"
+        },
+        {
+          "url": "https://the48thward.org/blog/berwyn-greenway-announcement",
+          "title": "Coming Soon: Berwyn Neighborhood Greenway",
+          "publisher": "48th Ward",
+          "source_type": "ward project announcement",
+          "source_date": "2024-08-15",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Damen to lakefront contraflow bike lane; street direction does not change for drivers",
+          "status": "project announcement",
+          "review_method": "Read ward text; linked Sheridan graphic subsequently downloaded and visually inspected separately"
+        },
+        {
+          "url": "https://the-48th-ward.squarespace.com/blog/infrastructure-town-hall-august-14-2024",
+          "title": "Infrastructure Town Hall",
+          "publisher": "48th Ward",
+          "source_type": "ward project update",
+          "source_date": "2024-08-14",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "NSCT to Damen listed installed; later sections scheduled in 2024–2025; Ashland signal planned",
+          "status": "historical update and schedule",
+          "review_method": "Read project timeline"
+        }
+      ],
+      "review_needed": "Match the designated alignment to road ways and inspect both approaches, current regulatory signs, junction turns and barriers; do not infer access from bicycle facilities.",
+      "search_gaps": []
+    },
+    {
+      "id": "berwyn-broadway-winthrop",
+      "source_record_ids": [
+        "row-7n7e-y6xv.3ipe"
+      ],
+      "location": "Berwyn Avenue: Broadway to Winthrop Avenue at CTA tracks",
+      "movement": "both directions through station block",
+      "source_inference": "City direction field is blank. CTA notice schedules a continuous vehicle closure March 31–April 4, 2025, for station utilities and street reconstruction; closure was set up March 10. This historical notice does not establish present closure, reopening, direction or turns.",
+      "review_status": "needs-review",
+      "confidence": "low for current motor movements; city and ward historical records only",
+      "effective_period": "City extract retrieved 2026-09-19; current ground conditions unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and directional attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected saved row attributes"
+        },
+        {
+          "url": "https://the48thward.org/blog/berwyn-greenway-announcement",
+          "title": "Coming Soon: Berwyn Neighborhood Greenway",
+          "publisher": "48th Ward",
+          "source_type": "ward project announcement",
+          "source_date": "2024-08-15",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Damen to lakefront contraflow bike lane; street direction does not change for drivers",
+          "status": "project announcement",
+          "review_method": "Read ward text; linked Sheridan graphic subsequently downloaded and visually inspected separately"
+        },
+        {
+          "url": "https://www.transitchicago.com/updated-dates-with-extended-street-closure-at-w-berwyn-avenue-between-n-broadway-and-n-winthrop-avenue/",
+          "title": "Updated dates with extended street closure at W. Berwyn Avenue between N. Broadway and N. Winthrop Avenue",
+          "publisher": "Chicago Transit Authority",
+          "source_type": "construction notice",
+          "source_date": "2025-03-31",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Broadway–Winthrop extended closure; linked PDF subsequently retrieved and reviewed separately",
+          "status": "historical notice, expired; present access unknown",
+          "review_method": "Read notice landing page and separately inspect linked PDF"
+        },
+        {
+          "url": "https://www.transitchicago.com/assets/1/14/LBMM_CAN_PWA_537_Berwyn_E02_03_31_to_04_04_2025_Updated_End.pdf?40723=",
+          "title": "Updated Dates Extended Street Closure: W. Berwyn Avenue between N. Broadway and N. Winthrop Avenue",
+          "publisher": "Chicago Transit Authority",
+          "source_type": "construction activity notice",
+          "source_date": "2025-03-31",
+          "date_kind": "notice date from linked landing page",
+          "retrieved_at": "2026-10-27",
+          "scope": "Page 1: extended continuous street closure March 31–April 4 2025, work 7am–7pm; text says closed to vehicles until work complete; closure set up March 10",
+          "status": "historical construction notice; not evidence of current closure or reopening",
+          "pages": [
+            1
+          ],
+          "sha256": "d57d398b0f8524421ffb62be5d439026bb4b07631e39c0e232936514d29e3277",
+          "review_method": "Downloaded PDF, rendered and visually inspected page 1"
+        }
+      ],
+      "review_needed": "Match the designated alignment to road ways and inspect both approaches, current regulatory signs, junction turns and barriers; do not infer access from bicycle facilities.",
+      "search_gaps": []
+    },
+    {
+      "id": "berwyn-winthrop-sheridan",
+      "source_record_ids": [
+        "row-g87j-tbmk_gx4c"
+      ],
+      "location": "Berwyn Avenue: Winthrop Avenue to Sheridan Road",
+      "movement": "eastbound and westbound along segment",
+      "source_inference": "City row reports oneway_dir=E and bicycle contraflow; suggests eastbound motor direction subject to matching and signs. Ward says the project does not change driving direction.",
+      "review_status": "needs-review",
+      "confidence": "low for current motor movements; city and ward historical records only",
+      "effective_period": "City extract retrieved 2026-09-19; current ground conditions unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and directional attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected saved row attributes"
+        },
+        {
+          "url": "https://the48thward.org/blog/berwyn-greenway-announcement",
+          "title": "Coming Soon: Berwyn Neighborhood Greenway",
+          "publisher": "48th Ward",
+          "source_type": "ward project announcement",
+          "source_date": "2024-08-15",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Damen to lakefront contraflow bike lane; street direction does not change for drivers",
+          "status": "project announcement",
+          "review_method": "Read ward text; linked Sheridan graphic subsequently downloaded and visually inspected separately"
+        },
+        {
+          "url": "https://the48thward.org/blog/construction-updates-august-28-2024",
+          "title": "Construction Updates: August 28, 2024",
+          "publisher": "48th Ward",
+          "source_type": "ward construction update",
+          "source_date": "2024-08-28",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Reports new paint connecting Berwyn to lakefront at Sheridan",
+          "status": "historical progress report; not motor access finding",
+          "review_method": "Read update"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6440662e14e59b3037e72c3c/c6f2631b-25ed-4b1c-b2c0-1913a9004465/Berwyn%2Band%2BSheridan.png",
+          "title": "Connecting to the Lakefront Trail",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "CDOT-branded plan graphic",
+          "source_date": "2024-08-15",
+          "date_kind": "date of ward announcement embedding graphic",
+          "retrieved_at": "2026-10-27",
+          "scope": "Graphic depicts offset Berwyn approaches at Sheridan, two-way protected bike lane on Sheridan and shorter pedestrian crossing; route continuation to lakefront is shown as bicycle facility",
+          "status": "project concept graphic; not an as-built or signed engineering plan",
+          "sha256": "11f207504beeaa3cc023fc169bab815878ded53619024be3d6bd628ef83f485d",
+          "review_method": "Downloaded public image and visually inspected entire graphic; delivered image/webp despite .png URL"
+        }
+      ],
+      "review_needed": "Match the designated alignment to road ways and inspect both approaches, current regulatory signs, junction turns and barriers; do not infer access from bicycle facilities.",
+      "search_gaps": []
+    },
+    {
+      "id": "berwyn-sheridan-lakefront",
+      "source_record_ids": [
+        "row-kxgt~6ijf-duva"
+      ],
+      "location": "Berwyn Avenue: Sheridan Road to Lakefront Trail",
+      "movement": "motor continuation between Sheridan and trail",
+      "source_inference": "City row identifies a greenway connection but has no motor direction; the ward reports bicycle connection paint at Sheridan. Neither bicycle continuity nor paint establishes motor access to the trail. The ward-hosted CDOT concept graphic depicts an offset two-way protected bike facility on Sheridan leading to the lakefront, not a demonstrated car connector.",
+      "review_status": "needs-review",
+      "confidence": "low for current motor movements; city and ward historical records only",
+      "effective_period": "City extract retrieved 2026-09-19; current ground conditions unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes",
+          "publisher": "City of Chicago",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Saved greenways.json designation and directional attributes",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected saved row attributes"
+        },
+        {
+          "url": "https://the48thward.org/blog/berwyn-greenway-announcement",
+          "title": "Coming Soon: Berwyn Neighborhood Greenway",
+          "publisher": "48th Ward",
+          "source_type": "ward project announcement",
+          "source_date": "2024-08-15",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Damen to lakefront contraflow bike lane; street direction does not change for drivers",
+          "status": "project announcement",
+          "review_method": "Read ward text; linked Sheridan graphic subsequently downloaded and visually inspected separately"
+        },
+        {
+          "url": "https://the48thward.org/blog/construction-updates-august-28-2024",
+          "title": "Construction Updates: August 28, 2024",
+          "publisher": "48th Ward",
+          "source_type": "ward construction update",
+          "source_date": "2024-08-28",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Reports new paint connecting Berwyn to lakefront at Sheridan",
+          "status": "historical progress report; not motor access finding",
+          "review_method": "Read update"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6440662e14e59b3037e72c3c/c6f2631b-25ed-4b1c-b2c0-1913a9004465/Berwyn%2Band%2BSheridan.png",
+          "title": "Connecting to the Lakefront Trail",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "CDOT-branded plan graphic",
+          "source_date": "2024-08-15",
+          "date_kind": "date of ward announcement embedding graphic",
+          "retrieved_at": "2026-10-27",
+          "scope": "Graphic depicts offset Berwyn approaches at Sheridan, two-way protected bike lane on Sheridan and shorter pedestrian crossing; route continuation to lakefront is shown as bicycle facility",
+          "status": "project concept graphic; not an as-built or signed engineering plan",
+          "sha256": "11f207504beeaa3cc023fc169bab815878ded53619024be3d6bd628ef83f485d",
+          "review_method": "Downloaded public image and visually inspected entire graphic; delivered image/webp despite .png URL"
+        }
+      ],
+      "review_needed": "Match the designated alignment to road ways and inspect both approaches, current regulatory signs, junction turns and barriers; do not infer access from bicycle facilities.",
+      "search_gaps": [
+        {
+          "query": "Berwyn greenway CDOT engineering design plans Damen Ravenswood Clark Broadway Sheridan 40th 48th ward",
+          "attempted_url": "https://the48thward.org/blog/berwyn-greenway-announcement",
+          "accessed_at": "2026-10-27",
+          "result": "Initial web tool image fetch failed (cache miss); direct download succeeded and CDOT-branded concept visually reviewed. No intersection-scale signed engineering drawing or as-built located.",
+          "missing_artifact": "Final intersection plans, installation records, current regulatory signs and as-built"
+        },
+        {
+          "query": "Berwyn Ashland traffic light construction completed 2026",
+          "attempted_url": "https://40thward.org/project/ashland-avenue-arterial-resurfacing/",
+          "accessed_at": "2026-10-27",
+          "result": "Ward project lists signal in scope and in-progress status, without verified signal-specific installation date.",
+          "missing_artifact": "Dated signal commissioning and crossing/turn configuration"
+        }
+      ]
+    },
+    {
+      "id": "berwyn-ravenswood-clark-gap",
+      "location": "Berwyn greenway between Ravenswood Avenue and Clark Street, including Ashland",
+      "movement": "both directions along designated alignment and across Ashland",
+      "source_inference": "No matching city greenway row found between Ravenswood and Clark in the saved extract. Ward scheduled this section and Ashland signal; the Councilmatic index describes a passed westbound amendment, but its source text and present signs were not inspected. A traffic signal by itself does not interrupt car continuity.",
+      "review_status": "needs-review",
+      "confidence": "low; designation geometry, enacted text and current conditions unresolved",
+      "effective_period": "2024 project schedule; ward project page undated; current ground unknown",
+      "sources": [
+        {
+          "url": "https://the-48th-ward.squarespace.com/blog/infrastructure-town-hall-august-14-2024",
+          "title": "Infrastructure Town Hall",
+          "publisher": "48th Ward",
+          "source_type": "ward project update",
+          "source_date": "2024-08-14",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "NSCT to Damen listed installed; later sections scheduled in 2024–2025; Ashland signal planned",
+          "status": "historical update and schedule",
+          "review_method": "Read project timeline"
+        },
+        {
+          "url": "https://40thward.org/project/ashland-avenue-arterial-resurfacing/",
+          "title": "Ashland Avenue Arterial Resurfacing",
+          "publisher": "40th Ward",
+          "source_type": "ward project update",
+          "source_date": null,
+          "date_kind": "publication date not verified",
+          "retrieved_at": "2026-10-27",
+          "scope": "New traffic signal at Ashland and Berwyn in project features; timeline summer 2025–spring 2026; page calls project in progress",
+          "status": "planned project; installation not established",
+          "review_method": "Read project scope and dated 2025 update"
+        },
+        {
+          "url": "https://chicago.councilmatic.org/legislation/o2025-0019333/",
+          "title": "Ordinance O2025-0019333",
+          "publisher": "Chicago Councilmatic",
+          "source_type": "legislative index",
+          "source_date": null,
+          "date_kind": "date not verified",
+          "retrieved_at": "2026-10-27",
+          "scope": "Index labels Ravenswood–Clark westbound one-way amendment passed",
+          "status": "secondary index; original enacted text and current signs not checked",
+          "review_method": "Search result snippet; page failed to load"
+        }
+      ],
+      "review_needed": "Locate official ordinance and CDOT plan; trace designated corridor, signs, railroad underpass and crossings; check signal commissioning.",
+      "search_gaps": [
+        {
+          "query": "Berwyn greenway CDOT engineering design plans Damen Ravenswood Clark Broadway Sheridan 40th 48th ward",
+          "attempted_url": "https://the48thward.org/blog/berwyn-greenway-announcement",
+          "accessed_at": "2026-10-27",
+          "result": "Initial web tool image fetch failed (cache miss); direct download succeeded and CDOT-branded concept visually reviewed. No intersection-scale signed engineering drawing or as-built located.",
+          "missing_artifact": "Final intersection plans, installation records, current regulatory signs and as-built"
+        },
+        {
+          "query": "Berwyn Ashland traffic light construction completed 2026",
+          "attempted_url": "https://40thward.org/project/ashland-avenue-arterial-resurfacing/",
+          "accessed_at": "2026-10-27",
+          "result": "Ward project lists signal in scope and in-progress status, without verified signal-specific installation date.",
+          "missing_artifact": "Dated signal commissioning and crossing/turn configuration"
+        },
+        {
+          "query": "Berwyn Ravenswood Clark one-way ordinance O2025-0019333 full text CDOT drawing",
+          "attempted_url": "https://chicago.councilmatic.org/legislation/o2025-0019333/",
+          "accessed_at": "2026-10-27",
+          "result": "Search index says passed westbound amendment; page returned cache miss, text not verified.",
+          "missing_artifact": "Original signed ordinance and current regulatory signs"
+        }
+      ]
+    },
+    {
+      "id": "polk-pulaski-independence-direction",
+      "way_ids": [
+        582894470
+      ],
+      "location": "West Polk Street, Pulaski Road to Independence Boulevard",
+      "movement": "eastbound and westbound ordinary passenger car through movement along designated segment",
+      "source_inference": "City reports W motor direction and two-way bicycle route with contraflow; OSM way 582894470 also runs west with oneway=yes and oneway:bicycle=no. Eastbound ordinary cars are inferred blocked on this segment; westbound movement along the segment is inferred, but junction permissions remain unverified.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot direction only; current signs and junctions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; OSM effective 2026-09-11; present condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes - Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset last updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "saved inventory snapshot",
+          "pages": null,
+          "review_method": "Filtered saved JSON by st_name POLK and inspected attributes and geometry.",
+          "scope": "Polk Pulaski Road to Independence Boulevard; row row-ff46-gssy-rrp2"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/582894470",
+          "title": "OpenStreetMap way 582894470",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Westbound yes one-way, node order Independence to Pulaski; bicycle exception.",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "review_method": "Queried local SQLite imported from saved PBF; inspected way tags, ordered endpoint coordinates and node continuity."
+        }
+      ],
+      "review_needed": "Inspect current signs at both ends and intermediate intersections, turn restrictions, physical barriers and route connections; obtain traffic orders and as-built drawings.",
+      "source_record_ids": [
+        "row-ff46-gssy-rrp2"
+      ]
+    },
+    {
+      "id": "polk-independence-lawndale-direction",
+      "way_ids": [
+        1284871398
+      ],
+      "location": "West Polk Street, Independence Boulevard to Lawndale Avenue",
+      "movement": "eastbound and westbound ordinary passenger car through movement along designated segment",
+      "source_inference": "City gives no cardinal motor direction; two-way bicycle route does not establish motor permissions. The inspected OSM components lack a one-way tag, which alone cannot establish current permission or through movements.",
+      "review_status": "source-inferred",
+      "confidence": "low; inventory and map lack sufficient junction and current regulatory evidence",
+      "effective_period": "City extract retrieved 2026-09-19; OSM effective 2026-09-11; present condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes - Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset last updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "saved inventory snapshot",
+          "pages": null,
+          "review_method": "Filtered saved JSON by st_name POLK and inspected attributes and geometry.",
+          "scope": "Polk Independence Boulevard to Lawndale Avenue; row row-5t4c-tisg-vua6"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1284871398",
+          "title": "OpenStreetMap way 1284871398",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "No one-way tag on Lawndale-side component; adjacent way 1284871397 also has no one-way tag.",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "review_method": "Queried local SQLite imported from saved PBF; inspected way tags, ordered endpoint coordinates and node continuity."
+        }
+      ],
+      "review_needed": "Inspect current signs at both ends and intermediate intersections, turn restrictions, physical barriers and route connections; obtain traffic orders and as-built drawings.",
+      "source_record_ids": [
+        "row-5t4c-tisg-vua6"
+      ]
+    },
+    {
+      "id": "polk-lawndale-spaulding-direction",
+      "way_ids": [
+        1284871401
+      ],
+      "location": "West Polk Street, Lawndale Avenue to Spaulding Avenue",
+      "movement": "eastbound and westbound ordinary passenger car through movement along designated segment",
+      "source_inference": "City gives no cardinal motor direction. OSM road components lack one-way tags, but this does not establish permitted turns, barriers, or current through movement.",
+      "review_status": "source-inferred",
+      "confidence": "low; inventory and map lack sufficient junction and current regulatory evidence",
+      "effective_period": "City extract retrieved 2026-09-19; OSM effective 2026-09-11; present condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes - Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset last updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "saved inventory snapshot",
+          "pages": null,
+          "review_method": "Filtered saved JSON by st_name POLK and inspected attributes and geometry.",
+          "scope": "Polk Lawndale Avenue to Spaulding Avenue; row row-hq5n~g4nt_de2u"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1284871401",
+          "title": "OpenStreetMap way 1284871401",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "One component lacks a one-way tag; this is not proof of unrestricted movement along the row.",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "review_method": "Queried local SQLite imported from saved PBF; inspected way tags, ordered endpoint coordinates and node continuity."
+        }
+      ],
+      "review_needed": "Inspect current signs at both ends and intermediate intersections, turn restrictions, physical barriers and route connections; obtain traffic orders and as-built drawings.",
+      "source_record_ids": [
+        "row-hq5n~g4nt_de2u"
+      ]
+    },
+    {
+      "id": "polk-spaulding-california-direction",
+      "way_ids": [
+        24070791
+      ],
+      "location": "West Polk Street, Spaulding Avenue to California Avenue",
+      "movement": "eastbound and westbound ordinary passenger car through movement along designated segment",
+      "source_inference": "City gives no cardinal motor direction. OSM road components lack one-way tags, but this does not establish permitted turns, barriers, or current through movement.",
+      "review_status": "source-inferred",
+      "confidence": "low; inventory and map lack sufficient junction and current regulatory evidence",
+      "effective_period": "City extract retrieved 2026-09-19; OSM effective 2026-09-11; present condition unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes - Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset last updated",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "saved inventory snapshot",
+          "pages": null,
+          "review_method": "Filtered saved JSON by st_name POLK and inspected attributes and geometry.",
+          "scope": "Polk Spaulding Avenue to California Avenue; row row-4832.xuwa~f7zh"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24070791",
+          "title": "OpenStreetMap way 24070791",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "crowdsourced map way in local extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective timestamp",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "California-side component lacks a one-way tag; does not establish unrestricted movement on the row.",
+          "status": "saved snapshot; not field verified",
+          "pages": null,
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "review_method": "Queried local SQLite imported from saved PBF; inspected way tags, ordered endpoint coordinates and node continuity."
+        }
+      ],
+      "review_needed": "Inspect current signs at both ends and intermediate intersections, turn restrictions, physical barriers and route connections; obtain traffic orders and as-built drawings.",
+      "source_record_ids": [
+        "row-4832.xuwa~f7zh"
+      ]
+    },
+    {
+      "id": "polk-ward-coverage",
+      "location": "West Polk Street from Pulaski Road to California Avenue",
+      "movement": "ward jurisdiction for targeted document searches; no motor movement conclusion",
+      "source_inference": "Point-in-polygon sampling of city route line places Pulaski through most of Spaulding–California in Ward 24 and eastern Spaulding–California in Ward 28. Transition is approximately -87.70338, 41.87098; this is not a surveyed jurisdiction boundary or address assignment.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for sampled centerline; low at boundary and street sides",
+      "effective_period": "Ward boundaries effective May 2023; GIS response retrieved 2026-10-27",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/p293-wvbd.geojson?%24limit=100",
+          "title": "Boundaries - Wards (2023-)",
+          "publisher": "City of Chicago",
+          "source_type": "municipal GIS dataset response",
+          "source_date": "2023-05",
+          "date_kind": "boundary effective period begins",
+          "retrieved_at": "2026-10-27",
+          "scope": "2023 ward polygons sampled along Polk city row geometry; approximate transition near longitude -87.70338",
+          "status": "boundary snapshot; street centerline overlay approximate",
+          "pages": null,
+          "sha256": "239c453a7c3e22d30a1b0badced4240bf23ab321f6e37c80598b919ec2004860",
+          "review_method": "Retrieved GeoJSON and sampled centerline points with point-in-polygon; boundary point and street sides require precise GIS overlay."
+        }
+      ],
+      "review_needed": "Perform exact line-polygon intersection and confirm street-side jurisdiction with current ward offices.",
+      "source_record_ids": [
+        "row-ff46-gssy-rrp2",
+        "row-5t4c-tisg-vua6",
+        "row-hq5n~g4nt_de2u",
+        "row-4832.xuwa~f7zh"
+      ]
     }
   ],
   "research_batches": [
@@ -2041,6 +3236,69 @@
         "argyle-pulaski-ridgeway"
       ],
       "notes": "docs/carmen-argyle-source-review.md"
+    },
+    {
+      "id": "aldine-cortland-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Independent research batch; source claims and scoped field-review queue, not movement approvals.",
+        "default_profile": "ordinary passenger car on a through trip"
+      },
+      "record_ids": [
+        "aldine-clark-broadway-direction",
+        "aldine-broadway-offset",
+        "aldine-broadway-lakeshore-direction",
+        "cortland-damen-ashland-scope",
+        "cortland-hamlin-ridgeway-scope"
+      ],
+      "notes": "docs/aldine-cortland-source-review.md"
+    },
+    {
+      "id": "berwyn-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Berwyn scoped evidence, not route approvals",
+        "default_profile": "ordinary passenger car on a through trip"
+      },
+      "record_ids": [
+        "berwyn-channel-damen",
+        "berwyn-berwn-alias-geometry",
+        "berwyn-damen-wolcott",
+        "berwyn-wolcott-ravenswood",
+        "berwyn-clark-broadway",
+        "berwyn-broadway-winthrop",
+        "berwyn-winthrop-sheridan",
+        "berwyn-sheridan-lakefront",
+        "berwyn-ravenswood-clark-gap"
+      ],
+      "notes": "docs/berwyn-source-review.md"
+    },
+    {
+      "id": "polk-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Polk source research batch; scoped inferences, not field approvals",
+        "default_profile": "ordinary passenger car on a through trip",
+        "search_gaps": [
+          {
+            "scope": "Polk Pulaski–California, Wards 24 and 28",
+            "search_attempt": "2026-10-27 searches for Polk greenway, Pulaski, Independence, California, North Lawndale, CDOT engineering plans, and 24th and 28th Ward notices.",
+            "outcome": "No intersection-scale CDOT plan set, signed as-built, original traffic order, or direct ward project notice located. Search engine results included a different Polk bikeway by UIC and a proposed Altenheim rail trail; neither applied to this street segment.",
+            "next_step": "Request original design sheets, orders, completion records and project correspondence from CDOT and both wards; verify current signs and barriers on site."
+          }
+        ]
+      },
+      "record_ids": [
+        "polk-pulaski-independence-direction",
+        "polk-independence-lawndale-direction",
+        "polk-lawndale-spaulding-direction",
+        "polk-spaulding-california-direction",
+        "polk-ward-coverage"
+      ],
+      "notes": "docs/polk-source-review.md"
     }
   ]
 }

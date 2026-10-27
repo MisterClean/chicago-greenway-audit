@@ -229,6 +229,45 @@ for (const [routeId,cityId,wayId] of [['argyle-1','row-wkph~qm3w~5yab',144371535
  const urls=evidence?.sources?.map(s=>s.url) ?? [];
  check('ainslie-western-left-turn-not-through-block',true,!!evidence && /left turn/i.test(evidence.movement) && evidence.source_record_ids?.includes(city?.[':id']) && urls.length>=2 && !!node && city?.the_geom.coordinates[0].some(p=>metres(p,[node.lon,node.lat])<2) && edge?.from_node===293816189 && edge.access.reverse.status==='allowed' && terminal.length===2 && terminal.every(end=>end.kind==='unknown') && !sourceRestriction.some(r=>/straight/i.test(r.tags.restriction ?? '')),'The cited left-turn proposal and reported signs concern a turn; the separately scoped through crossing is unknown, not a blanket straight-through block. Staged node restrictions and the city endpoint are checked independently.',[sourceUrl,`https://www.openstreetmap.org/node/293816189`,...urls]);
 }
+// Narrow snapshot checks; none establish a field approval.
+{
+ const ids=['row-y2dq.3s9k_38gf','row-vhym~pu4g.guju'], rows=ids.map(cityRecord), routes=data.routes.filter(r=>r.name==='Aldine');
+ const ends=rows.map(r=>{const line=r?.the_geom.coordinates[0];return line ? [line[0],line.at(-1)] : [];});
+ const distance=ends.every(x=>x.length) ? Math.min(...ends[0].flatMap(a=>ends[1].map(b=>metres(a,b)))) : 0;
+ const connector=routes.flatMap(r=>r.edges).filter(e=>e.role!=='designated' && e.geometry.coordinates.some(p=>metres(p,[-87.64446,41.94204])<30));
+ const terminals=routes.flatMap(r=>r.runs.flatMap(run=>[run.start,run.end])).filter(e=>e.coordinate && metres(e.coordinate,[-87.64446,41.94204])<30);
+ check('aldine-broadway-offset-unresolved',true,rows.every(Boolean) && distance>35 && ids.every(id=>routes.some(r=>r.source_ids.includes(id))) && (connector.length ? connector.every(e=>['forward','reverse'].every(d=>e.access[d].status==='unknown')) : terminals.length>=2 && terminals.every(e=>e.kind==='unknown')),'City lines are offset at Broadway; the intervening motor connection and turns remain unknown.',[sourceUrl]);
+ for (const [cityId,wayId] of [['row-y2dq.3s9k_38gf',24117483],['row-vhym~pu4g.guju',24117482]]) {
+  const city=cityRecord(cityId), way=getWay.get(wayId), tags=way && JSON.parse(way.tags), nodes=way && JSON.parse(way.nodes), first=nodes && nodeCoords.get(nodes[0]), last=nodes && nodeCoords.get(nodes.at(-1));
+  const edges=routes.flatMap(r=>r.edges.filter(e=>e.way_id===wayId));
+  check(`aldine-${wayId}-eastbound`,true,city?.oneway_dir==='E' && tags?.oneway==='yes' && !!first && !!last && last.lon>first.lon && edges.length>0 && edges.every(e=>e.access.forward.status==='allowed' && e.access.reverse.status==='blocked'),'City and staged OSM agree on this eastbound segment; current signs and Broadway turns remain unverified.',[sourceUrl,`https://www.openstreetmap.org/way/${wayId}`]);
+ }
+}
+{
+ const ids=['row-kb56.czy3-uyw7','row-hkyx_48ex_8z98'], routes=data.routes.filter(r=>r.name==='Cortland'), way=getWay.get(1425934580), tags=way && JSON.parse(way.tags), edges=routes.flatMap(r=>r.edges.filter(e=>e.way_id===1425934580));
+ check('cortland-source-scope',true,ids.every(id=>routes.some(r=>r.source_ids.includes(id))) && ids.every(id=>cityRecord(id)?.br_oneway==='2W') && tags?.highway==='residential' && !tags.oneway && edges.length>0 && edges.every(e=>['forward','reverse'].every(d=>e.access[d].status==='allowed' && e.access[d].evidence_status==='source-inferred')),'Two distinct city rows describe two-way bicycle facilities; this residential snapshot way lacks a motor one-way tag. Other junctions and current signs remain unverified.',[sourceUrl,'https://www.openstreetmap.org/way/1425934580']);
+ const rows=ids.map(cityRecord), components=ids.map(id=>routes.find(r=>r.source_ids.includes(id)));
+ const endpoints=rows.map(r=>{const line=r?.the_geom.coordinates[0];return line ? [line[0],line.at(-1)] : [];});
+ const separation=endpoints.every(e=>e.length) ? Math.min(...endpoints[0].flatMap(a=>endpoints[1].map(b=>metres(a,b)))) : 0;
+ check('cortland-separate-city-components',true,rows.every(Boolean) && separation>20 && components.every(Boolean) && components[0].id!==components[1].id && components.every(r=>!ids.every(id=>r.source_ids.includes(id))),'Distant city designations remain separate exports; a street name alone does not establish a through connection.',[sourceUrl]);
+ const gaps=routes.flatMap(r=>r.edges.filter(e=>e.role==='gap'));
+ check('cortland-unmatched-edges-unknown',true,gaps.length>0 && gaps.every(e=>['forward','reverse'].every(d=>e.access[d].status==='unknown')),'Unmatched designation edges remain unresolved in both directions.',[sourceUrl]);
+}
+{
+ const ids=['row-z2zq.9rfs-98dq','row-98r2~7mff~uhez','row-sr4p.w5e8.ucbq','row-rg87.cynd-7yib','row-7n7e-y6xv.3ipe','row-g87j-tbmk_gx4c','row-kxgt~6ijf-duva'], routes=data.routes.filter(r=>r.name==='Berwyn');
+ const alias=cityRecord(ids[0]), way=getWay.get(155342641), tags=way && JSON.parse(way.tags), edges=routes.flatMap(r=>r.edges.filter(e=>e.way_id===155342641));
+ check('berwyn-berwn-source-coverage',true,ids.every(id=>routes.some(r=>r.source_ids.includes(id))) && alias?.st_name==='BERWN' && alias.oneway_dir==='W' && tags?.name==='West Berwyn Avenue' && tags.oneway==='yes' && tags['oneway:bicycle']==='no' && edges.length>0 && edges.every(e=>e.access.forward.status==='blocked' && e.access.reverse.status==='allowed'),'Retain the misspelled BERWN city row using its geometry and staged Berwyn road; bicycle contraflow is not motor access.',[sourceUrl,'https://www.openstreetmap.org/way/155342641']);
+ const ew=getWay.get(23743973), et=ew && JSON.parse(ew.tags), east=routes.flatMap(r=>r.edges.filter(e=>e.way_id===23743973));
+ check('berwyn-winthrop-sheridan-eastbound',true,cityRecord('row-g87j-tbmk_gx4c')?.oneway_dir==='E' && et?.oneway==='yes' && et['oneway:bicycle']==='no' && east.length>0 && east.every(e=>e.access.forward.status==='allowed' && e.access.reverse.status==='blocked'),'City and OSM indicate eastbound motor travel on this segment with bicycle contraflow.',[sourceUrl,'https://www.openstreetmap.org/way/23743973']);
+ const path=getWay.get(26447429), pt=path && JSON.parse(path.tags), pn=path && JSON.parse(path.nodes), road=getWay.get(23741249), rn=road && JSON.parse(road.nodes), route=routes.find(r=>r.source_ids.includes('row-kxgt~6ijf-duva')), gap=route?.edges.find(e=>e.role==='gap');
+ check('berwyn-lakefront-cycleway-not-car-connection',true,pt?.highway==='cycleway' && pt.bicycle==='designated' && pn?.some(n=>rn?.includes(n)) && !!gap && ['forward','reverse'].every(d=>gap.access[d].status==='unknown') && !routes.some(r=>r.edges.some(e=>e.way_id===26447429)),'The staged cycleway meets the road but does not establish an ordinary car connection; the unmatched endpoint remains unknown.',[sourceUrl,'https://www.openstreetmap.org/way/23741249','https://www.openstreetmap.org/way/26447429']);
+}
+{
+ const ids=['row-ff46-gssy-rrp2','row-5t4c-tisg-vua6','row-hq5n~g4nt_de2u','row-4832.xuwa~f7zh'], routes=data.routes.filter(r=>r.name==='Polk'), w=getWay.get(582894470), tags=w && JSON.parse(w.tags), nodes=w && JSON.parse(w.nodes), first=nodes && nodeCoords.get(nodes[0]), last=nodes && nodeCoords.get(nodes.at(-1)), edges=routes.flatMap(r=>r.edges.filter(e=>e.way_id===582894470));
+ check('polk-pulaski-independence-westbound',true,ids.every(id=>routes.some(r=>r.source_ids.includes(id))) && cityRecord(ids[0])?.oneway_dir==='W' && tags?.oneway==='yes' && tags['oneway:bicycle']==='no' && !!first && !!last && last.lon<first.lon && edges.length>0 && edges.every(e=>e.access.forward.status==='blocked' && e.access.reverse.status==='allowed'),'City and OSM indicate westbound motor travel with bicycle contraflow; junctions and current signs remain unverified.',[sourceUrl,'https://www.openstreetmap.org/way/582894470']);
+ const conflict=routes.flatMap(r=>r.edges.filter(e=>e.way_id===1284871397));
+ check('polk-independence-boundary-conflict',true,conflict.length>0 && conflict.every(e=>e.access.forward.status==='unknown' && e.access.forward.evidence_status==='conflicting'),'Preserve the conflict where an edge straddles city rows with differing direction assertions.',[sourceUrl,'https://www.openstreetmap.org/way/1284871397']);
+}
 const dbHash = createHash('sha256');
 for await (const chunk of createReadStream(database)) dbHash.update(chunk);
 const stagedDatabaseSha256 = dbHash.digest('hex');

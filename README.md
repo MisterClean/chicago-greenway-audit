@@ -2,7 +2,7 @@
 
 A route-based map of how far an ordinary car can follow a Chicago bicycle greenway in each direction. It follows the designated route through turns, shows continuous driving stretches, and explains the restrictions or unknown connections at their ends.
 
-**The current interface is a source-inferred pilot, not a completed driving or cycling-stress audit.** It covers 30 route sections on Wood, Berteau, Leland, Dickens, Manor, Kenmore, Glenwood, George, Loomis, 124th Street, School, Roscoe, Winthrop, Ardmore, Winnemac, Ainslie, Carmen and Argyle. None of its 1,391 movement boundaries is field reviewed. The citywide designation inventory remains a muted background layer.
+**The current interface is a source-inferred pilot, not a completed driving or cycling-stress audit.** It covers 37 route sections on Wood, Berteau, Leland, Dickens, Manor, Kenmore, Glenwood, George, Loomis, 124th Street, School, Roscoe, Winthrop, Ardmore, Winnemac, Ainslie, Carmen, Argyle, Aldine, Cortland, Berwyn and Polk. None of its 1,626 movement boundaries is field reviewed. The citywide designation inventory remains a muted background layer.
 
 ## Run
 
@@ -34,9 +34,9 @@ The car profile is a general through trip, without resident, delivery or emergen
 
 Vehicle continuity measures potential through access. Traffic volume, speed and crossing conditions are also needed to assess cycling stress.
 
-Read the [tested implementation plan](docs/vehicle-continuity-plan.md) and [current expansion and validation](docs/route-north-validation.md). The latter documents project-specific evidence, source limitations, 120 independently sampled directional junction decisions, and targeted regression cases. Earlier checkpoints are preserved in the [School/Roscoe/Winthrop/Ardmore review](docs/route-plan-review-validation.md), [first expansion](docs/route-expansion-validation.md) and [original pilot](docs/route-pilot-validation.md).
+Read the [tested implementation plan](docs/vehicle-continuity-plan.md) and [current expansion and validation](docs/route-aldine-berwyn-polk-validation.md). The latter documents project-specific evidence, source limitations, 148 independently sampled directional junction decisions, and targeted regression cases. Earlier checkpoints are preserved in the [Winnemac/Ainslie/Carmen/Argyle review](docs/route-north-validation.md), [School/Roscoe/Winthrop/Ardmore review](docs/route-plan-review-validation.md), [first expansion](docs/route-expansion-validation.md) and [original pilot](docs/route-pilot-validation.md).
 
-The [evidence catalog](docs/evidence-catalog.md) links 40 scoped observations and 115 citations to 61 source URLs. It preserves source titles and publishers when known, date meanings, inspected pages, document/extract checksums, conflicting metadata, search gaps and original records. Missing metadata remains explicit. The app's Sources & method panel links the downloadable JSON. `npm run data:evidence` rebuilds it; `npm run verify:evidence` checks that both copies match the editable evidence. Production builds reject a stale catalog.
+The [evidence catalog](docs/evidence-catalog.md) links 59 scoped observations and 175 citations to 86 source URLs. It preserves source titles and publishers when known, date meanings, inspected pages, document/extract checksums, conflicting metadata, search gaps and original records. Missing metadata remains explicit. The app's Sources & method panel links the downloadable JSON. `npm run data:evidence` rebuilds it; `npm run verify:evidence` checks that both copies match the editable evidence. Production builds reject a stale catalog.
 
 ## Reproduce the pilot
 
@@ -55,7 +55,7 @@ npm test
 
 `data/sources/osm-source.json` identifies the exact extract and checksum. The local PBF and SQLite stage are excluded from Git; downloading a changing `latest` URL does not reproduce this build. Raw staging requires Osmium 1.19+.
 
-`data/routes/pilots.json` defines route scope and explicit joins. `scripts/route-network.mjs` assembles and matches the route, `scripts/scoped-route-ways.mjs` checks explicitly bound short street-name changes against city geometry, `scripts/motor-rules.mjs` evaluates source rules, `scripts/junction-traversal.mjs` follows small circular junctions, and `scripts/route-continuity.mjs` traces each direction. `scripts/build-route-data.mjs` exports routes, events and runs to `public/routes/pilot.json`, copies the evidence queue and rebuilds the catalog. `web/src/route-map.ts` renders the interface.
+`data/routes/pilots.json` defines route scope, explicitly catalogued source-name aliases, and documented connections requiring review. The `BERWN` alias includes the western Berwyn designation without rewriting the raw city record. Aldine’s plan-backed Broadway jog is displayed as a schematic unknown link and excluded from designated mileage and car runs. `scripts/route-network.mjs` assembles and matches the route, `scripts/scoped-route-ways.mjs` checks explicitly bound short street-name changes against city geometry, `scripts/motor-rules.mjs` evaluates source rules, `scripts/junction-traversal.mjs` follows small circular junctions, and `scripts/route-continuity.mjs` traces each direction. `scripts/build-route-data.mjs` exports routes, events and runs to `public/routes/pilot.json`, copies the evidence queue and rebuilds the catalog. `web/src/route-map.ts` renders the interface.
 
 Use `SOURCE_DATE_EPOCH=1793091600 npm run data:routes` for the audited export's fixed generation timestamp. The independent sample in `data/routes/pilot-validation.json` is tied to the output SHA-256 and becomes stale when that output changes. Source records and timestamps must be checked again before approving movements or expanding the pilot.
 
