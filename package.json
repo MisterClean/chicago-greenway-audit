@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "npm run verify:evidence && node scripts/static-tiles.mjs && tsc --noEmit && vite build",
+    "build": "npm run verify:evidence && npm run verify:coverage && node scripts/static-tiles.mjs && tsc --noEmit && vite build",
     "test": "node --import tsx --test web/src/*.test.ts scripts/*.test.mjs",
     "data:snapshot": "node scripts/snapshot.mjs",
     "data:build": "node scripts/build-data.mjs",
@@ -18,7 +18,9 @@
     "data:evidence": "node scripts/build-evidence-catalog.mjs",
     "verify:evidence": "node scripts/build-evidence-catalog.mjs --check",
     "verify:routes": "node scripts/verify-route-data.mjs",
-    "audit:routes": "node scripts/audit-route-samples.mjs"
+    "audit:routes": "node scripts/audit-route-samples.mjs",
+    "data:coverage": "node scripts/build-coverage-inventory.mjs",
+    "verify:coverage": "node scripts/build-coverage-inventory.mjs --check"
   },
   "dependencies": {
     "maplibre-gl": "6.10.0",

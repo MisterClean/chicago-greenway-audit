@@ -4998,6 +4998,1416 @@
         }
       ],
       "review_needed": "Verify current directional signs and permitted movements at Kedzie and Troy; inspect geometry and obtain traffic orders and as-built sheets."
+    },
+    {
+      "id": "research-row-434v-meyd.3gxa",
+      "source_record_ids": [
+        "row-434v-meyd.3gxa"
+      ],
+      "location": "ROCKWELL ST: N MILWAUKEE AVE to W FULLERTON AVE",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot motor direction is S; bicycle fields br_oneway=2W, br_ow_dir=-, contraflow=Y. Bicycle permissions do not extend to cars.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell Logan Square",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-434v-meyd.3gxa: ROCKWELL ST from N MILWAUKEE AVE to W FULLERTON AVE",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24091765",
+          "title": "OpenStreetMap way 24091765",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "saved OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Way 24091765: oneway=yes in southbound node order; oneway:bicycle=no",
+          "status": "saved snapshot",
+          "review_method": "Read way tags and endpoint coordinates in read-only local SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1008776794",
+          "title": "OpenStreetMap way 1008776794",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "saved OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Way 1008776794: oneway=yes in southbound node order; oneway:bicycle=no",
+          "status": "saved snapshot",
+          "review_method": "Read way tags and endpoint coordinates in read-only local SQLite"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter.",
+      "way_ids": [
+        24091765,
+        1008776794
+      ]
+    },
+    {
+      "id": "research-row-zf8y_8w58-du7q",
+      "source_record_ids": [
+        "row-zf8y_8w58-du7q"
+      ],
+      "location": "FULLERTON AVE: N ROCKWELL ST to N ROCKWELL ST",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot has no motor one-way direction in this row; this alone does not establish current two-way motor access or through movement.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell Logan Square",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-zf8y_8w58-du7q: FULLERTON AVE from N ROCKWELL ST to N ROCKWELL ST",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1160244173",
+          "title": "OpenStreetMap way 1160244173",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "saved OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Connector way nodes [366262666, 7635415155, 366309922] in west to east order; no oneway tag",
+          "status": "saved snapshot",
+          "review_method": "Read local SQLite way nodes, endpoints and tags; checked named approach ways share endpoint nodes"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter.",
+      "way_segments": [
+        {
+          "way_id": 1160244173,
+          "nodes": [
+            366262666,
+            7635415155,
+            366309922
+          ]
+        }
+      ],
+      "way_ids": [
+        1160244173
+      ]
+    },
+    {
+      "id": "research-row-6jsc~qzuy-dtav",
+      "source_record_ids": [
+        "row-6jsc~qzuy-dtav"
+      ],
+      "location": "ROCKWELL ST: W FULLERTON AVE to W LOGAN BLVD",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot motor direction is N; bicycle fields br_oneway=2W, br_ow_dir=-, contraflow=Y. Bicycle permissions do not extend to cars.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell Logan Square",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-6jsc~qzuy-dtav: ROCKWELL ST from W FULLERTON AVE to W LOGAN BLVD",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24091763",
+          "title": "OpenStreetMap way 24091763",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "saved OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Way 24091763: oneway=yes in northbound node order; oneway:bicycle=no",
+          "status": "saved snapshot",
+          "review_method": "Read way tags and endpoint coordinates in read-only local SQLite"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter.",
+      "way_ids": [
+        24091763
+      ]
+    },
+    {
+      "id": "research-row-cdds.7qag~3ksj",
+      "source_record_ids": [
+        "row-cdds.7qag~3ksj"
+      ],
+      "location": "LOGAN BLVD: N ROCKWELL ST to N CAMPBELL AVE",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot motor direction is E; bicycle fields br_oneway=1W, br_ow_dir=E, contraflow=missing. Bicycle permissions do not extend to cars.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell Logan Square",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-cdds.7qag~3ksj: LOGAN BLVD from N ROCKWELL ST to N CAMPBELL AVE",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter."
+    },
+    {
+      "id": "research-row-e2ij~bhix_rq9s",
+      "source_record_ids": [
+        "row-e2ij~bhix_rq9s"
+      ],
+      "location": "CAMPBELL AVE: W LOGAN BLVD to W LOGAN BLVD",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot motor direction is N; bicycle fields br_oneway=1W, br_ow_dir=N, contraflow=missing. Bicycle permissions do not extend to cars.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell Logan Square",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-e2ij~bhix_rq9s: CAMPBELL AVE from W LOGAN BLVD to W LOGAN BLVD",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter."
+    },
+    {
+      "id": "research-row-w6ce_auic-ahse",
+      "source_record_ids": [
+        "row-w6ce_auic-ahse"
+      ],
+      "location": "LOGAN BLVD: W LOGAN BLVD to N ROCKWELL ST",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot motor direction is W; bicycle fields br_oneway=1W, br_ow_dir=W, contraflow=missing. Bicycle permissions do not extend to cars.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell Logan Square",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-w6ce_auic-ahse: LOGAN BLVD from W LOGAN BLVD to N ROCKWELL ST",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter."
+    },
+    {
+      "id": "research-row-asr3-pvt4-ucg4",
+      "source_record_ids": [
+        "row-asr3-pvt4-ucg4"
+      ],
+      "location": "ROCKWELL ST: W LOGAN BLVD to W LOGAN BLVD",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot has no motor one-way direction in this row; this alone does not establish current two-way motor access or through movement.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell Logan Square",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-asr3-pvt4-ucg4: ROCKWELL ST from W LOGAN BLVD to W LOGAN BLVD",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter."
+    },
+    {
+      "id": "research-row-mc9h_wzfe~vu5i",
+      "source_record_ids": [
+        "row-mc9h_wzfe~vu5i"
+      ],
+      "location": "LYNDALE ST: N ROCKWELL ST to N WESTERN AVE",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot motor direction is E; bicycle fields br_oneway=2W, br_ow_dir=-, contraflow=Y. Bicycle permissions do not extend to cars.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Lyndale",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-mc9h_wzfe~vu5i: LYNDALE ST from N ROCKWELL ST to N WESTERN AVE",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24089892",
+          "title": "OpenStreetMap way 24089892",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "saved OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Way 24089892: oneway=yes in eastbound node order; oneway:bicycle=no",
+          "status": "saved snapshot",
+          "review_method": "Read way tags and endpoint coordinates in read-only local SQLite"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter.",
+      "way_ids": [
+        24089892
+      ]
+    },
+    {
+      "id": "research-row-m4nx_7zew-thzm",
+      "source_record_ids": [
+        "row-m4nx_7zew-thzm"
+      ],
+      "location": "WESTERN AVE: W LYNDALE ST to W LYNDALE ST",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot has no motor one-way direction in this row; this alone does not establish current two-way motor access or through movement.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Lyndale",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-m4nx_7zew-thzm: WESTERN AVE from W LYNDALE ST to W LYNDALE ST",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1266271144",
+          "title": "OpenStreetMap way 1266271144",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "saved OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Connector way nodes [296370420, 296370597] in north to south order; no oneway tag",
+          "status": "saved snapshot",
+          "review_method": "Read local SQLite way nodes, endpoints and tags; checked named approach ways share endpoint nodes"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter.",
+      "way_segments": [
+        {
+          "way_id": 1266271144,
+          "nodes": [
+            296370420,
+            296370597
+          ]
+        }
+      ],
+      "way_ids": [
+        1266271144
+      ]
+    },
+    {
+      "id": "research-row-xur6~8hyf.3yfq",
+      "source_record_ids": [
+        "row-xur6~8hyf.3yfq"
+      ],
+      "location": "LYNDALE ST: N WESTERN AVE to N LEAVITT ST",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot has no motor one-way direction in this row; this alone does not establish current two-way motor access or through movement.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Lyndale",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-xur6~8hyf.3yfq: LYNDALE ST from N WESTERN AVE to N LEAVITT ST",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter."
+    },
+    {
+      "id": "research-row-kepg~wgrs-kaij",
+      "source_record_ids": [
+        "row-kepg~wgrs-kaij"
+      ],
+      "location": "ROCKWELL ST: W LAWRENCE AVE to W ARGYLE ST",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot motor direction is N; bicycle fields br_oneway=2W, br_ow_dir=-, contraflow=Y. Bicycle permissions do not extend to cars.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell north",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-kepg~wgrs-kaij: ROCKWELL ST from W LAWRENCE AVE to W ARGYLE ST",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/159920327",
+          "title": "OpenStreetMap way 159920327",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "saved OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Way 159920327: oneway=yes in northbound node order; oneway:bicycle=no",
+          "status": "saved snapshot",
+          "review_method": "Read way tags and endpoint coordinates in read-only local SQLite"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter.",
+      "way_ids": [
+        159920327
+      ]
+    },
+    {
+      "id": "research-row-fmy8-xsws~6v4x",
+      "source_record_ids": [
+        "row-fmy8-xsws~6v4x"
+      ],
+      "location": "ROCKWELL ST: W ARGYLE ST to W WINNEMAC AVE",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot motor direction is N; bicycle fields br_oneway=2W, br_ow_dir=-, contraflow=Y. Bicycle permissions do not extend to cars.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell north",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-fmy8-xsws~6v4x: ROCKWELL ST from W ARGYLE ST to W WINNEMAC AVE",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/159920327",
+          "title": "OpenStreetMap way 159920327",
+          "publisher": "OpenStreetMap contributors",
+          "source_type": "saved OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "local snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Way 159920327: oneway=yes in northbound node order; oneway:bicycle=no",
+          "status": "saved snapshot",
+          "review_method": "Read way tags and endpoint coordinates in read-only local SQLite"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter.",
+      "way_ids": [
+        159920327
+      ]
+    },
+    {
+      "id": "research-row-fxzd-qf8h.ccni",
+      "source_record_ids": [
+        "row-fxzd-qf8h.ccni"
+      ],
+      "location": "ROCKWELL ST: W 48TH ST to W 35TH ST",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot has no motor one-way direction in this row; this alone does not establish current two-way motor access or through movement.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell south",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-fxzd-qf8h.ccni: ROCKWELL ST from W 48TH ST to W 35TH ST",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter."
+    },
+    {
+      "id": "research-row-fm3b-2q2j~frqb",
+      "source_record_ids": [
+        "row-fm3b-2q2j~frqb"
+      ],
+      "location": "ROCKWELL ST: W LELAND AVE to W LAWRENCE AVE",
+      "movement": "ordinary passenger car through movement in each direction",
+      "source_inference": "City snapshot has no motor one-way direction in this row; this alone does not establish current two-way motor access or through movement.",
+      "review_status": "source-inferred",
+      "confidence": "city snapshot; current signs and physical conditions unverified",
+      "effective_period": "City extract retrieved 2026-09-19; date of underlying observation unknown",
+      "project_group": "Rockwell north",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago Data Portal",
+          "source_type": "city dataset extract",
+          "source_date": "2026-09-19",
+          "date_kind": "retrieval date; source observation date unknown",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "scope": "Exact source record row-fm3b-2q2j~frqb: ROCKWELL ST from W LELAND AVE to W LAWRENCE AVE",
+          "status": "saved snapshot",
+          "review_method": "Inspected saved row fields and full coordinate geometry"
+        }
+      ],
+      "review_needed": "Inspect both approaches, regulatory signs, physical barriers, and exact through movement on site; do not treat traffic calming or a plan as a filter."
+    },
+    {
+      "id": "research-rockwell-lyndale-ordinance",
+      "source_record_ids": [
+        "row-434v-meyd.3gxa",
+        "row-mc9h_wzfe~vu5i"
+      ],
+      "location": "Rockwell Milwaukee–Fullerton and Lyndale Rockwell–Western",
+      "movement": "route context and motor direction",
+      "source_inference": "Council agenda lists southbound Rockwell and eastbound Lyndale single direction except bicycles; agenda is historical and does not establish current signs.",
+      "review_status": "context only",
+      "confidence": "historical document; current conditions unverified",
+      "sources": [
+        {
+          "url": "https://chicityclerk.s3.amazonaws.com/s3fs-public/2022-04-27%20Council%20Agenda%20Draft4.pdf",
+          "title": "City Council agenda, April 27, 2022",
+          "publisher": "Chicago City Clerk",
+          "source_type": "council agenda",
+          "source_date": "2022-04-27",
+          "date_kind": "agenda date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Rockwell Milwaukee–Fullerton and Lyndale Rockwell–Western",
+          "status": "historical context",
+          "review_method": "Web text inspection; PDF agenda text only, not visual plan review"
+        }
+      ],
+      "review_needed": "Verify current signs and exact physical movement on the ground."
+    },
+    {
+      "id": "research-rockwell-north-ward",
+      "source_record_ids": [
+        "row-kepg~wgrs-kaij",
+        "row-fmy8-xsws~6v4x",
+        "row-fm3b-2q2j~frqb"
+      ],
+      "location": "Rockwell near Lawrence and Winnemac",
+      "movement": "route context and motor direction",
+      "source_inference": "Ward 2024 update anticipates expansion of Rockwell bikeway in 2025; no exact movement restriction or as-built condition is specified.",
+      "review_status": "context only",
+      "confidence": "historical document; current conditions unverified",
+      "sources": [
+        {
+          "url": "https://40thward.org/2024/06/2024-development-and-infrastructure-improvements-coming-to-the-40th-ward/",
+          "title": "Development and Infrastructure Improvements Coming to the 40th Ward in 2024!",
+          "publisher": "40th Ward of Chicago",
+          "source_type": "ward update",
+          "source_date": "2024-06",
+          "date_kind": "publication month",
+          "retrieved_at": "2026-10-27",
+          "scope": "Rockwell near Lawrence and Winnemac",
+          "status": "historical context",
+          "review_method": "Web text inspection; PDF agenda text only, not visual plan review"
+        }
+      ],
+      "review_needed": "Verify current signs and exact physical movement on the ground."
+    },
+    {
+      "id": "research-rockwell-logan-ward",
+      "source_record_ids": [
+        "row-434v-meyd.3gxa",
+        "row-6jsc~qzuy-dtav",
+        "row-asr3-pvt4-ucg4"
+      ],
+      "location": "Rockwell Logan Square extension",
+      "movement": "route context and motor direction",
+      "source_inference": "2026 ward newsletter describes a Rockwell route extending north of Logan via Altgeld and Schubert; broad route update does not verify individual intersections.",
+      "review_status": "context only",
+      "confidence": "historical document; current conditions unverified",
+      "sources": [
+        {
+          "url": "https://mailchi.mp/the1stward/2025-17466407",
+          "title": "Grand Ave, Rockwell Greenway & More",
+          "publisher": "1st Ward Office",
+          "source_type": "ward update",
+          "source_date": "2026-07-07",
+          "date_kind": "newsletter date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Rockwell Logan Square extension",
+          "status": "historical context",
+          "review_method": "Original ward newsletter HTML retrieved through its public archive link"
+        }
+      ],
+      "review_needed": "Verify current signs and exact physical movement on the ground."
+    },
+    {
+      "id": "research-south-rockwell-photo-context",
+      "source_record_ids": [
+        "row-fxzd-qf8h.ccni"
+      ],
+      "location": "South Rockwell near Archer Avenue, Brighton Park",
+      "movement": "historical route context",
+      "source_inference": "Streetsblog January 2025 reconnaissance captions a photograph looking south on the Rockwell neighborhood greenway toward Archer. This does not establish through access or conditions over the entire 35th–48th city row.",
+      "review_status": "context only",
+      "confidence": "single historic photograph context",
+      "sources": [
+        {
+          "url": "https://chi.streetsblog.org/2025/01/03/all-is-quiet-on-new-years-day-5th-and-final-part-of-sbcs-bike-lane-fest-2024-south-side",
+          "title": "All is quiet on New Year’s Day. 5th and final part of SBC’s Bike Lane Fest 2024: South Side",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "news article and photograph",
+          "source_date": "2025-01-03",
+          "date_kind": "publication date",
+          "retrieved_at": "2026-10-27",
+          "scope": "South Rockwell looking toward Archer",
+          "status": "historical observation",
+          "review_method": "Web article and photograph caption text inspected; not a current site survey"
+        }
+      ],
+      "review_needed": "Inspect the entire corridor and intersections for present movement restrictions."
+    },
+    {
+      "id": "research-rockwell-lawrence-cdot-plan",
+      "source_record_ids": [
+        "row-fm3b-2q2j~frqb",
+        "row-kepg~wgrs-kaij"
+      ],
+      "location": "North Rockwell at Lawrence Avenue",
+      "movement": "intersection design context",
+      "source_inference": "The proposed intersection plan shows pedestrian bump-outs and crosswalks; Rockwell roadway is drawn open across Lawrence with no continuous closure depicted. The streetscape design does not prove current conditions or resolve directional signs and turns.",
+      "review_status": "design context only",
+      "confidence": "historical proposed drawing; not as-built",
+      "sources": [
+        {
+          "url": "https://www.thegreaterrockwell.org/s/Lawrence-Ave-Streetscape-project-20200929-overview_Final_Reduced-size.pdf",
+          "title": "Lawrence Avenue Streetscape: Public Meeting 2 Project Overview",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "project design presentation PDF",
+          "source_date": "2020-09-29",
+          "date_kind": "presentation date inferred from document title",
+          "retrieved_at": "2026-10-27",
+          "scope": "Proposed Lawrence and Rockwell intersection",
+          "status": "proposed design",
+          "pages": [
+            25
+          ],
+          "sha256": "767b50dd9ad46a43ac6734e73364fb6ad72197e73680f079c71aa0e7c2f27d81",
+          "review_method": "Downloaded public PDF and visually inspected rendered PDF page 25, slide 24"
+        }
+      ],
+      "review_needed": "Verify current crosswalks, signs, turns and passability in field."
+    },
+    {
+      "id": "research-rockwell-leland-cdot-map",
+      "source_record_ids": [
+        "row-fm3b-2q2j~frqb"
+      ],
+      "location": "Rockwell between Leland and Lawrence",
+      "movement": "bicycle network plan context",
+      "source_inference": "The 2022 Leland community meeting map shows a greenway connection along Rockwell from Leland to Lawrence as part of the trail connections diagram. It is a schematic bicycle network map, not detailed motor movement evidence.",
+      "review_status": "design context only",
+      "confidence": "historic schematic; not as-built",
+      "sources": [
+        {
+          "url": "https://www.thegreaterrockwell.org/s/Leland_Community-Meeting-2_Presentation.pdf",
+          "title": "Leland Neighborhood Greenway: Community Meeting #2",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "project presentation PDF",
+          "source_date": "2022-01-18",
+          "date_kind": "meeting date",
+          "retrieved_at": "2026-10-27",
+          "scope": "Trail connections diagram at Rockwell between Leland and Lawrence",
+          "status": "project presentation",
+          "pages": [
+            7,
+            9,
+            10,
+            11
+          ],
+          "sha256": "649b9b11ab19fe98d3ba700d4d04179a6029270bd1f1362e553d49045db1d990",
+          "review_method": "Downloaded public PDF; visually inspected rendered pages 7, 9, 10 and 11 including page 10 enlarged"
+        }
+      ],
+      "review_needed": "Field-check exact junction and current permissions."
+    },
+    {
+      "id": "wrightwood-designated-geometry",
+      "source_record_ids": [
+        "row-nat7~w2yg_e9fb",
+        "row-sehs~8th9.rbe3",
+        "row-bpsr_gxmr-xrua",
+        "row-kirn_hd26~rmwt",
+        "row-s6xv-qq38_g7k8",
+        "row-9qbg.drnv.cmv4",
+        "row-xurv_2j34_zur8",
+        "row-j99q_9g6u_25vc",
+        "row-iqsz.auer~nqrr"
+      ],
+      "location": "Wrightwood Avenue, Narragansett Avenue to Keeler Avenue, including Cicero and Kostner offsets",
+      "movement": "designated route continuity in each direction",
+      "source_inference": "Seven Wrightwood rows and separately named Cicero and Kostner Neighborhood Greenway connector rows are the documented route selection. Between Cicero and Kostner city centerlines lie near the median, approximately 18–20 m from each carriageway; city connector endpoints leave gaps to those centerlines. They do not determine which carriageway matches or prove any car turn legal. Keep connector and middle attachments unresolved without further evidence.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for designation; turn permissions and current conditions unverified",
+      "effective_period": "city extract retrieved 2026-09-19",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "dataset snapshot",
+          "source_date": "2026-09-19",
+          "date_kind": "snapshot retrieval date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "designation snapshot",
+          "review_method": "Read raw row attributes and coordinate sequences in saved extract",
+          "scope": "All seven Wrightwood rows and both offset connector rows"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2025/05/16/an-intersection-redesign-advocates-pitched-years-ago-might-have-prevented-the-latest-serious-or-fatal-bike-crash-on-wrightwood-avenue",
+          "title": "An intersection redesign advocates pitched years ago might have prevented the latest serious bike injury crash on Wrightwood Avenue",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "news report",
+          "source_date": "2025-05-16",
+          "date_kind": "publication",
+          "retrieved_at": "2026-10-27",
+          "scope": "Describes divided Wrightwood east of Cicero and designates northern side as westbound; discusses advocacy alternative west of Cicero",
+          "status": "reported conditions and alternative proposal; not a current field survey",
+          "review_method": "Read article and image captions"
+        },
+        {
+          "url": "https://sharedusemobilitycenter.org/wp-content/uploads/2025/12/BikesForBelmontCragin_v5.pdf",
+          "title": "Bikes for Belmont Cragin Evaluation Report",
+          "publisher": "Shared-Use Mobility Center",
+          "source_type": "evaluation report PDF",
+          "source_date": "2023-09-12",
+          "date_kind": "PDF creation metadata",
+          "retrieved_at": "2026-10-27",
+          "scope": "PDF page 9 (printed page 7): Figure 1.3 reproduces CDOT 2020 proposed network map. Graphic indicates Wrightwood planned in red from Narragansett eastward with a schematic northward jog at Cicero and southward jog at Kostner. Report states network-wide 2021 installation.",
+          "status": "2020 conceptual network proposal reproduced in 2023 report; not detailed design, as-built, or current motor permission",
+          "pages": [
+            9
+          ],
+          "review_method": "Downloaded public PDF, checked metadata and SHA-256; rendered and visually inspected PDF page 9 at 200 dpi; read caption and neighboring text.",
+          "sha256": "6626acabdc69aaf2f998913a7d69e18e4ab6557e0d5e8f8b64b3395722e91e4c"
+        }
+      ],
+      "review_needed": "Verify exact route line at both offsets, each approach and departure, signal phases, signs and any current turn restrictions; do not use off-route bypasses."
+    },
+    {
+      "id": "wrightwood-west-direction",
+      "source_record_ids": [
+        "row-nat7~w2yg_e9fb",
+        "row-bpsr_gxmr-xrua"
+      ],
+      "way_ids": [
+        1153273869,
+        24094026,
+        1418761744,
+        1423008630
+      ],
+      "location": "Wrightwood, Narragansett–Austin and Central–Cicero",
+      "movement": "eastbound and westbound along designated street",
+      "source_inference": "City fields specify motor oneway_dir E with bicycle contraflow on these two rows. Sampled OSM ways point east with oneway=yes and oneway:bicycle=no. The bicycle exception does not authorize a westbound car. Signs and all intervening movements remain unverified.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot direction; current signs unknown",
+      "effective_period": "2026-09 city and OSM snapshots",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "dataset snapshot",
+          "source_date": "2026-09-19",
+          "date_kind": "snapshot retrieval date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "designation snapshot",
+          "review_method": "Read raw row attributes and coordinate sequences in saved extract",
+          "scope": "East motor one-way and bicycle contraflow on Narragansett–Austin and Central–Cicero rows"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1153273869",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 1153273869",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Narragansett–Austin sampled way eastbound one-way, bicycle exception",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24094026",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 24094026",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Central eastward sampled way, eastbound one-way, bicycle exception",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1418761744",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 1418761744",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Central–Cicero sampled way, eastbound one-way, bicycle exception",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1423008630",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 1423008630",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Approach to Cicero, eastbound one-way, bicycle exception",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        }
+      ],
+      "review_needed": "Inspect signs at block ends and junctions for current one-way direction and turn restrictions."
+    },
+    {
+      "id": "wrightwood-austin-central-direction",
+      "source_record_ids": [
+        "row-sehs~8th9.rbe3"
+      ],
+      "way_ids": [
+        1541445027,
+        1153273872,
+        1541445025,
+        1153273871
+      ],
+      "location": "Wrightwood, Austin Avenue to Central Avenue",
+      "movement": "eastbound and westbound along designated street",
+      "source_inference": "City row has motor oneway_dir -, making no cardinal direction assertion. OSM maps most sampled blocks eastbound oneway=yes with oneway:bicycle=no, while one short Central approach is oneway=no. The city field is less specific, not an opposing two-way motor claim; bicycle route 2W is not car permission.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for sampled OSM directions; city field less specific and signs unverified",
+      "effective_period": "2026-09 city and OSM snapshots",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "dataset snapshot",
+          "source_date": "2026-09-19",
+          "date_kind": "snapshot retrieval date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "designation snapshot",
+          "review_method": "Read raw row attributes and coordinate sequences in saved extract",
+          "scope": "Austin–Central row has oneway_dir - and bicycle route 2W"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1541445027",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 1541445027",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Eastbound one-way east of Austin, bicycle exception",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1153273872",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 1153273872",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Eastbound one-way in middle of Austin–Central, bicycle exception",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1541445025",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 1541445025",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Eastbound one-way near Central, bicycle exception",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1153273871",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 1153273871",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Short Central approach tagged oneway=no",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        }
+      ],
+      "review_needed": "Inspect current signs and transitions at Austin, intermediate cross streets and Central; verify local one-way extent."
+    },
+    {
+      "id": "wrightwood-divided-offsets",
+      "source_record_ids": [
+        "row-kirn_hd26~rmwt",
+        "row-s6xv-qq38_g7k8",
+        "row-9qbg.drnv.cmv4",
+        "row-xurv_2j34_zur8",
+        "row-j99q_9g6u_25vc",
+        "row-iqsz.auer~nqrr"
+      ],
+      "way_ids": [
+        24094025,
+        37614984,
+        37615061,
+        59252944,
+        1124000240
+      ],
+      "location": "Wrightwood / Cicero to Wrightwood / Kostner and east to Keeler",
+      "movement": "through movement across offset intersections and on designated carriageway",
+      "source_inference": "Between Cicero and Kostner, city centerlines lie near the median, roughly 18–20 m from either carriageway. Their endpoints do not directly meet the city connector endpoints. OSM maps separate westbound northern and eastbound southern carriageways, but neither can be automatically matched to the city line. The 2025 news report describes these directions and a bicycle jog, not a complete passenger-car permission. Keep the designated carriageway and attachments unresolved; do not select a parallel off-route bypass.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for mapped geometry; actual turns and signs unverified",
+      "effective_period": "2026-09 city and OSM snapshots; 2025 report",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "dataset snapshot",
+          "source_date": "2026-09-19",
+          "date_kind": "snapshot retrieval date",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "status": "designation snapshot",
+          "review_method": "Read raw row attributes and coordinate sequences in saved extract",
+          "scope": "Cicero and Kostner connector rows and median-centered Wrightwood rows; endpoints have gaps"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/37614984",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 37614984",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Northern carriageway sampled westbound in node order, oneway=yes",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24094025",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 24094025",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Southern parallel carriageway sampled eastbound in node order, oneway=yes",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/37615061",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 37615061",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Northern east section node order generally westbound; oneway=yes",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order, coordinates and tags in staged SQLite"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2025/05/16/an-intersection-redesign-advocates-pitched-years-ago-might-have-prevented-the-latest-serious-or-fatal-bike-crash-on-wrightwood-avenue",
+          "title": "An intersection redesign advocates pitched years ago might have prevented the latest serious bike injury crash on Wrightwood Avenue",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "news report",
+          "source_date": "2025-05-16",
+          "date_kind": "publication",
+          "retrieved_at": "2026-10-27",
+          "scope": "Describes divided Wrightwood east of Cicero and designates northern side as westbound; discusses advocacy alternative west of Cicero",
+          "status": "reported conditions and alternative proposal; not a current field survey",
+          "review_method": "Read article and image captions"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1153273868",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 1153273868",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Cicero connector south portion",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order and coordinates in staged SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/435326012",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 435326012",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Cicero connector north portion",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order and coordinates in staged SQLite"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1153273866",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "OpenStreetMap way 1153273866",
+          "publisher": "OpenStreetMap contributors; BBBike extract",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "scope": "Kostner connector",
+          "status": "snapshot; not field verified",
+          "review_method": "Read way node order and coordinates in staged SQLite"
+        },
+        {
+          "url": "https://sharedusemobilitycenter.org/wp-content/uploads/2025/12/BikesForBelmontCragin_v5.pdf",
+          "title": "Bikes for Belmont Cragin Evaluation Report",
+          "publisher": "Shared-Use Mobility Center",
+          "source_type": "evaluation report PDF",
+          "source_date": "2023-09-12",
+          "date_kind": "PDF creation metadata",
+          "retrieved_at": "2026-10-27",
+          "scope": "PDF page 9 (printed page 7): Figure 1.3 reproduces CDOT 2020 proposed network map. Graphic indicates Wrightwood planned in red from Narragansett eastward with a schematic northward jog at Cicero and southward jog at Kostner. Report states network-wide 2021 installation.",
+          "status": "2020 conceptual network proposal reproduced in 2023 report; not detailed design, as-built, or current motor permission",
+          "pages": [
+            9
+          ],
+          "review_method": "Downloaded public PDF, checked metadata and SHA-256; rendered and visually inspected PDF page 9 at 200 dpi; read caption and neighboring text.",
+          "sha256": "6626acabdc69aaf2f998913a7d69e18e4ab6557e0d5e8f8b64b3395722e91e4c"
+        }
+      ],
+      "review_needed": "Resolve designated carriageway and geometry attachments using detailed CDOT plans and field inspection; inspect each approach and turn and current signs, including any physical filters.",
+      "way_segments": [
+        {
+          "way_id": 1153273868,
+          "nodes": [
+            845883350,
+            157738013
+          ]
+        },
+        {
+          "way_id": 435326012,
+          "nodes": [
+            157738013,
+            440912017
+          ]
+        },
+        {
+          "way_id": 1153273866,
+          "nodes": [
+            261236499,
+            10670151977,
+            2266563851,
+            10670151973,
+            261236516,
+            2402691754,
+            440913744
+          ]
+        }
+      ],
+      "matching_review": "The city centerline between Cicero and Kostner lies between separate motor carriageways. The schematic CDOT map cannot identify the designated carriageway or resolve its connections. Matching remains unresolved; no car path is inferred through this section."
+    },
+    {
+      "id": "aldine-named-connector-inventory",
+      "source_record_ids": [
+        "row-gv5q_svcf_t3vj",
+        "row-y2dq.3s9k_38gf",
+        "row-vhym~pu4g.guju"
+      ],
+      "location": "Aldine offset at Broadway",
+      "movement": "Designated offset and both motor turns",
+      "source_inference": "North Broadway is highway=secondary with no oneway tag; no mapped restriction relation references the connector or endpoint nodes. Both Aldine approaches are oneway=yes and the eastbound route requires a northward Broadway jog. CDOT depicts the offset, not current turn permission.",
+      "review_status": "needs-review",
+      "confidence": "high for snapshot node topology; present motor permissions unverified",
+      "effective_period": "City snapshot December 2025; OSM effective 2026-09-11; current conditions unknown",
+      "osm_binding": {
+        "connector_way_id": 619457502,
+        "ordered_endpoint_nodes": [
+          262171169,
+          262170052
+        ],
+        "adjacent_way_ids": [
+          619457499,
+          24117482
+        ],
+        "note": "Ordered along route; node sequence on connector way may run in reverse. City centerline is schematic, not exact carriageway geometry."
+      },
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OpenStreetMap extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM regional snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Read-only staged SQLite ways, nodes and restriction relations; shared node identity and tags, not present conditions",
+          "status": "historical snapshot",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "Inspected way node sequences and tags and searched restriction relation members for connector ways and endpoint nodes"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Clark_to_LSD.pdf",
+          "title": "School-Aldine / Roscoe: Clark to Lake Shore Drive long plot",
+          "publisher": "Chicago Department of Transportation, hosted by 44th Ward",
+          "source_type": "engineering design drawing",
+          "source_date": "2017-11-13",
+          "date_kind": "PDF creation metadata",
+          "retrieved_at": "2026-10-27",
+          "scope": "Aldine Clark to Inner Lake Shore Drive, including Broadway offset",
+          "status": "design, not as-built",
+          "pages": [
+            1
+          ],
+          "sha256": "b0a38b6474c52c699a88f840907338c7aff6a03700a5a9c38905260df53a3e6e",
+          "review_method": "Visually inspected complete one-page drawing and enlarged inset"
+        }
+      ],
+      "review_needed": "Bind the city connector to the carriageway separately from any bicycle facility; verify current signs, physical access and both turns. Do not route by an off-greenway bypass. Missing OSM restriction or oneway tags do not certify movement.",
+      "search_gaps": [
+        "No current field survey or complete present-day turn-control inventory."
+      ]
+    },
+    {
+      "id": "roscoe-named-connector-inventory",
+      "source_record_ids": [
+        "row-ftcb_6xmu~qa9x",
+        "row-sbv9-nemh.v8g9",
+        "row-smjt~ezi2_sb5e"
+      ],
+      "location": "Roscoe offset at Broadway",
+      "movement": "Designated offset and both motor turns",
+      "source_inference": "North Broadway is highway=secondary with no oneway tag and cycleway:right=track, cycleway:right:oneway=-1. CDOT depicts a raised contraflow bicycle connector; it is not the motor carriageway. No mapped restriction relation references the connector or endpoint nodes. Both Roscoe ways are oneway=yes; westbound continuation requires a northward jog and two motor turns.",
+      "review_status": "needs-review",
+      "confidence": "high for snapshot node topology; present motor permissions unverified",
+      "effective_period": "City snapshot December 2025; OSM effective 2026-09-11; current conditions unknown",
+      "osm_binding": {
+        "connector_way_id": 619457505,
+        "ordered_endpoint_nodes": [
+          3456306392,
+          262169734
+        ],
+        "adjacent_way_ids": [
+          24075135,
+          24075148
+        ],
+        "note": "Ordered along route; node sequence on connector way may run in reverse. City centerline is schematic, not exact carriageway geometry."
+      },
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OpenStreetMap extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM regional snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Read-only staged SQLite ways, nodes and restriction relations; shared node identity and tags, not present conditions",
+          "status": "historical snapshot",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "Inspected way node sequences and tags and searched restriction relation members for connector ways and endpoint nodes"
+        },
+        {
+          "url": "https://www.44thward.org/wp-content/uploads/2018/08/LongPlot_-_School-Aldine__Roscoe_Clark_to_LSD.pdf",
+          "title": "School-Aldine / Roscoe: Clark to Lake Shore Drive long plot",
+          "publisher": "Chicago Department of Transportation, hosted by 44th Ward",
+          "source_type": "engineering design drawing",
+          "source_date": "2017-11-13",
+          "date_kind": "PDF creation metadata",
+          "retrieved_at": "2026-10-27",
+          "scope": "Roscoe Clark to Inner Lake Shore Drive, including the Broadway offset and raised bicycle connector",
+          "status": "design, not as-built",
+          "pages": [
+            1
+          ],
+          "sha256": "b0a38b6474c52c699a88f840907338c7aff6a03700a5a9c38905260df53a3e6e",
+          "review_method": "Visually inspected complete one-page drawing and enlarged inset"
+        }
+      ],
+      "review_needed": "Bind the city connector to the carriageway separately from any bicycle facility; verify current signs, physical access and both turns. Do not route by an off-greenway bypass. Missing OSM restriction or oneway tags do not certify movement.",
+      "search_gaps": [
+        "No current field survey or complete present-day turn-control inventory."
+      ]
+    },
+    {
+      "id": "berwyn-named-connector-inventory",
+      "source_record_ids": [
+        "row-cg56_7q8e~jzk6",
+        "row-g87j-tbmk_gx4c",
+        "row-kxgt~6ijf-duva"
+      ],
+      "location": "Berwyn offset at Sheridan Road",
+      "movement": "Designated offset and both motor turns",
+      "source_inference": "North Sheridan Road is highway=secondary with cycleway:right=separate and no oneway tag; the design graphic depicts a two-way protected bicycle facility along Sheridan. No mapped restriction relation references the connector or endpoint nodes. OSM western Berwyn approach 1314176518 is oneway=yes; eastern 23741249 has no oneway tag. Determine legal turns and motor access separately from the bike facility and trail.",
+      "review_status": "needs-review",
+      "confidence": "high for snapshot node topology; present motor permissions unverified",
+      "effective_period": "City snapshot December 2025; OSM effective 2026-09-11; current conditions unknown",
+      "osm_binding": {
+        "connector_way_id": 1313897204,
+        "ordered_endpoint_nodes": [
+          257146995,
+          257121401
+        ],
+        "adjacent_way_ids": [
+          1314176518,
+          23741249
+        ],
+        "note": "Ordered along route; node sequence on connector way may run in reverse. City centerline is schematic, not exact carriageway geometry."
+      },
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        },
+        {
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "title": "Chicago OpenStreetMap extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "source_type": "OSM regional snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "scope": "Read-only staged SQLite ways, nodes and restriction relations; shared node identity and tags, not present conditions",
+          "status": "historical snapshot",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "review_method": "Inspected way node sequences and tags and searched restriction relation members for connector ways and endpoint nodes"
+        },
+        {
+          "url": "https://images.squarespace-cdn.com/content/v1/6440662e14e59b3037e72c3c/c6f2631b-25ed-4b1c-b2c0-1913a9004465/Berwyn%2Band%2BSheridan.png",
+          "title": "Connecting to the Lakefront Trail",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "CDOT-branded plan graphic",
+          "source_date": "2024-08-15",
+          "date_kind": "date of ward announcement embedding graphic",
+          "retrieved_at": "2026-10-27",
+          "scope": "Graphic depicts offset Berwyn approaches at Sheridan, two-way protected bike lane on Sheridan and shorter pedestrian crossing; route continuation to lakefront is shown as bicycle facility",
+          "status": "project concept graphic; not an as-built or signed engineering plan",
+          "sha256": "11f207504beeaa3cc023fc169bab815878ded53619024be3d6bd628ef83f485d",
+          "review_method": "Downloaded public image and visually inspected entire graphic; delivered image/webp despite .png URL"
+        }
+      ],
+      "review_needed": "Bind the city connector to the carriageway separately from any bicycle facility; verify current signs, physical access and both turns. Do not route by an off-greenway bypass. Missing OSM restriction or oneway tags do not certify movement.",
+      "search_gaps": [
+        "No current field survey or complete present-day turn-control inventory."
+      ]
+    },
+    {
+      "id": "bloomindale-bloomingdale-alias-inventory",
+      "source_record_ids": [
+        "row-q7br.k2n4.y3hx",
+        "row-9fhc-fg9z~eqbn",
+        "row-mhva~sefa-56y8"
+      ],
+      "location": "Bloomingdale Avenue, Narragansett Avenue to Laramie Avenue",
+      "movement": "Inventory naming and row association",
+      "source_inference": "The city has adjacent Bloomingdale records and a BLOOMINDALE spelling for Central–Laramie; treat as a proposed alias for counting and matching, retaining the original source ID and spelling. This is not a conclusion about an uninterrupted driving route.",
+      "review_status": "needs-review",
+      "confidence": "inventory alias candidate; geometry and connected movement still require review",
+      "effective_period": "City extract December 2025",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Bike Routes: Neighborhood Greenway extract",
+          "publisher": "City of Chicago",
+          "source_type": "municipal open data extract",
+          "source_date": "2025-12-16",
+          "date_kind": "dataset rows last updated (metadata)",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "scope": "Selected city neighborhood greenway rows; oneway_dir is a motor-direction attribute; br_oneway and br_ow_dir are bicycle-route direction attributes.",
+          "status": "snapshot",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "review_method": "Inspected local JSON rows by st_name and endpoint"
+        }
+      ],
+      "review_needed": "Match each row and connectors to the street network, verify source identity and movements.",
+      "search_gaps": [
+        "No project-level inventory and field-confirmed entire alignment established."
+      ]
     }
   ],
   "research_batches": [
@@ -5215,6 +6625,87 @@
         "little-village-30th-kedzie-troy-unnamed"
       ],
       "notes": "docs/little-village-source-review.md"
+    },
+    {
+      "id": "rockwell-lyndale-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Scoped Rockwell and Lyndale city-row research; not field approval.",
+        "default_profile": "ordinary passenger car on a through trip",
+        "search_gaps": [
+          "A project-specific alderman update for South Rockwell 35th–48th was not located; search targeted Rockwell greenway, 35th, 47th, 48th and Brighton Park.",
+          "Logan/Campbell boulevard arms do not form a simple single chain in the city extract; inspect precise intersection topology and designated route before grouping or assigning movements.",
+          "Focused searches 2026-10-27: Logan/Lyndale: \"Rockwell Lyndale greenway plan CDOT 1st ward pdf\", site:the1stward.com Rockwell Lyndale greenway; North: \"Leland Neighborhood Greenway Rockwell plans PDF CDOT 47\", \"Rockwell Leland Lawrence greenway CDOT plans Chicago\"; South: \"Rockwell Montgomery greenway CDOT Brighton park 2024\", \"Rockwell greenway 12th ward bicycle Chicago\", \"Rockwell 35th 48th greenway CDOT Brighton Park\". No corridor-specific detailed plan was obtained.",
+          "North Rockwell: the linked 2020 Lawrence streetscape plan and 2022 Leland schematic were downloaded and visually inspected after initial web cache miss and sandbox DNS failure; detailed Rockwell Lawrence–Winnemac project plans remain unlocated. Logan Square Rockwell/Lyndale and South Rockwell detailed plans also remain unlocated."
+        ]
+      },
+      "record_ids": [
+        "research-row-434v-meyd.3gxa",
+        "research-row-zf8y_8w58-du7q",
+        "research-row-6jsc~qzuy-dtav",
+        "research-row-cdds.7qag~3ksj",
+        "research-row-e2ij~bhix_rq9s",
+        "research-row-w6ce_auic-ahse",
+        "research-row-asr3-pvt4-ucg4",
+        "research-row-mc9h_wzfe~vu5i",
+        "research-row-m4nx_7zew-thzm",
+        "research-row-xur6~8hyf.3yfq",
+        "research-row-kepg~wgrs-kaij",
+        "research-row-fmy8-xsws~6v4x",
+        "research-row-fxzd-qf8h.ccni",
+        "research-row-fm3b-2q2j~frqb",
+        "research-rockwell-lyndale-ordinance",
+        "research-rockwell-north-ward",
+        "research-rockwell-logan-ward",
+        "research-south-rockwell-photo-context",
+        "research-rockwell-lawrence-cdot-plan",
+        "research-rockwell-leland-cdot-map"
+      ],
+      "notes": "docs/rockwell-lyndale-source-review.md"
+    },
+    {
+      "id": "wrightwood-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Wrightwood designated route and movement source review; not field approval.",
+        "default_profile": "ordinary passenger car on a through trip",
+        "search_gaps": [
+          "As of 2026-10-27, searches for detailed CDOT Wrightwood design drawings and a corridor-specific 31st Ward project update did not locate an accessible primary plan or current completion notice. The official ward31.org home and its linked navigation were located but no Wrightwood project update was found.",
+          "The historic 2021 Chicago Bike Map result at https://chicagocompletestreets.org/wp-content/uploads/2022/05/2021-Chicago-Bike-Map-website.pdf returned 404 on direct retrieval; no PDF graphics were inspected or used. Streetsblog reports a 2021 CDOT handout, but a standalone primary copy was not located.",
+          "No current field survey, dated sign inventory or approach-to-departure turn verification was found; absence of a documented filter is not evidence of permission.",
+          "Second pass examined https://36thward.org/, https://www.30thward.org/zoning/plans, https://www.30thward.org/news-and-events/newsletter-archive and https://www.ward31.org/ and searched ward domains for Wrightwood bike and greenway. No scoped Wrightwood project update or drawing was located in these searches. The 30th Ward plans page lists other plans; its newsletter index covers December 2024–May 2026. It is not a full search of every newsletter. Ward boundaries changed after the 2021 project; exact corridor-by-corridor ward assignments were not independently established.",
+          "On 2026-10-27 the 2023 report URL https://sharedusemobilitycenter.org/wp-content/uploads/2023/09/BikesForBelmontCragin_EnglishVersion.pdf returned HTTP 404 when fetched directly. The 2025 hosted copy was retrieved and visually inspected; no standalone original 2021 handout or detailed CDOT Wrightwood drawings were located.",
+          "The Streetsblog-linked citywide plan https://www.chicago.gov/content/dam/city/depts/cdot/bike/general/ChicagoStreetsforCycling2020.pdf returned HTTP 403 on direct retrieval, while https://resources.chicago.gov/content/dam/city/depts/cdot/bike/general/ChicagoStreetsforCycling2020.pdf returned 404. The older plan was not inspected; Streetsblog describes a pre-contraflow Drummond concept, not the designated route."
+        ]
+      },
+      "record_ids": [
+        "wrightwood-designated-geometry",
+        "wrightwood-west-direction",
+        "wrightwood-austin-central-direction",
+        "wrightwood-divided-offsets"
+      ],
+      "notes": "docs/wrightwood-source-review.md"
+    },
+    {
+      "id": "connector-inventory-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "purpose": "Independent coverage and named-connector inventory research; source snapshot inferences, not field approval",
+        "search_gaps": [
+          "Current signed turn inventory and as-built drawings for all three offsets not located in existing review.",
+          "City inventory does not identify unique project boundaries; raw street names cannot be summed as project count."
+        ]
+      },
+      "record_ids": [
+        "aldine-named-connector-inventory",
+        "roscoe-named-connector-inventory",
+        "berwyn-named-connector-inventory",
+        "bloomindale-bloomingdale-alias-inventory"
+      ],
+      "notes": "docs/connector-inventory-source-review.md"
     }
   ]
 }

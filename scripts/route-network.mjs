@@ -10,7 +10,9 @@ export function designationRecords(source, spec) {
   const aliases = spec.source_aliases ?? [];
   if (!Array.isArray(aliases) || [spec.source, ...aliases].some(name => typeof name !== 'string' || !name.trim())) throw new Error('Designation names must be explicit nonempty strings');
   const names = new Set([spec.source, ...aliases]);
-  const records = source.filter(record => names.has(record.st_name));
+  const ids = spec.additional_source_ids ?? [];
+  if (!Array.isArray(ids) || ids.some(id => typeof id !== 'string' || !source.some(record => record[':id'] === id))) throw new Error('Additional designation IDs must identify existing city records');
+  const records = source.filter(record => names.has(record.st_name) || ids.includes(record[':id']));
   if (!records.length) throw new Error(`No designation records for ${spec.source}`);
   return records;
 }

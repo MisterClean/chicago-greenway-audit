@@ -24,6 +24,8 @@ test('explicit designation alias includes the typo without rewriting or fuzzy ma
  assert.equal(selected[0],source[0]); assert.equal(selected[0].st_name,'BERWN');
  assert.deepEqual(designationRecords(source,{source:'BERWYN'}).map(r=>r[':id']),['east']);
  assert.throws(()=>designationRecords(source,{source:'MISSING'}),/No designation/);
+ assert.deepEqual(designationRecords(source,{source:'BERWYN',additional_source_ids:['other']}).map(r=>r[':id']),['east','other']);
+ assert.throws(()=>designationRecords(source,{source:'BERWYN',additional_source_ids:['unknown']}),/existing city records/);
 });
 test('assembles connected records with consistent route orientation and retains gaps',()=>{
  const parts=assemble([record('a',[[0,0],[0,0.001]]),record('b',[[0,0.002],[0,0.001]]),record('c',[[0,0.004],[0,0.005]])],'north');

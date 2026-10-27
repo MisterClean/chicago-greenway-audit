@@ -7,6 +7,9 @@ import { traceJunction } from "./junction-traversal.mjs";
 import { gapReviewContext, inferGapFilter } from "./route-evidence.mjs";
 import { addScopedRouteWay } from "./scoped-route-ways.mjs";
 import { compileEvidenceCatalog } from "./evidence-catalog.mjs";
+import { compileCoverageInventory } from "./coverage-inventory.mjs";
+import { resolveMatchingReview } from "./matching-review.mjs";
+import { createHash } from "node:crypto";
 const json = async (p) => JSON.parse(await readFile(p, "utf8"));
 const [source, config, osm, reviewEvidence] = await Promise.all(["data/sources/greenways.json", "data/routes/pilots.json", "data/sources/osm-source.json", "data/routes/review-evidence.json"].map(json));
 const catalogText = `${JSON.stringify(compileEvidenceCatalog(reviewEvidence), null, 2)}\n`;
@@ -47,8 +50,16 @@ for (const spec of config.streets) {
     const [a, b] = components;
     components = [{ coords: [...a.coords, ...b.coords], ids: [...a.ids, ...b.ids], designationLines: [a.coords, b.coords], connector: [a.coords.at(-1), b.coords[0]] }];
   }
+  const componentIds = new Set(components.map((_, ix) => `${spec.name.toLowerCase()}-${ix + 1}`));
+  for (const binding of spec.scoped_ways ?? []) {
+    if (!componentIds.has(binding.route_id)) throw new Error(`Scoped way ${binding.way_id} refers to missing route ${binding.route_id}`);
+  }
+  for (const binding of spec.unresolved_components ?? []) {
+    if (!Array.isArray(binding.source_ids) || binding.source_ids.some(sourceId=>!records.some(record=>record[':id']===sourceId))) throw new Error(`Unresolved component refers to an unselected city record on ${spec.name}`);
+  }
   for (let ix = 0; ix < components.length; ix++) {
     const part = components[ix], line = part.coords, id = `${spec.name.toLowerCase()}-${ix + 1}`;
+    const matchingReview = resolveMatchingReview({bindings:spec.unresolved_components ?? [],componentIds:part.ids,evidenceRecords:reviewEvidence.records});
     const xs = line.map((p) => p[0]), ys = line.map((p) => p[1]);
     const ways = [], nodeCounts = /* @__PURE__ */ new Map(), crossingNames = /* @__PURE__ */ new Map();
     const nearby = [...query.iterate(Math.max(...xs) + 3e-4, Math.min(...xs) - 3e-4, Math.max(...ys) + 3e-4, Math.min(...ys) - 3e-4)];
@@ -72,9 +83,10 @@ for (const spec of config.streets) {
       if (!tags.name && !tags.junction && !parkPath && lineLength(data.map((n) => [n.lon, n.lat])) > 45) continue;
       ways.push({ id: w.id, tags, nodes, coordinates: data.map((n) => [n.lon, n.lat]), nodeTags: data.map((n) => JSON.parse(n.tags || "{}")) });
     }
-    const graph = alignedGraph(line, ways, config.max_source_distance_m), visited = /* @__PURE__ */ new Set(), candidates = [];
+    const graph = matchingReview ? new Map() : alignedGraph(line, ways, config.max_source_distance_m), visited = /* @__PURE__ */ new Set(), candidates = [];
     for (const binding of spec.scoped_ways ?? []) {
       if (binding.route_id !== id) continue;
+      if (matchingReview) throw new Error(`Cannot add a scoped way to unresolved matching component ${id}`);
       const raw = nearby.find(w => w.id === binding.way_id);
       if (!raw) throw new Error(`Scoped way ${binding.way_id} not found near ${id}`);
       const nodes = JSON.parse(raw.nodes), data = nodes.map(n => getNode.get(n));
@@ -125,7 +137,8 @@ for (const spec of config.streets) {
       if (b - a < 0.5) return;
       const coords = subline(line, a, b);
       const context = gapReviewContext(reviewEvidence.records, id, part.ids, coords);
-      const note = context.map(record => record.gap_note).join(" ");
+      if (matchingReview) context.push(reviewEvidence.records.find(record=>record.id===matchingReview.evidence_id));
+      const note = context.map(record => record.gap_note ?? record.matching_review).join(" ");
       const reason = `Designation could not be confidently matched to a connected OSM route.${note ? ` ${note}` : ''}`;
       edges.push({ id: `${id}-gap-${edges.length + 1}`, way_id: null, from_node: null, to_node: null, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access: { forward: unknown(reason), reverse: unknown(reason) }, evidence_urls: [...new Set(context.flatMap(record => record.sources.map(source => source.url)))], ...(note ? {review_note:note,evidence_ids:context.map(record => record.id)} : {}), role: "gap", source_range: [a, b] });
     };
@@ -290,7 +303,7 @@ for (const spec of config.streets) {
       options.sort((a, b) => a.distance - b.distance);
       return options[0]?.name?.replace(/^(North|South|East|West) /, "") ?? "unresolved endpoint";
     };
-    all.push({ id, name: spec.name, extent_label: `${labelAt(line[0])} \u2013 ${labelAt(line.at(-1))}`, direction_labels: spec.axis === "north" ? { forward: "Northbound", reverse: "Southbound" } : { forward: "Eastbound", reverse: "Westbound" }, source_ids: part.ids, bounds: [[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], geometry: part.designationLines ? { type: "MultiLineString", coordinates: part.designationLines } : { type: "LineString", coordinates: line }, edges, movements, runs, events, coverage: { designated_m: designated, matched_m: matched, unknown_m: unmatched, unknown_connections: movements.filter(m => m.forward.status === 'unknown' || m.reverse.status === 'unknown').length + edges.filter(e => e.role === 'junction' && (e.access.forward.status === 'unknown' || e.access.reverse.status === 'unknown')).length, reviewed_movements: 0, total_movements: movements.length } });
+    all.push({ id, ...(matchingReview ? {matching_review:matchingReview} : {}), name: spec.name, extent_label: `${labelAt(line[0])} \u2013 ${labelAt(line.at(-1))}`, direction_labels: spec.axis === "north" ? { forward: "Northbound", reverse: "Southbound" } : { forward: "Eastbound", reverse: "Westbound" }, source_ids: part.ids, bounds: [[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], geometry: part.designationLines ? { type: "MultiLineString", coordinates: part.designationLines } : { type: "LineString", coordinates: line }, edges, movements, runs, events, coverage: { designated_m: designated, matched_m: matched, unknown_m: unmatched, unknown_connections: movements.filter(m => m.forward.status === 'unknown' || m.reverse.status === 'unknown').length + edges.filter(e => e.role === 'junction' && (e.access.forward.status === 'unknown' || e.access.reverse.status === 'unknown')).length, reviewed_movements: 0, total_movements: movements.length } });
   }
 }
 db.close();
@@ -299,5 +312,12 @@ await mkdir("public/routes", { recursive: true });
 await writeFile("public/routes/review-evidence.json", await readFile("data/routes/review-evidence.json"));
 await writeFile("data/routes/evidence-catalog.json", catalogText);
 await writeFile("public/routes/evidence-catalog.json", catalogText);
-await writeFile("public/routes/pilot.json", JSON.stringify(result));
+const routeText = JSON.stringify(result);
+await writeFile("public/routes/pilot.json", routeText);
+const sourceMetadata = (await json('data/sources/sources.json')).find(item => item.file === 'greenways.json');
+const cityBytes = await readFile('data/sources/greenways.json');
+if (!sourceMetadata || createHash('sha256').update(cityBytes).digest('hex') !== sourceMetadata.sha256) throw new Error('City source hash does not match manifest');
+const coverageText = `${JSON.stringify(compileCoverageInventory({cityRecords: source, routes: all, sourceMetadata, routeSha256: createHash('sha256').update(routeText).digest('hex')}), null, 2)}\n`;
+await writeFile('data/routes/coverage-inventory.json', coverageText);
+await writeFile('public/routes/coverage-inventory.json', coverageText);
 console.log(JSON.stringify(all.map((r) => ({ id: r.id, edges: r.edges.length, movements: r.movements.length, coverage: r.coverage })), null, 2));

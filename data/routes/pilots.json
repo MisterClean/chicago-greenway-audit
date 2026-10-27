@@ -58,7 +58,24 @@
     {
       "name": "Roscoe",
       "axis": "east",
-      "source": "ROSCOE"
+      "source": "ROSCOE",
+      "additional_source_ids": [
+        "row-ftcb_6xmu~qa9x"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "roscoe-2",
+          "way_id": 619457505,
+          "nodes": [
+            262169734,
+            10040045476,
+            3456306392
+          ],
+          "city_source_ids": [
+            "row-ftcb_6xmu~qa9x"
+          ]
+        }
+      ]
     },
     {
       "name": "Winthrop",
@@ -122,12 +139,24 @@
       "name": "Aldine",
       "axis": "east",
       "source": "ALDINE",
-      "review_connection": {
-        "from_source_id": "row-y2dq.3s9k_38gf",
-        "to_source_id": "row-vhym~pu4g.guju",
-        "evidence_id": "aldine-broadway-offset",
-        "max_distance_m": 45
-      }
+      "additional_source_ids": [
+        "row-gv5q_svcf_t3vj"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "aldine-1",
+          "way_id": 619457502,
+          "nodes": [
+            262170052,
+            10040045492,
+            10040045490,
+            262171169
+          ],
+          "city_source_ids": [
+            "row-gv5q_svcf_t3vj"
+          ]
+        }
+      ]
     },
     {
       "name": "Cortland",
@@ -140,6 +169,25 @@
       "source": "BERWYN",
       "source_aliases": [
         "BERWN"
+      ],
+      "additional_source_ids": [
+        "row-cg56_7q8e~jzk6"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "berwyn-2",
+          "way_id": 1313897204,
+          "nodes": [
+            257146995,
+            12163643801,
+            10544230315,
+            13182271017,
+            257121401
+          ],
+          "city_source_ids": [
+            "row-cg56_7q8e~jzk6"
+          ]
+        }
       ]
     },
     {
@@ -186,6 +234,68 @@
             "row-jjg5_pe2y_7ben"
           ],
           "city_direction_axis": "east"
+        }
+      ]
+    },
+    {
+      "name": "Rockwell",
+      "source": "ROCKWELL",
+      "axis": "north",
+      "additional_source_ids": [
+        "row-zf8y_8w58-du7q"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "rockwell-2",
+          "way_id": 1160244173,
+          "nodes": [
+            366262666,
+            7635415155,
+            366309922
+          ],
+          "city_source_ids": [
+            "row-zf8y_8w58-du7q"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lyndale",
+      "source": "LYNDALE",
+      "axis": "east",
+      "additional_source_ids": [
+        "row-m4nx_7zew-thzm"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "lyndale-1",
+          "way_id": 1266271144,
+          "nodes": [
+            296370420,
+            296370597
+          ],
+          "city_source_ids": [
+            "row-m4nx_7zew-thzm"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wrightwood",
+      "source": "WRIGHTWOOD",
+      "axis": "east",
+      "additional_source_ids": [
+        "row-kirn_hd26~rmwt",
+        "row-j99q_9g6u_25vc"
+      ],
+      "unresolved_components": [
+        {
+          "source_ids": [
+            "row-s6xv-qq38_g7k8",
+            "row-9qbg.drnv.cmv4",
+            "row-xurv_2j34_zur8"
+          ],
+          "evidence_id": "wrightwood-divided-offsets"
         }
       ]
     }

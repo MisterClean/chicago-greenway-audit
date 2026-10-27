@@ -44,7 +44,12 @@ for (const route of data.routes) {
     options.sort((a,b) => Math.abs(a.i - fraction * (route.movements.length - 1)) - Math.abs(b.i - fraction * (route.movements.length - 1)) || a.i - b.i);
     if (options.length) selected.push(options[0]);
   }
-  if (selected.length < 2) skips.push({route_id:route.id, reason:'Fewer than two independently eligible distinct same-way junctions.', eligible_count:candidates.length, selected_count:selected.length});
+  if (selected.length < 2) {
+    const explicitUnmatched=route.id==='wrightwood-2' && route.matching_review?.evidence_id==='wrightwood-divided-offsets' && route.edges.length===1 && route.edges[0].role==='gap' && candidates.length===0;
+    if (explicitUnmatched) skips.push({route_id:route.id, result:'review', reason:'Evidence-bound city component is wholly unmatched; no road movement exists to sample.', evidence_id:route.matching_review.evidence_id, eligible_count:0, selected_count:0});
+    else if (!selected.length) samples.push({id:`${route.id}-missing-sample`,route_id:route.id,subject:'sampling coverage',result:'fail',basis:'No eligible same-way movements and no recognized fully unmatched evidence-bound component.'});
+    else skips.push({route_id:route.id, reason:'Fewer than two independently eligible distinct same-way junctions.', eligible_count:candidates.length, selected_count:selected.length});
+  }
   for (const c of selected) for (const direction of ['forward','reverse']) {
     const observed = c.m[direction]?.status ?? null;
     samples.push({id:`${c.m.id}-${direction}`,route_id:route.id,subject:'movement',movement_id:c.m.id,direction,from_edge:direction === 'forward' ? c.a.id : c.b.id,to_edge:direction === 'forward' ? c.b.id : c.a.id,via_node_id:c.node,source_way_id:c.a.way_id,expected_movement_status:'allowed',observed_movement_status:observed,result:observed === 'allowed' ? 'pass':'fail',basis:'Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.',sources:[`https://www.openstreetmap.org/way/${c.a.way_id}`,`https://www.openstreetmap.org/node/${c.node}`],field_reviewed:false});
@@ -133,12 +138,7 @@ if (south) {
 // topology. These establish snapshot consistency, not present-day road rules.
 const roscoe = data.routes.filter(r=>r.name==='Roscoe');
 if (roscoe.length) {
-  const west = cityRecord('row-sbv9-nemh.v8g9'), east = cityRecord('row-smjt~ezi2_sb5e');
-  const wp=west?.the_geom.coordinates[0][0], ep=east?.the_geom.coordinates[0].at(-1);
-  const westRoute=roscoe.find(r=>r.source_ids.includes(west?.[':id'])), eastRoute=roscoe.find(r=>r.source_ids.includes(east?.[':id']));
-  const unknownNear=(r,p)=>r.runs.some(run=>[run.start,run.end].some(end=>end.kind==='unknown' && end.coordinate && metres(end.coordinate,p)<15));
-  check('roscoe-broadway-city-separation',true,!!wp && !!ep && metres(wp,ep)>20 && !!westRoute && !!eastRoute && westRoute.id!==eastRoute.id && unknownNear(westRoute,wp) && unknownNear(eastRoute,ep), 'City records do not meet at Broadway; keep the intervening movement unresolved.',[sourceUrl]);
-  check('roscoe-source-components',3,roscoe.length,'Three distinct city designation components remain separate in the export.',[sourceUrl]);
+  check('roscoe-source-components',2,roscoe.length,'Two distinct city designation components remain separate in the export.',[sourceUrl]);
   const ids=[1535693373,1535693538], ws=ids.map(id=>getWay.get(id)), ring=roscoe.flatMap(r=>r.edges).find(e=>e.role==='junction' && ids.every(id=>e.way_ids?.includes(id)));
   const sourceRing=ws.every(Boolean) && ws.every(w=>{const t=JSON.parse(w.tags);return t.highway==='tertiary' && t.junction==='circular' && t.oneway==='yes';}) && (()=>{const a=JSON.parse(ws[0].nodes),b=JSON.parse(ws[1].nodes);return a[0]===b[0] && a.at(-1)===b.at(-1);})();
   check('roscoe-keeler-source-ring',true,sourceRing,'Staged unnamed tertiary ways share endpoints but both one-way sequences run the same way between them.',ids.map(id=>`https://www.openstreetmap.org/way/${id}`));
@@ -231,12 +231,7 @@ for (const [routeId,cityId,wayId] of [['argyle-1','row-wkph~qm3w~5yab',144371535
 }
 // Narrow snapshot checks; none establish a field approval.
 {
- const ids=['row-y2dq.3s9k_38gf','row-vhym~pu4g.guju'], rows=ids.map(cityRecord), routes=data.routes.filter(r=>r.name==='Aldine');
- const ends=rows.map(r=>{const line=r?.the_geom.coordinates[0];return line ? [line[0],line.at(-1)] : [];});
- const distance=ends.every(x=>x.length) ? Math.min(...ends[0].flatMap(a=>ends[1].map(b=>metres(a,b)))) : 0;
- const connector=routes.flatMap(r=>r.edges).filter(e=>e.role!=='designated' && e.geometry.coordinates.some(p=>metres(p,[-87.64446,41.94204])<30));
- const terminals=routes.flatMap(r=>r.runs.flatMap(run=>[run.start,run.end])).filter(e=>e.coordinate && metres(e.coordinate,[-87.64446,41.94204])<30);
- check('aldine-broadway-offset-unresolved',true,rows.every(Boolean) && distance>35 && ids.every(id=>routes.some(r=>r.source_ids.includes(id))) && (connector.length ? connector.every(e=>['forward','reverse'].every(d=>e.access[d].status==='unknown')) : terminals.length>=2 && terminals.every(e=>e.kind==='unknown')),'City lines are offset at Broadway; the intervening motor connection and turns remain unknown.',[sourceUrl]);
+ const routes=data.routes.filter(r=>r.name==='Aldine');
  for (const [cityId,wayId] of [['row-y2dq.3s9k_38gf',24117483],['row-vhym~pu4g.guju',24117482]]) {
   const city=cityRecord(cityId), way=getWay.get(wayId), tags=way && JSON.parse(way.tags), nodes=way && JSON.parse(way.nodes), first=nodes && nodeCoords.get(nodes[0]), last=nodes && nodeCoords.get(nodes.at(-1));
   const edges=routes.flatMap(r=>r.edges.filter(e=>e.way_id===wayId));
@@ -309,6 +304,57 @@ for (const [routeId,cityId,wayId] of [['argyle-1','row-wkph~qm3w~5yab',144371535
  check('leavitt-montrose-cycleway-source',true,!!within && ct?.highway==='cycleway' && JSON.stringify(cn)===JSON.stringify([12823799962,12823799964,1258927214]) && before?.to_node===11265202826 && after?.from_node===1258927214,'The scoped unmatched motor-network gap meets a mapped cycleway at the north cul-de-sac; the source does not establish a car connection.',[sourceUrl,'https://www.openstreetmap.org/way/1385145081']);
  check('leavitt-montrose-gap-blocked',true,!!gap && ['forward','reverse'].every(d=>gap.access[d].status==='blocked' && gap.access[d].evidence_status==='source-inferred') && gap.evidence_ids?.includes(ev?.id),'Ward completion and historical photograph support a source-inferred block along the bicycle connection in both directions, not field approval.',[...new Set(ev?.sources?.map(s=>s.url) ?? [])]);
  check('leavitt-montrose-no-run-crosses',true,!!gap && !!before && !!after && leavittNorth.runs.every(run=>!run.edge_ids.includes(gap.id) && !(run.edge_ids.includes(before.id) && run.edge_ids.includes(after.id))),'No ordinary-car run may span the identified gap in either direction.',[sourceUrl,'https://www.openstreetmap.org/way/1385145081']);
+}
+// City-designated cross-street offsets: check the saved city geometry, the
+// staged carriageway nodes and its exported movements independently of config.
+for (const [routeId, cityId, wayId, sourceNodes, adjacent] of [
+  ['aldine-1','row-gv5q_svcf_t3vj',619457502,[262171169,10040045490,10040045492,262170052],[619457499,24117482]],
+  ['roscoe-2','row-ftcb_6xmu~qa9x',619457505,[262169734,10040045476,3456306392],[24075148,24075135]],
+  ['berwyn-2','row-cg56_7q8e~jzk6',1313897204,[257146995,12163643801,10544230315,13182271017,257121401],[1314176518,23741249]],
+  ['rockwell-2','row-zf8y_8w58-du7q',1160244173,[366262666,7635415155,366309922],[1160244167,1160244166]],
+  ['lyndale-1','row-m4nx_7zew-thzm',1266271144,[296370597,296370420],[24089892,24089895]],
+]) {
+  const route=data.routes.find(r=>r.id===routeId), city=cityRecord(cityId), way=getWay.get(wayId);
+  const tags=way && JSON.parse(way.tags), nodes=way && JSON.parse(way.nodes), line=city?.the_geom.coordinates[0];
+  const matchesNodes=nodes && (JSON.stringify(nodes)===JSON.stringify(sourceNodes) || JSON.stringify([...nodes].reverse())===JSON.stringify(sourceNodes));
+  const sourceCoordinates=sourceNodes.map(n=>nodeCoords.get(n)).map(n=>n && [n.lon,n.lat]);
+  const near=!!line && sourceCoordinates.every(p=>p && locate(p,line).distance<5);
+  const indices=route?.edges.flatMap((e,i)=>e.way_id===wayId?[i]:[]) ?? [];
+  const edges=indices.map(i=>route.edges[i]), before=route?.edges[indices[0]-1], after=route?.edges[indices.at(-1)+1];
+  const paths=edges.length>0 && edges[0].from_node===sourceNodes[0] && edges.at(-1).to_node===sourceNodes.at(-1) && edges.every((e,i)=>!i || edges[i-1].to_node===e.from_node);
+  const turns=route?.movements.filter(m=>edges.some(e=>m.from_edge===e.id || m.to_edge===e.id)) ?? [];
+  const sources=[sourceUrl,`https://www.openstreetmap.org/way/${wayId}`];
+  check(`${routeId}-city-connector-geometry`,true,!!route && route.source_ids.includes(cityId) && city?.oneway_dir==='-' && tags?.highway && !['cycleway','path','footway'].includes(tags.highway) && !!matchesNodes && !!near && !!paths && before?.way_id===adjacent[0] && after?.way_id===adjacent[1],'The city row and independently inspected carriageway nodes support this designated offset; adjacent motor street nodes are shared. This does not verify present signs.',sources);
+  const restrictionsAtPath=restrictions.some(r=>r.members.some(m=>m.type==='node' && sourceNodes.includes(m.ref) && m.role==='via') || r.members.some(m=>m.type==='way' && m.ref===wayId && m.role==='via'));
+  check(`${routeId}-connector-snapshot-movements`,true,!!route && !!paths && !tags?.oneway && !restrictionsAtPath && edges.every(e=>['forward','reverse'].every(d=>e.access[d].status==='allowed')) && turns.length===edges.length+1 && turns.every(m=>['forward','reverse'].every(d=>m[d].status==='allowed')),'The staged street has no one-way tag or mapped via restriction on this connector, and exported edge and junction decisions are source inferences. Approach one-ways and present turn signs remain separate questions.',sources);
+}
+{
+ const routes=data.routes.filter(r=>r.name==='Rockwell');
+ const south=cityRecord('row-434v-meyd.3gxa'), north=cityRecord('row-6jsc~qzuy-dtav');
+ const southern=routes.find(r=>r.source_ids.includes(south?.[':id'])), northern=routes.find(r=>r.source_ids.includes('row-kepg~wgrs-kaij'));
+ const cases=[[1160244167,['blocked','allowed']],[1160244166,['allowed','blocked']]];
+ const motor=cases.every(([wayId,expected])=>{const w=getWay.get(wayId), t=w && JSON.parse(w.tags), ns=w && JSON.parse(w.nodes), a=ns && nodeCoords.get(ns[0]),b=ns && nodeCoords.get(ns.at(-1)), es=southern?.edges.filter(e=>e.way_id===wayId) ?? [];return t?.oneway==='yes' && a && b && Math.sign(b.lat-a.lat)===(expected[0]==='allowed'?1:-1) && es.length && es.every(e=>e.access.forward.status===expected[0] && e.access.reverse.status===expected[1]);});
+ check('rockwell-scopes-and-opposed-motor-directions',true,routes.length===3 && !!southern && !!northern && southern!==northern && south?.oneway_dir==='S' && north?.oneway_dir==='N' && !!motor,'Distinct Rockwell city components are not one continuous project; south and north one-way assertions near Fullerton agree with separately inspected staged ways.',[sourceUrl,'https://www.openstreetmap.org/way/1160244167','https://www.openstreetmap.org/way/1160244166']);
+}
+{
+ const city=cityRecord('row-mc9h_wzfe~vu5i'), w=getWay.get(24089892), t=w && JSON.parse(w.tags), ns=w && JSON.parse(w.nodes), a=ns && nodeCoords.get(ns[0]),b=ns && nodeCoords.get(ns.at(-1));
+ const route=data.routes.find(r=>r.id==='lyndale-1'), edges=route?.edges.filter(e=>e.way_id===24089892) ?? [];
+ check('lyndale-rockwell-western-eastbound',true,city?.oneway_dir==='E' && t?.oneway==='yes' && !!a && !!b && b.lon>a.lon && edges.length>0 && edges.every(e=>e.access.forward.status==='allowed' && e.access.reverse.status==='blocked'),'City and staged way node order agree on eastbound motor direction; current signs remain unverified.',[sourceUrl,'https://www.openstreetmap.org/way/24089892']);
+}
+{
+ const routes=data.routes.filter(r=>r.name==='Wrightwood');
+ const cityIds=['row-kirn_hd26~rmwt','row-j99q_9g6u_25vc'];
+ const prohibited=[1153273868,435326012,1153273866];
+ const connectorGaps=cityIds.every(id=>{const city=cityRecord(id), route=routes.find(r=>r.source_ids.includes(id)), line=city?.the_geom.coordinates[0]; return !!line && !!route && route.edges.some(e=>e.role==='gap' && line.every(p=>locate(p,e.geometry.coordinates).distance<2) && ['forward','reverse'].every(d=>e.access[d].status==='unknown') && route.runs.every(run=>!run.edge_ids.includes(e.id)));});
+ const gaps=routes.flatMap(r=>r.edges.filter(e=>e.role==='gap' && e.length_m>60));
+ const middle=routes.find(r=>r.id==='wrightwood-2'), middleIds=['row-s6xv-qq38_g7k8','row-9qbg.drnv.cmv4','row-xurv_2j34_zur8'];
+ const ev=JSON.parse(await readFile('data/routes/review-evidence.json','utf8')).records.find(r=>r.id==='wrightwood-divided-offsets');
+ const mg=middle?.edges[0];
+ check('wrightwood-middle-unmatched-evidence',true,!!middle && !!ev && middleIds.every(id=>middle.source_ids.includes(id) && middle.matching_review?.source_ids.includes(id) && ev.source_record_ids?.includes(id)) && middle.matching_review?.evidence_id===ev.id && middle.matching_review.source_ids.length===middleIds.length && middle.edges.length===1 && mg?.role==='gap' && mg.evidence_ids?.includes(ev.id) && ['forward','reverse'].every(d=>mg.access[d].status==='unknown' && mg.access[d].reason.includes(middle.matching_review.reason)) && middle.runs.length===0,'The divided-road alignment is explicitly left unmatched for the entire city component; evidence is bound to all three source rows, and no car run crosses it.',[sourceUrl,...(ev?.sources ?? []).map(s=>s.url)]);
+ check('wrightwood-divided-connector-gaps',true,routes.length===3 && connectorGaps && cityIds.every(id=>cityRecord(id) && routes.some(r=>r.source_ids.includes(id))) && prohibited.every(id=>routes.every(r=>r.edges.every(e=>e.way_id!==id))) && gaps.length>=3 && gaps.every(e=>['forward','reverse'].every(d=>e.access[d].status==='unknown')),'City records include both connector rows; the divided street carriageways remain unmatched and no arbitrary carriageway or off-route bypass is selected.',[sourceUrl,...prohibited.map(id=>`https://www.openstreetmap.org/way/${id}`)]);
+ const city=cityRecord('row-nat7~w2yg_e9fb'), blank=cityRecord('row-sehs~8th9.rbe3'), road=getWay.get(1153273869), t=road && JSON.parse(road.tags), ns=road && JSON.parse(road.nodes), a=ns && nodeCoords.get(ns[0]),b=ns && nodeCoords.get(ns.at(-1));
+ const route=routes.find(r=>r.id==='wrightwood-1'), edges=route?.edges.filter(e=>e.way_id===1153273869) ?? [];
+ check('wrightwood-west-eastbound-and-blank-city-direction',true,city?.oneway_dir==='E' && blank?.oneway_dir==='-' && t?.oneway==='yes' && !!a && !!b && b.lon>a.lon && edges.length>0 && edges.every(e=>e.access.forward.status==='allowed' && e.access.reverse.status==='blocked') && route.source_ids.includes(blank[':id']),'West of Cicero a staged eastbound motor way agrees with the city; the Austin–Central row has no city motor-direction assertion and must not be called a conflict merely for that blank.',[sourceUrl,'https://www.openstreetmap.org/way/1153273869']);
 }
 const dbHash = createHash('sha256');
 for await (const chunk of createReadStream(database)) dbHash.update(chunk);
