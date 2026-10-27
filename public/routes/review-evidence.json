@@ -7,29 +7,65 @@
   "records": [
     {
       "id": "wood-augusta-cortez-direction",
-      "way_ids": [1444797397],
-      "direction_notes": {"forward": "Wood from Augusta to Cortez is southbound-only for motor vehicles in the OSM snapshot. The 1st Ward's CDOT project update specifies this conversion and two-way bicycle access. This is a motor-direction restriction; current physical treatment and installation date are not independently verified."},
+      "way_ids": [
+        1444797397
+      ],
+      "direction_notes": {
+        "forward": "Wood from Augusta to Cortez is southbound-only for motor vehicles in the OSM snapshot. The 1st Ward's CDOT project update specifies this conversion and two-way bicycle access. This is a motor-direction restriction; current physical treatment and installation date are not independently verified."
+      },
       "location": "Wood Street between Augusta Boulevard and Cortez Street",
       "movement": "northbound through block / southbound through block",
       "source_inference": "OSM snapshot indicates northbound blocked by one-way and southbound permitted along this block; bicycle exception does not apply to cars.",
-      "review_status": "source-inferred", "confidence": "moderate for snapshot; current signs unverified", "effective_period": "OSM snapshot 2026-09-11; current ground condition unknown",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot; current signs unverified",
+      "effective_period": "OSM snapshot 2026-09-11; current ground condition unknown",
       "sources": [
-        {"url":"https://www.openstreetmap.org/way/1444797397", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"oneway=yes in southbound node order; oneway:bicycle=no", "status":"snapshot"},
-        {"url":"https://www.the1stward.com/woodst", "source_date":"2025-06-05", "date_kind":"construction update", "scope":"announces southbound conversion and contraflow bikes from Augusta to Cortez", "status":"planned; not a completion notice"}
+        {
+          "url": "https://www.openstreetmap.org/way/1444797397",
+          "source_date": "2026-09-11",
+          "date_kind": "local snapshot effective date",
+          "scope": "oneway=yes in southbound node order; oneway:bicycle=no",
+          "status": "snapshot"
+        },
+        {
+          "url": "https://www.the1stward.com/woodst",
+          "source_date": "2025-06-05",
+          "date_kind": "construction update",
+          "scope": "announces southbound conversion and contraflow bikes from Augusta to Cortez",
+          "status": "planned; not a completion notice"
+        }
       ],
       "review_needed": "Photograph current regulatory signs and both block ends; check temporary changes and approach-to-departure movement."
     },
     {
       "id": "wood-division-crystal-direction",
-      "way_ids": [1444797396],
-      "direction_notes": {"forward": "Wood from Division to Crystal is southbound-only for motor vehicles in the OSM snapshot. The 1st Ward's CDOT project update specifies this conversion and two-way bicycle access. This is a motor-direction restriction; current physical treatment and installation date are not independently verified."},
+      "way_ids": [
+        1444797396
+      ],
+      "direction_notes": {
+        "forward": "Wood from Division to Crystal is southbound-only for motor vehicles in the OSM snapshot. The 1st Ward's CDOT project update specifies this conversion and two-way bicycle access. This is a motor-direction restriction; current physical treatment and installation date are not independently verified."
+      },
       "location": "Wood Street between Division Street and Crystal Street",
       "movement": "northbound through block / southbound through block",
       "source_inference": "OSM snapshot indicates northbound blocked by one-way and southbound permitted along this block; bicycle exception does not apply to cars.",
-      "review_status": "source-inferred", "confidence": "moderate for snapshot; current signs unverified", "effective_period": "OSM snapshot 2026-09-11; current ground condition unknown",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot; current signs unverified",
+      "effective_period": "OSM snapshot 2026-09-11; current ground condition unknown",
       "sources": [
-        {"url":"https://www.openstreetmap.org/way/1444797396", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"oneway=yes in southbound node order; oneway:bicycle=no", "status":"snapshot"},
-        {"url":"https://www.the1stward.com/woodst", "source_date":"2025-06-05", "date_kind":"construction update", "scope":"announces southbound conversion and contraflow bikes from Division to Crystal", "status":"planned; not a completion notice"}
+        {
+          "url": "https://www.openstreetmap.org/way/1444797396",
+          "source_date": "2026-09-11",
+          "date_kind": "local snapshot effective date",
+          "scope": "oneway=yes in southbound node order; oneway:bicycle=no",
+          "status": "snapshot"
+        },
+        {
+          "url": "https://www.the1stward.com/woodst",
+          "source_date": "2025-06-05",
+          "date_kind": "construction update",
+          "scope": "announces southbound conversion and contraflow bikes from Division to Crystal",
+          "status": "planned; not a completion notice"
+        }
       ],
       "review_needed": "Photograph current regulatory signs and both block ends; check the Division and Crystal approach movements."
     },
@@ -38,8 +74,25 @@
       "location": "Wood Street between Cortez and Division",
       "movement": "both directions along intervening block",
       "source_inference": "Ward project design says this intervening segment remains two-way; local snapshot lacks a one-way tag. Absence of a tag is not independently verified permission.",
-      "review_status": "source-inferred", "confidence": "moderate for design, current signs unverified", "effective_period": "2025 project design; current ground condition unknown",
-      "sources": [{"url":"https://www.the1stward.com/woodst", "source_date":"2025-06-05", "date_kind":"project update", "scope":"Cortez to Division remains two-way in design", "status":"project design"}, {"url":"https://www.openstreetmap.org/way/285297142", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"intervening OSM road segment", "status":"snapshot"}],
+      "review_status": "source-inferred",
+      "confidence": "moderate for design, current signs unverified",
+      "effective_period": "2025 project design; current ground condition unknown",
+      "sources": [
+        {
+          "url": "https://www.the1stward.com/woodst",
+          "source_date": "2025-06-05",
+          "date_kind": "project update",
+          "scope": "Cortez to Division remains two-way in design",
+          "status": "project design"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/285297142",
+          "source_date": "2026-09-11",
+          "date_kind": "local snapshot effective date",
+          "scope": "intervening OSM road segment",
+          "status": "snapshot"
+        }
+      ],
       "review_needed": "Check both ends and intermediate junctions for signs and current permitted movements."
     },
     {
@@ -47,12 +100,31 @@
       "location": "Berteau Avenue / Greenview Avenue traffic circle",
       "movement": "eastbound and westbound Berteau continuation around circle",
       "source_inference": "Circle connects the approaches geometrically; its OSM junction=circular tag has no explicit oneway. Legal circulation and connector arcs remain unknown.",
-      "review_status": "source-inferred", "confidence": "low for circulation", "effective_period": "OSM snapshot 2026-09-11; current regulatory signs unknown",
+      "review_status": "source-inferred",
+      "confidence": "low for circulation",
+      "effective_period": "OSM snapshot 2026-09-11; current regulatory signs unknown",
       "sources": [
-        {"url":"https://www.openstreetmap.org/way/1088397391", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"unnamed circle geometry and tags", "status":"snapshot"},
-        {"url":"https://occprodstoragev1.blob.core.usgovcloudapi.net/lsmeetingattachmentspublic/52648aa0-b362-4f5d-b300-eb5fdb8fa99a.pdf", "source_date":null, "date_kind":"publication date not verified", "scope":"CDOT committee report identifies traffic circle at Berteau and Greenview", "status":"official report; does not establish permitted arcs"}
+        {
+          "url": "https://www.openstreetmap.org/way/1088397391",
+          "source_date": "2026-09-11",
+          "date_kind": "local snapshot effective date",
+          "scope": "unnamed circle geometry and tags",
+          "status": "snapshot"
+        },
+        {
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/lsmeetingattachmentspublic/52648aa0-b362-4f5d-b300-eb5fdb8fa99a.pdf",
+          "source_date": null,
+          "date_kind": "publication date not verified",
+          "scope": "CDOT committee report identifies traffic circle at Berteau and Greenview",
+          "status": "official report; does not establish permitted arcs"
+        }
       ],
-      "manual_view": {"url":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=41.957986%2C-87.667644", "viewed_at":"2026-10-27", "capture_date":null, "result":"Circle area loaded, but signs and capture date were not legible. No movement decision derived."},
+      "manual_view": {
+        "url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=41.957986%2C-87.667644",
+        "viewed_at": "2026-10-27",
+        "capture_date": null,
+        "result": "Circle area loaded, but signs and capture date were not legible. No movement decision derived."
+      },
       "review_needed": "Document signs and road markings on all relevant approaches, both permitted arcs and departures; resolve whether any direction or turn restriction applies."
     },
     {
@@ -60,12 +132,31 @@
       "location": "Leland Avenue eastbound approach to Western Avenue",
       "movement": "eastbound continuation across Western",
       "source_inference": "OSM relation prohibits the specific eastbound continuation; the ward describes a right-only diverter as a future installation. The current physical configuration is not established by a project-level completed label.",
-      "review_status": "source-inferred", "confidence": "moderate for snapshot restriction; current physical and sign confirmation unknown", "effective_period": "OSM snapshot 2026-09-11; ward construction update 2025-09-04",
+      "review_status": "source-inferred",
+      "confidence": "moderate for snapshot restriction; current physical and sign confirmation unknown",
+      "effective_period": "OSM snapshot 2026-09-11; ward construction update 2025-09-04",
       "sources": [
-        {"url":"https://www.openstreetmap.org/relation/20163015", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"approach-specific no-straight restriction", "status":"snapshot"},
-        {"url":"https://40thward.org/project/leland-greenway-2/", "source_date":"2025-09-04", "date_kind":"dated construction update", "scope":"right-only diverter anticipated after resurfacing; page also labels broader project completed", "status":"specific installation described in future tense; completion date unverified"}
+        {
+          "url": "https://www.openstreetmap.org/relation/20163015",
+          "source_date": "2026-09-11",
+          "date_kind": "local snapshot effective date",
+          "scope": "approach-specific no-straight restriction",
+          "status": "snapshot"
+        },
+        {
+          "url": "https://40thward.org/project/leland-greenway-2/",
+          "source_date": "2025-09-04",
+          "date_kind": "dated construction update",
+          "scope": "right-only diverter anticipated after resurfacing; page also labels broader project completed",
+          "status": "specific installation described in future tense; completion date unverified"
+        }
       ],
-      "manual_view": {"url":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=41.9667828%2C-87.6890653&heading=90&pitch=0&fov=80", "viewed_at":"2026-10-27", "capture_date":"2019-06", "result":"Prior plan workflow observed older west-approach imagery; it predates the project."},
+      "manual_view": {
+        "url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=41.9667828%2C-87.6890653&heading=90&pitch=0&fov=80",
+        "viewed_at": "2026-10-27",
+        "capture_date": "2019-06",
+        "result": "Prior plan workflow observed older west-approach imagery; it predates the project."
+      },
       "review_needed": "Obtain a current dated view or field photos of eastbound approach, regulatory signs, median, and departure. Determine whether the restriction is physical, legal, or both."
     },
     {
@@ -73,8 +164,18 @@
       "location": "Dickens / Burling / Oz Park",
       "movement": "through park between road approaches in either direction",
       "source_inference": "Snapshot has a destination-only motor segment and cycleway connectors. Neither generic access=yes nor bike continuity establishes general through-car access.",
-      "review_status": "source-inferred", "confidence": "moderate for tagged segment; route correspondence and ground access unresolved", "effective_period": "OSM snapshot 2026-09-11",
-      "sources": [{"url":"https://www.openstreetmap.org/way/1237331792", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"motor_vehicle=destination on road segment", "status":"snapshot"}],
+      "review_status": "source-inferred",
+      "confidence": "moderate for tagged segment; route correspondence and ground access unresolved",
+      "effective_period": "OSM snapshot 2026-09-11",
+      "sources": [
+        {
+          "url": "https://www.openstreetmap.org/way/1237331792",
+          "source_date": "2026-09-11",
+          "date_kind": "local snapshot effective date",
+          "scope": "motor_vehicle=destination on road segment",
+          "status": "snapshot"
+        }
+      ],
       "review_needed": "Map both road ends and park connector; document signs, openings, and any car route along the designated greenway. Destination-only access is not ordinary through access."
     },
     {
@@ -82,13 +183,214 @@
       "location": "Dickens at Lincoln Park West / Stockton Drive",
       "movement": "westbound from Stockton toward Lincoln Park West and eastbound reverse",
       "source_inference": "A contemporary firsthand news report says the plaza was dismantled and westbound motor travel resumed on 2024-10-11. This supersedes the earlier plaza configuration for that date; it does not prove current access or the reverse movement.",
-      "review_status": "source-inferred", "confidence": "moderate for historical westbound opening; current and reverse movements unknown", "effective_period": "2024-10-11 observation; current status unknown",
+      "review_status": "source-inferred",
+      "confidence": "moderate for historical westbound opening; current and reverse movements unknown",
+      "effective_period": "2024-10-11 observation; current status unknown",
       "sources": [
-        {"url":"https://chi.streetsblog.org/2024/10/07/nimbys-win-ald-knudsen-are-letting-motorheads-have-their-way-by-giving-dickens-bike-ped-plaza-back-to-dangerous-cut-through-traffic", "source_date":"2024-10-11", "date_kind":"dated firsthand news update", "scope":"reports dismantling and westbound reopening", "status":"historical observation; secondary source"},
-        {"url":"https://chi.streetsblog.org/2024/09/17/some-150-bike-rider-1000-petitioners-protest-plans-to-give-dickens-plaza-back-to-motorists", "source_date":"2024-09-18", "date_kind":"dated reported CDOT statement", "scope":"CDOT describes discussion of alternative design", "status":"prior plan; does not independently prove installation"}
+        {
+          "url": "https://chi.streetsblog.org/2024/10/07/nimbys-win-ald-knudsen-are-letting-motorheads-have-their-way-by-giving-dickens-bike-ped-plaza-back-to-dangerous-cut-through-traffic",
+          "source_date": "2024-10-11",
+          "date_kind": "dated firsthand news update",
+          "scope": "reports dismantling and westbound reopening",
+          "status": "historical observation; secondary source"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/09/17/some-150-bike-rider-1000-petitioners-protest-plans-to-give-dickens-plaza-back-to-motorists",
+          "source_date": "2024-09-18",
+          "date_kind": "dated reported CDOT statement",
+          "scope": "CDOT describes discussion of alternative design",
+          "status": "prior plan; does not independently prove installation"
+        }
       ],
-      "manual_view": {"url":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=41.9200%2C-87.6364&heading=0&pitch=0&fov=80", "viewed_at":"2026-10-27", "capture_date":"2026-08", "result":"Prior plan workflow found August 2026 approach imagery. No movement approved from that observation."},
+      "manual_view": {
+        "url": "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=41.9200%2C-87.6364&heading=0&pitch=0&fov=80",
+        "viewed_at": "2026-10-27",
+        "capture_date": "2026-08",
+        "result": "Prior plan workflow found August 2026 approach imagery. No movement approved from that observation."
+      },
       "review_needed": "Obtain current dated field photos of both approaches and signage; verify westbound continuation and independently determine eastbound access. Do not use the old plaza closure as current."
+    },
+    {
+      "id": "kenmore-ardmore-rosemont-direction",
+      "location": "Kenmore Avenue between Ardmore and Rosemont avenues",
+      "movement": "northbound and southbound along segment",
+      "source_inference": "City bike-route row irx9_unci~pju9 identifies the greenway as one-way northbound. This suggests southbound ordinary motor travel is disallowed, subject to street matching and current signs; it does not establish every intersection movement.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for city snapshot; current signs unverified",
+      "effective_period": "City Bike Routes snapshot current as of December 2025",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "scope": "row-irx9_unci~pju9: neighborhood greenway; oneway_dir=N, br_oneway=1W, br_ow_dir=N",
+          "status": "official dataset snapshot"
+        }
+      ],
+      "review_needed": "Match individual road ways to this segment and photograph current one-way and turn signs at both ends and intervening junctions. Do not infer a physical filter."
+    },
+    {
+      "id": "george-kedzie-sacramento-direction",
+      "location": "George Street between Kedzie and Sacramento avenues",
+      "movement": "eastbound and westbound along segment",
+      "source_inference": "City bike-route row 8nvk.zdbu-tfi4 identifies the greenway as one-way eastbound. This suggests westbound ordinary motor travel is disallowed, subject to street matching and current signs; intersection turns and physical filters remain unverified.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for city snapshot; current signs unverified",
+      "effective_period": "City Bike Routes snapshot current as of December 2025",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "scope": "row-8nvk.zdbu-tfi4: neighborhood greenway; oneway_dir=E, br_oneway=1W, br_ow_dir=E",
+          "status": "official dataset snapshot"
+        }
+      ],
+      "review_needed": "Match individual road ways and verify current one-way and turn signs, particularly at each end."
+    },
+    {
+      "id": "glenwood-ridge-foster-direction",
+      "location": "Glenwood Avenue between Foster and Ridge avenues",
+      "movement": "northbound and southbound along segment; southbound entry at Ridge",
+      "source_inference": "The city dataset labels the greenway northbound with bicycle contraflow; CDOT's 2022 letter refers to an existing contraflow bike lane south of Ridge. The combination suggests southbound bike access does not authorize southbound cars. It does not independently establish the present Ridge entry geometry or signs.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for historical direction, current signs unverified",
+      "effective_period": "CDOT letter 2022-04-05; city dataset current as of December 2025",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "scope": "row-u5wj_yvuv.se85: oneway_dir=N, contraflow=Y",
+          "status": "official dataset snapshot"
+        },
+        {
+          "url": "https://b57a3fbe-d368-48a5-a645-9d4daf5930c3.filesusr.com/ugd/c90882_206e6fe6dd8147208eb8264da845c035.pdf",
+          "source_date": "2022-04-05",
+          "date_kind": "CDOT traffic study letter",
+          "scope": "refers to existing contraflow bike lane on Glenwood south of Ridge",
+          "status": "historical official description"
+        }
+      ],
+      "review_needed": "Check southbound Ridge approach and entry, island openings, signs, and northbound departure; confirm current treatment and match road ways."
+    },
+    {
+      "id": "glenwood-devon-pratt-direction",
+      "location": "Glenwood Avenue between Devon Avenue and Pratt Boulevard",
+      "movement": "northbound and southbound along segment",
+      "source_inference": "The city snapshot records a two-way greenway and the ward described existing two-way traffic in October 2024. A CDOT northbound-only except bikes conversion was proposed, and competing one-way and two-way options were presented in 2024; neither establishes a current conversion.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for historical two-way condition; current condition unverified",
+      "effective_period": "Ward update 2024-10-07; city dataset current as of December 2025",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "scope": "row-qzji-988m_uzpg identifies neighborhood greenway, br_oneway=2W",
+          "status": "official dataset snapshot"
+        },
+        {
+          "url": "https://www.49thward.org/glenwood-commuter-safety-2024",
+          "source_date": "2024-10-07",
+          "date_kind": "ward update",
+          "scope": "describes existing two-way vehicle traffic and presents one-way and two-way options",
+          "status": "historical description and proposals"
+        },
+        {
+          "url": "https://b57a3fbe-d368-48a5-a645-9d4daf5930c3.filesusr.com/ugd/c90882_206e6fe6dd8147208eb8264da845c035.pdf",
+          "source_date": "2022-04-05",
+          "date_kind": "CDOT traffic study letter",
+          "scope": "proposed one-way northbound except bikes; funding and design still needed",
+          "status": "proposal"
+        }
+      ],
+      "review_needed": "Confirm current signs and both directions at Devon, Pratt, and intermediate junctions; do not apply the proposal as installed."
+    },
+    {
+      "id": "manor-wilson-pilot",
+      "location": "Manor Avenue at Wilson Avenue",
+      "movement": "northbound and southbound continuation across Wilson",
+      "source_inference": "The 33rd Ward described Manor/Wilson as a temporary two-month 2016 diverter trial, separate from the permanent greenway project, with removal planned afterward. This historical pilot must not be treated as a current closure. Current source-based continuity still requires dated field confirmation.",
+      "review_status": "source-inferred",
+      "confidence": "low for present movements",
+      "effective_period": "2016 temporary pilot; city dataset current as of December 2025",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "scope": "row-h4fc_uvn9-qns6: Manor Montrose–Lawrence, br_oneway=2W",
+          "status": "official dataset snapshot"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2016/09/21/manor-avenue-diverter-test-begins-pro-greenway-petition-launches",
+          "source_date": "2016-09-21",
+          "date_kind": "news report",
+          "scope": "reports CDOT two-month diverter test at Manor/Wilson",
+          "status": "historical secondary report of temporary test"
+        },
+        {
+          "url": "https://myemail-api.constantcontact.com/The-latest-from-Chicago-s-33rd-Ward.html?aid=mokJ14P7oac&soid=1108636656057",
+          "source_date": "2016-09-09",
+          "date_kind": "33rd Ward newsletter",
+          "scope": "two-month Manor/Wilson traffic study; removal planned after the study; permanent greenway independent",
+          "status": "official historical temporary-project description"
+        }
+      ],
+      "review_needed": "Find official pilot outcome and obtain current dated photos of both Manor approaches, cross-street turns, signs and any barriers."
+    },
+    {
+      "id": "124th-halsted-state-southside",
+      "location": "124th Street between Halsted and State streets",
+      "movement": "eastbound and westbound along designated corridor",
+      "source_inference": "The official city dataset designates this segment a two-way neighborhood greenway and CTA's 2022 EIS identifies a constructed greenway on 124th Street. Neither proves uninterrupted automobile continuation or intersection turns, and the EIS does not independently specify its exact extent.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for designation; low for movement",
+      "effective_period": "CTA EIS 2022; city dataset current as of December 2025",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "scope": "row-66xf_pkuh.sbsm: Halsted–State, neighborhood greenway, br_oneway=2W",
+          "status": "official dataset snapshot"
+        },
+        {
+          "url": "https://www.transitchicago.com/assets/1/6/CTA_RLE_FEIS_20220805_AppH_Transportation_1of2.pdf",
+          "source_date": "2022-08-05",
+          "date_kind": "CTA final EIS appendix",
+          "scope": "identifies constructed greenway on 124th Street",
+          "status": "official historical description"
+        }
+      ],
+      "review_needed": "Match road geometry and inspect junctions, signs, barriers, and both approach-to-departure movements. Do not infer through access from a two-way attribute."
+    },
+    {
+      "id": "loomis-87th-95th-direction",
+      "location": "Loomis Street between 87th and 95th streets",
+      "movement": "northbound and southbound along designated segment",
+      "source_inference": "City row hbrr~kkb2.gs8j labels Loomis as southbound with bicycle contraflow, while br_oneway=2W describes the bicycle route. This suggests northbound travel may be bicycle-only, but the extent of any motor restriction requires individual road matching and signs.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for dataset attributes; current motor signs and exact extent unverified",
+      "effective_period": "City Bike Routes snapshot current as of December 2025",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "source_date": "2025-12",
+          "date_kind": "dataset current-as-of date",
+          "scope": "row-hbrr~kkb2.gs8j: oneway_dir=S, contraflow=Y, br_oneway=2W",
+          "status": "official dataset snapshot"
+        },
+        {
+          "url": "https://chicagocompletestreets.org/streets/bikeways/other-bikeways/",
+          "source_date": null,
+          "date_kind": "publication date unverified",
+          "scope": "explains contraflow bicycle lanes on one-way motor streets generally, not Loomis-specific",
+          "status": "official general explanation"
+        }
+      ],
+      "review_needed": "Match the city segment to individual roads and verify signs and both directions, especially changes at 87th, 95th and intermediate cross streets. Do not assume a physical filter."
     }
   ]
 }

@@ -89,6 +89,16 @@ test('subdividing geometry preserves directional runs, lengths, and boundary mea
   assert.deepEqual(semantic(subdivided), semantic(original));
 });
 
+test('opposite directions can use different junction arcs and lengths', () => {
+  const input = route([100, 20, 100]);
+  input.edges[1].traversals = {forward:{length_m:20},reverse:{length_m:35}};
+  const result = traceRoute(input);
+  assert.equal(runs(result)[0].length_m,220);
+  assert.equal(runs(result,'reverse')[0].length_m,235);
+  input.edges[1].traversals.reverse.length_m = NaN;
+  assert.throws(() => traceRoute(input),/reverse length/);
+});
+
 test('a known prohibition takes precedence over an unknown adjacent edge', () => {
   const input = route([100, 200]);
   input.edges[1].access.forward = decision('unknown', 'Access needs review');

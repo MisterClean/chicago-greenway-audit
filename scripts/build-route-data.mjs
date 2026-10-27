@@ -3,6 +3,7 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { assemble, alignedGraph, locate, metres, lineLength, shortestPath, compareCityOneWay, clipTerminal } from "./route-network.mjs";
 import { edgeAccess, movementAccess } from "./motor-rules.mjs";
 import { traceRoute } from "./route-continuity.mjs";
+import { traceJunction } from "./junction-traversal.mjs";
 const json = async (p) => JSON.parse(await readFile(p, "utf8"));
 const [source, config, osm, reviewEvidence] = await Promise.all(["data/sources/greenways.json", "data/routes/pilots.json", "data/sources/osm-source.json", "data/routes/review-evidence.json"].map(json));
 const db = new DatabaseSync("data/staging/network.sqlite", { readOnly: true });
@@ -31,7 +32,7 @@ const subline = (line, a, b) => {
   coords.push(pointAt(line, b));
   return coords;
 };
-const norm = (s) => (s ?? "").toUpperCase().replace(/^(N|S|E|W|NORTH|SOUTH|EAST|WEST) /, "").replace(/ (AVENUE|AVE|STREET|ST|ROAD|RD|DRIVE|DR)$/, "");
+const norm = (s) => (s ?? "").toUpperCase().replace(/^(N|S|E|W|NORTH|SOUTH|EAST|WEST) /, "").replace(/ (AVENUE|AVE|STREET|ST|ROAD|RD|DRIVE|DR|BOULEVARD|BLVD|PLACE|PL|COURT|CT|PARKWAY|PKWY|TERRACE|TER|LANE|LN)$/, "");
 const all = [];
 for (const spec of config.streets) {
   const records = source.filter((r) => r.st_name === spec.source);
@@ -66,6 +67,19 @@ for (const spec of config.streets) {
       ways.push({ id: w.id, tags, nodes, coordinates: data.map((n) => [n.lon, n.lat]), nodeTags: data.map((n) => JSON.parse(n.tags || "{}")) });
     }
     const graph = alignedGraph(line, ways, config.max_source_distance_m), visited = /* @__PURE__ */ new Set(), candidates = [];
+    const junctionGroups = new Map();
+    const ungrouped = new Set(ways.filter(way => ["circular", "roundabout"].includes(way.tags.junction)));
+    while (ungrouped.size) {
+      const queue = [ungrouped.values().next().value], group = [];
+      ungrouped.delete(queue[0]);
+      while (queue.length) {
+        const way = queue.pop(); group.push(way);
+        for (const other of ungrouped) if (other.nodes.some(node => way.nodes.includes(node))) {
+          ungrouped.delete(other); queue.push(other);
+        }
+      }
+      for (const way of group) junctionGroups.set(way.id, group);
+    }
     for (const node of graph.keys()) {
       if (visited.has(node)) continue;
       const stack = [node], nodes = [];
@@ -103,10 +117,12 @@ for (const spec of config.streets) {
       let chunks = [];
       for (const e of c.path) {
         const prior = chunks.at(-1);
-        if (prior && prior.way.id === e.way.id && prior.reversed === e.reversed && prior.to === e.from && (nodeCounts.get(e.from) ?? 0) < 2 && !Object.keys(JSON.parse(getNode.get(e.from).tags || "{}")).length) {
+        const junctionWays = junctionGroups.get(e.way.id);
+        const sameJunction = junctionWays && prior?.junctionWays === junctionWays;
+        if (prior && prior.to === e.from && (sameJunction || (prior.way.id === e.way.id && prior.reversed === e.reversed && (nodeCounts.get(e.from) ?? 0) < 2 && !Object.keys(JSON.parse(getNode.get(e.from).tags || "{}")).length))) {
           prior.to = e.to;
           prior.parts.push(e);
-        } else chunks.push({ way: e.way, reversed: e.reversed, from: e.from, to: e.to, parts: [e] });
+        } else chunks.push({ way: e.way, reversed: e.reversed, from: e.from, to: e.to, parts: [e], junctionWays });
       }
       for (const [chunkIndex, chunk] of chunks.entries()) {
         let coords = [];
@@ -125,16 +141,42 @@ for (const spec of config.streets) {
           coords = clipped.coords;
           endResolved = clipped.resolved;
         }
-        const tags = chunk.parts.slice(0, -1).map((p) => chunk.way.nodeTags[p.reversed ? p.index : p.index + 1]).filter((t) => Object.keys(t).length);
+        const tags = chunk.parts.slice(0, -1).map((p) => p.way.nodeTags[p.reversed ? p.index : p.index + 1]).filter((t) => Object.keys(t).length);
         let access = edgeAccess(chunk.way.tags, { reversed: chunk.reversed, nodeTags: tags });
+        let traversals;
+        if (chunk.junctionWays) {
+          const completeFootprint = chunk.junctionWays.every(way => way.nodes.slice(1).every((_, index) => graph.get(way.nodes[index])?.some(edge => edge.way.id === way.id && edge.index === index)));
+          const before = chunks[chunkIndex - 1], after = chunks[chunkIndex + 1];
+          traversals = completeFootprint && !before?.junctionWays && !after?.junctionWays ? traceJunction({
+            ways: chunk.junctionWays, fromNode: chunk.from, toNode: chunk.to,
+            fromWayId: before?.way.id, toWayId: after?.way.id, relations,
+          }) : null;
+          if (traversals) {
+            access = {forward:traversals.forward.access, reverse:traversals.reverse.access};
+            coords = traversals.forward.geometry.coordinates;
+          } else {
+            access = {forward:unknown("This junction needs a complete, bounded directional path before car continuity can be established."),reverse:unknown("This junction needs a complete, bounded directional path before car continuity can be established.")};
+          }
+        }
         const sourceAccess = structuredClone(access);
         if (["cycleway", "path"].includes(chunk.way.tags.highway)) {
           access.forward = unknown("A bicycle path matches this connector; its corresponding motor route is unresolved.");
           access.reverse = unknown("A bicycle path matches this connector; its corresponding motor route is unresolved.");
         }
-        const mid = coords[Math.floor(coords.length / 2)];
-        const city = records.filter((r) => part.ids.includes(r[":id"])).map((r) => ({ r, d: locate(mid, r.the_geom.coordinates[0]).distance })).sort((a, b) => a.d - b.d)[0];
-        if (city?.d < 25) access = compareCityOneWay(access, city.r.oneway_dir, spec.axis);
+        const cityAt = (p) => records.filter((r) => part.ids.includes(r[":id"])).map((r) => ({ r, d: locate(p, r.the_geom.coordinates[0]).distance })).sort((a, b) => a.d - b.d)[0];
+        const mid = pointAt(coords, locate(coords.at(-1), coords).position / 2), city = cityAt(mid);
+        if (!chunk.junctionWays && city?.d < 25) {
+          const beforeCity = structuredClone(access);
+          access = compareCityOneWay(beforeCity, city.r.oneway_dir, spec.axis);
+          // A matched edge can straddle city records with different assertions.
+          const ends = [coords[0], coords.at(-1)].map(cityAt).filter(c => c?.d < 25);
+          for (const end of ends) {
+            const other = compareCityOneWay(beforeCity, end.r.oneway_dir, spec.axis);
+            for (const direction of ['forward', 'reverse']) if (other[direction].status !== access[direction].status) {
+              access[direction] = { ...unknown('This edge crosses city records with different one-way assertions; the boundary needs review.'), evidence_status: 'conflicting' };
+            }
+          }
+        }
         const bridge = part.connector ? [locate(part.connector[0], line).position, locate(part.connector[1], line).position].sort((a, b) => a - b) : null;
         const edgePositions = coords.map((p) => locate(p, line).position), low = Math.min(...edgePositions), high = Math.max(...edgePositions);
         const overlapsJoin = bridge && Math.min(high, bridge[1]) - Math.max(low, bridge[0]) > 0.05;
@@ -150,8 +192,9 @@ for (const spec of config.streets) {
             access[direction] = { ...access[direction], source_reason: access[direction].reason, reason: notes.map(record => record.direction_notes[direction]).join(" "), evidence_ids: notes.map(record => record.id) };
           }
         }
-        const evidenceUrls = [...new Set([`https://www.openstreetmap.org/way/${chunk.way.id}`, ...evidenceRecords.flatMap(record => record.sources.map(source => source.url))])];
-        edges.push({ id: `${id}-way-${chunk.way.id}-${edges.length + 1}`, way_id: chunk.way.id, from_node: chunk.from, to_node: chunk.to, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access, ...overlapsJoin ? { source_access: sourceAccess } : {}, evidence_urls: evidenceUrls, role: overlapsJoin ? "connector" : chunk.way.tags.name ? "designated" : "connector" });
+        const wayIds = (chunk.junctionWays ?? [chunk.way]).map(way => way.id).sort((a,b) => a-b);
+        const evidenceUrls = [...new Set([...wayIds.map(wayId => `https://www.openstreetmap.org/way/${wayId}`), ...Object.values(access).flatMap(decision => (decision.source_ids ?? []).map(sourceId => `https://www.openstreetmap.org/${sourceId}`)), ...evidenceRecords.flatMap(record => record.sources.map(source => source.url))])];
+        edges.push({ id: `${id}-${chunk.junctionWays ? "junction" : "way"}-${wayIds.join("-")}-${edges.length + 1}`, way_id: wayIds.length === 1 ? wayIds[0] : null, ...(chunk.junctionWays ? {way_ids:wayIds} : {}), from_node: chunk.from, to_node: chunk.to, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access, ...(traversals ? {traversals} : {}), ...overlapsJoin ? { source_access: sourceAccess } : {}, evidence_urls: evidenceUrls, role: overlapsJoin ? "connector" : chunk.junctionWays ? "junction" : chunk.way.tags.name ? "designated" : "connector" });
       }
       cursor = Math.max(cursor, c.last.position);
     }
@@ -160,8 +203,8 @@ for (const spec of config.streets) {
     const movements = [];
     for (let i = 1; i < edges.length; i++) {
       const a = edges[i - 1], b = edges[i], connected = a.to_node != null && a.to_node === b.from_node;
-      const forward = connected ? movementAccess({ fromWayId: a.way_id, toWayId: b.way_id, viaNodeId: a.to_node, relations, isUTurn: false, viaNodeTags: { id: a.to_node, tags: JSON.parse(getNode.get(a.to_node).tags || "{}") } }) : unknown("A source alignment gap leaves this movement unresolved.");
-      const reverse = connected ? movementAccess({ fromWayId: b.way_id, toWayId: a.way_id, viaNodeId: a.to_node, relations, isUTurn: false, viaNodeTags: { id: a.to_node, tags: JSON.parse(getNode.get(a.to_node).tags || "{}") } }) : unknown("A source alignment gap leaves this movement unresolved.");
+      const forward = connected ? movementAccess({ fromWayId: a.traversals?.forward.exit_way_id ?? a.way_id, toWayId: b.traversals?.forward.entry_way_id ?? b.way_id, viaNodeId: a.to_node, relations, isUTurn: false, viaNodeTags: { id: a.to_node, tags: JSON.parse(getNode.get(a.to_node).tags || "{}") } }) : unknown("A source alignment gap leaves this movement unresolved.");
+      const reverse = connected ? movementAccess({ fromWayId: b.traversals?.reverse.exit_way_id ?? b.way_id, toWayId: a.traversals?.reverse.entry_way_id ?? a.way_id, viaNodeId: a.to_node, relations, isUTurn: false, viaNodeTags: { id: a.to_node, tags: JSON.parse(getNode.get(a.to_node).tags || "{}") } }) : unknown("A source alignment gap leaves this movement unresolved.");
       const urls = [...new Set([...forward.source_ids ?? [], ...reverse.source_ids ?? []].map((x) => `https://www.openstreetmap.org/${String(x)}`))];
       movements.push({ id: `${id}-movement-${i}`, coordinate: a.geometry.coordinates.at(-1), from_edge: a.id, to_edge: b.id, forward, reverse, evidence_urls: urls, cross_street: connected ? [...crossingNames.get(a.to_node) ?? []].sort().join(" / ") || null : null });
     }
@@ -174,7 +217,9 @@ for (const spec of config.streets) {
     const byId = new Map(edges.map((e) => [e.id, e]));
     const runs = traced.runs.map((r, i) => {
       const lines = r.edge_ids.map((e) => {
-        const c = byId.get(e).geometry.coordinates;
+        const edge = byId.get(e);
+        if (edge.traversals?.[r.direction]) return edge.traversals[r.direction].geometry.coordinates;
+        const c = edge.geometry.coordinates;
         return r.direction === "reverse" ? [...c].reverse() : c;
       });
       return { ...r, start: { ...r.start, coordinate: lines[0][0] }, end: { ...r.end, coordinate: lines.at(-1).at(-1) }, id: `${id}-run-${i + 1}`, geometry: { type: "MultiLineString", coordinates: lines }, evidence_status: "source-inferred" };
@@ -210,7 +255,7 @@ for (const spec of config.streets) {
       options.sort((a, b) => a.distance - b.distance);
       return options[0]?.name?.replace(/^(North|South|East|West) /, "") ?? "unresolved endpoint";
     };
-    all.push({ id, name: spec.name, extent_label: `${labelAt(line[0])} \u2013 ${labelAt(line.at(-1))}`, direction_labels: spec.axis === "north" ? { forward: "Northbound", reverse: "Southbound" } : { forward: "Eastbound", reverse: "Westbound" }, source_ids: part.ids, bounds: [[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], geometry: part.designationLines ? { type: "MultiLineString", coordinates: part.designationLines } : { type: "LineString", coordinates: line }, edges, movements, runs, events, coverage: { designated_m: designated, matched_m: matched, unknown_m: unmatched, reviewed_movements: 0, total_movements: movements.length } });
+    all.push({ id, name: spec.name, extent_label: `${labelAt(line[0])} \u2013 ${labelAt(line.at(-1))}`, direction_labels: spec.axis === "north" ? { forward: "Northbound", reverse: "Southbound" } : { forward: "Eastbound", reverse: "Westbound" }, source_ids: part.ids, bounds: [[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], geometry: part.designationLines ? { type: "MultiLineString", coordinates: part.designationLines } : { type: "LineString", coordinates: line }, edges, movements, runs, events, coverage: { designated_m: designated, matched_m: matched, unknown_m: unmatched, unknown_connections: movements.filter(m => m.forward.status === 'unknown' || m.reverse.status === 'unknown').length + edges.filter(e => e.role === 'junction' && (e.access.forward.status === 'unknown' || e.access.reverse.status === 'unknown')).length, reviewed_movements: 0, total_movements: movements.length } });
   }
 }
 db.close();

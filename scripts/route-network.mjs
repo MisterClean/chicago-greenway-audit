@@ -25,15 +25,33 @@ export function assemble(records,axis) {
 // Traversal uses real node identity, so crossings at different grades cannot connect.
 export function alignedGraph(line,ways,maxDistance=18) {
   const graph=new Map(); const add=(id,e)=>{if(!graph.has(id))graph.set(id,[]);graph.get(id).push(e)};
+  const deferred=[];
+  const addSegment=(way,i)=>{const aId=way.nodes[i-1],bId=way.nodes[i],edge={way,index:i-1,length:metres(way.coordinates[i-1],way.coordinates[i])};add(aId,{...edge,from:aId,to:bId,reversed:false});add(bId,{...edge,from:bId,to:aId,reversed:true});};
   for(const way of ways) for(let i=1;i<way.nodes.length;i++) {
     const a=way.coordinates[i-1],b=way.coordinates[i];if(!a||!b)continue;
     const la=locate(a,line),lb=locate(b,line),mid=locate([(a[0]+b[0])/2,(a[1]+b[1])/2],line);
     const av=xy(a),bv=xy(b),dx=bv[0]-av[0],dy=bv[1]-av[1],len=Math.hypot(dx,dy); if(!len||Math.max(la.distance,lb.distance,mid.distance)>maxDistance)continue;
     const heading=Math.abs((dx*mid.heading[0]+dy*mid.heading[1])/len);
-    if(heading<0.65 || Math.abs(lb.position-la.position)<len*0.3)continue;
-    const aId=way.nodes[i-1],bId=way.nodes[i];const edge={way,index:i-1,length:metres(a,b)};
-    add(aId,{...edge,from:aId,to:bId,reversed:false});add(bId,{...edge,from:bId,to:aId,reversed:true});
-  }return graph;
+    if(heading<0.65 || Math.abs(lb.position-la.position)<len*0.3){deferred.push({way,i,length:len});continue;}
+    addSegment(way,i);
+  }
+  // A short diagonal can represent a city record's right-angle jog. Require both
+  // endpoints to have already matched, rather than extending the graph outward.
+  for(const e of deferred) if(!['circular','roundabout'].includes(e.way.tags?.junction) && e.length<=25 && graph.has(e.way.nodes[e.i-1]) && graph.has(e.way.nodes[e.i])) addSegment(e.way,e.i);
+  // OSM often splits a small circular junction across multiple ways. Admit the
+  // complete closed ring only when all of it is within the source corridor and
+  // at least two ring nodes attach to the previously aligned network.
+  const circular=ways.filter(w=>['circular','roundabout'].includes(w.tags?.junction));
+  const remaining=new Set(circular);
+  while(remaining.size){
+    const group=[],queue=[remaining.values().next().value];remaining.delete(queue[0]);
+    while(queue.length){const w=queue.pop();group.push(w);for(const other of remaining) if(other.nodes.some(n=>w.nodes.includes(n))){remaining.delete(other);queue.push(other);}}
+    const degree=new Map();let length=0,near=true;
+    for(const w of group) for(let i=1;i<w.nodes.length;i++){const a=w.coordinates[i-1],b=w.coordinates[i];if(!a||!b){near=false;continue;}length+=metres(a,b);near&&=Math.max(locate(a,line).distance,locate(b,line).distance,locate([(a[0]+b[0])/2,(a[1]+b[1])/2],line).distance)<=maxDistance;degree.set(w.nodes[i-1],(degree.get(w.nodes[i-1])??0)+1);degree.set(w.nodes[i],(degree.get(w.nodes[i])??0)+1);}
+    if(!near||length>150||[...degree.values()].some(n=>n!==2)||[...degree.keys()].filter(n=>(graph.get(n)??[]).some(e=>!['circular','roundabout'].includes(e.way.tags?.junction))).length<2)continue;
+    for(const w of group) for(let i=1;i<w.nodes.length;i++) if(!graph.get(w.nodes[i-1])?.some(e=>e.way===w&&e.index===i-1)) addSegment(w,i);
+  }
+  return graph;
 }
 export function shortestPath(graph,start,end) {
   const dist=new Map([[start,0]]),prev=new Map(),queue=[[0,start]];
@@ -65,8 +83,10 @@ export function clipTerminal(coords, endpoint, side, tolerance = 18) {
   for (let i = 1; i < coords.length; i++) {
     const a = coords[i-1], b = coords[i];
     const len = Math.hypot((b[0]-a[0])*83100, (b[1]-a[1])*111100);
-    if (travelled + len >= location.position) {
-      const t = len ? (location.position-travelled)/len : 0;
+    // locate() subtracts projected coordinates; this loop scales coordinate
+    // differences. Permit sub-millimetre roundoff at the final endpoint.
+    if (travelled + len + 1e-6 >= location.position || i === coords.length - 1) {
+      const t = len ? Math.max(0,Math.min(1,(location.position-travelled)/len)) : 0;
       const point = [a[0]+t*(b[0]-a[0]),a[1]+t*(b[1]-a[1])];
       clipped = side === 'start' ? [point,...coords.slice(i)] : [...coords.slice(0,i),point];
       break;

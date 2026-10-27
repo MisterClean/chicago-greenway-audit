@@ -1,1 +1,56 @@
-{"streets":[{"name":"Wood","axis":"north","source":"WOOD"},{"name":"Berteau","axis":"east","source":"BERTEAU"},{"name":"Leland","axis":"east","source":"LELAND"},{"name":"Dickens","axis":"east","source":"DICKENS"}],"max_source_distance_m":18,"endpoint_tolerance_m":12}
+{
+  "streets": [
+    {
+      "name": "Wood",
+      "axis": "north",
+      "source": "WOOD"
+    },
+    {
+      "name": "Berteau",
+      "axis": "east",
+      "source": "BERTEAU"
+    },
+    {
+      "name": "Leland",
+      "axis": "east",
+      "source": "LELAND"
+    },
+    {
+      "name": "Dickens",
+      "axis": "east",
+      "source": "DICKENS"
+    },
+    {
+      "name": "Manor",
+      "axis": "north",
+      "source": "MANOR"
+    },
+    {
+      "name": "Kenmore",
+      "axis": "north",
+      "source": "KENMORE"
+    },
+    {
+      "name": "Glenwood",
+      "axis": "north",
+      "source": "GLENWOOD"
+    },
+    {
+      "name": "George",
+      "axis": "east",
+      "source": "GEORGE"
+    },
+    {
+      "name": "Loomis",
+      "axis": "north",
+      "source": "LOOMIS"
+    },
+    {
+      "name": "124th",
+      "axis": "east",
+      "source": "124TH"
+    }
+  ],
+  "max_source_distance_m": 18,
+  "endpoint_tolerance_m": 12
+}

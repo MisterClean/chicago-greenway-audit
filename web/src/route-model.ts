@@ -26,6 +26,7 @@ export interface Edge {
   to_node: number | null;
   length_m: number;
   geometry: Geometry;
+  traversals?: Record<Direction, {geometry: Geometry; length_m: number}>;
   access: Record<Direction, Decision>;
   evidence_urls: string[];
   role: string;
@@ -70,7 +71,7 @@ export interface Route {
   movements: Movement[];
   runs: Run[];
   events: Event[];
-  coverage: { designated_m: number; matched_m: number; unknown_m: number; reviewed_movements: number; total_movements: number };
+  coverage: { designated_m: number; matched_m: number; unknown_m: number; unknown_connections: number; reviewed_movements: number; total_movements: number };
 }
 export interface RouteData {
   schema_version: number;

@@ -9,6 +9,7 @@
 const directions = ['forward', 'reverse'];
 const statuses = new Set(['allowed', 'blocked', 'unknown']);
 const nonempty = value => typeof value === 'string' && value.trim().length > 0;
+const edgeLength = (edge, direction) => edge.traversals?.[direction]?.length_m ?? edge.length_m;
 function requireValue(condition, message) {
   if (!condition) throw new Error(`Invalid route: ${message}`);
 }
@@ -28,9 +29,13 @@ function validate(route) {
     requireValue(nonempty(edge?.id) && !ids.has(edge.id), 'edge ids must be unique');
     ids.add(edge.id);
     requireValue(Number.isFinite(edge.length_m) && edge.length_m > 0, 'edge lengths must be positive finite metres');
+    for (const direction of directions) {
+      requireValue(Number.isFinite(edgeLength(edge, direction)) && edgeLength(edge, direction) > 0,
+        `edge ${edge.id}.${direction} length must be positive finite metres`);
+    }
     validateDecisions(edge.access, `edge ${edge.id}`);
   }
-  requireValue(Number.isFinite(route.edges.reduce((sum, edge) => sum + edge.length_m, 0)), 'total length overflows');
+  for (const direction of directions) requireValue(Number.isFinite(route.edges.reduce((sum, edge) => sum + edgeLength(edge, direction), 0)), 'total length overflows');
   requireValue(Array.isArray(route.movements) && route.movements.length === route.edges.length - 1,
     'one movement pair is required between each adjacent edge pair');
   ids.clear();
@@ -79,7 +84,7 @@ export function traceRoute(route) {
       let length = 0;
       do {
         edgeIds.push(edges[position].id);
-        length += edges[position].length_m;
+        length += edgeLength(edges[position], direction);
         position++;
       } while (position < edges.length && boundary(position) === null);
       const endBoundary = boundary(position);

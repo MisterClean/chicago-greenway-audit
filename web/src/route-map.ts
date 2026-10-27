@@ -92,7 +92,10 @@ function updateMap() {
   setSource('selected-route', [feature(route.geometry)]);
   for (const d of directions) {
     const visible = shown(d);
-    setSource(`edges-${d}`, visible ? route.edges.map(edge => feature(edge.geometry, {status:edge.access[d].status, edge_id:edge.id})) : []);
+    setSource(`edges-${d}`, visible ? route.edges.map(edge => {
+      const geometry = edge.traversals?.[d]?.geometry ?? (d === 'forward' ? edge.geometry : {type:'MultiLineString' as const,coordinates:lines(edge.geometry).map(part => [...part].reverse()).reverse()});
+      return feature(geometry, {status:edge.access[d].status, edge_id:edge.id});
+    }) : []);
     setSource(`runs-${d}`, visible ? route.runs.filter(run => run.direction === d).map(run => feature(displayGeometry(run.geometry), {run_id:run.id,direction:d})) : []);
   }
   setSource('events', route.events.filter(event => shown(event.direction)).map(event => feature({type:'Point',coordinates:event.coordinate},{id:event.id,status:event.status,kind:event.kind,label:event.status === 'unknown' ? '?' : '×'})));
@@ -115,7 +118,9 @@ function renderDetail() {
     return;
   }
   if (!selectedRun) {
-    el.innerHTML = '<h2>Select a path</h2><p>Choose a continuous stretch below, or select a colored line on the map.</p>';
+    el.innerHTML = route.runs.some(run => shown(run.direction))
+      ? '<h2>Select a path</h2><p>Choose a continuous stretch below, or select a colored line on the map.</p>'
+      : '<h2>No established car path</h2><p>Open an interruption or review point to see the restrictions and unresolved evidence.</p>';
     return;
   }
   const run = selectedRun;
@@ -177,7 +182,7 @@ function render() {
   }).join('');
   document.querySelectorAll<HTMLButtonElement>('[data-longest]').forEach(button => button.onclick = () => { const run = longestRun(route,button.dataset.longest as Direction); if (run) chooseRun(run.id); });
   const coverage = route.coverage;
-  $('coverage').textContent = `${distanceLabel(coverage.designated_m)} designated · ${distanceLabel(coverage.unknown_m)} unmatched. Distances are source-inferred, not verified maxima.`;
+  $('coverage').textContent = `${distanceLabel(coverage.designated_m)} designated · ${distanceLabel(coverage.unknown_m)} unmatched geometry · ${coverage.unknown_connections} ${coverage.unknown_connections === 1 ? 'connection' : 'connections'} unresolved. Distances are source-inferred, not verified maxima.`;
   const runs = route.runs.filter(run => shown(run.direction));
   $('run-count').textContent = String(runs.length);
   $('run-list').innerHTML = runs.length ? runs.map(run => `<button class="run-row ${run.direction}" data-run="${escape(run.id)}" aria-pressed="${selectedRun?.id === run.id}"><span class="run-row-heading"><span>${escape(route.direction_labels[run.direction])}</span><strong>${distanceLabel(run.length_m)}</strong></span><span class="small">${escape(boundaryTitle(run.end))}</span></button>`).join('') : '<p class="small empty-message">No continuous car path is established in this direction. Inspect the restrictions and unknown links below.</p>';
@@ -230,7 +235,7 @@ function addMapLayers() {
   ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.moveTo(6,4);ctx.lineTo(18,12);ctx.lineTo(6,20);ctx.lineTo(9,12);ctx.closePath();ctx.fill();
   map.addImage('travel-arrow',ctx.getImageData(0,0,24,24));
   for (const d of directions) {
-    const offset = d === 'forward' ? -4 : 4;
+    const offset = -4; // Both edge and run geometries follow their travel direction.
     map.addLayer({id:`edges-${d}`,source:`edges-${d}`,type:'line',layout:{'line-cap':'butt','line-join':'round'},paint:{'line-color':['match',['get','status'],'allowed',colors[d],'blocked',colors.blocked,colors.unknown],'line-width':6,'line-offset':offset}});
     map.addLayer({id:`unknown-${d}`,source:`edges-${d}`,type:'line',filter:['==',['get','status'],'unknown'],paint:{'line-color':'#fff','line-width':2,'line-offset':offset,'line-dasharray':[1,2]}});
     map.addLayer({id:`restricted-${d}`,source:`edges-${d}`,type:'line',filter:['==',['get','status'],'blocked'],paint:{'line-color':'#fff','line-width':1.5,'line-offset':offset,'line-dasharray':[0.3,3]}});

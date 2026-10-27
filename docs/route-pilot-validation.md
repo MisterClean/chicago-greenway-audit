@@ -1,5 +1,7 @@
 # Directional vehicle continuity: pilot validation
 
+The expanded 16-section candidate and its current source checks are documented in [route-expansion-validation.md](route-expansion-validation.md). The pilot findings below describe the earlier four-street review.
+
 This pilot maps source-inferred passenger-car continuity on selected Wood, Berteau, Leland and Dickens greenway sections. It is a review aid, not a completed driving or cycling-stress audit. **Zero movements have been field reviewed.** An allowed source decision means the stored inputs support a provisional inference; it does not establish current signage, actual traffic volume, speed, cycling comfort or safety.
 
 ## Inputs and output

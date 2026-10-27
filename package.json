@@ -15,7 +15,8 @@
     "fixtures": "cargo run --release --locked --manifest-path solver/Cargo.toml -- data/fixtures/states.ndjson data/fixtures/segments.ndjson data/fixtures/output",
     "data:verify": "node scripts/verify-assets.mjs",
     "data:routes": "node scripts/build-route-data.mjs",
-    "verify:routes": "node scripts/verify-route-data.mjs"
+    "verify:routes": "node scripts/verify-route-data.mjs",
+    "audit:routes": "node scripts/audit-route-samples.mjs"
   },
   "dependencies": {
     "maplibre-gl": "6.10.0",

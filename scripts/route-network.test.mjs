@@ -15,6 +15,21 @@ test('rejects an off-route parallel bypass and preserves route order',()=>{
  const graph=alignedGraph(line,ways);assert.deepEqual(shortestPath(graph,1,3).map(e=>e.way.id),[1,1]);assert.deepEqual(shortestPath(graph,3,1).map(e=>e.reversed),[true,true]);
 });
 
+test('matches a bounded diagonal between existing nodes at a city jog',()=>{
+ const line=[[0,0],[0,0.0001],[-0.0001,0.0001],[-0.0001,0.0002]];
+ const ways=[{id:1,nodes:[1,2],coordinates:[[0,0],[0,0.00005]]},{id:2,nodes:[2,3],coordinates:[[0,0.00005],[-0.0001,0.00015]]},{id:3,nodes:[3,4],coordinates:[[-0.0001,0.00015],[-0.0001,0.0002]]}];
+ assert.deepEqual(shortestPath(alignedGraph(line,ways),1,4).map(e=>e.way.id),[1,2,3]);
+ const isolated=[...ways,{id:4,nodes:[2,5],coordinates:[[0,0.00005],[-0.00009,0.00014]]}];
+ assert.equal(alignedGraph(line,isolated).has(5),false);
+});
+
+test('matches both sides of a small split circular junction using shared nodes',()=>{
+ const line=[[0,0],[0,0.0003]],circle={junction:'circular'};
+ const ways=[{id:1,nodes:[1,2],coordinates:[[0,0],[0,0.0001]]},{id:2,nodes:[2,3,4],coordinates:[[0,0.0001],[-0.00005,0.00015],[0,0.0002]],tags:circle},{id:3,nodes:[4,5,2],coordinates:[[0,0.0002],[0.00005,0.00015],[0,0.0001]],tags:circle},{id:4,nodes:[4,6],coordinates:[[0,0.0002],[0,0.0003]]}];
+ const graph=alignedGraph(line,ways);assert.ok(shortestPath(graph,1,6));assert.ok(graph.get(2).some(e=>e.to===5));assert.ok(graph.get(4).some(e=>e.to===3));
+ const tooLarge=alignedGraph(line,ways,2);assert.equal(shortestPath(tooLarge,1,6),null);
+});
+
 test('pilot export preserves source components, known restrictions and unreviewed evidence',async()=>{
  const {readFile}=await import('node:fs/promises');const data=JSON.parse(await readFile('public/routes/pilot.json','utf8'));
  assert.equal(data.schema_version,1);assert.equal(data.summary.reviewed_movements,0);
@@ -47,4 +62,7 @@ test('clips terminal geometries at the projected source endpoint',()=>{
  const end=clipTerminal(coords,[0.0019,0.00001],'end');assert.equal(end.resolved,true);assert.ok(Math.abs(end.coords.at(-1)[0]-0.0019)<1e-9);
  const start=clipTerminal(coords,[0.0001,0.00001],'start');assert.equal(start.resolved,true);assert.ok(Math.abs(start.coords[0][0]-0.0001)<1e-9);
  assert.equal(clipTerminal(coords,[0.001,0.01],'start').resolved,false);
+ const stateApproach=[[-87.6224877,41.6689253],[-87.6223508,41.6689268]];
+ const stateEnd=clipTerminal(stateApproach,[-87.62234490640415,41.66891114918197],'end');
+ assert.equal(stateEnd.resolved,true);assert.deepEqual(stateEnd.coords.at(-1),stateApproach.at(-1));
 });
