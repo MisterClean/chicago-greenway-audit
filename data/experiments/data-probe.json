@@ -1,0 +1,3973 @@
+{
+  "schema": "greenway-data-probe-v1",
+  "purpose": "Reproducible source/topology evidence for an implementation plan; no reviewed Chicago vehicle movements are asserted.",
+  "source_effective_date": "2026-09-11T23:00:00Z",
+  "source_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+  "stats": {
+    "city_source_records": 258,
+    "raw_source_geometry_edges": 1452,
+    "city_geometry_intervals": 1452,
+    "intervals_without_candidates": 52,
+    "intervals_with_multiple_candidates": 726,
+    "candidate_intervals_without_full_endpoint_coverage": 86,
+    "matching_failure_examples": [
+      {
+        "sid": 154,
+        "street": "WINTHROP AVE",
+        "length_m": 1559.227,
+        "best_candidate": {
+          "way_id": 30679343,
+          "endpoint_distances_m": [
+            0.1,
+            1359.4
+          ]
+        }
+      },
+      {
+        "sid": 1271,
+        "street": "KEELER AVE",
+        "length_m": 2053.945,
+        "best_candidate": {
+          "way_id": 1032917802,
+          "endpoint_distances_m": [
+            12.8,
+            1240.7
+          ]
+        }
+      }
+    ],
+    "interval_length_m": {
+      "min": 0.917,
+      "median": 65.925,
+      "max": 2053.945,
+      "below_5m": 41,
+      "below_10m": 154,
+      "below_25m": 418
+    },
+    "candidate_ways": 715,
+    "candidate_way_oneway_tags": {
+      "(absent)": 350,
+      "no": 25,
+      "yes": 340
+    },
+    "candidate_way_bicycle_contraflow": 135,
+    "source_records_bicycle_contraflow": 74,
+    "candidate_nodes": 5705,
+    "candidate_barrier_nodes": [
+      {
+        "id": 7613384009,
+        "longitude": -87.6570176,
+        "latitude": 41.9965184,
+        "tags": {
+          "barrier": "bollard"
+        }
+      },
+      {
+        "id": 7610489575,
+        "longitude": -87.6570696,
+        "latitude": 41.9981027,
+        "tags": {
+          "barrier": "bollard",
+          "bollard": "removable"
+        }
+      }
+    ],
+    "directly_attached_restrictions": 25,
+    "restriction_types": {
+      "(mode-specific)": 2,
+      "no_left_turn": 13,
+      "no_right_turn": 6,
+      "no_straight_on": 1,
+      "no_u_turn": 3
+    },
+    "scope_warning": "These counts describe candidate matches, not accepted greenway motor roads. Absence of a restriction or barrier tag is not evidence that the movement is permitted."
+  },
+  "corridor_summaries": [
+    {
+      "name": "BERTEAU",
+      "city_source_records": 8,
+      "city_geometry_intervals": 105,
+      "source_directions": [
+        {
+          "source_id": "row-5h7z.m2fp_7gx2",
+          "from": "N DAMEN AVE",
+          "to": "N ASHLAND AVE",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-pq5z-s53x.brp2",
+          "from": "N LINCOLN AVE",
+          "to": "N DAMEN AVE",
+          "motor_direction": "W",
+          "bike_direction": "2W",
+          "contraflow": "Y"
+        },
+        {
+          "source_id": "row-gzf4~rb7x_v83i",
+          "from": "N ASHLAND AVE",
+          "to": "N CLARK ST",
+          "motor_direction": "W",
+          "bike_direction": "2W",
+          "contraflow": "Y"
+        },
+        {
+          "source_id": "row-htp4_yvye.38r6",
+          "from": "N WESTERN AVE",
+          "to": "N LINCOLN AVE",
+          "motor_direction": "W",
+          "bike_direction": "2W",
+          "contraflow": "Y"
+        },
+        {
+          "source_id": "row-nxha.d5gq-ps6y",
+          "from": "N ELSTON AVE",
+          "to": "N CENTRAL PARK AVE",
+          "motor_direction": "W",
+          "bike_direction": "1W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-8rit~7w97-piw2",
+          "from": "N CENTRAL PARK AVE",
+          "to": "N KIMBALL AVE",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-fuyv_y9ez~mdjv",
+          "from": "N KIMBALL AVE",
+          "to": "N SACRAMENTO AVE",
+          "motor_direction": "W",
+          "bike_direction": "1W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-4q3d.at63.qceu",
+          "from": "N RICHMOND ST",
+          "to": "N CALIFORNIA AVE",
+          "motor_direction": "W",
+          "bike_direction": "1W",
+          "contraflow": null
+        }
+      ],
+      "candidate_ways": [
+        {
+          "id": 1088397389,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "opposite_lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 24099241,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "opposite_lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 253740833,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "cycleway:both:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 194803325,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "cycleway:both:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1211694951,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "cycleway:both:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxheight": "11'10\"",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1211694950,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "cycleway:both:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 158949019,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:buffer": "no",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 253740831,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:buffer": "no",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "maxspeed": "30 mph",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1229544715,
+          "tags": {
+            "highway": "residential",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 24099243,
+          "tags": {
+            "highway": "residential",
+            "lane_markings": "no",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1252534016,
+          "tags": {
+            "highway": "residential",
+            "name": "West Berteau Avenue",
+            "oneway": "yes"
+          }
+        },
+        {
+          "id": 1252534017,
+          "tags": {
+            "highway": "residential",
+            "name": "West Berteau Avenue",
+            "oneway": "yes"
+          }
+        },
+        {
+          "id": 27876612,
+          "tags": {
+            "highway": "residential",
+            "name": "West Berteau Avenue",
+            "oneway": "yes"
+          }
+        },
+        {
+          "id": 1087822572,
+          "tags": {
+            "highway": "residential",
+            "name": "West Berteau Avenue",
+            "oneway": "yes"
+          }
+        },
+        {
+          "id": 1087822574,
+          "tags": {
+            "highway": "residential",
+            "name": "West Berteau Avenue",
+            "oneway": "yes"
+          }
+        },
+        {
+          "id": 1087822571,
+          "tags": {
+            "highway": "residential",
+            "lanes": "1",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 994080789,
+          "tags": {
+            "highway": "residential",
+            "name": "West Berteau Avenue",
+            "oneway": "yes"
+          }
+        },
+        {
+          "id": 994080788,
+          "tags": {
+            "highway": "residential",
+            "lanes": "1",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 194873118,
+          "tags": {
+            "highway": "residential",
+            "name": "West Berteau Avenue",
+            "surface": "paved"
+          }
+        },
+        {
+          "id": 379681611,
+          "tags": {
+            "highway": "residential",
+            "lane_markings": "no",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "directly_attached_relations": []
+    },
+    {
+      "name": "MANOR",
+      "city_source_records": 1,
+      "city_geometry_intervals": 15,
+      "source_directions": [
+        {
+          "source_id": "row-h4fc_uvn9-qns6",
+          "from": "W MONTROSE AVE",
+          "to": "W LAWRENCE AVE",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        }
+      ],
+      "candidate_ways": [
+        {
+          "id": 24076564,
+          "tags": {
+            "bicycle": "designated",
+            "bicycle_road": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1373721893,
+          "tags": {
+            "bicycle_road": "yes",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "oneway": "yes",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1373721895,
+          "tags": {
+            "bicycle": "designated",
+            "bicycle_road": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1322446355,
+          "tags": {
+            "bicycle_road": "yes",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "oneway": "yes",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 34074519,
+          "tags": {
+            "bicycle": "designated",
+            "bicycle_road": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 445330031,
+          "tags": {
+            "bicycle": "designated",
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 445330032,
+          "tags": {
+            "bicycle": "designated",
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 34319052,
+          "tags": {
+            "bicycle": "designated",
+            "bicycle_road": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 964924500,
+          "tags": {
+            "bicycle": "designated",
+            "bicycle_road": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1323731225,
+          "tags": {
+            "bicycle": "designated",
+            "bicycle_road": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "directly_attached_relations": [
+        {
+          "id": 18923101,
+          "tags": {
+            "restriction": "no_right_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1373721894,
+              "role": "from"
+            },
+            {
+              "type": "way",
+              "ref": 1373721893,
+              "role": "to"
+            },
+            {
+              "type": "node",
+              "ref": 12237167294,
+              "role": "via"
+            }
+          ],
+          "decision": "unreviewed"
+        },
+        {
+          "id": 18923102,
+          "tags": {
+            "restriction": "no_u_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1322446355,
+              "role": "from"
+            },
+            {
+              "type": "way",
+              "ref": 1373721896,
+              "role": "to"
+            },
+            {
+              "type": "node",
+              "ref": 12237167294,
+              "role": "via"
+            }
+          ],
+          "decision": "unreviewed"
+        },
+        {
+          "id": 18923103,
+          "tags": {
+            "restriction": "no_right_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1373721895,
+              "role": "to"
+            },
+            {
+              "type": "node",
+              "ref": 9779535787,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 1373721893,
+              "role": "from"
+            }
+          ],
+          "decision": "unreviewed"
+        },
+        {
+          "id": 18923104,
+          "tags": {
+            "restriction": "no_u_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1373721896,
+              "role": "from"
+            },
+            {
+              "type": "way",
+              "ref": 1322446355,
+              "role": "to"
+            },
+            {
+              "type": "node",
+              "ref": 12237167299,
+              "role": "via"
+            }
+          ],
+          "decision": "unreviewed"
+        },
+        {
+          "id": 19944083,
+          "tags": {
+            "restriction": "no_left_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 940535637,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 264166620,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 1323731225,
+              "role": "to"
+            }
+          ],
+          "decision": "unreviewed"
+        }
+      ]
+    },
+    {
+      "name": "DICKENS",
+      "city_source_records": 4,
+      "city_geometry_intervals": 10,
+      "source_directions": [
+        {
+          "source_id": "row-q4jd.37cc~8cnk",
+          "from": "N MAGNOLIA AVE",
+          "to": "N BURLING ST",
+          "motor_direction": "W",
+          "bike_direction": "2W",
+          "contraflow": "Y"
+        },
+        {
+          "source_id": "row-uhgm_bzim_m5fe",
+          "from": "N LINCOLN AVE/N CLEVELAND AVE",
+          "to": "N STOCKTON DR",
+          "motor_direction": "W",
+          "bike_direction": "2W",
+          "contraflow": "Y"
+        },
+        {
+          "source_id": "row-zecc~v3rf.fwkc",
+          "from": "N LARRABEE ST",
+          "to": "N LINCOLN AVE",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-grf4~xcbq~6rb7",
+          "from": "N HOWE ST",
+          "to": "N LARABEE ST",
+          "motor_direction": "W",
+          "bike_direction": "2W",
+          "contraflow": "Y"
+        }
+      ],
+      "candidate_ways": [
+        {
+          "id": 24098564,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "separate",
+            "cycleway:right": "shared_lane",
+            "hgv": "no",
+            "highway": "unclassified",
+            "maxspeed": "20 mph",
+            "name": "West Dickens Drive",
+            "oneway": "yes",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 34076676,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Dickens Avenue",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 194872049,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "lane",
+            "cycleway:left:oneway": "-1",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Dickens Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 194872045,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Dickens Avenue",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 166291787,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Dickens Avenue",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 186995734,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Dickens Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 223538783,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:right": "lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Dickens Avenue",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 1237331792,
+          "tags": {
+            "access": "yes",
+            "cycleway:right": "lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "motor_vehicle": "destination",
+            "name": "West Dickens Avenue",
+            "oneway:bicycle": "no",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 34075285,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "lane",
+            "cycleway:both": "lane",
+            "cycleway:left:oneway": "-1",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Dickens Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 947928200,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "lane",
+            "cycleway:left:oneway": "-1",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Dickens Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 826067848,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "lane",
+            "cycleway:left:oneway": "-1",
+            "highway": "residential",
+            "name": "West Dickens Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 1237331791,
+          "tags": {
+            "highway": "residential",
+            "name": "West Dickens Avenue",
+            "oneway": "yes",
+            "sidewalk:both": "separate",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          }
+        }
+      ],
+      "directly_attached_relations": [
+        {
+          "id": 18772599,
+          "tags": {
+            "except": "motorcycle",
+            "restriction": "no_right_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "node",
+              "ref": 258964870,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 24098564,
+              "role": "to"
+            },
+            {
+              "type": "way",
+              "ref": 1422976791,
+              "role": "from"
+            }
+          ],
+          "decision": "unreviewed"
+        }
+      ]
+    },
+    {
+      "name": "CORTLAND",
+      "city_source_records": 2,
+      "city_geometry_intervals": 32,
+      "source_directions": [
+        {
+          "source_id": "row-hkyx_48ex_8z98",
+          "from": "N DAMEN AVE",
+          "to": "N ASHLAND AVE",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-kb56.czy3-uyw7",
+          "from": "N HAMLIN AVE",
+          "to": "N RIDGEWAY AVE",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        }
+      ],
+      "candidate_ways": [
+        {
+          "id": 684469307,
+          "tags": {
+            "cycleway": "lane",
+            "cycleway:both": "lane",
+            "cycleway:both:buffer": "no",
+            "cycleway:buffer": "no",
+            "highway": "tertiary",
+            "lane_markings": "no",
+            "name": "West Cortland Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1324848367,
+          "tags": {
+            "cycleway": "track",
+            "cycleway:both": "track",
+            "highway": "secondary",
+            "layer": "-1",
+            "lit": "yes",
+            "maxheight": "12'10\"",
+            "name": "West Cortland Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1124002403,
+          "tags": {
+            "cycleway:both": "lane",
+            "cycleway:both:buffer": "no",
+            "highway": "tertiary",
+            "lane_markings": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Cortland Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 313355887,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "cycleway:both:lane": "pictogram",
+            "highway": "tertiary",
+            "maxspeed": "20 mph",
+            "name": "West Cortland Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 58866281,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "tertiary",
+            "lane_markings": "no",
+            "maxspeed": "20 mph",
+            "name": "West Cortland Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 626447380,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "tertiary",
+            "maxspeed": "20 mph",
+            "name": "West Cortland Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1425934580,
+          "tags": {
+            "bicycle_road": "yes",
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "cycleway:both": "shared_lane",
+            "cycleway:both:lane": "pictogram",
+            "cycleway:lane": "pictogram",
+            "highway": "residential",
+            "name": "West Cortland Street",
+            "note": "Added 'bicycle_road' because 'cyclestreet' implies specific legal things that are probably not applicable in the US",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 583217025,
+          "tags": {
+            "highway": "residential",
+            "name": "West Cortland Street",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 406711196,
+          "tags": {
+            "cycleway:both": "no",
+            "highway": "residential",
+            "lane_markings": "no",
+            "name": "West Cortland Street",
+            "sidewalk:both": "yes",
+            "surface": "asphalt"
+          }
+        }
+      ],
+      "directly_attached_relations": [
+        {
+          "id": 13550237,
+          "tags": {
+            "restriction": "no_left_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1510727458,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 5891282467,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 1324848367,
+              "role": "to"
+            }
+          ],
+          "decision": "unreviewed"
+        },
+        {
+          "id": 14677445,
+          "tags": {
+            "restriction": "no_left_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 684469307,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 5891282467,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 1510727459,
+              "role": "to"
+            }
+          ],
+          "decision": "unreviewed"
+        },
+        {
+          "id": 17150935,
+          "tags": {
+            "restriction": "no_left_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1177834152,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 5891282467,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 684469307,
+              "role": "to"
+            }
+          ],
+          "decision": "unreviewed"
+        },
+        {
+          "id": 17845204,
+          "tags": {
+            "restriction": "no_left_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 684469307,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 5891282467,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 1012114419,
+              "role": "to"
+            }
+          ],
+          "decision": "unreviewed"
+        }
+      ]
+    },
+    {
+      "name": "LELAND",
+      "city_source_records": 7,
+      "city_geometry_intervals": 36,
+      "source_directions": [
+        {
+          "source_id": "row-f5bc~m435-unsv",
+          "from": "N BROADWAY",
+          "to": "N SHERIDAN RD",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-6i7n.rrn3_ujsh",
+          "from": "N CLARK ST",
+          "to": "N BROADWAY",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-hd4f_m3i9_6vzd",
+          "from": "N SHERIDAN RD",
+          "to": "W EASTWOOD AVE",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-2vkf.gkqn-dg3e",
+          "from": "N ROCKWELL AVE",
+          "to": "N WESTERN AVE",
+          "motor_direction": "E",
+          "bike_direction": "2W",
+          "contraflow": "Y"
+        },
+        {
+          "source_id": "row-x92d_wvii_pbwb",
+          "from": "N LINCOLN AVE",
+          "to": "N DAMEN AVE",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-udjj.kvgv-e5nr",
+          "from": "N DAMEN AVE",
+          "to": "N CLARK ST",
+          "motor_direction": "E",
+          "bike_direction": "2W",
+          "contraflow": "Y"
+        },
+        {
+          "source_id": "row-8tys~mr6t-rt86",
+          "from": "N VIRGINIA AVE",
+          "to": "N ROCKWELL AVE",
+          "motor_direction": "E",
+          "bike_direction": "1W",
+          "contraflow": null
+        }
+      ],
+      "candidate_ways": [
+        {
+          "id": 971267099,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Leland Avenue",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1309963190,
+          "tags": {
+            "bicycle": "designated",
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Leland Avenue",
+            "oneway": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1223922464,
+          "tags": {
+            "bicycle": "designated",
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Leland Avenue",
+            "oneway": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 231422924,
+          "tags": {
+            "bicycle": "designated",
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Leland Avenue",
+            "oneway": "no"
+          }
+        },
+        {
+          "id": 1244822806,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "name": "West Leland Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1244822807,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "name": "West Leland Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 23746719,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "name": "West Leland Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 769465870,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "30 mph",
+            "name": "West Leland Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 24165998,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "30 mph",
+            "name": "West Leland Avenue",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1476980666,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "maxspeed": "30 mph",
+            "name": "West Leland Avenue",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1510023069,
+          "tags": {
+            "bicycle": "designated",
+            "cycleway": "shared_lane",
+            "cycleway:both": "shared_lane",
+            "highway": "secondary",
+            "name": "West Leland Avenue",
+            "name:etymology:wikidata": "Q91",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 110160122,
+          "tags": {
+            "cycleway": "separate",
+            "highway": "secondary",
+            "lanes": "2",
+            "lanes:backward": "1",
+            "lanes:forward": "1",
+            "name": "West Leland Avenue",
+            "name:etymology:wikidata": "Q91",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1464448283,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "name": "West Leland Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 625511923,
+          "tags": {
+            "cycleway": "separate",
+            "highway": "secondary",
+            "lanes": "2",
+            "lanes:backward": "1",
+            "lanes:forward": "1",
+            "name": "West Leland Avenue",
+            "name:etymology:wikidata": "Q91",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1154210168,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "name": "West Leland Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1473481027,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "name": "West Leland Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 24089224,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "name": "West Leland Avenue",
+            "oneway": "yes"
+          }
+        }
+      ],
+      "directly_attached_relations": [
+        {
+          "id": 20163014,
+          "tags": {
+            "implicit": "yes",
+            "restriction": "no_left_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1464448283,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 157729865,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 435365686,
+              "role": "to"
+            }
+          ],
+          "decision": "unreviewed"
+        },
+        {
+          "id": 20163015,
+          "tags": {
+            "implicit": "yes",
+            "restriction": "no_straight_on",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1464448283,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 157729865,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 625511923,
+              "role": "to"
+            }
+          ],
+          "decision": "unreviewed"
+        },
+        {
+          "id": 20163016,
+          "tags": {
+            "restriction": "no_left_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 625511923,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 157729865,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 313318971,
+              "role": "to"
+            }
+          ],
+          "decision": "unreviewed"
+        },
+        {
+          "id": 20163017,
+          "tags": {
+            "restriction": "no_u_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 625511923,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 157729865,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 625511923,
+              "role": "to"
+            }
+          ],
+          "decision": "unreviewed"
+        }
+      ]
+    },
+    {
+      "name": "KENMORE",
+      "city_source_records": 4,
+      "city_geometry_intervals": 38,
+      "source_directions": [
+        {
+          "source_id": "row-irx9_unci~pju9",
+          "from": "W ARDMORE AVE",
+          "to": "W ROSEMONT AVE",
+          "motor_direction": "N",
+          "bike_direction": "1W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-avuk.dph4.rfh4",
+          "from": "W ROSEMONT AVE",
+          "to": "W SHERIDAN RD",
+          "motor_direction": "N",
+          "bike_direction": "1W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-7q5t~dx7f.ncap",
+          "from": "W ARGYLE ST",
+          "to": "W ARDMORE AVE",
+          "motor_direction": "N",
+          "bike_direction": "1W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-snpg.qyvu_ymx5",
+          "from": "W LELAND AVE",
+          "to": "W ARGYLE ST",
+          "motor_direction": "N",
+          "bike_direction": "1W",
+          "contraflow": null
+        }
+      ],
+      "candidate_ways": [
+        {
+          "id": 23744185,
+          "tags": {
+            "cycleway:left": "no",
+            "cycleway:right": "lane",
+            "highway": "residential",
+            "lane_markings": "yes",
+            "lanes": "1",
+            "name": "North Kenmore Avenue",
+            "oneway": "yes",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 23744158,
+          "tags": {
+            "cycleway:both": "no",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "name": "North Kenmore Avenue",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 862850084,
+          "tags": {
+            "cycleway:right": "lane",
+            "cycleway:right:buffer": "no",
+            "highway": "residential",
+            "name": "North Kenmore Avenue",
+            "oneway": "yes"
+          }
+        },
+        {
+          "id": 858015029,
+          "tags": {
+            "cycleway:right": "lane",
+            "cycleway:right:buffer": "no",
+            "highway": "residential",
+            "name": "North Kenmore Avenue",
+            "oneway": "yes",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 30679342,
+          "tags": {
+            "cycleway:right": "lane",
+            "cycleway:right:buffer": "no",
+            "highway": "residential",
+            "name": "North Kenmore Avenue",
+            "oneway": "yes",
+            "sidewalk:both": "separate"
+          }
+        },
+        {
+          "id": 293388764,
+          "tags": {
+            "bicycle": "yes",
+            "highway": "pedestrian",
+            "lit": "yes",
+            "name": "North Kenmore Avenue",
+            "surface": "paved",
+            "wheelchair": "yes"
+          }
+        },
+        {
+          "id": 814762286,
+          "tags": {
+            "bicycle": "yes",
+            "highway": "pedestrian",
+            "lit": "yes",
+            "name": "North Kenmore Avenue",
+            "surface": "paved",
+            "wheelchair": "yes"
+          }
+        },
+        {
+          "id": 814762284,
+          "tags": {
+            "bicycle": "yes",
+            "highway": "pedestrian",
+            "lit": "yes",
+            "name": "North Kenmore Avenue",
+            "surface": "paved",
+            "wheelchair": "yes"
+          }
+        },
+        {
+          "id": 814762285,
+          "tags": {
+            "bicycle": "yes",
+            "highway": "pedestrian",
+            "lit": "yes",
+            "name": "North Kenmore Avenue",
+            "surface": "paving_stones",
+            "wheelchair": "yes"
+          }
+        }
+      ],
+      "directly_attached_relations": [
+        {
+          "id": 11745377,
+          "tags": {
+            "restriction:conditional": "no_left_turn @ (Mo-Fr 07:00-09:00,16:00-18:00)",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 729068451,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 257148737,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 858015029,
+              "role": "to"
+            }
+          ],
+          "decision": "unreviewed"
+        }
+      ]
+    },
+    {
+      "name": "WOOD",
+      "city_source_records": 8,
+      "city_geometry_intervals": 115,
+      "source_directions": [
+        {
+          "source_id": "row-i3hn.dsfa~bjd8",
+          "from": "W ELLEN ST",
+          "to": "N MILWAUKEE AVE",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-nch5.cymp~b5rq",
+          "from": "W HUBBARD ST",
+          "to": "W AUGUSTA BLVD",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-m7uh-fry9_sx64",
+          "from": "N MILWAUKEE AVE",
+          "to": "W CORTLAND ST",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-e74a~4ct9_isie",
+          "from": "W CERMAK RD",
+          "to": "W 21ST PL",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-bgej-zy5s-pxfp",
+          "from": "W AUGUSTA BLVD",
+          "to": "W CORTEZ ST",
+          "motor_direction": "S",
+          "bike_direction": "2W",
+          "contraflow": "Y"
+        },
+        {
+          "source_id": "row-p2b7.22c8.xgcb",
+          "from": "W CORTEZ ST",
+          "to": "W DIVISION ST",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        },
+        {
+          "source_id": "row-nnk9_kixb_kru8",
+          "from": "W DIVISION ST",
+          "to": "W CRYSTAL ST",
+          "motor_direction": "S",
+          "bike_direction": "2W",
+          "contraflow": "Y"
+        },
+        {
+          "source_id": "row-xmfi~f6n6_gf5x",
+          "from": "W CRYSTAL ST",
+          "to": "W ELLEN ST",
+          "motor_direction": "-",
+          "bike_direction": "2W",
+          "contraflow": null
+        }
+      ],
+      "candidate_ways": [
+        {
+          "id": 855644913,
+          "tags": {
+            "bicycle": "designated",
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "lit": "yes",
+            "name": "South Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 178087063,
+          "tags": {
+            "highway": "tertiary",
+            "name": "South Wood Street",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "S",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60608",
+            "tiger:zip_right": "60608"
+          }
+        },
+        {
+          "id": 178082905,
+          "tags": {
+            "highway": "residential",
+            "name": "South Wood Street",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "S",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60608",
+            "tiger:zip_right": "60608"
+          }
+        },
+        {
+          "id": 452277286,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "name": "North Wood Street",
+            "sidewalk": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60622"
+          }
+        },
+        {
+          "id": 56464364,
+          "tags": {
+            "highway": "unclassified",
+            "name": "North Wood Street",
+            "sidewalk": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60622"
+          }
+        },
+        {
+          "id": 318336202,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "cycleway:both:lane": "pictogram",
+            "highway": "residential",
+            "lane_markings": "no",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60622"
+          }
+        },
+        {
+          "id": 285297146,
+          "tags": {
+            "cycleway:both": "no",
+            "highway": "residential",
+            "lane_markings": "no",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60622"
+          }
+        },
+        {
+          "id": 683189257,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1290364169,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "cycleway:both:lane": "pictogram",
+            "highway": "residential",
+            "lane_markings": "no",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1444797397,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "cycleway:left": "lane",
+            "cycleway:left:buffer": "yes",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lanes": "1",
+            "lit": "yes",
+            "name": "North Wood Street",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 285297142,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lanes": "1",
+            "lit": "yes",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 1444797396,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:buffer": "yes",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lanes": "1",
+            "lit": "yes",
+            "name": "North Wood Street",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 31125392,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lanes": "1",
+            "lit": "yes",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          }
+        },
+        {
+          "id": 406711285,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 497916179,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 406711286,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 626447377,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 995764546,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "maxheight": "11'10\"",
+            "maxspeed": "20 mph",
+            "name": "North Wood Street",
+            "oneway": "yes",
+            "sidewalk:left": "no",
+            "sidewalk:right": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 995764545,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "maxheight": "11'10\"",
+            "maxspeed": "20 mph",
+            "name": "North Wood Street",
+            "oneway": "yes",
+            "sidewalk:left": "no",
+            "sidewalk:right": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 995764542,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60614"
+          }
+        },
+        {
+          "id": 1220452908,
+          "tags": {
+            "highway": "residential",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Wood",
+            "tiger:name_direction_prefix": "N",
+            "tiger:name_type": "St",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60622",
+            "tiger:zip_right": "60614"
+          }
+        }
+      ],
+      "directly_attached_relations": []
+    }
+  ],
+  "cases": [
+    {
+      "id": "berteau-greenview-circle",
+      "label": "Berteau / Greenview: name filtering removes an intersection connector",
+      "coordinates": [
+        -87.667644,
+        41.957986
+      ],
+      "ways": [
+        {
+          "id": 1088397389,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "opposite_lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            26808042,
+            11352300304,
+            1722190522,
+            10117194935,
+            9971880129
+          ],
+          "geometry": [
+            [
+              -87.664497,
+              41.9580264
+            ],
+            [
+              -87.6646175,
+              41.9580241
+            ],
+            [
+              -87.6668711,
+              41.9579954
+            ],
+            [
+              -87.6675372,
+              41.9579867
+            ],
+            [
+              -87.6675877,
+              41.957986
+            ]
+          ],
+          "length_m": 256.2747758831816,
+          "source_url": "https://www.openstreetmap.org/way/1088397389"
+        },
+        {
+          "id": 1088397391,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "junction": "circular",
+            "lit": "yes",
+            "sidewalk:right": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            9971880130,
+            9971880128,
+            9971880127,
+            10274135189,
+            10274135190,
+            9971880126,
+            9971880125,
+            9971880124,
+            9971880123,
+            10274135185,
+            10274135186,
+            9971880129,
+            9971880122,
+            9971880121,
+            10274135187,
+            11352300312,
+            9971880120,
+            9971880119,
+            9971880118,
+            10274135188,
+            11352300313,
+            9971880117,
+            9971880130
+          ],
+          "geometry": [
+            [
+              -87.6676991,
+              41.9579736
+            ],
+            [
+              -87.6676944,
+              41.9579623
+            ],
+            [
+              -87.6676856,
+              41.9579523
+            ],
+            [
+              -87.6676734,
+              41.9579446
+            ],
+            [
+              -87.6676588,
+              41.9579398
+            ],
+            [
+              -87.6676429,
+              41.9579382
+            ],
+            [
+              -87.6676272,
+              41.95794
+            ],
+            [
+              -87.6676127,
+              41.957945
+            ],
+            [
+              -87.6676008,
+              41.9579528
+            ],
+            [
+              -87.6675922,
+              41.9579628
+            ],
+            [
+              -87.6675877,
+              41.9579742
+            ],
+            [
+              -87.6675877,
+              41.957986
+            ],
+            [
+              -87.6675923,
+              41.9579976
+            ],
+            [
+              -87.6676011,
+              41.9580077
+            ],
+            [
+              -87.6676134,
+              41.9580155
+            ],
+            [
+              -87.6676282,
+              41.9580205
+            ],
+            [
+              -87.6676443,
+              41.958022
+            ],
+            [
+              -87.6676601,
+              41.9580202
+            ],
+            [
+              -87.6676746,
+              41.9580151
+            ],
+            [
+              -87.6676866,
+              41.9580071
+            ],
+            [
+              -87.6676951,
+              41.957997
+            ],
+            [
+              -87.6676994,
+              41.9579855
+            ],
+            [
+              -87.6676991,
+              41.9579736
+            ]
+          ],
+          "length_m": 29.19784102128664,
+          "source_url": "https://www.openstreetmap.org/way/1088397391"
+        },
+        {
+          "id": 24099241,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "opposite_lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            9971880117,
+            10117194938,
+            1722190543,
+            9756328255,
+            2447758374
+          ],
+          "geometry": [
+            [
+              -87.6676994,
+              41.9579855
+            ],
+            [
+              -87.6677474,
+              41.9579845
+            ],
+            [
+              -87.6683829,
+              41.957972
+            ],
+            [
+              -87.668992,
+              41.9579601
+            ],
+            [
+              -87.6690714,
+              41.9579585
+            ]
+          ],
+          "length_m": 113.78554674893448,
+          "source_url": "https://www.openstreetmap.org/way/24099241"
+        }
+      ],
+      "observations": [
+        "The unnamed residential circular-junction way is absent from the city candidate list.",
+        "It shares node 9971880129 with the east Berteau approach and 9971880117 with the west Berteau approach.",
+        "Its geometry is a connector requiring logical-junction treatment; its absence from name-matched candidates is not evidence of a motor blockage.",
+        "The approaches are motor-oneway=yes with oneway:bicycle=no. Bicycle contraflow must not create reverse motor travel."
+      ],
+      "needs_review": "Confirm current junction circulation and direction from dated imagery or site evidence before accepting a through movement."
+    },
+    {
+      "id": "leland-western-no-straight",
+      "label": "Leland / Western: a connected road can prohibit the specific movement",
+      "coordinates": [
+        -87.688847,
+        41.9667811
+      ],
+      "ways": [
+        {
+          "id": 1464448283,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "name": "West Leland Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            1992493849,
+            3414265111,
+            157729865
+          ],
+          "geometry": [
+            [
+              -87.6890653,
+              41.9667828
+            ],
+            [
+              -87.6890201,
+              41.9667824
+            ],
+            [
+              -87.688847,
+              41.9667811
+            ]
+          ],
+          "length_m": 18.09671457034013,
+          "source_url": "https://www.openstreetmap.org/way/1464448283"
+        },
+        {
+          "id": 625511923,
+          "tags": {
+            "cycleway": "separate",
+            "highway": "secondary",
+            "lanes": "2",
+            "lanes:backward": "1",
+            "lanes:forward": "1",
+            "name": "West Leland Avenue",
+            "name:etymology:wikidata": "Q91",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            260227531,
+            3414270129,
+            157729865
+          ],
+          "geometry": [
+            [
+              -87.688223,
+              41.966717
+            ],
+            [
+              -87.6886326,
+              41.9667717
+            ],
+            [
+              -87.688847,
+              41.9667811
+            ]
+          ],
+          "length_m": 52.29573094187781,
+          "source_url": "https://www.openstreetmap.org/way/625511923"
+        }
+      ],
+      "relations": [
+        {
+          "id": 20163015,
+          "tags": {
+            "implicit": "yes",
+            "restriction": "no_straight_on",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1464448283,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 157729865,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 625511923,
+              "role": "to"
+            }
+          ],
+          "source_url": "https://www.openstreetmap.org/relation/20163015"
+        }
+      ],
+      "observations": [
+        "The approach and departure share node 157729865; geometry alone would connect them.",
+        "Relation 20163015 explicitly encodes no_straight_on from way 1464448283 to way 625511923.",
+        "The restriction is marked implicit=yes; the meaning and current physical treatment need independent verification."
+      ],
+      "needs_review": "Verify the current eastbound prohibition and bicycle exemption, if any, with the relevant signs/design and dated evidence."
+    },
+    {
+      "id": "dickens-burling-destination",
+      "label": "Dickens / Burling: local access and bicycle path differ from through access",
+      "coordinates": [
+        -87.6474063,
+        41.9200158
+      ],
+      "ways": [
+        {
+          "id": 223538783,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:right": "lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "name": "West Dickens Avenue",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          },
+          "node_ids": [
+            4432003312,
+            2324274682,
+            1842179859,
+            3231906636,
+            9932688102,
+            265641326
+          ],
+          "geometry": [
+            [
+              -87.6474063,
+              41.9200158
+            ],
+            [
+              -87.647481,
+              41.9200208
+            ],
+            [
+              -87.6479698,
+              41.9200107
+            ],
+            [
+              -87.6483143,
+              41.9200037
+            ],
+            [
+              -87.6484704,
+              41.9200005
+            ],
+            [
+              -87.6485845,
+              41.9199981
+            ]
+          ],
+          "length_m": 97.79647918145749,
+          "source_url": "https://www.openstreetmap.org/way/223538783"
+        },
+        {
+          "id": 1237331792,
+          "tags": {
+            "access": "yes",
+            "cycleway:right": "lane",
+            "highway": "residential",
+            "maxspeed": "20 mph",
+            "motor_vehicle": "destination",
+            "name": "West Dickens Avenue",
+            "oneway:bicycle": "no",
+            "tiger:cfcc": "A41",
+            "tiger:county": "Cook, IL",
+            "tiger:name_base": "Dickens",
+            "tiger:name_direction_prefix": "W",
+            "tiger:name_type": "Ave",
+            "tiger:reviewed": "no",
+            "tiger:zip_left": "60614",
+            "tiger:zip_right": "60614"
+          },
+          "node_ids": [
+            261214354,
+            4432003312
+          ],
+          "geometry": [
+            [
+              -87.6473797,
+              41.92
+            ],
+            [
+              -87.6474063,
+              41.9200158
+            ]
+          ],
+          "length_m": 2.819365632369555,
+          "source_url": "https://www.openstreetmap.org/way/1237331792"
+        },
+        {
+          "id": 1237331793,
+          "tags": {
+            "foot": "yes",
+            "highway": "cycleway",
+            "smoothness": "excellent",
+            "surface": "paved"
+          },
+          "node_ids": [
+            4432003312,
+            1924187074
+          ],
+          "geometry": [
+            [
+              -87.6474063,
+              41.9200158
+            ],
+            [
+              -87.6472982,
+              41.9201062
+            ]
+          ],
+          "length_m": 13.462282508331514,
+          "source_url": "https://www.openstreetmap.org/way/1237331793"
+        },
+        {
+          "id": 182082444,
+          "tags": {
+            "bicycle": "designated",
+            "foot": "designated",
+            "highway": "cycleway",
+            "oneway": "no",
+            "segregated": "no",
+            "smoothness": "excellent",
+            "surface": "concrete"
+          },
+          "node_ids": [
+            1924187110,
+            9301028999,
+            2324269865,
+            1924187100,
+            1924187066,
+            2324269850,
+            1924187106,
+            1924187043,
+            1924187092,
+            1924187108,
+            1924187072,
+            1924187123,
+            1924186985,
+            1924187085,
+            1924187058,
+            1924187012,
+            1924187029,
+            1924187074
+          ],
+          "geometry": [
+            [
+              -87.6448907,
+              41.9201315
+            ],
+            [
+              -87.6449242,
+              41.9201287
+            ],
+            [
+              -87.6449625,
+              41.9201332
+            ],
+            [
+              -87.645061,
+              41.9201302
+            ],
+            [
+              -87.6451659,
+              41.9201076
+            ],
+            [
+              -87.6452204,
+              41.920088
+            ],
+            [
+              -87.6452724,
+              41.9200778
+            ],
+            [
+              -87.6457284,
+              41.9200718
+            ],
+            [
+              -87.6458652,
+              41.9200519
+            ],
+            [
+              -87.6460636,
+              41.9200299
+            ],
+            [
+              -87.6461978,
+              41.9200199
+            ],
+            [
+              -87.646348,
+              41.9200259
+            ],
+            [
+              -87.6466001,
+              41.9200658
+            ],
+            [
+              -87.6467691,
+              41.9200858
+            ],
+            [
+              -87.6469058,
+              41.9200838
+            ],
+            [
+              -87.6470346,
+              41.9200718
+            ],
+            [
+              -87.6471392,
+              41.9200778
+            ],
+            [
+              -87.6472982,
+              41.9201062
+            ]
+          ],
+          "length_m": 202.36826655392602,
+          "source_url": "https://www.openstreetmap.org/way/182082444"
+        }
+      ],
+      "observations": [
+        "The 2.8 m connector is tagged access=yes and motor_vehicle=destination: motor-specific access overrides the generic tag.",
+        "An unnamed cycleway connects the west Dickens endpoint to the longer park cycleway.",
+        "The city greenway inventory has separate Dickens records on each side of the park; it does not supply this bicycle connector as a continuous greenway centerline.",
+        "A motor_vehicle=destination way is not evidence that unrestricted through driving is permitted, and is not itself proof of a physical barrier."
+      ],
+      "needs_review": "Confirm where ordinary through vehicles must leave the corridor; preserve local access separately from through access."
+    },
+    {
+      "id": "manor-montrose-connectors",
+      "label": "Manor / Montrose: short curved connectors and approach-specific restrictions",
+      "coordinates": [
+        -87.6972397,
+        41.9613469
+      ],
+      "ways": [
+        {
+          "id": 24076564,
+          "tags": {
+            "bicycle": "designated",
+            "bicycle_road": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            9779535787,
+            12237235116,
+            9779535858,
+            1762547141,
+            9779535852,
+            11483622190,
+            261146281,
+            11483970542,
+            1316176961,
+            261146282,
+            1762547250,
+            9779535825,
+            261146283,
+            9779535812,
+            1762547279,
+            261146284
+          ],
+          "geometry": [
+            [
+              -87.6972397,
+              41.9613469
+            ],
+            [
+              -87.6972411,
+              41.9613839
+            ],
+            [
+              -87.6972478,
+              41.9615545
+            ],
+            [
+              -87.6972543,
+              41.9617168
+            ],
+            [
+              -87.6972666,
+              41.962098
+            ],
+            [
+              -87.6972681,
+              41.9621461
+            ],
+            [
+              -87.6972691,
+              41.9621785
+            ],
+            [
+              -87.6972715,
+              41.962256
+            ],
+            [
+              -87.6972765,
+              41.9624151
+            ],
+            [
+              -87.6973399,
+              41.9625352
+            ],
+            [
+              -87.6974441,
+              41.9626308
+            ],
+            [
+              -87.6978352,
+              41.9630098
+            ],
+            [
+              -87.6979159,
+              41.9630947
+            ],
+            [
+              -87.6979997,
+              41.9631679
+            ],
+            [
+              -87.6983501,
+              41.9635022
+            ],
+            [
+              -87.6984374,
+              41.96359
+            ]
+          ],
+          "length_m": 281.3919964803743,
+          "source_url": "https://www.openstreetmap.org/way/24076564"
+        },
+        {
+          "id": 1373721893,
+          "tags": {
+            "bicycle_road": "yes",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "oneway": "yes",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            12237167294,
+            12718721906,
+            9779535787
+          ],
+          "geometry": [
+            [
+              -87.6973071,
+              41.9612879
+            ],
+            [
+              -87.6972658,
+              41.9613187
+            ],
+            [
+              -87.6972397,
+              41.9613469
+            ]
+          ],
+          "length_m": 8.646952202004512,
+          "source_url": "https://www.openstreetmap.org/way/1373721893"
+        },
+        {
+          "id": 1373721895,
+          "tags": {
+            "bicycle": "designated",
+            "bicycle_road": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            12237167295,
+            9779535787
+          ],
+          "geometry": [
+            [
+              -87.6972387,
+              41.9612883
+            ],
+            [
+              -87.6972397,
+              41.9613469
+            ]
+          ],
+          "length_m": 6.509378323563515,
+          "source_url": "https://www.openstreetmap.org/way/1373721895"
+        },
+        {
+          "id": 1322446355,
+          "tags": {
+            "bicycle_road": "yes",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "oneway": "yes",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            12237167299,
+            12718721908,
+            12718721907,
+            12237167294
+          ],
+          "geometry": [
+            [
+              -87.6974707,
+              41.9612554
+            ],
+            [
+              -87.6974032,
+              41.9612581
+            ],
+            [
+              -87.6973525,
+              41.961269
+            ],
+            [
+              -87.6973071,
+              41.9612879
+            ]
+          ],
+          "length_m": 14.287394067058178,
+          "source_url": "https://www.openstreetmap.org/way/1322446355"
+        },
+        {
+          "id": 1373721894,
+          "tags": {
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "secondary",
+            "loc_ref": "4400 N",
+            "name": "West Montrose Avenue",
+            "oneway": "yes",
+            "wikidata": "Q116147668",
+            "wikipedia": "en:Montrose Avenue"
+          },
+          "node_ids": [
+            12237167295,
+            12237167294
+          ],
+          "geometry": [
+            [
+              -87.6972387,
+              41.9612883
+            ],
+            [
+              -87.6973071,
+              41.9612879
+            ]
+          ],
+          "length_m": 5.670599621304222,
+          "source_url": "https://www.openstreetmap.org/way/1373721894"
+        },
+        {
+          "id": 1373721896,
+          "tags": {
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "secondary",
+            "loc_ref": "4400 N",
+            "name": "West Montrose Avenue",
+            "oneway": "yes",
+            "wikidata": "Q116147668",
+            "wikipedia": "en:Montrose Avenue"
+          },
+          "node_ids": [
+            12237167294,
+            12237235102,
+            12237167299
+          ],
+          "geometry": [
+            [
+              -87.6973071,
+              41.9612879
+            ],
+            [
+              -87.6973726,
+              41.9612864
+            ],
+            [
+              -87.6974707,
+              41.9612554
+            ]
+          ],
+          "length_m": 14.26404148712576,
+          "source_url": "https://www.openstreetmap.org/way/1373721896"
+        }
+      ],
+      "relations": [
+        {
+          "id": 18923101,
+          "tags": {
+            "restriction": "no_right_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1373721894,
+              "role": "from"
+            },
+            {
+              "type": "way",
+              "ref": 1373721893,
+              "role": "to"
+            },
+            {
+              "type": "node",
+              "ref": 12237167294,
+              "role": "via"
+            }
+          ],
+          "source_url": "https://www.openstreetmap.org/relation/18923101"
+        },
+        {
+          "id": 18923102,
+          "tags": {
+            "restriction": "no_u_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1322446355,
+              "role": "from"
+            },
+            {
+              "type": "way",
+              "ref": 1373721896,
+              "role": "to"
+            },
+            {
+              "type": "node",
+              "ref": 12237167294,
+              "role": "via"
+            }
+          ],
+          "source_url": "https://www.openstreetmap.org/relation/18923102"
+        },
+        {
+          "id": 18923103,
+          "tags": {
+            "restriction": "no_right_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1373721895,
+              "role": "to"
+            },
+            {
+              "type": "node",
+              "ref": 9779535787,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 1373721893,
+              "role": "from"
+            }
+          ],
+          "source_url": "https://www.openstreetmap.org/relation/18923103"
+        },
+        {
+          "id": 18923104,
+          "tags": {
+            "restriction": "no_u_turn",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1373721896,
+              "role": "from"
+            },
+            {
+              "type": "way",
+              "ref": 1322446355,
+              "role": "to"
+            },
+            {
+              "type": "node",
+              "ref": 12237167299,
+              "role": "via"
+            }
+          ],
+          "source_url": "https://www.openstreetmap.org/relation/18923104"
+        }
+      ],
+      "observations": [
+        "Two Manor approaches meet the same crosswalk node but carry different motor directions and connector geometry.",
+        "Traffic-calming table at node 9779535787 does not itself block motor continuation.",
+        "Four restriction relations distinguish approaches and turns; a point-only blocked/open flag cannot express them."
+      ],
+      "needs_review": "Model the entire intersection as approach-to-departure movements, then verify the allowed corridor continuation."
+    },
+    {
+      "id": "manor-wilson-source-gap",
+      "label": "Manor / Wilson: no blockage is encoded in the snapshot",
+      "coordinates": [
+        -87.6996166,
+        41.9647692
+      ],
+      "ways": [
+        {
+          "id": 34074519,
+          "tags": {
+            "bicycle": "designated",
+            "bicycle_road": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            261146284,
+            9779535832,
+            261137080,
+            9779535821,
+            11691421037,
+            1762547198,
+            4427781270
+          ],
+          "geometry": [
+            [
+              -87.6984374,
+              41.96359
+            ],
+            [
+              -87.6987102,
+              41.9638557
+            ],
+            [
+              -87.6987918,
+              41.9639351
+            ],
+            [
+              -87.6988653,
+              41.9640094
+            ],
+            [
+              -87.6991385,
+              41.9642857
+            ],
+            [
+              -87.6991912,
+              41.964339
+            ],
+            [
+              -87.6995322,
+              41.9646856
+            ]
+          ],
+          "length_m": 151.81321167756607,
+          "source_url": "https://www.openstreetmap.org/way/34074519"
+        },
+        {
+          "id": 445330031,
+          "tags": {
+            "bicycle": "designated",
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            4427781270,
+            9779535707,
+            261146285
+          ],
+          "geometry": [
+            [
+              -87.6995322,
+              41.9646856
+            ],
+            [
+              -87.6995422,
+              41.9646955
+            ],
+            [
+              -87.6996166,
+              41.9647692
+            ]
+          ],
+          "length_m": 11.626442796612874,
+          "source_url": "https://www.openstreetmap.org/way/445330031"
+        },
+        {
+          "id": 445330032,
+          "tags": {
+            "bicycle": "designated",
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            261146285,
+            4427781274
+          ],
+          "geometry": [
+            [
+              -87.6996166,
+              41.9647692
+            ],
+            [
+              -87.6997036,
+              41.9648556
+            ]
+          ],
+          "length_m": 12.004535298755979,
+          "source_url": "https://www.openstreetmap.org/way/445330032"
+        },
+        {
+          "id": 34319052,
+          "tags": {
+            "bicycle": "designated",
+            "bicycle_road": "yes",
+            "cycleway": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "North Manor Avenue",
+            "sidewalk:both": "separate",
+            "source:maxspeed": "sign",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            4427781274,
+            1762547265,
+            11691421042,
+            261127860,
+            11691421043,
+            12879488414,
+            11691421039,
+            1280962910,
+            260229867,
+            11691421046,
+            261146287,
+            11691421047,
+            2143301960,
+            11691421048,
+            261146288,
+            11691421050,
+            264166621
+          ],
+          "geometry": [
+            [
+              -87.6997036,
+              41.9648556
+            ],
+            [
+              -87.7000631,
+              41.9652152
+            ],
+            [
+              -87.7004226,
+              41.9655748
+            ],
+            [
+              -87.7005033,
+              41.9656556
+            ],
+            [
+              -87.7005778,
+              41.9657301
+            ],
+            [
+              -87.7008728,
+              41.9660244
+            ],
+            [
+              -87.7009807,
+              41.9661321
+            ],
+            [
+              -87.7010432,
+              41.966197
+            ],
+            [
+              -87.7010807,
+              41.9662332
+            ],
+            [
+              -87.7014608,
+              41.9666134
+            ],
+            [
+              -87.7015412,
+              41.9666938
+            ],
+            [
+              -87.7016174,
+              41.96677
+            ],
+            [
+              -87.7019927,
+              41.9671454
+            ],
+            [
+              -87.7023634,
+              41.9675162
+            ],
+            [
+              -87.7024361,
+              41.967589
+            ],
+            [
+              -87.7025207,
+              41.9676736
+            ],
+            [
+              -87.7028524,
+              41.9680054
+            ]
+          ],
+          "length_m": 436.4993757245915,
+          "source_url": "https://www.openstreetmap.org/way/34319052"
+        }
+      ],
+      "nodes": [
+        {
+          "id": 4427781270,
+          "longitude": -87.6995322,
+          "latitude": 41.9646856,
+          "tags": {}
+        },
+        {
+          "id": 261146285,
+          "longitude": -87.6996166,
+          "latitude": 41.9647692,
+          "tags": {}
+        },
+        {
+          "id": 4427781274,
+          "longitude": -87.6997036,
+          "latitude": 41.9648556,
+          "tags": {
+            "crossing": "uncontrolled",
+            "highway": "crossing"
+          }
+        }
+      ],
+      "observations": [
+        "The two short Manor ways across Wilson have ordinary residential tags, no motor-access tag, no one-way tag and a shared junction node.",
+        "The candidate relation list contains no relation attached to these four ways.",
+        "This is a direct test location for checking whether a documented closure is missing from OSM; these tags alone cannot confirm an open through movement."
+      ],
+      "needs_review": "Reconcile current Manor/Wilson closure or open-street status with project records, signage and dated ground evidence."
+    },
+    {
+      "id": "wood-motor-direction-changes",
+      "label": "Wood: a bicycle-bidirectional greenway with southbound-only motor blocks",
+      "coordinates": [
+        -87.672323,
+        41.9009647
+      ],
+      "ways": [
+        {
+          "id": 1290364169,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "cycleway:both:lane": "pictogram",
+            "highway": "residential",
+            "lane_markings": "no",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            261114939,
+            11270582191,
+            365020228,
+            365020223,
+            261114940,
+            261114941,
+            9884450339,
+            261114942,
+            11275815113,
+            9884450347,
+            261114944,
+            9884450335,
+            365020174,
+            9884450360,
+            11967935425,
+            261114945
+          ],
+          "geometry": [
+            [
+              -87.672179,
+              41.8959912
+            ],
+            [
+              -87.6721822,
+              41.8961026
+            ],
+            [
+              -87.6721924,
+              41.8964565
+            ],
+            [
+              -87.6721929,
+              41.8964719
+            ],
+            [
+              -87.6722052,
+              41.8968998
+            ],
+            [
+              -87.6722154,
+              41.8972545
+            ],
+            [
+              -87.6722293,
+              41.8977357
+            ],
+            [
+              -87.6722315,
+              41.8978118
+            ],
+            [
+              -87.6722337,
+              41.8978882
+            ],
+            [
+              -87.6722494,
+              41.8984325
+            ],
+            [
+              -87.672251,
+              41.8984882
+            ],
+            [
+              -87.6722538,
+              41.8985862
+            ],
+            [
+              -87.6722727,
+              41.8992429
+            ],
+            [
+              -87.6722818,
+              41.8995581
+            ],
+            [
+              -87.6722824,
+              41.8995786
+            ],
+            [
+              -87.6722838,
+              41.8996273
+            ]
+          ],
+          "length_m": 403.959983115195,
+          "source_url": "https://www.openstreetmap.org/way/1290364169"
+        },
+        {
+          "id": 1444797397,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "cycleway:left": "lane",
+            "cycleway:left:buffer": "yes",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lanes": "1",
+            "lit": "yes",
+            "name": "North Wood Street",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            261109985,
+            13574582141,
+            365020292,
+            9884450366,
+            11967970804,
+            261114945
+          ],
+          "geometry": [
+            [
+              -87.672323,
+              41.9009647
+            ],
+            [
+              -87.6723213,
+              41.9009059
+            ],
+            [
+              -87.6722961,
+              41.9000484
+            ],
+            [
+              -87.6722865,
+              41.8997212
+            ],
+            [
+              -87.6722858,
+              41.8996968
+            ],
+            [
+              -87.6722838,
+              41.8996273
+            ]
+          ],
+          "length_m": 148.58243216636237,
+          "source_url": "https://www.openstreetmap.org/way/1444797397"
+        },
+        {
+          "id": 285297142,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lanes": "1",
+            "lit": "yes",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            261109985,
+            13574582142,
+            11275815117,
+            261114946,
+            11275815115,
+            261114949,
+            9891105199,
+            261114950,
+            365020877,
+            365020407,
+            365020416,
+            9884450493,
+            346048899
+          ],
+          "geometry": [
+            [
+              -87.672323,
+              41.9009647
+            ],
+            [
+              -87.6723247,
+              41.9010226
+            ],
+            [
+              -87.6723352,
+              41.9013797
+            ],
+            [
+              -87.6723369,
+              41.9014379
+            ],
+            [
+              -87.6723395,
+              41.9015353
+            ],
+            [
+              -87.6723592,
+              41.9022015
+            ],
+            [
+              -87.6723613,
+              41.9022728
+            ],
+            [
+              -87.6723638,
+              41.9023565
+            ],
+            [
+              -87.6723736,
+              41.9026907
+            ],
+            [
+              -87.6723757,
+              41.9027641
+            ],
+            [
+              -87.6723794,
+              41.9028879
+            ],
+            [
+              -87.6723872,
+              41.9031448
+            ],
+            [
+              -87.6723905,
+              41.9032678
+            ]
+          ],
+          "length_m": 255.86987056795826,
+          "source_url": "https://www.openstreetmap.org/way/285297142"
+        },
+        {
+          "id": 1444797396,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:buffer": "yes",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lanes": "1",
+            "lit": "yes",
+            "name": "North Wood Street",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            261114952,
+            369880965,
+            9884450485,
+            346048899
+          ],
+          "geometry": [
+            [
+              -87.6724083,
+              41.9040959
+            ],
+            [
+              -87.6723998,
+              41.9036985
+            ],
+            [
+              -87.6723933,
+              41.9033975
+            ],
+            [
+              -87.6723905,
+              41.9032678
+            ]
+          ],
+          "length_m": 91.99009552037373,
+          "source_url": "https://www.openstreetmap.org/way/1444797396"
+        },
+        {
+          "id": 31125392,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:both": "shared_lane",
+            "highway": "residential",
+            "lane_markings": "no",
+            "lanes": "1",
+            "lit": "yes",
+            "name": "North Wood Street",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            261114952,
+            4083090715,
+            261114953,
+            4083090713,
+            9938652034,
+            261114954
+          ],
+          "geometry": [
+            [
+              -87.6724083,
+              41.9040959
+            ],
+            [
+              -87.6724164,
+              41.904469
+            ],
+            [
+              -87.6724243,
+              41.9048397
+            ],
+            [
+              -87.6724325,
+              41.9052198
+            ],
+            [
+              -87.6724367,
+              41.9055066
+            ],
+            [
+              -87.6724399,
+              41.9055623
+            ]
+          ],
+          "length_m": 162.8989040295884,
+          "source_url": "https://www.openstreetmap.org/way/31125392"
+        }
+      ],
+      "observations": [
+        "Ways 1444797397 and 1444797396 are southbound in node order, motor-oneway=yes and oneway:bicycle=no.",
+        "The city source independently lists Wood Augusta–Cortez and Division–Crystal as southbound motor / two-way bicycle / contraflow.",
+        "The intervening and adjacent road pieces lack a one-way tag, so the motor-direction changes are local, not a property of the entire named street.",
+        "An ordered greenway trace must preserve the permitted southbound passage through these blocks while interrupting northbound motor travel."
+      ],
+      "needs_review": "Check the current design and signs at each direction-change boundary; the snapshot describes a candidate direction model, not accepted field truth."
+    },
+    {
+      "id": "kenmore-bollards",
+      "label": "Kenmore: barrier tags live on nodes, not just way attributes",
+      "ways": [
+        {
+          "id": 293388764,
+          "tags": {
+            "bicycle": "yes",
+            "highway": "pedestrian",
+            "lit": "yes",
+            "name": "North Kenmore Avenue",
+            "surface": "paved",
+            "wheelchair": "yes"
+          },
+          "node_ids": [
+            261747505,
+            7614429840,
+            7613384009,
+            7613373740,
+            7613384012,
+            7610489528
+          ],
+          "geometry": [
+            [
+              -87.6570152,
+              41.9964121
+            ],
+            [
+              -87.6570169,
+              41.9964892
+            ],
+            [
+              -87.6570176,
+              41.9965184
+            ],
+            [
+              -87.6570193,
+              41.9965961
+            ],
+            [
+              -87.6570268,
+              41.9969326
+            ],
+            [
+              -87.6570281,
+              41.9969932
+            ]
+          ],
+          "length_m": 64.55350121317323,
+          "source_url": "https://www.openstreetmap.org/way/293388764"
+        },
+        {
+          "id": 814762285,
+          "tags": {
+            "bicycle": "yes",
+            "highway": "pedestrian",
+            "lit": "yes",
+            "name": "North Kenmore Avenue",
+            "surface": "paving_stones",
+            "wheelchair": "yes"
+          },
+          "node_ids": [
+            7610489531,
+            7610489597,
+            7610489575,
+            7614429844,
+            339269476
+          ],
+          "geometry": [
+            [
+              -87.6570657,
+              41.9978833
+            ],
+            [
+              -87.6570663,
+              41.9979115
+            ],
+            [
+              -87.6570696,
+              41.9981027
+            ],
+            [
+              -87.6570715,
+              41.9981473
+            ],
+            [
+              -87.657073,
+              41.9982163
+            ]
+          ],
+          "length_m": 36.99305342399724,
+          "source_url": "https://www.openstreetmap.org/way/814762285"
+        }
+      ],
+      "nodes": [
+        {
+          "id": 7613384009,
+          "longitude": -87.6570176,
+          "latitude": 41.9965184,
+          "tags": {
+            "barrier": "bollard"
+          }
+        },
+        {
+          "id": 7610489575,
+          "longitude": -87.6570696,
+          "latitude": 41.9981027,
+          "tags": {
+            "barrier": "bollard",
+            "bollard": "removable"
+          }
+        }
+      ],
+      "observations": [
+        "The only two barrier-tagged nodes found on all 715 candidate ways are bollards on Kenmore.",
+        "One is bollard=removable; removability alone does not establish public motor access.",
+        "These node tags are present in SQLite but absent from the exported candidate-way objects."
+      ],
+      "needs_review": "Verify ordinary passenger-car access and passage width; do not infer the state from removability alone."
+    }
+  ]
+}

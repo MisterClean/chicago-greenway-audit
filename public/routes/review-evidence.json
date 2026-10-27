@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-27",
+  "purpose": "Pilot movement evidence and field-review queue. These are scoped observations, not whole-route approvals or a replacement for the source snapshot.",
+  "default_profile": "ordinary passenger car on a through trip",
+  "method": "Review official project descriptions and the local OSM snapshot; manual Street View links are navigation aids only. A plan, project-level completion label, or older image does not establish the present movement.",
+  "records": [
+    {
+      "id": "wood-augusta-cortez-direction",
+      "way_ids": [1444797397],
+      "direction_notes": {"forward": "Wood from Augusta to Cortez is southbound-only for motor vehicles in the OSM snapshot. The 1st Ward's CDOT project update specifies this conversion and two-way bicycle access. This is a motor-direction restriction; current physical treatment and installation date are not independently verified."},
+      "location": "Wood Street between Augusta Boulevard and Cortez Street",
+      "movement": "northbound through block / southbound through block",
+      "source_inference": "OSM snapshot indicates northbound blocked by one-way and southbound permitted along this block; bicycle exception does not apply to cars.",
+      "review_status": "source-inferred", "confidence": "moderate for snapshot; current signs unverified", "effective_period": "OSM snapshot 2026-09-11; current ground condition unknown",
+      "sources": [
+        {"url":"https://www.openstreetmap.org/way/1444797397", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"oneway=yes in southbound node order; oneway:bicycle=no", "status":"snapshot"},
+        {"url":"https://www.the1stward.com/woodst", "source_date":"2025-06-05", "date_kind":"construction update", "scope":"announces southbound conversion and contraflow bikes from Augusta to Cortez", "status":"planned; not a completion notice"}
+      ],
+      "review_needed": "Photograph current regulatory signs and both block ends; check temporary changes and approach-to-departure movement."
+    },
+    {
+      "id": "wood-division-crystal-direction",
+      "way_ids": [1444797396],
+      "direction_notes": {"forward": "Wood from Division to Crystal is southbound-only for motor vehicles in the OSM snapshot. The 1st Ward's CDOT project update specifies this conversion and two-way bicycle access. This is a motor-direction restriction; current physical treatment and installation date are not independently verified."},
+      "location": "Wood Street between Division Street and Crystal Street",
+      "movement": "northbound through block / southbound through block",
+      "source_inference": "OSM snapshot indicates northbound blocked by one-way and southbound permitted along this block; bicycle exception does not apply to cars.",
+      "review_status": "source-inferred", "confidence": "moderate for snapshot; current signs unverified", "effective_period": "OSM snapshot 2026-09-11; current ground condition unknown",
+      "sources": [
+        {"url":"https://www.openstreetmap.org/way/1444797396", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"oneway=yes in southbound node order; oneway:bicycle=no", "status":"snapshot"},
+        {"url":"https://www.the1stward.com/woodst", "source_date":"2025-06-05", "date_kind":"construction update", "scope":"announces southbound conversion and contraflow bikes from Division to Crystal", "status":"planned; not a completion notice"}
+      ],
+      "review_needed": "Photograph current regulatory signs and both block ends; check the Division and Crystal approach movements."
+    },
+    {
+      "id": "wood-cortez-division-direction",
+      "location": "Wood Street between Cortez and Division",
+      "movement": "both directions along intervening block",
+      "source_inference": "Ward project design says this intervening segment remains two-way; local snapshot lacks a one-way tag. Absence of a tag is not independently verified permission.",
+      "review_status": "source-inferred", "confidence": "moderate for design, current signs unverified", "effective_period": "2025 project design; current ground condition unknown",
+      "sources": [{"url":"https://www.the1stward.com/woodst", "source_date":"2025-06-05", "date_kind":"project update", "scope":"Cortez to Division remains two-way in design", "status":"project design"}, {"url":"https://www.openstreetmap.org/way/285297142", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"intervening OSM road segment", "status":"snapshot"}],
+      "review_needed": "Check both ends and intermediate junctions for signs and current permitted movements."
+    },
+    {
+      "id": "berteau-greenview-circle",
+      "location": "Berteau Avenue / Greenview Avenue traffic circle",
+      "movement": "eastbound and westbound Berteau continuation around circle",
+      "source_inference": "Circle connects the approaches geometrically; its OSM junction=circular tag has no explicit oneway. Legal circulation and connector arcs remain unknown.",
+      "review_status": "source-inferred", "confidence": "low for circulation", "effective_period": "OSM snapshot 2026-09-11; current regulatory signs unknown",
+      "sources": [
+        {"url":"https://www.openstreetmap.org/way/1088397391", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"unnamed circle geometry and tags", "status":"snapshot"},
+        {"url":"https://occprodstoragev1.blob.core.usgovcloudapi.net/lsmeetingattachmentspublic/52648aa0-b362-4f5d-b300-eb5fdb8fa99a.pdf", "source_date":null, "date_kind":"publication date not verified", "scope":"CDOT committee report identifies traffic circle at Berteau and Greenview", "status":"official report; does not establish permitted arcs"}
+      ],
+      "manual_view": {"url":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=41.957986%2C-87.667644", "viewed_at":"2026-10-27", "capture_date":null, "result":"Circle area loaded, but signs and capture date were not legible. No movement decision derived."},
+      "review_needed": "Document signs and road markings on all relevant approaches, both permitted arcs and departures; resolve whether any direction or turn restriction applies."
+    },
+    {
+      "id": "leland-western-eastbound",
+      "location": "Leland Avenue eastbound approach to Western Avenue",
+      "movement": "eastbound continuation across Western",
+      "source_inference": "OSM relation prohibits the specific eastbound continuation; the ward describes a right-only diverter as a future installation. The current physical configuration is not established by a project-level completed label.",
+      "review_status": "source-inferred", "confidence": "moderate for snapshot restriction; current physical and sign confirmation unknown", "effective_period": "OSM snapshot 2026-09-11; ward construction update 2025-09-04",
+      "sources": [
+        {"url":"https://www.openstreetmap.org/relation/20163015", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"approach-specific no-straight restriction", "status":"snapshot"},
+        {"url":"https://40thward.org/project/leland-greenway-2/", "source_date":"2025-09-04", "date_kind":"dated construction update", "scope":"right-only diverter anticipated after resurfacing; page also labels broader project completed", "status":"specific installation described in future tense; completion date unverified"}
+      ],
+      "manual_view": {"url":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=41.9667828%2C-87.6890653&heading=90&pitch=0&fov=80", "viewed_at":"2026-10-27", "capture_date":"2019-06", "result":"Prior plan workflow observed older west-approach imagery; it predates the project."},
+      "review_needed": "Obtain a current dated view or field photos of eastbound approach, regulatory signs, median, and departure. Determine whether the restriction is physical, legal, or both."
+    },
+    {
+      "id": "dickens-burling-oz-park",
+      "location": "Dickens / Burling / Oz Park",
+      "movement": "through park between road approaches in either direction",
+      "source_inference": "Snapshot has a destination-only motor segment and cycleway connectors. Neither generic access=yes nor bike continuity establishes general through-car access.",
+      "review_status": "source-inferred", "confidence": "moderate for tagged segment; route correspondence and ground access unresolved", "effective_period": "OSM snapshot 2026-09-11",
+      "sources": [{"url":"https://www.openstreetmap.org/way/1237331792", "source_date":"2026-09-11", "date_kind":"local snapshot effective date", "scope":"motor_vehicle=destination on road segment", "status":"snapshot"}],
+      "review_needed": "Map both road ends and park connector; document signs, openings, and any car route along the designated greenway. Destination-only access is not ordinary through access."
+    },
+    {
+      "id": "dickens-lincoln-park-west-stockton",
+      "location": "Dickens at Lincoln Park West / Stockton Drive",
+      "movement": "westbound from Stockton toward Lincoln Park West and eastbound reverse",
+      "source_inference": "A contemporary firsthand news report says the plaza was dismantled and westbound motor travel resumed on 2024-10-11. This supersedes the earlier plaza configuration for that date; it does not prove current access or the reverse movement.",
+      "review_status": "source-inferred", "confidence": "moderate for historical westbound opening; current and reverse movements unknown", "effective_period": "2024-10-11 observation; current status unknown",
+      "sources": [
+        {"url":"https://chi.streetsblog.org/2024/10/07/nimbys-win-ald-knudsen-are-letting-motorheads-have-their-way-by-giving-dickens-bike-ped-plaza-back-to-dangerous-cut-through-traffic", "source_date":"2024-10-11", "date_kind":"dated firsthand news update", "scope":"reports dismantling and westbound reopening", "status":"historical observation; secondary source"},
+        {"url":"https://chi.streetsblog.org/2024/09/17/some-150-bike-rider-1000-petitioners-protest-plans-to-give-dickens-plaza-back-to-motorists", "source_date":"2024-09-18", "date_kind":"dated reported CDOT statement", "scope":"CDOT describes discussion of alternative design", "status":"prior plan; does not independently prove installation"}
+      ],
+      "manual_view": {"url":"https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=41.9200%2C-87.6364&heading=0&pitch=0&fov=80", "viewed_at":"2026-10-27", "capture_date":"2026-08", "result":"Prior plan workflow found August 2026 approach imagery. No movement approved from that observation."},
+      "review_needed": "Obtain current dated field photos of both approaches and signage; verify westbound continuation and independently determine eastbound access. Do not use the old plaza closure as current."
+    }
+  ]
+}

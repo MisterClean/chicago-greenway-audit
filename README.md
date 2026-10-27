@@ -1,76 +1,71 @@
 # Chicago Greenway Audit
 
-Rust straight-through driving solver and TypeScript/MapLibre static map, implementing the attached [technical specification](docs/technical-spec.md).
+A route-based map of how far an ordinary car can follow a Chicago bicycle greenway in each direction. It follows the designated route through turns, shows continuous driving stretches, and explains the restrictions or unknown connections at their ends.
 
-**Current release is a citywide inventory, not a completed driving audit.** Chicago contains 1,452 unique geometry intervals covering 85.23654 designated miles from all 258 official greenway source records. All current scores are deliberately `lb_mm=0, exact=0`. Changing the threshold works, but cannot turn these unresolved records green. Synthetic results are never placed on Chicago streets.
+**The current interface is a source-inferred pilot, not a completed driving or cycling-stress audit.** It covers eight route sections on Wood, Berteau, Leland and Dickens. None of its 482 movement boundaries is field reviewed. The citywide designation inventory remains a muted background layer.
 
 ## Run
 
-Requires Node 24+, Rust/Cargo, and Tippecanoe 2.79+ for data builds. Osmium 1.19+ is needed only for raw network staging.
+Node 24+ is sufficient to run and build the map from committed assets:
 
 ```sh
 npm ci
-npm run fixtures
-npm run verify
+npm test
+npm run verify:routes
+npm run build
 npm run dev
 ```
 
-The map fetches CARTO's Positron vector basemap. Its own inventory, PMTiles, binary summary and details are static assets. No routing or graph data reaches the browser. Use `npm run build` for `dist/`; serve it on a static host with HTTPS. The build also emits 64 KiB tile chunks so the deployed map works on hosts that ignore HTTP Range requests; at most four verified chunks are retained in the transport cache. MapLibre's worker is bundled explicitly for production.
+Select a route and direction, then select a colored path. The panel shows its full mapped length and endpoint reasons. Click a point or use the keyboard-accessible position slider to measure the distance remaining in that direction. Share links preserve the route, direction, selected stretch or interruption, measurement and map position. Unknown links and conflicting sources remain visible. Interruption details include source links and a manual Street View launch link.
 
-## What works
+The static app uses MapLibre and CARTO's Positron basemap. Pilot data is in `public/routes/`; the city background uses existing PMTiles and static tile chunks for hosts without HTTP Range support. No routing server or API key is required. `npm run build` writes `dist/`.
 
-- Linear-time Rust array solver, checked arithmetic and indices, deterministic witnesses, directional maximum, uncertainty propagation from all predecessors, cycle/approach quarantine, exact equality classifier.
-- Streaming NDJSON CLI inputs, small binary summary distributions, unique-segment aggregation, checked browser integer range and checked u32 score exports.
-- WGS84 geodesic designated lengths, citywide coverage and optional Ward 35 clipping, overlap/reversal deduplication, immutable build directories and SHA-256 asset checks.
-- PMTiles rendering, threshold slider and numeric input, animation-frame batching, keyboard controls, passing filter, on-demand details and optional full-run geometry, bounded caches, mobile layout and canonical share URLs.
-- Disk-backed SQLite OSM staging and an R-tree for candidate review. All original objects and restriction relations are retained. The graph solver does **not** infer legal motor movements from candidate proximity.
+## Model and evidence
 
-## Reproduce data
+The car profile is a general through trip, without resident, delivery or emergency exceptions. Stops, signals and humps do not break continuity. A prohibited movement, one-way restriction, physical filter, or through-access restriction does. Cars cannot detour off the selected route and rejoin within the same run.
 
-The official designation snapshot is December 2025; CNT's comparison map says August 2026. Newer completed-project reconciliation remains open. Retrieval dates are UTC; the source acquisition took place on September 18 local Chicago time / September 19 UTC.
+- Ordered route edges and approach-to-departure movements replace the old geometry-interval score as the primary map model.
+- Forward and reverse access are evaluated separately. Motor-specific rules override generic access; bicycle exceptions never authorize cars.
+- Explicit route joins, unmatched geometry, conditional rules, unsupported restrictions and conflicting sources remain unknown until resolved.
+- Runs include only allowed edges connected by allowed movements. Distances follow WGS84 geometry and are clipped to route scope. An unknown boundary is not a verified maximum; a designation endpoint is not a physical road closure.
+- Each decision retains its reason and source links. Selected official records and manual-viewing notes form a review queue, not field approvals.
+
+Vehicle continuity measures potential through access. Traffic volume, speed and crossing conditions are also needed to assess cycling stress.
+
+Read the [tested implementation plan](docs/vehicle-continuity-plan.md) and [pilot validation and remaining review](docs/route-pilot-validation.md). The latter documents source limitations, 32 independently sampled directional junction decisions, and targeted regression cases.
+
+## Reproduce the pilot
+
+The committed export is usable without the large source files. Rebuilding requires the saved December 2025 city designation snapshot and September 11, 2026 OSM extract, plus the SQLite network stage:
 
 ```sh
-npm run data:snapshot
-# Download the file identified by data/sources/osm-source.json.
-# It is retained locally at data/sources/Chicago.osm.pbf and excluded from Git.
-curl -fL https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf -o data/sources/Chicago.osm.pbf
+# If the recorded OSM extract is present but the SQLite stage is not:
 npm run network:stage
-npm run network:review
-npm run data:build
-npm run build
+
+# Rebuild and validate the route export:
+npm run data:routes
+npm run verify:routes
+npm test
 ```
 
-For exact reproduction, use the saved snapshot and verify its checksum: a `latest` download will eventually change. The local OSM snapshot is dated September 11, 2026. The SQLite stage is regenerable and excluded from Git. `data/review/city/matches.json` preserves inspectable geometry, tags and evidence URLs for 715 candidate ways. 1,400 of 1,452 intervals have candidates, with 25 directly attached restriction relations. These are candidates, not approved matches; complete relations remain in SQLite.
+`data/sources/osm-source.json` identifies the exact extract and checksum. The local PBF and SQLite stage are excluded from Git; downloading a changing `latest` URL does not reproduce this build. Raw staging requires Osmium 1.19+.
 
-Citywide is the default scope. To regenerate the original pilot scope, run `npm run network:review -- --scope ward35` then `npm run data:build -- --scope ward35`. The original immutable Ward 35 build remains available (40 intervals, 2.59391 miles). Scope-specific normalized and review files are kept separately. The map’s Ward 35 button changes the viewport only; totals remain citywide.
+`data/routes/pilots.json` defines route scope and explicit joins. `scripts/route-network.mjs` assembles and matches the route, `scripts/motor-rules.mjs` evaluates source rules, and `scripts/route-continuity.mjs` traces each direction. `scripts/build-route-data.mjs` exports routes, events and runs to `public/routes/pilot.json` and copies the evidence queue. `web/src/route-map.ts` renders the new interface.
 
-`data:build` refuses to overwrite an immutable build. Change inputs/algorithm to produce a new ID. `public/current.json` selects the displayed build. Old builds remain available. It refuses to silently ignore nonempty overrides.
-
-## Complete the street audit
-
-See [remaining work and release gates](docs/implementation-status.md). The outstanding normalization work is substantive: split at real intersections and condition changes, interpret motor access/one-way/restrictions, normalize connectors and ambiguous movements, trace full corridors, and review every endpoint that would allow a pass.
-
-A reviewed, fully normalized bundle can already feed the solver and publication path:
-
-```sh
-node scripts/build-data.mjs /absolute/path/to/reviewed-bundle
-npm run build
-```
-
-Bundle contract: [docs/data-contract.md](docs/data-contract.md). This path exports scores and deterministic deduplicated full-run geometry. The default path publishes the unresolved official inventory. It never promotes raw OSM candidates into accepted movements.
+Use `SOURCE_DATE_EPOCH=1793091600 npm run data:routes` for the audited export's fixed generation timestamp. The independent sample in `data/routes/pilot-validation.json` is tied to the output SHA-256 and becomes stale when that output changes. Source records and timestamps must be checked again before approving movements or expanding the pilot.
 
 ## Validation
 
-```sh
-npm run fixtures
-npm test
-cargo test --manifest-path solver/Cargo.toml
-cargo clippy --manifest-path solver/Cargo.toml --all-targets --locked -- -D warnings
-npm run build
-```
+`npm test` covers direction/access precedence, barriers, turn restrictions, conditional and via-way uncertainty, source conflicts, route gaps and clipping, tracing across bends, subdivision invariance, and remaining distance in either direction. `npm run verify:routes` independently checks the generated geometry, geodesic lengths, legal continuity, endpoint reasons, coverage and known pilot cases. Neither check establishes current street conditions.
 
-Tests include 1,000 generated DAGs versus an independent exhaustive oracle; chains and splits; unequal merges and shorter uncertain branches; cycles; equality and directional aggregation; overflow; geometry duplicate/overlap removal; full-path witnesses; binary summaries compared to unique records around every score; monotonicity and integer URL/display round trips. [Validation measurements and limits](docs/validation.md).
+Desktop and narrow-screen browser checks cover route/direction selection, clicking a run, remaining distance, interruption details and share-link restoration. The pilot deliberately has no low-stress pass/fail badge.
+
+## Earlier inventory and solver
+
+The original [technical specification](docs/technical-spec.md), Rust solver, TypeScript inventory interface and immutable citywide builds are retained for reference. They are not the new map's calculation path. The old inventory contains 1,452 geometry intervals over 85.23654 designated miles from 258 official records; its zero/unknown scores are not used as vehicle-continuity results.
+
+Historical commands remain available: `npm run fixtures`, `npm run data:build`, `npm run network:review`, `npm run data:verify`, and `npm run verify`. These may require Rust/Cargo, Tippecanoe 2.79+ and the raw source snapshots. See the previous [data contract](docs/data-contract.md) and [validation notes](docs/validation.md) for that export format.
 
 ## Licensing and attribution
 
-Source code: MIT (see LICENSE). City of Chicago data remains subject to its portal terms. OSM source data is © OpenStreetMap contributors, ODbL 1.0; see the saved source manifest. Basemap © CARTO and © OpenStreetMap contributors. Keep source and map attributions when publishing. Unreviewed source candidates are evidence, not a cycling safety assessment.
+Source code: MIT (see LICENSE). City of Chicago data remains subject to its portal terms. OSM source data is © OpenStreetMap contributors, ODbL 1.0; see the saved source manifest. Basemap © CARTO and © OpenStreetMap contributors. Keep source and map attributions when publishing.

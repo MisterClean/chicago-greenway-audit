@@ -1,0 +1,1164 @@
+{
+  "schema": "greenway-real-movement-experiment-v1",
+  "status": "Experiments on saved OSM evidence. No field-verified movement, maximal greenway driving run, or safety finding is asserted.",
+  "source_effective_date": "2026-09-11T23:00:00Z",
+  "source_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+  "distance_method": "GeographicLib WGS84 inverse distance summed along source polylines, meters.",
+  "endpoint_policy": "All outer endpoints are unknown/truncated experiment boundaries, never physical motor blockers.",
+  "checks": "Assertions passed: shared-node relation identity, directional orientation, split distances, bicycle exemption separation, missing connector, no repeated circle laps, and incomplete source boundaries.",
+  "leland": {
+    "evidence": {
+      "id": "leland-western-no-straight",
+      "label": "Leland / Western: a connected road can prohibit the specific movement",
+      "coordinates": [
+        -87.688847,
+        41.9667811
+      ],
+      "ways": [
+        {
+          "id": 1464448283,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "name": "West Leland Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            1992493849,
+            3414265111,
+            157729865
+          ],
+          "geometry": [
+            [
+              -87.6890653,
+              41.9667828
+            ],
+            [
+              -87.6890201,
+              41.9667824
+            ],
+            [
+              -87.688847,
+              41.9667811
+            ]
+          ],
+          "length_m": 18.09671457034013,
+          "source_url": "https://www.openstreetmap.org/way/1464448283"
+        },
+        {
+          "id": 625511923,
+          "tags": {
+            "cycleway": "separate",
+            "highway": "secondary",
+            "lanes": "2",
+            "lanes:backward": "1",
+            "lanes:forward": "1",
+            "name": "West Leland Avenue",
+            "name:etymology:wikidata": "Q91",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            260227531,
+            3414270129,
+            157729865
+          ],
+          "geometry": [
+            [
+              -87.688223,
+              41.966717
+            ],
+            [
+              -87.6886326,
+              41.9667717
+            ],
+            [
+              -87.688847,
+              41.9667811
+            ]
+          ],
+          "length_m": 52.29573094187781,
+          "source_url": "https://www.openstreetmap.org/way/625511923"
+        }
+      ],
+      "relations": [
+        {
+          "id": 20163015,
+          "tags": {
+            "implicit": "yes",
+            "restriction": "no_straight_on",
+            "type": "restriction"
+          },
+          "members": [
+            {
+              "type": "way",
+              "ref": 1464448283,
+              "role": "from"
+            },
+            {
+              "type": "node",
+              "ref": 157729865,
+              "role": "via"
+            },
+            {
+              "type": "way",
+              "ref": 625511923,
+              "role": "to"
+            }
+          ],
+          "source_url": "https://www.openstreetmap.org/relation/20163015"
+        }
+      ],
+      "observations": [
+        "The approach and departure share node 157729865; geometry alone would connect them.",
+        "Relation 20163015 explicitly encodes no_straight_on from way 1464448283 to way 625511923.",
+        "The restriction is marked implicit=yes; the meaning and current physical treatment need independent verification."
+      ],
+      "needs_review": "Verify the current eastbound prohibition and bicycle exemption, if any, with the relevant signs/design and dated evidence."
+    },
+    "route_forward": "Eastbound: way 1464448283 in source order, then way 625511923 in reversed source order.",
+    "topology_only_input": {
+      "id": "leland-western-topology-only-counterfactual",
+      "profile": "through_car",
+      "edges": [
+        {
+          "id": "1464448283",
+          "length_m": 18.09671457034013,
+          "access": {
+            "forward": {
+              "status": "allowed",
+              "reason": "OSM scenario: motor oneway=yes follows node order eastward."
+            },
+            "reverse": {
+              "status": "blocked",
+              "reason": "Motor oneway=yes prohibits reverse travel; oneway:bicycle=no does not apply to cars."
+            }
+          }
+        },
+        {
+          "id": "625511923",
+          "length_m": 52.29573094187781,
+          "access": {
+            "forward": {
+              "status": "allowed",
+              "reason": "OSM scenario: ordinary residential/secondary motor road without a one-way restriction; route reverses source node order."
+            },
+            "reverse": {
+              "status": "allowed",
+              "reason": "OSM scenario: road has no one-way restriction; route reverse follows source node order."
+            }
+          }
+        }
+      ],
+      "movements": [
+        {
+          "id": "node:157729865",
+          "forward": {
+            "status": "allowed",
+            "reason": "Deliberately omit the turn restriction for this topology-only comparison."
+          },
+          "reverse": {
+            "status": "blocked",
+            "reason": "The departing west-side road is one-way against this movement."
+          }
+        }
+      ],
+      "endpoints": {
+        "start": {
+          "kind": "unknown",
+          "reason": "Bounded experiment begins here; upstream route continuation was not assessed."
+        },
+        "end": {
+          "kind": "unknown",
+          "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+        }
+      }
+    },
+    "topology_only_result": {
+      "route_id": "leland-western-topology-only-counterfactual",
+      "profile": "through_car",
+      "runs": [
+        {
+          "direction": "forward",
+          "edge_ids": [
+            "1464448283",
+            "625511923"
+          ],
+          "length_m": 70.39244551221793,
+          "start": {
+            "kind": "unknown",
+            "reason": "Bounded experiment begins here; upstream route continuation was not assessed."
+          },
+          "end": {
+            "kind": "unknown",
+            "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+          },
+          "complete_within_route": false,
+          "scope_limited": false
+        },
+        {
+          "direction": "reverse",
+          "edge_ids": [
+            "625511923"
+          ],
+          "length_m": 52.29573094187781,
+          "start": {
+            "kind": "unknown",
+            "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+          },
+          "end": {
+            "kind": "blocked",
+            "reason": "The departing west-side road is one-way against this movement.; Motor oneway=yes prohibits reverse travel; oneway:bicycle=no does not apply to cars.",
+            "sources": [
+              "movement:node:157729865",
+              "edge:1464448283"
+            ]
+          },
+          "complete_within_route": false,
+          "scope_limited": false
+        }
+      ],
+      "excluded": [
+        {
+          "edge_id": "1464448283",
+          "direction": "reverse",
+          "status": "blocked",
+          "reason": "Motor oneway=yes prohibits reverse travel; oneway:bicycle=no does not apply to cars."
+        }
+      ]
+    },
+    "restriction_applied_input": {
+      "id": "leland-western-osm-restriction-applied",
+      "profile": "through_car",
+      "edges": [
+        {
+          "id": "1464448283",
+          "length_m": 18.09671457034013,
+          "access": {
+            "forward": {
+              "status": "allowed",
+              "reason": "OSM scenario: motor oneway=yes follows node order eastward."
+            },
+            "reverse": {
+              "status": "blocked",
+              "reason": "Motor oneway=yes prohibits reverse travel; oneway:bicycle=no does not apply to cars."
+            }
+          }
+        },
+        {
+          "id": "625511923",
+          "length_m": 52.29573094187781,
+          "access": {
+            "forward": {
+              "status": "allowed",
+              "reason": "OSM scenario: ordinary residential/secondary motor road without a one-way restriction; route reverses source node order."
+            },
+            "reverse": {
+              "status": "allowed",
+              "reason": "OSM scenario: road has no one-way restriction; route reverse follows source node order."
+            }
+          }
+        }
+      ],
+      "movements": [
+        {
+          "id": "node:157729865",
+          "forward": {
+            "status": "blocked",
+            "reason": "OSM relation 20163015: no_straight_on for this from/via/to movement (implicit=yes; unverified)."
+          },
+          "reverse": {
+            "status": "blocked",
+            "reason": "The departing west-side road is one-way against this movement."
+          }
+        }
+      ],
+      "endpoints": {
+        "start": {
+          "kind": "unknown",
+          "reason": "Bounded experiment begins here; upstream route continuation was not assessed."
+        },
+        "end": {
+          "kind": "unknown",
+          "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+        }
+      }
+    },
+    "restriction_applied_result": {
+      "route_id": "leland-western-osm-restriction-applied",
+      "profile": "through_car",
+      "runs": [
+        {
+          "direction": "forward",
+          "edge_ids": [
+            "1464448283"
+          ],
+          "length_m": 18.09671457034013,
+          "start": {
+            "kind": "unknown",
+            "reason": "Bounded experiment begins here; upstream route continuation was not assessed."
+          },
+          "end": {
+            "kind": "blocked",
+            "reason": "OSM relation 20163015: no_straight_on for this from/via/to movement (implicit=yes; unverified).",
+            "sources": [
+              "movement:node:157729865"
+            ]
+          },
+          "complete_within_route": false,
+          "scope_limited": false
+        },
+        {
+          "direction": "forward",
+          "edge_ids": [
+            "625511923"
+          ],
+          "length_m": 52.29573094187781,
+          "start": {
+            "kind": "blocked",
+            "reason": "OSM relation 20163015: no_straight_on for this from/via/to movement (implicit=yes; unverified).",
+            "sources": [
+              "movement:node:157729865"
+            ]
+          },
+          "end": {
+            "kind": "unknown",
+            "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+          },
+          "complete_within_route": false,
+          "scope_limited": false
+        },
+        {
+          "direction": "reverse",
+          "edge_ids": [
+            "625511923"
+          ],
+          "length_m": 52.29573094187781,
+          "start": {
+            "kind": "unknown",
+            "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+          },
+          "end": {
+            "kind": "blocked",
+            "reason": "The departing west-side road is one-way against this movement.; Motor oneway=yes prohibits reverse travel; oneway:bicycle=no does not apply to cars.",
+            "sources": [
+              "movement:node:157729865",
+              "edge:1464448283"
+            ]
+          },
+          "complete_within_route": false,
+          "scope_limited": false
+        }
+      ],
+      "excluded": [
+        {
+          "edge_id": "1464448283",
+          "direction": "reverse",
+          "status": "blocked",
+          "reason": "Motor oneway=yes prohibits reverse travel; oneway:bicycle=no does not apply to cars."
+        }
+      ]
+    },
+    "conclusion": "Connected geometry alone produces 70.3924455m of eastbound candidate passage. The exact OSM no_straight_on movement splits it into 18.0967146m and 52.2957309m observed pieces. Reverse motor passage is independently blocked by one-way access. All pieces have truncated outer boundaries."
+  },
+  "berteau": {
+    "evidence": {
+      "id": "berteau-greenview-circle",
+      "label": "Berteau / Greenview: name filtering removes an intersection connector",
+      "coordinates": [
+        -87.667644,
+        41.957986
+      ],
+      "ways": [
+        {
+          "id": 1088397389,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "opposite_lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            26808042,
+            11352300304,
+            1722190522,
+            10117194935,
+            9971880129
+          ],
+          "geometry": [
+            [
+              -87.664497,
+              41.9580264
+            ],
+            [
+              -87.6646175,
+              41.9580241
+            ],
+            [
+              -87.6668711,
+              41.9579954
+            ],
+            [
+              -87.6675372,
+              41.9579867
+            ],
+            [
+              -87.6675877,
+              41.957986
+            ]
+          ],
+          "length_m": 256.2747758831816,
+          "source_url": "https://www.openstreetmap.org/way/1088397389"
+        },
+        {
+          "id": 1088397391,
+          "tags": {
+            "cyclestreet": "yes",
+            "highway": "residential",
+            "junction": "circular",
+            "lit": "yes",
+            "sidewalk:right": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            9971880130,
+            9971880128,
+            9971880127,
+            10274135189,
+            10274135190,
+            9971880126,
+            9971880125,
+            9971880124,
+            9971880123,
+            10274135185,
+            10274135186,
+            9971880129,
+            9971880122,
+            9971880121,
+            10274135187,
+            11352300312,
+            9971880120,
+            9971880119,
+            9971880118,
+            10274135188,
+            11352300313,
+            9971880117,
+            9971880130
+          ],
+          "geometry": [
+            [
+              -87.6676991,
+              41.9579736
+            ],
+            [
+              -87.6676944,
+              41.9579623
+            ],
+            [
+              -87.6676856,
+              41.9579523
+            ],
+            [
+              -87.6676734,
+              41.9579446
+            ],
+            [
+              -87.6676588,
+              41.9579398
+            ],
+            [
+              -87.6676429,
+              41.9579382
+            ],
+            [
+              -87.6676272,
+              41.95794
+            ],
+            [
+              -87.6676127,
+              41.957945
+            ],
+            [
+              -87.6676008,
+              41.9579528
+            ],
+            [
+              -87.6675922,
+              41.9579628
+            ],
+            [
+              -87.6675877,
+              41.9579742
+            ],
+            [
+              -87.6675877,
+              41.957986
+            ],
+            [
+              -87.6675923,
+              41.9579976
+            ],
+            [
+              -87.6676011,
+              41.9580077
+            ],
+            [
+              -87.6676134,
+              41.9580155
+            ],
+            [
+              -87.6676282,
+              41.9580205
+            ],
+            [
+              -87.6676443,
+              41.958022
+            ],
+            [
+              -87.6676601,
+              41.9580202
+            ],
+            [
+              -87.6676746,
+              41.9580151
+            ],
+            [
+              -87.6676866,
+              41.9580071
+            ],
+            [
+              -87.6676951,
+              41.957997
+            ],
+            [
+              -87.6676994,
+              41.9579855
+            ],
+            [
+              -87.6676991,
+              41.9579736
+            ]
+          ],
+          "length_m": 29.19784102128664,
+          "source_url": "https://www.openstreetmap.org/way/1088397391"
+        },
+        {
+          "id": 24099241,
+          "tags": {
+            "cyclestreet": "yes",
+            "cycleway:left": "opposite_lane",
+            "cycleway:left:oneway": "-1",
+            "cycleway:right": "shared_lane",
+            "cycleway:right:lane": "pictogram",
+            "highway": "residential",
+            "lit": "yes",
+            "maxspeed": "20 mph",
+            "name": "West Berteau Avenue",
+            "oneway": "yes",
+            "oneway:bicycle": "no",
+            "sidewalk:both": "separate",
+            "surface": "asphalt"
+          },
+          "node_ids": [
+            9971880117,
+            10117194938,
+            1722190543,
+            9756328255,
+            2447758374
+          ],
+          "geometry": [
+            [
+              -87.6676994,
+              41.9579855
+            ],
+            [
+              -87.6677474,
+              41.9579845
+            ],
+            [
+              -87.6683829,
+              41.957972
+            ],
+            [
+              -87.668992,
+              41.9579601
+            ],
+            [
+              -87.6690714,
+              41.9579585
+            ]
+          ],
+          "length_m": 113.78554674893448,
+          "source_url": "https://www.openstreetmap.org/way/24099241"
+        }
+      ],
+      "observations": [
+        "The unnamed residential circular-junction way is absent from the city candidate list.",
+        "It shares node 9971880129 with the east Berteau approach and 9971880117 with the west Berteau approach.",
+        "Its geometry is a connector requiring logical-junction treatment; its absence from name-matched candidates is not evidence of a motor blockage.",
+        "The approaches are motor-oneway=yes with oneway:bicycle=no. Bicycle contraflow must not create reverse motor travel."
+      ],
+      "needs_review": "Confirm current junction circulation and direction from dated imagery or site evidence before accepting a through movement."
+    },
+    "named_only_connected": false,
+    "circle_arcs": [
+      {
+        "direction_relative_to_source": "forward",
+        "length_m": 13.350771745478047,
+        "node_ids": [
+          9971880129,
+          9971880122,
+          9971880121,
+          10274135187,
+          11352300312,
+          9971880120,
+          9971880119,
+          9971880118,
+          10274135188,
+          11352300313,
+          9971880117
+        ],
+        "geometry": [
+          [
+            -87.6675877,
+            41.957986
+          ],
+          [
+            -87.6675923,
+            41.9579976
+          ],
+          [
+            -87.6676011,
+            41.9580077
+          ],
+          [
+            -87.6676134,
+            41.9580155
+          ],
+          [
+            -87.6676282,
+            41.9580205
+          ],
+          [
+            -87.6676443,
+            41.958022
+          ],
+          [
+            -87.6676601,
+            41.9580202
+          ],
+          [
+            -87.6676746,
+            41.9580151
+          ],
+          [
+            -87.6676866,
+            41.9580071
+          ],
+          [
+            -87.6676951,
+            41.957997
+          ],
+          [
+            -87.6676994,
+            41.9579855
+          ]
+        ]
+      },
+      {
+        "direction_relative_to_source": "reverse",
+        "length_m": 15.847069275808595,
+        "node_ids": [
+          9971880129,
+          10274135186,
+          10274135185,
+          9971880123,
+          9971880124,
+          9971880125,
+          9971880126,
+          10274135190,
+          10274135189,
+          9971880127,
+          9971880128,
+          9971880130,
+          9971880117
+        ],
+        "geometry": [
+          [
+            -87.6675877,
+            41.957986
+          ],
+          [
+            -87.6675877,
+            41.9579742
+          ],
+          [
+            -87.6675922,
+            41.9579628
+          ],
+          [
+            -87.6676008,
+            41.9579528
+          ],
+          [
+            -87.6676127,
+            41.957945
+          ],
+          [
+            -87.6676272,
+            41.95794
+          ],
+          [
+            -87.6676429,
+            41.9579382
+          ],
+          [
+            -87.6676588,
+            41.9579398
+          ],
+          [
+            -87.6676734,
+            41.9579446
+          ],
+          [
+            -87.6676856,
+            41.9579523
+          ],
+          [
+            -87.6676944,
+            41.9579623
+          ],
+          [
+            -87.6676991,
+            41.9579736
+          ],
+          [
+            -87.6676994,
+            41.9579855
+          ]
+        ]
+      }
+    ],
+    "shortest_topological_arc": {
+      "direction_relative_to_source": "forward",
+      "length_m": 13.350771745478047,
+      "node_ids": [
+        9971880129,
+        9971880122,
+        9971880121,
+        10274135187,
+        11352300312,
+        9971880120,
+        9971880119,
+        9971880118,
+        10274135188,
+        11352300313,
+        9971880117
+      ],
+      "geometry": [
+        [
+          -87.6675877,
+          41.957986
+        ],
+        [
+          -87.6675923,
+          41.9579976
+        ],
+        [
+          -87.6676011,
+          41.9580077
+        ],
+        [
+          -87.6676134,
+          41.9580155
+        ],
+        [
+          -87.6676282,
+          41.9580205
+        ],
+        [
+          -87.6676443,
+          41.958022
+        ],
+        [
+          -87.6676601,
+          41.9580202
+        ],
+        [
+          -87.6676746,
+          41.9580151
+        ],
+        [
+          -87.6676866,
+          41.9580071
+        ],
+        [
+          -87.6676951,
+          41.957997
+        ],
+        [
+          -87.6676994,
+          41.9579855
+        ]
+      ]
+    },
+    "shortest_arc_is_legally_verified": false,
+    "direction_reference": "https://wiki.openstreetmap.org/wiki/Tag:junction=circular",
+    "name_only_result": {
+      "route_id": "berteau-name-only-missing-connector",
+      "profile": "through_car",
+      "runs": [
+        {
+          "direction": "forward",
+          "edge_ids": [
+            "1088397389"
+          ],
+          "length_m": 256.2747758831816,
+          "start": {
+            "kind": "unknown",
+            "reason": "Bounded experiment begins here; upstream route continuation was not assessed."
+          },
+          "end": {
+            "kind": "unknown",
+            "reason": "Name-filtered source omitted the unnamed circle; this gap is not a confirmed blockage.",
+            "sources": [
+              "movement:omitted-circle"
+            ]
+          },
+          "complete_within_route": false,
+          "scope_limited": false
+        },
+        {
+          "direction": "forward",
+          "edge_ids": [
+            "24099241"
+          ],
+          "length_m": 113.78554674893448,
+          "start": {
+            "kind": "unknown",
+            "reason": "Name-filtered source omitted the unnamed circle; this gap is not a confirmed blockage.",
+            "sources": [
+              "movement:omitted-circle"
+            ]
+          },
+          "end": {
+            "kind": "unknown",
+            "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+          },
+          "complete_within_route": false,
+          "scope_limited": false
+        }
+      ],
+      "excluded": [
+        {
+          "edge_id": "24099241",
+          "direction": "reverse",
+          "status": "blocked",
+          "reason": "Bicycle contraflow does not grant reverse motor access."
+        },
+        {
+          "edge_id": "1088397389",
+          "direction": "reverse",
+          "status": "blocked",
+          "reason": "Bicycle contraflow does not grant reverse motor access."
+        }
+      ]
+    },
+    "unresolved_input": {
+      "id": "berteau-circle-included-direction-unresolved",
+      "profile": "through_car",
+      "edges": [
+        {
+          "id": "1088397389",
+          "length_m": 256.2747758831816,
+          "access": {
+            "forward": {
+              "status": "allowed",
+              "reason": "OSM westbound motor oneway=yes follows source node order."
+            },
+            "reverse": {
+              "status": "blocked",
+              "reason": "Bicycle contraflow does not grant reverse motor access."
+            }
+          }
+        },
+        {
+          "id": "1088397391:node-order-arc",
+          "length_m": 13.350771745478047,
+          "access": {
+            "forward": {
+              "status": "unknown",
+              "reason": "junction=circular has no oneway tag; do not adjudicate the legal circulation direction from this source."
+            },
+            "reverse": {
+              "status": "unknown",
+              "reason": "Circle direction has not been reviewed."
+            }
+          }
+        },
+        {
+          "id": "24099241",
+          "length_m": 113.78554674893448,
+          "access": {
+            "forward": {
+              "status": "allowed",
+              "reason": "OSM westbound motor oneway=yes follows source node order."
+            },
+            "reverse": {
+              "status": "blocked",
+              "reason": "Bicycle contraflow does not grant reverse motor access."
+            }
+          }
+        }
+      ],
+      "movements": [
+        {
+          "id": "entry:9971880129",
+          "forward": {
+            "status": "allowed",
+            "reason": "Scenario: connected entry node; local movement still needs review."
+          },
+          "reverse": {
+            "status": "blocked",
+            "reason": "Reverse approach is motor one-way."
+          }
+        },
+        {
+          "id": "exit:9971880117",
+          "forward": {
+            "status": "allowed",
+            "reason": "Scenario: connected exit node; local movement still needs review."
+          },
+          "reverse": {
+            "status": "blocked",
+            "reason": "Reverse departure is motor one-way."
+          }
+        }
+      ],
+      "endpoints": {
+        "start": {
+          "kind": "unknown",
+          "reason": "Bounded experiment begins here; upstream route continuation was not assessed."
+        },
+        "end": {
+          "kind": "unknown",
+          "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+        }
+      }
+    },
+    "unresolved_result": {
+      "route_id": "berteau-circle-included-direction-unresolved",
+      "profile": "through_car",
+      "runs": [
+        {
+          "direction": "forward",
+          "edge_ids": [
+            "1088397389"
+          ],
+          "length_m": 256.2747758831816,
+          "start": {
+            "kind": "unknown",
+            "reason": "Bounded experiment begins here; upstream route continuation was not assessed."
+          },
+          "end": {
+            "kind": "unknown",
+            "reason": "junction=circular has no oneway tag; do not adjudicate the legal circulation direction from this source.",
+            "sources": [
+              "edge:1088397391:node-order-arc"
+            ]
+          },
+          "complete_within_route": false,
+          "scope_limited": false
+        },
+        {
+          "direction": "forward",
+          "edge_ids": [
+            "24099241"
+          ],
+          "length_m": 113.78554674893448,
+          "start": {
+            "kind": "unknown",
+            "reason": "junction=circular has no oneway tag; do not adjudicate the legal circulation direction from this source.",
+            "sources": [
+              "edge:1088397391:node-order-arc"
+            ]
+          },
+          "end": {
+            "kind": "unknown",
+            "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+          },
+          "complete_within_route": false,
+          "scope_limited": false
+        }
+      ],
+      "excluded": [
+        {
+          "edge_id": "1088397391:node-order-arc",
+          "direction": "forward",
+          "status": "unknown",
+          "reason": "junction=circular has no oneway tag; do not adjudicate the legal circulation direction from this source."
+        },
+        {
+          "edge_id": "24099241",
+          "direction": "reverse",
+          "status": "blocked",
+          "reason": "Bicycle contraflow does not grant reverse motor access."
+        },
+        {
+          "edge_id": "1088397391:node-order-arc",
+          "direction": "reverse",
+          "status": "unknown",
+          "reason": "Circle direction has not been reviewed."
+        },
+        {
+          "edge_id": "1088397389",
+          "direction": "reverse",
+          "status": "blocked",
+          "reason": "Bicycle contraflow does not grant reverse motor access."
+        }
+      ]
+    },
+    "node_order_scenario_input": {
+      "id": "berteau-node-order-circle-scenario-not-verified",
+      "profile": "through_car",
+      "edges": [
+        {
+          "id": "1088397389",
+          "length_m": 256.2747758831816,
+          "access": {
+            "forward": {
+              "status": "allowed",
+              "reason": "OSM westbound motor oneway=yes follows source node order."
+            },
+            "reverse": {
+              "status": "blocked",
+              "reason": "Bicycle contraflow does not grant reverse motor access."
+            }
+          }
+        },
+        {
+          "id": "1088397391:node-order-arc",
+          "length_m": 13.350771745478047,
+          "access": {
+            "forward": {
+              "status": "allowed",
+              "reason": "Counterfactual/scenario assumption only: circle permits traffic in its source node order."
+            },
+            "reverse": {
+              "status": "unknown",
+              "reason": "Circle direction has not been reviewed."
+            }
+          }
+        },
+        {
+          "id": "24099241",
+          "length_m": 113.78554674893448,
+          "access": {
+            "forward": {
+              "status": "allowed",
+              "reason": "OSM westbound motor oneway=yes follows source node order."
+            },
+            "reverse": {
+              "status": "blocked",
+              "reason": "Bicycle contraflow does not grant reverse motor access."
+            }
+          }
+        }
+      ],
+      "movements": [
+        {
+          "id": "entry:9971880129",
+          "forward": {
+            "status": "allowed",
+            "reason": "Scenario: connected entry node; local movement still needs review."
+          },
+          "reverse": {
+            "status": "blocked",
+            "reason": "Reverse approach is motor one-way."
+          }
+        },
+        {
+          "id": "exit:9971880117",
+          "forward": {
+            "status": "allowed",
+            "reason": "Scenario: connected exit node; local movement still needs review."
+          },
+          "reverse": {
+            "status": "blocked",
+            "reason": "Reverse departure is motor one-way."
+          }
+        }
+      ],
+      "endpoints": {
+        "start": {
+          "kind": "unknown",
+          "reason": "Bounded experiment begins here; upstream route continuation was not assessed."
+        },
+        "end": {
+          "kind": "unknown",
+          "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+        }
+      }
+    },
+    "node_order_scenario_result": {
+      "route_id": "berteau-node-order-circle-scenario-not-verified",
+      "profile": "through_car",
+      "runs": [
+        {
+          "direction": "forward",
+          "edge_ids": [
+            "1088397389",
+            "1088397391:node-order-arc",
+            "24099241"
+          ],
+          "length_m": 383.41109437759405,
+          "start": {
+            "kind": "unknown",
+            "reason": "Bounded experiment begins here; upstream route continuation was not assessed."
+          },
+          "end": {
+            "kind": "unknown",
+            "reason": "Bounded experiment ends here; downstream route continuation was not assessed."
+          },
+          "complete_within_route": false,
+          "scope_limited": false
+        }
+      ],
+      "excluded": [
+        {
+          "edge_id": "24099241",
+          "direction": "reverse",
+          "status": "blocked",
+          "reason": "Bicycle contraflow does not grant reverse motor access."
+        },
+        {
+          "edge_id": "1088397391:node-order-arc",
+          "direction": "reverse",
+          "status": "unknown",
+          "reason": "Circle direction has not been reviewed."
+        },
+        {
+          "edge_id": "1088397389",
+          "direction": "reverse",
+          "status": "blocked",
+          "reason": "Bicycle contraflow does not grant reverse motor access."
+        }
+      ]
+    },
+    "conclusion": "Exact-name matching removes the connecting circle. Including its shared nodes restores topology, but missing circular-junction direction remains unknown. A stated node-order circulation scenario joins the approaches without calling the road turn an interruption. This is not an accepted legal run."
+  }
+}

@@ -1,0 +1,221 @@
+import { DatabaseSync } from "node:sqlite";
+import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { assemble, alignedGraph, locate, metres, lineLength, shortestPath, compareCityOneWay, clipTerminal } from "./route-network.mjs";
+import { edgeAccess, movementAccess } from "./motor-rules.mjs";
+import { traceRoute } from "./route-continuity.mjs";
+const json = async (p) => JSON.parse(await readFile(p, "utf8"));
+const [source, config, osm, reviewEvidence] = await Promise.all(["data/sources/greenways.json", "data/routes/pilots.json", "data/sources/osm-source.json", "data/routes/review-evidence.json"].map(json));
+const db = new DatabaseSync("data/staging/network.sqlite", { readOnly: true });
+const query = db.prepare("SELECT w.* FROM way_bounds b JOIN ways w ON w.id=b.id WHERE b.min_lon<=? AND b.max_lon>=? AND b.min_lat<=? AND b.max_lat>=?");
+const getNode = db.prepare("SELECT lon,lat,tags FROM nodes WHERE id=?");
+const relations = [...db.prepare("SELECT * FROM relations WHERE json_extract(tags,'$.type')='restriction'").iterate()].map((r) => ({ id: r.id, members: JSON.parse(r.members), tags: JSON.parse(r.tags) }));
+const unknown = (reason) => ({ status: "unknown", reason, kind: "unknown", evidence_status: "source-inferred" });
+const pointAt = (line, position) => {
+  let s = 0;
+  for (let i = 1; i < line.length; i++) {
+    const a = line[i - 1], b = line[i], len = Math.hypot((b[0] - a[0]) * 83100, (b[1] - a[1]) * 111100);
+    if (s + len >= position) {
+      let t = len ? (position - s) / len : 0;
+      return [a[0] + t * (b[0] - a[0]), a[1] + t * (b[1] - a[1])];
+    }
+    s += len;
+  }
+  return line.at(-1);
+};
+const subline = (line, a, b) => {
+  let coords = [pointAt(line, a)], s = 0;
+  for (let i = 1; i < line.length; i++) {
+    s += Math.hypot((line[i][0] - line[i - 1][0]) * 83100, (line[i][1] - line[i - 1][1]) * 111100);
+    if (s > a && s < b) coords.push(line[i]);
+  }
+  coords.push(pointAt(line, b));
+  return coords;
+};
+const norm = (s) => (s ?? "").toUpperCase().replace(/^(N|S|E|W|NORTH|SOUTH|EAST|WEST) /, "").replace(/ (AVENUE|AVE|STREET|ST|ROAD|RD|DRIVE|DR)$/, "");
+const all = [];
+for (const spec of config.streets) {
+  const records = source.filter((r) => r.st_name === spec.source);
+  let components = assemble(records, spec.axis);
+  if (["LELAND", "DICKENS"].includes(spec.source) && components.length === 2) {
+    const [a, b] = components;
+    components = [{ coords: [...a.coords, ...b.coords], ids: [...a.ids, ...b.ids], designationLines: [a.coords, b.coords], connector: [a.coords.at(-1), b.coords[0]] }];
+  }
+  for (let ix = 0; ix < components.length; ix++) {
+    const part = components[ix], line = part.coords, id = `${spec.name.toLowerCase()}-${ix + 1}`;
+    const xs = line.map((p) => p[0]), ys = line.map((p) => p[1]);
+    const ways = [], nodeCounts = /* @__PURE__ */ new Map(), crossingNames = /* @__PURE__ */ new Map();
+    const nearby = [...query.iterate(Math.max(...xs) + 3e-4, Math.min(...xs) - 3e-4, Math.max(...ys) + 3e-4, Math.min(...ys) - 3e-4)];
+    for (const w of nearby) {
+      const tags = JSON.parse(w.tags);
+      for (const n of JSON.parse(w.nodes)) {
+        nodeCounts.set(n, (nodeCounts.get(n) ?? 0) + 1);
+        if (tags.name && norm(tags.name) !== spec.source && tags.highway && !["footway", "cycleway", "path"].includes(tags.highway)) {
+          if (!crossingNames.has(n)) crossingNames.set(n, /* @__PURE__ */ new Set());
+          crossingNames.get(n).add(tags.name);
+        }
+      }
+    }
+    for (const w of nearby) {
+      const tags = JSON.parse(w.tags);
+      const parkPath = spec.source === "DICKENS" && part.connector && ["cycleway", "path"].includes(tags.highway);
+      if (tags.name ? norm(tags.name) !== spec.source && !parkPath : !["residential", "living_street", "unclassified"].includes(tags.highway) && !parkPath) continue;
+      const nodes = JSON.parse(w.nodes), data = nodes.map((n) => getNode.get(n));
+      if (data.some((n) => !n)) continue;
+      if (parkPath && !data.some((n) => locate([n.lon, n.lat], part.connector).distance < 18)) continue;
+      if (!tags.name && !tags.junction && !parkPath && lineLength(data.map((n) => [n.lon, n.lat])) > 45) continue;
+      ways.push({ id: w.id, tags, nodes, coordinates: data.map((n) => [n.lon, n.lat]), nodeTags: data.map((n) => JSON.parse(n.tags || "{}")) });
+    }
+    const graph = alignedGraph(line, ways, config.max_source_distance_m), visited = /* @__PURE__ */ new Set(), candidates = [];
+    for (const node of graph.keys()) {
+      if (visited.has(node)) continue;
+      const stack = [node], nodes = [];
+      visited.add(node);
+      while (stack.length) {
+        const n = stack.pop();
+        nodes.push(n);
+        for (const e of graph.get(n) ?? []) if (!visited.has(e.to)) {
+          visited.add(e.to);
+          stack.push(e.to);
+        }
+      }
+      const positions = nodes.map((n) => {
+        const edge = graph.get(n)[0], i = edge.reversed ? edge.index + 1 : edge.index;
+        const coord = edge.way.coordinates[i];
+        return { id: n, coord, ...locate(coord, line) };
+      }).sort((a, b) => a.position - b.position);
+      if (positions.length < 2) continue;
+      const first = positions[0], last = positions.at(-1), path = shortestPath(graph, first.id, last.id);
+      if (path?.length && last.position - first.position > 5) candidates.push({ first, last, path });
+    }
+    candidates.sort((a, b) => a.first.position - b.first.position);
+    const total = locate(line.at(-1), line).position;
+    let cursor = 0;
+    const edges = [];
+    let startResolved = true, endResolved = true;
+    const gap = (a, b) => {
+      if (b - a < 0.5) return;
+      const coords = subline(line, a, b), reason = "Designation could not be confidently matched to a connected OSM route.";
+      edges.push({ id: `${id}-gap-${edges.length + 1}`, way_id: null, from_node: null, to_node: null, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access: { forward: unknown(reason), reverse: unknown(reason) }, evidence_urls: [], role: "gap", source_range: [a, b] });
+    };
+    for (const c of candidates) {
+      if (c.first.position < cursor - 3) continue;
+      gap(cursor, c.first.position);
+      let chunks = [];
+      for (const e of c.path) {
+        const prior = chunks.at(-1);
+        if (prior && prior.way.id === e.way.id && prior.reversed === e.reversed && prior.to === e.from && (nodeCounts.get(e.from) ?? 0) < 2 && !Object.keys(JSON.parse(getNode.get(e.from).tags || "{}")).length) {
+          prior.to = e.to;
+          prior.parts.push(e);
+        } else chunks.push({ way: e.way, reversed: e.reversed, from: e.from, to: e.to, parts: [e] });
+      }
+      for (const [chunkIndex, chunk] of chunks.entries()) {
+        let coords = [];
+        for (const p of chunk.parts) {
+          const a = p.way.coordinates[p.reversed ? p.index + 1 : p.index], b = p.way.coordinates[p.reversed ? p.index : p.index + 1];
+          if (!coords.length) coords.push(a);
+          coords.push(b);
+        }
+        if (c.first.position < 0.5 && chunkIndex === 0) {
+          const clipped = clipTerminal(coords, line[0], "start");
+          coords = clipped.coords;
+          startResolved = clipped.resolved;
+        }
+        if (total - c.last.position < 0.5 && chunkIndex === chunks.length - 1) {
+          const clipped = clipTerminal(coords, line.at(-1), "end");
+          coords = clipped.coords;
+          endResolved = clipped.resolved;
+        }
+        const tags = chunk.parts.slice(0, -1).map((p) => chunk.way.nodeTags[p.reversed ? p.index : p.index + 1]).filter((t) => Object.keys(t).length);
+        let access = edgeAccess(chunk.way.tags, { reversed: chunk.reversed, nodeTags: tags });
+        const sourceAccess = structuredClone(access);
+        if (["cycleway", "path"].includes(chunk.way.tags.highway)) {
+          access.forward = unknown("A bicycle path matches this connector; its corresponding motor route is unresolved.");
+          access.reverse = unknown("A bicycle path matches this connector; its corresponding motor route is unresolved.");
+        }
+        const mid = coords[Math.floor(coords.length / 2)];
+        const city = records.filter((r) => part.ids.includes(r[":id"])).map((r) => ({ r, d: locate(mid, r.the_geom.coordinates[0]).distance })).sort((a, b) => a.d - b.d)[0];
+        if (city?.d < 25) access = compareCityOneWay(access, city.r.oneway_dir, spec.axis);
+        const bridge = part.connector ? [locate(part.connector[0], line).position, locate(part.connector[1], line).position].sort((a, b) => a - b) : null;
+        const edgePositions = coords.map((p) => locate(p, line).position), low = Math.min(...edgePositions), high = Math.max(...edgePositions);
+        const overlapsJoin = bridge && Math.min(high, bridge[1]) - Math.max(low, bridge[0]) > 0.05;
+        if (overlapsJoin) {
+          access = { forward: unknown("The connector between separate designation records has not been reviewed."), reverse: unknown("The connector between separate designation records has not been reviewed.") };
+        }
+        // Explicit evidence bindings enrich the source explanation, never override
+        // motor rules or extend a project assertion onto a neighboring block.
+        const evidenceRecords = reviewEvidence.records.filter(record => record.way_ids?.includes(chunk.way.id));
+        for (const direction of ["forward", "reverse"]) {
+          const notes = evidenceRecords.filter(record => record.direction_notes?.[direction]);
+          if (notes.length && access[direction].status === "blocked" && access[direction].kind === "direction") {
+            access[direction] = { ...access[direction], source_reason: access[direction].reason, reason: notes.map(record => record.direction_notes[direction]).join(" "), evidence_ids: notes.map(record => record.id) };
+          }
+        }
+        const evidenceUrls = [...new Set([`https://www.openstreetmap.org/way/${chunk.way.id}`, ...evidenceRecords.flatMap(record => record.sources.map(source => source.url))])];
+        edges.push({ id: `${id}-way-${chunk.way.id}-${edges.length + 1}`, way_id: chunk.way.id, from_node: chunk.from, to_node: chunk.to, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access, ...overlapsJoin ? { source_access: sourceAccess } : {}, evidence_urls: evidenceUrls, role: overlapsJoin ? "connector" : chunk.way.tags.name ? "designated" : "connector" });
+      }
+      cursor = Math.max(cursor, c.last.position);
+    }
+    gap(cursor, total);
+    if (!edges.length) gap(0, total);
+    const movements = [];
+    for (let i = 1; i < edges.length; i++) {
+      const a = edges[i - 1], b = edges[i], connected = a.to_node != null && a.to_node === b.from_node;
+      const forward = connected ? movementAccess({ fromWayId: a.way_id, toWayId: b.way_id, viaNodeId: a.to_node, relations, isUTurn: false, viaNodeTags: { id: a.to_node, tags: JSON.parse(getNode.get(a.to_node).tags || "{}") } }) : unknown("A source alignment gap leaves this movement unresolved.");
+      const reverse = connected ? movementAccess({ fromWayId: b.way_id, toWayId: a.way_id, viaNodeId: a.to_node, relations, isUTurn: false, viaNodeTags: { id: a.to_node, tags: JSON.parse(getNode.get(a.to_node).tags || "{}") } }) : unknown("A source alignment gap leaves this movement unresolved.");
+      const urls = [...new Set([...forward.source_ids ?? [], ...reverse.source_ids ?? []].map((x) => `https://www.openstreetmap.org/${String(x)}`))];
+      movements.push({ id: `${id}-movement-${i}`, coordinate: a.geometry.coordinates.at(-1), from_edge: a.id, to_edge: b.id, forward, reverse, evidence_urls: urls, cross_street: connected ? [...crossingNames.get(a.to_node) ?? []].sort().join(" / ") || null : null });
+    }
+    const nearbyOther = (p) => components.some((c) => c !== part && Math.min(metres(p, c.coords[0]), metres(p, c.coords.at(-1))) < 300);
+    const endpoints = { start: { kind: edges[0].role === "gap" ? "unknown" : "scope_end", reason: edges[0].role === "gap" ? "The designated endpoint is unmatched." : "End of mapped greenway.", coordinate: line[0] }, end: { kind: edges.at(-1).role === "gap" ? "unknown" : "scope_end", reason: edges.at(-1).role === "gap" ? "The designated endpoint is unmatched." : "End of mapped greenway.", coordinate: line.at(-1) } };
+    if (!startResolved) endpoints.start = { kind: "unknown", reason: "The route start could not be projected onto the matched road.", coordinate: line[0] };
+    if (!endResolved) endpoints.end = { kind: "unknown", reason: "The route end could not be projected onto the matched road.", coordinate: line.at(-1) };
+    for (const [side, p] of [["start", line[0]], ["end", line.at(-1)]]) if (nearbyOther(p)) endpoints[side] = { kind: "unknown", reason: "Another designated section is nearby, but the intervening connection is not established by the city records.", coordinate: p };
+    const traced = traceRoute({ id, profile: "through_car", edges, movements, endpoints });
+    const byId = new Map(edges.map((e) => [e.id, e]));
+    const runs = traced.runs.map((r, i) => {
+      const lines = r.edge_ids.map((e) => {
+        const c = byId.get(e).geometry.coordinates;
+        return r.direction === "reverse" ? [...c].reverse() : c;
+      });
+      return { ...r, start: { ...r.start, coordinate: lines[0][0] }, end: { ...r.end, coordinate: lines.at(-1).at(-1) }, id: `${id}-run-${i + 1}`, geometry: { type: "MultiLineString", coordinates: lines }, evidence_status: "source-inferred" };
+    });
+    const events = [];
+    for (const direction of ["forward", "reverse"]) {
+      const ordered = direction === "forward" ? edges : [...edges].reverse();
+      let previous = null;
+      for (const e of ordered) {
+        const d = e.access[direction];
+        const key = d.status === "allowed" ? null : `${d.status}|${d.kind}|${d.reason}`;
+        if (key && key !== previous) events.push({ id: `${e.id}-${direction}`, coordinate: direction === "forward" ? e.geometry.coordinates[0] : e.geometry.coordinates.at(-1), direction, ...d, evidence_urls: e.evidence_urls });
+        previous = key;
+      }
+    }
+    for (const m of movements) for (const direction of ["forward", "reverse"]) if (m[direction].status !== "allowed") events.push({ id: `${m.id}-${direction}`, coordinate: m.coordinate, direction, ...m[direction], evidence_urls: m.evidence_urls });
+    if (spec.source === "DICKENS") events.push({ id: "dickens-oz-park-context", coordinate: part.connector?.[0] ?? line.at(-1), direction: "forward", status: "unknown", kind: "unknown", reason: "The mapped corridor joins the city sections through Oz Park, but the motor connection has not been reviewed. OSM includes destination-only access and bike paths in this area.", evidence_status: "source-inferred", evidence_urls: ["https://www.openstreetmap.org/way/1237331792"] });
+    const designated = part.designationLines ? part.designationLines.reduce((n, l) => n + lineLength(l), 0) : lineLength(line);
+    const intervals = part.designationLines ? part.designationLines.map((l) => [locate(l[0], line).position, locate(l.at(-1), line).position].sort((a, b) => a - b)) : [[0, total]];
+    const unmatched = edges.filter((e) => e.role === "gap").reduce((n, e) => n + intervals.reduce((sum, [a, b]) => {
+      const start = Math.max(a, e.source_range[0]), end = Math.min(b, e.source_range[1]);
+      return sum + (end > start ? lineLength(subline(line, start, end)) : 0);
+    }, 0), 0), matched = Math.max(0, designated - unmatched);
+    const labelAt = (p) => {
+      let options = [];
+      for (const [n, names] of crossingNames) {
+        const nd = getNode.get(n);
+        if (nd) {
+          const distance = metres(p, [nd.lon, nd.lat]);
+          if (distance < 45) options.push({ distance, name: [...names].sort()[0] });
+        }
+      }
+      options.sort((a, b) => a.distance - b.distance);
+      return options[0]?.name?.replace(/^(North|South|East|West) /, "") ?? "unresolved endpoint";
+    };
+    all.push({ id, name: spec.name, extent_label: `${labelAt(line[0])} \u2013 ${labelAt(line.at(-1))}`, direction_labels: spec.axis === "north" ? { forward: "Northbound", reverse: "Southbound" } : { forward: "Eastbound", reverse: "Westbound" }, source_ids: part.ids, bounds: [[Math.min(...xs), Math.min(...ys)], [Math.max(...xs), Math.max(...ys)]], geometry: part.designationLines ? { type: "MultiLineString", coordinates: part.designationLines } : { type: "LineString", coordinates: line }, edges, movements, runs, events, coverage: { designated_m: designated, matched_m: matched, unknown_m: unmatched, reviewed_movements: 0, total_movements: movements.length } });
+  }
+}
+db.close();
+const result = { schema_version: 1, generated_at: new Date(process.env.SOURCE_DATE_EPOCH ? Number(process.env.SOURCE_DATE_EPOCH) * 1e3 : Date.now()).toISOString(), source: { osm_date: "2026-09-11", designation_date: "2025-12", osm_sha256: osm.sha256, osm_attribution: "\xA9 OpenStreetMap contributors", designation_attribution: "City of Chicago Bike Routes", designation_url: "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut" }, routes: all, summary: { route_components: all.length, reviewed_movements: 0, total_movements: all.reduce((n, r) => n + r.movements.length, 0), evidence_status: "source-inferred" } };
+await mkdir("public/routes", { recursive: true });
+await writeFile("public/routes/review-evidence.json", await readFile("data/routes/review-evidence.json"));
+await writeFile("public/routes/pilot.json", JSON.stringify(result));
+console.log(JSON.stringify(all.map((r) => ({ id: r.id, edges: r.edges.length, movements: r.movements.length, coverage: r.coverage })), null, 2));

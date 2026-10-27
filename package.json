@@ -6,14 +6,16 @@
   "scripts": {
     "dev": "vite --host 127.0.0.1",
     "build": "node scripts/static-tiles.mjs && tsc --noEmit && vite build",
-    "test": "tsx --test web/src/*.test.ts scripts/*.test.mjs",
+    "test": "node --import tsx --test web/src/*.test.ts scripts/*.test.mjs",
     "data:snapshot": "node scripts/snapshot.mjs",
     "data:build": "node scripts/build-data.mjs",
     "verify": "npm test && cargo test --manifest-path solver/Cargo.toml && npm run build",
     "network:stage": "node scripts/stage-network.mjs",
     "network:review": "node scripts/review-candidates.mjs",
     "fixtures": "cargo run --release --locked --manifest-path solver/Cargo.toml -- data/fixtures/states.ndjson data/fixtures/segments.ndjson data/fixtures/output",
-    "data:verify": "node scripts/verify-assets.mjs"
+    "data:verify": "node scripts/verify-assets.mjs",
+    "data:routes": "node scripts/build-route-data.mjs",
+    "verify:routes": "node scripts/verify-route-data.mjs"
   },
   "dependencies": {
     "maplibre-gl": "6.10.0",
