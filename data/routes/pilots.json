@@ -423,6 +423,179 @@
       "name": "Cullom",
       "source": "CULLOM",
       "axis": "east"
+    },
+    {
+      "name": "Ravenswood",
+      "source": "RAVENSWOOD",
+      "axis": "north"
+    },
+    {
+      "name": "Greenview",
+      "source": "GREENVIEW",
+      "axis": "north",
+      "split_carriageways": [
+        {
+          "route_id": "greenview-1",
+          "city_source_ids": [
+            "row-2d5z_n6jd.a66w"
+          ],
+          "evidence_id": "greenview-ridge-opposing-arms",
+          "way_ids": [
+            1322012667,
+            1322012663
+          ],
+          "reviewed_branches": [
+            {
+              "node_id": 261166391,
+              "way_ids": [
+                1322012665
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            },
+            {
+              "node_id": 1752618577,
+              "way_ids": [
+                59294756,
+                1465196439
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            },
+            {
+              "node_id": 12233741032,
+              "way_ids": [
+                1322012664
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            },
+            {
+              "node_id": 12233741035,
+              "way_ids": [
+                1322012664
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            },
+            {
+              "node_id": 12233741036,
+              "way_ids": [
+                1322012665
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            },
+            {
+              "node_id": 12233741037,
+              "way_ids": [
+                1019257933,
+                1465196439
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wellington",
+      "source": "WELLINGTON",
+      "axis": "east"
+    },
+    {
+      "name": "Ridgeway",
+      "source": "RIDGEWAY",
+      "axis": "north"
+    },
+    {
+      "name": "Erie",
+      "source": "ERIE",
+      "axis": "east"
+    },
+    {
+      "name": "14th",
+      "source": "14TH",
+      "axis": "east"
+    },
+    {
+      "name": "21st",
+      "source": "21ST",
+      "axis": "east"
+    },
+    {
+      "name": "81st",
+      "source": "81ST",
+      "axis": "east",
+      "split_carriageways": [
+        {
+          "route_id": "81st-2",
+          "city_source_ids": [
+            "row-u3h7_6cmi_gaje"
+          ],
+          "evidence_id": "81st-union-west-opposing-arms",
+          "way_ids": [
+            1323964791,
+            1323964792,
+            1323964793,
+            1323964795,
+            57782135,
+            1323964796
+          ],
+          "arms": [
+            [
+              1323964791,
+              1323964792,
+              1323964793
+            ],
+            [
+              1323964795,
+              57782135,
+              1323964796
+            ]
+          ]
+        },
+        {
+          "route_id": "81st-2",
+          "city_source_ids": [
+            "row-u3h7_6cmi_gaje"
+          ],
+          "evidence_id": "81st-union-east-opposing-arms",
+          "way_ids": [
+            1323964788,
+            1323964787,
+            1323964786,
+            1323964789,
+            1323964790,
+            1323964797,
+            57700822,
+            57700825,
+            57700824,
+            57700823
+          ],
+          "arms": [
+            [
+              1323964788,
+              1323964787,
+              1323964786,
+              1323964789,
+              1323964790
+            ],
+            [
+              1323964797,
+              57700822,
+              57700825,
+              57700824,
+              57700823
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prospect",
+      "source": "PROSPECT",
+      "axis": "north"
+    },
+    {
+      "name": "Ewing",
+      "source": "EWING",
+      "axis": "north"
     }
   ],
   "max_source_distance_m": 18,

@@ -15,24 +15,30 @@
       "license": "City of Chicago data portal terms",
       "license_url": "https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html"
     },
-    "route_sha256": "0bcc1ff74767a2aab8754387b9b0e9b77cd55c2b983470945880995b70e49443"
+    "route_sha256": "1233ac860283e39a8e4ecdf0081bd2acdc1fc60f274b51127b1762607f23e7fc"
   },
   "summary": {
     "total_city_rows": 258,
-    "included_city_rows": 186,
-    "remaining_city_rows": 72,
+    "included_city_rows": 213,
+    "remaining_city_rows": 45,
     "total_city_source_miles": 85.233758129257,
-    "included_city_source_miles": 69.96480196897,
-    "remaining_city_source_miles": 15.268956160287,
-    "route_family_count": 42,
-    "route_section_count": 64,
-    "remaining_raw_street_names": 46
+    "included_city_source_miles": 79.148050701967,
+    "remaining_city_source_miles": 6.085707427289,
+    "route_family_count": 52,
+    "route_section_count": 78,
+    "remaining_raw_street_names": 36
   },
   "covered_rows": [
     {
       "id": "row-2bn4.nve4-hd5w",
       "route_ids": [
         "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-2d5z_n6jd.a66w",
+      "route_ids": [
+        "greenview-1"
       ]
     },
     {
@@ -54,6 +60,12 @@
       ]
     },
     {
+      "id": "row-2y8f-r3mi~ijsb",
+      "route_ids": [
+        "erie-1"
+      ]
+    },
+    {
       "id": "row-323s.uae7-nsxq",
       "route_ids": [
         "24th-1"
@@ -63,6 +75,12 @@
       "id": "row-39t4_437d.zgtb",
       "route_ids": [
         "ardmore-1"
+      ]
+    },
+    {
+      "id": "row-3hq2~mvyq~hukh",
+      "route_ids": [
+        "14th-1"
       ]
     },
     {
@@ -84,6 +102,12 @@
       ]
     },
     {
+      "id": "row-4hwn_z284-aimv",
+      "route_ids": [
+        "ewing-1"
+      ]
+    },
+    {
       "id": "row-4q3d.at63.qceu",
       "route_ids": [
         "berteau-2"
@@ -96,9 +120,21 @@
       ]
     },
     {
+      "id": "row-53mk.drxs-c7u5",
+      "route_ids": [
+        "81st-1"
+      ]
+    },
+    {
       "id": "row-567r_3xw8.pymc",
       "route_ids": [
         "carmen-2"
+      ]
+    },
+    {
+      "id": "row-57jp.grb6_4xzj",
+      "route_ids": [
+        "prospect-1"
       ]
     },
     {
@@ -129,6 +165,12 @@
       "id": "row-5pr3-cxvv~erar",
       "route_ids": [
         "leavitt-1"
+      ]
+    },
+    {
+      "id": "row-5sa4_xspd-vvaq",
+      "route_ids": [
+        "21st-1"
       ]
     },
     {
@@ -168,6 +210,12 @@
       ]
     },
     {
+      "id": "row-7dga-i4ae-zmgx",
+      "route_ids": [
+        "ravenswood-2"
+      ]
+    },
+    {
       "id": "row-7dq3.m3hg-hks5",
       "route_ids": [
         "le-moyne-1"
@@ -183,6 +231,12 @@
       "id": "row-7q5t~dx7f.ncap",
       "route_ids": [
         "kenmore-1"
+      ]
+    },
+    {
+      "id": "row-7uzh.p3e8.fn7z",
+      "route_ids": [
+        "ridgeway-3"
       ]
     },
     {
@@ -312,6 +366,12 @@
       ]
     },
     {
+      "id": "row-befx.natn-zwgj",
+      "route_ids": [
+        "wellington-1"
+      ]
+    },
+    {
       "id": "row-bgej-zy5s-pxfp",
       "route_ids": [
         "wood-2"
@@ -405,6 +465,12 @@
       "id": "row-f5bc~m435-unsv",
       "route_ids": [
         "leland-1"
+      ]
+    },
+    {
+      "id": "row-f7h5-aybk~kywp",
+      "route_ids": [
+        "81st-2"
       ]
     },
     {
@@ -540,6 +606,12 @@
       ]
     },
     {
+      "id": "row-hpxf_p7zn-jsiw",
+      "route_ids": [
+        "ridgeway-2"
+      ]
+    },
+    {
       "id": "row-hq5n~g4nt_de2u",
       "route_ids": [
         "polk-1"
@@ -576,6 +648,12 @@
       ]
     },
     {
+      "id": "row-ih3q-vktm_ivy8",
+      "route_ids": [
+        "ravenswood-2"
+      ]
+    },
+    {
       "id": "row-ii64-6e54-7i8z",
       "route_ids": [
         "lavergne-2"
@@ -591,6 +669,12 @@
       "id": "row-irx9_unci~pju9",
       "route_ids": [
         "kenmore-1"
+      ]
+    },
+    {
+      "id": "row-itvd~cpd9_7nut",
+      "route_ids": [
+        "prospect-1"
       ]
     },
     {
@@ -690,6 +774,12 @@
       ]
     },
     {
+      "id": "row-kk9s.wxvh.54pi",
+      "route_ids": [
+        "ravenswood-1"
+      ]
+    },
+    {
       "id": "row-knn2~9bd9.v8ws",
       "route_ids": [
         "winthrop-1"
@@ -705,6 +795,12 @@
       "id": "row-kxgt~6ijf-duva",
       "route_ids": [
         "berwyn-2"
+      ]
+    },
+    {
+      "id": "row-m4n8-p2fm-is63",
+      "route_ids": [
+        "ravenswood-2"
       ]
     },
     {
@@ -765,6 +861,12 @@
       "id": "row-muht_4bn5-v2q2",
       "route_ids": [
         "winnemac-2"
+      ]
+    },
+    {
+      "id": "row-mwnn~eyc4~ei26",
+      "route_ids": [
+        "wellington-1"
       ]
     },
     {
@@ -834,9 +936,21 @@
       ]
     },
     {
+      "id": "row-p79a-nzw3.kric",
+      "route_ids": [
+        "ridgeway-1"
+      ]
+    },
+    {
       "id": "row-p7em.hzp8-z6uy",
       "route_ids": [
         "leavitt-1"
+      ]
+    },
+    {
+      "id": "row-p9y5~a44c.4cdy",
+      "route_ids": [
+        "81st-2"
       ]
     },
     {
@@ -849,6 +963,12 @@
       "id": "row-pq5z-s53x.brp2",
       "route_ids": [
         "berteau-3"
+      ]
+    },
+    {
+      "id": "row-pt3s-nbhw-9kfh",
+      "route_ids": [
+        "ravenswood-2"
       ]
     },
     {
@@ -867,6 +987,18 @@
       "id": "row-q7br.k2n4.y3hx",
       "route_ids": [
         "bloomingdale-1"
+      ]
+    },
+    {
+      "id": "row-q9v3~jvue.ejt3",
+      "route_ids": [
+        "ravenswood-2"
+      ]
+    },
+    {
+      "id": "row-qamp~8ey4_t5q5",
+      "route_ids": [
+        "81st-2"
       ]
     },
     {
@@ -906,9 +1038,27 @@
       ]
     },
     {
+      "id": "row-qyu3.mg3k_g39b",
+      "route_ids": [
+        "erie-1"
+      ]
+    },
+    {
       "id": "row-qzji-988m_uzpg",
       "route_ids": [
         "glenwood-2"
+      ]
+    },
+    {
+      "id": "row-r4yb-73vz_r9hg",
+      "route_ids": [
+        "ridgeway-1"
+      ]
+    },
+    {
+      "id": "row-rcf6-tuy9~chwa",
+      "route_ids": [
+        "wellington-1"
       ]
     },
     {
@@ -990,6 +1140,12 @@
       ]
     },
     {
+      "id": "row-szw6-2x9a-2ss9",
+      "route_ids": [
+        "erie-1"
+      ]
+    },
+    {
       "id": "row-te2f_cgxc_dp6h",
       "route_ids": [
         "granville-1"
@@ -999,6 +1155,12 @@
       "id": "row-ttku-y8f5_da8e",
       "route_ids": [
         "carmen-2"
+      ]
+    },
+    {
+      "id": "row-u3h7_6cmi_gaje",
+      "route_ids": [
+        "81st-2"
       ]
     },
     {
@@ -1172,39 +1334,11 @@
       ]
     },
     {
-      "st_name": "14TH",
-      "row_count": 1,
-      "city_source_miles": 0.748720371577,
-      "source_ids": [
-        "row-3hq2~mvyq~hukh"
-      ]
-    },
-    {
       "st_name": "19TH",
       "row_count": 1,
       "city_source_miles": 0.059593955216,
       "source_ids": [
         "row-c5x4_w9sf~sv5y"
-      ]
-    },
-    {
-      "st_name": "21ST",
-      "row_count": 1,
-      "city_source_miles": 0.504715087803,
-      "source_ids": [
-        "row-5sa4_xspd-vvaq"
-      ]
-    },
-    {
-      "st_name": "81ST",
-      "row_count": 5,
-      "city_source_miles": 1.456204959923,
-      "source_ids": [
-        "row-53mk.drxs-c7u5",
-        "row-f7h5-aybk~kywp",
-        "row-p9y5~a44c.4cdy",
-        "row-qamp~8ey4_t5q5",
-        "row-u3h7_6cmi_gaje"
       ]
     },
     {
@@ -1326,37 +1460,11 @@
       ]
     },
     {
-      "st_name": "ERIE",
-      "row_count": 3,
-      "city_source_miles": 0.755458860305,
-      "source_ids": [
-        "row-2y8f-r3mi~ijsb",
-        "row-qyu3.mg3k_g39b",
-        "row-szw6-2x9a-2ss9"
-      ]
-    },
-    {
-      "st_name": "EWING",
-      "row_count": 1,
-      "city_source_miles": 0.502275455635,
-      "source_ids": [
-        "row-4hwn_z284-aimv"
-      ]
-    },
-    {
       "st_name": "FARWELL",
       "row_count": 1,
       "city_source_miles": 0.087354871344,
       "source_ids": [
         "row-jnzi_c7zj-crny"
-      ]
-    },
-    {
-      "st_name": "GREENVIEW",
-      "row_count": 1,
-      "city_source_miles": 0.999732560181,
-      "source_ids": [
-        "row-2d5z_n6jd.a66w"
       ]
     },
     {
@@ -1450,44 +1558,11 @@
       ]
     },
     {
-      "st_name": "PROSPECT",
-      "row_count": 2,
-      "city_source_miles": 1.050955257384,
-      "source_ids": [
-        "row-57jp.grb6_4xzj",
-        "row-itvd~cpd9_7nut"
-      ]
-    },
-    {
-      "st_name": "RAVENSWOOD",
-      "row_count": 6,
-      "city_source_miles": 1.895048270229,
-      "source_ids": [
-        "row-7dga-i4ae-zmgx",
-        "row-ih3q-vktm_ivy8",
-        "row-kk9s.wxvh.54pi",
-        "row-m4n8-p2fm-is63",
-        "row-pt3s-nbhw-9kfh",
-        "row-q9v3~jvue.ejt3"
-      ]
-    },
-    {
       "st_name": "RICHMOND",
       "row_count": 1,
       "city_source_miles": 0.079974705445,
       "source_ids": [
         "row-5w95~i36u-q5b6"
-      ]
-    },
-    {
-      "st_name": "RIDGEWAY",
-      "row_count": 4,
-      "city_source_miles": 0.766780465422,
-      "source_ids": [
-        "row-7uzh.p3e8.fn7z",
-        "row-hpxf_p7zn-jsiw",
-        "row-p79a-nzw3.kric",
-        "row-r4yb-73vz_r9hg"
       ]
     },
     {
@@ -1530,27 +1605,9 @@
       "source_ids": [
         "row-stjm_dixi~3h89"
       ]
-    },
-    {
-      "st_name": "WELLINGTON",
-      "row_count": 3,
-      "city_source_miles": 0.503357444538,
-      "source_ids": [
-        "row-befx.natn-zwgj",
-        "row-mwnn~eyc4~ei26",
-        "row-rcf6-tuy9~chwa"
-      ]
     }
   ],
   "remaining_rows": [
-    {
-      "id": "row-2d5z_n6jd.a66w",
-      "st_name": "GREENVIEW",
-      "street": "GREENVIEW AVE",
-      "from": "W FARWELL AVE",
-      "to": "W JONQUIL TER",
-      "miles": 0.999732560181
-    },
     {
       "id": "row-2j6z-x5nh-hr4p",
       "st_name": "PLYMOUTH",
@@ -1558,14 +1615,6 @@
       "from": "W 9TH ST",
       "to": "W POLK ST",
       "miles": 0.121083086684
-    },
-    {
-      "id": "row-2y8f-r3mi~ijsb",
-      "st_name": "ERIE",
-      "street": "ERIE ST",
-      "from": "N DAMEN AVE",
-      "to": "N PAULINA ST",
-      "miles": 0.378536896708
     },
     {
       "id": "row-363v~eatx.v9ft",
@@ -1576,52 +1625,12 @@
       "miles": 0.215080462551
     },
     {
-      "id": "row-3hq2~mvyq~hukh",
-      "st_name": "14TH",
-      "street": "14TH ST",
-      "from": "S KOSTNER AVE",
-      "to": "S HAMLIN AVE",
-      "miles": 0.748720371577
-    },
-    {
       "id": "row-3ta3-sx9b.3hwx",
       "st_name": "AVENUE",
       "street": "AVENUE J",
       "from": "E 100TH ST",
       "to": "E 98TH ST",
       "miles": 0.253279082157
-    },
-    {
-      "id": "row-4hwn_z284-aimv",
-      "st_name": "EWING",
-      "street": "EWING AVE",
-      "from": "E 118TH ST",
-      "to": "E 114TH ST",
-      "miles": 0.502275455635
-    },
-    {
-      "id": "row-53mk.drxs-c7u5",
-      "st_name": "81ST",
-      "street": "81ST ST",
-      "from": "S DAMEN AVE",
-      "to": "S RACINE AVE",
-      "miles": 1.00311830637
-    },
-    {
-      "id": "row-57jp.grb6_4xzj",
-      "st_name": "PROSPECT",
-      "street": "PROSPECT AVE",
-      "from": "W 104TH ST",
-      "to": "W 97TH ST",
-      "miles": 0.924831074316
-    },
-    {
-      "id": "row-5sa4_xspd-vvaq",
-      "st_name": "21ST",
-      "street": "21ST ST",
-      "from": "S WOOD ST",
-      "to": "S LOOMIS ST",
-      "miles": 0.504715087803
     },
     {
       "id": "row-5w95~i36u-q5b6",
@@ -1640,28 +1649,12 @@
       "miles": 0.317287743401
     },
     {
-      "id": "row-7dga-i4ae-zmgx",
-      "st_name": "RAVENSWOOD",
-      "street": "RAVENSWOOD AVE",
-      "from": "W AINSLIE ST",
-      "to": "W WINNEMAC AVE",
-      "miles": 0.136899557525
-    },
-    {
       "id": "row-7hip-z8ja.9ka2",
       "st_name": "ALBION",
       "street": "ALBION AVE",
       "from": "N GLENWOOD AVE",
       "to": "N LAKEWOOD AVE",
       "miles": 0.138460139369
-    },
-    {
-      "id": "row-7uzh.p3e8.fn7z",
-      "st_name": "RIDGEWAY",
-      "street": "RIDGEWAY AVE",
-      "from": "W ARGYLE ST",
-      "to": "W CARMEN AVE",
-      "miles": 0.120189636298
     },
     {
       "id": "row-972k~6n95-qjxf",
@@ -1694,14 +1687,6 @@
       "from": "N WESTERN AVE",
       "to": "N LINCOLN AVE",
       "miles": 0.192359974334
-    },
-    {
-      "id": "row-befx.natn-zwgj",
-      "st_name": "WELLINGTON",
-      "street": "WELLINGTON AVE",
-      "from": "N KIMBALL AVE",
-      "to": "N KEDZIE AVE",
-      "miles": 0.250000677842
     },
     {
       "id": "row-bq4z~aa9m.899d",
@@ -1760,14 +1745,6 @@
       "miles": 0.112213693812
     },
     {
-      "id": "row-f7h5-aybk~kywp",
-      "st_name": "81ST",
-      "street": "81ST ST",
-      "from": "S EMERALD AVE",
-      "to": "S UNION AVE",
-      "miles": 0.0630384027303
-    },
-    {
       "id": "row-gdhc-hkkb.h3bg",
       "st_name": "DEARBORN",
       "street": "DEARBORN ST",
@@ -1800,14 +1777,6 @@
       "miles": 0.246251463185
     },
     {
-      "id": "row-hpxf_p7zn-jsiw",
-      "st_name": "RIDGEWAY",
-      "street": "RIDGEWAY AVE",
-      "from": "W BLOOMINGDALE AVE",
-      "to": "W CORTLAND ST",
-      "miles": 0.110426308867
-    },
-    {
       "id": "row-i74w-x7ng.sgri",
       "st_name": "NORTH SHORE",
       "street": "NORTH SHORE AVE",
@@ -1822,14 +1791,6 @@
       "from": "CHICAGO AVE",
       "to": "N PAULINA ST",
       "miles": 0.187724507011
-    },
-    {
-      "id": "row-ih3q-vktm_ivy8",
-      "st_name": "RAVENSWOOD",
-      "street": "RAVENSWOOD AVE",
-      "from": "W WILSON AVE",
-      "to": "W LELAND AVE",
-      "miles": 0.125517663389
     },
     {
       "id": "row-ihqd.w7jk-reas",
@@ -1848,68 +1809,12 @@
       "miles": 0.0792676361041
     },
     {
-      "id": "row-itvd~cpd9_7nut",
-      "st_name": "PROSPECT",
-      "street": "PROSPECT AVE",
-      "from": "W 105TH ST",
-      "to": "W 104TH ST",
-      "miles": 0.126124183068
-    },
-    {
       "id": "row-jnzi_c7zj-crny",
       "st_name": "FARWELL",
       "street": "FARWELL AVE",
       "from": "N GREENVIEW AVE",
       "to": "N GLENWOOD AVE",
       "miles": 0.0873548713436
-    },
-    {
-      "id": "row-kk9s.wxvh.54pi",
-      "st_name": "RAVENSWOOD",
-      "street": "RAVENSWOOD AVE",
-      "from": "W SCHOOL ST",
-      "to": "W ROSCOE ST",
-      "miles": 0.126143491855
-    },
-    {
-      "id": "row-m4n8-p2fm-is63",
-      "st_name": "RAVENSWOOD",
-      "street": "RAVENSWOOD AVE",
-      "from": "W WINNEMAC AVE",
-      "to": "W ROSEHILL DR",
-      "miles": 0.921681369201
-    },
-    {
-      "id": "row-mwnn~eyc4~ei26",
-      "st_name": "WELLINGTON",
-      "street": "WELLINGTON AVE",
-      "from": "N KEDZIE AVE",
-      "to": "N ALBANY AVE",
-      "miles": 0.126451106937
-    },
-    {
-      "id": "row-p79a-nzw3.kric",
-      "st_name": "RIDGEWAY",
-      "street": "RIDGEWAY AVE",
-      "from": "S INDEPENDENCE BLVD",
-      "to": "W DOUGLAS BLVD",
-      "miles": 0.047299484479
-    },
-    {
-      "id": "row-p9y5~a44c.4cdy",
-      "st_name": "81ST",
-      "street": "81ST ST",
-      "from": "S PARNELL AVE",
-      "to": "S PARNELL AVE",
-      "miles": 0.138296505561
-    },
-    {
-      "id": "row-pt3s-nbhw-9kfh",
-      "st_name": "RAVENSWOOD",
-      "street": "RAVENSWOOD AVE",
-      "from": "W LELAND AVE",
-      "to": "W AINSLIE ST",
-      "miles": 0.302608519985
     },
     {
       "id": "row-px7u.ngw2.3miv",
@@ -1928,22 +1833,6 @@
       "miles": 0.148337668977
     },
     {
-      "id": "row-q9v3~jvue.ejt3",
-      "st_name": "RAVENSWOOD",
-      "street": "RAVENSWOOD AVE",
-      "from": "W ROSEHILL DR",
-      "to": "W PETERSON AVE",
-      "miles": 0.282197668274
-    },
-    {
-      "id": "row-qamp~8ey4_t5q5",
-      "st_name": "81ST",
-      "street": "81ST ST",
-      "from": "S HALSTED ST",
-      "to": "S EMERALD AVE",
-      "miles": 0.0628708182529
-    },
-    {
       "id": "row-qvtr_8ne7~bvpp",
       "st_name": "9TH",
       "street": "9TH ST",
@@ -1958,30 +1847,6 @@
       "from": "S LOOMIS ST",
       "to": "S VINCENNES AVE",
       "miles": 0.258584287639
-    },
-    {
-      "id": "row-qyu3.mg3k_g39b",
-      "st_name": "ERIE",
-      "street": "ERIE ST",
-      "from": "N PAULINA ST",
-      "to": "N ARMOUR ST",
-      "miles": 0.209279612246
-    },
-    {
-      "id": "row-r4yb-73vz_r9hg",
-      "st_name": "RIDGEWAY",
-      "street": "RIDGEWAY AVE",
-      "from": "W 19TH ST",
-      "to": "W DOUGLAS BLVD",
-      "miles": 0.488865035778
-    },
-    {
-      "id": "row-rcf6-tuy9~chwa",
-      "st_name": "WELLINGTON",
-      "street": "WELLINGTON AVE",
-      "from": "N ALBANY AVE",
-      "to": "N SACRAMENTO AVE",
-      "miles": 0.126905659759
     },
     {
       "id": "row-rwxu_bq5t-ipmv",
@@ -2006,22 +1871,6 @@
       "from": "W LELAND AVE",
       "to": "W LAWRENCE AVE",
       "miles": 0.148893473565
-    },
-    {
-      "id": "row-szw6-2x9a-2ss9",
-      "st_name": "ERIE",
-      "street": "ERIE ST",
-      "from": "N ARMOUR ST",
-      "to": "N NOBLE ST",
-      "miles": 0.167642351351
-    },
-    {
-      "id": "row-u3h7_6cmi_gaje",
-      "st_name": "81ST",
-      "street": "81ST ST",
-      "from": "S UNION AVE",
-      "to": "S PARNELL AVE",
-      "miles": 0.188880927009
     },
     {
       "id": "row-u6sm-hs97~vkz5",

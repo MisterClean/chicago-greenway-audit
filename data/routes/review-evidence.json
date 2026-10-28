@@ -9950,6 +9950,2841 @@
         }
       ],
       "review_needed": "Detailed primary corridor plans and current sign verification remain outstanding."
+    },
+    {
+      "id": "north-four-row-2d5z_n6jd.a66w",
+      "source_record_ids": [
+        "row-2d5z_n6jd.a66w"
+      ],
+      "way_ids": [
+        624602064,
+        1535604731,
+        1535604732,
+        210186978,
+        1535604735,
+        1535604733,
+        1322012663,
+        1322012667,
+        1322012668,
+        1410844442,
+        1410844440,
+        1535604023,
+        1535604025,
+        1179792270
+      ],
+      "location": "GREENVIEW AVE W FARWELL AVE to W JONQUIL TER",
+      "source_inference": "City dash is no motor one-way assertion. OSM 624602064 runs northbound from Farwell; bicycle exception is not motor permission. Four circles 1535604732 (13990510749 to 13990510737), 1535604735 (13990510772 to 13990510760), 1410844440 (12963928584 to 12963928583), 1535604025 (13990513309 to 13990513310) are one-way mapped rings, not artificial gaps. Greenview/Ridge underpass has opposite one-way arms with side roads; see greenview-ridge-opposing-arms.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-2d5z_n6jd.a66w",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/624602064",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 624602064, 1535604731, 1535604732, 210186978, 1535604735, 1535604733, 1322012663, 1322012667, 1322012668, 1410844442, 1410844440, 1535604023, 1535604025, 1179792270",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://activetransportation.org/blog/biking-from-edgewater-to-evanston-to-become-safer/",
+          "title": "Biking from Edgewater to Evanston to become safer",
+          "publisher": "Active Transportation Alliance",
+          "source_type": "project update / plan",
+          "source_date": "2016-02-03",
+          "date_kind": "publication",
+          "status": "CDOT and 49th Ward proposal, not completion",
+          "scope": "Greenview Farwell–Jonquil community meeting proposal; bicycle route does not authorize motor contraflow",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        },
+        {
+          "url": "https://www.dnainfo.com/chicago/20160115/rogers-park/can-evanston-to-edgewater-bike-path-plan-calm-commutes-for-cyclists/",
+          "title": "Can Evanston-to-Edgewater Bike Path Plan Calm Commutes for Cyclists?",
+          "publisher": "DNAinfo, reporting CDOT / Ald. Moore public meeting",
+          "source_type": "project update / plan",
+          "source_date": "2016-01-15",
+          "date_kind": "publication",
+          "status": "proposed",
+          "scope": "Greenview Farwell–Jonquil; Morse–Farwell bicycle contraflow against northbound motor traffic",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-kk9s.wxvh.54pi",
+      "source_record_ids": [
+        "row-kk9s.wxvh.54pi"
+      ],
+      "way_ids": [
+        792355891
+      ],
+      "location": "RAVENSWOOD AVE W SCHOOL ST to W ROSCOE ST",
+      "source_inference": "OSM 792355891 runs south from School to Roscoe, on the designated east rail leg; city S agrees. Both ends need matching to same rail side and current turn signs.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-kk9s.wxvh.54pi",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/792355891",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 792355891",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-r4yb-73vz_r9hg",
+      "source_record_ids": [
+        "row-r4yb-73vz_r9hg"
+      ],
+      "way_ids": [
+        24084889,
+        930816387,
+        930816386
+      ],
+      "location": "RIDGEWAY AVE W 19TH ST to W DOUGLAS BLVD",
+      "source_inference": "City and OSM ways 24084889, 930816387, 930816386 indicate northbound motor travel; mapped bend 930816387 stays on designated line. Check intersections, signs and endpoint.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-r4yb-73vz_r9hg",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24084889",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 24084889, 930816387, 930816386",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-befx.natn-zwgj",
+      "source_record_ids": [
+        "row-befx.natn-zwgj"
+      ],
+      "way_ids": [
+        216246563,
+        994080797
+      ],
+      "location": "WELLINGTON AVE N KIMBALL AVE to N KEDZIE AVE",
+      "source_inference": "City W and OSM 216246563 westbound agree; oneway:bicycle=no does not permit eastbound cars. Approach at Kimball and Kedzie geometry need review.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-befx.natn-zwgj",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/216246563",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 216246563, 994080797",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://chi.streetsblog.org/2023/07/27/cdot-just-installed-a-neighborhood-greenway-on-wellington-in-avondale-why-did-it-happen-6-years-after-the-alder-asked-for-it",
+          "title": "CDOT just installed a Neighborhood Greenway on Wellington in Avondale",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "project update / plan",
+          "source_date": "2023-07-27",
+          "date_kind": "publication",
+          "status": "reports installed; not a movement sign audit",
+          "scope": "Avondale greenway at Kimball and eastward; alderman 2017 request and IDOT 2018 pedestrian island permits",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-hpxf_p7zn-jsiw",
+      "source_record_ids": [
+        "row-hpxf_p7zn-jsiw"
+      ],
+      "way_ids": [
+        24071229,
+        1418787325
+      ],
+      "location": "RIDGEWAY AVE W BLOOMINGDALE AVE to W CORTLAND ST",
+      "source_inference": "City Bloomingdale terminal is ~26 m south of turning circle 261118560; way 24071229 runs from this circle north to Cortland. Bloomingdale Trail 1418787325 is cycleway. Preserve unmatched motor gap; do not invent connection.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-hpxf_p7zn-jsiw",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24071229",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 24071229, 1418787325",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        }
+      ],
+      "gap_scope": {
+        "route_id": "ridgeway-2",
+        "bounds": [
+          [
+            -87.72036,
+            41.91379
+          ],
+          [
+            -87.72033,
+            41.91406
+          ]
+        ]
+      },
+      "gap_note": "The city designation reaches Bloomingdale, but the staged motor road ends at turning-circle node 261118560 roughly 26 m north. The attached way 1418787325 is a cycleway. The untraced terminal remains unknown; neither the cycling connection nor an unmatched city line establishes a motor passage."
+    },
+    {
+      "id": "north-four-row-7uzh.p3e8.fn7z",
+      "source_record_ids": [
+        "row-7uzh.p3e8.fn7z"
+      ],
+      "way_ids": [
+        194873115
+      ],
+      "location": "RIDGEWAY AVE W ARGYLE ST to W CARMEN AVE",
+      "source_inference": "OSM 194873115 has no one-way tag; city dash is no direction assertion. City endpoint Carmen is within the final OSM way; check attachment and trail crossing.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-7uzh.p3e8.fn7z",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/194873115",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 194873115",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/218e4fd6-b343-4672-b6c1-c5e1abacb1e1.pdf",
+          "title": "Committee on Pedestrian & Traffic Safety summary",
+          "publisher": "Chicago City Council",
+          "source_type": "project update / plan",
+          "source_date": "2025-09-22",
+          "date_kind": "committee meeting date",
+          "status": "committee summary, implementation unverified",
+          "scope": "PDF/printed page 7: 20 mph North Ridgeway from Argyle to North Branch Trail; speed limit alone does not break car travel",
+          "review_method": "Downloaded, PDF page 7 rendered and visually inspected",
+          "retrieved_at": "2026-10-27",
+          "pages": [
+            7
+          ],
+          "sha256": "e0b48bd4dc5f14f44b8ab16c0faf29c4d8363e9bb3315c2b61bdcadab0fd77b2"
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-ih3q-vktm_ivy8",
+      "source_record_ids": [
+        "row-ih3q-vktm_ivy8"
+      ],
+      "way_ids": [
+        160152033
+      ],
+      "location": "RAVENSWOOD AVE W WILSON AVE to W LELAND AVE",
+      "source_inference": "East rail leg OSM 160152033 lacks one-way tag, agreeing with the 47th Ward chief of staff description of Wilson–Leland two-way; city dash is not itself two-way assertion. Confirm rail-side geometry and present signs.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-ih3q-vktm_ivy8",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/160152033",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 160152033",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/05/03/which-metra-corridor-would-become-more-bike-friendly-and-greener-under-a-new-plan-ravenswood",
+          "title": "Ravenswood Greenway community meeting and ward project statements",
+          "publisher": "Streetsblog Chicago, quoting 47th and 40th Ward staff",
+          "source_type": "project update / plan",
+          "source_date": "2024-05-03",
+          "date_kind": "publication",
+          "status": "proposal, not completion",
+          "scope": "47th Ward staff says east leg Wilson–Leland two-way and Lawrence–Winnemac one-way north with contraflow bicycles; project Wilson–Peterson",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        },
+        {
+          "url": "https://40thward.org/wp-content/uploads/2024/03/40th-Ward-Q1-2024-Town-Hall-Presentation-1.pdf",
+          "title": "40th Ward Q1 2024 Town Hall Presentation",
+          "publisher": "40th Ward",
+          "source_type": "project update / plan",
+          "source_date": "2024-03-01",
+          "date_kind": "PDF creation date",
+          "status": "future work, not completion",
+          "scope": "PDF page 24 2024 Major Developments lists Ravenswood arterial resurfacing; no limits or motor layout",
+          "review_method": "PDF downloaded, page 24 rendered and visually inspected",
+          "retrieved_at": "2026-10-27",
+          "pages": [
+            24
+          ],
+          "sha256": "917f8cf17a40b60aa65a5260c5bfa51788a1ca14db721b2e0e753661fda37874"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2026/09/16/take-a-virtual-walk-on-the-winnslie-parkway-expansion-and-a-ride-on-the-ravenswood-avenue-greenway",
+          "title": "Winnslie Parkway ribbon-cutting and Ravenswood Greenway",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "project update / plan",
+          "source_date": "2026-09-16",
+          "date_kind": "publication",
+          "status": "reports completion; not verified current traffic signs",
+          "scope": "Lawrence–Peterson project; southbound contraflow bike lane Winnemac–Leland and short protected Ainslie–Winnemac section",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-pt3s-nbhw-9kfh",
+      "source_record_ids": [
+        "row-pt3s-nbhw-9kfh"
+      ],
+      "way_ids": [
+        1316791955,
+        34073181,
+        117007075
+      ],
+      "location": "RAVENSWOOD AVE W LELAND AVE to W AINSLIE ST",
+      "source_inference": "City N and OSM 1316791955, 34073181, 117007075 northbound agree. Southbound bicycle exception is not car permission; Ainslie boundary lies at node 9165694309 within 117007075.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-pt3s-nbhw-9kfh",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1316791955",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 1316791955, 34073181, 117007075",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/05/03/which-metra-corridor-would-become-more-bike-friendly-and-greener-under-a-new-plan-ravenswood",
+          "title": "Ravenswood Greenway community meeting and ward project statements",
+          "publisher": "Streetsblog Chicago, quoting 47th and 40th Ward staff",
+          "source_type": "project update / plan",
+          "source_date": "2024-05-03",
+          "date_kind": "publication",
+          "status": "proposal, not completion",
+          "scope": "47th Ward staff says east leg Wilson–Leland two-way and Lawrence–Winnemac one-way north with contraflow bicycles; project Wilson–Peterson",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        },
+        {
+          "url": "https://40thward.org/wp-content/uploads/2024/03/40th-Ward-Q1-2024-Town-Hall-Presentation-1.pdf",
+          "title": "40th Ward Q1 2024 Town Hall Presentation",
+          "publisher": "40th Ward",
+          "source_type": "project update / plan",
+          "source_date": "2024-03-01",
+          "date_kind": "PDF creation date",
+          "status": "future work, not completion",
+          "scope": "PDF page 24 2024 Major Developments lists Ravenswood arterial resurfacing; no limits or motor layout",
+          "review_method": "PDF downloaded, page 24 rendered and visually inspected",
+          "retrieved_at": "2026-10-27",
+          "pages": [
+            24
+          ],
+          "sha256": "917f8cf17a40b60aa65a5260c5bfa51788a1ca14db721b2e0e753661fda37874"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2026/09/16/take-a-virtual-walk-on-the-winnslie-parkway-expansion-and-a-ride-on-the-ravenswood-avenue-greenway",
+          "title": "Winnslie Parkway ribbon-cutting and Ravenswood Greenway",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "project update / plan",
+          "source_date": "2026-09-16",
+          "date_kind": "publication",
+          "status": "reports completion; not verified current traffic signs",
+          "scope": "Lawrence–Peterson project; southbound contraflow bike lane Winnemac–Leland and short protected Ainslie–Winnemac section",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        },
+        {
+          "url": "https://chi.streetsblog.org/wp-content/uploads/sites/15/2024/05/Screen-Shot-2024-05-03-at-4.55.57-PM.png",
+          "title": "CDOT Planned Street Redesign, 47th Ward drawing",
+          "publisher": "47th Ward / CDOT, reproduced by Streetsblog",
+          "source_type": "project update / plan",
+          "source_date": "2024-05-03",
+          "date_kind": "article publication",
+          "status": "proposal, not as-built",
+          "scope": "Lawrence–Ainslie east leg: northbound motor lane, southbound contraflow bike lane, curb extensions, raised crosswalks, humps; protection north of Ainslie",
+          "review_method": "Public image downloaded and visually inspected",
+          "retrieved_at": "2026-10-27",
+          "pages": null,
+          "sha256": "8e7cb083b0d95bae6260eab4b5cee6340504c4853f778941fbca586ed243fe56"
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-7dga-i4ae-zmgx",
+      "source_record_ids": [
+        "row-7dga-i4ae-zmgx"
+      ],
+      "way_ids": [
+        117007075
+      ],
+      "location": "RAVENSWOOD AVE W AINSLIE ST to W WINNEMAC AVE",
+      "source_inference": "City N and OSM 117007075 northbound agree; exact node slice 9165694309 to 257172686. Southbound bicycle contraflow is not car permission.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-7dga-i4ae-zmgx",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/117007075",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 117007075",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/05/03/which-metra-corridor-would-become-more-bike-friendly-and-greener-under-a-new-plan-ravenswood",
+          "title": "Ravenswood Greenway community meeting and ward project statements",
+          "publisher": "Streetsblog Chicago, quoting 47th and 40th Ward staff",
+          "source_type": "project update / plan",
+          "source_date": "2024-05-03",
+          "date_kind": "publication",
+          "status": "proposal, not completion",
+          "scope": "47th Ward staff says east leg Wilson–Leland two-way and Lawrence–Winnemac one-way north with contraflow bicycles; project Wilson–Peterson",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        },
+        {
+          "url": "https://40thward.org/wp-content/uploads/2024/03/40th-Ward-Q1-2024-Town-Hall-Presentation-1.pdf",
+          "title": "40th Ward Q1 2024 Town Hall Presentation",
+          "publisher": "40th Ward",
+          "source_type": "project update / plan",
+          "source_date": "2024-03-01",
+          "date_kind": "PDF creation date",
+          "status": "future work, not completion",
+          "scope": "PDF page 24 2024 Major Developments lists Ravenswood arterial resurfacing; no limits or motor layout",
+          "review_method": "PDF downloaded, page 24 rendered and visually inspected",
+          "retrieved_at": "2026-10-27",
+          "pages": [
+            24
+          ],
+          "sha256": "917f8cf17a40b60aa65a5260c5bfa51788a1ca14db721b2e0e753661fda37874"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2026/09/16/take-a-virtual-walk-on-the-winnslie-parkway-expansion-and-a-ride-on-the-ravenswood-avenue-greenway",
+          "title": "Winnslie Parkway ribbon-cutting and Ravenswood Greenway",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "project update / plan",
+          "source_date": "2026-09-16",
+          "date_kind": "publication",
+          "status": "reports completion; not verified current traffic signs",
+          "scope": "Lawrence–Peterson project; southbound contraflow bike lane Winnemac–Leland and short protected Ainslie–Winnemac section",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        },
+        {
+          "url": "https://chi.streetsblog.org/wp-content/uploads/sites/15/2024/05/Screen-Shot-2024-05-03-at-4.55.57-PM.png",
+          "title": "CDOT Planned Street Redesign, 47th Ward drawing",
+          "publisher": "47th Ward / CDOT, reproduced by Streetsblog",
+          "source_type": "project update / plan",
+          "source_date": "2024-05-03",
+          "date_kind": "article publication",
+          "status": "proposal, not as-built",
+          "scope": "Lawrence–Ainslie east leg: northbound motor lane, southbound contraflow bike lane, curb extensions, raised crosswalks, humps; protection north of Ainslie",
+          "review_method": "Public image downloaded and visually inspected",
+          "retrieved_at": "2026-10-27",
+          "pages": null,
+          "sha256": "8e7cb083b0d95bae6260eab4b5cee6340504c4853f778941fbca586ed243fe56"
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-m4n8-p2fm-is63",
+      "source_record_ids": [
+        "row-m4n8-p2fm-is63"
+      ],
+      "way_ids": [
+        1244768223,
+        994080780,
+        994080782,
+        681310579
+      ],
+      "location": "RAVENSWOOD AVE W WINNEMAC AVE to W ROSEHILL DR",
+      "source_inference": "City direction dash, OSM listed east rail road ways have no oneway tags. Treat as snapshot inference only; do not substitute other same-name west-rail roads. Crossings and source boundary verification remain.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-m4n8-p2fm-is63",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1244768223",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 1244768223, 994080780, 994080782, 681310579",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/05/03/which-metra-corridor-would-become-more-bike-friendly-and-greener-under-a-new-plan-ravenswood",
+          "title": "Ravenswood Greenway community meeting and ward project statements",
+          "publisher": "Streetsblog Chicago, quoting 47th and 40th Ward staff",
+          "source_type": "project update / plan",
+          "source_date": "2024-05-03",
+          "date_kind": "publication",
+          "status": "proposal, not completion",
+          "scope": "47th Ward staff says east leg Wilson–Leland two-way and Lawrence–Winnemac one-way north with contraflow bicycles; project Wilson–Peterson",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        },
+        {
+          "url": "https://40thward.org/wp-content/uploads/2024/03/40th-Ward-Q1-2024-Town-Hall-Presentation-1.pdf",
+          "title": "40th Ward Q1 2024 Town Hall Presentation",
+          "publisher": "40th Ward",
+          "source_type": "project update / plan",
+          "source_date": "2024-03-01",
+          "date_kind": "PDF creation date",
+          "status": "future work, not completion",
+          "scope": "PDF page 24 2024 Major Developments lists Ravenswood arterial resurfacing; no limits or motor layout",
+          "review_method": "PDF downloaded, page 24 rendered and visually inspected",
+          "retrieved_at": "2026-10-27",
+          "pages": [
+            24
+          ],
+          "sha256": "917f8cf17a40b60aa65a5260c5bfa51788a1ca14db721b2e0e753661fda37874"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2026/09/16/take-a-virtual-walk-on-the-winnslie-parkway-expansion-and-a-ride-on-the-ravenswood-avenue-greenway",
+          "title": "Winnslie Parkway ribbon-cutting and Ravenswood Greenway",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "project update / plan",
+          "source_date": "2026-09-16",
+          "date_kind": "publication",
+          "status": "reports completion; not verified current traffic signs",
+          "scope": "Lawrence–Peterson project; southbound contraflow bike lane Winnemac–Leland and short protected Ainslie–Winnemac section",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-q9v3~jvue.ejt3",
+      "source_record_ids": [
+        "row-q9v3~jvue.ejt3"
+      ],
+      "way_ids": [
+        23746682,
+        1157085224
+      ],
+      "location": "RAVENSWOOD AVE W ROSEHILL DR to W PETERSON AVE",
+      "source_inference": "City dash; OSM 23746682 and 1157085224 have oneway=no; confirm Peterson terminal and current signs on east rail leg.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-q9v3~jvue.ejt3",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/23746682",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 23746682, 1157085224",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://chi.streetsblog.org/2024/05/03/which-metra-corridor-would-become-more-bike-friendly-and-greener-under-a-new-plan-ravenswood",
+          "title": "Ravenswood Greenway community meeting and ward project statements",
+          "publisher": "Streetsblog Chicago, quoting 47th and 40th Ward staff",
+          "source_type": "project update / plan",
+          "source_date": "2024-05-03",
+          "date_kind": "publication",
+          "status": "proposal, not completion",
+          "scope": "47th Ward staff says east leg Wilson–Leland two-way and Lawrence–Winnemac one-way north with contraflow bicycles; project Wilson–Peterson",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        },
+        {
+          "url": "https://40thward.org/wp-content/uploads/2024/03/40th-Ward-Q1-2024-Town-Hall-Presentation-1.pdf",
+          "title": "40th Ward Q1 2024 Town Hall Presentation",
+          "publisher": "40th Ward",
+          "source_type": "project update / plan",
+          "source_date": "2024-03-01",
+          "date_kind": "PDF creation date",
+          "status": "future work, not completion",
+          "scope": "PDF page 24 2024 Major Developments lists Ravenswood arterial resurfacing; no limits or motor layout",
+          "review_method": "PDF downloaded, page 24 rendered and visually inspected",
+          "retrieved_at": "2026-10-27",
+          "pages": [
+            24
+          ],
+          "sha256": "917f8cf17a40b60aa65a5260c5bfa51788a1ca14db721b2e0e753661fda37874"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2026/09/16/take-a-virtual-walk-on-the-winnslie-parkway-expansion-and-a-ride-on-the-ravenswood-avenue-greenway",
+          "title": "Winnslie Parkway ribbon-cutting and Ravenswood Greenway",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "project update / plan",
+          "source_date": "2026-09-16",
+          "date_kind": "publication",
+          "status": "reports completion; not verified current traffic signs",
+          "scope": "Lawrence–Peterson project; southbound contraflow bike lane Winnemac–Leland and short protected Ainslie–Winnemac section",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-p79a-nzw3.kric",
+      "source_record_ids": [
+        "row-p79a-nzw3.kric"
+      ],
+      "way_ids": [
+        1061159301,
+        24068883
+      ],
+      "location": "RIDGEWAY AVE S INDEPENDENCE BLVD to W DOUGLAS BLVD",
+      "source_inference": "City N; OSM 1061159301 northbound but 24068883 has no oneway tag from nodes 261105221 to 261105218. Southbound on the latter conflicts with city assertion and remains unknown, not verified two-way.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-p79a-nzw3.kric",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1061159301",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 1061159301, 24068883",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-mwnn~eyc4~ei26",
+      "source_record_ids": [
+        "row-mwnn~eyc4~ei26"
+      ],
+      "way_ids": [
+        994080796,
+        24076328
+      ],
+      "location": "WELLINGTON AVE N KEDZIE AVE to N ALBANY AVE",
+      "source_inference": "City W; OSM 994080796 and 24076328 westbound; Albany at node 261145209 within 24076328. Signals and stop signs do not by themselves terminate through movement.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-mwnn~eyc4~ei26",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/994080796",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 994080796, 24076328",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://chi.streetsblog.org/2023/07/27/cdot-just-installed-a-neighborhood-greenway-on-wellington-in-avondale-why-did-it-happen-6-years-after-the-alder-asked-for-it",
+          "title": "CDOT just installed a Neighborhood Greenway on Wellington in Avondale",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "project update / plan",
+          "source_date": "2023-07-27",
+          "date_kind": "publication",
+          "status": "reports installed; not a movement sign audit",
+          "scope": "Avondale greenway at Kimball and eastward; alderman 2017 request and IDOT 2018 pedestrian island permits",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        }
+      ]
+    },
+    {
+      "id": "north-four-row-rcf6-tuy9~chwa",
+      "source_record_ids": [
+        "row-rcf6-tuy9~chwa"
+      ],
+      "way_ids": [
+        24076328,
+        1378645959,
+        1227482097
+      ],
+      "location": "WELLINGTON AVE N ALBANY AVE to N SACRAMENTO AVE",
+      "source_inference": "City W; OSM 24076328, 1378645959 and 1227482097 westbound; Albany node 261145209 is inside way 24076328. Check Sacramento terminal and junction restrictions.",
+      "review_needed": "Verify precise city-row clip, traffic signs, road junction restrictions, and field conditions.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot inference, current ground unverified",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-rcf6-tuy9~chwa",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24076328",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 24076328, 1378645959, 1227482097",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://chi.streetsblog.org/2023/07/27/cdot-just-installed-a-neighborhood-greenway-on-wellington-in-avondale-why-did-it-happen-6-years-after-the-alder-asked-for-it",
+          "title": "CDOT just installed a Neighborhood Greenway on Wellington in Avondale",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "project update / plan",
+          "source_date": "2023-07-27",
+          "date_kind": "publication",
+          "status": "reports installed; not a movement sign audit",
+          "scope": "Avondale greenway at Kimball and eastward; alderman 2017 request and IDOT 2018 pedestrian island permits",
+          "review_method": "Web page and source text reviewed",
+          "retrieved_at": "2026-10-27",
+          "pages": null
+        }
+      ]
+    },
+    {
+      "id": "greenview-ridge-opposing-arms",
+      "source_record_ids": [
+        "row-2d5z_n6jd.a66w"
+      ],
+      "way_ids": [
+        1322012663,
+        1322012667,
+        1322012665,
+        59294756,
+        1465196439,
+        1322012664,
+        1019257933
+      ],
+      "location": "North Greenview Avenue under Ridge Avenue near Sherwin",
+      "source_inference": "OSM northbound 1322012667 nodes [12233741042,1752618578,12398855059,12233741035,261166391,12398855072,1752618577,735250172] 55.61 m, maximum 2.55 m from city line; southbound 1322012663 nodes [735250172,12233741037,12233741038,12398855071,12233741036,12233741032,12398855058,12233741042] 56.41 m, maximum 4.25 m from city line, sampled at intervals <=1m in local planar metres. Both oneway=yes and share opposite endpoints. Interior motor-branch inventories excluding pair: 261166391:[1322012665]; 1752618577:[59294756,1465196439]; 12233741032:[1322012664]; 12233741035:[1322012664]; 12233741036:[1322012665]; 12233741037:[1019257933,1465196439]. These six nodes have empty tags. Nodes 1752618578 and 12233741038 have forward stop; 12398855058/59/71/72 are uncontrolled crossings shared with footways 1340399530 and 1340399536. Scan of all local type=restriction relations against both endpoint and interior node IDs and all incident way IDs returned no matches. Branches are not designated bypasses.",
+      "review_status": "source-inferred",
+      "confidence": "moderate snapshot topology and geometry; present access unverified",
+      "review_needed": "Evaluate straight-through movements, all node tags and restrictions; validate exact branch inventory and current signs.",
+      "reviewed_branches": {
+        "261166391": [
+          1322012665
+        ],
+        "1752618577": [
+          59294756,
+          1465196439
+        ],
+        "12233741032": [
+          1322012664
+        ],
+        "12233741035": [
+          1322012664
+        ],
+        "12233741036": [
+          1322012665
+        ],
+        "12233741037": [
+          1019257933,
+          1465196439
+        ]
+      },
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "title": "Chicago Bike Routes: Neighborhood Greenway extract",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city dataset snapshot",
+          "source_date": "2025-12-16T22:53:47Z",
+          "date_kind": "dataset rows updated",
+          "status": "snapshot, no installation dates",
+          "scope": "row-2d5z_n6jd.a66w",
+          "review_method": "local row attributes and endpoint coordinates",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1322012663",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 1322012663",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1322012667",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 1322012667",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1322012665",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 1322012665",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/59294756",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 59294756",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1465196439",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 1465196439",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1322012664",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 1322012664",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1019257933",
+          "title": "OpenStreetMap staged way candidates",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "PBF snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective date",
+          "status": "snapshot, current signs unverified",
+          "scope": "candidate ways 1019257933",
+          "review_method": "read-only local SQLite ways, nodes, tags and city geometry; exact clipping where described",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "pages": null
+        }
+      ],
+      "way_segments": [
+        {
+          "way_id": 1322012667,
+          "nodes": [
+            12233741042,
+            1752618578,
+            12398855059,
+            12233741035,
+            261166391,
+            12398855072,
+            1752618577,
+            735250172
+          ]
+        },
+        {
+          "way_id": 1322012663,
+          "nodes": [
+            735250172,
+            12233741037,
+            12233741038,
+            12398855071,
+            12233741036,
+            12233741032,
+            12398855058,
+            12233741042
+          ]
+        }
+      ],
+      "carriageway_arms": [
+        {
+          "route_direction": "forward",
+          "source_way_ids": [
+            1322012667
+          ],
+          "from_node": 12233741042,
+          "to_node": 735250172
+        },
+        {
+          "route_direction": "reverse",
+          "source_way_ids": [
+            1322012663
+          ],
+          "from_node": 735250172,
+          "to_node": 12233741042
+        }
+      ]
+    },
+    {
+      "id": "west-three-erie-damen-paulina",
+      "source_record_ids": [
+        "row-2y8f-r3mi~ijsb"
+      ],
+      "way_ids": [
+        406711242
+      ],
+      "location": "Erie Damen–Paulina",
+      "source_inference": "OSM has no oneway tag; dash is not a city two-way assertion. Way crosses Paulina row boundary; clip at city extent.",
+      "review_needed": "Verify present signs, physical access, and approach-to-departure movements; consult detailed CDOT design/as-built and ward project notices.",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "title": "Bike Routes: Neighborhood Greenway export",
+          "publisher": "Chicago Department of Transportation",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "snapshot; designation does not establish physical condition",
+          "scope": "exact city rows; geometry and direction attributes",
+          "review_method": "local source manifest; live byte identity previously confirmed",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot, not present-day field verification",
+          "scope": "ways, nodes and turn-restriction relations in local SQLite",
+          "review_method": "read-only staged SQLite; hash identifies the source extract",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c"
+        },
+        {
+          "title": "La Spata bike tour highlights new bikeways",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2022/10/17/never-mind-the-cider-throwers-laspata-bike-tour-highlights-new-bikeways-calls-for-urgent-action",
+          "source_type": "news report",
+          "source_date": "2022-10-17",
+          "date_kind": "publication",
+          "status": "2022 observation of installation",
+          "scope": "reports Erie Damen–Noble advisory lanes, two-way street; alder discussed project on ward ride",
+          "review_method": "web full text",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "id": "west-three-erie-paulina-armour",
+      "source_record_ids": [
+        "row-qyu3.mg3k_g39b"
+      ],
+      "way_ids": [
+        406711242,
+        623940483,
+        1036298782
+      ],
+      "location": "Erie Paulina–Armour",
+      "source_inference": "OSM named ways have no oneway tag. 406711242 extends west of row boundary; no alternate route assumed.",
+      "review_needed": "Verify present signs, physical access, and approach-to-departure movements; consult detailed CDOT design/as-built and ward project notices.",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "title": "Bike Routes: Neighborhood Greenway export",
+          "publisher": "Chicago Department of Transportation",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "snapshot; designation does not establish physical condition",
+          "scope": "exact city rows; geometry and direction attributes",
+          "review_method": "local source manifest; live byte identity previously confirmed",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot, not present-day field verification",
+          "scope": "ways, nodes and turn-restriction relations in local SQLite",
+          "review_method": "read-only staged SQLite; hash identifies the source extract",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c"
+        },
+        {
+          "title": "La Spata bike tour highlights new bikeways",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2022/10/17/never-mind-the-cider-throwers-laspata-bike-tour-highlights-new-bikeways-calls-for-urgent-action",
+          "source_type": "news report",
+          "source_date": "2022-10-17",
+          "date_kind": "publication",
+          "status": "2022 observation of installation",
+          "scope": "reports Erie Damen–Noble advisory lanes, two-way street; alder discussed project on ward ride",
+          "review_method": "web full text",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "id": "west-three-erie-armour-noble",
+      "source_record_ids": [
+        "row-szw6-2x9a-2ss9"
+      ],
+      "way_ids": [
+        406711239
+      ],
+      "location": "Erie Armour–Noble",
+      "source_inference": "OSM no oneway tag; inventory dash is not a two-way assertion.",
+      "review_needed": "Verify present signs, physical access, and approach-to-departure movements; consult detailed CDOT design/as-built and ward project notices.",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "title": "Bike Routes: Neighborhood Greenway export",
+          "publisher": "Chicago Department of Transportation",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "snapshot; designation does not establish physical condition",
+          "scope": "exact city rows; geometry and direction attributes",
+          "review_method": "local source manifest; live byte identity previously confirmed",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot, not present-day field verification",
+          "scope": "ways, nodes and turn-restriction relations in local SQLite",
+          "review_method": "read-only staged SQLite; hash identifies the source extract",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c"
+        },
+        {
+          "title": "La Spata bike tour highlights new bikeways",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2022/10/17/never-mind-the-cider-throwers-laspata-bike-tour-highlights-new-bikeways-calls-for-urgent-action",
+          "source_type": "news report",
+          "source_date": "2022-10-17",
+          "date_kind": "publication",
+          "status": "2022 observation of installation",
+          "scope": "reports Erie Damen–Noble advisory lanes, two-way street; alder discussed project on ward ride",
+          "review_method": "web full text",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "id": "west-three-14th-kostner-hamlin",
+      "source_record_ids": [
+        "row-3hq2~mvyq~hukh"
+      ],
+      "way_ids": [
+        24076360,
+        1268506610,
+        773123019
+      ],
+      "location": "14th Kostner–Hamlin",
+      "source_inference": "City W and three OSM oneway=yes ways oriented west agree; bicycle exception does not permit eastbound cars. 2021 agenda is historical proposal, not proof of current signs.",
+      "review_needed": "Verify present signs, physical access, and approach-to-departure movements; consult detailed CDOT design/as-built and ward project notices.",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "title": "Bike Routes: Neighborhood Greenway export",
+          "publisher": "Chicago Department of Transportation",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "snapshot; designation does not establish physical condition",
+          "scope": "exact city rows; geometry and direction attributes",
+          "review_method": "local source manifest; live byte identity previously confirmed",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot, not present-day field verification",
+          "scope": "ways, nodes and turn-restriction relations in local SQLite",
+          "review_method": "read-only staged SQLite; hash identifies the source extract",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c"
+        },
+        {
+          "title": "City Council agenda, September 14, 2021",
+          "publisher": "Chicago City Council",
+          "url": "https://s3.amazonaws.com/s3.documentcloud.org/documents/21061092/city-council-2021-09-14-agenda.pdf",
+          "source_type": "council agenda",
+          "source_date": "2021-09-14",
+          "date_kind": "meeting date",
+          "status": "agenda item, passage and present signs not established",
+          "scope": "Ward 24 item O2021-3431 describes westbound 14th Kostner–Hamlin, except bicycles",
+          "review_method": "downloaded PDF; rendered and visually inspected page 59",
+          "pages": [
+            59
+          ],
+          "retrieved_at": "2026-10-27",
+          "sha256": "068921897fc8af73cbb1150b1722480c03e4ad0594bfc4a2546476611609385f"
+        }
+      ]
+    },
+    {
+      "id": "west-three-21st-wood-loomis",
+      "source_record_ids": [
+        "row-5sa4_xspd-vvaq"
+      ],
+      "way_ids": [
+        145834811,
+        1265277186,
+        961637004,
+        1081269243,
+        1075206670,
+        855644912
+      ],
+      "location": "21st Wood–Loomis",
+      "source_inference": "OSM named tertiary ways have no oneway tag; dash is not a city two-way assertion. Traffic signals and 20mph proposals do not interrupt passage.",
+      "review_needed": "Verify present signs, physical access, and approach-to-departure movements; consult detailed CDOT design/as-built and ward project notices.",
+      "review_status": "source-inferred",
+      "sources": [
+        {
+          "title": "Bike Routes: Neighborhood Greenway export",
+          "publisher": "Chicago Department of Transportation",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "snapshot; designation does not establish physical condition",
+          "scope": "exact city rows; geometry and direction attributes",
+          "review_method": "local source manifest; live byte identity previously confirmed",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "OSM extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot, not present-day field verification",
+          "scope": "ways, nodes and turn-restriction relations in local SQLite",
+          "review_method": "read-only staged SQLite; hash identifies the source extract",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c"
+        },
+        {
+          "title": "City Council agenda, May 22, 2024",
+          "publisher": "Chicago City Council",
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/7f066b96-0fb4-4ca4-bc61-6ad86c875017.pdf",
+          "source_type": "council agenda",
+          "source_date": "2024-05-22",
+          "date_kind": "meeting date",
+          "status": "agenda item; adoption and present signage not established",
+          "scope": "Ward 25 O2024-0009126 proposes 20 mph on 21st Wood–Loomis; does not restrict through travel",
+          "review_method": "downloaded PDF; rendered and visually inspected page 32",
+          "pages": [
+            32
+          ],
+          "retrieved_at": "2026-10-27",
+          "sha256": "59fb6b988a5078c4aac656088e224783c02316305c2e8b3231515377431bca5b"
+        },
+        {
+          "title": "CDOT show-and-tell on new bikeways",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2019/12/05/a-cdot-show-and-tell-on-this-years-new-bikeways-and-whats-on-deck-for-2020",
+          "source_type": "news report",
+          "source_date": "2019-12-05",
+          "date_kind": "publication",
+          "status": "2019 installation report",
+          "scope": "reports CDOT created Wood and 21st greenway and signal at Ashland",
+          "review_method": "web full text",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "id": "south-three-row-4hwn_z284-aimv",
+      "source_record_ids": [
+        "row-4hwn_z284-aimv"
+      ],
+      "way_ids": [
+        57184478,
+        1068690874
+      ],
+      "location": "EWING AVE: E 118TH ST to E 114TH ST",
+      "source_inference": "City S; staged ways 57184478 and 1068690874 have oneway=yes in southward node order and oneway:bicycle=no. Northbound bicycle exception does not authorize cars.",
+      "review_needed": "Review exact city endpoint slices, source relation and node restrictions, current signs and connecting movements; no field approval.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot only",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57184478",
+          "title": "OpenStreetMap way 57184478",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1068690874",
+          "title": "OpenStreetMap way 1068690874",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.cookcountyil.gov/sites/g/files/ywwepo161/files/documents/2024-11/2024%20Lake%20Calumet%20Bike%20Network%20Study.pdf",
+          "title": "Lake Calumet Bike Network Study",
+          "publisher": "Cook County Department of Transportation and Highways",
+          "source_type": "regional bicycle study",
+          "source_date": "2024-11",
+          "date_kind": "PDF creation month",
+          "status": "historical traffic counts and nearby project context; not present Ewing greenway engineering or motor restrictions",
+          "scope": "118th and Ewing traffic-count table; nearby 118th sidepath project",
+          "review_method": "downloaded public PDF, extracted text, rendered and visually inspected pages 41 and 76",
+          "retrieved_at": "2026-10-27",
+          "pages": [
+            41,
+            76
+          ],
+          "sha256": "1f51e2e2f4cc3c67da49d6dde3a6dceddeedaf9e51cd6114a225bc837aa26a84"
+        }
+      ]
+    },
+    {
+      "id": "south-three-row-itvd~cpd9_7nut",
+      "source_record_ids": [
+        "row-itvd~cpd9_7nut"
+      ],
+      "way_ids": [
+        1230717385
+      ],
+      "location": "PROSPECT AVE: W 105TH ST to W 104TH ST",
+      "source_inference": "City motor direction '-' is no assertion. Named residential OSM ways lack oneway tags; this is source inference only, not proof of present two-way signs.",
+      "review_needed": "Review exact city endpoint slices, source relation and node restrictions, current signs and connecting movements; no field approval.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot only",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1230717385",
+          "title": "OpenStreetMap way 1230717385",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ]
+    },
+    {
+      "id": "south-three-row-57jp.grb6_4xzj",
+      "source_record_ids": [
+        "row-57jp.grb6_4xzj"
+      ],
+      "way_ids": [
+        1359376588,
+        24102166,
+        33261964,
+        1271022584
+      ],
+      "location": "PROSPECT AVE: W 104TH ST to W 97TH ST",
+      "source_inference": "City motor direction '-' is no assertion. Named residential OSM ways lack oneway tags; this is source inference only, not proof of present two-way signs.",
+      "review_needed": "Review exact city endpoint slices, source relation and node restrictions, current signs and connecting movements; no field approval.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot only",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1359376588",
+          "title": "OpenStreetMap way 1359376588",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/24102166",
+          "title": "OpenStreetMap way 24102166",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/33261964",
+          "title": "OpenStreetMap way 33261964",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1271022584",
+          "title": "OpenStreetMap way 1271022584",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ]
+    },
+    {
+      "id": "south-three-row-53mk.drxs-c7u5",
+      "source_record_ids": [
+        "row-53mk.drxs-c7u5"
+      ],
+      "way_ids": [
+        479983154,
+        1265277178,
+        703049022,
+        1123896995
+      ],
+      "location": "81ST ST: S DAMEN AVE to S RACINE AVE",
+      "source_inference": "City W; named OSM ways have oneway=yes in westward node order. Their exact scope and current turn signs require review.",
+      "review_needed": "Review exact city endpoint slices, source relation and node restrictions, current signs and connecting movements; no field approval.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot only",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/479983154",
+          "title": "OpenStreetMap way 479983154",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1265277178",
+          "title": "OpenStreetMap way 1265277178",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/703049022",
+          "title": "OpenStreetMap way 703049022",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1123896995",
+          "title": "OpenStreetMap way 1123896995",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://chi.streetsblog.org/2023/12/05/day-two-of-bike-lane-week-on-streetsblog-chicago-far-southwest-side",
+          "title": "Day Two of Bike Lane Week on Streetsblog Chicago: Far Southwest Side",
+          "publisher": "Streetsblog Chicago",
+          "source_type": "secondary field report",
+          "source_date": "2023-12-05",
+          "date_kind": "publication",
+          "status": "historical observation; location-level current installation unverified",
+          "scope": "Describes 81st and 82nd greenway routes, not a block-by-block motor plan",
+          "review_method": "web article text",
+          "retrieved_at": "2026-10-27",
+          "pages": [],
+          "sha256": null
+        }
+      ]
+    },
+    {
+      "id": "south-three-row-qamp~8ey4_t5q5",
+      "source_record_ids": [
+        "row-qamp~8ey4_t5q5"
+      ],
+      "way_ids": [
+        39169128
+      ],
+      "location": "81ST ST: S HALSTED ST to S EMERALD AVE",
+      "source_inference": "City '-' makes no motor direction assertion. Way 39169128 lacks an oneway tag; node slice must be clipped at the city-row boundary; current signs and turns are unknown.",
+      "review_needed": "Review exact city endpoint slices, source relation and node restrictions, current signs and connecting movements; no field approval.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot only",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/39169128",
+          "title": "OpenStreetMap way 39169128",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ]
+    },
+    {
+      "id": "south-three-row-f7h5-aybk~kywp",
+      "source_record_ids": [
+        "row-f7h5-aybk~kywp"
+      ],
+      "way_ids": [
+        39169128
+      ],
+      "location": "81ST ST: S EMERALD AVE to S UNION AVE",
+      "source_inference": "City '-' makes no motor direction assertion. Way 39169128 lacks an oneway tag; node slice must be clipped at the city-row boundary; current signs and turns are unknown.",
+      "review_needed": "Review exact city endpoint slices, source relation and node restrictions, current signs and connecting movements; no field approval.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot only",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/39169128",
+          "title": "OpenStreetMap way 39169128",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ]
+    },
+    {
+      "id": "south-three-row-p9y5~a44c.4cdy",
+      "source_record_ids": [
+        "row-p9y5~a44c.4cdy"
+      ],
+      "way_ids": [
+        1230678751
+      ],
+      "location": "81ST ST: S PARNELL AVE to S PARNELL AVE",
+      "source_inference": "Despite Parnell–Parnell label, geometry goes east from Parnell; staged named residential way 1230678751 runs from node 261137879 to 261137881 and lacks one-way tag. It is road geometry, not an inferred off-road connection; validate endpoint and junction access.",
+      "review_needed": "Review exact city endpoint slices, source relation and node restrictions, current signs and connecting movements; no field approval.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot only",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1230678751",
+          "title": "OpenStreetMap way 1230678751",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ]
+    },
+    {
+      "id": "south-three-row-u3h7_6cmi_gaje",
+      "source_record_ids": [
+        "row-u3h7_6cmi_gaje"
+      ],
+      "way_ids": [
+        1359658127,
+        1323964791,
+        1323964792,
+        1323964793,
+        1323964795,
+        57782135,
+        1323964796,
+        1323964794,
+        1323964788,
+        1323964787,
+        1323964786,
+        1323964789,
+        1323964790,
+        1323964797,
+        57700822,
+        57700825,
+        57700824,
+        57700823
+      ],
+      "location": "81ST ST: S UNION AVE to S PARNELL AVE",
+      "source_inference": "City '-' makes no motor direction assertion. Two distinct connected parallel one-way pairs on 81st carry opposite movements; preserve separate source-order chains and intervening way 1323964794. Exact measurements and node chains documented in pair observations.",
+      "review_needed": "Review exact city endpoint slices, source relation and node restrictions, current signs and connecting movements; no field approval.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot only",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1359658127",
+          "title": "OpenStreetMap way 1359658127",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964791",
+          "title": "OpenStreetMap way 1323964791",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964792",
+          "title": "OpenStreetMap way 1323964792",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964793",
+          "title": "OpenStreetMap way 1323964793",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964795",
+          "title": "OpenStreetMap way 1323964795",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57782135",
+          "title": "OpenStreetMap way 57782135",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964796",
+          "title": "OpenStreetMap way 1323964796",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964794",
+          "title": "OpenStreetMap way 1323964794",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964788",
+          "title": "OpenStreetMap way 1323964788",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964787",
+          "title": "OpenStreetMap way 1323964787",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964786",
+          "title": "OpenStreetMap way 1323964786",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964789",
+          "title": "OpenStreetMap way 1323964789",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964790",
+          "title": "OpenStreetMap way 1323964790",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964797",
+          "title": "OpenStreetMap way 1323964797",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57700822",
+          "title": "OpenStreetMap way 57700822",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57700825",
+          "title": "OpenStreetMap way 57700825",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57700824",
+          "title": "OpenStreetMap way 57700824",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57700823",
+          "title": "OpenStreetMap way 57700823",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ]
+    },
+    {
+      "id": "81st-union-west-opposing-arms",
+      "source_record_ids": [
+        "row-u3h7_6cmi_gaje"
+      ],
+      "way_ids": [
+        1323964791,
+        1323964792,
+        1323964793,
+        1323964795,
+        57782135,
+        1323964796
+      ],
+      "location": "81st Street between Union and Parnell",
+      "source_inference": "East source chain 12251419592→12251419591 via 1323964791,1323964792,1323964793, 61.96m; west chain 12251419591→12251419592 via 1323964795,57782135,1323964796, 61.72m. Both oneway=yes; no other mapped highway touches the interior chain nodes. Maximum vertex distance to the city line 3.45m and 5.59m; combined 123.68m. No staged restriction relation contains any arm way or any of its internal or terminal nodes.",
+      "review_needed": "Check all incident junctions and current signs; maxima are local projected vertex measurements rather than surveyed clearance; west arms exceed 5m.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for source topology; field signs unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964791",
+          "title": "OpenStreetMap way 1323964791",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964792",
+          "title": "OpenStreetMap way 1323964792",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964793",
+          "title": "OpenStreetMap way 1323964793",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964795",
+          "title": "OpenStreetMap way 1323964795",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57782135",
+          "title": "OpenStreetMap way 57782135",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964796",
+          "title": "OpenStreetMap way 1323964796",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ],
+      "way_segments": [
+        {
+          "way_id": 1323964791,
+          "nodes": [
+            12251419592,
+            12251419589
+          ]
+        },
+        {
+          "way_id": 1323964792,
+          "nodes": [
+            12251419589,
+            12251419590
+          ]
+        },
+        {
+          "way_id": 1323964793,
+          "nodes": [
+            12251419590,
+            12251419591
+          ]
+        },
+        {
+          "way_id": 1323964795,
+          "nodes": [
+            12251419591,
+            716925210
+          ]
+        },
+        {
+          "way_id": 57782135,
+          "nodes": [
+            716925210,
+            716925126
+          ]
+        },
+        {
+          "way_id": 1323964796,
+          "nodes": [
+            716925126,
+            12251419592
+          ]
+        }
+      ],
+      "carriageway_arms": [
+        {
+          "route_direction": "forward",
+          "source_way_ids": [
+            1323964791,
+            1323964792,
+            1323964793
+          ],
+          "from_node": 12251419592,
+          "to_node": 12251419591
+        },
+        {
+          "route_direction": "reverse",
+          "source_way_ids": [
+            1323964795,
+            57782135,
+            1323964796
+          ],
+          "from_node": 12251419591,
+          "to_node": 12251419592
+        }
+      ]
+    },
+    {
+      "id": "81st-union-east-opposing-arms",
+      "source_record_ids": [
+        "row-u3h7_6cmi_gaje"
+      ],
+      "way_ids": [
+        1323964788,
+        1323964787,
+        1323964786,
+        1323964789,
+        1323964790,
+        1323964797,
+        57700822,
+        57700825,
+        57700824,
+        57700823
+      ],
+      "location": "81st Street between Union and Parnell",
+      "source_inference": "East source chain 261137887→261137881 via 1323964788,1323964787,1323964786,1323964789,1323964790, 104.60m; west chain 261137881→261137887 via 1323964797,57700822,57700825,57700824,57700823, 104.13m. Both oneway=yes; no other mapped highway touches the interior chain nodes. Maximum vertex distance to city line 3.27m and 5.08m; combined 208.73m. No staged restriction relation contains any arm way or any of its internal or terminal nodes.",
+      "review_needed": "Check all incident junctions and current signs; maxima are local projected vertex measurements rather than surveyed clearance; west arms exceed 5m.",
+      "review_status": "source-inferred",
+      "confidence": "moderate for source topology; field signs unknown",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964788",
+          "title": "OpenStreetMap way 1323964788",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964787",
+          "title": "OpenStreetMap way 1323964787",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964786",
+          "title": "OpenStreetMap way 1323964786",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964789",
+          "title": "OpenStreetMap way 1323964789",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964790",
+          "title": "OpenStreetMap way 1323964790",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964797",
+          "title": "OpenStreetMap way 1323964797",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57700822",
+          "title": "OpenStreetMap way 57700822",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57700825",
+          "title": "OpenStreetMap way 57700825",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57700824",
+          "title": "OpenStreetMap way 57700824",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/57700823",
+          "title": "OpenStreetMap way 57700823",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ],
+      "way_segments": [
+        {
+          "way_id": 1323964788,
+          "nodes": [
+            261137887,
+            12251419586
+          ]
+        },
+        {
+          "way_id": 1323964787,
+          "nodes": [
+            12251419586,
+            12251419585
+          ]
+        },
+        {
+          "way_id": 1323964786,
+          "nodes": [
+            12251419585,
+            12251419587
+          ]
+        },
+        {
+          "way_id": 1323964789,
+          "nodes": [
+            12251419587,
+            12251419588
+          ]
+        },
+        {
+          "way_id": 1323964790,
+          "nodes": [
+            12251419588,
+            261137881
+          ]
+        },
+        {
+          "way_id": 1323964797,
+          "nodes": [
+            261137881,
+            715432098
+          ]
+        },
+        {
+          "way_id": 57700822,
+          "nodes": [
+            715432098,
+            715432101
+          ]
+        },
+        {
+          "way_id": 57700825,
+          "nodes": [
+            715432101,
+            715432145
+          ]
+        },
+        {
+          "way_id": 57700824,
+          "nodes": [
+            715432145,
+            715432104
+          ]
+        },
+        {
+          "way_id": 57700823,
+          "nodes": [
+            715432104,
+            261137887
+          ]
+        }
+      ],
+      "carriageway_arms": [
+        {
+          "route_direction": "forward",
+          "source_way_ids": [
+            1323964788,
+            1323964787,
+            1323964786,
+            1323964789,
+            1323964790
+          ],
+          "from_node": 261137887,
+          "to_node": 261137881
+        },
+        {
+          "route_direction": "reverse",
+          "source_way_ids": [
+            1323964797,
+            57700822,
+            57700825,
+            57700824,
+            57700823
+          ],
+          "from_node": 261137881,
+          "to_node": 261137887
+        }
+      ]
+    },
+    {
+      "id": "81st-union-intervening-road",
+      "source_record_ids": [
+        "row-u3h7_6cmi_gaje"
+      ],
+      "way_ids": [
+        1323964794
+      ],
+      "location": "81st between the two Union–Parnell opposing-arm pairs",
+      "source_inference": "Residential way 1323964794 from node 261137887 to node 12251419591 is 113.43m and lacks oneway tag. No staged restriction relation contains the way or its nodes. City dash is no direction assertion.",
+      "review_needed": "Inspect both junction movements and current motor signs.",
+      "review_status": "source-inferred",
+      "confidence": "snapshot only",
+      "sources": [
+        {
+          "url": "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+          "title": "Bike Routes",
+          "publisher": "Chicago Department of Transportation",
+          "source_type": "city inventory",
+          "source_date": "2025-12",
+          "date_kind": "data current through",
+          "status": "inventory; current physical conditions unverified",
+          "scope": "Exact Neighborhood Greenway city rows",
+          "review_method": "saved exact ordered city query; city attributes and geometry inspected",
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "pages": [],
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "url": "https://www.openstreetmap.org/way/1323964794",
+          "title": "OpenStreetMap way 1323964794",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "source_type": "OSM snapshot",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "extract effective time",
+          "status": "historical snapshot, not current field survey",
+          "scope": "Mapped way geometry, node order and tags",
+          "review_method": "read-only staged SQLite node, way and tag inspection",
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "pages": [],
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ]
     }
   ],
   "research_batches": [
@@ -10556,6 +13391,163 @@
         "menard-madison-matching-gaps"
       ],
       "notes": "docs/route-ten-greenways-validation.md"
+    },
+    {
+      "id": "second-ten-north-four-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "search_gaps": [
+          {
+            "streets": [
+              "RAVENSWOOD",
+              "GREENVIEW",
+              "WELLINGTON",
+              "RIDGEWAY"
+            ],
+            "searches": [
+              "Chicago Ravenswood Greenview Wellington Ridgeway neighborhood greenway CDOT plans ward",
+              "\"Ravenswood\" \"greenway\" CDOT plan 47th ward",
+              "\"Greenview\" \"greenway\" CDOT plan alderman Chicago",
+              "\"Wellington\" \"neighborhood greenway\" CDOT plan alderman",
+              "\"Ravenswood\" \"greenway\" \"Winnemac\" \"Ainslie\" 47th ward CDOT plan",
+              "\"Ravenswood\" \"greenway\" \"Rosehill\" 47th ward bike plan 2024 pdf",
+              "\"Greenview\" \"Farwell\" \"Jonquil\" greenway CDOT alderman",
+              "\"Ridgeway\" \"Argyle\" \"Carmen\" greenway park Chicago ward CDOT",
+              "\"Ravenswood Greenway\" \"47th ward\" \"CDOT\" plans Lawrence Winnemac 2024",
+              "\"Ravenswood\" \"greenway\" \"Winnslie\" \"CDOT\" pdf project",
+              "\"Ravenswood\" \"greenway\" \"Ainslie\" \"Winnemac\" \"pdf\"",
+              "\"Greenview\" \"Farwell\" \"Jonquil\" \"greenway\" 2015 CDOT",
+              "\"Ravenswood Greenway\" \"47th ward\" \"2024\" plan PDF Wilson Peterson",
+              "\"Ravenswood\" \"greenway\" \"ward47\" \"Winnemac\" CDOT",
+              "\"Ravenswood\" \"greenway\" \"40th ward\" 2024 Wilson Peterson plans",
+              "\"Greenview\" \"greenway\" \"Farwell\" \"49th ward\"",
+              "\"Ravenswood Greenway\" \"47th Ward\" 2024 site:myemail.constantcontact.com",
+              "\"Wellington\" \"Kimball\" \"Kedzie\" greenway site:35thward.org",
+              "\"Greenview\" \"Morse\" \"Farwell\" greenway 49th ward 2016 CDOT presentation"
+            ],
+            "result": "No block-specific detailed CDOT engineering sheets or direct official alderman project updates located for Ravenswood School–Roscoe, Greenview Farwell–Jonquil, Avondale Wellington, or Ridgeway North Lawndale/Bloomingdale; 47th Ward staff quotes and primary ward/CDOT drawing are available via Streetsblog for east Ravenswood; the 40th Ward presentation is broad. 2025/26 Wellington/Oakdale Lakeview project lies outside the Avondale city rows. No Ridgeway Argyle–Carmen design sheet located. Searches are not proof documents do not exist.",
+            "retrieval_failures": [
+              "Web retrieval 40th Ward townhall PDF returned 400 content too large; public download succeeded and page 24 inspected.",
+              "Web click https://chi.streetsblog.org/wp-content/uploads/sites/15/2024/05/Screen-Shot-2024-05-03-at-4.55.57-PM.png?w=710 returned cache miss; original public image successfully downloaded and visually inspected.",
+              "Flickr large drawing https://www.flickr.com/photos/24858199%40N00/53696894348/in/dateposted-public/ returned cache miss; no claim of inspecting it."
+            ]
+          }
+        ]
+      },
+      "record_ids": [
+        "north-four-row-2d5z_n6jd.a66w",
+        "north-four-row-kk9s.wxvh.54pi",
+        "north-four-row-r4yb-73vz_r9hg",
+        "north-four-row-befx.natn-zwgj",
+        "north-four-row-hpxf_p7zn-jsiw",
+        "north-four-row-7uzh.p3e8.fn7z",
+        "north-four-row-ih3q-vktm_ivy8",
+        "north-four-row-pt3s-nbhw-9kfh",
+        "north-four-row-7dga-i4ae-zmgx",
+        "north-four-row-m4n8-p2fm-is63",
+        "north-four-row-q9v3~jvue.ejt3",
+        "north-four-row-p79a-nzw3.kric",
+        "north-four-row-mwnn~eyc4~ei26",
+        "north-four-row-rcf6-tuy9~chwa",
+        "greenview-ridge-opposing-arms"
+      ],
+      "notes": "docs/north-four-expansion-source-review.md"
+    },
+    {
+      "id": "second-ten-west-three-2026-10-27",
+      "metadata": {
+        "search_gaps": [
+          {
+            "street": "Erie",
+            "queries": [
+              "\"Erie\" \"Damen\" \"Noble\" site:the1stward.com",
+              "\"Erie\" \"advisory bike lanes\" \"Damen\" \"Noble\" 1st ward CDOT",
+              "\"Erie\" \"Damen\" \"Noble\" \"CDOT\" \"pdf\" bike"
+            ],
+            "result": "No detailed corridor-specific CDOT engineering plan or direct ward project communication located; not proof no documents exist. Council agendas are ward-specific legislative records, not ward project updates."
+          },
+          {
+            "street": "14th",
+            "queries": [
+              "\"14th street\" \"Kostner\" \"Hamlin\" greenway CDOT alderman",
+              "\"north lawndale\" \"neighborhood greenway\" \"14th\" CDOT plan",
+              "\"14th\" \"Keeler\" \"Hamlin\" \"greenway\" CDOT 2021"
+            ],
+            "result": "No detailed corridor-specific CDOT engineering plan or direct ward project communication located; not proof no documents exist. Council agendas are ward-specific legislative records, not ward project updates."
+          },
+          {
+            "street": "21st",
+            "queries": [
+              "\"21st street\" \"Wood\" \"Loomis\" greenway CDOT ward",
+              "\"21st\" \"Wood\" \"Loomis\" site:25thward.org bike",
+              "\"21st street\" \"wood\" \"loomis\" \"bike\" \"CDOT\" project"
+            ],
+            "result": "No detailed corridor-specific CDOT engineering plan or direct ward project communication located; not proof no documents exist. Council agendas are ward-specific legislative records, not ward project updates."
+          }
+        ]
+      },
+      "record_ids": [
+        "west-three-erie-damen-paulina",
+        "west-three-erie-paulina-armour",
+        "west-three-erie-armour-noble",
+        "west-three-14th-kostner-hamlin",
+        "west-three-21st-wood-loomis"
+      ],
+      "notes": "docs/west-three-expansion-source-review.md"
+    },
+    {
+      "id": "second-ten-south-three-2026-10-27",
+      "metadata": {
+        "schema_version": 1,
+        "reviewed_at": "2026-10-27",
+        "search_gaps": [
+          {
+            "scope": "81st, Prospect, Ewing exact geographic extents",
+            "queries": [
+              "Chicago \"81st\" \"greenway\" Damen Parnell CDOT alderman",
+              "\"Prospect\" \"greenway\" \"97th\" \"105th\" Chicago CDOT",
+              "\"Ewing\" \"greenway\" \"114th\" \"118th\" CDOT Chicago alderman",
+              "\"81st street\" \"greenway\" \"Auburn Gresham\" bike CDOT",
+              "\"81st\" \"greenway\" \"Parnell\" \"Union\" Auburn Gresham bicycles",
+              "\"Ewing Avenue\" \"greenway\" \"114th\" 118th bike alderman",
+              "\"Prospect Avenue\" \"bike\" \"97th\" \"105th\" greenway Chicago",
+              "\"81st\" \"neighborhood greenway\" Damen Racine CDOT",
+              "\"81st\" \"greenway\" \"Auburn Gresham\" CDOT neighborhood bike network ward",
+              "\"Ewing\" \"114th\" \"118th\" \"bike\" \"ward\" Chicago",
+              "\"Prospect\" \"97th\" \"105th\" \"bike\" \"19th ward\" Chicago",
+              "\"81st Street\" \"bike\" \"Parnell\" \"CDOT\" Chicago",
+              "\"Ewing\" \"greenway\" \"Chicago\" \"bicycle\" 10th ward",
+              "\"Ewing\" \"greenway\" \"118th\" \"bike\" Chicago",
+              "\"Prospect\" \"greenway\" \"Beverly\" bicycle Chicago 103rd",
+              "\"81st\" \"Auburn Gresham\" \"bike\" neighborhood greenway 2023",
+              "\"81st street\" \"greenway\" chicago \"alderman\" 2023",
+              "\"Auburn Gresham\" \"81st\" \"bikeways\" \"CDOT\" 2023",
+              "\"81st\" \"Damen\" \"Racine\" \"bike\" Chicago 2023",
+              "\"Ewing\" \"118th\" \"greenway\" \"Alderman\" 10th Chicago",
+              "\"Prospect Avenue\" \"bicycle\" \"97th\" \"105th\" Beverly Chicago"
+            ],
+            "finding": "No detailed corridor-specific CDOT engineering drawings or direct ward project update found; generic and differently located project sources excluded.",
+            "failed_retrievals": [
+              "Web PDF open of Cook County Lake Calumet study returned 400 due to 42 MB content length; public escalated curl succeeded and pages 41 and 76 were visually inspected."
+            ]
+          }
+        ]
+      },
+      "record_ids": [
+        "south-three-row-4hwn_z284-aimv",
+        "south-three-row-itvd~cpd9_7nut",
+        "south-three-row-57jp.grb6_4xzj",
+        "south-three-row-53mk.drxs-c7u5",
+        "south-three-row-qamp~8ey4_t5q5",
+        "south-three-row-f7h5-aybk~kywp",
+        "south-three-row-p9y5~a44c.4cdy",
+        "south-three-row-u3h7_6cmi_gaje",
+        "81st-union-west-opposing-arms",
+        "81st-union-east-opposing-arms",
+        "81st-union-intervening-road"
+      ],
+      "notes": "docs/south-three-expansion-source-review.md"
     }
   ]
 }

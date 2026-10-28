@@ -115,3 +115,22 @@ test('explicit divided-road pair follows each original one-way arm and its restr
  delete input.ways[1].split_match;
  assert.equal(traceJunction(input),null);
 });
+
+test('bounded multiway carriageways keep each arm and internal restrictions beyond 200 metres', () => {
+ const points=[[-87,41],[-86.99996,41.0005],[-87,41.001],[-87.00004,41.0005],[-87,41]];
+ const split_match={method:'explicit-city-split-carriageway',evidence_id:'underpass'};
+ const ways=points.slice(1).map((p,i)=>({id:51+i,nodes:[i+1,i===3?1:i+2],coordinates:[points[i],p],nodeTags:[{},{}],tags:{name:'Example Avenue',highway:'residential',oneway:'yes'},split_match}));
+ const input={ways,fromNode:1,toNode:3,fromWayId:10,toWayId:20};
+ const result=traceJunction(input);
+ assert.ok(result.forward.length_m+result.reverse.length_m>200);
+ assert.deepEqual(result.forward.source_way_ids,[51,52]);
+ assert.deepEqual(result.reverse.source_way_ids,[53,54]);
+ assert.deepEqual(result.reverse.geometry.coordinates,points.slice(2));
+ assert.equal(result.forward.access.status,'allowed');assert.equal(result.reverse.access.status,'allowed');
+ const restricted=traceJunction({...input,relations:[restriction(51,2,52,'no_straight_on')]});
+ assert.equal(restricted.forward.access.status,'unknown');
+ assert.ok(restricted.forward.access.source_ids.includes('relation/99'));
+ assert.equal(restricted.reverse.access.status,'allowed');
+ const circular=ways.map(({split_match,...way})=>({...way,tags:{...way.tags,junction:'circular'}}));
+ assert.equal(traceJunction({...input,ways:circular}),null);
+});

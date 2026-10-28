@@ -1,6 +1,6 @@
 # Ten-greenway expansion and validation
 
-Reviewed October 27, 2026, after committing and pushing Bloomingdale/Hamlin as `9310634` on `codex/greenway-route-continuity`. Three Terra 6.1 Medium workers researched ten street families concurrently within the three available worker slots. This expansion is a local working-tree change following that checkpoint.
+Reviewed October 27, 2026, after committing and pushing Bloomingdale/Hamlin as `9310634` on `codex/greenway-route-continuity`. Three Terra 6.1 Medium workers researched ten street families concurrently within the three available worker slots. This expansion was subsequently committed and pushed as `0eac90c`. See the [next ten-family expansion](route-second-ten-greenways-validation.md) for the current working-tree results.
 
 The export now contains **42 street families, 64 route sections, 3,610 movements and 157 directional runs**. All access is source-inferred or conflicting; none is field approved. Its designation geometry measures **69.96545 miles**. Stops, signals and traffic calming do not break ordinary-car continuity, and a car trace follows the designated route through its bends without taking off-route bypasses.
 

@@ -7,10 +7,9 @@ export function traceJunction({ way, ways = way ? [way] : [], fromNode, toNode, 
   if (!ways.length || fromNode == null || toNode == null || fromNode === toNode || fromWayId == null || toWayId == null) return null;
   // Explicitly bound short divided roads use the same cycle topology, with
   // their original motor tags intact. The preparer checks city correspondence.
-  const split = ways.length === 2 && ways.every(w => Array.isArray(w.nodes) && w.nodes.length >= 2 && w.split_match?.method === 'explicit-city-split-carriageway')
+  const split = ways.length >= 2 && ways.every(w => Array.isArray(w.nodes) && w.nodes.length >= 2 && w.split_match?.method === 'explicit-city-split-carriageway')
     && ways.every(w => w.split_match.evidence_id === ways[0].split_match.evidence_id)
-    && ways.every(w => w.tags?.oneway === 'yes' && w.tags.name === ways[0].tags.name)
-    && ways[0].nodes[0] === ways[1].nodes.at(-1) && ways[0].nodes.at(-1) === ways[1].nodes[0];
+    && ways.every(w => w.tags?.oneway === 'yes' && w.tags.name === ways[0].tags.name);
   const graph = new Map(), positions = new Map(), seenEdges = new Set();
   const add = (id, edge) => { if (!graph.has(id)) graph.set(id, []); graph.get(id).push(edge); };
   for (const w of ways) {
@@ -34,7 +33,7 @@ export function traceJunction({ way, ways = way ? [way] : [], fromNode, toNode, 
   while (stack.length) { const n = stack.pop(); if (visited.has(n)) continue; visited.add(n); for (const e of graph.get(n)) stack.push(e.to); }
   if (visited.size !== graph.size || graph.size < 3) return null;
   const total = [...graph.entries()].reduce((n, [id, edges]) => n + edges.reduce((s, e) => s + lineLength([positions.get(id), positions.get(e.to)]), 0), 0) / 2;
-  if (total > 200) return null;
+  if (total > (split ? 250 : 200)) return null;
   const arc = (start, end, first, incoming, outgoing) => {
     const edges = []; let current = first;
     while (true) {
