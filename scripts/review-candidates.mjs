@@ -1,3 +1,4 @@
+// Historical interval candidate review; this does not generate the active directional-route analysis.
 import { DatabaseSync } from 'node:sqlite';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { lineString, nearestPointOnLine } from '@turf/turf';

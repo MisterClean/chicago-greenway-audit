@@ -1,0 +1,1583 @@
+{
+  "schema_version": 1,
+  "description": "CDOT Neighborhood Greenway source-row representation in the route export; not all bikeways, a count of distinct projects, or field verification. Mileage sums city mi_ctrline attributes, not route geometry or driving distance.",
+  "eligibility": {
+    "field": "displayrou",
+    "equals": "Neighborhood Greenway",
+    "validated_city_rows": 258
+  },
+  "source": {
+    "city": {
+      "file": "greenways.json",
+      "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+      "retrieved_at": "2026-09-19T02:15:11.241Z",
+      "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+      "license": "City of Chicago data portal terms",
+      "license_url": "https://www.chicago.gov/city/en/narr/foia/data_disclaimer.html"
+    },
+    "route_sha256": "c1b8e56e3db3b9cfaf1da7834e46af680a25e763d75f79316421b65a064c4503"
+  },
+  "summary": {
+    "total_city_rows": 258,
+    "included_city_rows": 258,
+    "remaining_city_rows": 0,
+    "total_city_source_miles": 85.233758129257,
+    "included_city_source_miles": 85.233758129257,
+    "remaining_city_source_miles": 0,
+    "route_family_count": 85,
+    "route_section_count": 114,
+    "remaining_raw_street_names": 0
+  },
+  "covered_rows": [
+    {
+      "id": "row-2bn4.nve4-hd5w",
+      "route_ids": [
+        "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-2d5z_n6jd.a66w",
+      "route_ids": [
+        "greenview-1"
+      ]
+    },
+    {
+      "id": "row-2j6z-x5nh-hr4p",
+      "route_ids": [
+        "plymouth-1"
+      ]
+    },
+    {
+      "id": "row-2j8m_8py9_hx92",
+      "route_ids": [
+        "lavergne-2"
+      ]
+    },
+    {
+      "id": "row-2nne~xey9~hyrp",
+      "route_ids": [
+        "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-2vkf.gkqn-dg3e",
+      "route_ids": [
+        "leland-1"
+      ]
+    },
+    {
+      "id": "row-2y8f-r3mi~ijsb",
+      "route_ids": [
+        "erie-1"
+      ]
+    },
+    {
+      "id": "row-323s.uae7-nsxq",
+      "route_ids": [
+        "24th-1"
+      ]
+    },
+    {
+      "id": "row-363v~eatx.v9ft",
+      "route_ids": [
+        "104th-1"
+      ]
+    },
+    {
+      "id": "row-39t4_437d.zgtb",
+      "route_ids": [
+        "ardmore-1"
+      ]
+    },
+    {
+      "id": "row-3hq2~mvyq~hukh",
+      "route_ids": [
+        "14th-1"
+      ]
+    },
+    {
+      "id": "row-3ta3-sx9b.3hwx",
+      "route_ids": [
+        "avenue-j-1"
+      ]
+    },
+    {
+      "id": "row-434v-meyd.3gxa",
+      "route_ids": [
+        "rockwell-2"
+      ]
+    },
+    {
+      "id": "row-4832.xuwa~f7zh",
+      "route_ids": [
+        "polk-1"
+      ]
+    },
+    {
+      "id": "row-4h83_cedq-6da7",
+      "route_ids": [
+        "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-4hwn_z284-aimv",
+      "route_ids": [
+        "ewing-1"
+      ]
+    },
+    {
+      "id": "row-4q3d.at63.qceu",
+      "route_ids": [
+        "berteau-1"
+      ]
+    },
+    {
+      "id": "row-4wbi~mp82_esuh",
+      "route_ids": [
+        "hirsch-1"
+      ]
+    },
+    {
+      "id": "row-53mk.drxs-c7u5",
+      "route_ids": [
+        "81st-1"
+      ]
+    },
+    {
+      "id": "row-567r_3xw8.pymc",
+      "route_ids": [
+        "carmen-2"
+      ]
+    },
+    {
+      "id": "row-57jp.grb6_4xzj",
+      "route_ids": [
+        "prospect-1"
+      ]
+    },
+    {
+      "id": "row-583t.mwuq.4nnw",
+      "route_ids": [
+        "long-1"
+      ]
+    },
+    {
+      "id": "row-5ccf-hdpx_h9qr",
+      "route_ids": [
+        "24th-1"
+      ]
+    },
+    {
+      "id": "row-5gvx.my44_7s4z",
+      "route_ids": [
+        "keeler-2"
+      ]
+    },
+    {
+      "id": "row-5h7z.m2fp_7gx2",
+      "route_ids": [
+        "berteau-3"
+      ]
+    },
+    {
+      "id": "row-5pr3-cxvv~erar",
+      "route_ids": [
+        "leavitt-1"
+      ]
+    },
+    {
+      "id": "row-5sa4_xspd-vvaq",
+      "route_ids": [
+        "21st-1"
+      ]
+    },
+    {
+      "id": "row-5t4c-tisg-vua6",
+      "route_ids": [
+        "polk-1"
+      ]
+    },
+    {
+      "id": "row-5w95~i36u-q5b6",
+      "route_ids": [
+        "berteau-1"
+      ]
+    },
+    {
+      "id": "row-66xf_pkuh.sbsm",
+      "route_ids": [
+        "124th-1"
+      ]
+    },
+    {
+      "id": "row-6cw8-hzvx_wth2",
+      "route_ids": [
+        "keeler-1"
+      ]
+    },
+    {
+      "id": "row-6i7n.rrn3_ujsh",
+      "route_ids": [
+        "leland-1"
+      ]
+    },
+    {
+      "id": "row-6jsc~qzuy-dtav",
+      "route_ids": [
+        "rockwell-2"
+      ]
+    },
+    {
+      "id": "row-72jg_55uf~ckvs",
+      "route_ids": [
+        "east-lake-1"
+      ]
+    },
+    {
+      "id": "row-79bd_zkhp.bn4h",
+      "route_ids": [
+        "winnemac-2"
+      ]
+    },
+    {
+      "id": "row-7dga-i4ae-zmgx",
+      "route_ids": [
+        "ravenswood-2"
+      ]
+    },
+    {
+      "id": "row-7dq3.m3hg-hks5",
+      "route_ids": [
+        "le-moyne-1"
+      ]
+    },
+    {
+      "id": "row-7hip-z8ja.9ka2",
+      "route_ids": [
+        "albion-1"
+      ]
+    },
+    {
+      "id": "row-7n7e-y6xv.3ipe",
+      "route_ids": [
+        "berwyn-2"
+      ]
+    },
+    {
+      "id": "row-7q5t~dx7f.ncap",
+      "route_ids": [
+        "kenmore-1"
+      ]
+    },
+    {
+      "id": "row-7uzh.p3e8.fn7z",
+      "route_ids": [
+        "ridgeway-3"
+      ]
+    },
+    {
+      "id": "row-88y6_ixms~chd9",
+      "route_ids": [
+        "central-park-1"
+      ]
+    },
+    {
+      "id": "row-8nvk.zdbu-tfi4",
+      "route_ids": [
+        "george-1"
+      ]
+    },
+    {
+      "id": "row-8p38.d5pr_483c",
+      "route_ids": [
+        "le-moyne-1"
+      ]
+    },
+    {
+      "id": "row-8rit~7w97-piw2",
+      "route_ids": [
+        "berteau-1"
+      ]
+    },
+    {
+      "id": "row-8tys~mr6t-rt86",
+      "route_ids": [
+        "leland-1"
+      ]
+    },
+    {
+      "id": "row-8xia~c4cz~hqd9",
+      "route_ids": [
+        "keeler-1"
+      ]
+    },
+    {
+      "id": "row-8z5i.69jx.wshp",
+      "route_ids": [
+        "bloomingdale-1"
+      ]
+    },
+    {
+      "id": "row-94iw~6jr2-x489",
+      "route_ids": [
+        "roscoe-1"
+      ]
+    },
+    {
+      "id": "row-972k~6n95-qjxf",
+      "route_ids": [
+        "birchwood-1"
+      ]
+    },
+    {
+      "id": "row-98r2~7mff~uhez",
+      "route_ids": [
+        "berwyn-1"
+      ]
+    },
+    {
+      "id": "row-9dbi.qgtu~phcd",
+      "route_ids": [
+        "harding-1"
+      ]
+    },
+    {
+      "id": "row-9fhc-fg9z~eqbn",
+      "route_ids": [
+        "bloomingdale-1"
+      ]
+    },
+    {
+      "id": "row-9ita~rsfz.t6s7",
+      "route_ids": [
+        "keeler-2"
+      ]
+    },
+    {
+      "id": "row-9qbg.drnv.cmv4",
+      "route_ids": [
+        "wrightwood-2"
+      ]
+    },
+    {
+      "id": "row-9qrz~v2qv.wvsa",
+      "route_ids": [
+        "105th-1"
+      ]
+    },
+    {
+      "id": "row-9ssb-pmdc~mnxf",
+      "route_ids": [
+        "avers-1"
+      ]
+    },
+    {
+      "id": "row-9yc7~rqhe~83yw",
+      "route_ids": [
+        "granville-1"
+      ]
+    },
+    {
+      "id": "row-a382_9uag.kagm",
+      "route_ids": [
+        "hamlin-1"
+      ]
+    },
+    {
+      "id": "row-a6tq~5a4j~ykvi",
+      "route_ids": [
+        "lavergne-2"
+      ]
+    },
+    {
+      "id": "row-aguw~42z7~mmxa",
+      "route_ids": [
+        "ainslie-2"
+      ]
+    },
+    {
+      "id": "row-arhw.ybf9.f7xu",
+      "route_ids": [
+        "winthrop-1"
+      ]
+    },
+    {
+      "id": "row-asr3-pvt4-ucg4",
+      "route_ids": [
+        "rockwell-2"
+      ]
+    },
+    {
+      "id": "row-avuk.dph4.rfh4",
+      "route_ids": [
+        "kenmore-1"
+      ]
+    },
+    {
+      "id": "row-b7mv~ppur-prqy",
+      "route_ids": [
+        "loomis-1"
+      ]
+    },
+    {
+      "id": "row-b8mz_gyug-txux",
+      "route_ids": [
+        "sunnyside-1"
+      ]
+    },
+    {
+      "id": "row-befx.natn-zwgj",
+      "route_ids": [
+        "wellington-1"
+      ]
+    },
+    {
+      "id": "row-bgej-zy5s-pxfp",
+      "route_ids": [
+        "wood-2"
+      ]
+    },
+    {
+      "id": "row-bnei~wvhc.jrsx",
+      "route_ids": [
+        "ardmore-1"
+      ]
+    },
+    {
+      "id": "row-bpsr_gxmr-xrua",
+      "route_ids": [
+        "wrightwood-1"
+      ]
+    },
+    {
+      "id": "row-bq4z~aa9m.899d",
+      "route_ids": [
+        "birchwood-1"
+      ]
+    },
+    {
+      "id": "row-c4a2_m526~522s",
+      "route_ids": [
+        "le-moyne-1"
+      ]
+    },
+    {
+      "id": "row-c5x4_w9sf~sv5y",
+      "route_ids": [
+        "19th-1"
+      ]
+    },
+    {
+      "id": "row-cc5q-a6r7~eqj7",
+      "route_ids": [
+        "granville-1"
+      ]
+    },
+    {
+      "id": "row-cdds.7qag~3ksj",
+      "route_ids": [
+        "logan-2"
+      ]
+    },
+    {
+      "id": "row-cg56_7q8e~jzk6",
+      "route_ids": [
+        "berwyn-2"
+      ]
+    },
+    {
+      "id": "row-cn8p.fgfx_8c95",
+      "route_ids": [
+        "glenwood-1"
+      ]
+    },
+    {
+      "id": "row-cnft-dzgn~79hm",
+      "route_ids": [
+        "keeler-1"
+      ]
+    },
+    {
+      "id": "row-cnii.tuwg~j35c",
+      "route_ids": [
+        "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-d36z.5mk2-jea8",
+      "route_ids": [
+        "long-1"
+      ]
+    },
+    {
+      "id": "row-d5jb_ba32_a78j",
+      "route_ids": [
+        "jonquil-1"
+      ]
+    },
+    {
+      "id": "row-dj6h~udgq~i6vi",
+      "route_ids": [
+        "cullom-1"
+      ]
+    },
+    {
+      "id": "row-dmab-bde6~88ip",
+      "route_ids": [
+        "roscoe-1"
+      ]
+    },
+    {
+      "id": "row-dvmp~z8xt_i37a",
+      "route_ids": [
+        "lakewood-1"
+      ]
+    },
+    {
+      "id": "row-e2ij~bhix_rq9s",
+      "route_ids": [
+        "campbell-1"
+      ]
+    },
+    {
+      "id": "row-e74a~4ct9_isie",
+      "route_ids": [
+        "wood-1"
+      ]
+    },
+    {
+      "id": "row-ensn~hrye.ce4y",
+      "route_ids": [
+        "school-1"
+      ]
+    },
+    {
+      "id": "row-ew4z.5rsw_pzv9",
+      "route_ids": [
+        "24th-1"
+      ]
+    },
+    {
+      "id": "row-f4y4.9rez-hwpq",
+      "route_ids": [
+        "albion-1"
+      ]
+    },
+    {
+      "id": "row-f5bc~m435-unsv",
+      "route_ids": [
+        "leland-1"
+      ]
+    },
+    {
+      "id": "row-f7h5-aybk~kywp",
+      "route_ids": [
+        "81st-2"
+      ]
+    },
+    {
+      "id": "row-ff46-gssy-rrp2",
+      "route_ids": [
+        "polk-1"
+      ]
+    },
+    {
+      "id": "row-fh96~8xpt-wzrz",
+      "route_ids": [
+        "granville-1"
+      ]
+    },
+    {
+      "id": "row-fm3b-2q2j~frqb",
+      "route_ids": [
+        "rockwell-3"
+      ]
+    },
+    {
+      "id": "row-fmy8-xsws~6v4x",
+      "route_ids": [
+        "rockwell-3"
+      ]
+    },
+    {
+      "id": "row-ftcb_6xmu~qa9x",
+      "route_ids": [
+        "roscoe-2"
+      ]
+    },
+    {
+      "id": "row-fuyv_y9ez~mdjv",
+      "route_ids": [
+        "berteau-1"
+      ]
+    },
+    {
+      "id": "row-fxzd-qf8h.ccni",
+      "route_ids": [
+        "rockwell-1"
+      ]
+    },
+    {
+      "id": "row-g87j-tbmk_gx4c",
+      "route_ids": [
+        "berwyn-2"
+      ]
+    },
+    {
+      "id": "row-gdhc-hkkb.h3bg",
+      "route_ids": [
+        "dearborn-1"
+      ]
+    },
+    {
+      "id": "row-gdwe.mqgf.3i8u",
+      "route_ids": [
+        "hirsch-1"
+      ]
+    },
+    {
+      "id": "row-ge7q~gbjp.xukc",
+      "route_ids": [
+        "glenwood-1"
+      ]
+    },
+    {
+      "id": "row-grf4~xcbq~6rb7",
+      "route_ids": [
+        "dickens-1"
+      ]
+    },
+    {
+      "id": "row-grrn_mdsu~v9ge",
+      "route_ids": [
+        "roscoe-1"
+      ]
+    },
+    {
+      "id": "row-gt5a_ktbp-zxxk",
+      "route_ids": [
+        "hamlin-1"
+      ]
+    },
+    {
+      "id": "row-gv5q_svcf_t3vj",
+      "route_ids": [
+        "aldine-1"
+      ]
+    },
+    {
+      "id": "row-gv83~kyug~tfd8",
+      "route_ids": [
+        "dearborn-1"
+      ]
+    },
+    {
+      "id": "row-gzf4~rb7x_v83i",
+      "route_ids": [
+        "berteau-3"
+      ]
+    },
+    {
+      "id": "row-h4fc_uvn9-qns6",
+      "route_ids": [
+        "manor-1"
+      ]
+    },
+    {
+      "id": "row-h66p_pyv6-jxt2",
+      "route_ids": [
+        "long-1"
+      ]
+    },
+    {
+      "id": "row-h7za.495h_8e9t",
+      "route_ids": [
+        "school-1"
+      ]
+    },
+    {
+      "id": "row-hbrr~kkb2.gs8j",
+      "route_ids": [
+        "loomis-1"
+      ]
+    },
+    {
+      "id": "row-hd4f_m3i9_6vzd",
+      "route_ids": [
+        "leland-1"
+      ]
+    },
+    {
+      "id": "row-hhh6-5sg3~9x3s",
+      "route_ids": [
+        "98th-2"
+      ]
+    },
+    {
+      "id": "row-hkyx_48ex_8z98",
+      "route_ids": [
+        "cortland-2"
+      ]
+    },
+    {
+      "id": "row-hmsb_2f3m-ak9q",
+      "route_ids": [
+        "granville-1"
+      ]
+    },
+    {
+      "id": "row-hn8n_vc6q_m8wd",
+      "route_ids": [
+        "rosehill-1"
+      ]
+    },
+    {
+      "id": "row-hpxf_p7zn-jsiw",
+      "route_ids": [
+        "ridgeway-2"
+      ]
+    },
+    {
+      "id": "row-hq5n~g4nt_de2u",
+      "route_ids": [
+        "polk-1"
+      ]
+    },
+    {
+      "id": "row-htp4_yvye.38r6",
+      "route_ids": [
+        "berteau-3"
+      ]
+    },
+    {
+      "id": "row-hv69_div8~h47p",
+      "route_ids": [
+        "avers-1"
+      ]
+    },
+    {
+      "id": "row-i3hn.dsfa~bjd8",
+      "route_ids": [
+        "wood-2"
+      ]
+    },
+    {
+      "id": "row-i74w-x7ng.sgri",
+      "route_ids": [
+        "north-shore-1"
+      ]
+    },
+    {
+      "id": "row-idha-q3ds.57zu",
+      "route_ids": [
+        "glenwood-1"
+      ]
+    },
+    {
+      "id": "row-ie9a-8v4h~zs89",
+      "route_ids": [
+        "juneway-1"
+      ]
+    },
+    {
+      "id": "row-igtt.auca-9a94",
+      "route_ids": [
+        "hamlin-3"
+      ]
+    },
+    {
+      "id": "row-ih3q-vktm_ivy8",
+      "route_ids": [
+        "ravenswood-2"
+      ]
+    },
+    {
+      "id": "row-ihqd.w7jk-reas",
+      "route_ids": [
+        "82nd-1"
+      ]
+    },
+    {
+      "id": "row-ii64-6e54-7i8z",
+      "route_ids": [
+        "lavergne-2"
+      ]
+    },
+    {
+      "id": "row-ikjv.59qa_rhpx",
+      "route_ids": [
+        "berteau-1"
+      ]
+    },
+    {
+      "id": "row-iqsz.auer~nqrr",
+      "route_ids": [
+        "wrightwood-3"
+      ]
+    },
+    {
+      "id": "row-irx9_unci~pju9",
+      "route_ids": [
+        "kenmore-1"
+      ]
+    },
+    {
+      "id": "row-itvd~cpd9_7nut",
+      "route_ids": [
+        "prospect-1"
+      ]
+    },
+    {
+      "id": "row-izhx-npfm~7itr",
+      "route_ids": [
+        "argyle-1"
+      ]
+    },
+    {
+      "id": "row-j3s4-bife.48c7",
+      "route_ids": [
+        "28th-1"
+      ]
+    },
+    {
+      "id": "row-j75m~d2v9-97uu",
+      "route_ids": [
+        "hamlin-1"
+      ]
+    },
+    {
+      "id": "row-j7ru~242h_rfdy",
+      "route_ids": [
+        "winnemac-1"
+      ]
+    },
+    {
+      "id": "row-j88u_zm6q_fbgt",
+      "route_ids": [
+        "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-j99q_9g6u_25vc",
+      "route_ids": [
+        "wrightwood-3"
+      ]
+    },
+    {
+      "id": "row-ja84.meyw~c954",
+      "route_ids": [
+        "glenwood-3"
+      ]
+    },
+    {
+      "id": "row-jbxc-stau~yz32",
+      "route_ids": [
+        "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-je4c.57qc~ws8a",
+      "route_ids": [
+        "granville-1"
+      ]
+    },
+    {
+      "id": "row-jfzd~s99v.dr5f",
+      "route_ids": [
+        "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-jjg5_pe2y_7ben",
+      "route_ids": [
+        "30th-1"
+      ]
+    },
+    {
+      "id": "row-jkmg_tcrm.hc9u",
+      "route_ids": [
+        "lavergne-1"
+      ]
+    },
+    {
+      "id": "row-jnzi_c7zj-crny",
+      "route_ids": [
+        "farwell-1"
+      ]
+    },
+    {
+      "id": "row-k2wa_gn38~37p7",
+      "route_ids": [
+        "granville-1"
+      ]
+    },
+    {
+      "id": "row-kb56.czy3-uyw7",
+      "route_ids": [
+        "cortland-1"
+      ]
+    },
+    {
+      "id": "row-kepg~wgrs-kaij",
+      "route_ids": [
+        "rockwell-3"
+      ]
+    },
+    {
+      "id": "row-kirn_hd26~rmwt",
+      "route_ids": [
+        "wrightwood-1"
+      ]
+    },
+    {
+      "id": "row-kk9s.wxvh.54pi",
+      "route_ids": [
+        "ravenswood-1"
+      ]
+    },
+    {
+      "id": "row-knn2~9bd9.v8ws",
+      "route_ids": [
+        "winthrop-1"
+      ]
+    },
+    {
+      "id": "row-kuus_sxpv~xq7q",
+      "route_ids": [
+        "granville-1"
+      ]
+    },
+    {
+      "id": "row-kxgt~6ijf-duva",
+      "route_ids": [
+        "berwyn-2"
+      ]
+    },
+    {
+      "id": "row-m4n8-p2fm-is63",
+      "route_ids": [
+        "ravenswood-2"
+      ]
+    },
+    {
+      "id": "row-m4nx_7zew-thzm",
+      "route_ids": [
+        "lyndale-1"
+      ]
+    },
+    {
+      "id": "row-m7uh-fry9_sx64",
+      "route_ids": [
+        "wood-3"
+      ]
+    },
+    {
+      "id": "row-mc9h_wzfe~vu5i",
+      "route_ids": [
+        "lyndale-1"
+      ]
+    },
+    {
+      "id": "row-mfd8-e3sw-kr45",
+      "route_ids": [
+        "argyle-2"
+      ]
+    },
+    {
+      "id": "row-mhva~sefa-56y8",
+      "route_ids": [
+        "bloomingdale-1"
+      ]
+    },
+    {
+      "id": "row-mjuf_n4wu_wzex",
+      "route_ids": [
+        "granville-1"
+      ]
+    },
+    {
+      "id": "row-mmum_qanc~3xrf",
+      "route_ids": [
+        "hamlin-3"
+      ]
+    },
+    {
+      "id": "row-mqjq.3jur-99ed",
+      "route_ids": [
+        "granville-1"
+      ]
+    },
+    {
+      "id": "row-mszc_k87d.96yb",
+      "route_ids": [
+        "roscoe-1"
+      ]
+    },
+    {
+      "id": "row-muht_4bn5-v2q2",
+      "route_ids": [
+        "winnemac-2"
+      ]
+    },
+    {
+      "id": "row-mwnn~eyc4~ei26",
+      "route_ids": [
+        "wellington-1"
+      ]
+    },
+    {
+      "id": "row-mzhe_8x6z_xpsf",
+      "route_ids": [
+        "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-nat7~w2yg_e9fb",
+      "route_ids": [
+        "wrightwood-1"
+      ]
+    },
+    {
+      "id": "row-nch5.cymp~b5rq",
+      "route_ids": [
+        "wood-2"
+      ]
+    },
+    {
+      "id": "row-nfrj.vcdz_ctwq",
+      "route_ids": [
+        "carmen-1"
+      ]
+    },
+    {
+      "id": "row-nn2f.26nq.pskp",
+      "route_ids": [
+        "argyle-2"
+      ]
+    },
+    {
+      "id": "row-nnk9_kixb_kru8",
+      "route_ids": [
+        "wood-2"
+      ]
+    },
+    {
+      "id": "row-nr6u_qxaq_g748",
+      "route_ids": [
+        "menard-1"
+      ]
+    },
+    {
+      "id": "row-ntbg~tksd.hb64",
+      "route_ids": [
+        "keeler-1"
+      ]
+    },
+    {
+      "id": "row-ntha~efmu.qgse",
+      "route_ids": [
+        "menard-1"
+      ]
+    },
+    {
+      "id": "row-nxha.d5gq-ps6y",
+      "route_ids": [
+        "berteau-1"
+      ]
+    },
+    {
+      "id": "row-p2b7.22c8.xgcb",
+      "route_ids": [
+        "wood-2"
+      ]
+    },
+    {
+      "id": "row-p79a-nzw3.kric",
+      "route_ids": [
+        "ridgeway-1"
+      ]
+    },
+    {
+      "id": "row-p7em.hzp8-z6uy",
+      "route_ids": [
+        "leavitt-1"
+      ]
+    },
+    {
+      "id": "row-p9y5~a44c.4cdy",
+      "route_ids": [
+        "81st-2"
+      ]
+    },
+    {
+      "id": "row-pc7n_a4xw~gz6u",
+      "route_ids": [
+        "cullom-1"
+      ]
+    },
+    {
+      "id": "row-pq5z-s53x.brp2",
+      "route_ids": [
+        "berteau-3"
+      ]
+    },
+    {
+      "id": "row-pt3s-nbhw-9kfh",
+      "route_ids": [
+        "ravenswood-2"
+      ]
+    },
+    {
+      "id": "row-ptmd_mb28-aknh",
+      "route_ids": [
+        "lavergne-2"
+      ]
+    },
+    {
+      "id": "row-px7u.ngw2.3miv",
+      "route_ids": [
+        "kedvale-2"
+      ]
+    },
+    {
+      "id": "row-q4jd.37cc~8cnk",
+      "route_ids": [
+        "dickens-1"
+      ]
+    },
+    {
+      "id": "row-q7br.k2n4.y3hx",
+      "route_ids": [
+        "bloomingdale-1"
+      ]
+    },
+    {
+      "id": "row-q89g_kydj.7hkd",
+      "route_ids": [
+        "eastwood-1"
+      ]
+    },
+    {
+      "id": "row-q9v3~jvue.ejt3",
+      "route_ids": [
+        "ravenswood-2"
+      ]
+    },
+    {
+      "id": "row-qamp~8ey4_t5q5",
+      "route_ids": [
+        "81st-2"
+      ]
+    },
+    {
+      "id": "row-qay7~qqhc_6mse",
+      "route_ids": [
+        "lavergne-2"
+      ]
+    },
+    {
+      "id": "row-qfyh_4rhq-fwc5",
+      "route_ids": [
+        "hamlin-1"
+      ]
+    },
+    {
+      "id": "row-qj78.kpa2-ryuk",
+      "route_ids": [
+        "winnemac-2"
+      ]
+    },
+    {
+      "id": "row-qmjv_nhs8.tmi8",
+      "route_ids": [
+        "keeler-2"
+      ]
+    },
+    {
+      "id": "row-qps7~hqnm.bsbm",
+      "route_ids": [
+        "winnemac-2"
+      ]
+    },
+    {
+      "id": "row-qrw8~ek97_8ffg",
+      "route_ids": [
+        "roscoe-2"
+      ]
+    },
+    {
+      "id": "row-qvtr_8ne7~bvpp",
+      "route_ids": [
+        "9th-1"
+      ]
+    },
+    {
+      "id": "row-qwjx_r592.h4qr",
+      "route_ids": [
+        "98th-1"
+      ]
+    },
+    {
+      "id": "row-qyu3.mg3k_g39b",
+      "route_ids": [
+        "erie-1"
+      ]
+    },
+    {
+      "id": "row-qzji-988m_uzpg",
+      "route_ids": [
+        "glenwood-2"
+      ]
+    },
+    {
+      "id": "row-r4yb-73vz_r9hg",
+      "route_ids": [
+        "ridgeway-1"
+      ]
+    },
+    {
+      "id": "row-rcf6-tuy9~chwa",
+      "route_ids": [
+        "wellington-1"
+      ]
+    },
+    {
+      "id": "row-rdcx_62yt~45it",
+      "route_ids": [
+        "roscoe-2"
+      ]
+    },
+    {
+      "id": "row-rfjh_buwp~qfix",
+      "route_ids": [
+        "carmen-1"
+      ]
+    },
+    {
+      "id": "row-rg87.cynd-7yib",
+      "route_ids": [
+        "berwyn-2"
+      ]
+    },
+    {
+      "id": "row-rsyh_vh9b.jyts",
+      "route_ids": [
+        "hamlin-1"
+      ]
+    },
+    {
+      "id": "row-rtc4_mfqg~45k3",
+      "route_ids": [
+        "ainslie-1"
+      ]
+    },
+    {
+      "id": "row-rubi_y2ch_uh4b",
+      "route_ids": [
+        "bloomingdale-1"
+      ]
+    },
+    {
+      "id": "row-rwxu_bq5t-ipmv",
+      "route_ids": [
+        "albion-1"
+      ]
+    },
+    {
+      "id": "row-s6xv-qq38_g7k8",
+      "route_ids": [
+        "wrightwood-2"
+      ]
+    },
+    {
+      "id": "row-sbv9-nemh.v8g9",
+      "route_ids": [
+        "roscoe-2"
+      ]
+    },
+    {
+      "id": "row-sehs~8th9.rbe3",
+      "route_ids": [
+        "wrightwood-1"
+      ]
+    },
+    {
+      "id": "row-sfkb.g97d.sgdr",
+      "route_ids": [
+        "charles-1"
+      ]
+    },
+    {
+      "id": "row-shc4_jp57_jn6v",
+      "route_ids": [
+        "central-park-1"
+      ]
+    },
+    {
+      "id": "row-smjt~ezi2_sb5e",
+      "route_ids": [
+        "roscoe-2"
+      ]
+    },
+    {
+      "id": "row-snpg.qyvu_ymx5",
+      "route_ids": [
+        "kenmore-1"
+      ]
+    },
+    {
+      "id": "row-sr4p.w5e8.ucbq",
+      "route_ids": [
+        "berwyn-1"
+      ]
+    },
+    {
+      "id": "row-stjm_dixi~3h89",
+      "route_ids": [
+        "virginia-1"
+      ]
+    },
+    {
+      "id": "row-szw6-2x9a-2ss9",
+      "route_ids": [
+        "erie-1"
+      ]
+    },
+    {
+      "id": "row-te2f_cgxc_dp6h",
+      "route_ids": [
+        "granville-1"
+      ]
+    },
+    {
+      "id": "row-ttku-y8f5_da8e",
+      "route_ids": [
+        "carmen-2"
+      ]
+    },
+    {
+      "id": "row-u3h7_6cmi_gaje",
+      "route_ids": [
+        "81st-2"
+      ]
+    },
+    {
+      "id": "row-u5wj_yvuv.se85",
+      "route_ids": [
+        "glenwood-1"
+      ]
+    },
+    {
+      "id": "row-u6sm-hs97~vkz5",
+      "route_ids": [
+        "paulina-1"
+      ]
+    },
+    {
+      "id": "row-ud98-pggg_z4tm",
+      "route_ids": [
+        "douglas-1"
+      ]
+    },
+    {
+      "id": "row-udjj.kvgv-e5nr",
+      "route_ids": [
+        "leland-1"
+      ]
+    },
+    {
+      "id": "row-uffi~2sbc~izvz",
+      "route_ids": [
+        "montgomery-1"
+      ]
+    },
+    {
+      "id": "row-uhgm_bzim_m5fe",
+      "route_ids": [
+        "dickens-1"
+      ]
+    },
+    {
+      "id": "row-ukhy_di58-umh5",
+      "route_ids": [
+        "kilbourn-1"
+      ]
+    },
+    {
+      "id": "row-v8nm_gcrv.3qmh",
+      "route_ids": [
+        "berteau-1"
+      ]
+    },
+    {
+      "id": "row-vhym~pu4g.guju",
+      "route_ids": [
+        "aldine-1"
+      ]
+    },
+    {
+      "id": "row-vp89-azea-6dxh",
+      "route_ids": [
+        "100th-1"
+      ]
+    },
+    {
+      "id": "row-vq2i~b34i.udd7",
+      "route_ids": [
+        "winthrop-1"
+      ]
+    },
+    {
+      "id": "row-vy8z-r7yn_5ka7",
+      "route_ids": [
+        "sunnyside-1"
+      ]
+    },
+    {
+      "id": "row-w6ce_auic-ahse",
+      "route_ids": [
+        "logan-1"
+      ]
+    },
+    {
+      "id": "row-whn5~y4c5.ih47",
+      "route_ids": [
+        "kedvale-1"
+      ]
+    },
+    {
+      "id": "row-wkph~qm3w~5yab",
+      "route_ids": [
+        "argyle-1"
+      ]
+    },
+    {
+      "id": "row-x92d_wvii_pbwb",
+      "route_ids": [
+        "leland-1"
+      ]
+    },
+    {
+      "id": "row-xf8g~8ygn.jeka",
+      "route_ids": [
+        "charles-2"
+      ]
+    },
+    {
+      "id": "row-xj27~69f9_ksrb",
+      "route_ids": [
+        "winnemac-2"
+      ]
+    },
+    {
+      "id": "row-xj45~5tv9-2mbr",
+      "route_ids": [
+        "ardmore-1"
+      ]
+    },
+    {
+      "id": "row-xm5h~gw9i_vqch",
+      "route_ids": [
+        "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-xmfi~f6n6_gf5x",
+      "route_ids": [
+        "wood-2"
+      ]
+    },
+    {
+      "id": "row-xqxw_seh8.u2gq",
+      "route_ids": [
+        "spaulding-1"
+      ]
+    },
+    {
+      "id": "row-xur6~8hyf.3yfq",
+      "route_ids": [
+        "lyndale-1"
+      ]
+    },
+    {
+      "id": "row-xurv_2j34_zur8",
+      "route_ids": [
+        "wrightwood-2"
+      ]
+    },
+    {
+      "id": "row-xzr7_qctm-mt7e",
+      "route_ids": [
+        "97th-1"
+      ]
+    },
+    {
+      "id": "row-y2dq.3s9k_38gf",
+      "route_ids": [
+        "aldine-1"
+      ]
+    },
+    {
+      "id": "row-yxt5.zqyq_n3kt",
+      "route_ids": [
+        "long-1"
+      ]
+    },
+    {
+      "id": "row-z2zq.9rfs-98dq",
+      "route_ids": [
+        "berwyn-1"
+      ]
+    },
+    {
+      "id": "row-z4qp-mbyn~7cpf",
+      "route_ids": [
+        "kilbourn-1"
+      ]
+    },
+    {
+      "id": "row-z6fn.ywid~e4w9",
+      "route_ids": [
+        "hamlin-2"
+      ]
+    },
+    {
+      "id": "row-ze8s_fkku-pz9v",
+      "route_ids": [
+        "magnolia-1"
+      ]
+    },
+    {
+      "id": "row-zecc~v3rf.fwkc",
+      "route_ids": [
+        "dickens-1"
+      ]
+    },
+    {
+      "id": "row-zf8y_8w58-du7q",
+      "route_ids": [
+        "rockwell-2"
+      ]
+    },
+    {
+      "id": "row-zjnt~tbtg~yxg8",
+      "route_ids": [
+        "keeler-1"
+      ]
+    },
+    {
+      "id": "row-zpn6-2wxn_j4wq",
+      "route_ids": [
+        "leavitt-2"
+      ]
+    },
+    {
+      "id": "row-ztk4.nb5w.n8wq",
+      "route_ids": [
+        "winnemac-2"
+      ]
+    }
+  ],
+  "remaining_street_groups": [],
+  "remaining_rows": []
+}

@@ -1,0 +1,884 @@
+{
+  "streets": [
+    {
+      "name": "Wood",
+      "axis": "north",
+      "source": "WOOD"
+    },
+    {
+      "name": "Berteau",
+      "axis": "east",
+      "source": "BERTEAU",
+      "additional_source_ids": [
+        "row-ikjv.59qa_rhpx",
+        "row-v8nm_gcrv.3qmh",
+        "row-5w95~i36u-q5b6"
+      ],
+      "explicit_ways": [
+        {
+          "route_id": "berteau-1",
+          "city_source_ids": [
+            "row-ikjv.59qa_rhpx"
+          ],
+          "way_ids": [
+            164646139
+          ],
+          "evidence_id": "remaining-central-row-ikjv.59qa_rhpx"
+        },
+        {
+          "route_id": "berteau-1",
+          "city_source_ids": [
+            "row-v8nm_gcrv.3qmh"
+          ],
+          "way_ids": [
+            32709496
+          ],
+          "evidence_id": "remaining-central-row-v8nm_gcrv.3qmh"
+        },
+        {
+          "route_id": "berteau-1",
+          "city_source_ids": [
+            "row-5w95~i36u-q5b6"
+          ],
+          "way_ids": [
+            24106579
+          ],
+          "evidence_id": "remaining-central-row-5w95~i36u-q5b6"
+        }
+      ],
+      "component_ids": [
+        {
+          "source_id": "row-5h7z.m2fp_7gx2",
+          "route_id": "berteau-3"
+        }
+      ]
+    },
+    {
+      "name": "Leland",
+      "axis": "east",
+      "source": "LELAND"
+    },
+    {
+      "name": "Dickens",
+      "axis": "east",
+      "source": "DICKENS"
+    },
+    {
+      "name": "Manor",
+      "axis": "north",
+      "source": "MANOR"
+    },
+    {
+      "name": "Kenmore",
+      "axis": "north",
+      "source": "KENMORE"
+    },
+    {
+      "name": "Glenwood",
+      "axis": "north",
+      "source": "GLENWOOD"
+    },
+    {
+      "name": "George",
+      "axis": "east",
+      "source": "GEORGE"
+    },
+    {
+      "name": "Loomis",
+      "axis": "north",
+      "source": "LOOMIS"
+    },
+    {
+      "name": "124th",
+      "axis": "east",
+      "source": "124TH"
+    },
+    {
+      "name": "School",
+      "axis": "east",
+      "source": "SCHOOL"
+    },
+    {
+      "name": "Roscoe",
+      "axis": "east",
+      "source": "ROSCOE",
+      "additional_source_ids": [
+        "row-ftcb_6xmu~qa9x"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "roscoe-2",
+          "way_id": 619457505,
+          "nodes": [
+            262169734,
+            10040045476,
+            3456306392
+          ],
+          "city_source_ids": [
+            "row-ftcb_6xmu~qa9x"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Winthrop",
+      "axis": "north",
+      "source": "WINTHROP"
+    },
+    {
+      "name": "Ardmore",
+      "axis": "east",
+      "source": "ARDMORE"
+    },
+    {
+      "name": "Winnemac",
+      "axis": "east",
+      "source": "WINNEMAC",
+      "scoped_ways": [
+        {
+          "route_id": "winnemac-2",
+          "way_id": 992031721,
+          "nodes": [
+            257156331,
+            11153435102,
+            257154871
+          ],
+          "city_source_ids": [
+            "row-muht_4bn5-v2q2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ainslie",
+      "axis": "east",
+      "source": "AINSLIE"
+    },
+    {
+      "name": "Carmen",
+      "axis": "east",
+      "source": "CARMEN",
+      "scoped_ways": [
+        {
+          "route_id": "carmen-2",
+          "way_id": 23744939,
+          "nodes": [
+            257156232,
+            11352634295,
+            257155045
+          ],
+          "city_source_ids": [
+            "row-567r_3xw8.pymc"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Argyle",
+      "axis": "east",
+      "source": "ARGYLE"
+    },
+    {
+      "name": "Aldine",
+      "axis": "east",
+      "source": "ALDINE",
+      "additional_source_ids": [
+        "row-gv5q_svcf_t3vj"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "aldine-1",
+          "way_id": 619457502,
+          "nodes": [
+            262170052,
+            10040045492,
+            10040045490,
+            262171169
+          ],
+          "city_source_ids": [
+            "row-gv5q_svcf_t3vj"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Cortland",
+      "axis": "east",
+      "source": "CORTLAND"
+    },
+    {
+      "name": "Berwyn",
+      "axis": "east",
+      "source": "BERWYN",
+      "source_aliases": [
+        "BERWN"
+      ],
+      "additional_source_ids": [
+        "row-cg56_7q8e~jzk6"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "berwyn-2",
+          "way_id": 1313897204,
+          "nodes": [
+            257146995,
+            12163643801,
+            10544230315,
+            13182271017,
+            257121401
+          ],
+          "city_source_ids": [
+            "row-cg56_7q8e~jzk6"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Polk",
+      "axis": "east",
+      "source": "POLK"
+    },
+    {
+      "name": "Leavitt",
+      "axis": "north",
+      "source": "LEAVITT"
+    },
+    {
+      "name": "Granville",
+      "axis": "east",
+      "source": "GRANVILLE"
+    },
+    {
+      "name": "24th",
+      "axis": "east",
+      "source": "24TH"
+    },
+    {
+      "name": "28th",
+      "axis": "east",
+      "source": "28TH"
+    },
+    {
+      "name": "30th",
+      "axis": "east",
+      "source": "30TH",
+      "scoped_ways": [
+        {
+          "route_id": "30th-1",
+          "way_id": 722259223,
+          "nodes": [
+            261132026,
+            11653954542,
+            6774930747,
+            11653991255,
+            261163031
+          ],
+          "city_source_ids": [
+            "row-jjg5_pe2y_7ben"
+          ],
+          "city_direction_axis": "east"
+        }
+      ]
+    },
+    {
+      "name": "Rockwell",
+      "source": "ROCKWELL",
+      "axis": "north",
+      "additional_source_ids": [
+        "row-zf8y_8w58-du7q"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "rockwell-2",
+          "way_id": 1160244173,
+          "nodes": [
+            366262666,
+            7635415155,
+            366309922
+          ],
+          "city_source_ids": [
+            "row-zf8y_8w58-du7q"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Lyndale",
+      "source": "LYNDALE",
+      "axis": "east",
+      "additional_source_ids": [
+        "row-m4nx_7zew-thzm"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "lyndale-1",
+          "way_id": 1266271144,
+          "nodes": [
+            296370420,
+            296370597
+          ],
+          "city_source_ids": [
+            "row-m4nx_7zew-thzm"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wrightwood",
+      "source": "WRIGHTWOOD",
+      "axis": "east",
+      "additional_source_ids": [
+        "row-kirn_hd26~rmwt",
+        "row-j99q_9g6u_25vc"
+      ],
+      "unresolved_components": [
+        {
+          "source_ids": [
+            "row-s6xv-qq38_g7k8",
+            "row-9qbg.drnv.cmv4",
+            "row-xurv_2j34_zur8"
+          ],
+          "evidence_id": "wrightwood-divided-offsets"
+        }
+      ]
+    },
+    {
+      "name": "Bloomingdale",
+      "source": "BLOOMINGDALE",
+      "source_aliases": [
+        "BLOOMINDALE"
+      ],
+      "axis": "east",
+      "additional_source_ids": [
+        "row-8z5i.69jx.wshp",
+        "row-rubi_y2ch_uh4b"
+      ],
+      "scoped_ways": [
+        {
+          "route_id": "bloomingdale-1",
+          "way_id": 145803701,
+          "nodes": [
+            261160058,
+            261160059
+          ],
+          "city_source_ids": [
+            "row-8z5i.69jx.wshp"
+          ]
+        },
+        {
+          "route_id": "bloomingdale-1",
+          "way_id": 145803707,
+          "nodes": [
+            261209703,
+            261209725
+          ],
+          "city_source_ids": [
+            "row-rubi_y2ch_uh4b"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hamlin",
+      "source": "HAMLIN",
+      "axis": "north",
+      "unresolved_components": [
+        {
+          "source_ids": [
+            "row-z6fn.ywid~e4w9"
+          ],
+          "evidence_id": "hamlin-douglas-jog"
+        }
+      ]
+    },
+    {
+      "name": "Keeler",
+      "source": "KEELER",
+      "axis": "north"
+    },
+    {
+      "name": "Lavergne",
+      "source": "LAVERGNE",
+      "axis": "north",
+      "split_carriageways": [
+        {
+          "route_id": "lavergne-2",
+          "way_ids": [
+            1213420157,
+            1213420158
+          ],
+          "city_source_ids": [
+            "row-qay7~qqhc_6mse"
+          ],
+          "evidence_id": "lavergne-kinzie-parallel-arms"
+        }
+      ]
+    },
+    {
+      "name": "Long",
+      "source": "LONG",
+      "axis": "north"
+    },
+    {
+      "name": "Menard",
+      "source": "MENARD",
+      "axis": "north",
+      "split_carriageways": [
+        {
+          "route_id": "menard-1",
+          "way_ids": [
+            582888784,
+            582888785
+          ],
+          "city_source_ids": [
+            "row-nr6u_qxaq_g748"
+          ],
+          "evidence_id": "menard-lake-parallel-arms"
+        }
+      ]
+    },
+    {
+      "name": "Kilbourn",
+      "source": "KILBOURN",
+      "axis": "north"
+    },
+    {
+      "name": "Avers",
+      "source": "AVERS",
+      "axis": "north"
+    },
+    {
+      "name": "Central Park",
+      "source": "CENTRAL PARK",
+      "axis": "north"
+    },
+    {
+      "name": "Hirsch",
+      "source": "HIRSCH",
+      "axis": "east"
+    },
+    {
+      "name": "Le Moyne",
+      "source": "LE MOYNE",
+      "axis": "east"
+    },
+    {
+      "name": "Cullom",
+      "source": "CULLOM",
+      "axis": "east"
+    },
+    {
+      "name": "Ravenswood",
+      "source": "RAVENSWOOD",
+      "axis": "north"
+    },
+    {
+      "name": "Greenview",
+      "source": "GREENVIEW",
+      "axis": "north",
+      "split_carriageways": [
+        {
+          "route_id": "greenview-1",
+          "city_source_ids": [
+            "row-2d5z_n6jd.a66w"
+          ],
+          "evidence_id": "greenview-ridge-opposing-arms",
+          "way_ids": [
+            1322012667,
+            1322012663
+          ],
+          "reviewed_branches": [
+            {
+              "node_id": 261166391,
+              "way_ids": [
+                1322012665
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            },
+            {
+              "node_id": 1752618577,
+              "way_ids": [
+                59294756,
+                1465196439
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            },
+            {
+              "node_id": 12233741032,
+              "way_ids": [
+                1322012664
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            },
+            {
+              "node_id": 12233741035,
+              "way_ids": [
+                1322012664
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            },
+            {
+              "node_id": 12233741036,
+              "way_ids": [
+                1322012665
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            },
+            {
+              "node_id": 12233741037,
+              "way_ids": [
+                1019257933,
+                1465196439
+              ],
+              "evidence_id": "greenview-ridge-opposing-arms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Wellington",
+      "source": "WELLINGTON",
+      "axis": "east"
+    },
+    {
+      "name": "Ridgeway",
+      "source": "RIDGEWAY",
+      "axis": "north"
+    },
+    {
+      "name": "Erie",
+      "source": "ERIE",
+      "axis": "east"
+    },
+    {
+      "name": "14th",
+      "source": "14TH",
+      "axis": "east"
+    },
+    {
+      "name": "21st",
+      "source": "21ST",
+      "axis": "east"
+    },
+    {
+      "name": "81st",
+      "source": "81ST",
+      "axis": "east",
+      "split_carriageways": [
+        {
+          "route_id": "81st-2",
+          "city_source_ids": [
+            "row-u3h7_6cmi_gaje"
+          ],
+          "evidence_id": "81st-union-west-opposing-arms",
+          "way_ids": [
+            1323964791,
+            1323964792,
+            1323964793,
+            1323964795,
+            57782135,
+            1323964796
+          ],
+          "arms": [
+            [
+              1323964791,
+              1323964792,
+              1323964793
+            ],
+            [
+              1323964795,
+              57782135,
+              1323964796
+            ]
+          ]
+        },
+        {
+          "route_id": "81st-2",
+          "city_source_ids": [
+            "row-u3h7_6cmi_gaje"
+          ],
+          "evidence_id": "81st-union-east-opposing-arms",
+          "way_ids": [
+            1323964788,
+            1323964787,
+            1323964786,
+            1323964789,
+            1323964790,
+            1323964797,
+            57700822,
+            57700825,
+            57700824,
+            57700823
+          ],
+          "arms": [
+            [
+              1323964788,
+              1323964787,
+              1323964786,
+              1323964789,
+              1323964790
+            ],
+            [
+              1323964797,
+              57700822,
+              57700825,
+              57700824,
+              57700823
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Prospect",
+      "source": "PROSPECT",
+      "axis": "north"
+    },
+    {
+      "name": "Ewing",
+      "source": "EWING",
+      "axis": "north"
+    },
+    {
+      "name": "Albion",
+      "source": "ALBION",
+      "axis": "east"
+    },
+    {
+      "name": "Birchwood",
+      "source": "BIRCHWOOD",
+      "axis": "east"
+    },
+    {
+      "name": "East Lake",
+      "source": "EASTLAKE",
+      "axis": "north",
+      "source_aliases": [
+        "EAST LAKE"
+      ]
+    },
+    {
+      "name": "Jonquil",
+      "source": "JONQUIL",
+      "axis": "east"
+    },
+    {
+      "name": "Dearborn",
+      "source": "DEARBORN",
+      "axis": "north"
+    },
+    {
+      "name": "Sunnyside",
+      "source": "SUNNYSIDE",
+      "axis": "east"
+    },
+    {
+      "name": "Rosehill",
+      "source": "ROSEHILL",
+      "axis": "east"
+    },
+    {
+      "name": "Charles",
+      "source": "CHARLES",
+      "axis": "north"
+    },
+    {
+      "name": "98th",
+      "source": "98TH",
+      "axis": "east",
+      "scoped_ways": [
+        {
+          "route_id": "98th-1",
+          "way_id": 1359658130,
+          "nodes": [
+            1498962104,
+            261150726,
+            1498962124
+          ],
+          "city_source_ids": [
+            "row-qwjx_r592.h4qr"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "82nd",
+      "source": "82ND",
+      "axis": "east"
+    },
+    {
+      "name": "Plymouth",
+      "source": "PLYMOUTH",
+      "axis": "north"
+    },
+    {
+      "name": "104th",
+      "source": "104TH",
+      "axis": "east"
+    },
+    {
+      "name": "Avenue J",
+      "source": "AVENUE J",
+      "axis": "north",
+      "source_aliases": [
+        "AVENUE"
+      ]
+    },
+    {
+      "name": "Harding",
+      "source": "HARDING",
+      "axis": "north"
+    },
+    {
+      "name": "105th",
+      "source": "105TH",
+      "axis": "east"
+    },
+    {
+      "name": "19th",
+      "source": "19TH",
+      "axis": "east"
+    },
+    {
+      "name": "Logan",
+      "source": "LOGAN",
+      "axis": "east"
+    },
+    {
+      "name": "Lakewood",
+      "source": "LAKEWOOD",
+      "axis": "north"
+    },
+    {
+      "name": "Campbell",
+      "source": "CAMPBELL",
+      "axis": "north"
+    },
+    {
+      "name": "North Shore",
+      "source": "NORTH SHORE",
+      "axis": "east"
+    },
+    {
+      "name": "Juneway",
+      "source": "JUNEWAY",
+      "axis": "east"
+    },
+    {
+      "name": "Farwell",
+      "source": "FARWELL",
+      "axis": "east"
+    },
+    {
+      "name": "Kedvale",
+      "source": "KEDVALE",
+      "axis": "north",
+      "explicit_ways": [
+        {
+          "route_id": "kedvale-1",
+          "city_source_ids": [
+            "row-whn5~y4c5.ih47"
+          ],
+          "way_ids": [
+            563963346,
+            1449901719
+          ],
+          "evidence_id": "remaining-central-row-whn5~y4c5.ih47"
+        }
+      ]
+    },
+    {
+      "name": "Eastwood",
+      "source": "EASTWOOD",
+      "axis": "east"
+    },
+    {
+      "name": "9th",
+      "source": "9TH",
+      "axis": "east",
+      "unresolved_components": [
+        {
+          "source_ids": [
+            "row-qvtr_8ne7~bvpp"
+          ],
+          "evidence_id": "remaining-south-9th"
+        }
+      ]
+    },
+    {
+      "name": "Virginia",
+      "source": "VIRGINIA",
+      "axis": "north"
+    },
+    {
+      "name": "Paulina",
+      "source": "PAULINA",
+      "axis": "north"
+    },
+    {
+      "name": "Douglas",
+      "source": "DOUGLAS",
+      "axis": "east",
+      "explicit_ways": [
+        {
+          "route_id": "douglas-1",
+          "city_source_ids": [
+            "row-ud98-pggg_z4tm"
+          ],
+          "way_ids": [
+            24076371
+          ],
+          "evidence_id": "remaining-south-douglas"
+        }
+      ]
+    },
+    {
+      "name": "Montgomery",
+      "source": "MONTGOMERY",
+      "axis": "east"
+    },
+    {
+      "name": "100th",
+      "source": "100TH",
+      "axis": "east",
+      "unresolved_components": [
+        {
+          "source_ids": [
+            "row-vp89-azea-6dxh"
+          ],
+          "evidence_id": "remaining-south-100th"
+        }
+      ]
+    },
+    {
+      "name": "Spaulding",
+      "source": "SPAULDING",
+      "axis": "east",
+      "explicit_ways": [
+        {
+          "route_id": "spaulding-1",
+          "city_source_ids": [
+            "row-xqxw_seh8.u2gq"
+          ],
+          "way_ids": [
+            1081688366
+          ],
+          "evidence_id": "remaining-north-spaulding"
+        }
+      ]
+    },
+    {
+      "name": "97th",
+      "source": "97TH",
+      "axis": "east"
+    },
+    {
+      "name": "Magnolia",
+      "source": "MAGNOLIA",
+      "axis": "north"
+    }
+  ],
+  "max_source_distance_m": 18,
+  "endpoint_tolerance_m": 12
+}

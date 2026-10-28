@@ -1,5 +1,7 @@
 # Validation record — September 18, 2026 (Chicago)
 
+> **Historical document / checkpoint (October 27, 2026).** The original proposal, results, counts and status below reflect their stated dates and are retained for history; references to a then-current export or working tree do not describe the current build. For current practice and scope, see [methodology](methodology.md), the [route data contract](route-data-contract.md), and [complete inventory validation](complete-greenway-inventory-validation.md). No movements have field approval.
+
 Device: Apple M1 Pro, 32 GiB RAM, arm64 macOS / Darwin 25.5.0. Node 24.18.0. Rust 1.94.0. MapLibre 6.10.0, PMTiles 4.5.0, Tippecanoe 2.79.0. Renderer configured with 2 workers, 64 cached tiles per source, 3 cache zoom levels, 16 PMTiles directory entries and 12 cached segment details.
 
 ## Automated correctness

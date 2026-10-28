@@ -7,3 +7,6 @@ test-results/
 data/staging/
 .DS_Store
 data/sources/*.pbf
+
+# Local visual review captures
+.impeccable/review/

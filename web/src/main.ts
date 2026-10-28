@@ -1,3 +1,4 @@
+// Historical threshold-map entry point, retained for reference. The active app uses route-map.ts (see index.html).
 import { Map as LibreMap, NavigationControl, ScaleControl, addProtocol, setWorkerCount, setWorkerUrl, type GeoJSONSource, type ExpressionSpecification } from 'maplibre-gl';
 import { PMTiles, Protocol, SharedPromiseCache } from 'pmtiles';
 import type { LineString } from 'geojson';
