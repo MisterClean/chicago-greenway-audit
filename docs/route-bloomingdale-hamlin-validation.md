@@ -1,5 +1,7 @@
 # CDOT scope verification and Bloomingdale / Hamlin expansion
 
+> **Historical document / checkpoint (October 27, 2026).** The original proposal, results, counts and status below reflect their stated dates and are retained for history; references to a then-current export or working tree do not describe the current build. For current practice and scope, see [methodology](methodology.md), the [route data contract](route-data-contract.md), and [complete inventory validation](complete-greenway-inventory-validation.md). No movements have field approval.
+
 Reviewed October 27, 2026, after committing and pushing checkpoint `6c21e14`. This checkpoint was committed and pushed as `9310634`. See the [ten-greenway expansion](route-ten-greenways-validation.md) for the current export. This checkpoint contains **32 street families, 52 route sections, 2,793 movements and 118 directional runs**. Its designation geometry measures **54.69248 miles**. All access remains source-inferred or conflicting; none is field approved.
 
 ## The correct CDOT population

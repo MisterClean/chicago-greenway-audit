@@ -1,3 +1,4 @@
+// Historical interval-score publisher. The active directional-route export uses build-route-data.mjs.
 import { readFile, writeFile, mkdir, cp, stat, readdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';

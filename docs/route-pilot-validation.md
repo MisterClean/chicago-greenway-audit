@@ -1,5 +1,7 @@
 # Directional vehicle continuity: pilot validation
 
+> **Historical document / checkpoint (October 27, 2026).** The original proposal, results, counts and status below reflect their stated dates and are retained for history; references to a then-current export or working tree do not describe the current build. For current practice and scope, see [methodology](methodology.md), the [route data contract](route-data-contract.md), and [complete inventory validation](complete-greenway-inventory-validation.md). No movements have field approval.
+
 The expanded 16-section candidate and its current source checks are documented in [route-expansion-validation.md](route-expansion-validation.md). The pilot findings below describe the earlier four-street review.
 
 This pilot maps source-inferred passenger-car continuity on selected Wood, Berteau, Leland and Dickens greenway sections. It is a review aid, not a completed driving or cycling-stress audit. **Zero movements have been field reviewed.** An allowed source decision means the stored inputs support a provisional inference; it does not establish current signage, actual traffic volume, speed, cycling comfort or safety.

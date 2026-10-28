@@ -1,5 +1,7 @@
 # Aldine, Cortland, Berwyn and Polk expansion
 
+> **Historical document / checkpoint (October 27, 2026).** The original proposal, results, counts and status below reflect their stated dates and are retained for history; references to a then-current export or working tree do not describe the current build. For current practice and scope, see [methodology](methodology.md), the [route data contract](route-data-contract.md), and [complete inventory validation](complete-greenway-inventory-validation.md). No movements have field approval.
+
 Historical checkpoint `12bae8c`, pushed October 27, 2026. See [the current Leavitt/Granville/Little Village validation](route-leavitt-granville-validation.md).
 
 Reviewed October 27, 2026, after checkpoint `975fb1f` was committed and pushed. This local expansion adds seven displayed sections on four streets. The export covers **22 streets, 37 sections, 1,626 movements and 76 directional runs**, over **32.67802 designated miles**. All decisions remain source-inferred or conflicting, with no field approvals. Continuous car access alone does not establish cycling stress.

@@ -33,7 +33,7 @@ let evidence: EvidenceRecord[] = [];
 let popup: Popup | undefined;
 
 $('app').innerHTML = `
-<header class="site-header"><a class="brand" href="/" aria-label="Chicago Greenway Audit home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 27V7h20M16 27V17h10"/></svg><span>Chicago Greenway Audit</span></a><div class="header-actions"><span class="pilot-label">Route pilot</span><button id="share">Copy link</button></div></header>
+<header class="site-header"><a class="brand" href="/" aria-label="Chicago Greenway Audit home"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 27V7h20M16 27V17h10"/></svg><span>Chicago Greenway Audit</span></a><div class="header-actions"><span class="pilot-label">Route explorer</span><button id="share">Copy link</button></div></header>
 <main class="workspace">
   <aside class="sidebar" aria-label="Greenway route explorer">
     <div class="intro"><h1>How far can a car follow the greenway?</h1><p>Explore each direction. See what interrupts the path.</p></div>
@@ -43,12 +43,12 @@ $('app').innerHTML = `
     <section class="path-detail" id="path-detail" aria-live="polite"><h2>Select a path</h2><p>Choose a stretch below, or select a colored line on the map.</p></section>
     <section class="path-list-section"><h2>Continuous stretches <span id="run-count"></span></h2><div id="run-list" class="run-list"></div></section>
     <details class="review-section" id="review-section"><summary>Interruptions & review points <span id="event-count"></span></summary><div id="event-list"></div></details>
-    <details class="method"><summary>Sources & method</summary><p>A car follows the mapped greenway through permitted turns. Signals and speed humps do not break access. A detour away from the greenway does.</p><p>Distances end at a restriction, an unknown link, or the end of the mapped designation. A designation end is not a physical car barrier.</p><p>Scope: CDOT’s Neighborhood Greenway category only. Other bike-lane and trail categories are excluded. A greenway designation is not a measured stress rating.</p><p id="dates"></p><p><a href="/routes/pilot.json" target="_blank">Download route data</a> · <a href="/routes/review-evidence.json" target="_blank">Review evidence</a> · <a href="/routes/evidence-catalog.json" target="_blank">Source catalog</a> · <a href="/routes/coverage-inventory.json" target="_blank">Remaining inventory</a></p><div id="evidence-records"></div><p>Roads © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap contributors</a>. Designations: <a href="https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut" target="_blank" rel="noreferrer">City of Chicago</a>.</p></details>
+    <details class="method"><summary>Sources & method</summary><p>A car follows the mapped greenway through permitted turns. Signals and speed humps do not break access. A detour away from the greenway does.</p><p>Distances end at a restriction, an unknown link, or the end of the mapped designation. A designation end is not a physical car barrier.</p><p>Scope: CDOT’s Neighborhood Greenway category only. Other bike-lane and trail categories are excluded. A greenway designation is not a measured stress rating.</p><p id="dates"></p><p><a href="/routes/pilot.json" target="_blank">Download route data</a> · <a href="/routes/review-evidence.json" target="_blank">Review evidence</a> · <a href="/routes/evidence-catalog.json" target="_blank">Source catalog</a> · <a href="/routes/coverage-inventory.json" target="_blank">Coverage inventory</a></p><div id="evidence-records"></div><p>Roads © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap contributors</a>. Designations: <a href="https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut" target="_blank" rel="noreferrer">City of Chicago</a>.</p></details>
   </aside>
   <section class="map-wrap" aria-label="Directional greenway map">
     <div id="map"></div>
     <div class="map-heading"><strong id="map-title">Loading routes…</strong><span id="map-subtitle"></span></div>
-    <div class="map-actions"><button id="fit-route" disabled>Fit route</button><button id="fit-pilots" disabled>All pilots</button></div>
+    <div class="map-actions"><button id="fit-route" disabled>Fit route</button><button id="fit-pilots" disabled>All greenways</button></div>
     <div class="map-legend" aria-label="Map legend"><span><i class="line-sample forward"></i><b id="forward-legend">Forward</b></span><span><i class="line-sample reverse"></i><b id="reverse-legend">Reverse</b></span><span><i class="line-sample blocked"></i>Car access restricted</span><span><i class="line-sample unknown"></i>Unknown</span><span><i class="end-sample"></i>Selected path endpoint</span></div>
     <p id="map-notice" class="map-notice" hidden role="status"></p>
   </section>
@@ -276,7 +276,7 @@ async function loadInventory() {
     protocol.add(new PMTiles(new StaticTileSource(tileUrl,index),new SharedPromiseCache(16)));
     map!.addSource('city-inventory',{type:'vector',url:`pmtiles://${tileUrl}`,attribution:'Bike routes: City of Chicago · © OpenStreetMap contributors'});
     map!.addLayer({id:'city-inventory-line',source:'city-inventory','source-layer':'greenways',type:'line',paint:{'line-color':'#94a29a','line-width':2,'line-opacity':0.35}},'all-routes-line');
-  } catch { notify('Citywide background could not load. Pilot routes and their details are still available.'); }
+  } catch { notify('Citywide background could not load. Greenway routes and their details are still available.'); }
 }
 async function start() {
   try {
@@ -291,7 +291,7 @@ async function start() {
       const option = document.createElement('option'); option.value = item.id; option.textContent = `${item.name}: ${item.extent_label}`; group.append(option);
     }
     picker.disabled = false;
-    $('dates').textContent = `Road snapshot: ${data.source.osm_date}. Official designation: ${data.source.designation_date}. No field-reviewed movement decisions in this pilot.`;
+    $('dates').textContent = `Road snapshot: ${data.source.osm_date}. Official designation: ${data.source.designation_date}. No field-reviewed movement decisions in this dataset.`;
     const defaultRoute = data.routes.filter(item => item.name === 'Wood').sort((a,b) => b.coverage.designated_m - a.coverage.designated_m)[0] ?? data.routes[0];
     chooseRoute(data.routes.some(item => item.id === query.get('route')) ? query.get('route')! : defaultRoute.id,false);
     const initialRun = route.runs.find(run => run.id === query.get('run'));

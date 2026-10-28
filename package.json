@@ -9,7 +9,7 @@
     "test": "node --import tsx --test web/src/*.test.ts scripts/*.test.mjs",
     "data:snapshot": "node scripts/snapshot.mjs",
     "data:build": "node scripts/build-data.mjs",
-    "verify": "npm test && cargo test --manifest-path solver/Cargo.toml && npm run build",
+    "verify": "npm test && npm run verify:routes && npm run build",
     "network:stage": "node scripts/stage-network.mjs",
     "network:review": "node scripts/review-candidates.mjs",
     "fixtures": "cargo run --release --locked --manifest-path solver/Cargo.toml -- data/fixtures/states.ndjson data/fixtures/segments.ndjson data/fixtures/output",
@@ -20,7 +20,9 @@
     "verify:routes": "node scripts/verify-route-data.mjs",
     "audit:routes": "node scripts/audit-route-samples.mjs",
     "data:coverage": "node scripts/build-coverage-inventory.mjs",
-    "verify:coverage": "node scripts/build-coverage-inventory.mjs --check"
+    "verify:coverage": "node scripts/build-coverage-inventory.mjs --check",
+    "verify:legacy": "npm test && cargo test --manifest-path solver/Cargo.toml && npm run build",
+    "preview": "vite preview --host 127.0.0.1"
   },
   "dependencies": {
     "maplibre-gl": "6.10.0",
@@ -35,5 +37,8 @@
     "tsx": "4.21.0",
     "typescript": "5.9.3",
     "vite": "7.3.6"
+  },
+  "engines": {
+    "node": ">=24"
   }
 }

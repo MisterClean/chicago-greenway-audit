@@ -1,5 +1,7 @@
 # Chicago Greenway Straight-Through Driving Map
 
+> **Historical document / checkpoint (October 27, 2026).** The original proposal, results, counts and status below reflect their stated dates and are retained for history; references to a then-current export or working tree do not describe the current build. For current practice and scope, see [methodology](methodology.md), the [route data contract](route-data-contract.md), and [complete inventory validation](complete-greenway-inventory-validation.md). No movements have field approval.
+
 Technical specification · version 1.0 · September 19, 2026
 
 Status: proposed implementation, ready for a Ward 35 pilot. This document specifies the map; it does not report calculated Chicago driving distances or measured performance.

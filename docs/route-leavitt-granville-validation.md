@@ -1,5 +1,7 @@
 # Leavitt, Granville and Little Village expansion
 
+> **Historical document / checkpoint (October 27, 2026).** The original proposal, results, counts and status below reflect their stated dates and are retained for history; references to a then-current export or working tree do not describe the current build. For current practice and scope, see [methodology](methodology.md), the [route data contract](route-data-contract.md), and [complete inventory validation](complete-greenway-inventory-validation.md). No movements have field approval.
+
 Historical checkpoint `21dbe2d`, committed and pushed October 27, 2026. See the [current expansion](route-rockwell-lyndale-wrightwood-validation.md).
 
 Reviewed October 27, 2026, after checkpoint `12bae8c` was committed and pushed. This local expansion adds Leavitt, Granville, 24th, 28th and 30th Streets: six displayed sections and 11.07920 designated miles. The export at this checkpoint covers **27 streets, 43 sections, 2,321 movements and 97 directional runs**, over **43.75722 designated miles**. No movement has a field approval. Car continuity is one input to a cycling-stress assessment, not a stress verdict.

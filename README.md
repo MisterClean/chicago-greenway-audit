@@ -1,78 +1,101 @@
 # Chicago Greenway Audit
 
-A route-based map of how far an ordinary car can follow a Chicago bicycle greenway in each direction. It follows the designated route through turns, shows continuous driving stretches, and explains the restrictions or unknown connections at their ends.
+**How far can a car follow a Chicago neighborhood greenway before it has to leave the route?**
 
-**The interface covers the full saved CDOT Neighborhood Greenway inventory, with source-inferred vehicle access.** All 258 city records are represented across 85 street families and 114 route sections. None of its 4,323 movement boundaries is field reviewed; unknown connections and conflicting evidence remain visible. Complete designation coverage is not a completed driving or cycling-stress audit.
+This project maps continuous car access in each direction along CDOT’s designated Neighborhood Greenways. It follows the greenway through turns, shows what interrupts a driving path, and keeps the evidence behind each decision inspectable.
 
-## Run
+Greenways are intended to offer comfortable bicycle routes. Long, uninterrupted car paths can help identify places to investigate for through traffic. **This map measures potential vehicle access—not traffic volume, speed or cycling stress.** Its results are inferred from saved sources and have not been field verified.
 
-Node 24+ is sufficient to run and build the map from committed assets:
+[Get started](#run-it-locally) · [Methodology](docs/methodology.md) · [Development](docs/development.md) · [Documentation](docs/README.md)
+
+![Berteau greenway with separate eastbound and westbound paths, showing a 1.50-mile westbound stretch through its dogleg.](docs/images/berteau-route-explorer.png)
+
+*Berteau illustrates why direction and route shape matter: the mapped westbound path follows the Richmond–alley–Sacramento dogleg for about 1.50 miles, while eastbound one-way restrictions interrupt it. Unknown ends are not confirmed maximum driving distances.*
+
+## Run it locally
+
+Use **Node.js 24 or newer** and npm, from the repository root:
 
 ```sh
 npm ci
-npm test
-npm run verify:routes
-npm run build
 npm run dev
 ```
 
-Select a route and direction, then select a colored path. The panel shows its full mapped length and endpoint reasons. Click a point or use the keyboard-accessible position slider to measure the distance remaining in that direction. Share links preserve the route, direction, selected stretch or interruption, measurement and map position. Unknown links and conflicting sources remain visible. Interruption details include source links and a manual Street View launch link.
+Open the local URL printed by Vite. The committed data is ready to explore; no database setup, Rust installation, routing server or API key is needed. The basemap loads from CARTO over the internet.
 
-The static app uses MapLibre and CARTO's Positron basemap. Pilot data is in `public/routes/`; the city background uses existing PMTiles and static tile chunks for hosts without HTTP Range support. No routing server or API key is required. `npm run build` writes `dist/`.
-
-## Model and evidence
-
-The car profile is a general through trip, without resident, delivery or emergency exceptions. Stops, signals and humps do not break continuity. A prohibited movement, one-way restriction, physical filter, or through-access restriction does. Cars cannot detour off the selected route and rejoin within the same run.
-
-- Ordered route edges and approach-to-departure movements replace the old geometry-interval score as the primary map model.
-- Forward and reverse access are evaluated separately. Motor-specific rules override generic access; bicycle exceptions never authorize cars.
-- Small traffic circles use the legal approach-to-departure arc in each direction, with separate geometry and distance. Ambiguous paths and inconsistent circulation tags remain unresolved.
-- Explicit route joins, unmatched geometry, conditional rules, unsupported restrictions and conflicting sources remain unknown until resolved.
-- Runs include only allowed edges connected by allowed movements. Distances follow WGS84 geometry and are clipped to route scope. An unknown boundary is not a verified maximum; a designation endpoint is not a physical road closure.
-- Each decision retains its reason and source links. Selected official records and manual-viewing notes form a review queue, not field approvals.
-- New project evidence is scoped to its city designation records. Detailed CDOT drawings, ward construction updates and current observations have different meanings; missing plans and uncertain installation dates remain explicit. Reports of time-dependent gates annotate the affected gap without inventing a permanent closure. A curated installed-filter observation can block a specific unmatched passage only when the documented connection is corroborated by exact source nodes, a terminal road/cycleway junction and no mapped motor exit at that node. Its geometry can remain unmatched, and it remains source-inferred.
-
-Vehicle continuity measures potential through access. Traffic volume, speed and crossing conditions are also needed to assess cycling stress.
-
-Read the [tested implementation plan](docs/vehicle-continuity-plan.md) and [complete inventory and validation](docs/complete-greenway-inventory-validation.md). The latter documents all remaining records, source limitations, 430 independently sampled directional junction decisions, a separate short-edge check and targeted regression cases. Earlier checkpoints are preserved in the [third ten-family expansion](docs/route-third-ten-greenways-validation.md), [second ten-family expansion](docs/route-second-ten-greenways-validation.md), [first ten-family expansion](docs/route-ten-greenways-validation.md), [Bloomingdale/Hamlin review](docs/route-bloomingdale-hamlin-validation.md), [Rockwell/Lyndale/Wrightwood review](docs/route-rockwell-lyndale-wrightwood-validation.md), [Leavitt/Granville/Little Village review](docs/route-leavitt-granville-validation.md), [Aldine/Cortland/Berwyn/Polk review](docs/route-aldine-berwyn-polk-validation.md), [Winnemac/Ainslie/Carmen/Argyle review](docs/route-north-validation.md), [School/Roscoe/Winthrop/Ardmore review](docs/route-plan-review-validation.md), [first expansion](docs/route-expansion-validation.md) and [original pilot](docs/route-pilot-validation.md).
-
-The [evidence catalog](docs/evidence-catalog.md) links 256 observations and 757 citations to 305 source URLs. It preserves source titles and publishers when known, date meanings, inspected pages, document/extract checksums, conflicting metadata, search gaps and original records. Missing metadata remains explicit. The app's Sources & method panel links the downloadable JSON. `npm run data:evidence` rebuilds it; `npm run verify:evidence` checks that both copies match the editable evidence. Production builds reject a stale catalog.
-
-The [coverage inventory](data/routes/coverage-inventory.json) counts exact exported city IDs: **all 258 records are represented, totaling 85.23376 city-recorded miles; zero inventory records remain**. The scope is exactly CDOT’s `displayrou = Neighborhood Greenway` category. The live portal response was rechecked October 27, 2026 and matches the saved 258 rows byte for byte; the portal remains dated December 2025. Other facility categories are rejected before generation. See the [scope verification](docs/cdot-inventory-scope-review.md). Labels include connectors and spelling variants, so this is not a count of distinct projects or completed field reviews. `npm run verify:coverage` checks that the inventory matches the export; production builds require it.
-
-## Reproduce the pilot
-
-The committed export is usable without the large source files. Rebuilding requires the saved December 2025 city designation snapshot and September 11, 2026 OSM extract, plus the SQLite network stage:
+To check the project and preview a production build:
 
 ```sh
-# If the recorded OSM extract is present but the SQLite stage is not:
-npm run network:stage
-
-# Rebuild and validate the route export:
-npm run data:routes
-npm run verify:routes
-npm run audit:routes
-npm test
+npm run verify
+npm run preview
 ```
 
-`data/sources/osm-source.json` identifies the exact extract and checksum. The local PBF and SQLite stage are excluded from Git; downloading a changing `latest` URL does not reproduce this build. Raw staging requires Osmium 1.19+.
+`verify` runs the tests, validates the route export and builds the app. See [Development](docs/development.md) for source-data regeneration and the separate source audit.
 
-`data/routes/pilots.json` defines route scope, explicitly catalogued source-name aliases, and documented connections requiring review. The `BERWN` alias includes the western Berwyn designation without rewriting the raw city record; the `EAST LAKE`/`EASTLAKE` alias matches the exact street-name spelling variant. The western 98th route follows an explicitly city-bound Throop slice. Aldine/Broadway, Roscoe/Broadway, Berwyn/Sheridan, Rockwell/Fullerton, Lyndale/Western and Bloomingdale’s Monitor/Central jogs include exact additional city IDs and bounded motor-carriageway slices. Wrightwood’s ambiguous divided-road component and Hamlin’s unresolved boulevard jog remain entirely unmatched through evidence-bound reviews; no alternative road is selected by proximity alone. Lavergne and Menard’s short divided-road pairs retain separate directional geometry and unresolved city-direction conflicts. Greenview and 81st use explicitly bound opposing source-way chains; reviewed Greenview branches are excluded from matching, and exact node sequences remain in the evidence catalog. The unnamed 30th Street link is admitted only as an exact city-aligned node slice; its motor-direction conflict is retained. Berteau now follows its Sacramento/alley/Richmond dogleg, with the Western–Clark section retaining its stable route ID. Evidence-bound city/road name correspondences cover Douglas, Spaulding and Kedvale, while 9th and 100th remain unresolved pending direction-specific terminal-carriageway clipping. `scripts/route-network.mjs` assembles and matches the route, `scripts/scoped-route-ways.mjs` checks explicitly bound short street-name changes against city geometry, `scripts/explicit-road-matches.mjs` validates exact city-to-road correspondences, `scripts/component-route-ids.mjs` preserves anchored component IDs, `scripts/motor-rules.mjs` evaluates source rules, `scripts/split-carriageways.mjs` validates explicitly bound short pairs of opposing carriageways, `scripts/junction-traversal.mjs` follows their legal arms and small circular junctions, and `scripts/route-continuity.mjs` traces each direction. `scripts/build-route-data.mjs` exports routes, events and runs to `public/routes/pilot.json`, copies the evidence queue and rebuilds the catalog and remaining inventory. `web/src/route-map.ts` renders the interface.
+## Explore a greenway
 
-Use `SOURCE_DATE_EPOCH=1793091600 npm run data:routes` for the audited export's fixed generation timestamp. The independent sample in `data/routes/pilot-validation.json` is tied to the output SHA-256 and becomes stale when that output changes. Source records and timestamps must be checked again before approving movements or expanding the pilot.
+1. **Choose a route and direction.** Compare the longest mapped stretch in each direction, or show both.
+2. **Select a continuous stretch.** Click its line or list entry to see its full length and why it ends.
+3. **Measure from a point.** Click along the selected path or use the position slider to see the remaining distance in that direction.
+4. **Inspect an interruption.** Read the reason, source links and review needs. Street View links are a manual investigation aid; opening imagery does not verify a movement.
+5. **Share the view.** Copy link preserves the route, direction, selected path or interruption, measurement and map position.
 
-## Validation
+Green and blue distinguish travel directions. They are not low-stress ratings. Red marks restricted car access; dashed brown marks unknown connections.
 
-`npm test` covers direction/access precedence, barriers, turn restrictions, conditional and via-way uncertainty, source conflicts, route gaps and clipping, circular junctions, tracing across bends, subdivision invariance, and remaining distance in either direction. `npm run verify:routes` independently checks the generated geometry, geodesic lengths, legal continuity, endpoint reasons, coverage and known pilot cases. With the source SQLite stage available, `npm run audit:routes` reproduces the sampled junction checks and targeted source comparisons. These checks do not establish current street conditions.
+| Situation | What happens to a car path? |
+| --- | --- |
+| The designated greenway turns or bends | Continue when the route movement is permitted. |
+| Stop sign, traffic signal or speed hump | Continue after the pause; these alone do not break access. |
+| One-way restriction, prohibited movement or physical filter | End the affected direction’s path. Bicycle exceptions do not authorize cars. |
+| Unmatched road, conflicting sources or unsupported restriction | Stop the asserted path and show uncertainty. Unknown does not mean blocked. |
+| The designation ends | End the measurement’s scope. Cars may still be able to continue on the street. |
 
-Desktop and narrow-screen browser checks cover route/direction selection, clicking a run, remaining distance, interruption details and share-link restoration. The pilot deliberately has no low-stress pass/fail badge.
+A car cannot take an off-route detour and rejoin within the same continuous stretch.
 
-## Earlier inventory and solver
+## Evidence you can inspect
 
-The original [technical specification](docs/technical-spec.md), Rust solver, TypeScript inventory interface and immutable citywide builds are retained for reference. They are not the new map's calculation path. The old inventory contains 1,452 geometry intervals over 85.23654 designated miles from 258 official records; its zero/unknown scores are not used as vehicle-continuity results.
+![Wood at Augusta, with a northbound one-way restriction explanation, OSM and 1st Ward source links, and an explicit field-verification caveat.](docs/images/wood-direction-evidence.png)
 
-Historical commands remain available: `npm run fixtures`, `npm run data:build`, `npm run network:review`, `npm run data:verify`, and `npm run verify`. These may require Rust/Cargo, Tippecanoe 2.79+ and the raw source snapshots. See the previous [data contract](docs/data-contract.md) and [validation notes](docs/validation.md) for that export format.
+*On Wood between Augusta and Cortez, the saved OSM direction agrees with the 1st Ward’s CDOT project update. The map distinguishes southbound motor access from two-way bicycle access and retains the need to check current signs and installation.*
 
-## Licensing and attribution
+The [evidence catalog](data/routes/evidence-catalog.json) contains **256 observations, 757 citations and 305 distinct source URLs**. It preserves geographic scope, source dates and their meaning, document or extract hashes where available, review methods, conflicting information and unsuccessful searches. Detailed CDOT plans, ward communications and historical reports are distinguished from current field observations. Missing plans remain documented gaps.
 
-Source code: MIT (see LICENSE). City of Chicago data remains subject to its portal terms. OSM source data is © OpenStreetMap contributors, ODbL 1.0; see the saved source manifest. Basemap © CARTO and © OpenStreetMap contributors. Keep source and map attributions when publishing.
+Use **Sources & method** in the app to download the route data, review records, source catalog and coverage inventory. [Catalog documentation](docs/evidence-catalog.md) explains the structure; [editable review evidence](data/routes/review-evidence.json) is the authoritative input.
+
+## Coverage and limits
+
+The current export represents **all 258 records** in the saved CDOT `Neighborhood Greenway` category: **85.23 city-recorded miles**, organized into **114 route sections** with **233 directional driving stretches**. Other bike-lane and trail categories are excluded. A city record, a street-name group and a construction project are different things.
+
+- **City designation:** reported through December 2025. The live portal response checked October 27, 2026 matched the saved extract.
+- **Road network:** OpenStreetMap extract effective September 11, 2026.
+- **Field-approved movements:** zero. Complete inventory representation includes unresolved sections and conflicting evidence.
+
+Examples still requiring work include terminal carriageway matching on 9th and 100th, conflicting motor directions on Avenue J, and nonmotor connections on Plymouth, Eastwood and Juneway. A short mapped stretch does not demonstrate low stress; an unknown boundary does not establish a maximum.
+
+See the [exact coverage inventory](data/routes/coverage-inventory.json), [scope review](docs/cdot-inventory-scope-review.md) and [complete inventory validation](docs/complete-greenway-inventory-validation.md) for counts, source limitations and checks. Screenshots show the saved export, not a live street survey.
+
+## How it works
+
+The pipeline assembles city designation records into ordered routes, matches them to the saved OSM network, evaluates road access and intersection movements separately in each direction, then traces allowed edges connected by allowed movements. Distances follow the matched road geometry and supported junction arcs, clipped to route scope. Unknowns remain explicit.
+
+Read [Methodology](docs/methodology.md) for the rules and [Route data contract](docs/route-data-contract.md) for the generated records and matching configuration.
+
+| Where | What you’ll find |
+| --- | --- |
+| `web/src/route-map.ts`, `route-model.ts`, `route-map.css` | Active map, interaction model and styles; loaded by `index.html`. |
+| `scripts/build-route-data.mjs` and route helpers | Matching, motor rules, junction traversal and directional tracing. |
+| `data/routes/pilots.json`, `review-evidence.json` | Editable route configuration and scoped source observations. The `pilots` filename is retained for compatibility. |
+| `public/routes/` | Generated route, evidence and coverage assets consumed by the map. |
+| `data/sources/`, `data/staging/` | Saved input provenance and locally staged network; see the [data guide](data/README.md). |
+| `docs/` | Current references, dated research and historical checkpoints. |
+| `solver/`, `web/src/main.ts`, older normalized builds | Historical straight-ahead scoring work. Its scores are not used for current route continuity. Existing city tiles still supply the background designation layer. |
+
+## Contribute
+
+Useful contributions include dated observations of signs and filters, missing CDOT drawings or ward updates, exact road-matching corrections, and fixes to movement handling. Bind a claim to its location and source records, distinguish plans from installations, and preserve conflicting evidence.
+
+Start with the [developer workflow](docs/development.md). Change the authoritative configuration or evidence, regenerate affected outputs, run the relevant checks, and inspect the map. The [implementation status](docs/implementation-status.md) identifies remaining work. Earlier specifications and expansion reports remain available through the [documentation index](docs/README.md) as historical records.
+
+## Attribution
+
+Code: [MIT](LICENSE). City of Chicago data is subject to its portal terms. Road data: © OpenStreetMap contributors, ODbL 1.0. Basemap: © CARTO and © OpenStreetMap contributors. Preserve these attributions when sharing or publishing the map. [Source manifests](data/sources/sources.json) record provenance and licensing.

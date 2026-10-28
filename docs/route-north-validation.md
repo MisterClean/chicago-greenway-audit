@@ -1,5 +1,7 @@
 # Winnemac, Ainslie, Carmen and Argyle expansion
 
+> **Historical document / checkpoint (October 27, 2026).** The original proposal, results, counts and status below reflect their stated dates and are retained for history; references to a then-current export or working tree do not describe the current build. For current practice and scope, see [methodology](methodology.md), the [route data contract](route-data-contract.md), and [complete inventory validation](complete-greenway-inventory-validation.md). No movements have field approval.
+
 Historical checkpoint `975fb1f`, pushed October 27, 2026. For the current export see [Aldine/Cortland/Berwyn/Polk validation](route-aldine-berwyn-polk-validation.md).
 
 Reviewed October 27, 2026. This batch follows the pushed `a3d4a22` checkpoint and adds eight sections on four streets. The export now covers **18 streets, 30 sections, 1,391 movements and 62 directional runs**, over 27.76398 designated miles. All decisions remain source-inferred or conflicting, with zero field approvals. Continuous car access alone does not establish cycling stress.

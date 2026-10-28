@@ -1,5 +1,7 @@
 # Directional continuity: expanded source validation
 
+> **Historical document / checkpoint (October 27, 2026).** The original proposal, results, counts and status below reflect their stated dates and are retained for history; references to a then-current export or working tree do not describe the current build. For current practice and scope, see [methodology](methodology.md), the [route data contract](route-data-contract.md), and [complete inventory validation](complete-greenway-inventory-validation.md). No movements have field approval.
+
 Historical checkpoint, committed as `b1866c8`. The [next expansion and plan review](route-plan-review-validation.md) supersedes the counts and export hash below. `data/routes/pilot-validation.json` now records that newer export.
 
 The candidate export covers 16 sections on Wood, Berteau, Leland, Dickens, Manor, Kenmore, Glenwood, George, Loomis and 124th Street. It contains 867 movements and 35 runs. **No movement has been field approved.** This audit checks consistency with the local snapshots, not current signs, driving legality, traffic volumes or cycling safety. A permitted junction decision does not prove access to its adjoining edges.

@@ -1,31 +1,11 @@
 # Implementation status
 
-This is an operational citywide inventory/review map plus a tested scoring and publication system. It is not a completed Chicago driving audit and must not be represented as one.
+Status as of October 27, 2026: the directional-route build covers all **258** records in the saved City of Chicago `Neighborhood Greenway` extract, organized into **114 route sections** across **85 street families**. The export contains **4,323 movements** and **233 directional runs**. These are snapshot-based inferences and unresolved cases, not field-approved driving routes or a current ground survey. The most recent committed checkpoint identified for this work is `52d8b9d`; current working-tree results and historical checkpoints should not be assumed to be identical.
 
-| Spec workstream | Status |
-| --- | --- |
-| Product definitions / equality / uncertainty | Implemented |
-| Rust distance solver / cycle quarantine / witnesses | Implemented and oracle-tested |
-| Angular decision policy | Implemented and tested; approach headings/connector normalization not implemented |
-| Official inventory snapshot, clipped unique mileage | Implemented citywide; optional Ward 35 clipping retained |
-| Full OSM snapshot and disk staging / spatial index | Implemented |
-| Source match candidates | 1,400/1,452 intervals have candidates; zero approved matches |
-| At-grade splitting, motor access, relations, bends, logical junctions | Not implemented; raw information retained for the normalization stage |
-| Manual endpoint and movement review | Pending; zero approved endpoints |
-| Immutable PMTiles, summary, detail and run publication | Implemented, including reviewed normalized bundle input |
-| Static map and keyboard/mobile controls | Implemented |
-| Citywide inventory extension | Implemented: 258 source records, 85.23654 unique miles |
-| Newer project reconciliation | Pending |
-| Browser memory plateau / representative physical-device latency | Not established |
+The source evidence catalog contains **256 observations**, **757 citations**, **305 distinct URLs**, **52 search-gap entries** and **28 research batches**. Those counts describe catalog entries, not independent confirmations or field approvals. See [complete inventory validation](complete-greenway-inventory-validation.md) for scope, verification and limitations, [methodology](methodology.md) for how directional continuity is determined, and the [route data contract](route-data-contract.md) for exported fields.
 
-## Next engineering stage
+The implementation follows designated routes through their bends, evaluates the two motor directions separately, and preserves unknown or conflicting access. Bicycle exceptions do not grant car access. Stops, signals and humps do not by themselves interrupt a route. Route geometry and source matches remain tied to saved city and OSM snapshots; their details can differ from current conditions.
 
-1. Build a normalized topology from the staged OSM database, using node IDs and grade/layer information; never connect geometric overpasses.
-2. Split at barriers, access/direction changes, junctions, confirmed bends, and designation overlaps. Infer no reverse car state from bicycle contraflow. Unsupported conditional and via-way restrictions must taint all implicated transitions.
-3. Match full designated intervals using heading and overlap, with street identity as supporting evidence. The current report identifies candidates only and cannot establish a match.
-4. Compute 20 m projected headings and feed the frozen 30°/60° policy. Apply movement legality only after selecting the geometric straight candidate. Preserve connector distance; uncertain forks, circles and offsets stay open on both sides.
-5. Trace all relevant upstream branches and downstream continuations outside the designation and city boundary, extending the source extract if necessary. Export dense state IDs and reviewed segment associations.
-6. Record reviewer, dated evidence, legal profile and endpoint reasons. Validate every endpoint that creates a passing segment. Reconcile newer projects before calling the inventory current.
-7. Publish a new immutable reviewed bundle; preserve remaining gaps as gray. Validate full-run geometry against the source, then extend verified coverage across the city.
+Work remaining includes field review of signs, barriers, intersection movements and installation status; resolution of source conflicts, unmatched endpoints and uncertain connections; retrieval and visual inspection of applicable detailed project drawings where still missing; and reconciliation of changes after the saved snapshots. No movements have field approval. Source review and passing automated checks do not independently establish current legal access.
 
-The current citywide build contains no resolved motor states. Every displayed lower bound is zero and every segment is unverified. This is unfinished movement-normalization engineering and endpoint review, not a finding that all streets pass or fail.
+The earlier straight-ahead scoring architecture, initial pilot results and associated performance measurements remain documented as historical checkpoints. They do not describe the current directional-route product. Use the [documentation index](README.md) to navigate current references and historical records.

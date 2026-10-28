@@ -1,5 +1,7 @@
 # Third ten-greenway expansion and validation
 
+> **Historical document / checkpoint (October 27, 2026).** The original proposal, results, counts and status below reflect their stated dates and are retained for history; references to a then-current export or working tree do not describe the current build. For current practice and scope, see [methodology](methodology.md), the [route data contract](route-data-contract.md), and [complete inventory validation](complete-greenway-inventory-validation.md). No movements have field approval.
+
 Reviewed October 27, 2026, after committing and pushing the previous batch as `a1d44ad` on `codex/greenway-route-continuity`. Three Terra 6.1 Medium workers researched ten street families in parallel. This batch was committed and pushed as `7054b16`; the figures below describe that checkpoint. See the [complete inventory validation](complete-greenway-inventory-validation.md) for the subsequent expansion.
 
 The export contains **62 street families, 90 route sections, 4,197 movements and 202 directional runs**. Access remains source-inferred or conflicting, with no field approvals. Designated geometry measures 82.33549 miles; included city `mi_ctrline` attributes total 82.33361 miles. These are different length measures. Stops, signals and traffic calming do not sever car access; a driving trace follows the designation through its bends without an off-route detour.

@@ -1,8 +1,10 @@
 # Vehicle continuity along Chicago greenways
 
+> **Historical document / checkpoint (October 27, 2026).** The original proposal, results, counts and status below reflect their stated dates and are retained for history; references to a then-current export or working tree do not describe the current build. For current practice and scope, see [methodology](methodology.md), the [route data contract](route-data-contract.md), and [complete inventory validation](complete-greenway-inventory-validation.md). No movements have field approval.
+
 Research and implementation proposal · October 27, 2026
 
-**Implementation update:** The route-based pilot is implemented on `codex/greenway-route-continuity`. See [current validation and plan review](route-bloomingdale-hamlin-validation.md) for 52 sections on 32 street families, tests and unresolved field review, and the [evidence catalog](evidence-catalog.md) for structured source provenance. The research observations below describe the pre-implementation investigation. Git checkpoints have been pushed; the public site has not been redeployed.
+**Historical implementation update (52-section checkpoint):** The route-based pilot is implemented on `codex/greenway-route-continuity`. See the [validation and plan review at that checkpoint](route-bloomingdale-hamlin-validation.md) for 52 sections on 32 street families, tests and unresolved field review, and the [evidence catalog](evidence-catalog.md) for structured source provenance. The research observations below describe the pre-implementation investigation. Git checkpoints have been pushed; the public site has not been redeployed.
 
 ## Decision
 
