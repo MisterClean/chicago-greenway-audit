@@ -12785,6 +12785,1430 @@
           "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
         }
       ]
+    },
+    {
+      "id": "albion-glenwood-lakewood",
+      "location": "Albion: Glenwood–Lakewood",
+      "source_record_ids": [
+        "row-7hip-z8ja.9ka2"
+      ],
+      "way_ids": [
+        194803327,
+        458591863,
+        1178008329
+      ],
+      "source_inference": "City E; OSM eastbound in node order. Two parallel same-direction residential underpass arms share endpoints, interiors distinct; closest arm 458591863 is not conclusively sole designated arm.",
+      "review_needed": "Verify current motor-vehicle signs, exact route and lane correspondence, and junction restrictions; the saved sources do not establish present field conditions.",
+      "status": "source-inferred; current signs and physical layout unverified",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes Neighborhood Greenway query",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "source_date": "2025-12",
+          "date_kind": "inventory through",
+          "status": "designation inventory",
+          "scope": "Seven exact rows; direction fields are attributes, blank direction is no motor assertion.",
+          "review_method": "Saved JSON and coordinates inspected",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago BBBike OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "osm extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot",
+          "status": "source-inferred",
+          "scope": "Road geometry, directional tags, topology and restriction relations; not current signs.",
+          "review_method": "Read-only SQLite extract and relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Final agenda of matters to be considered, Committee on Pedestrian and Traffic Safety",
+          "publisher": "Chicago City Council",
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf",
+          "source_type": "committee agenda",
+          "source_date": "2024-05-01",
+          "date_kind": "meeting date",
+          "status": "direct introductions, not proof of enactment or installation",
+          "scope": "Birchwood Ashland–Sheridan one-way east except bicycles and Eastlake Birchwood–Sheridan one-way south except bicycles; 20 mph proposals on Birchwood, Eastlake, Albion.",
+          "review_method": "Downloaded public PDF, rendered and visually inspected complete pages 2 and 3; cross-checked text.",
+          "pages": [
+            2,
+            3
+          ],
+          "retrieved_at": "2026-10-28T01:29:59.099084+00:00",
+          "sha256": "5446f325555b401597e3f35540baae5e01faea32ce845c8a4bd7195e70124f3a",
+          "snapshot_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf"
+        }
+      ],
+      "geometry_review": {
+        "bound_city_record_id": "row-7hip-z8ja.9ka2",
+        "parallel_same_direction_arms": [
+          {
+            "way_id": 458591863,
+            "nodes": [
+              261212855,
+              12233753877,
+              12233753878,
+              261294463
+            ],
+            "length_m_approx": 50.88,
+            "max_city_offset_m_approx": 2.51,
+            "mean_city_offset_m_approx": 1.25
+          },
+          {
+            "way_id": 1178008329,
+            "nodes": [
+              261212855,
+              2174917836,
+              12233753876,
+              261294463
+            ],
+            "length_m_approx": 47.58,
+            "max_city_offset_m_approx": 6.67,
+            "mean_city_offset_m_approx": 4.5
+          }
+        ],
+        "sampling": "local planar approximation, <=1 m intervals; city row polyline",
+        "interior_road_branches": {
+          "2174917836": [
+            207297313
+          ],
+          "12233753877": [
+            207297313
+          ],
+          "12233753878": [],
+          "12233753876": []
+        },
+        "endpoint_road_attachments": {
+          "261212855": [
+            24089277,
+            194803327
+          ],
+          "261294463": [
+            458591864,
+            976197309
+          ]
+        },
+        "restriction_relation_scan": "No staged restriction relation references either arm; this does not establish current turn signs.",
+        "disposition": "Both eastbound; not an opposing split. Equal mapped through permission supports either as one source-inferred car path; exact designated lane remains uncertain.",
+        "access_parity": {
+          "way_tags": "Both highway=residential, oneway=yes, oneway:bicycle=yes, maxheight=11 ft, same name; no other access or direction tags. Ordinary cars travel forward (east), not reverse (west), on both. Height limit applies to both.",
+          "all_arm_node_tags": {
+            "261212855": {},
+            "261294463": {},
+            "2174917836": {},
+            "12233753877": {},
+            "12233753878": {},
+            "12233753876": {}
+          },
+          "approach_exit": "Both share west endpoint 261212855 and east endpoint 261294463. West approach 194803327 is eastbound; east continuation 458591864 is eastbound. Both connect identically to Lakewood at endpoints, 24089277 and 976197309 respectively.",
+          "interior_movements": "Both have one attachment to same undirected service alley 207297313 at distinct nodes: 12233753877 on 458591863 and 2174917836 on 1178008329; other interior nodes have no highway attachments. The exact off-route junctions are distinct, so this is not a claim that every physical turning movement is identical.",
+          "relation_scan": "All 5,723 staged type=restriction relations scanned for members matching either arm, every arm node, approach, exit, Lakewood endpoint ways and alley. No matching relations. Absence does not verify current restrictions.",
+          "through_path_conclusion": "Both mapped arms give the same source-inferred eastbound through permission and prohibit westbound through travel. Shorter 1178008329 may represent one mapped car path without establishing the sole designated or actual lane; closer 458591863 remains equally plausible. Field review needed."
+        }
+      },
+      "review_status": "source-inferred",
+      "review_required": true
+    },
+    {
+      "id": "albion-lakewood-sheridan",
+      "location": "Albion: Lakewood–Sheridan",
+      "source_record_ids": [
+        "row-f4y4.9rez-hwpq"
+      ],
+      "way_ids": [
+        458591864,
+        1191237293
+      ],
+      "source_inference": "City direction blank; OSM eastbound to 2174877400 then two-way to Sheridan. Bicycle contraflow on 458591864 is not car permission.",
+      "review_needed": "Verify current motor-vehicle signs, exact route and lane correspondence, and junction restrictions; the saved sources do not establish present field conditions.",
+      "status": "source-inferred; current signs and physical layout unverified",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes Neighborhood Greenway query",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "source_date": "2025-12",
+          "date_kind": "inventory through",
+          "status": "designation inventory",
+          "scope": "Seven exact rows; direction fields are attributes, blank direction is no motor assertion.",
+          "review_method": "Saved JSON and coordinates inspected",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago BBBike OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "osm extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot",
+          "status": "source-inferred",
+          "scope": "Road geometry, directional tags, topology and restriction relations; not current signs.",
+          "review_method": "Read-only SQLite extract and relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Final agenda of matters to be considered, Committee on Pedestrian and Traffic Safety",
+          "publisher": "Chicago City Council",
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf",
+          "source_type": "committee agenda",
+          "source_date": "2024-05-01",
+          "date_kind": "meeting date",
+          "status": "direct introductions, not proof of enactment or installation",
+          "scope": "Birchwood Ashland–Sheridan one-way east except bicycles and Eastlake Birchwood–Sheridan one-way south except bicycles; 20 mph proposals on Birchwood, Eastlake, Albion.",
+          "review_method": "Downloaded public PDF, rendered and visually inspected complete pages 2 and 3; cross-checked text.",
+          "pages": [
+            2,
+            3
+          ],
+          "retrieved_at": "2026-10-28T01:29:59.099084+00:00",
+          "sha256": "5446f325555b401597e3f35540baae5e01faea32ce845c8a4bd7195e70124f3a",
+          "snapshot_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf"
+        }
+      ],
+      "review_status": "source-inferred",
+      "review_required": true
+    },
+    {
+      "id": "albion-sheridan-winthrop",
+      "location": "Albion: Sheridan–Winthrop",
+      "source_record_ids": [
+        "row-rwxu_bq5t-ipmv"
+      ],
+      "way_ids": [
+        24103754
+      ],
+      "source_inference": "City direction blank; OSM residential has no oneway tag; inferred two-way pending signs.",
+      "review_needed": "Verify current motor-vehicle signs, exact route and lane correspondence, and junction restrictions; the saved sources do not establish present field conditions.",
+      "status": "source-inferred; current signs and physical layout unverified",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes Neighborhood Greenway query",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "source_date": "2025-12",
+          "date_kind": "inventory through",
+          "status": "designation inventory",
+          "scope": "Seven exact rows; direction fields are attributes, blank direction is no motor assertion.",
+          "review_method": "Saved JSON and coordinates inspected",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago BBBike OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "osm extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot",
+          "status": "source-inferred",
+          "scope": "Road geometry, directional tags, topology and restriction relations; not current signs.",
+          "review_method": "Read-only SQLite extract and relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Final agenda of matters to be considered, Committee on Pedestrian and Traffic Safety",
+          "publisher": "Chicago City Council",
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf",
+          "source_type": "committee agenda",
+          "source_date": "2024-05-01",
+          "date_kind": "meeting date",
+          "status": "direct introductions, not proof of enactment or installation",
+          "scope": "Birchwood Ashland–Sheridan one-way east except bicycles and Eastlake Birchwood–Sheridan one-way south except bicycles; 20 mph proposals on Birchwood, Eastlake, Albion.",
+          "review_method": "Downloaded public PDF, rendered and visually inspected complete pages 2 and 3; cross-checked text.",
+          "pages": [
+            2,
+            3
+          ],
+          "retrieved_at": "2026-10-28T01:29:59.099084+00:00",
+          "sha256": "5446f325555b401597e3f35540baae5e01faea32ce845c8a4bd7195e70124f3a",
+          "snapshot_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf"
+        }
+      ],
+      "review_status": "source-inferred",
+      "review_required": true
+    },
+    {
+      "id": "birchwood-ashland-sheridan",
+      "location": "Birchwood: Ashland–Sheridan",
+      "source_record_ids": [
+        "row-bq4z~aa9m.899d"
+      ],
+      "way_ids": [
+        1535604024,
+        1535604025,
+        104177858
+      ],
+      "source_inference": "City E; OSM eastbound with bicycle contraflow. Circular 1535604025 connects 13990513312 to 13990513311 in its oneway node order wrapping through 13990513335; stop controls are not breaks.",
+      "review_needed": "Verify current motor-vehicle signs, exact route and lane correspondence, and junction restrictions; the saved sources do not establish present field conditions.",
+      "status": "source-inferred; current signs and physical layout unverified",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes Neighborhood Greenway query",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "source_date": "2025-12",
+          "date_kind": "inventory through",
+          "status": "designation inventory",
+          "scope": "Seven exact rows; direction fields are attributes, blank direction is no motor assertion.",
+          "review_method": "Saved JSON and coordinates inspected",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago BBBike OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "osm extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot",
+          "status": "source-inferred",
+          "scope": "Road geometry, directional tags, topology and restriction relations; not current signs.",
+          "review_method": "Read-only SQLite extract and relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Final agenda of matters to be considered, Committee on Pedestrian and Traffic Safety",
+          "publisher": "Chicago City Council",
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf",
+          "source_type": "committee agenda",
+          "source_date": "2024-05-01",
+          "date_kind": "meeting date",
+          "status": "direct introductions, not proof of enactment or installation",
+          "scope": "Birchwood Ashland–Sheridan one-way east except bicycles and Eastlake Birchwood–Sheridan one-way south except bicycles; 20 mph proposals on Birchwood, Eastlake, Albion.",
+          "review_method": "Downloaded public PDF, rendered and visually inspected complete pages 2 and 3; cross-checked text.",
+          "pages": [
+            2,
+            3
+          ],
+          "retrieved_at": "2026-10-28T01:29:59.099084+00:00",
+          "sha256": "5446f325555b401597e3f35540baae5e01faea32ce845c8a4bd7195e70124f3a",
+          "snapshot_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf"
+        },
+        {
+          "title": "SBC Bike Lane Fest 2025-26: Far North Side",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2026/09/30/sbc-bike-lane-fest-2025-26-far-north-side-including-lincoln-square-west-ridge-rogers-park-edgewater-and-uptown",
+          "source_type": "news report",
+          "source_date": "2026-09-30",
+          "date_kind": "publication",
+          "status": "photo report",
+          "scope": "Identifies Birchwood at Sheridan and north Eastlake at Sheridan as greenways; does not establish every sign.",
+          "review_method": "Web text reviewed",
+          "pages": null,
+          "retrieved_at": "2026-10-28T01:29:07.501603+00:00"
+        }
+      ],
+      "review_status": "source-inferred",
+      "review_required": true
+    },
+    {
+      "id": "birchwood-sheridan-eastlake",
+      "location": "Birchwood: Sheridan–Eastlake",
+      "source_record_ids": [
+        "row-972k~6n95-qjxf"
+      ],
+      "way_ids": [
+        104177859
+      ],
+      "source_inference": "City blank; OSM residential no oneway tag; inferred two-way pending signs.",
+      "review_needed": "Verify current motor-vehicle signs, exact route and lane correspondence, and junction restrictions; the saved sources do not establish present field conditions.",
+      "status": "source-inferred; current signs and physical layout unverified",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes Neighborhood Greenway query",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "source_date": "2025-12",
+          "date_kind": "inventory through",
+          "status": "designation inventory",
+          "scope": "Seven exact rows; direction fields are attributes, blank direction is no motor assertion.",
+          "review_method": "Saved JSON and coordinates inspected",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago BBBike OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "osm extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot",
+          "status": "source-inferred",
+          "scope": "Road geometry, directional tags, topology and restriction relations; not current signs.",
+          "review_method": "Read-only SQLite extract and relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Final agenda of matters to be considered, Committee on Pedestrian and Traffic Safety",
+          "publisher": "Chicago City Council",
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf",
+          "source_type": "committee agenda",
+          "source_date": "2024-05-01",
+          "date_kind": "meeting date",
+          "status": "direct introductions, not proof of enactment or installation",
+          "scope": "Birchwood Ashland–Sheridan one-way east except bicycles and Eastlake Birchwood–Sheridan one-way south except bicycles; 20 mph proposals on Birchwood, Eastlake, Albion.",
+          "review_method": "Downloaded public PDF, rendered and visually inspected complete pages 2 and 3; cross-checked text.",
+          "pages": [
+            2,
+            3
+          ],
+          "retrieved_at": "2026-10-28T01:29:59.099084+00:00",
+          "sha256": "5446f325555b401597e3f35540baae5e01faea32ce845c8a4bd7195e70124f3a",
+          "snapshot_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf"
+        },
+        {
+          "title": "SBC Bike Lane Fest 2025-26: Far North Side",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2026/09/30/sbc-bike-lane-fest-2025-26-far-north-side-including-lincoln-square-west-ridge-rogers-park-edgewater-and-uptown",
+          "source_type": "news report",
+          "source_date": "2026-09-30",
+          "date_kind": "publication",
+          "status": "photo report",
+          "scope": "Identifies Birchwood at Sheridan and north Eastlake at Sheridan as greenways; does not establish every sign.",
+          "review_method": "Web text reviewed",
+          "pages": null,
+          "retrieved_at": "2026-10-28T01:29:07.501603+00:00"
+        }
+      ],
+      "review_status": "source-inferred",
+      "review_required": true
+    },
+    {
+      "id": "eastlake-birchwood-sheridan",
+      "location": "Eastlake: Birchwood–Sheridan",
+      "source_record_ids": [
+        "row-72jg_55uf~ckvs"
+      ],
+      "way_ids": [
+        24114915,
+        34073688
+      ],
+      "source_inference": "City S; OSM two oneway=yes ways ordered north to south. Bicycle contraflow is not car permission.",
+      "review_needed": "Verify current motor-vehicle signs, exact route and lane correspondence, and junction restrictions; the saved sources do not establish present field conditions.",
+      "status": "source-inferred; current signs and physical layout unverified",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes Neighborhood Greenway query",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "source_date": "2025-12",
+          "date_kind": "inventory through",
+          "status": "designation inventory",
+          "scope": "Seven exact rows; direction fields are attributes, blank direction is no motor assertion.",
+          "review_method": "Saved JSON and coordinates inspected",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago BBBike OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "osm extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot",
+          "status": "source-inferred",
+          "scope": "Road geometry, directional tags, topology and restriction relations; not current signs.",
+          "review_method": "Read-only SQLite extract and relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Final agenda of matters to be considered, Committee on Pedestrian and Traffic Safety",
+          "publisher": "Chicago City Council",
+          "url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf",
+          "source_type": "committee agenda",
+          "source_date": "2024-05-01",
+          "date_kind": "meeting date",
+          "status": "direct introductions, not proof of enactment or installation",
+          "scope": "Birchwood Ashland–Sheridan one-way east except bicycles and Eastlake Birchwood–Sheridan one-way south except bicycles; 20 mph proposals on Birchwood, Eastlake, Albion.",
+          "review_method": "Downloaded public PDF, rendered and visually inspected complete pages 2 and 3; cross-checked text.",
+          "pages": [
+            2,
+            3
+          ],
+          "retrieved_at": "2026-10-28T01:29:59.099084+00:00",
+          "sha256": "5446f325555b401597e3f35540baae5e01faea32ce845c8a4bd7195e70124f3a",
+          "snapshot_url": "https://occprodstoragev1.blob.core.usgovcloudapi.net/meetingattachmentspublic/b295bd5e-b31c-4fc0-bfe4-d7e5ed40f2e8.pdf"
+        },
+        {
+          "title": "SBC Bike Lane Fest 2025-26: Far North Side",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2026/09/30/sbc-bike-lane-fest-2025-26-far-north-side-including-lincoln-square-west-ridge-rogers-park-edgewater-and-uptown",
+          "source_type": "news report",
+          "source_date": "2026-09-30",
+          "date_kind": "publication",
+          "status": "photo report",
+          "scope": "Identifies Birchwood at Sheridan and north Eastlake at Sheridan as greenways; does not establish every sign.",
+          "review_method": "Web text reviewed",
+          "pages": null,
+          "retrieved_at": "2026-10-28T01:29:07.501603+00:00"
+        }
+      ],
+      "name_alias_evidence": {
+        "city_street": "EAST LAKE TER",
+        "city_st_name": "EAST LAKE",
+        "osm_name": "North Eastlake Terrace",
+        "osm_source_name": "EASTLAKE",
+        "source_alias": "EAST LAKE",
+        "way_nodes": {
+          "24114915": [
+            261325545,
+            1257572575,
+            3158686893,
+            11169006265,
+            1771088607,
+            261147446
+          ],
+          "34073688": [
+            261147446,
+            9401023319,
+            1771255964,
+            6776557807,
+            6776557803,
+            9401023304,
+            261146196,
+            9401023308,
+            9401023289,
+            261265641
+          ]
+        },
+        "boundary": "City north endpoint is approximately 7 m south of way 24114915 north node 261325545; south endpoint near node 261265641. Both ways southbound in source node order."
+      },
+      "review_status": "source-inferred",
+      "review_required": true
+    },
+    {
+      "id": "jonquil-paulina-greenview",
+      "location": "Jonquil: Paulina–Greenview",
+      "source_record_ids": [
+        "row-d5jb_ba32_a78j"
+      ],
+      "way_ids": [
+        210205666
+      ],
+      "source_inference": "City blank; OSM no oneway tag and mapped 20 mph, inferred two-way pending signs; belongs to connected Greenview network.",
+      "review_needed": "Verify current motor-vehicle signs, exact route and lane correspondence, and junction restrictions; the saved sources do not establish present field conditions.",
+      "status": "source-inferred; current signs and physical layout unverified",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes Neighborhood Greenway query",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "source_date": "2025-12",
+          "date_kind": "inventory through",
+          "status": "designation inventory",
+          "scope": "Seven exact rows; direction fields are attributes, blank direction is no motor assertion.",
+          "review_method": "Saved JSON and coordinates inspected",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago BBBike OSM extract",
+          "publisher": "OpenStreetMap contributors / BBBike",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "osm extract",
+          "source_date": "2026-09-11T23:00:00Z",
+          "date_kind": "snapshot",
+          "status": "source-inferred",
+          "scope": "Road geometry, directional tags, topology and restriction relations; not current signs.",
+          "review_method": "Read-only SQLite extract and relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Roger That! Low-Stress, North-South Bike Route Planned for Rogers Park",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2015/06/29/roger-that-low-stress-north-south-bike-route-planned-for-rogers-park",
+          "source_type": "news report",
+          "source_date": "2015-06-29",
+          "date_kind": "publication",
+          "status": "historical draft proposal",
+          "scope": "49th Ward staff described planned Glenwood/Greenview route to Howard or Jonquil; linked network, not proof of Jonquil current access.",
+          "review_method": "Web text reviewed",
+          "pages": null,
+          "retrieved_at": "2026-10-28T01:29:07.501603+00:00"
+        }
+      ],
+      "review_status": "source-inferred",
+      "review_required": true
+    },
+    {
+      "id": "dearborn-goethe-schiller",
+      "location": "Dearborn, Goethe–Schiller",
+      "source_record_ids": [
+        "row-gdhc-hkkb.h3bg"
+      ],
+      "way_ids": [
+        31009529
+      ],
+      "source_inference": "City direction blank; OSM residential way has no oneway tag and runs north from Goethe node 261171336 to Schiller node 261171337, continuing north. A 2024 reported alderman letter describes two-way vehicles on Division–North. No current sign verification.",
+      "review_status": "source-inferred",
+      "review_needed": "Confirm current signs, any barriers and movements at Goethe and Schiller.",
+      "sources": [
+        {
+          "title": "Chicago bike routes: Neighborhood Greenway filtered snapshot",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "date": null,
+          "date_kind": "inventory effective date not verified",
+          "status": "designation inventory",
+          "scope": "five specified rows; motor directions in oneway_dir",
+          "review_method": "local JSON row and geometry inspection",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "BBBike / OpenStreetMap",
+          "url": "https://www.openstreetmap.org/way/31009529",
+          "source_type": "OSM snapshot",
+          "date": "2026-09-11",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot",
+          "scope": "Goethe to Schiller node slice",
+          "review_method": "SQLite node order, tags and restriction relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "FOIAed letter shows Ald. Hopkins asked CDOT to scrape out dashed bike lanes",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2024/07/13/foiaed-letter-shows-ald-hopkins-asked-cdot-to-scrape-out-dashed-bike-lanes-from-dearborn-in-posh-gold-coast",
+          "source_type": "reported alderman letter",
+          "date": "2024-07-13",
+          "date_kind": "publication",
+          "status": "contemporaneous report; letter quoted indirectly",
+          "scope": "Division–North two-way motor traffic and advisory markings; alderman requested removal",
+          "review_method": "Article text reviewed; linked primary letter image inspected and catalogued separately.",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "snapshot_url": null
+        },
+        {
+          "title": "Dearborn Parkway Advisory Bike Lanes Removal Request",
+          "publisher": "Alderman Brian Hopkins, 2nd Ward; image published by Streetsblog Chicago",
+          "url": "https://x.com/streetsblogchi/status/1812173108645691557",
+          "source_type": "letter image",
+          "date": "2024-06-13",
+          "date_kind": "letter date",
+          "status": "historical request, not a current condition",
+          "scope": "Division–North, describes two-way vehicle traffic and requests removal of advisory markings",
+          "review_method": "Visually inspected first page image linked by public post; relevant text is legible",
+          "pages": [
+            1
+          ],
+          "retrieved_at": "2026-10-27",
+          "sha256": "cb0eac46c6f25a0ae305925cf65b5c7c27ddcc2780def708813fd0d5636aa930",
+          "snapshot_url": "https://pbs.twimg.com/media/GSYgeEtXIAEjZeb?format=jpg&name=large"
+        }
+      ]
+    },
+    {
+      "id": "dearborn-schiller-north",
+      "location": "Dearborn, Schiller–North",
+      "source_record_ids": [
+        "row-gv83~kyug~tfd8"
+      ],
+      "way_ids": [
+        31009529
+      ],
+      "source_inference": "Same way continues north through Burton node 261171338 to North node 12915002704; no oneway tag. Traffic stops and advisory cycle markings are not motor continuity breaks. No current signs verified.",
+      "review_status": "source-inferred",
+      "review_needed": "Confirm signs and movements at Schiller, Burton and North.",
+      "sources": [
+        {
+          "title": "Chicago bike routes: Neighborhood Greenway filtered snapshot",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "date": null,
+          "date_kind": "inventory effective date not verified",
+          "status": "designation inventory",
+          "scope": "five specified rows; motor directions in oneway_dir",
+          "review_method": "local JSON row and geometry inspection",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "BBBike / OpenStreetMap",
+          "url": "https://www.openstreetmap.org/way/31009529",
+          "source_type": "OSM snapshot",
+          "date": "2026-09-11",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot",
+          "scope": "Schiller to North node slice",
+          "review_method": "SQLite node order, tags and restriction relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "FOIAed letter shows Ald. Hopkins asked CDOT to scrape out dashed bike lanes",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2024/07/13/foiaed-letter-shows-ald-hopkins-asked-cdot-to-scrape-out-dashed-bike-lanes-from-dearborn-in-posh-gold-coast",
+          "source_type": "reported alderman letter",
+          "date": "2024-07-13",
+          "date_kind": "publication",
+          "status": "contemporaneous report; letter quoted indirectly",
+          "scope": "Division–North two-way motor traffic and advisory markings; alderman requested removal",
+          "review_method": "Article text reviewed; linked primary letter image inspected and catalogued separately.",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "snapshot_url": null
+        },
+        {
+          "title": "Dearborn Parkway Advisory Bike Lanes Removal Request",
+          "publisher": "Alderman Brian Hopkins, 2nd Ward; image published by Streetsblog Chicago",
+          "url": "https://x.com/streetsblogchi/status/1812173108645691557",
+          "source_type": "letter image",
+          "date": "2024-06-13",
+          "date_kind": "letter date",
+          "status": "historical request, not a current condition",
+          "scope": "Division–North, describes two-way vehicle traffic and requests removal of advisory markings",
+          "review_method": "Visually inspected first page image linked by public post; relevant text is legible",
+          "pages": [
+            1
+          ],
+          "retrieved_at": "2026-10-27",
+          "sha256": "cb0eac46c6f25a0ae305925cf65b5c7c27ddcc2780def708813fd0d5636aa930",
+          "snapshot_url": "https://pbs.twimg.com/media/GSYgeEtXIAEjZeb?format=jpg&name=large"
+        }
+      ]
+    },
+    {
+      "id": "sunnyside-maplewood-western",
+      "location": "Sunnyside, Maplewood–Western",
+      "source_record_ids": [
+        "row-vy8z-r7yn_5ka7"
+      ],
+      "way_ids": [
+        1124079045,
+        1124079047,
+        1124079048,
+        117007063
+      ],
+      "source_inference": "City direction blank. OSM ways have no oneway tags; ordered eastward the sequence is 1124079045 reversed from Maplewood node 261141640 to 1720710427, then 1124079047 reversed, 1124079048 reversed and 117007063 reversed to Western node 264413978. Missing oneway tag is not a current sign confirmation.",
+      "review_status": "source-inferred",
+      "review_needed": "Check signs, movement restrictions and geometry at Western and Maplewood.",
+      "sources": [
+        {
+          "title": "Chicago bike routes: Neighborhood Greenway filtered snapshot",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "date": null,
+          "date_kind": "inventory effective date not verified",
+          "status": "designation inventory",
+          "scope": "five specified rows; motor directions in oneway_dir",
+          "review_method": "local JSON row and geometry inspection",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "BBBike / OpenStreetMap",
+          "url": "https://www.openstreetmap.org/way/1124079045",
+          "source_type": "OSM snapshot",
+          "date": "2026-09-11",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot",
+          "scope": "Maplewood to 1720710427; western continuation via ways 1124079047, 1124079048, 117007063",
+          "review_method": "SQLite node order, tags and restriction relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ]
+    },
+    {
+      "id": "sunnyside-western-lincoln",
+      "location": "Sunnyside, Western–Lincoln",
+      "source_record_ids": [
+        "row-b8mz_gyug-txux"
+      ],
+      "way_ids": [
+        24165992
+      ],
+      "source_inference": "City oneway_dir E and OSM way ordered east from Western node 264413978 to Lincoln node 153011804 with oneway=yes, oneway:bicycle=no. Westbound bike lane does not authorize westbound ordinary cars. Signal and curb extensions are not breaks.",
+      "review_status": "source-inferred",
+      "review_needed": "Verify present signs and eastbound continuation across Western; verify no temporary restrictions.",
+      "sources": [
+        {
+          "title": "Chicago bike routes: Neighborhood Greenway filtered snapshot",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "date": null,
+          "date_kind": "inventory effective date not verified",
+          "status": "designation inventory",
+          "scope": "five specified rows; motor directions in oneway_dir",
+          "review_method": "local JSON row and geometry inspection",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "BBBike / OpenStreetMap",
+          "url": "https://www.openstreetmap.org/way/24165992",
+          "source_type": "OSM snapshot",
+          "date": "2026-09-11",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot",
+          "scope": "Western to Lincoln: eastbound one-way, bicycle exception",
+          "review_method": "SQLite node order, tags and restriction relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Previous Participatory Budgeting Projects",
+          "publisher": "47th Ward",
+          "url": "https://static1.squarespace.com/static/5cc380feab1a626e95e25356/t/677efcbdea7fea3e4a12da92/1736375485118/Previous+Participatory+Budgeting+Projects.pdf",
+          "source_type": "ward PDF",
+          "date": null,
+          "date_kind": "publication date not verified",
+          "status": "ward retrospective",
+          "scope": "Sunnyside westbound bicycle lane Lincoln–Western; Oakley curb extensions and Western bike signal",
+          "review_method": "PDF page 2 rendered and visually inspected; text checked",
+          "pages": [
+            2
+          ],
+          "retrieved_at": "2026-10-27",
+          "sha256": "8038ba2f127ee9b92cc59466def6e7fcf0fa90d4f8991bdc6731f58f514be238",
+          "snapshot_url": "https://static1.squarespace.com/static/5cc380feab1a626e95e25356/t/677efcbdea7fea3e4a12da92/1736375485118/Previous+Participatory+Budgeting+Projects.pdf"
+        },
+        {
+          "title": "The Sunnyside contraflow lane",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2022/08/10/the-sunnyside-contraflow-lane-a-little-infrastructure-that-makes-a-big-difference",
+          "source_type": "contemporary report",
+          "date": "2022-08-10",
+          "date_kind": "publication",
+          "status": "report of installed contraflow",
+          "scope": "Western–Lincoln is eastbound for cars; westbound bicycle exception",
+          "review_method": "article text",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "snapshot_url": null
+        }
+      ]
+    },
+    {
+      "id": "rosehill-through-circle",
+      "location": "Rosehill, Ravenswood–Ashland via Clark circle",
+      "source_record_ids": [
+        "row-hn8n_vc6q_m8wd"
+      ],
+      "way_ids": [
+        678895681,
+        1535609224,
+        24093741
+      ],
+      "source_inference": "Named residential ways terminate at circle nodes 10943460512 (west) and 13990554011 (east). One-way circular residential way 1535609224 supplies directed arcs: eastbound from west node follows nodes 13990548400, 13990548399, 13990548398, 13990548397, 13990554019 through 13990554012 to east node; westbound follows 13990554010 through 13990554001 to west node. Named ways lack oneway tags; no motor filter identified in snapshot. City row is a connector in the Ashland resurfacing project, not evidence of separate arterial projects.",
+      "review_status": "source-inferred",
+      "review_needed": "Check circle current direction and signs, cross-traffic and both route arcs.",
+      "sources": [
+        {
+          "title": "Chicago bike routes: Neighborhood Greenway filtered snapshot",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "date": null,
+          "date_kind": "inventory effective date not verified",
+          "status": "designation inventory",
+          "scope": "five specified rows; motor directions in oneway_dir",
+          "review_method": "local JSON row and geometry inspection",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "BBBike / OpenStreetMap",
+          "url": "https://www.openstreetmap.org/way/1535609224",
+          "source_type": "OSM snapshot",
+          "date": "2026-09-11",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot",
+          "scope": "oneway circular road connecting Rosehill named ways",
+          "review_method": "SQLite node order, tags and restriction relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "BBBike / OpenStreetMap",
+          "url": "https://www.openstreetmap.org/way/678895681",
+          "source_type": "OSM snapshot",
+          "date": "2026-09-11",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot",
+          "scope": "west Rosehill",
+          "review_method": "SQLite node order, tags and restriction relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Chicago OSM extract",
+          "publisher": "BBBike / OpenStreetMap",
+          "url": "https://www.openstreetmap.org/way/24093741",
+          "source_type": "OSM snapshot",
+          "date": "2026-09-11",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot",
+          "scope": "east Rosehill",
+          "review_method": "SQLite node order, tags and restriction relation scan",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Rosehill Resurfacing and Bikeway",
+          "publisher": "40th Ward",
+          "url": "https://40thward.org/project/rosehill-resurfacing-and-bikeway/",
+          "source_type": "ward project page",
+          "date": null,
+          "date_kind": "publication date not verified",
+          "status": "completed project label, current signs unverified",
+          "scope": "Ravenswood–Ashland; bike connector to Clark as part of Ashland resurfacing, shared lanes",
+          "review_method": "ward page text",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "snapshot_url": null
+        }
+      ]
+    },
+    {
+      "id": "rosehill-ravenswood-turn",
+      "location": "Ravenswood approach to Rosehill",
+      "source_record_ids": [
+        "row-hn8n_vc6q_m8wd"
+      ],
+      "way_ids": [
+        681310579,
+        678895681
+      ],
+      "source_inference": "OSM relation 9454355 no_right_turn from way 681310579 via node 257172600 to way 678895681. This restricts that specific Ravenswood approach; it does not prohibit either through movement along Rosehill.",
+      "review_status": "source-inferred",
+      "review_needed": "Verify current approach signs and whether restriction remains installed.",
+      "sources": [
+        {
+          "title": "Chicago bike routes: Neighborhood Greenway filtered snapshot",
+          "publisher": "City of Chicago",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city inventory",
+          "date": null,
+          "date_kind": "inventory effective date not verified",
+          "status": "designation inventory",
+          "scope": "five specified rows; motor directions in oneway_dir",
+          "review_method": "local JSON row and geometry inspection",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "sha256": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "OSM restriction relation 9454355",
+          "publisher": "BBBike / OpenStreetMap",
+          "url": "https://www.openstreetmap.org/relation/9454355",
+          "source_type": "OSM snapshot",
+          "date": "2026-09-11",
+          "date_kind": "snapshot effective date",
+          "status": "snapshot",
+          "scope": "no_right_turn from 681310579 via 257172600 to 678895681",
+          "review_method": "SQLite relation and way nodes",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Rosehill Resurfacing and Bikeway",
+          "publisher": "40th Ward",
+          "url": "https://40thward.org/project/rosehill-resurfacing-and-bikeway/",
+          "source_type": "ward project page",
+          "date": null,
+          "date_kind": "publication date not verified",
+          "status": "completed project label, current signs unverified",
+          "scope": "Ravenswood–Ashland; bike connector to Clark as part of Ashland resurfacing, shared lanes",
+          "review_method": "ward page text",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "sha256": null,
+          "snapshot_url": null
+        }
+      ]
+    },
+    {
+      "id": "charles-104th-vincennes",
+      "location": "Charles Street, 104th Street to Vincennes Avenue",
+      "source_record_ids": [
+        "row-sfkb.g97d.sgdr"
+      ],
+      "way_ids": [
+        146306483
+      ],
+      "source_inference": "Way 146306483 is residential, nodes 261186289 → 12801074435 → 5814542579 → 11788420009 → 261186290; no oneway tag. City motor direction dash; city bicycle one-way north is not a motor rule. Clip to city geometry.",
+      "review_status": "source-inferred",
+      "review_needed": "Check endpoint clipping, approach junctions, signs and present access.",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes: Neighborhood Greenway query",
+          "publisher": "Chicago Department of Transportation",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "date": "2025-12",
+          "date_kind": "data current through",
+          "status": "historical snapshot",
+          "scope": "City row row-sfkb.g97d.sgdr; city dash is no motor-direction assertion",
+          "review_method": "saved JSON geometry and fields",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "hash": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "OSM extract",
+          "date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "status": "historical snapshot",
+          "scope": "Staged ways [146306483]; extract hash is for BBBike file, not live objects",
+          "review_method": "SQLite nodes, way tags, relation members",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "hash": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ],
+      "way_segments": [
+        {
+          "way_id": 146306483,
+          "motor_oneway": null,
+          "scope": "Entire way candidate except where city endpoint clipping is noted; verify endpoints.",
+          "nodes": [
+            261186289,
+            12801074435,
+            5814542579,
+            11788420009,
+            261186290
+          ]
+        }
+      ]
+    },
+    {
+      "id": "charles-97th-95th",
+      "location": "Charles Street, 97th Street to 95th Street",
+      "source_record_ids": [
+        "row-xf8g~8ygn.jeka"
+      ],
+      "way_ids": [
+        490761166,
+        1337294805,
+        1230416810
+      ],
+      "source_inference": "Connected source order northbound is 261186282 → 10242906107 → 2876584094 → 261186281, reversing ways 490761166, 1337294805, 1230416810. No motor oneway tags. City geometry ends within 1230416810; clip to designation rather than extending to node 261186281. Signal nodes do not themselves sever through movements.",
+      "review_status": "source-inferred",
+      "review_needed": "Verify precise clipping and 95th approach restrictions and signs.",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes: Neighborhood Greenway query",
+          "publisher": "Chicago Department of Transportation",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "date": "2025-12",
+          "date_kind": "data current through",
+          "status": "historical snapshot",
+          "scope": "City row row-xf8g~8ygn.jeka; city dash is no motor-direction assertion",
+          "review_method": "saved JSON geometry and fields",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "hash": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "OSM extract",
+          "date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "status": "historical snapshot",
+          "scope": "Staged ways [490761166, 1337294805, 1230416810]; extract hash is for BBBike file, not live objects",
+          "review_method": "SQLite nodes, way tags, relation members",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "hash": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ],
+      "way_segments": [
+        {
+          "way_id": 490761166,
+          "motor_oneway": null,
+          "scope": "Entire way candidate except where city endpoint clipping is noted; verify endpoints.",
+          "nodes": [
+            10242906107,
+            5496165894,
+            5496165887,
+            5496165904,
+            10241627244,
+            9972401463,
+            9972401465,
+            12853503001,
+            261186282
+          ]
+        },
+        {
+          "way_id": 1337294805,
+          "motor_oneway": null,
+          "scope": "Entire way candidate except where city endpoint clipping is noted; verify endpoints.",
+          "nodes": [
+            2876584094,
+            10242906107
+          ]
+        },
+        {
+          "way_id": 1230416810,
+          "motor_oneway": null,
+          "scope": "Entire way candidate except where city endpoint clipping is noted; verify endpoints.",
+          "nodes": [
+            261186281,
+            2876584094
+          ]
+        }
+      ]
+    },
+    {
+      "id": "98th-loomis-vincennes",
+      "location": "98th Street and Throop offset, Loomis Street to Vincennes Avenue",
+      "source_record_ids": [
+        "row-qwjx_r592.h4qr"
+      ],
+      "way_ids": [
+        24077508,
+        1359658130,
+        919663824
+      ],
+      "source_inference": "City line follows the Throop offset. West 98th way 24077508 nodes 1498962104 → 12853503151 → 12853503147 → 261148935; Throop way 1359658130 nodes 1498962104 → 261150726 → 1498962124; east 98th way 919663824 nodes 539132499 → 12853503493 → 12994872395 → 261150724 → 7284464228 → 2489456876 → 12853503177 → 1498962124. No motor oneway tags. Throop is 10.08 m; local scaled-coordinate max sample distance to city line 1.22 m at ≤1 m spacing; direct attachment to both 98th ways. No selected node barriers or restrictions involving selected ways found in extract. Stop is not a through-route break.",
+      "review_status": "source-inferred",
+      "review_needed": "Verify junctions, signed motor permissions and current ground conditions.",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes: Neighborhood Greenway query",
+          "publisher": "Chicago Department of Transportation",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "date": "2025-12",
+          "date_kind": "data current through",
+          "status": "historical snapshot",
+          "scope": "City row row-qwjx_r592.h4qr; city dash is no motor-direction assertion",
+          "review_method": "saved JSON geometry and fields",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "hash": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "OSM extract",
+          "date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "status": "historical snapshot",
+          "scope": "Staged ways [24077508, 1359658130, 919663824]; extract hash is for BBBike file, not live objects",
+          "review_method": "SQLite nodes, way tags, relation members",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "hash": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "2020 was a good year for Far South Side bikeway installation",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2021/01/21/2020-was-a-good-year-for-far-south-side-bikeway-installation",
+          "source_type": "news",
+          "date": "2021-01-21",
+          "date_kind": "publication",
+          "status": "historical report",
+          "scope": "CDOT 2020 network includes 98th connector to Loomis and Vincennes; no current motor access",
+          "review_method": "web text",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "hash": null,
+          "snapshot_url": null
+        }
+      ],
+      "way_segments": [
+        {
+          "way_id": 24077508,
+          "motor_oneway": null,
+          "scope": "Entire way candidate except where city endpoint clipping is noted; verify endpoints.",
+          "nodes": [
+            1498962104,
+            12853503151,
+            12853503147,
+            261148935
+          ]
+        },
+        {
+          "way_id": 1359658130,
+          "motor_oneway": null,
+          "scope": "Entire way candidate except where city endpoint clipping is noted; verify endpoints.",
+          "nodes": [
+            1498962104,
+            261150726,
+            1498962124
+          ]
+        },
+        {
+          "way_id": 919663824,
+          "motor_oneway": null,
+          "scope": "Entire way candidate except where city endpoint clipping is noted; verify endpoints.",
+          "nodes": [
+            539132499,
+            12853503493,
+            12994872395,
+            261150724,
+            7284464228,
+            2489456876,
+            12853503177,
+            1498962124
+          ]
+        }
+      ]
+    },
+    {
+      "id": "98th-avenue-l-j",
+      "location": "98th Street, Avenue L to Avenue J",
+      "source_record_ids": [
+        "row-hhh6-5sg3~9x3s"
+      ],
+      "way_ids": [
+        582898994,
+        1230684260
+      ],
+      "source_inference": "City records eastbound motor direction across row. OSM 582898994 nodes 261215215 → 9790926280 → 1899043297 → 11540397067 → 261215214, westbound in node order, has no oneway tag. OSM 1230684260 nodes 261215215 → 9790926263 → 1899043257 → 9790930246 → 261215216 is eastbound oneway=yes with bicycle exception. City and OSM differ in apparent extent; no oneway tag does not disprove city designation.",
+      "review_status": "source-inferred",
+      "review_needed": "Check signs at both blocks and Avenue L/J intersections; distinguish bicycle contraflow from motor permissions.",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes: Neighborhood Greenway query",
+          "publisher": "Chicago Department of Transportation",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "date": "2025-12",
+          "date_kind": "data current through",
+          "status": "historical snapshot",
+          "scope": "City row row-hhh6-5sg3~9x3s; city dash is no motor-direction assertion",
+          "review_method": "saved JSON geometry and fields",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "hash": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "OSM extract",
+          "date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "status": "historical snapshot",
+          "scope": "Staged ways [582898994, 1230684260]; extract hash is for BBBike file, not live objects",
+          "review_method": "SQLite nodes, way tags, relation members",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "hash": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        }
+      ],
+      "way_segments": [
+        {
+          "way_id": 582898994,
+          "motor_oneway": null,
+          "scope": "Entire way candidate except where city endpoint clipping is noted; verify endpoints.",
+          "nodes": [
+            261215215,
+            9790926280,
+            1899043297,
+            11540397067,
+            261215214
+          ]
+        },
+        {
+          "way_id": 1230684260,
+          "motor_oneway": "yes",
+          "scope": "Entire way candidate except where city endpoint clipping is noted; verify endpoints.",
+          "nodes": [
+            261215215,
+            9790926263,
+            1899043257,
+            9790930246,
+            261215216
+          ]
+        }
+      ]
+    },
+    {
+      "id": "82nd-ashland-loomis",
+      "location": "82nd Street, Ashland Avenue to Loomis Boulevard",
+      "source_record_ids": [
+        "row-ihqd.w7jk-reas"
+      ],
+      "way_ids": [
+        196459411
+      ],
+      "source_inference": "City eastbound; way 196459411 runs eastbound from 6316989390 to 261240297 and is oneway=yes. Ashland crossing reported unsignalized in 2023; a crossing is not itself a through-route break. Adjacent Loomis bike lanes and older greenway are broader network context, not proof of a single project or current car permissions.",
+      "review_status": "source-inferred",
+      "review_needed": "Confirm current Ashland and Loomis junction access and signs.",
+      "sources": [
+        {
+          "title": "Chicago Bike Routes: Neighborhood Greenway query",
+          "publisher": "Chicago Department of Transportation",
+          "url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid",
+          "source_type": "city dataset",
+          "date": "2025-12",
+          "date_kind": "data current through",
+          "status": "historical snapshot",
+          "scope": "City row row-ihqd.w7jk-reas; city dash is no motor-direction assertion",
+          "review_method": "saved JSON geometry and fields",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:15:11.241Z",
+          "hash": "b26466b5e898bdd32732df9484a5bf5fe59eed4edf2d3e27a6c2fdf07c44dda2",
+          "snapshot_url": "https://data.cityofchicago.org/resource/hvv9-38ut.json?%24select=%3Aid%2Cthe_geom%2Cstreet%2Cst_name%2Coneway_dir%2Cf_street%2Ct_street%2Cdisplayrou%2Cmi_ctrline%2Cbr_oneway%2Cbr_ow_dir%2Ccontraflow&%24where=displayrou%3D%27Neighborhood+Greenway%27&%24limit=5000&%24order=%3Aid"
+        },
+        {
+          "title": "Chicago OSM regional extract",
+          "publisher": "BBBike / OpenStreetMap contributors",
+          "url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf",
+          "source_type": "OSM extract",
+          "date": "2026-09-11",
+          "date_kind": "extract effective date",
+          "status": "historical snapshot",
+          "scope": "Staged ways [196459411]; extract hash is for BBBike file, not live objects",
+          "review_method": "SQLite nodes, way tags, relation members",
+          "pages": null,
+          "retrieved_at": "2026-09-19T02:27:15.039Z",
+          "hash": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
+          "snapshot_url": "https://download.bbbike.org/osm/bbbike/Chicago/Chicago.osm.pbf"
+        },
+        {
+          "title": "Day Two of Bike Lane Week on Streetsblog Chicago: Far Southwest Side",
+          "publisher": "Streetsblog Chicago",
+          "url": "https://chi.streetsblog.org/2023/12/05/day-two-of-bike-lane-week-on-streetsblog-chicago-far-southwest-side",
+          "source_type": "news",
+          "date": "2023-12-05",
+          "date_kind": "publication",
+          "status": "historical field report",
+          "scope": "82nd neighborhood greenway crosses Ashland and connects to older route west; no current access proof",
+          "review_method": "web text",
+          "pages": null,
+          "retrieved_at": "2026-10-27",
+          "hash": null,
+          "snapshot_url": null
+        }
+      ],
+      "way_segments": [
+        {
+          "way_id": 196459411,
+          "motor_oneway": "yes",
+          "scope": "Entire way candidate except where city endpoint clipping is noted; verify endpoints.",
+          "nodes": [
+            6316989390,
+            10812175891,
+            2479521385,
+            12853275417,
+            261240301,
+            12853275465,
+            2479521382,
+            12853276368,
+            261136255,
+            12853309203,
+            2479521371,
+            10799261865,
+            261240299,
+            10799261864,
+            2479521368,
+            10792320527,
+            261240297
+          ]
+        }
+      ]
     }
   ],
   "research_batches": [
@@ -13548,6 +14972,105 @@
         "81st-union-intervening-road"
       ],
       "notes": "docs/south-three-expansion-source-review.md"
+    },
+    {
+      "id": "third-ten-north-four-2026-10-27",
+      "metadata": {
+        "search_gaps": [
+          {
+            "query": "CDOT Albion Glenwood Sheridan neighborhood greenway plan 49th ward pdf",
+            "finding": "No detailed block drawing or direct ward construction update found."
+          },
+          {
+            "query": "Birchwood Eastlake Jonquil greenway CDOT Sheridan 49th ward plan",
+            "finding": "Found 2024 committee agenda and 2026 photo report; no detailed engineering plan or direct alderman construction update."
+          },
+          {
+            "query": "49th ward neighborhood greenway pdf Birchwood",
+            "finding": "Historical PDF reference found but no retrievable detailed plan identified; lead only."
+          },
+          {
+            "query": "OSM restriction relations",
+            "finding": "Full staged type=restriction scan found no relations referencing candidate named ways; absence is not proof of present signs."
+          },
+          {
+            "query": "Committee PDF pages 2–3 visual screenshot",
+            "finding": "Initial web screenshot cache miss and sandbox DNS failure; public PDF downloaded after authorized network escalation. Visually inspected rendered pages 2–3."
+          }
+        ]
+      },
+      "record_ids": [
+        "albion-glenwood-lakewood",
+        "albion-lakewood-sheridan",
+        "albion-sheridan-winthrop",
+        "birchwood-ashland-sheridan",
+        "birchwood-sheridan-eastlake",
+        "eastlake-birchwood-sheridan",
+        "jonquil-paulina-greenview"
+      ],
+      "notes": "docs/third-north-four-source-review.md"
+    },
+    {
+      "id": "third-ten-central-three-2026-10-27",
+      "metadata": {
+        "search_gaps": [
+          {
+            "queries": [
+              "Chicago Dearborn Goethe North neighborhood greenway CDOT plans alderman",
+              "Dearborn Schiller bicycle lanes CDOT design pdf",
+              "Sunnyside Maplewood Western greenway alderman 47th",
+              "Rosehill Clark Ravenswood greenway traffic circle 40th ward CDOT plan",
+              "site:chicago.gov Sunnyside greenway Maplewood Lincoln pdf"
+            ],
+            "findings": "No detailed block-level CDOT design or as-built plan located for these exact scopes. Ward Rosehill page is a project-level completed label and does not prove each movement or installed sign. Ward PDF provides a retrospective, not block-level design."
+          }
+        ]
+      },
+      "record_ids": [
+        "dearborn-goethe-schiller",
+        "dearborn-schiller-north",
+        "sunnyside-maplewood-western",
+        "sunnyside-western-lincoln",
+        "rosehill-through-circle",
+        "rosehill-ravenswood-turn"
+      ],
+      "notes": "docs/third-central-three-source-review.md"
+    },
+    {
+      "id": "third-ten-south-three-2026-10-27",
+      "metadata": {
+        "search_gaps": [
+          {
+            "queries": [
+              "Chicago Charles neighborhood greenway CDOT Charles street 98th 82nd",
+              "Chicago 98th street neighborhood greenway Loomis Vincennes CDOT plan",
+              "Chicago 82nd Ashland Loomis neighborhood greenway CDOT plan",
+              "Chicago Charles greenway bicycle CDOT alderman",
+              "\"Charles\" \"98th\" \"greenway\" Chicago Vincennes",
+              "\"98th\" \"Throop\" \"greenway\" Chicago bicycle",
+              "\"98th\" \"Avenue L\" \"Avenue J\" bike greenway Chicago",
+              "\"82nd\" \"Ashland\" \"Loomis\" \"greenway\" Chicago CDOT",
+              "\"Charles Street\" \"greenway\" \"Chicago\" bike 95th 97th",
+              "\"98th Street\" \"Loomis\" \"Vincennes\" \"bike\" Chicago",
+              "\"82nd\" \"Loomis\" \"Ashland\" \"CDOT\" bicycle 2023",
+              "site:10thward.org \"98th\" \"bike\""
+            ],
+            "finding": "No detailed CDOT engineering plans or direct alderman communications found for the exact scoped segments; absence is a research gap."
+          },
+          {
+            "url": "https://greatcities.uic.edu/wp-content/uploads/2023/10/100thStreetConceptPlan_2023Update10.13.23-ReducedSize.pdf",
+            "finding": "Direct browser retrieval and escalated public curl retry both returned HTTP 404; PDF not visually inspected and no inference drawn."
+          }
+        ]
+      },
+      "record_ids": [
+        "charles-104th-vincennes",
+        "charles-97th-95th",
+        "98th-loomis-vincennes",
+        "98th-avenue-l-j",
+        "82nd-ashland-loomis"
+      ],
+      "notes": "docs/third-south-three-source-review.md"
     }
   ]
 }

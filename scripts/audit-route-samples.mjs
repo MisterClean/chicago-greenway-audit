@@ -7,6 +7,9 @@ import { createReadStream } from 'node:fs';
 import { metres, locate } from './route-network.mjs';
 import { auditTenGreenways } from './audit-ten-greenways.mjs';
 import { auditSecondTenGreenways } from './audit-second-ten-greenways.mjs';
+import { auditThirdNorthGreenways } from './audit-third-north-greenways.mjs';
+import { auditThirdCentralGreenways } from './audit-third-central-greenways.mjs';
+import { auditThirdSouthGreenways } from './audit-third-south-greenways.mjs';
 
 const [input = 'public/routes/pilot.json', output = 'data/routes/pilot-validation.json', database = 'data/staging/network.sqlite'] = process.argv.slice(2);
 const bytes = await readFile(input);
@@ -387,6 +390,9 @@ for (const [routeId, cityId, wayId, sourceNodes, adjacent] of [
 }
 auditTenGreenways({data,db,cityRecords,evidenceRecords,check,sourceUrl});
 auditSecondTenGreenways({data,db,cityRecords,evidenceRecords,check,sourceUrl});
+auditThirdNorthGreenways({data,db,cityRecords,evidenceRecords,check,sourceUrl});
+auditThirdCentralGreenways({data,db,cityRecords,evidenceRecords,check,sourceUrl});
+auditThirdSouthGreenways({data,db,cityRecords,evidenceRecords,check,sourceUrl});
 const dbHash = createHash('sha256');
 for await (const chunk of createReadStream(database)) dbHash.update(chunk);
 const stagedDatabaseSha256 = dbHash.digest('hex');

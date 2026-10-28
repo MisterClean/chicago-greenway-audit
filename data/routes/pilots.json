@@ -596,6 +596,73 @@
       "name": "Ewing",
       "source": "EWING",
       "axis": "north"
+    },
+    {
+      "name": "Albion",
+      "source": "ALBION",
+      "axis": "east"
+    },
+    {
+      "name": "Birchwood",
+      "source": "BIRCHWOOD",
+      "axis": "east"
+    },
+    {
+      "name": "East Lake",
+      "source": "EASTLAKE",
+      "axis": "north",
+      "source_aliases": [
+        "EAST LAKE"
+      ]
+    },
+    {
+      "name": "Jonquil",
+      "source": "JONQUIL",
+      "axis": "east"
+    },
+    {
+      "name": "Dearborn",
+      "source": "DEARBORN",
+      "axis": "north"
+    },
+    {
+      "name": "Sunnyside",
+      "source": "SUNNYSIDE",
+      "axis": "east"
+    },
+    {
+      "name": "Rosehill",
+      "source": "ROSEHILL",
+      "axis": "east"
+    },
+    {
+      "name": "Charles",
+      "source": "CHARLES",
+      "axis": "north"
+    },
+    {
+      "name": "98th",
+      "source": "98TH",
+      "axis": "east",
+      "scoped_ways": [
+        {
+          "route_id": "98th-1",
+          "way_id": 1359658130,
+          "nodes": [
+            1498962104,
+            261150726,
+            1498962124
+          ],
+          "city_source_ids": [
+            "row-qwjx_r592.h4qr"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "82nd",
+      "source": "82ND",
+      "axis": "east"
     }
   ],
   "max_source_distance_m": 18,
