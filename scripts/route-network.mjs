@@ -54,9 +54,22 @@ export function joinForReview(components, binding, evidence) {
 export function alignedGraph(line,ways,maxDistance=18) {
   const graph=new Map(); const add=(id,e)=>{if(!graph.has(id))graph.set(id,[]);graph.get(id).push(e)};
   const deferred=[];
+  for (const way of ways) if (way.explicit_match) {
+    if (!Array.isArray(way.match_lines) || !way.match_lines.length || way.match_lines.some(bound => !Array.isArray(bound) || bound.length < 2 || bound.some(p => !Array.isArray(p) || p.length !== 2 || p.some(n => !Number.isFinite(n))) || !bound.some((p,i) => i > 0 && metres(bound[i-1],p) > 0))) throw new Error('Explicit road match requires valid bound city match_lines');
+  }
+  // Check the entire source segment against its own evidence-bound city lines.
+  const inBoundLines = (way,a,b) => {
+    if (!way.explicit_match) return true;
+    const steps = Math.max(1, Math.ceil(metres(a,b)));
+    for (let j=0;j<=steps;j++) {
+      const p=[a[0]+(b[0]-a[0])*j/steps,a[1]+(b[1]-a[1])*j/steps];
+      if (Math.min(...way.match_lines.map(bound => locate(p,bound).distance)) > maxDistance) return false;
+    }
+    return true;
+  };
   const addSegment=(way,i)=>{const aId=way.nodes[i-1],bId=way.nodes[i],edge={way,index:i-1,length:metres(way.coordinates[i-1],way.coordinates[i])};add(aId,{...edge,from:aId,to:bId,reversed:false});add(bId,{...edge,from:bId,to:aId,reversed:true});};
   for(const way of ways) for(let i=1;i<way.nodes.length;i++) {
-    const a=way.coordinates[i-1],b=way.coordinates[i];if(!a||!b)continue;
+    const a=way.coordinates[i-1],b=way.coordinates[i];if(!a||!b || !inBoundLines(way,a,b))continue;
     const la=locate(a,line),lb=locate(b,line),mid=locate([(a[0]+b[0])/2,(a[1]+b[1])/2],line);
     const av=xy(a),bv=xy(b),dx=bv[0]-av[0],dy=bv[1]-av[1],len=Math.hypot(dx,dy); if(!len||Math.max(la.distance,lb.distance,mid.distance)>maxDistance)continue;
     const heading=Math.abs((dx*mid.heading[0]+dy*mid.heading[1])/len);
@@ -75,7 +88,7 @@ export function alignedGraph(line,ways,maxDistance=18) {
     const group=[],queue=[remaining.values().next().value];remaining.delete(queue[0]);
     while(queue.length){const w=queue.pop();group.push(w);for(const other of remaining) if(other.nodes.some(n=>w.nodes.includes(n))){remaining.delete(other);queue.push(other);}}
     const degree=new Map();let length=0,near=true;
-    for(const w of group) for(let i=1;i<w.nodes.length;i++){const a=w.coordinates[i-1],b=w.coordinates[i];if(!a||!b){near=false;continue;}length+=metres(a,b);near&&=Math.max(locate(a,line).distance,locate(b,line).distance,locate([(a[0]+b[0])/2,(a[1]+b[1])/2],line).distance)<=maxDistance;degree.set(w.nodes[i-1],(degree.get(w.nodes[i-1])??0)+1);degree.set(w.nodes[i],(degree.get(w.nodes[i])??0)+1);}
+    for(const w of group) for(let i=1;i<w.nodes.length;i++){const a=w.coordinates[i-1],b=w.coordinates[i];if(!a||!b){near=false;continue;}length+=metres(a,b);near&&=inBoundLines(w,a,b);near&&=Math.max(locate(a,line).distance,locate(b,line).distance,locate([(a[0]+b[0])/2,(a[1]+b[1])/2],line).distance)<=maxDistance;degree.set(w.nodes[i-1],(degree.get(w.nodes[i-1])??0)+1);degree.set(w.nodes[i],(degree.get(w.nodes[i])??0)+1);}
     if(!near||length>150||[...degree.values()].some(n=>n!==2)||[...degree.keys()].filter(n=>(graph.get(n)??[]).some(e=>!['circular','roundabout'].includes(e.way.tags?.junction))).length<2)continue;
     for(const w of group) for(let i=1;i<w.nodes.length;i++) if(!graph.get(w.nodes[i-1])?.some(e=>e.way===w&&e.index===i-1)) addSegment(w,i);
   }

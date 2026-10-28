@@ -1,18 +1,18 @@
 {
   "schema_version": 1,
-  "audited_at": "2026-10-28T01:32:56.719Z",
+  "audited_at": "2026-10-28T02:15:55.154Z",
   "input": "public/routes/pilot.json",
-  "input_sha256": "93223a7dbed005c82a6dd2c6d9ce06ae1d718128cc8fddc8bc7c06eb0d08f51a",
+  "input_sha256": "c1b8e56e3db3b9cfaf1da7834e46af680a25e763d75f79316421b65a064c4503",
   "staged_database": "data/staging/network.sqlite",
   "staged_database_sha256": "feb3da5161b58ad7aaf4c644c7ec090f894f6ced6cb9b6a8680f03970d4b5706",
   "osm_source_sha256": "f24bf47c661b461bc817e4be127bb1726c82c014054df1f9bc39b1fe8b1c3f8c",
   "osm_snapshot_date": "2026-09-11",
   "designation_snapshot_date": "2025-12",
   "purpose": "Source consistency checks and narrow movement samples; no field review, legal certification, or whole-corridor approval.",
-  "scope_caveat": "Samples test junction movement rules only; adjoining edges and current signs may differ.",
-  "sampling_method": "Two distinct eligible same-way nodes nearest route-index quartiles per route, both directions; selection independent of observed result. Unknown, restricted and junction-traversal nodes are excluded.",
-  "sample_count": 350,
-  "targeted_check_count": 203,
+  "scope_caveat": "Movement samples test junction rules only; the separately labelled Spaulding check tests one source-bound edge. Adjoining edges and current signs may differ.",
+  "sampling_method": "Two distinct eligible same-way nodes nearest route-index quartiles per route, both directions; selection independent of observed result. Unknown, restricted and junction-traversal nodes are excluded. Spaulding has one clipped edge and no eligible same-way junction; an exact evidence-bound edge consistency check is reported separately.",
+  "sample_count": 431,
+  "targeted_check_count": 293,
   "field_approvals": 0,
   "samples": [
     {
@@ -256,162 +256,82 @@
       "field_reviewed": false
     },
     {
-      "id": "berteau-1-movement-19-forward",
+      "id": "berteau-1-movement-25-forward",
       "route_id": "berteau-1",
       "subject": "movement",
-      "movement_id": "berteau-1-movement-19",
+      "movement_id": "berteau-1-movement-25",
       "direction": "forward",
-      "from_edge": "berteau-1-way-379681611-19",
-      "to_edge": "berteau-1-way-379681611-20",
-      "via_node_id": 11823096708,
-      "source_way_id": 379681611,
+      "from_edge": "berteau-1-way-194873118-25",
+      "to_edge": "berteau-1-way-194873118-26",
+      "via_node_id": 11823096781,
+      "source_way_id": 194873118,
       "expected_movement_status": "allowed",
       "observed_movement_status": "allowed",
       "result": "pass",
       "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
       "sources": [
-        "https://www.openstreetmap.org/way/379681611",
-        "https://www.openstreetmap.org/node/11823096708"
+        "https://www.openstreetmap.org/way/194873118",
+        "https://www.openstreetmap.org/node/11823096781"
       ],
       "field_reviewed": false
     },
     {
-      "id": "berteau-1-movement-19-reverse",
+      "id": "berteau-1-movement-25-reverse",
       "route_id": "berteau-1",
       "subject": "movement",
-      "movement_id": "berteau-1-movement-19",
+      "movement_id": "berteau-1-movement-25",
       "direction": "reverse",
-      "from_edge": "berteau-1-way-379681611-20",
-      "to_edge": "berteau-1-way-379681611-19",
-      "via_node_id": 11823096708,
-      "source_way_id": 379681611,
+      "from_edge": "berteau-1-way-194873118-26",
+      "to_edge": "berteau-1-way-194873118-25",
+      "via_node_id": 11823096781,
+      "source_way_id": 194873118,
       "expected_movement_status": "allowed",
       "observed_movement_status": "allowed",
       "result": "pass",
       "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
       "sources": [
-        "https://www.openstreetmap.org/way/379681611",
-        "https://www.openstreetmap.org/node/11823096708"
+        "https://www.openstreetmap.org/way/194873118",
+        "https://www.openstreetmap.org/node/11823096781"
       ],
       "field_reviewed": false
     },
     {
-      "id": "berteau-1-movement-56-forward",
+      "id": "berteau-1-movement-73-forward",
       "route_id": "berteau-1",
       "subject": "movement",
-      "movement_id": "berteau-1-movement-56",
+      "movement_id": "berteau-1-movement-73",
       "direction": "forward",
-      "from_edge": "berteau-1-way-1087822572-56",
-      "to_edge": "berteau-1-way-1087822572-57",
-      "via_node_id": 9892758469,
-      "source_way_id": 1087822572,
+      "from_edge": "berteau-1-way-1252534016-73",
+      "to_edge": "berteau-1-way-1252534016-74",
+      "via_node_id": 9967167469,
+      "source_way_id": 1252534016,
       "expected_movement_status": "allowed",
       "observed_movement_status": "allowed",
       "result": "pass",
       "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
       "sources": [
-        "https://www.openstreetmap.org/way/1087822572",
-        "https://www.openstreetmap.org/node/9892758469"
+        "https://www.openstreetmap.org/way/1252534016",
+        "https://www.openstreetmap.org/node/9967167469"
       ],
       "field_reviewed": false
     },
     {
-      "id": "berteau-1-movement-56-reverse",
+      "id": "berteau-1-movement-73-reverse",
       "route_id": "berteau-1",
       "subject": "movement",
-      "movement_id": "berteau-1-movement-56",
+      "movement_id": "berteau-1-movement-73",
       "direction": "reverse",
-      "from_edge": "berteau-1-way-1087822572-57",
-      "to_edge": "berteau-1-way-1087822572-56",
-      "via_node_id": 9892758469,
-      "source_way_id": 1087822572,
+      "from_edge": "berteau-1-way-1252534016-74",
+      "to_edge": "berteau-1-way-1252534016-73",
+      "via_node_id": 9967167469,
+      "source_way_id": 1252534016,
       "expected_movement_status": "allowed",
       "observed_movement_status": "allowed",
       "result": "pass",
       "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
       "sources": [
-        "https://www.openstreetmap.org/way/1087822572",
-        "https://www.openstreetmap.org/node/9892758469"
-      ],
-      "field_reviewed": false
-    },
-    {
-      "id": "berteau-2-movement-4-forward",
-      "route_id": "berteau-2",
-      "subject": "movement",
-      "movement_id": "berteau-2-movement-4",
-      "direction": "forward",
-      "from_edge": "berteau-2-way-24099243-4",
-      "to_edge": "berteau-2-way-24099243-5",
-      "via_node_id": 261268622,
-      "source_way_id": 24099243,
-      "expected_movement_status": "allowed",
-      "observed_movement_status": "allowed",
-      "result": "pass",
-      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
-      "sources": [
-        "https://www.openstreetmap.org/way/24099243",
-        "https://www.openstreetmap.org/node/261268622"
-      ],
-      "field_reviewed": false
-    },
-    {
-      "id": "berteau-2-movement-4-reverse",
-      "route_id": "berteau-2",
-      "subject": "movement",
-      "movement_id": "berteau-2-movement-4",
-      "direction": "reverse",
-      "from_edge": "berteau-2-way-24099243-5",
-      "to_edge": "berteau-2-way-24099243-4",
-      "via_node_id": 261268622,
-      "source_way_id": 24099243,
-      "expected_movement_status": "allowed",
-      "observed_movement_status": "allowed",
-      "result": "pass",
-      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
-      "sources": [
-        "https://www.openstreetmap.org/way/24099243",
-        "https://www.openstreetmap.org/node/261268622"
-      ],
-      "field_reviewed": false
-    },
-    {
-      "id": "berteau-2-movement-9-forward",
-      "route_id": "berteau-2",
-      "subject": "movement",
-      "movement_id": "berteau-2-movement-9",
-      "direction": "forward",
-      "from_edge": "berteau-2-way-24099243-9",
-      "to_edge": "berteau-2-way-24099243-10",
-      "via_node_id": 9779536142,
-      "source_way_id": 24099243,
-      "expected_movement_status": "allowed",
-      "observed_movement_status": "allowed",
-      "result": "pass",
-      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
-      "sources": [
-        "https://www.openstreetmap.org/way/24099243",
-        "https://www.openstreetmap.org/node/9779536142"
-      ],
-      "field_reviewed": false
-    },
-    {
-      "id": "berteau-2-movement-9-reverse",
-      "route_id": "berteau-2",
-      "subject": "movement",
-      "movement_id": "berteau-2-movement-9",
-      "direction": "reverse",
-      "from_edge": "berteau-2-way-24099243-10",
-      "to_edge": "berteau-2-way-24099243-9",
-      "via_node_id": 9779536142,
-      "source_way_id": 24099243,
-      "expected_movement_status": "allowed",
-      "observed_movement_status": "allowed",
-      "result": "pass",
-      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
-      "sources": [
-        "https://www.openstreetmap.org/way/24099243",
-        "https://www.openstreetmap.org/node/9779536142"
+        "https://www.openstreetmap.org/way/1252534016",
+        "https://www.openstreetmap.org/node/9967167469"
       ],
       "field_reviewed": false
     },
@@ -7014,6 +6934,1698 @@
         "https://www.openstreetmap.org/node/10799261865"
       ],
       "field_reviewed": false
+    },
+    {
+      "id": "plymouth-1-movement-3-forward",
+      "route_id": "plymouth-1",
+      "subject": "movement",
+      "movement_id": "plymouth-1-movement-3",
+      "direction": "forward",
+      "from_edge": "plymouth-1-way-149987524-3",
+      "to_edge": "plymouth-1-way-149987524-4",
+      "via_node_id": 1961538011,
+      "source_way_id": 149987524,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/149987524",
+        "https://www.openstreetmap.org/node/1961538011"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "plymouth-1-movement-3-reverse",
+      "route_id": "plymouth-1",
+      "subject": "movement",
+      "movement_id": "plymouth-1-movement-3",
+      "direction": "reverse",
+      "from_edge": "plymouth-1-way-149987524-4",
+      "to_edge": "plymouth-1-way-149987524-3",
+      "via_node_id": 1961538011,
+      "source_way_id": 149987524,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/149987524",
+        "https://www.openstreetmap.org/node/1961538011"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "plymouth-1-movement-7-forward",
+      "route_id": "plymouth-1",
+      "subject": "movement",
+      "movement_id": "plymouth-1-movement-7",
+      "direction": "forward",
+      "from_edge": "plymouth-1-way-867133913-7",
+      "to_edge": "plymouth-1-way-867133913-8",
+      "via_node_id": 1613640700,
+      "source_way_id": 867133913,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/867133913",
+        "https://www.openstreetmap.org/node/1613640700"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "plymouth-1-movement-7-reverse",
+      "route_id": "plymouth-1",
+      "subject": "movement",
+      "movement_id": "plymouth-1-movement-7",
+      "direction": "reverse",
+      "from_edge": "plymouth-1-way-867133913-8",
+      "to_edge": "plymouth-1-way-867133913-7",
+      "via_node_id": 1613640700,
+      "source_way_id": 867133913,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/867133913",
+        "https://www.openstreetmap.org/node/1613640700"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "104th-1-movement-2-forward",
+      "route_id": "104th-1",
+      "subject": "movement",
+      "movement_id": "104th-1-movement-2",
+      "direction": "forward",
+      "from_edge": "104th-1-way-146306494-2",
+      "to_edge": "104th-1-way-146306494-3",
+      "via_node_id": 4614857342,
+      "source_way_id": 146306494,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/146306494",
+        "https://www.openstreetmap.org/node/4614857342"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "104th-1-movement-2-reverse",
+      "route_id": "104th-1",
+      "subject": "movement",
+      "movement_id": "104th-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "104th-1-way-146306494-3",
+      "to_edge": "104th-1-way-146306494-2",
+      "via_node_id": 4614857342,
+      "source_way_id": 146306494,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/146306494",
+        "https://www.openstreetmap.org/node/4614857342"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "104th-1-movement-5-forward",
+      "route_id": "104th-1",
+      "subject": "movement",
+      "movement_id": "104th-1-movement-5",
+      "direction": "forward",
+      "from_edge": "104th-1-way-865545078-5",
+      "to_edge": "104th-1-way-865545078-6",
+      "via_node_id": 12921754005,
+      "source_way_id": 865545078,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/865545078",
+        "https://www.openstreetmap.org/node/12921754005"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "104th-1-movement-5-reverse",
+      "route_id": "104th-1",
+      "subject": "movement",
+      "movement_id": "104th-1-movement-5",
+      "direction": "reverse",
+      "from_edge": "104th-1-way-865545078-6",
+      "to_edge": "104th-1-way-865545078-5",
+      "via_node_id": 12921754005,
+      "source_way_id": 865545078,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/865545078",
+        "https://www.openstreetmap.org/node/12921754005"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "avenue-j-1-movement-5-forward",
+      "route_id": "avenue-j-1",
+      "subject": "movement",
+      "movement_id": "avenue-j-1-movement-5",
+      "direction": "forward",
+      "from_edge": "avenue-j-1-way-1254538093-5",
+      "to_edge": "avenue-j-1-way-1254538093-6",
+      "via_node_id": 9790930268,
+      "source_way_id": 1254538093,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1254538093",
+        "https://www.openstreetmap.org/node/9790930268"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "avenue-j-1-movement-5-reverse",
+      "route_id": "avenue-j-1",
+      "subject": "movement",
+      "movement_id": "avenue-j-1-movement-5",
+      "direction": "reverse",
+      "from_edge": "avenue-j-1-way-1254538093-6",
+      "to_edge": "avenue-j-1-way-1254538093-5",
+      "via_node_id": 9790930268,
+      "source_way_id": 1254538093,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1254538093",
+        "https://www.openstreetmap.org/node/9790930268"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "avenue-j-1-movement-6-forward",
+      "route_id": "avenue-j-1",
+      "subject": "movement",
+      "movement_id": "avenue-j-1-movement-6",
+      "direction": "forward",
+      "from_edge": "avenue-j-1-way-1254538093-6",
+      "to_edge": "avenue-j-1-way-1254538093-7",
+      "via_node_id": 9790926307,
+      "source_way_id": 1254538093,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1254538093",
+        "https://www.openstreetmap.org/node/9790926307"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "avenue-j-1-movement-6-reverse",
+      "route_id": "avenue-j-1",
+      "subject": "movement",
+      "movement_id": "avenue-j-1-movement-6",
+      "direction": "reverse",
+      "from_edge": "avenue-j-1-way-1254538093-7",
+      "to_edge": "avenue-j-1-way-1254538093-6",
+      "via_node_id": 9790926307,
+      "source_way_id": 1254538093,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1254538093",
+        "https://www.openstreetmap.org/node/9790926307"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "harding-1-movement-2-forward",
+      "route_id": "harding-1",
+      "subject": "movement",
+      "movement_id": "harding-1-movement-2",
+      "direction": "forward",
+      "from_edge": "harding-1-way-1352380485-2",
+      "to_edge": "harding-1-way-1352380485-3",
+      "via_node_id": 11823070252,
+      "source_way_id": 1352380485,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1352380485",
+        "https://www.openstreetmap.org/node/11823070252"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "harding-1-movement-2-reverse",
+      "route_id": "harding-1",
+      "subject": "movement",
+      "movement_id": "harding-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "harding-1-way-1352380485-3",
+      "to_edge": "harding-1-way-1352380485-2",
+      "via_node_id": 11823070252,
+      "source_way_id": 1352380485,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1352380485",
+        "https://www.openstreetmap.org/node/11823070252"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "105th-1-movement-3-forward",
+      "route_id": "105th-1",
+      "subject": "movement",
+      "movement_id": "105th-1-movement-3",
+      "direction": "forward",
+      "from_edge": "105th-1-way-33261389-3",
+      "to_edge": "105th-1-way-33261389-4",
+      "via_node_id": 2285457574,
+      "source_way_id": 33261389,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/33261389",
+        "https://www.openstreetmap.org/node/2285457574"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "105th-1-movement-3-reverse",
+      "route_id": "105th-1",
+      "subject": "movement",
+      "movement_id": "105th-1-movement-3",
+      "direction": "reverse",
+      "from_edge": "105th-1-way-33261389-4",
+      "to_edge": "105th-1-way-33261389-3",
+      "via_node_id": 2285457574,
+      "source_way_id": 33261389,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/33261389",
+        "https://www.openstreetmap.org/node/2285457574"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "105th-1-movement-7-forward",
+      "route_id": "105th-1",
+      "subject": "movement",
+      "movement_id": "105th-1-movement-7",
+      "direction": "forward",
+      "from_edge": "105th-1-way-865545074-7",
+      "to_edge": "105th-1-way-865545074-8",
+      "via_node_id": 12921754151,
+      "source_way_id": 865545074,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/865545074",
+        "https://www.openstreetmap.org/node/12921754151"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "105th-1-movement-7-reverse",
+      "route_id": "105th-1",
+      "subject": "movement",
+      "movement_id": "105th-1-movement-7",
+      "direction": "reverse",
+      "from_edge": "105th-1-way-865545074-8",
+      "to_edge": "105th-1-way-865545074-7",
+      "via_node_id": 12921754151,
+      "source_way_id": 865545074,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/865545074",
+        "https://www.openstreetmap.org/node/12921754151"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "19th-1-movement-1-forward",
+      "route_id": "19th-1",
+      "subject": "movement",
+      "movement_id": "19th-1-movement-1",
+      "direction": "forward",
+      "from_edge": "19th-1-way-1061159303-1",
+      "to_edge": "19th-1-way-1061159303-2",
+      "via_node_id": 11781692587,
+      "source_way_id": 1061159303,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1061159303",
+        "https://www.openstreetmap.org/node/11781692587"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "19th-1-movement-1-reverse",
+      "route_id": "19th-1",
+      "subject": "movement",
+      "movement_id": "19th-1-movement-1",
+      "direction": "reverse",
+      "from_edge": "19th-1-way-1061159303-2",
+      "to_edge": "19th-1-way-1061159303-1",
+      "via_node_id": 11781692587,
+      "source_way_id": 1061159303,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1061159303",
+        "https://www.openstreetmap.org/node/11781692587"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "19th-1-movement-2-forward",
+      "route_id": "19th-1",
+      "subject": "movement",
+      "movement_id": "19th-1-movement-2",
+      "direction": "forward",
+      "from_edge": "19th-1-way-1061159303-2",
+      "to_edge": "19th-1-way-1061159303-3",
+      "via_node_id": 2393970317,
+      "source_way_id": 1061159303,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1061159303",
+        "https://www.openstreetmap.org/node/2393970317"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "19th-1-movement-2-reverse",
+      "route_id": "19th-1",
+      "subject": "movement",
+      "movement_id": "19th-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "19th-1-way-1061159303-3",
+      "to_edge": "19th-1-way-1061159303-2",
+      "via_node_id": 2393970317,
+      "source_way_id": 1061159303,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1061159303",
+        "https://www.openstreetmap.org/node/2393970317"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "logan-1-movement-2-forward",
+      "route_id": "logan-1",
+      "subject": "movement",
+      "movement_id": "logan-1-movement-2",
+      "direction": "forward",
+      "from_edge": "logan-1-way-1284491332-2",
+      "to_edge": "logan-1-way-1284491332-3",
+      "via_node_id": 9793351327,
+      "source_way_id": 1284491332,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1284491332",
+        "https://www.openstreetmap.org/node/9793351327"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "logan-1-movement-2-reverse",
+      "route_id": "logan-1",
+      "subject": "movement",
+      "movement_id": "logan-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "logan-1-way-1284491332-3",
+      "to_edge": "logan-1-way-1284491332-2",
+      "via_node_id": 9793351327,
+      "source_way_id": 1284491332,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1284491332",
+        "https://www.openstreetmap.org/node/9793351327"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "logan-1-movement-1-forward",
+      "route_id": "logan-1",
+      "subject": "movement",
+      "movement_id": "logan-1-movement-1",
+      "direction": "forward",
+      "from_edge": "logan-1-way-1284491332-1",
+      "to_edge": "logan-1-way-1284491332-2",
+      "via_node_id": 9793351319,
+      "source_way_id": 1284491332,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1284491332",
+        "https://www.openstreetmap.org/node/9793351319"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "logan-1-movement-1-reverse",
+      "route_id": "logan-1",
+      "subject": "movement",
+      "movement_id": "logan-1-movement-1",
+      "direction": "reverse",
+      "from_edge": "logan-1-way-1284491332-2",
+      "to_edge": "logan-1-way-1284491332-1",
+      "via_node_id": 9793351319,
+      "source_way_id": 1284491332,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1284491332",
+        "https://www.openstreetmap.org/node/9793351319"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "logan-2-movement-2-forward",
+      "route_id": "logan-2",
+      "subject": "movement",
+      "movement_id": "logan-2-movement-2",
+      "direction": "forward",
+      "from_edge": "logan-2-way-1284491333-2",
+      "to_edge": "logan-2-way-1284491333-3",
+      "via_node_id": 9793351333,
+      "source_way_id": 1284491333,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1284491333",
+        "https://www.openstreetmap.org/node/9793351333"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "logan-2-movement-2-reverse",
+      "route_id": "logan-2",
+      "subject": "movement",
+      "movement_id": "logan-2-movement-2",
+      "direction": "reverse",
+      "from_edge": "logan-2-way-1284491333-3",
+      "to_edge": "logan-2-way-1284491333-2",
+      "via_node_id": 9793351333,
+      "source_way_id": 1284491333,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1284491333",
+        "https://www.openstreetmap.org/node/9793351333"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "logan-2-movement-4-forward",
+      "route_id": "logan-2",
+      "subject": "movement",
+      "movement_id": "logan-2-movement-4",
+      "direction": "forward",
+      "from_edge": "logan-2-way-1284491333-4",
+      "to_edge": "logan-2-way-1284491333-5",
+      "via_node_id": 9793351335,
+      "source_way_id": 1284491333,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1284491333",
+        "https://www.openstreetmap.org/node/9793351335"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "logan-2-movement-4-reverse",
+      "route_id": "logan-2",
+      "subject": "movement",
+      "movement_id": "logan-2-movement-4",
+      "direction": "reverse",
+      "from_edge": "logan-2-way-1284491333-5",
+      "to_edge": "logan-2-way-1284491333-4",
+      "via_node_id": 9793351335,
+      "source_way_id": 1284491333,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1284491333",
+        "https://www.openstreetmap.org/node/9793351335"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "lakewood-1-movement-2-forward",
+      "route_id": "lakewood-1",
+      "subject": "movement",
+      "movement_id": "lakewood-1-movement-2",
+      "direction": "forward",
+      "from_edge": "lakewood-1-way-976197309-2",
+      "to_edge": "lakewood-1-way-976197309-3",
+      "via_node_id": 12432729839,
+      "source_way_id": 976197309,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/976197309",
+        "https://www.openstreetmap.org/node/12432729839"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "lakewood-1-movement-2-reverse",
+      "route_id": "lakewood-1",
+      "subject": "movement",
+      "movement_id": "lakewood-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "lakewood-1-way-976197309-3",
+      "to_edge": "lakewood-1-way-976197309-2",
+      "via_node_id": 12432729839,
+      "source_way_id": 976197309,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/976197309",
+        "https://www.openstreetmap.org/node/12432729839"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "lakewood-1-movement-5-forward",
+      "route_id": "lakewood-1",
+      "subject": "movement",
+      "movement_id": "lakewood-1-movement-5",
+      "direction": "forward",
+      "from_edge": "lakewood-1-way-1118445937-5",
+      "to_edge": "lakewood-1-way-1118445937-6",
+      "via_node_id": 13443857046,
+      "source_way_id": 1118445937,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1118445937",
+        "https://www.openstreetmap.org/node/13443857046"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "lakewood-1-movement-5-reverse",
+      "route_id": "lakewood-1",
+      "subject": "movement",
+      "movement_id": "lakewood-1-movement-5",
+      "direction": "reverse",
+      "from_edge": "lakewood-1-way-1118445937-6",
+      "to_edge": "lakewood-1-way-1118445937-5",
+      "via_node_id": 13443857046,
+      "source_way_id": 1118445937,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1118445937",
+        "https://www.openstreetmap.org/node/13443857046"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "campbell-1-movement-1-forward",
+      "route_id": "campbell-1",
+      "subject": "movement",
+      "movement_id": "campbell-1-movement-1",
+      "direction": "forward",
+      "from_edge": "campbell-1-way-406711334-1",
+      "to_edge": "campbell-1-way-406711334-2",
+      "via_node_id": 12228486996,
+      "source_way_id": 406711334,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/406711334",
+        "https://www.openstreetmap.org/node/12228486996"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "campbell-1-movement-1-reverse",
+      "route_id": "campbell-1",
+      "subject": "movement",
+      "movement_id": "campbell-1-movement-1",
+      "direction": "reverse",
+      "from_edge": "campbell-1-way-406711334-2",
+      "to_edge": "campbell-1-way-406711334-1",
+      "via_node_id": 12228486996,
+      "source_way_id": 406711334,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/406711334",
+        "https://www.openstreetmap.org/node/12228486996"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "north-shore-1-movement-2-forward",
+      "route_id": "north-shore-1",
+      "subject": "movement",
+      "movement_id": "north-shore-1-movement-2",
+      "direction": "forward",
+      "from_edge": "north-shore-1-way-458591865-2",
+      "to_edge": "north-shore-1-way-458591865-3",
+      "via_node_id": 2174877895,
+      "source_way_id": 458591865,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/458591865",
+        "https://www.openstreetmap.org/node/2174877895"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "north-shore-1-movement-2-reverse",
+      "route_id": "north-shore-1",
+      "subject": "movement",
+      "movement_id": "north-shore-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "north-shore-1-way-458591865-3",
+      "to_edge": "north-shore-1-way-458591865-2",
+      "via_node_id": 2174877895,
+      "source_way_id": 458591865,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/458591865",
+        "https://www.openstreetmap.org/node/2174877895"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "north-shore-1-movement-5-forward",
+      "route_id": "north-shore-1",
+      "subject": "movement",
+      "movement_id": "north-shore-1-movement-5",
+      "direction": "forward",
+      "from_edge": "north-shore-1-way-1118445938-5",
+      "to_edge": "north-shore-1-way-1118445938-6",
+      "via_node_id": 12311225162,
+      "source_way_id": 1118445938,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1118445938",
+        "https://www.openstreetmap.org/node/12311225162"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "north-shore-1-movement-5-reverse",
+      "route_id": "north-shore-1",
+      "subject": "movement",
+      "movement_id": "north-shore-1-movement-5",
+      "direction": "reverse",
+      "from_edge": "north-shore-1-way-1118445938-6",
+      "to_edge": "north-shore-1-way-1118445938-5",
+      "via_node_id": 12311225162,
+      "source_way_id": 1118445938,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1118445938",
+        "https://www.openstreetmap.org/node/12311225162"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "juneway-1-movement-2-forward",
+      "route_id": "juneway-1",
+      "subject": "movement",
+      "movement_id": "juneway-1-movement-2",
+      "direction": "forward",
+      "from_edge": "juneway-1-way-33805383-2",
+      "to_edge": "juneway-1-way-33805383-3",
+      "via_node_id": 2203072085,
+      "source_way_id": 33805383,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/33805383",
+        "https://www.openstreetmap.org/node/2203072085"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "juneway-1-movement-2-reverse",
+      "route_id": "juneway-1",
+      "subject": "movement",
+      "movement_id": "juneway-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "juneway-1-way-33805383-3",
+      "to_edge": "juneway-1-way-33805383-2",
+      "via_node_id": 2203072085,
+      "source_way_id": 33805383,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/33805383",
+        "https://www.openstreetmap.org/node/2203072085"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "juneway-1-movement-6-forward",
+      "route_id": "juneway-1",
+      "subject": "movement",
+      "movement_id": "juneway-1-movement-6",
+      "direction": "forward",
+      "from_edge": "juneway-1-way-624602056-6",
+      "to_edge": "juneway-1-way-624602056-7",
+      "via_node_id": 1752023125,
+      "source_way_id": 624602056,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/624602056",
+        "https://www.openstreetmap.org/node/1752023125"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "juneway-1-movement-6-reverse",
+      "route_id": "juneway-1",
+      "subject": "movement",
+      "movement_id": "juneway-1-movement-6",
+      "direction": "reverse",
+      "from_edge": "juneway-1-way-624602056-7",
+      "to_edge": "juneway-1-way-624602056-6",
+      "via_node_id": 1752023125,
+      "source_way_id": 624602056,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/624602056",
+        "https://www.openstreetmap.org/node/1752023125"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "farwell-1-movement-1-forward",
+      "route_id": "farwell-1",
+      "subject": "movement",
+      "movement_id": "farwell-1-movement-1",
+      "direction": "forward",
+      "from_edge": "farwell-1-way-624602065-1",
+      "to_edge": "farwell-1-way-624602065-2",
+      "via_node_id": 12398854709,
+      "source_way_id": 624602065,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/624602065",
+        "https://www.openstreetmap.org/node/12398854709"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "farwell-1-movement-1-reverse",
+      "route_id": "farwell-1",
+      "subject": "movement",
+      "movement_id": "farwell-1-movement-1",
+      "direction": "reverse",
+      "from_edge": "farwell-1-way-624602065-2",
+      "to_edge": "farwell-1-way-624602065-1",
+      "via_node_id": 12398854709,
+      "source_way_id": 624602065,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/624602065",
+        "https://www.openstreetmap.org/node/12398854709"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "farwell-1-movement-2-forward",
+      "route_id": "farwell-1",
+      "subject": "movement",
+      "movement_id": "farwell-1-movement-2",
+      "direction": "forward",
+      "from_edge": "farwell-1-way-624602065-2",
+      "to_edge": "farwell-1-way-624602065-3",
+      "via_node_id": 13440688025,
+      "source_way_id": 624602065,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/624602065",
+        "https://www.openstreetmap.org/node/13440688025"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "farwell-1-movement-2-reverse",
+      "route_id": "farwell-1",
+      "subject": "movement",
+      "movement_id": "farwell-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "farwell-1-way-624602065-3",
+      "to_edge": "farwell-1-way-624602065-2",
+      "via_node_id": 13440688025,
+      "source_way_id": 624602065,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/624602065",
+        "https://www.openstreetmap.org/node/13440688025"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "kedvale-1-movement-2-forward",
+      "route_id": "kedvale-1",
+      "subject": "movement",
+      "movement_id": "kedvale-1-movement-2",
+      "direction": "forward",
+      "from_edge": "kedvale-1-way-1449901719-2",
+      "to_edge": "kedvale-1-way-1449901719-3",
+      "via_node_id": 2401855372,
+      "source_way_id": 1449901719,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1449901719",
+        "https://www.openstreetmap.org/node/2401855372"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "kedvale-1-movement-2-reverse",
+      "route_id": "kedvale-1",
+      "subject": "movement",
+      "movement_id": "kedvale-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "kedvale-1-way-1449901719-3",
+      "to_edge": "kedvale-1-way-1449901719-2",
+      "via_node_id": 2401855372,
+      "source_way_id": 1449901719,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1449901719",
+        "https://www.openstreetmap.org/node/2401855372"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "kedvale-1-movement-3-forward",
+      "route_id": "kedvale-1",
+      "subject": "movement",
+      "movement_id": "kedvale-1-movement-3",
+      "direction": "forward",
+      "from_edge": "kedvale-1-way-1449901719-3",
+      "to_edge": "kedvale-1-way-1449901719-4",
+      "via_node_id": 10784491809,
+      "source_way_id": 1449901719,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1449901719",
+        "https://www.openstreetmap.org/node/10784491809"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "kedvale-1-movement-3-reverse",
+      "route_id": "kedvale-1",
+      "subject": "movement",
+      "movement_id": "kedvale-1-movement-3",
+      "direction": "reverse",
+      "from_edge": "kedvale-1-way-1449901719-4",
+      "to_edge": "kedvale-1-way-1449901719-3",
+      "via_node_id": 10784491809,
+      "source_way_id": 1449901719,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1449901719",
+        "https://www.openstreetmap.org/node/10784491809"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "kedvale-2-movement-2-forward",
+      "route_id": "kedvale-2",
+      "subject": "movement",
+      "movement_id": "kedvale-2-movement-2",
+      "direction": "forward",
+      "from_edge": "kedvale-2-way-1443721587-2",
+      "to_edge": "kedvale-2-way-1443721587-3",
+      "via_node_id": 12188979933,
+      "source_way_id": 1443721587,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1443721587",
+        "https://www.openstreetmap.org/node/12188979933"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "kedvale-2-movement-2-reverse",
+      "route_id": "kedvale-2",
+      "subject": "movement",
+      "movement_id": "kedvale-2-movement-2",
+      "direction": "reverse",
+      "from_edge": "kedvale-2-way-1443721587-3",
+      "to_edge": "kedvale-2-way-1443721587-2",
+      "via_node_id": 12188979933,
+      "source_way_id": 1443721587,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1443721587",
+        "https://www.openstreetmap.org/node/12188979933"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "kedvale-2-movement-4-forward",
+      "route_id": "kedvale-2",
+      "subject": "movement",
+      "movement_id": "kedvale-2-movement-4",
+      "direction": "forward",
+      "from_edge": "kedvale-2-way-1443721587-4",
+      "to_edge": "kedvale-2-way-1443721587-5",
+      "via_node_id": 2077288504,
+      "source_way_id": 1443721587,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1443721587",
+        "https://www.openstreetmap.org/node/2077288504"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "kedvale-2-movement-4-reverse",
+      "route_id": "kedvale-2",
+      "subject": "movement",
+      "movement_id": "kedvale-2-movement-4",
+      "direction": "reverse",
+      "from_edge": "kedvale-2-way-1443721587-5",
+      "to_edge": "kedvale-2-way-1443721587-4",
+      "via_node_id": 2077288504,
+      "source_way_id": 1443721587,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1443721587",
+        "https://www.openstreetmap.org/node/2077288504"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "eastwood-1-movement-2-forward",
+      "route_id": "eastwood-1",
+      "subject": "movement",
+      "movement_id": "eastwood-1-movement-2",
+      "direction": "forward",
+      "from_edge": "eastwood-1-way-23746125-2",
+      "to_edge": "eastwood-1-way-23746125-3",
+      "via_node_id": 2394256893,
+      "source_way_id": 23746125,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/23746125",
+        "https://www.openstreetmap.org/node/2394256893"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "eastwood-1-movement-2-reverse",
+      "route_id": "eastwood-1",
+      "subject": "movement",
+      "movement_id": "eastwood-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "eastwood-1-way-23746125-3",
+      "to_edge": "eastwood-1-way-23746125-2",
+      "via_node_id": 2394256893,
+      "source_way_id": 23746125,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/23746125",
+        "https://www.openstreetmap.org/node/2394256893"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "eastwood-1-movement-5-forward",
+      "route_id": "eastwood-1",
+      "subject": "movement",
+      "movement_id": "eastwood-1-movement-5",
+      "direction": "forward",
+      "from_edge": "eastwood-1-way-23746125-5",
+      "to_edge": "eastwood-1-way-23746125-6",
+      "via_node_id": 10121239410,
+      "source_way_id": 23746125,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/23746125",
+        "https://www.openstreetmap.org/node/10121239410"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "eastwood-1-movement-5-reverse",
+      "route_id": "eastwood-1",
+      "subject": "movement",
+      "movement_id": "eastwood-1-movement-5",
+      "direction": "reverse",
+      "from_edge": "eastwood-1-way-23746125-6",
+      "to_edge": "eastwood-1-way-23746125-5",
+      "via_node_id": 10121239410,
+      "source_way_id": 23746125,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/23746125",
+        "https://www.openstreetmap.org/node/10121239410"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "virginia-1-movement-2-forward",
+      "route_id": "virginia-1",
+      "subject": "movement",
+      "movement_id": "virginia-1-movement-2",
+      "direction": "forward",
+      "from_edge": "virginia-1-way-130320116-2",
+      "to_edge": "virginia-1-way-130320116-3",
+      "via_node_id": 12247756201,
+      "source_way_id": 130320116,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/130320116",
+        "https://www.openstreetmap.org/node/12247756201"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "virginia-1-movement-2-reverse",
+      "route_id": "virginia-1",
+      "subject": "movement",
+      "movement_id": "virginia-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "virginia-1-way-130320116-3",
+      "to_edge": "virginia-1-way-130320116-2",
+      "via_node_id": 12247756201,
+      "source_way_id": 130320116,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/130320116",
+        "https://www.openstreetmap.org/node/12247756201"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "virginia-1-movement-5-forward",
+      "route_id": "virginia-1",
+      "subject": "movement",
+      "movement_id": "virginia-1-movement-5",
+      "direction": "forward",
+      "from_edge": "virginia-1-way-130320116-5",
+      "to_edge": "virginia-1-way-130320116-6",
+      "via_node_id": 12703578396,
+      "source_way_id": 130320116,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/130320116",
+        "https://www.openstreetmap.org/node/12703578396"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "virginia-1-movement-5-reverse",
+      "route_id": "virginia-1",
+      "subject": "movement",
+      "movement_id": "virginia-1-movement-5",
+      "direction": "reverse",
+      "from_edge": "virginia-1-way-130320116-6",
+      "to_edge": "virginia-1-way-130320116-5",
+      "via_node_id": 12703578396,
+      "source_way_id": 130320116,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/130320116",
+        "https://www.openstreetmap.org/node/12703578396"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "paulina-1-movement-2-forward",
+      "route_id": "paulina-1",
+      "subject": "movement",
+      "movement_id": "paulina-1-movement-2",
+      "direction": "forward",
+      "from_edge": "paulina-1-way-624602060-2",
+      "to_edge": "paulina-1-way-624602060-3",
+      "via_node_id": 1752004532,
+      "source_way_id": 624602060,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/624602060",
+        "https://www.openstreetmap.org/node/1752004532"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "paulina-1-movement-2-reverse",
+      "route_id": "paulina-1",
+      "subject": "movement",
+      "movement_id": "paulina-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "paulina-1-way-624602060-3",
+      "to_edge": "paulina-1-way-624602060-2",
+      "via_node_id": 1752004532,
+      "source_way_id": 624602060,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/624602060",
+        "https://www.openstreetmap.org/node/1752004532"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "paulina-1-movement-5-forward",
+      "route_id": "paulina-1",
+      "subject": "movement",
+      "movement_id": "paulina-1-movement-5",
+      "direction": "forward",
+      "from_edge": "paulina-1-way-624602060-5",
+      "to_edge": "paulina-1-way-624602060-6",
+      "via_node_id": 6776222872,
+      "source_way_id": 624602060,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/624602060",
+        "https://www.openstreetmap.org/node/6776222872"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "paulina-1-movement-5-reverse",
+      "route_id": "paulina-1",
+      "subject": "movement",
+      "movement_id": "paulina-1-movement-5",
+      "direction": "reverse",
+      "from_edge": "paulina-1-way-624602060-6",
+      "to_edge": "paulina-1-way-624602060-5",
+      "via_node_id": 6776222872,
+      "source_way_id": 624602060,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/624602060",
+        "https://www.openstreetmap.org/node/6776222872"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "douglas-1-movement-2-forward",
+      "route_id": "douglas-1",
+      "subject": "movement",
+      "movement_id": "douglas-1-movement-2",
+      "direction": "forward",
+      "from_edge": "douglas-1-way-24076371-2",
+      "to_edge": "douglas-1-way-24076371-3",
+      "via_node_id": 5493389442,
+      "source_way_id": 24076371,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/24076371",
+        "https://www.openstreetmap.org/node/5493389442"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "douglas-1-movement-2-reverse",
+      "route_id": "douglas-1",
+      "subject": "movement",
+      "movement_id": "douglas-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "douglas-1-way-24076371-3",
+      "to_edge": "douglas-1-way-24076371-2",
+      "via_node_id": 5493389442,
+      "source_way_id": 24076371,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/24076371",
+        "https://www.openstreetmap.org/node/5493389442"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "douglas-1-movement-3-forward",
+      "route_id": "douglas-1",
+      "subject": "movement",
+      "movement_id": "douglas-1-movement-3",
+      "direction": "forward",
+      "from_edge": "douglas-1-way-24076371-3",
+      "to_edge": "douglas-1-way-24076371-4",
+      "via_node_id": 5493389440,
+      "source_way_id": 24076371,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/24076371",
+        "https://www.openstreetmap.org/node/5493389440"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "douglas-1-movement-3-reverse",
+      "route_id": "douglas-1",
+      "subject": "movement",
+      "movement_id": "douglas-1-movement-3",
+      "direction": "reverse",
+      "from_edge": "douglas-1-way-24076371-4",
+      "to_edge": "douglas-1-way-24076371-3",
+      "via_node_id": 5493389440,
+      "source_way_id": 24076371,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/24076371",
+        "https://www.openstreetmap.org/node/5493389440"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "montgomery-1-movement-1-forward",
+      "route_id": "montgomery-1",
+      "subject": "movement",
+      "movement_id": "montgomery-1-movement-1",
+      "direction": "forward",
+      "from_edge": "montgomery-1-way-24105072-1",
+      "to_edge": "montgomery-1-way-24105072-2",
+      "via_node_id": 11225589645,
+      "source_way_id": 24105072,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/24105072",
+        "https://www.openstreetmap.org/node/11225589645"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "montgomery-1-movement-1-reverse",
+      "route_id": "montgomery-1",
+      "subject": "movement",
+      "movement_id": "montgomery-1-movement-1",
+      "direction": "reverse",
+      "from_edge": "montgomery-1-way-24105072-2",
+      "to_edge": "montgomery-1-way-24105072-1",
+      "via_node_id": 11225589645,
+      "source_way_id": 24105072,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/24105072",
+        "https://www.openstreetmap.org/node/11225589645"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "montgomery-1-movement-2-forward",
+      "route_id": "montgomery-1",
+      "subject": "movement",
+      "movement_id": "montgomery-1-movement-2",
+      "direction": "forward",
+      "from_edge": "montgomery-1-way-24105072-2",
+      "to_edge": "montgomery-1-way-24105072-3",
+      "via_node_id": 1895488645,
+      "source_way_id": 24105072,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/24105072",
+        "https://www.openstreetmap.org/node/1895488645"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "montgomery-1-movement-2-reverse",
+      "route_id": "montgomery-1",
+      "subject": "movement",
+      "movement_id": "montgomery-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "montgomery-1-way-24105072-3",
+      "to_edge": "montgomery-1-way-24105072-2",
+      "via_node_id": 1895488645,
+      "source_way_id": 24105072,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/24105072",
+        "https://www.openstreetmap.org/node/1895488645"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "spaulding-1-short-edge-source-check",
+      "route_id": "spaulding-1",
+      "subject": "short edge source consistency",
+      "result": "pass",
+      "basis": "Evidence-bound single clipped Carmen road edge follows the source nodes within the city corridor, has source-consistent one-way access and no relevant node or relation restrictions; remaining gap and movement stay unknown. This is not a sampled junction or field approval.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1081688366"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "97th-1-movement-1-forward",
+      "route_id": "97th-1",
+      "subject": "movement",
+      "movement_id": "97th-1-movement-1",
+      "direction": "forward",
+      "from_edge": "97th-1-way-146306506-1",
+      "to_edge": "97th-1-way-146306506-2",
+      "via_node_id": 12853503018,
+      "source_way_id": 146306506,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/146306506",
+        "https://www.openstreetmap.org/node/12853503018"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "97th-1-movement-1-reverse",
+      "route_id": "97th-1",
+      "subject": "movement",
+      "movement_id": "97th-1-movement-1",
+      "direction": "reverse",
+      "from_edge": "97th-1-way-146306506-2",
+      "to_edge": "97th-1-way-146306506-1",
+      "via_node_id": 12853503018,
+      "source_way_id": 146306506,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/146306506",
+        "https://www.openstreetmap.org/node/12853503018"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "97th-1-movement-2-forward",
+      "route_id": "97th-1",
+      "subject": "movement",
+      "movement_id": "97th-1-movement-2",
+      "direction": "forward",
+      "from_edge": "97th-1-way-146306506-2",
+      "to_edge": "97th-1-way-146306506-3",
+      "via_node_id": 12853503016,
+      "source_way_id": 146306506,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/146306506",
+        "https://www.openstreetmap.org/node/12853503016"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "97th-1-movement-2-reverse",
+      "route_id": "97th-1",
+      "subject": "movement",
+      "movement_id": "97th-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "97th-1-way-146306506-3",
+      "to_edge": "97th-1-way-146306506-2",
+      "via_node_id": 12853503016,
+      "source_way_id": 146306506,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/146306506",
+        "https://www.openstreetmap.org/node/12853503016"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "magnolia-1-movement-2-forward",
+      "route_id": "magnolia-1",
+      "subject": "movement",
+      "movement_id": "magnolia-1-movement-2",
+      "direction": "forward",
+      "from_edge": "magnolia-1-way-1237331790-2",
+      "to_edge": "magnolia-1-way-1237331790-3",
+      "via_node_id": 9952063972,
+      "source_way_id": 1237331790,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1237331790",
+        "https://www.openstreetmap.org/node/9952063972"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "magnolia-1-movement-2-reverse",
+      "route_id": "magnolia-1",
+      "subject": "movement",
+      "movement_id": "magnolia-1-movement-2",
+      "direction": "reverse",
+      "from_edge": "magnolia-1-way-1237331790-3",
+      "to_edge": "magnolia-1-way-1237331790-2",
+      "via_node_id": 9952063972,
+      "source_way_id": 1237331790,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/1237331790",
+        "https://www.openstreetmap.org/node/9952063972"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "magnolia-1-movement-5-forward",
+      "route_id": "magnolia-1",
+      "subject": "movement",
+      "movement_id": "magnolia-1-movement-5",
+      "direction": "forward",
+      "from_edge": "magnolia-1-way-583450010-5",
+      "to_edge": "magnolia-1-way-583450010-6",
+      "via_node_id": 2204462597,
+      "source_way_id": 583450010,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/583450010",
+        "https://www.openstreetmap.org/node/2204462597"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "magnolia-1-movement-5-reverse",
+      "route_id": "magnolia-1",
+      "subject": "movement",
+      "movement_id": "magnolia-1-movement-5",
+      "direction": "reverse",
+      "from_edge": "magnolia-1-way-583450010-6",
+      "to_edge": "magnolia-1-way-583450010-5",
+      "via_node_id": 2204462597,
+      "source_way_id": 583450010,
+      "expected_movement_status": "allowed",
+      "observed_movement_status": "allowed",
+      "result": "pass",
+      "basis": "Adjacent segments of the same source way and node, with no relevant node tag, via-node restriction, via-way restriction or conditional way tag in the snapshot. Junction rule only; this does not establish edge access or current legality.",
+      "sources": [
+        "https://www.openstreetmap.org/way/583450010",
+        "https://www.openstreetmap.org/node/2204462597"
+      ],
+      "field_reviewed": false
     }
   ],
   "targeted_checks": [
@@ -9563,6 +11175,1045 @@
         "https://www.openstreetmap.org/way/196459411"
       ],
       "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-lakewood-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City record occurs in one route component; this does not assert a separate project.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-northShore-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City record occurs in one route component; this does not assert a separate project.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-juneway-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City record occurs in one route component; this does not assert a separate project.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-paulina-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City record occurs in one route component; this does not assert a separate project.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-farwell-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City record occurs in one route component; this does not assert a separate project.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-eastwood-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City record occurs in one route component; this does not assert a separate project.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-virginia-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City record occurs in one route component; this does not assert a separate project.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-spaulding-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City record occurs in one route component; this does not assert a separate project.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-review-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "All eight city records have snapshot review evidence.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-eastwood-noncar-gap",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Non-motor connector stays outside car edges and leaves an unknown route gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/697243564"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-juneway-noncar-gap",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Non-motor connector stays outside car edges and leaves an unknown route gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/163534560"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-juneway-bounded-clipping",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Selected road geometry is bounded by the city line and actually clipped at its projected endpoint; an unresolved gap remains acceptable.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/33805383"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-spaulding-bounded-clipping",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Selected road geometry is bounded by the city line and actually clipped at its projected endpoint; an unresolved gap remains acceptable.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1081688366"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-north-shore-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "If selected, movement follows the mapped motor one-way; bicycle exceptions do not allow cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1118445938"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-juneway-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "If selected, movement follows the mapped motor one-way; bicycle exceptions do not allow cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/624602056"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-farwell-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "If selected, movement follows the mapped motor one-way; bicycle exceptions do not allow cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/624602065"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-virginia-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "If selected, movement follows the mapped motor one-way; bicycle exceptions do not allow cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/130320116"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-spaulding-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "If selected, movement follows the mapped motor one-way; bicycle exceptions do not allow cars.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1081688366"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-north-shore-parallel",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The parallel underpass ways share endpoints and one-way direction; selection stays within the city corridor or remains unresolved.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/458591866",
+        "https://www.openstreetmap.org/way/1322030768"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-lakewood-two-way",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The selected mapped streets have no explicit motor restriction; missing matching remains unknown.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/976197309",
+        "https://www.openstreetmap.org/way/1118445937"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-north-paulina-two-way",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The selected mapped streets have no explicit motor restriction; missing matching remains unknown.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/624602060"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-sacramento-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact designated city record appears once, regardless of route family.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-alley-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact designated city record appears once, regardless of route family.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-richmond-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact designated city record appears once, regardless of route family.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-harding-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact designated city record appears once, regardless of route family.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-kedvaleRoscoe-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact designated city record appears once, regardless of route family.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-kedvaleCarmen-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact designated city record appears once, regardless of route family.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-loganEast-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact designated city record appears once, regardless of route family.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-loganWest-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact designated city record appears once, regardless of route family.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-campbell-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact designated city record appears once, regardless of route family.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-magnolia-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact designated city record appears once, regardless of route family.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every exact row has scoped source-inferred evidence and outstanding review.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-sacramento-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Mapped motor one-way follows OSM node order; an opposing direction cannot become allowed through a bicycle exception or city conflict.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/164646139"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-richmond-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Mapped motor one-way follows OSM node order; an opposing direction cannot become allowed through a bicycle exception or city conflict.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/24106579"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-harding-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Mapped motor one-way follows OSM node order; an opposing direction cannot become allowed through a bicycle exception or city conflict.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1352380485"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-logan-east-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Mapped motor one-way follows OSM node order; an opposing direction cannot become allowed through a bicycle exception or city conflict.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1284491333"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-logan-west-a-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Mapped motor one-way follows OSM node order; an opposing direction cannot become allowed through a bicycle exception or city conflict.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/24102755"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-logan-west-b-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Mapped motor one-way follows OSM node order; an opposing direction cannot become allowed through a bicycle exception or city conflict.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1284491332"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-campbell-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Mapped motor one-way follows OSM node order; an opposing direction cannot become allowed through a bicycle exception or city conflict.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/406711334"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-magnolia-motor-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Mapped motor one-way follows OSM node order; an opposing direction cannot become allowed through a bicycle exception or city conflict.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/583450010"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-berteau-dogleg",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The three city records share one designated route; Richmond to alley to Sacramento runs geographically west and follows both staged street one-ways. Alley access and turns remain separately reviewable.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/164646139",
+        "https://www.openstreetmap.org/way/32709496",
+        "https://www.openstreetmap.org/way/24106579"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-logan-campbell-nonjoin",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Campbell meets east Logan in the city source; west Logan starts separately. The intervening arterial is outside the designation and must not be silently inserted.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1093913559"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-kedvale-roscoe-boundary",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Kedvale and Roscoe share a staged node and form a clipped, source-bounded north/east one-way chain; sampled points stay within 11 m of the city line.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/563963346",
+        "https://www.openstreetmap.org/way/1449901719"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-central-magnolia-conflict",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "City northbound direction conflicts with the missing OSM motor one-way on the southern Magnolia way; preserve the opposing direction as unknown, not allowed.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1237331790"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-plymouth-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Exact city source occurs once in a route component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-plymouth-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source row retains an actionable source-inferred review record.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-plymouth-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every selected edge stays close to the exact city line at one-metre intervals, or the row remains an evidenced unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-ninth-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Exact city source occurs once in a route component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-ninth-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source row retains an actionable source-inferred review record.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-ninth-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every selected edge stays close to the exact city line at one-metre intervals, or the row remains an evidenced unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-avenueJ-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Exact city source occurs once in a route component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-avenueJ-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source row retains an actionable source-inferred review record.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-avenueJ-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every selected edge stays close to the exact city line at one-metre intervals, or the row remains an evidenced unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredth-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Exact city source occurs once in a route component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredth-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source row retains an actionable source-inferred review record.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredth-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every selected edge stays close to the exact city line at one-metre intervals, or the row remains an evidenced unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-nineteenth-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Exact city source occurs once in a route component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-nineteenth-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source row retains an actionable source-inferred review record.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-nineteenth-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every selected edge stays close to the exact city line at one-metre intervals, or the row remains an evidenced unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-douglas-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Exact city source occurs once in a route component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-douglas-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source row retains an actionable source-inferred review record.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-douglas-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every selected edge stays close to the exact city line at one-metre intervals, or the row remains an evidenced unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredFifth-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Exact city source occurs once in a route component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredFifth-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source row retains an actionable source-inferred review record.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredFifth-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every selected edge stays close to the exact city line at one-metre intervals, or the row remains an evidenced unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredFourth-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Exact city source occurs once in a route component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredFourth-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source row retains an actionable source-inferred review record.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredFourth-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every selected edge stays close to the exact city line at one-metre intervals, or the row remains an evidenced unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-ninetySeventh-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Exact city source occurs once in a route component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-ninetySeventh-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source row retains an actionable source-inferred review record.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-ninetySeventh-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every selected edge stays close to the exact city line at one-metre intervals, or the row remains an evidenced unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-montgomery-scope",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Exact city source occurs once in a route component.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-montgomery-evidence",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The source row retains an actionable source-inferred review record.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-montgomery-geometry",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every selected edge stays close to the exact city line at one-metre intervals, or the row remains an evidenced unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-plymouth-noncar-gap",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The exact cycleway is unknown to cars and excluded from runs, or its exact location remains an unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/149987537"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-ninth-divided-unresolved",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The west arm exceeds five metres from the city line, and the East/West named ways cannot be silently combined by the split matcher; retain an unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/24105922",
+        "https://www.openstreetmap.org/way/1305997716",
+        "https://www.openstreetmap.org/way/1305998748",
+        "https://www.openstreetmap.org/way/1305998749"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-avenue-j-24090563-conflict",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Northbound OSM motor one-way contradicts the city southbound assertion; both directions remain conflicting unknown or the entire match is unresolved.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/24090563"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-avenue-j-1254538093-conflict",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Northbound OSM motor one-way contradicts the city southbound assertion; both directions remain conflicting unknown or the entire match is unresolved.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1254538093"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredth-opposed-arms",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The opposite 100th arms share endpoints, remain disjoint and satisfy 8 m/250 m bounds; selected traversals must retain the two actual source paths.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/33263148",
+        "https://www.openstreetmap.org/way/1323980332"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredth-dogleg",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The designated 100th dogleg connects to Avenue J at the mapped junction; do not use an off-route bypass.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1527992426",
+        "https://www.openstreetmap.org/way/24090563"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-nineteenth-1061159303-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Selected geometry is clipped to the mapped way and follows its motor one-way; otherwise retain an unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/1061159303"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-douglas-24076371-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Selected geometry is clipped to the mapped way and follows its motor one-way; otherwise retain an unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/24076371"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredFifth-33261389-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Selected geometry is clipped to the mapped way and follows its motor one-way; otherwise retain an unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/33261389"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredFifth-865545074-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Selected geometry is clipped to the mapped way and follows its motor one-way; otherwise retain an unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/865545074"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredFourth-865545078-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Selected geometry is clipped to the mapped way and follows its motor one-way; otherwise retain an unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/865545078"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-hundredFourth-146306494-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Selected geometry is clipped to the mapped way and follows its motor one-way; otherwise retain an unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/146306494"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-montgomery-24105072-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Selected geometry is clipped to the mapped way and follows its motor one-way; otherwise retain an unknown gap.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/24105072"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-douglas-14th-identity",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The city Douglas row follows explicitly identified OSM West 14th Street between Hamlin and Ridgeway.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/24076371"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "remaining-south-ninetyseventh-direction",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "The mapped 97th way has no explicit direction or motor access tag; selected travel follows both inferred directions.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut",
+        "https://www.openstreetmap.org/way/146306506"
+      ],
+      "field_reviewed": false
+    },
+    {
+      "id": "complete-cdot-neighborhood-greenway-inventory",
+      "expected": true,
+      "observed": true,
+      "result": "pass",
+      "basis": "Every saved CDOT Neighborhood Greenway row is represented exactly once; other facility categories and invented records are excluded. Representation does not certify motor access or current installation.",
+      "sources": [
+        "https://data.cityofchicago.org/Transportation/Bike-Routes/hvv9-38ut"
+      ],
+      "field_reviewed": false
     }
   ],
   "skips": [
@@ -9587,6 +12238,34 @@
       "reason": "Fewer than two independently eligible distinct same-way junctions.",
       "eligible_count": 1,
       "selected_count": 1
+    },
+    {
+      "route_id": "harding-1",
+      "reason": "Fewer than two independently eligible distinct same-way junctions.",
+      "eligible_count": 1,
+      "selected_count": 1
+    },
+    {
+      "route_id": "campbell-1",
+      "reason": "Fewer than two independently eligible distinct same-way junctions.",
+      "eligible_count": 1,
+      "selected_count": 1
+    },
+    {
+      "route_id": "9th-1",
+      "result": "review",
+      "reason": "Evidence-bound city component is wholly unmatched; no road movement exists to sample.",
+      "evidence_id": "remaining-south-9th",
+      "eligible_count": 0,
+      "selected_count": 0
+    },
+    {
+      "route_id": "100th-1",
+      "result": "review",
+      "reason": "Evidence-bound city component is wholly unmatched; no road movement exists to sample.",
+      "evidence_id": "remaining-south-100th",
+      "eligible_count": 0,
+      "selected_count": 0
     }
   ]
 }

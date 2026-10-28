@@ -10,6 +10,8 @@ import { compileEvidenceCatalog } from "./evidence-catalog.mjs";
 import { compileCoverageInventory } from "./coverage-inventory.mjs";
 import { resolveMatchingReview } from "./matching-review.mjs";
 import { addSplitCarriageway } from "./split-carriageways.mjs";
+import { resolveExplicitRoadMatches } from "./explicit-road-matches.mjs";
+import { componentRouteIds } from "./component-route-ids.mjs";
 import { createHash } from "node:crypto";
 const json = async (p) => JSON.parse(await readFile(p, "utf8"));
 const [source, config, osm, reviewEvidence] = await Promise.all(["data/sources/greenways.json", "data/routes/pilots.json", "data/sources/osm-source.json", "data/routes/review-evidence.json"].map(json));
@@ -57,18 +59,22 @@ for (const spec of config.streets) {
     const [a, b] = components;
     components = [{ coords: [...a.coords, ...b.coords], ids: [...a.ids, ...b.ids], designationLines: [a.coords, b.coords], connector: [a.coords.at(-1), b.coords[0]] }];
   }
-  const componentIds = new Set(components.map((_, ix) => `${routePrefix}-${ix + 1}`));
+  const routeIds = componentRouteIds(components, routePrefix, spec.component_ids ?? []);
+  const componentIds = new Set(routeIds);
   for (const binding of spec.scoped_ways ?? []) {
     if (!componentIds.has(binding.route_id)) throw new Error(`Scoped way ${binding.way_id} refers to missing route ${binding.route_id}`);
   }
   for (const binding of spec.split_carriageways ?? []) {
     if (!componentIds.has(binding.route_id)) throw new Error(`Split carriageway refers to missing route ${binding.route_id}`);
   }
+  for (const binding of spec.explicit_ways ?? []) {
+    if (!componentIds.has(binding.route_id)) throw new Error(`Explicit road match refers to missing route ${binding.route_id}`);
+  }
   for (const binding of spec.unresolved_components ?? []) {
     if (!Array.isArray(binding.source_ids) || binding.source_ids.some(sourceId=>!records.some(record=>record[':id']===sourceId))) throw new Error(`Unresolved component refers to an unselected city record on ${spec.name}`);
   }
   for (let ix = 0; ix < components.length; ix++) {
-    const part = components[ix], line = part.coords, id = `${routePrefix}-${ix + 1}`;
+    const part = components[ix], line = part.coords, id = routeIds[ix];
     const matchingReview = resolveMatchingReview({bindings:spec.unresolved_components ?? [],componentIds:part.ids,evidenceRecords:reviewEvidence.records});
     const xs = line.map((p) => p[0]), ys = line.map((p) => p[1]);
     const ways = [], nodeCounts = /* @__PURE__ */ new Map(), crossingNames = /* @__PURE__ */ new Map();
@@ -92,6 +98,19 @@ for (const spec of config.streets) {
       if (parkPath && !data.some((n) => locate([n.lon, n.lat], part.connector).distance < 18)) continue;
       if (!tags.name && !tags.junction && !parkPath && lineLength(data.map((n) => [n.lon, n.lat])) > 45) continue;
       ways.push({ id: w.id, tags, nodes, coordinates: data.map((n) => [n.lon, n.lat]), nodeTags: data.map((n) => JSON.parse(n.tags || "{}")) });
+    }
+    const explicitBindings = (spec.explicit_ways ?? []).filter(binding => binding.route_id === id);
+    if (matchingReview && explicitBindings.length) throw new Error(`Cannot add explicit roads to unresolved component ${id}`);
+    const explicitIds = new Set(explicitBindings.flatMap(binding => binding.way_ids ?? []));
+    const explicitCandidates = nearby.filter(raw => explicitIds.has(raw.id)).map(raw => {
+      const nodes = JSON.parse(raw.nodes), data = nodes.map(node => getNode.get(node));
+      return {id:raw.id,tags:JSON.parse(raw.tags),nodes,coordinates:data.map(node=>node ? [node.lon,node.lat] : null),nodeTags:data.map(node=>node ? JSON.parse(node.tags || '{}') : {})};
+    });
+    for (const way of resolveExplicitRoadMatches({bindings:explicitBindings,routeId:id,componentIds:part.ids,evidenceRecords:reviewEvidence.records,ways:explicitCandidates})) {
+      way.match_lines=way.explicit_match.city_source_ids.flatMap(sourceId=>records.find(record=>record[':id']===sourceId).the_geom.coordinates);
+      const existing=ways.findIndex(candidate=>candidate.id===way.id);
+      if (existing>=0) ways[existing]=way;
+      else ways.push(way);
     }
     const graph = matchingReview ? new Map() : alignedGraph(line, ways, config.max_source_distance_m), visited = /* @__PURE__ */ new Set(), candidates = [];
     for (const binding of spec.scoped_ways ?? []) {
@@ -246,7 +265,7 @@ for (const spec of config.streets) {
         // Traversal geometry retains its direction-specific arc, while exported
         // permissions also include any conflicting CDOT cardinal assertion.
         if (traversals) for (const direction of ['forward','reverse']) traversals[direction].access = access[direction];
-        edges.push({ id: `${id}-${chunk.junctionWays ? "junction" : "way"}-${wayIds.join("-")}-${edges.length + 1}`, way_id: wayIds.length === 1 ? wayIds[0] : null, ...(chunk.junctionWays ? {way_ids:wayIds} : {}), from_node: chunk.from, to_node: chunk.to, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access, ...(traversals ? {traversals} : {}), ...overlapsJoin ? { source_access: sourceAccess } : {}, evidence_urls: evidenceUrls, ...(splitMatch ? {matching:splitMatch} : chunk.way.scoped_match ? { matching: chunk.way.scoped_match } : {}), role: overlapsJoin ? "connector" : chunk.junctionWays ? "junction" : chunk.way.tags.name ? "designated" : "connector" });
+        edges.push({ id: `${id}-${chunk.junctionWays ? "junction" : "way"}-${wayIds.join("-")}-${edges.length + 1}`, way_id: wayIds.length === 1 ? wayIds[0] : null, ...(chunk.junctionWays ? {way_ids:wayIds} : {}), from_node: chunk.from, to_node: chunk.to, length_m: lineLength(coords), geometry: { type: "LineString", coordinates: coords }, access, ...(traversals ? {traversals} : {}), ...overlapsJoin ? { source_access: sourceAccess } : {}, evidence_urls: evidenceUrls, ...(splitMatch ? {matching:splitMatch} : chunk.way.scoped_match ? { matching: chunk.way.scoped_match } : chunk.way.explicit_match ? {matching:chunk.way.explicit_match} : {}), role: overlapsJoin ? "connector" : chunk.junctionWays ? "junction" : chunk.way.tags.name ? "designated" : "connector" });
       }
       cursor = Math.max(cursor, c.last.position);
     }

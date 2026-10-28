@@ -10,6 +10,9 @@ import { auditSecondTenGreenways } from './audit-second-ten-greenways.mjs';
 import { auditThirdNorthGreenways } from './audit-third-north-greenways.mjs';
 import { auditThirdCentralGreenways } from './audit-third-central-greenways.mjs';
 import { auditThirdSouthGreenways } from './audit-third-south-greenways.mjs';
+import { auditRemainingNorth } from './audit-remaining-north.mjs';
+import { auditRemainingCentral } from './audit-remaining-central.mjs';
+import { auditRemainingSouth } from './audit-remaining-south.mjs';
 
 const [input = 'public/routes/pilot.json', output = 'data/routes/pilot-validation.json', database = 'data/staging/network.sqlite'] = process.argv.slice(2);
 const bytes = await readFile(input);
@@ -28,6 +31,29 @@ const cityRecords = JSON.parse(await readFile('data/sources/greenways.json', 'ut
 const cityRecord = id => cityRecords.find(r => r[':id'] === id);
 const evidenceRecords = JSON.parse(await readFile('data/routes/review-evidence.json','utf8')).records;
 function relevantNode(tags) { return Object.keys(tags).some(k => /^(barrier|access|vehicle|motor_vehicle|motorcar|hgv|bicycle|oneway|restriction)(:|$)/.test(k) || k.includes('conditional')); }
+// This particular city connector contains one clipped road edge and an unknown
+// remainder, so there is no same-way exported junction to sample. Validate the
+// actual edge against the raw source and evidence instead of waiving coverage.
+function shortSpauldingEdge(route) {
+  const cityId='row-xqxw_seh8.u2gq', wayId=1081688366, evidenceId='remaining-north-spaulding';
+  if (route.id !== 'spaulding-1' || route.source_ids?.length !== 1 || route.source_ids[0] !== cityId || route.edges?.length !== 2 || route.movements?.length !== 1) return false;
+  const [edge,gap]=route.edges, evidence=evidenceRecords.find(r=>r.id===evidenceId), row=cityRecord(cityId), raw=getWay.get(wayId);
+  if (!raw || !row || !evidence?.source_record_ids?.includes(cityId) || !evidence.way_ids?.includes(wayId) || evidence.review_status!=='source-inferred' || !evidence.sources?.some(s=>s.url)) return false;
+  const nodes=JSON.parse(raw.nodes), tags=JSON.parse(raw.tags), expected=[2142142005,261147345,1299697427,1299697431,2142141666,2142141985,305898409];
+  if (JSON.stringify(nodes)!==JSON.stringify(expected) || tags.highway!=='residential' || tags.oneway!=='yes' || ['access','vehicle','motor_vehicle','motorcar'].some(k=>k in tags) || Object.keys(tags).some(k=>k.includes('conditional'))) return false;
+  if (restrictions.some(r=>r.members.some(m=>(m.type==='way' && m.ref===wayId) || (m.type==='node' && nodes.includes(m.ref))))) return false;
+  const getPosition=db.prepare('SELECT lon,lat,tags FROM nodes WHERE id=?');
+  const source=nodes.map(id=>getPosition.get(id));
+  if (source.some(n=>!n || relevantNode(JSON.parse(n.tags)))) return false;
+  const coords=source.map(n=>[n.lon,n.lat]), p=edge.geometry?.coordinates;
+  if (edge.way_id!==wayId || edge.role!=='designated' || edge.matching?.method!=='explicit-city-road-correspondence' || edge.matching.evidence_id!==evidenceId || JSON.stringify(edge.matching.city_source_ids)!==JSON.stringify([cityId]) || edge.from_node!==2142141666 || edge.to_node!==2142142005 || !Array.isArray(p) || p.length!==5 || JSON.stringify(p.slice(1))!==JSON.stringify(coords.slice(0,4).reverse())) return false;
+  const clipped=locate(p[0],coords.slice(3,5));
+  if (clipped.distance>0.01 || clipped.position<=0 || clipped.position>=metres(coords[3],coords[4])) return false;
+  if (edge.access?.forward?.status!=='blocked' || edge.access?.reverse?.status!=='allowed' || gap.role!=='gap' || !['forward','reverse'].every(d=>gap.access?.[d]?.status==='unknown' && route.movements[0][d]?.status==='unknown')) return false;
+  const lines=row.the_geom?.coordinates;
+  if (!Array.isArray(lines) || !lines.length) return false;
+  return p.every((q,i)=>{const a=i?p[i-1]:q, steps=Math.max(1,Math.ceil(metres(a,q)));return Array.from({length:steps+1},(_,j)=>[a[0]+(q[0]-a[0])*j/steps,a[1]+(q[1]-a[1])*j/steps]).every(v=>Math.min(...lines.map(line=>locate(v,line).distance))<=18);});
+}
 for (const route of data.routes) {
   const edges = new Map(route.edges.map(e => [e.id, e]));
   const candidates = [];
@@ -55,6 +81,7 @@ for (const route of data.routes) {
     const sameIds=Array.isArray(binding?.source_ids) && Array.isArray(route.source_ids) && route.source_ids.length>0 && binding.source_ids.length===route.source_ids.length && new Set(binding.source_ids).size===binding.source_ids.length && route.source_ids.every(id=>binding.source_ids.includes(id));
     const explicitUnmatched=!!record && sameIds && route.source_ids.every(id=>record.source_record_ids?.includes(id)) && typeof binding.reason==='string' && binding.reason.trim().length>0 && record.matching_review===binding.reason && route.edges.length===1 && gap?.role==='gap' && gap.evidence_ids?.includes(record.id) && ['forward','reverse'].every(d=>gap.access?.[d]?.status==='unknown' && gap.access[d].reason?.includes(binding.reason)) && route.runs.length===0 && candidates.length===0;
     if (explicitUnmatched) skips.push({route_id:route.id, result:'review', reason:'Evidence-bound city component is wholly unmatched; no road movement exists to sample.', evidence_id:route.matching_review.evidence_id, eligible_count:0, selected_count:0});
+    else if (!selected.length && shortSpauldingEdge(route)) samples.push({id:'spaulding-1-short-edge-source-check',route_id:route.id,subject:'short edge source consistency',result:'pass',basis:'Evidence-bound single clipped Carmen road edge follows the source nodes within the city corridor, has source-consistent one-way access and no relevant node or relation restrictions; remaining gap and movement stay unknown. This is not a sampled junction or field approval.',sources:[sourceUrl,'https://www.openstreetmap.org/way/1081688366'],field_reviewed:false});
     else if (!selected.length) samples.push({id:`${route.id}-missing-sample`,route_id:route.id,subject:'sampling coverage',result:'fail',basis:'No eligible same-way movements and no recognized fully unmatched evidence-bound component.'});
     else skips.push({route_id:route.id, reason:'Fewer than two independently eligible distinct same-way junctions.', eligible_count:candidates.length, selected_count:selected.length});
   }
@@ -393,10 +420,15 @@ auditSecondTenGreenways({data,db,cityRecords,evidenceRecords,check,sourceUrl});
 auditThirdNorthGreenways({data,db,cityRecords,evidenceRecords,check,sourceUrl});
 auditThirdCentralGreenways({data,db,cityRecords,evidenceRecords,check,sourceUrl});
 auditThirdSouthGreenways({data,db,cityRecords,evidenceRecords,check,sourceUrl});
+auditRemainingNorth({data,db,cityRecords,evidenceRecords,check,sourceUrl});
+auditRemainingCentral({data,db,cityRecords,evidenceRecords,check,sourceUrl});
+auditRemainingSouth({data,db,cityRecords,evidenceRecords,check,sourceUrl});
+const allExportedIds=data.routes.flatMap(route=>route.source_ids);
+check('complete-cdot-neighborhood-greenway-inventory',true,cityRecords.length===258 && allExportedIds.length===258 && new Set(allExportedIds).size===258 && cityRecords.every(row=>row.displayrou==='Neighborhood Greenway' && allExportedIds.includes(row[':id'])),'Every saved CDOT Neighborhood Greenway row is represented exactly once; other facility categories and invented records are excluded. Representation does not certify motor access or current installation.',[sourceUrl]);
 const dbHash = createHash('sha256');
 for await (const chunk of createReadStream(database)) dbHash.update(chunk);
 const stagedDatabaseSha256 = dbHash.digest('hex');
-const report = {schema_version:1,audited_at:new Date().toISOString(),input,input_sha256:createHash('sha256').update(bytes).digest('hex'),staged_database:database,staged_database_sha256:stagedDatabaseSha256,osm_source_sha256:data.source?.osm_sha256,osm_snapshot_date:data.source?.osm_date,designation_snapshot_date:data.source?.designation_date,purpose:'Source consistency checks and narrow movement samples; no field review, legal certification, or whole-corridor approval.',scope_caveat:'Samples test junction movement rules only; adjoining edges and current signs may differ.',sampling_method:'Two distinct eligible same-way nodes nearest route-index quartiles per route, both directions; selection independent of observed result. Unknown, restricted and junction-traversal nodes are excluded.',sample_count:samples.length,targeted_check_count:checks.length,field_approvals:0,samples,targeted_checks:checks,skips};
+const report = {schema_version:1,audited_at:new Date().toISOString(),input,input_sha256:createHash('sha256').update(bytes).digest('hex'),staged_database:database,staged_database_sha256:stagedDatabaseSha256,osm_source_sha256:data.source?.osm_sha256,osm_snapshot_date:data.source?.osm_date,designation_snapshot_date:data.source?.designation_date,purpose:'Source consistency checks and narrow movement samples; no field review, legal certification, or whole-corridor approval.',scope_caveat:'Movement samples test junction rules only; the separately labelled Spaulding check tests one source-bound edge. Adjoining edges and current signs may differ.',sampling_method:'Two distinct eligible same-way nodes nearest route-index quartiles per route, both directions; selection independent of observed result. Unknown, restricted and junction-traversal nodes are excluded. Spaulding has one clipped edge and no eligible same-way junction; an exact evidence-bound edge consistency check is reported separately.',sample_count:samples.length,targeted_check_count:checks.length,field_approvals:0,samples,targeted_checks:checks,skips};
 await writeFile(output, JSON.stringify(report,null,2)+'\n');
 db.close();
 const failures = [...samples,...checks].filter(x=>x.result==='fail').length;
